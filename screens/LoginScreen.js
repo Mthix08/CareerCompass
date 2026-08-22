@@ -36,7 +36,7 @@ export default function LoginScreen({ navigation }) {
         {/* ================= BRAND ================= */}
         <View style={styles.brandContainer}>
           <View style={styles.logo}>
-            <Text style={styles.logoText}>C</Text>
+            <Text style={styles.logoText}></Text>
           </View>
 
           <Text style={styles.brandName}>CareerCompass</Text>
