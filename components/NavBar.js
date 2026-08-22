@@ -6,21 +6,33 @@ export default function NavBar({ navigation }) {
   return (
     <View style={styles.navBar}>
       <View style={styles.notch} />
-      <TouchableOpacity
-        style={styles.homeButton}
-        activeOpacity={0.8}
-        onPress={() => navigation?.navigate("Home")}
-        accessibilityLabel="Home"
-        accessibilityRole="button"
-      >
-        <Ionicons name="home" size={25} color="#FFFFFF" />
-      </TouchableOpacity>
+      <View style={styles.itemsRow}>
+        <TouchableOpacity
+          style={styles.navButton}
+          activeOpacity={0.8}
+          onPress={() => navigation?.navigate("Home")}
+          accessibilityLabel="Home"
+          accessibilityRole="button"
+        >
+          <Ionicons name="home" size={25} color="#FFFFFF" />
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.navButton, styles.secondaryButton]}
+          activeOpacity={0.8}
+          onPress={() => navigation?.navigate("Universities")}
+          accessibilityLabel="Institutions"
+          accessibilityRole="button"
+        >
+          <Ionicons name="business-outline" size={25} color="#117C72" />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   navBar: {
+    marginBottom: 30,
     position: "absolute",
     right: 0,
     bottom: 0,
@@ -30,6 +42,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 28,
     borderTopRightRadius: 28,
     alignItems: "center",
+    justifyContent: "center",
   },
   notch: {
     position: "absolute",
@@ -39,9 +52,13 @@ const styles = StyleSheet.create({
     borderRadius: 46,
     backgroundColor: "#F6F8FC",
   },
-  homeButton: {
-    position: "absolute",
-    top: -16,
+  itemsRow: {
+    width: 150,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  navButton: {
     width: 58,
     height: 58,
     borderRadius: 29,
@@ -53,5 +70,10 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.24,
     shadowRadius: 7,
+  },
+  secondaryButton: {
+    backgroundColor: "#E8F3F1",
+    elevation: 0,
+    shadowOpacity: 0,
   },
 });
