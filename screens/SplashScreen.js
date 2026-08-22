@@ -4,6 +4,9 @@ import { Animated, Image, StyleSheet, Text, View } from "react-native";
 export default function SplashScreen({ navigation }) {
   const opacity = useRef(new Animated.Value(0)).current;
   const scale = useRef(new Animated.Value(0.92)).current;
+  const barAnimations = useRef(
+    Array.from({ length: 5 }, () => new Animated.Value(0.35)),
+  ).current;
 
   useEffect(() => {
     const animation = Animated.sequence([
@@ -34,8 +37,32 @@ export default function SplashScreen({ navigation }) {
       }
     });
 
-    return () => animation.stop();
-  }, [navigation, opacity, scale]);
+    const barLoops = barAnimations.map((bar, index) =>
+      Animated.loop(
+        Animated.sequence([
+          Animated.delay(index * 110),
+          Animated.timing(bar, {
+            toValue: 1,
+            duration: 320,
+            useNativeDriver: true,
+          }),
+          Animated.timing(bar, {
+            toValue: 0.35,
+            duration: 320,
+            useNativeDriver: true,
+          }),
+          Animated.delay((barAnimations.length - index) * 110),
+        ]),
+      ),
+    );
+
+    barLoops.forEach((barLoop) => barLoop.start());
+
+    return () => {
+      animation.stop();
+      barLoops.forEach((barLoop) => barLoop.stop());
+    };
+  }, [barAnimations, navigation, opacity, scale]);
 
   return (
     <View style={styles.container}>
@@ -50,6 +77,15 @@ export default function SplashScreen({ navigation }) {
         />
         <Text style={styles.loadingText}>DISCOVER • PLAN • ACHIEVE</Text>
       </Animated.View>
+
+      <View style={styles.loader} accessibilityLabel="Loading">
+        {barAnimations.map((bar, index) => (
+          <Animated.View
+            key={index}
+            style={[styles.bar, { transform: [{ scaleY: bar }] }]}
+          />
+        ))}
+      </View>
     </View>
   );
 }
@@ -75,5 +111,19 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontWeight: "700",
     letterSpacing: 2,
+  },
+  loader: {
+    position: "absolute",
+    bottom: 54,
+    flexDirection: "row",
+    alignItems: "flex-end",
+    height: 38,
+    gap: 6,
+  },
+  bar: {
+    width: 7,
+    height: 34,
+    borderRadius: 4,
+    backgroundColor: "#3ED6C2",
   },
 });
