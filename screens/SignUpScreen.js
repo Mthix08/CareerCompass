@@ -9,8 +9,12 @@ import {
   ScrollView,
   Platform,
   StatusBar,
+  Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, serverTimestamp, setDoc } from "firebase/firestore";
+import { auth, db } from "./firebaseConfig";
 
 export default function SignUpScreen({ navigation }) {
   const [name, setName] = useState("");
@@ -19,6 +23,51 @@ export default function SignUpScreen({ navigation }) {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSignUp = async () => {
+    if (!name.trim() || !email.trim() || !password || !confirmPassword) {
+      Alert.alert("Missing details", "Complete every field to create an account.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      Alert.alert("Passwords do not match", "Enter the same password twice.");
+      return;
+    }
+
+    if (password.length < 6) {
+      Alert.alert("Password too short", "Use at least six characters.");
+      return;
+    }
+
+    try {
+      setIsLoading(true);
+      const credential = await createUserWithEmailAndPassword(
+        auth,
+        email.trim(),
+        password,
+      );
+
+      await setDoc(doc(db, "users", credential.user.uid), {
+        name: name.trim(),
+        email: credential.user.email,
+        createdAt: serverTimestamp(),
+      });
+
+      navigation.reset({ index: 0, routes: [{ name: "Home" }] });
+    } catch (error) {
+      const message =
+        error.code === "auth/email-already-in-use"
+          ? "An account already exists for that email address."
+          : error.code === "auth/invalid-email"
+            ? "Enter a valid email address."
+            : "We could not create your account. Please try again.";
+      Alert.alert("Sign-up failed", message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <KeyboardAvoidingView
@@ -143,9 +192,12 @@ export default function SignUpScreen({ navigation }) {
           <TouchableOpacity
             style={styles.signUpButton}
             activeOpacity={0.8}
-            onPress={() => navigation?.navigate("Home")}
+            onPress={handleSignUp}
+            disabled={isLoading}
           >
-            <Text style={styles.signUpButtonText}>Create account</Text>
+            <Text style={styles.signUpButtonText}>
+              {isLoading ? "Creating account..." : "Create account"}
+            </Text>
           </TouchableOpacity>
 
           <View style={styles.bottomTextContainer}>

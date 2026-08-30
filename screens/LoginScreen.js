@@ -9,16 +9,41 @@ import {
   ScrollView,
   Platform,
   StatusBar,
+  Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "./firebaseConfig";
+
+
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleLogin = () => {
-    console.log("Login:", email, password);
+  const handleLogin = async () => {
+    if (!email.trim() || !password) {
+      Alert.alert("Missing details", "Enter your email address and password.");
+      return;
+    }
+
+    try {
+      setIsLoading(true);
+      await signInWithEmailAndPassword(auth, email.trim(), password);
+      navigation.reset({ index: 0, routes: [{ name: "Home" }] });
+    } catch (error) {
+      const message =
+        error.code === "auth/invalid-credential"
+          ? "That email address or password is incorrect."
+          : error.code === "auth/invalid-email"
+            ? "Enter a valid email address."
+            : "We could not log you in. Please try again.";
+      Alert.alert("Login failed", message);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -121,8 +146,11 @@ export default function LoginScreen({ navigation }) {
             style={styles.loginButton}
             activeOpacity={0.8}
             onPress={handleLogin}
+            disabled={isLoading}
           >
-            <Text style={styles.loginButtonText}>Log In</Text>
+            <Text style={styles.loginButtonText}>
+              {isLoading ? "Logging in..." : "Log In"}
+            </Text>
           </TouchableOpacity>
 
           {/* ================= DIVIDER ================= */}
