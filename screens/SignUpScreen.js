@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -23,49 +23,54 @@ export default function SignUpScreen({ navigation }) {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
-  const handleSignUp = async () => {
-    if (!name.trim() || !email.trim() || !password || !confirmPassword) {
-      Alert.alert("Missing details", "Complete every field to create an account.");
-      return;
+  const validateForm = () => {
+    const nextErrors = {};
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{5,}$/;
+
+    if (!email.trim()) {
+      nextErrors.email = "Email is required.";
+    } else if (!emailPattern.test(email.trim())) {
+      nextErrors.email = "Enter a valid email address.";
     }
 
-    if (password !== confirmPassword) {
-      Alert.alert("Passwords do not match", "Enter the same password twice.");
-      return;
+    if (!password) {
+      nextErrors.password = "Password is required.";
+    } else if (!passwordPattern.test(password)) {
+      nextErrors.password =
+        "Use at least 5 characters, including uppercase, lowercase, and a number.";
     }
 
-    if (password.length < 6) {
-      Alert.alert("Password too short", "Use at least six characters.");
-      return;
+    if (!confirmPassword) {
+      nextErrors.confirmPassword = "Please confirm your password.";
+    } else if (confirmPassword !== password) {
+      nextErrors.confirmPassword = "Passwords do not match.";
     }
 
-    try {
-      setIsLoading(true);
-      const credential = await createUserWithEmailAndPassword(
-        auth,
-        email.trim(),
-        password,
-      );
+    setErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
+  };
 
-      await setDoc(doc(db, "users", credential.user.uid), {
-        name: name.trim(),
-        email: credential.user.email,
-        createdAt: serverTimestamp(),
-      });
+  const handleSignUp = () => {
+    setHasSubmitted(true);
+    if (validateForm()) {
+      navigation?.navigate("Home");
+    }
+  };
 
-      navigation.reset({ index: 0, routes: [{ name: "Home" }] });
-    } catch (error) {
-      const message =
-        error.code === "auth/email-already-in-use"
-          ? "An account already exists for that email address."
-          : error.code === "auth/invalid-email"
-            ? "Enter a valid email address."
-            : "We could not create your account. Please try again.";
-      Alert.alert("Sign-up failed", message);
-    } finally {
-      setIsLoading(false);
+  useEffect(() => {
+    if (hasSubmitted) {
+      validateForm();
+    }
+  }, [email, password, confirmPassword, hasSubmitted]);
+
+  const updateField = (field, value, setter) => {
+    setter(value);
+    if (!hasSubmitted && errors[field]) {
+      setErrors((currentErrors) => ({ ...currentErrors, [field]: undefined }));
     }
   };
 
@@ -96,7 +101,9 @@ export default function SignUpScreen({ navigation }) {
 
         <View style={styles.formContainer}>
           <Text style={styles.label}>Full name</Text>
-          <View style={styles.inputContainer}>
+          <View
+            style={[styles.inputContainer, errors.email && styles.inputError]}
+          >
             <Ionicons
               name="person-outline"
               size={20}
@@ -126,15 +133,21 @@ export default function SignUpScreen({ navigation }) {
               placeholder="Enter your email"
               placeholderTextColor="#A3A3A3"
               value={email}
-              onChangeText={setEmail}
+              onChangeText={(value) => updateField("email", value, setEmail)}
               keyboardType="email-address"
               autoCapitalize="none"
               autoCorrect={false}
             />
           </View>
+          {errors.email && <Text style={styles.errorText}>{errors.email}</Text>}
 
           <Text style={[styles.label, styles.fieldLabel]}>Password</Text>
-          <View style={styles.inputContainer}>
+          <View
+            style={[
+              styles.inputContainer,
+              errors.password && styles.inputError,
+            ]}
+          >
             <Ionicons
               name="lock-closed-outline"
               size={20}
@@ -146,7 +159,9 @@ export default function SignUpScreen({ navigation }) {
               placeholder="Create a password"
               placeholderTextColor="#A3A3A3"
               value={password}
-              onChangeText={setPassword}
+              onChangeText={(value) =>
+                updateField("password", value, setPassword)
+              }
               secureTextEntry={!showPassword}
               autoCapitalize="none"
             />
@@ -159,11 +174,19 @@ export default function SignUpScreen({ navigation }) {
               </Text>
             </TouchableOpacity>
           </View>
+          {errors.password && (
+            <Text style={styles.errorText}>{errors.password}</Text>
+          )}
 
           <Text style={[styles.label, styles.fieldLabel]}>
             Confirm password
           </Text>
-          <View style={styles.inputContainer}>
+          <View
+            style={[
+              styles.inputContainer,
+              errors.confirmPassword && styles.inputError,
+            ]}
+          >
             <Ionicons
               name="shield-checkmark-outline"
               size={20}
@@ -175,7 +198,9 @@ export default function SignUpScreen({ navigation }) {
               placeholder="Re-enter your password"
               placeholderTextColor="#A3A3A3"
               value={confirmPassword}
-              onChangeText={setConfirmPassword}
+              onChangeText={(value) =>
+                updateField("confirmPassword", value, setConfirmPassword)
+              }
               secureTextEntry={!showConfirmPassword}
               autoCapitalize="none"
             />
@@ -188,12 +213,14 @@ export default function SignUpScreen({ navigation }) {
               </Text>
             </TouchableOpacity>
           </View>
+          {errors.confirmPassword && (
+            <Text style={styles.errorText}>{errors.confirmPassword}</Text>
+          )}
 
           <TouchableOpacity
             style={styles.signUpButton}
             activeOpacity={0.8}
             onPress={handleSignUp}
-            disabled={isLoading}
           >
             <Text style={styles.signUpButtonText}>
               {isLoading ? "Creating account..." : "Create account"}
@@ -216,7 +243,10 @@ export default function SignUpScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  keyboardContainer: { flex: 1, backgroundColor: "#FAF9F6" },
+  keyboardContainer: {
+    flex: 1,
+    backgroundColor: "#FAF9F6",
+  },
   scrollContainer: {
     flexGrow: 1,
     paddingHorizontal: 22,
@@ -229,6 +259,7 @@ const styles = StyleSheet.create({
     marginBottom: 38,
   },
   logo: {
+    marginTop: -70,
     width: 38,
     height: 38,
     borderRadius: 9,
@@ -236,29 +267,46 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  logoText: { color: "#FFFFFF", fontSize: 20, fontWeight: "700" },
+  logoText: {
+    marginTop: -70,
+    color: "#FFFFFF",
+    fontSize: 20,
+    fontWeight: "700",
+  },
   brandName: {
+    marginTop: -70,
     marginLeft: 12,
     fontSize: 20,
     fontWeight: "700",
     color: "#176F68",
   },
-  headerContainer: { marginBottom: 34 },
+  headerContainer: {
+    marginTop: -35,
+    marginBottom: 34,
+  },
   title: {
     fontSize: 30,
     fontWeight: "700",
     color: "#18201F",
     marginBottom: 6,
   },
-  subtitle: { fontSize: 15.5, color: "#858585", lineHeight: 22 },
-  formContainer: { width: "100%" },
+  subtitle: {
+    fontSize: 15.5,
+    color: "#858585",
+    lineHeight: 22,
+  },
+  formContainer: {
+    width: "100%",
+  },
   label: {
     fontSize: 15,
     fontWeight: "600",
     color: "#242B2A",
     marginBottom: 10,
   },
-  fieldLabel: { marginTop: 18 },
+  fieldLabel: {
+    marginTop: 18,
+  },
   inputContainer: {
     height: 66,
     borderWidth: 1,
@@ -269,9 +317,29 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 16,
   },
-  inputIcon: { marginRight: 10 },
-  input: { flex: 1, height: "100%", fontSize: 16, color: "#252B2A" },
-  showText: { fontSize: 14, fontWeight: "600", color: "#17796F" },
+  inputError: {
+    borderColor: "#D64545",
+  },
+  inputIcon: {
+    marginRight: 10,
+  },
+  input: {
+    flex: 1,
+    height: "100%",
+    fontSize: 16,
+    color: "#252B2A",
+  },
+  showText: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: "#17796F",
+  },
+  errorText: {
+    marginTop: 7,
+    color: "#D64545",
+    fontSize: 13,
+    lineHeight: 18,
+  },
   signUpButton: {
     height: 65,
     borderRadius: 16,
@@ -285,13 +353,26 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.12,
     shadowRadius: 5,
   },
-  signUpButtonText: { color: "#FFFFFF", fontSize: 17, fontWeight: "700" },
+  signUpButtonText: {
+    color: "#FFFFFF",
+    fontSize: 17,
+    fontWeight: "700",
+  },
+
   bottomTextContainer: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 32,
+    marginTop: 20,
+    marginBottom: 40,
   },
-  bottomText: { fontSize: 14, color: "#858585" },
-  loginText: { fontSize: 14, fontWeight: "700", color: "#C39A45" },
+  bottomText: {
+    fontSize: 14,
+    color: "#858585",
+  },
+  loginText: {
+    fontSize: 14,
+    fontWeight: "700",
+    color: "#C39A45",
+  },
 });

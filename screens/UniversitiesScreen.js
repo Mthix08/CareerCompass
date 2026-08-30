@@ -1,16 +1,15 @@
 import { StyleSheet, Text, View } from "react-native";
 import NavBar from "../components/NavBar";
 
-export default function HomeScreen({ navigation }) {
+export default function UniversitiesScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to CareerCompass</Text>
+      <Text style={styles.title}>Institutions</Text>
       <Text style={styles.subtitle}>Your career journey starts here.</Text>
       <NavBar navigation={navigation} />
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

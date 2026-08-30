@@ -58,16 +58,14 @@ export default function LoginScreen({ navigation }) {
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
       >
-        {/* ================= BRAND ================= */}
         <View style={styles.brandContainer}>
           <View style={styles.logo}>
-            <Text style={styles.logoText}>C</Text>
+            <Text style={styles.logoText}></Text>
           </View>
 
           <Text style={styles.brandName}>CareerCompass</Text>
         </View>
 
-        {/* ================= HEADER ================= */}
         <View style={styles.headerContainer}>
           <Text style={styles.title}>Welcome back</Text>
 
@@ -76,9 +74,8 @@ export default function LoginScreen({ navigation }) {
           </Text>
         </View>
 
-        {/* ================= FORM ================= */}
         <View style={styles.formContainer}>
-          {/* EMAIL */}
+          {}
           <Text style={styles.label}>Email address</Text>
 
           <View style={styles.inputContainer}>
@@ -91,7 +88,7 @@ export default function LoginScreen({ navigation }) {
 
             <TextInput
               style={styles.input}
-              placeholder="Enter your email"
+              placeholder="your.email@example.com"
               placeholderTextColor="#A3A3A3"
               value={email}
               onChangeText={setEmail}
@@ -101,7 +98,6 @@ export default function LoginScreen({ navigation }) {
             />
           </View>
 
-          {/* PASSWORD */}
           <Text style={[styles.label, styles.passwordLabel]}>Password</Text>
 
           <View style={styles.inputContainer}>
@@ -132,7 +128,6 @@ export default function LoginScreen({ navigation }) {
             </TouchableOpacity>
           </View>
 
-          {/* FORGOT PASSWORD */}
           <TouchableOpacity
             style={styles.forgotContainer}
             activeOpacity={0.7}
@@ -141,19 +136,18 @@ export default function LoginScreen({ navigation }) {
             <Text style={styles.forgotText}>Forgot password?</Text>
           </TouchableOpacity>
 
-          {/* LOGIN BUTTON */}
+          
           <TouchableOpacity
             style={styles.loginButton}
             activeOpacity={0.8}
-            onPress={handleLogin}
-            disabled={isLoading}
+            onPress={() => navigation?.navigate("Home")}
           >
             <Text style={styles.loginButtonText}>
               {isLoading ? "Logging in..." : "Log In"}
             </Text>
           </TouchableOpacity>
 
-          {/* ================= DIVIDER ================= */}
+          
           <View style={styles.dividerContainer}>
             <View style={styles.divider} />
 
@@ -162,7 +156,7 @@ export default function LoginScreen({ navigation }) {
             <View style={styles.divider} />
           </View>
 
-          {/* CREATE ACCOUNT */}
+          
           <TouchableOpacity
             style={styles.createButton}
             activeOpacity={0.8}
@@ -171,15 +165,15 @@ export default function LoginScreen({ navigation }) {
             <Text style={styles.createButtonText}>Create an account</Text>
           </TouchableOpacity>
 
-          {/* BACK TO WELCOME */}
+          
           <View style={styles.bottomTextContainer}>
             <Text style={styles.bottomText}>Just exploring? </Text>
 
             <TouchableOpacity
               activeOpacity={0.7}
-              onPress={() => navigation?.navigate("Welcome")}
+              onPress={() => navigation?.navigate("Home")}
             >
-              <Text style={styles.backText}>Back to welcome</Text>
+              <Text style={styles.backText}>Login As A Guest</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -189,7 +183,6 @@ export default function LoginScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  /* ================= MAIN ================= */
 
   keyboardContainer: {
     flex: 1,
@@ -203,7 +196,6 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
   },
 
-  /* ================= BRAND ================= */
 
   brandContainer: {
     flexDirection: "row",
@@ -212,6 +204,7 @@ const styles = StyleSheet.create({
   },
 
   logo: {
+    marginTop: -70,
     width: 38,
     height: 38,
     borderRadius: 9,
@@ -221,22 +214,24 @@ const styles = StyleSheet.create({
   },
 
   logoText: {
+    marginTop: -70,
     color: "#FFFFFF",
     fontSize: 20,
     fontWeight: "700",
   },
 
   brandName: {
+    marginTop: -70,
     marginLeft: 12,
     fontSize: 20,
     fontWeight: "700",
     color: "#176F68",
   },
 
-  /* ================= HEADER ================= */
 
   headerContainer: {
-    marginBottom: 42,
+    marginTop: -35,
+    marginBottom: 30,
   },
 
   title: {
@@ -252,7 +247,6 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
 
-  /* ================= FORM ================= */
 
   formContainer: {
     width: "100%",
@@ -299,7 +293,6 @@ const styles = StyleSheet.create({
     color: "#17796F",
   },
 
-  /* ================= FORGOT PASSWORD ================= */
 
   forgotContainer: {
     alignSelf: "flex-end",
@@ -310,6 +303,7 @@ const styles = StyleSheet.create({
     fontSize: 14.5,
     fontWeight: "500",
     color: "#176F68",
+    textDecorationLine: "underline",
   },
 
   loginButton: {
@@ -339,7 +333,6 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
 
-  /* ================= DIVIDER ================= */
 
   dividerContainer: {
     flexDirection: "row",
@@ -359,7 +352,6 @@ const styles = StyleSheet.create({
     color: "#858585",
   },
 
-  /* ================= CREATE ACCOUNT ================= */
 
   createButton: {
     height: 67,
@@ -378,14 +370,14 @@ const styles = StyleSheet.create({
     color: "#176F68",
   },
 
-  /* ================= BOTTOM ================= */
 
   bottomTextContainer: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
 
-    marginTop: 32,
+    marginTop: 20,
+    marginBottom: 40,
   },
 
   bottomText: {
@@ -397,5 +389,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "700",
     color: "#C39A45",
+    textDecorationLine: "underline",
   },
 });
