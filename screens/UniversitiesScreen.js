@@ -52,7 +52,7 @@ export default function UniversitiesScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#05080D",
+    backgroundColor: "#F6F8FC",
   },
   listContent: {
     paddingHorizontal: 20,
@@ -63,14 +63,14 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
   eyebrow: {
-    color: "#F26522",
+    color: "#117C72",
     fontSize: 11,
     fontWeight: "800",
     letterSpacing: 1.5,
   },
   title: {
     marginTop: 7,
-    color: "#FFFFFF",
+    color: "#117C72",
     fontSize: 31,
     fontWeight: "900",
   },

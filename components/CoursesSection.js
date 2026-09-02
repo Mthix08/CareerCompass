@@ -48,8 +48,7 @@ export default function CoursesSection({ courses = [] }) {
     <View style={styles.section}>
       <Text style={styles.heading}>Courses</Text>
       <Text style={styles.notice}>
-        Example course information — verify names, requirements and availability
-        with the university.
+        this is an example of courses and how they are displayed.
       </Text>
       <View style={styles.searchBox}>
         <Ionicons name="search-outline" size={20} color="#9CA6B5" />
@@ -68,7 +67,9 @@ export default function CoursesSection({ courses = [] }) {
           <CourseCard key={course.id} course={course} />
         ))
       ) : (
-        <Text style={styles.emptyText}>No example courses match your search.</Text>
+        <Text style={styles.emptyText}>
+          No example courses match your search.
+        </Text>
       )}
     </View>
   );
@@ -89,18 +90,53 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#151A22",
   },
-  searchInput: { flex: 1, minHeight: 50, marginLeft: 9, color: "#FFFFFF", fontSize: 15 },
-  courseCard: { marginTop: 15, padding: 18, borderRadius: 17, borderWidth: 1, borderColor: "#252D39", backgroundColor: "#151A22" },
-  courseName: { color: "#FFFFFF", fontSize: 17, fontWeight: "800", lineHeight: 23 },
+  searchInput: {
+    flex: 1,
+    minHeight: 50,
+    marginLeft: 9,
+    color: "#FFFFFF",
+    fontSize: 15,
+  },
+  courseCard: {
+    marginTop: 15,
+    padding: 18,
+    borderRadius: 17,
+    borderWidth: 1,
+    borderColor: "#252D39",
+    backgroundColor: "#151A22",
+  },
+  courseName: {
+    color: "#FFFFFF",
+    fontSize: 17,
+    fontWeight: "800",
+    lineHeight: 23,
+  },
   faculty: { marginTop: 6, color: "#9CA6B5", fontSize: 13, lineHeight: 19 },
   divider: { height: 1, marginVertical: 15, backgroundColor: "#29313D" },
   metaRow: { flexDirection: "row", gap: 14 },
   metaItem: { flex: 1 },
-  metaLabel: { color: "#818C9B", fontSize: 11, fontWeight: "700", textTransform: "uppercase", letterSpacing: 0.5 },
-  metaValue: { marginTop: 5, color: "#FFFFFF", fontSize: 13, lineHeight: 19, fontWeight: "600" },
+  metaLabel: {
+    color: "#818C9B",
+    fontSize: 11,
+    fontWeight: "700",
+    textTransform: "uppercase",
+    letterSpacing: 0.5,
+  },
+  metaValue: {
+    marginTop: 5,
+    color: "#FFFFFF",
+    fontSize: 13,
+    lineHeight: 19,
+    fontWeight: "600",
+  },
   subjectsBlock: { marginTop: 17 },
   subjectsRow: { flexDirection: "row", flexWrap: "wrap", gap: 7, marginTop: 8 },
-  subjectBadge: { paddingHorizontal: 10, paddingVertical: 7, borderRadius: 999, backgroundColor: "#222936" },
+  subjectBadge: {
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+    borderRadius: 999,
+    backgroundColor: "#222936",
+  },
   subjectText: { color: "#D7DCE4", fontSize: 12, fontWeight: "600" },
   emptyText: { paddingVertical: 30, color: "#9CA6B5", textAlign: "center" },
 });
