@@ -3,7 +3,6 @@ import { FlatList, StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import NavBar from "../components/NavBar";
 import UniversityCard from "../components/Varsity-Card";
 import { universities } from "../data/universities";
 
@@ -46,7 +45,6 @@ export default function UniversitiesScreen({ navigation }) {
           />
         )}
       />
-      <NavBar navigation={navigation} dark />
     </SafeAreaView>
   );
 }
@@ -59,7 +57,7 @@ const styles = StyleSheet.create({
   listContent: {
     paddingHorizontal: 20,
     paddingTop: 18,
-    paddingBottom: 150,
+    paddingBottom: 32,
   },
   header: {
     marginBottom: 25,

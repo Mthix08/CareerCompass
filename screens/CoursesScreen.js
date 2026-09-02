@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
-import NavBar from "../components/NavBar";
 
-export default function CoursesScreen({ navigation }) {
+export default function CoursesScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.eyebrow}>PLAN YOUR FUTURE</Text>
@@ -9,7 +8,6 @@ export default function CoursesScreen({ navigation }) {
       <Text style={styles.subtitle}>
         Explore courses and find a study path that fits your goals.
       </Text>
-      <NavBar navigation={navigation} />
     </View>
   );
 }
@@ -19,7 +17,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 24,
-    paddingBottom: 106,
     backgroundColor: "#F6F8FC",
   },
   eyebrow: {
