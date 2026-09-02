@@ -1,12 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
-import NavBar from "../components/NavBar";
 
-export default function HomeScreen({ navigation }) {
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to CareerCompass</Text>
       <Text style={styles.subtitle}>Your career journey starts here.</Text>
-      <NavBar navigation={navigation} />
     </View>
   );
 }
@@ -17,7 +15,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 24,
-    paddingBottom: 106,
     backgroundColor: "#F6F8FC",
   },
   title: {
