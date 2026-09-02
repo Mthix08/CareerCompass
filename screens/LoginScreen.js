@@ -130,8 +130,8 @@ export default function LoginScreen({ navigation }) {
 
           <TouchableOpacity
             style={styles.forgotContainer}
-            activeOpacity={0.7}
-            onPress={() => console.log("Forgot password")}
+            activeOpacity={0.8}
+            onPress={() => navigation?.navigate("PassRecovery")}
           >
             <Text style={styles.forgotText}>Forgot password?</Text>
           </TouchableOpacity>

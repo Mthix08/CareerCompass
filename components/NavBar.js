@@ -33,6 +33,32 @@ export default function NavBar({ navigation, dark = false }) {
             color={dark ? "#F26522" : "#117C72"}
           />
         </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.navButton}
+          activeOpacity={0.8}
+          onPress={() => navigation?.navigate("Courses")}
+          accessibilityLabel="Courses"
+          accessibilityRole="button"
+        >
+          <Ionicons name="book-outline" size={25} color="#FFFFFF" />
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[
+            styles.navButton,
+            styles.secondaryButton,
+            dark && styles.darkSecondaryButton,
+          ]}
+          activeOpacity={0.8}
+          onPress={() => navigation?.navigate("Profile")}
+          accessibilityLabel="Profile"
+          accessibilityRole="button"
+        >
+          <Ionicons
+            name="person-outline"
+            size={25}
+            color={dark ? "#F26522" : "#117C72"}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -69,7 +95,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#05080D",
   },
   itemsRow: {
-    width: 150,
+    width: "92%",
+    maxWidth: 360,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
