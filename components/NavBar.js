@@ -2,10 +2,10 @@ import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 
-export default function NavBar({ navigation }) {
+export default function NavBar({ navigation, dark = false }) {
   return (
-    <View style={styles.navBar}>
-      <View style={styles.notch} />
+    <View style={[styles.navBar, dark && styles.darkNavBar]}>
+      <View style={[styles.notch, dark && styles.darkNotch]} />
       <View style={styles.itemsRow}>
         <TouchableOpacity
           style={styles.navButton}
@@ -17,13 +17,21 @@ export default function NavBar({ navigation }) {
           <Ionicons name="home" size={25} color="#FFFFFF" />
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.navButton, styles.secondaryButton]}
+          style={[
+            styles.navButton,
+            styles.secondaryButton,
+            dark && styles.darkSecondaryButton,
+          ]}
           activeOpacity={0.8}
           onPress={() => navigation?.navigate("Universities")}
           accessibilityLabel="Institutions"
           accessibilityRole="button"
         >
-          <Ionicons name="business-outline" size={25} color="#117C72" />
+          <Ionicons
+            name="business-outline"
+            size={25}
+            color={dark ? "#F26522" : "#117C72"}
+          />
         </TouchableOpacity>
       </View>
     </View>
@@ -44,6 +52,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  darkNavBar: {
+    backgroundColor: "#0D1117",
+    borderTopWidth: 1,
+    borderTopColor: "#202733",
+  },
   notch: {
     position: "absolute",
     top: -24,
@@ -51,6 +64,9 @@ const styles = StyleSheet.create({
     height: 48,
     borderRadius: 46,
     backgroundColor: "#F6F8FC",
+  },
+  darkNotch: {
+    backgroundColor: "#05080D",
   },
   itemsRow: {
     width: 150,
@@ -75,5 +91,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#E8F3F1",
     elevation: 0,
     shadowOpacity: 0,
+  },
+  darkSecondaryButton: {
+    backgroundColor: "#151A22",
   },
 });
