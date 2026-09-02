@@ -7,10 +7,8 @@ export const universities = [
     type: "Public",
     applicationFee: 0,
     applicationFeeLabel: "Free to apply",
-    // Add assets/uj-campus.jpg, then use: require("../assets/uj-campus.jpg")
-    image: null,
-    // Add assets/uj-logo.png, then use: require("../assets/uj-logo.png")
-    logo: null,
+    image: require("../assets/UjCampus.jpg"),
+    logo: require("../assets/UJLogoo.png"),
     description:
       "The University of Johannesburg is a public university situated in Johannesburg, Gauteng. It offers undergraduate and postgraduate programmes across several faculties.",
     campuses: [
@@ -19,6 +17,7 @@ export const universities = [
       "Doornfontein Campus",
       "Soweto Campus",
     ],
+    virtualCampusUrl: "https://www.uj.ac.za/virtual-campus/",
     website: "https://www.uj.ac.za/",
     applicationUrl: "https://www.uj.ac.za/admissions-aid/",
     applicationStatus: "Check the official UJ website",
