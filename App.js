@@ -9,6 +9,7 @@ import SignUpScreen from "./screens/SignUpScreen";
 import HomeScreen from "./screens/HomeScreen";
 import SplashScreen from "./screens/SplashScreen";
 import UniversitiesScreen from "./screens/UniversitiesScreen";
+import UniversityDetailsScreen from "./screens/UniversityDetailsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,11 @@ export default function App() {
         <Stack.Screen name="SignUp" component={SignUpScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Universities" component={UniversitiesScreen} />
+        <Stack.Screen
+          name="UniversityDetails"
+          component={UniversityDetailsScreen}
+          options={{ title: "University details" }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
