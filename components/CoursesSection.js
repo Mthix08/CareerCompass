@@ -48,7 +48,8 @@ export default function CoursesSection({ courses = [], accentColor = "#F4B08F" }
     <View style={styles.section}>
       <Text style={styles.heading}>Courses</Text>
       <Text style={[styles.notice, { color: accentColor }]}>
-        this is an example of courses and how they are displayed.
+        Representative programmes are shown below. Confirm current offerings and
+        entry requirements in the university's latest prospectus.
       </Text>
       <View style={styles.searchBox}>
         <Ionicons name="search-outline" size={20} color="#9CA6B5" />

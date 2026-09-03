@@ -17,7 +17,9 @@ export default function ApplySection({ university }) {
   const applicationFee =
     university.applicationFee === 0
       ? university.applicationFeeLabel || "Free to apply"
-      : `R${university.applicationFee}`;
+      : Number.isFinite(university.applicationFee)
+        ? `R${university.applicationFee}`
+        : university.applicationFeeLabel || "Confirm on the official website";
 
   const openApplicationWebsite = async () => {
     const url = university.applicationUrl;

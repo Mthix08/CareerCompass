@@ -17,13 +17,22 @@ export default function UniversityCard({
 }) {
   const isFree = university.applicationFee === 0;
   const universityTheme = getUniversityTheme(university);
+  const feeValue = isFree
+    ? "R0"
+    : Number.isFinite(university.applicationFee)
+      ? `R${university.applicationFee}`
+      : university.applicationFeeLabel || "Check official site";
 
   return (
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={`Open ${university.name} details`}
-      style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}
+      style={({ pressed }) => [
+        styles.card,
+        { borderColor: universityTheme.accentSoft },
+        pressed && styles.cardPressed,
+      ]}
     >
       {university.image ? (
         <Image
@@ -45,8 +54,10 @@ export default function UniversityCard({
         </View>
       )}
 
+      <View style={[styles.brandBar, { backgroundColor: universityTheme.accent }]} />
+
       <View style={styles.body}>
-        <View style={styles.logoWrap}>
+        <View style={[styles.logoWrap, { borderColor: universityTheme.accent }]}>
           {university.logo ? (
             <Image
               source={university.logo}
@@ -69,9 +80,7 @@ export default function UniversityCard({
           </View>
           <View style={styles.feeRow}>
             <Text style={styles.feeLabel}>Application fee</Text>
-            <Text style={styles.feeValue}>
-              {isFree ? "R0" : `R${university.applicationFee}`}
-            </Text>
+            <Text style={styles.feeValue}>{feeValue}</Text>
             {isFree && (
               <View style={styles.freeBadge}>
                 <Text style={styles.freeBadgeText}>
@@ -110,6 +119,7 @@ export default function UniversityCard({
 const styles = StyleSheet.create({
   card: {
     width: "100%",
+    height: 384,
     overflow: "hidden",
     borderRadius: 22,
     backgroundColor: "#0D1117",
@@ -122,10 +132,11 @@ const styles = StyleSheet.create({
     shadowRadius: 12,
   },
   cardPressed: { opacity: 0.88, transform: [{ scale: 0.99 }] },
-  coverImage: { width: "100%", aspectRatio: 16 / 9 },
+  coverImage: { width: "100%", height: 190 },
+  brandBar: { width: "100%", height: 4 },
   coverPlaceholder: {
     width: "100%",
-    aspectRatio: 16 / 9,
+    height: 190,
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
@@ -133,7 +144,7 @@ const styles = StyleSheet.create({
   },
   placeholderText: { fontSize: 13, fontWeight: "600" },
   body: {
-    minHeight: 154,
+    flex: 1,
     flexDirection: "row",
     alignItems: "flex-start",
     padding: 18,
@@ -145,16 +156,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#FFFFFF",
+    borderWidth: 1.5,
   },
   logo: { width: 48, height: 48 },
   logoText: { fontSize: 20, fontWeight: "900" },
   details: { flex: 1, minWidth: 0, marginHorizontal: 14 },
-  name: { color: "#FFFFFF", fontSize: 19, fontWeight: "800", lineHeight: 24 },
+  name: { minHeight: 48, color: "#FFFFFF", fontSize: 19, fontWeight: "800", lineHeight: 24 },
   locationRow: { flexDirection: "row", alignItems: "center", marginTop: 7 },
   province: { marginLeft: 4, color: "#9CA6B5", fontSize: 14 },
   feeRow: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", marginTop: 12, gap: 7 },
   feeLabel: { color: "#9CA6B5", fontSize: 12 },
-  feeValue: { color: "#FFFFFF", fontSize: 13, fontWeight: "700" },
+  feeValue: { flexShrink: 1, color: "#FFFFFF", fontSize: 13, fontWeight: "700" },
   freeBadge: { borderRadius: 999, paddingHorizontal: 9, paddingVertical: 5, backgroundColor: "rgba(0, 200, 83, 0.16)" },
   freeBadgeText: { color: "#58E58F", fontSize: 11, fontWeight: "800" },
   bookmarkButton: {

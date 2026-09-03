@@ -1,6 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { getUniversityTheme } from "../data/universityTheme";
 
 export const SectionHeader = memo(function SectionHeader({ title, icon, actionLabel, onActionPress, colors }) {
   const styles = useMemo(() => createStyles(colors), [colors]);
@@ -58,23 +59,27 @@ export const APSScoreRow = memo(function APSScoreRow({ university, score, colors
 
 export const HomeUniversityCard = memo(function HomeUniversityCard({ university, onPress, colors, width }) {
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const universityTheme = getUniversityTheme(university);
   const applicationTag = university.applicationFee === 0
     ? university.applicationFeeLabel || "Free to apply"
-    : `Application fee R${university.applicationFee}`;
+    : Number.isFinite(university.applicationFee)
+      ? `Application fee R${university.applicationFee}`
+      : university.applicationFeeLabel || "Check application fee";
   return (
-    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={`Open ${university.name} details`} style={({ pressed }) => [styles.universityCard, { width }, pressed && styles.cardPressed]}>
+    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={`Open ${university.name} details`} style={({ pressed }) => [styles.universityCard, { width, borderColor: universityTheme.accentSoft }, pressed && styles.cardPressed]}>
       <Image source={university.image} style={styles.universityImage} resizeMode="cover" accessibilityLabel={`${university.name} campus`} />
+      <View style={[styles.universityBrandBar, { backgroundColor: universityTheme.accent }]} />
       <View style={styles.universityBody}>
         <View style={styles.universityIdentity}>
-          <View style={styles.logoWrapMedium}><Image source={university.logo} style={styles.logoMedium} resizeMode="contain" accessibilityLabel={`${university.shortName} logo`} /></View>
+          <View style={[styles.logoWrapMedium, { borderColor: universityTheme.accent }]}><Image source={university.logo} style={styles.logoMedium} resizeMode="contain" accessibilityLabel={`${university.shortName} logo`} /></View>
           <View style={styles.universityNameWrap}>
             <Text style={styles.universityName} numberOfLines={2}>{university.name}</Text>
             <View style={styles.locationRow}><Ionicons name="location-outline" size={14} color={colors.mutedText} /><Text style={styles.universityLocation} numberOfLines={1}>{university.province}</Text></View>
           </View>
         </View>
         <View style={styles.tagRow}>
-          <View style={styles.neutralTag}><Text style={styles.neutralTagText}>{university.type}</Text></View>
-          <View style={styles.applicationTag}><Text style={styles.applicationTagText} numberOfLines={1}>{applicationTag}</Text></View>
+          <View style={styles.neutralTag}><Text style={styles.neutralTagText} numberOfLines={1}>{university.type}</Text></View>
+          <View style={[styles.applicationTag, { backgroundColor: universityTheme.accentSoft }]}><Text style={[styles.applicationTagText, { color: universityTheme.accent }]} numberOfLines={1}>{applicationTag}</Text></View>
         </View>
       </View>
     </Pressable>
@@ -132,20 +137,21 @@ const createStyles = (colors) => StyleSheet.create({
   apsValueWrap: { minWidth: 48, alignItems: "flex-end" },
   apsValue: { color: colors.primary, fontSize: 25, lineHeight: 28, fontWeight: "900" },
   apsLabel: { marginTop: 1, color: colors.primary, fontSize: 10, fontWeight: "900" },
-  universityCard: { overflow: "hidden", borderRadius: 22, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface, shadowColor: "#071B19", shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.12, shadowRadius: 10, elevation: 4 },
+  universityCard: { height: 310, overflow: "hidden", borderRadius: 22, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface, shadowColor: "#071B19", shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.12, shadowRadius: 10, elevation: 4 },
   universityImage: { width: "100%", height: 146 },
+  universityBrandBar: { width: "100%", height: 4 },
   universityBody: { flex: 1, padding: 15 },
   universityIdentity: { flexDirection: "row", alignItems: "center" },
   universityNameWrap: { flex: 1, minWidth: 0, marginLeft: 11 },
-  universityName: { color: colors.text, fontSize: 15, lineHeight: 20, fontWeight: "900" },
+  universityName: { minHeight: 40, color: colors.text, fontSize: 15, lineHeight: 20, fontWeight: "900" },
   locationRow: { marginTop: 5, flexDirection: "row", alignItems: "center" },
   universityLocation: { flex: 1, marginLeft: 3, color: colors.mutedText, fontSize: 12 },
   tagRow: { marginTop: 14, flexDirection: "row", flexWrap: "wrap", gap: 7 },
-  neutralTag: { paddingHorizontal: 9, paddingVertical: 6, borderRadius: 999, backgroundColor: colors.elevatedSurface },
-  neutralTagText: { color: colors.secondaryText, fontSize: 10, fontWeight: "800" },
+  neutralTag: { maxWidth: "100%", flexShrink: 1, paddingHorizontal: 9, paddingVertical: 6, borderRadius: 999, backgroundColor: colors.elevatedSurface },
+  neutralTagText: { flexShrink: 1, color: colors.secondaryText, fontSize: 10, fontWeight: "800" },
   applicationTag: { flexShrink: 1, paddingHorizontal: 9, paddingVertical: 6, borderRadius: 999, backgroundColor: colors.primarySoft },
   applicationTagText: { flexShrink: 1, color: colors.primary, fontSize: 10, fontWeight: "800" },
-  viewAllCard: { minHeight: 281, padding: 20, borderRadius: 22, borderWidth: 1.5, borderStyle: "dashed", borderColor: colors.primary, alignItems: "center", justifyContent: "center", backgroundColor: colors.primarySoft },
+  viewAllCard: { height: 310, padding: 20, borderRadius: 22, borderWidth: 1.5, borderStyle: "dashed", borderColor: colors.primary, alignItems: "center", justifyContent: "center", backgroundColor: colors.primarySoft },
   viewAllIcon: { width: 62, height: 62, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: colors.surface },
   viewAllTitle: { marginTop: 18, color: colors.text, fontSize: 16, lineHeight: 21, fontWeight: "900", textAlign: "center" },
   viewAllText: { marginVertical: 8, color: colors.secondaryText, fontSize: 12, lineHeight: 18, textAlign: "center" },
