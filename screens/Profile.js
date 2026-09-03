@@ -94,10 +94,6 @@ export default function ProfileScreen({ navigation }) {
     return () => clearTimeout(timer);
   }, [clearSuccessMessage, successMessage]);
 
-  const showComingSoon = (feature) => {
-    Alert.alert(feature, "This frontend shortcut will be connected later.");
-  };
-
   const handleAvatarPress = () => {
     // TODO: Connect an image picker and profile-image upload later.
     Alert.alert(
@@ -279,21 +275,21 @@ export default function ProfileScreen({ navigation }) {
             icon="bookmark-outline"
             label="Saved Universities & Courses"
             badge="12 saved"
-            onPress={() => navigation.navigate("Universities")}
+            onPress={() => navigation.navigate("Bookmarks")}
             styles={styles}
           />
           <QuickLink
             icon="briefcase-outline"
             label="My Applications"
             badge="Pending"
-            onPress={() => showComingSoon("My Applications")}
+            onPress={() => navigation.navigate("Applications")}
             styles={styles}
           />
           <QuickLink
             icon="calculator-outline"
             label="APS Calculator"
             badge="Score: 38"
-            onPress={() => showComingSoon("APS Calculator")}
+            onPress={() => navigation.navigate("ApsCalculator")}
             styles={styles}
           />
           <QuickLink
@@ -311,26 +307,26 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="options-outline"
             label="Notification Preferences"
-            onPress={() => showComingSoon("Notification Preferences")}
+            onPress={() => navigation.navigate("NotificationPreferences")}
             styles={styles}
           />
           <QuickLink
             icon="notifications-outline"
             label="Notifications"
-            onPress={() => showComingSoon("Notifications")}
+            onPress={() => navigation.navigate("Notifications")}
             styles={styles}
           />
           <QuickLink
             icon="language-outline"
             label="Language"
             badge="English"
-            onPress={() => showComingSoon("Language")}
+            onPress={() => navigation.navigate("Language")}
             styles={styles}
           />
           <QuickLink
             icon="help-circle-outline"
             label="FAQs"
-            onPress={() => showComingSoon("FAQs")}
+            onPress={() => navigation.navigate("Faqs")}
             styles={styles}
           />
         </View>
