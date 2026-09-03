@@ -150,7 +150,7 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
   const activeLabel = activeOptions.title || activeRoute.name;
   const activeIcons = TAB_ICONS[activeRoute.name] || TAB_ICONS.Home;
   const screenBackground =
-    activeRoute.name === "Profile"
+    activeRoute.name === "Profile" || activeRoute.name === "Home"
       ? colors.background
       : TAB_BACKGROUNDS[activeRoute.name] || "#F6F8FC";
 
