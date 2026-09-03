@@ -7,6 +7,7 @@ import {
   Text,
   View,
 } from "react-native";
+import { getUniversityTheme } from "../data/universityTheme";
 
 export default function UniversityCard({
   university,
@@ -15,6 +16,7 @@ export default function UniversityCard({
   onBookmarkPress,
 }) {
   const isFree = university.applicationFee === 0;
+  const universityTheme = getUniversityTheme(university);
 
   return (
     <Pressable
@@ -31,9 +33,15 @@ export default function UniversityCard({
           accessibilityLabel={`${university.name} campus`}
         />
       ) : (
-        <View style={styles.coverPlaceholder} accessible={false}>
-          <Ionicons name="school-outline" size={54} color="#F58B54" />
-          <Text style={styles.placeholderText}>Campus image coming soon</Text>
+        <View
+          style={[
+            styles.coverPlaceholder,
+            { backgroundColor: universityTheme.placeholderBackground },
+          ]}
+          accessible={false}
+        >
+          <Ionicons name="school-outline" size={54} color={universityTheme.accentLight} />
+          <Text style={[styles.placeholderText, { color: universityTheme.accentLight }]}>Campus image coming soon</Text>
         </View>
       )}
 
@@ -47,7 +55,7 @@ export default function UniversityCard({
               accessibilityLabel={`${university.shortName} logo`}
             />
           ) : (
-            <Text style={styles.logoText}>{university.shortName}</Text>
+            <Text style={[styles.logoText, { color: universityTheme.accent }]}>{university.shortName}</Text>
           )}
         </View>
 
@@ -91,7 +99,7 @@ export default function UniversityCard({
           <Ionicons
             name={bookmarked ? "bookmark" : "bookmark-outline"}
             size={24}
-            color={bookmarked ? "#F26522" : "#FFFFFF"}
+            color={bookmarked ? universityTheme.accent : "#FFFFFF"}
           />
         </Pressable>
       </View>
@@ -123,7 +131,7 @@ const styles = StyleSheet.create({
     gap: 8,
     backgroundColor: "#301B14",
   },
-  placeholderText: { color: "#F4B08F", fontSize: 13, fontWeight: "600" },
+  placeholderText: { fontSize: 13, fontWeight: "600" },
   body: {
     minHeight: 154,
     flexDirection: "row",
@@ -139,7 +147,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
   },
   logo: { width: 48, height: 48 },
-  logoText: { color: "#F26522", fontSize: 20, fontWeight: "900" },
+  logoText: { fontSize: 20, fontWeight: "900" },
   details: { flex: 1, minWidth: 0, marginHorizontal: 14 },
   name: { color: "#FFFFFF", fontSize: 19, fontWeight: "800", lineHeight: 24 },
   locationRow: { flexDirection: "row", alignItems: "center", marginTop: 7 },

@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 
 const TABS = ["About", "Courses", "Apply"];
 
-export default function UniversityTabs({ activeTab, onTabChange }) {
+export default function UniversityTabs({ activeTab, onTabChange, accentColor = "#F26522" }) {
   return (
     <View style={styles.container} accessibilityRole="tablist">
       {TABS.map((tab) => {
@@ -17,7 +17,7 @@ export default function UniversityTabs({ activeTab, onTabChange }) {
             accessibilityState={{ selected }}
             style={({ pressed }) => [
               styles.tab,
-              selected && styles.selectedTab,
+              selected && [styles.selectedTab, { backgroundColor: accentColor }],
               pressed && styles.pressedTab,
             ]}
           >
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  selectedTab: { backgroundColor: "#F26522" },
+  selectedTab: {},
   pressedTab: { opacity: 0.75 },
   label: { color: "#9CA6B5", fontSize: 14, fontWeight: "700" },
   selectedLabel: { color: "#FFFFFF" },

@@ -34,7 +34,7 @@ function CourseCard({ course }) {
   );
 }
 
-export default function CoursesSection({ courses = [] }) {
+export default function CoursesSection({ courses = [], accentColor = "#F4B08F" }) {
   const [query, setQuery] = useState("");
   const filteredCourses = useMemo(() => {
     const search = query.trim().toLowerCase();
@@ -47,7 +47,7 @@ export default function CoursesSection({ courses = [] }) {
   return (
     <View style={styles.section}>
       <Text style={styles.heading}>Courses</Text>
-      <Text style={styles.notice}>
+      <Text style={[styles.notice, { color: accentColor }]}>
         this is an example of courses and how they are displayed.
       </Text>
       <View style={styles.searchBox}>
@@ -78,7 +78,7 @@ export default function CoursesSection({ courses = [] }) {
 const styles = StyleSheet.create({
   section: { paddingTop: 24 },
   heading: { color: "#FFFFFF", fontSize: 22, fontWeight: "800" },
-  notice: { marginTop: 8, color: "#F4B08F", fontSize: 13, lineHeight: 19 },
+  notice: { marginTop: 8, fontSize: 13, lineHeight: 19 },
   searchBox: {
     minHeight: 52,
     marginTop: 18,

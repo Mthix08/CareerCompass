@@ -8,17 +8,19 @@ import {
   View,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { getUniversityTheme } from "../data/universityTheme";
 
-function InfoRow({ icon, children }) {
+function InfoRow({ icon, children, accentColor }) {
   return (
     <View style={styles.infoRow}>
-      <Ionicons name={icon} size={19} color="#F26522" />
+      <Ionicons name={icon} size={19} color={accentColor} />
       <Text style={styles.infoText}>{children}</Text>
     </View>
   );
 }
 
 export default function AboutSection({ university, onApsPress }) {
+  const universityTheme = getUniversityTheme(university);
   const openVirtualCampus = async () => {
     const url = university.virtualCampusUrl;
     if (!url || !/^https?:\/\//i.test(url)) {
@@ -78,7 +80,7 @@ export default function AboutSection({ university, onApsPress }) {
         <View style={styles.block}>
           <Text style={styles.subheading}>Campuses</Text>
           {university.campuses.map((campus) => (
-            <InfoRow key={campus} icon="location-outline">
+            <InfoRow key={campus} icon="location-outline" accentColor={universityTheme.accent}>
               {campus}
             </InfoRow>
           ))}
@@ -89,6 +91,7 @@ export default function AboutSection({ university, onApsPress }) {
               accessibilityLabel={`View ${university.shortName} virtual campus`}
               style={({ pressed }) => [
                 styles.virtualButton,
+                { borderColor: universityTheme.accent },
                 pressed && styles.pressed,
               ]}
             >
@@ -105,13 +108,13 @@ export default function AboutSection({ university, onApsPress }) {
         <View style={styles.block}>
           <Text style={styles.subheading}>Contact</Text>
           {!!university.contactEmail && (
-            <InfoRow icon="mail-outline">{university.contactEmail}</InfoRow>
+            <InfoRow icon="mail-outline" accentColor={universityTheme.accent}>{university.contactEmail}</InfoRow>
           )}
           {!!university.contactPhone && (
-            <InfoRow icon="call-outline">{university.contactPhone}</InfoRow>
+            <InfoRow icon="call-outline" accentColor={universityTheme.accent}>{university.contactPhone}</InfoRow>
           )}
           {!!university.website && (
-            <InfoRow icon="globe-outline">{university.website}</InfoRow>
+            <InfoRow icon="globe-outline" accentColor={universityTheme.accent}>{university.website}</InfoRow>
           )}
         </View>
       )}
@@ -120,7 +123,7 @@ export default function AboutSection({ university, onApsPress }) {
         onPress={handleApsPress}
         accessibilityRole="button"
         accessibilityLabel={`See your APS at ${university.shortName}`}
-        style={({ pressed }) => [styles.button, pressed && styles.pressed]}
+        style={({ pressed }) => [styles.button, { backgroundColor: universityTheme.accent }, pressed && styles.pressed]}
       >
         <Ionicons name="calculator-outline" size={21} color="#FFFFFF" />
         <Text style={styles.buttonText}>

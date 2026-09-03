@@ -23,6 +23,7 @@ export default function UniversitiesScreen({ navigation }) {
       <FlatList
         data={universities}
         keyExtractor={(university) => university.id}
+        ItemSeparatorComponent={() => <View style={styles.separator} />}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.listContent}
         ListHeaderComponent={
@@ -62,6 +63,7 @@ const styles = StyleSheet.create({
   header: {
     marginBottom: 25,
   },
+  separator: { height: 20 },
   eyebrow: {
     color: "#117C72",
     fontSize: 11,

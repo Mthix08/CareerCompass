@@ -1,6 +1,7 @@
 import React from "react";
 import { Alert, Linking, Pressable, StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { getUniversityTheme } from "../data/universityTheme";
 
 function DetailRow({ label, value, accent = false }) {
   return (
@@ -12,6 +13,7 @@ function DetailRow({ label, value, accent = false }) {
 }
 
 export default function ApplySection({ university }) {
+  const universityTheme = getUniversityTheme(university);
   const applicationFee =
     university.applicationFee === 0
       ? university.applicationFeeLabel || "Free to apply"
@@ -63,7 +65,7 @@ export default function ApplySection({ university }) {
   return (
     <View style={styles.section}>
       <Text style={styles.heading}>Application information</Text>
-      <Text style={styles.notice}>
+      <Text style={[styles.notice, { color: universityTheme.accentLight }]}>
         Dates and requirements can change. Confirm all information on the official
         university website.
       </Text>
@@ -85,7 +87,7 @@ export default function ApplySection({ university }) {
         onPress={confirmOpenWebsite}
         accessibilityRole="link"
         accessibilityLabel={`Apply to ${university.name} on its official website`}
-        style={({ pressed }) => [styles.button, pressed && styles.pressed]}
+        style={({ pressed }) => [styles.button, { backgroundColor: universityTheme.accent }, pressed && styles.pressed]}
       >
         <Text style={styles.buttonText}>Apply on university website</Text>
         <Ionicons name="open-outline" size={20} color="#FFFFFF" />
@@ -97,7 +99,7 @@ export default function ApplySection({ university }) {
 const styles = StyleSheet.create({
   section: { paddingTop: 24 },
   heading: { color: "#FFFFFF", fontSize: 22, fontWeight: "800" },
-  notice: { marginTop: 9, color: "#F4B08F", fontSize: 13, lineHeight: 19 },
+  notice: { marginTop: 9, fontSize: 13, lineHeight: 19 },
   detailsCard: { marginTop: 19, paddingHorizontal: 17, borderRadius: 17, borderWidth: 1, borderColor: "#252D39", backgroundColor: "#151A22" },
   detailRow: { minHeight: 61, paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: "#343C48", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 14 },
   detailLabel: { flex: 0.42, color: "#9CA6B5", fontSize: 13 },
