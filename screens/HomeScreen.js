@@ -1,6 +1,5 @@
 import React, { useCallback, useMemo } from "react";
 import {
-  Alert,
   FlatList,
   ImageBackground,
   Pressable,
@@ -58,21 +57,15 @@ export default function HomeScreen({ navigation }) {
     [],
   );
 
-  const showApsPlaceholder = useCallback(() => {
-    // TODO: Navigate to the APS Calculator when that screen is registered.
-    Alert.alert(
-      "APS Calculator coming soon",
-      "This button is ready to connect when the APS Calculator screen is added.",
-    );
-  }, []);
+  const openApsCalculator = useCallback(
+    () => navigation.navigate("ApsCalculator"),
+    [navigation],
+  );
 
-  const showFundingPlaceholder = useCallback(() => {
-    // TODO: Navigate to the Funding/Bursaries screen when that route is registered.
-    Alert.alert(
-      "Funding section coming soon",
-      "NSFAS and bursary information will open here once the funding screen is connected.",
-    );
-  }, []);
+  const openFunding = useCallback(
+    () => navigation.navigate("NsfasDetails"),
+    [navigation],
+  );
 
   const openCourses = useCallback(
     () => navigation.navigate("Courses"),
@@ -102,14 +95,14 @@ export default function HomeScreen({ navigation }) {
         title: "View My APS",
         subtitle: "Know your score",
         icon: "calculator-outline",
-        onPress: showApsPlaceholder,
+        onPress: openApsCalculator,
       },
       {
         id: "funding",
         title: "Find Bursaries",
         subtitle: "Explore funding options",
         icon: "wallet-outline",
-        onPress: showFundingPlaceholder,
+        onPress: openFunding,
       },
       {
         id: "universities",
@@ -119,7 +112,7 @@ export default function HomeScreen({ navigation }) {
         onPress: openUniversities,
       },
     ],
-    [openCourses, openUniversities, showApsPlaceholder, showFundingPlaceholder],
+    [openApsCalculator, openCourses, openFunding, openUniversities],
   );
 
   return (
@@ -138,7 +131,7 @@ export default function HomeScreen({ navigation }) {
             Explore universities and find the right path for your future.
           </Text>
           <Pressable
-            onPress={showApsPlaceholder}
+            onPress={openApsCalculator}
             accessibilityRole="button"
             accessibilityLabel="View My APS"
             style={({ pressed }) => [
@@ -182,7 +175,7 @@ export default function HomeScreen({ navigation }) {
           </View>
 
           <Pressable
-            onPress={showFundingPlaceholder}
+            onPress={openFunding}
             accessibilityRole="button"
             accessibilityLabel="Learn more about NSFAS funding"
             style={({ pressed }) => [
@@ -269,7 +262,7 @@ export default function HomeScreen({ navigation }) {
               />
             ))}
             <Pressable
-              onPress={showApsPlaceholder}
+              onPress={openApsCalculator}
               accessibilityRole="button"
               accessibilityLabel="Calculate APS"
               style={({ pressed }) => [
@@ -349,7 +342,7 @@ export default function HomeScreen({ navigation }) {
                 qualify for before you apply.
               </Text>
               <Pressable
-                onPress={showApsPlaceholder}
+                onPress={openApsCalculator}
                 accessibilityRole="button"
                 accessibilityLabel="Calculate My APS"
                 style={({ pressed }) => [

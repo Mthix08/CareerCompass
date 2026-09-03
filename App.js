@@ -7,6 +7,14 @@ import PassRecoveryScreen from "./screens/PassRecoveryScreen";
 import SplashScreen from "./screens/SplashScreen";
 import UniversityDetailsScreen from "./screens/UniversityDetailsScreen";
 import EditProfileScreen from "./screens/EditProfileScreen";
+import ApsCalculatorScreen from "./screens/ApsCalculatorScreen";
+import NsfasDetails from "./screens/NsfasDetails";
+import Applications from "./screens/Applications";
+import Bookmarks from "./screens/Bookmarks";
+import Notifications from "./screens/Notifications";
+import NotificationPreferences from "./screens/NotificationPreferences";
+import LanguageScreen from "./screens/LanguageScreen";
+import FaqsScreen from "./screens/FaqsScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import { ProfileProvider } from "./context/ProfileContext";
 
@@ -42,6 +50,45 @@ function AppNavigator() {
           name="EditProfile"
           component={EditProfileScreen}
           options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="ApsCalculator"
+          component={ApsCalculatorScreen}
+          options={{ title: "APS Calculator" }}
+        />
+        <Stack.Screen
+          name="NsfasDetails"
+          component={NsfasDetails}
+          options={{ title: "NSFAS Funding" }}
+        />
+        <Stack.Screen
+          name="Applications"
+          component={Applications}
+          options={{ title: "My Applications" }}
+        />
+        <Stack.Screen
+          name="Bookmarks"
+          component={Bookmarks}
+          options={{ title: "Saved Universities & Courses" }}
+        />
+        <Stack.Screen
+          name="NotificationPreferences"
+          component={NotificationPreferences}
+          options={{ title: "Notification Preferences" }}
+        />
+        <Stack.Screen
+          name="Notifications"
+          component={Notifications}
+        />
+        <Stack.Screen
+          name="Language"
+          component={LanguageScreen}
+          options={{ title: "Language" }}
+        />
+        <Stack.Screen
+          name="Faqs"
+          component={FaqsScreen}
+          options={{ title: "FAQs" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

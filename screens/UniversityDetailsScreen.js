@@ -47,8 +47,12 @@ export default function UniversityDetailsScreen({ navigation, route }) {
     if (activeTab === "Apply") {
       return <ApplySection university={university} />;
     }
-    // TODO: Pass an APS navigation callback here when an APS route is added.
-    return <AboutSection university={university} />;
+    return (
+      <AboutSection
+        university={university}
+        onApsPress={() => navigation.navigate("ApsCalculator", { university })}
+      />
+    );
   };
 
   return (
