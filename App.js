@@ -6,11 +6,13 @@ import SignUpScreen from "./screens/SignUpScreen";
 import PassRecoveryScreen from "./screens/PassRecoveryScreen";
 import SplashScreen from "./screens/SplashScreen";
 import UniversityDetailsScreen from "./screens/UniversityDetailsScreen";
+import EditProfileScreen from "./screens/EditProfileScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
+import { ProfileProvider } from "./context/ProfileContext";
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+function AppNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Splash">
@@ -36,7 +38,20 @@ export default function App() {
           component={UniversityDetailsScreen}
           options={{ headerShown: false, animation: "slide_from_right" }}
         />
+        <Stack.Screen
+          name="EditProfile"
+          component={EditProfileScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
+  );
+}
+
+export default function App() {
+  return (
+    <ProfileProvider>
+      <AppNavigator />
+    </ProfileProvider>
   );
 }
