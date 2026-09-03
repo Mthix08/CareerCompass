@@ -99,7 +99,7 @@ export default function UniversityDetailsScreen({ navigation, route }) {
         </View>
 
         <View style={styles.content}>
-          <View style={styles.logoWrap}>
+          <View style={[styles.logoWrap, { borderColor: universityTheme.accent }]}>
             {university.logo ? (
               <Image source={university.logo} style={styles.logo} resizeMode="contain" accessibilityLabel={`${university.shortName} logo`} />
             ) : (

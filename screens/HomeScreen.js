@@ -253,7 +253,7 @@ export default function HomeScreen({ navigation }) {
             <Text style={styles.helperText}>
               Calculate your APS to see your scores for each university.
             </Text>
-            {universities.map((university) => (
+            {universities.slice(0, 3).map((university) => (
               <APSScoreRow
                 key={university.id}
                 university={university}

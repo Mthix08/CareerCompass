@@ -31,7 +31,8 @@ export default function UniversitiesScreen({ navigation }) {
             <Text style={styles.eyebrow}>EXPLORE YOUR OPTIONS</Text>
             <Text style={styles.title}>Universities</Text>
             <Text style={styles.subtitle}>
-              Compare institutions, courses and application information.
+              Compare all {universities.length} public universities, their courses
+              and application information.
             </Text>
           </View>
         }
