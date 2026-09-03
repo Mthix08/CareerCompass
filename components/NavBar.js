@@ -10,6 +10,7 @@ import {
   View,
 } from "react-native";
 import Svg, { Path } from "react-native-svg";
+import { useProfile } from "../context/ProfileContext";
 
 const BAR_MARGIN = 16;
 const BAR_MAX_WIDTH = 520;
@@ -61,6 +62,7 @@ function createBarPath(width, notchCenter) {
 }
 
 export default function NavBar({ state, descriptors, navigation, insets }) {
+  const { colors } = useProfile();
   const { width: screenWidth } = useWindowDimensions();
   const [reduceMotion, setReduceMotion] = useState(false);
   const safeBottom = insets?.bottom || 0;
@@ -147,7 +149,10 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
   const activeOptions = descriptors[activeRoute.key].options;
   const activeLabel = activeOptions.title || activeRoute.name;
   const activeIcons = TAB_ICONS[activeRoute.name] || TAB_ICONS.Home;
-  const screenBackground = TAB_BACKGROUNDS[activeRoute.name] || "#F6F8FC";
+  const screenBackground =
+    activeRoute.name === "Profile" || activeRoute.name === "Home"
+      ? colors.background
+      : TAB_BACKGROUNDS[activeRoute.name] || "#F6F8FC";
 
   const handlePress = (route, isFocused) => {
     const event = navigation.emit({
