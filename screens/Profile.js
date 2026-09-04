@@ -202,9 +202,9 @@ export default function ProfileScreen({ navigation }) {
               <Ionicons name="camera" size={15} color="#FFFFFF" />
             </View>
           </Pressable>
-          <View style={styles.learnerBadge}>
+          {/* <View style={styles.learnerBadge}>
             <Text style={styles.learnerBadgeText}>{profile.learnerInfo}</Text>
-          </View>
+          </View> */}
           <Text style={styles.profileName}>
             {profile.firstName} {profile.surname}
           </Text>
@@ -288,7 +288,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="calculator-outline"
             label="APS Calculator"
-            badge="Score: 38"
+            badge="Score: 15"
             onPress={() => navigation.navigate("ApsCalculator")}
             styles={styles}
           />

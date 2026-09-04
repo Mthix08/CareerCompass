@@ -74,11 +74,12 @@ function AppNavigator() {
         <Stack.Screen
           name="NotificationPreferences"
           component={NotificationPreferences}
-          options={{ title: "Notification Preferences" }}
+          options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
           name="Notifications"
           component={Notifications}
+          options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
           name="Language"
