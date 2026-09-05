@@ -12,7 +12,7 @@ import {
   Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { auth, db } from "./firebaseConfig";
 
@@ -25,11 +25,16 @@ export default function SignUpScreen({ navigation }) {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [errors, setErrors] = useState({});
   const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const validateForm = () => {
     const nextErrors = {};
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{5,}$/;
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+
+    if (!name.trim()) {
+      nextErrors.name = "Full name is required.";
+    }
 
     if (!email.trim()) {
       nextErrors.email = "Email is required.";
@@ -41,7 +46,7 @@ export default function SignUpScreen({ navigation }) {
       nextErrors.password = "Password is required.";
     } else if (!passwordPattern.test(password)) {
       nextErrors.password =
-        "Use at least 5 characters, including uppercase, lowercase, and a number.";
+        "Use at least 6 characters, including uppercase, lowercase, and a number.";
     }
 
     if (!confirmPassword) {
@@ -54,10 +59,51 @@ export default function SignUpScreen({ navigation }) {
     return Object.keys(nextErrors).length === 0;
   };
 
-  const handleSignUp = () => {
+  const handleSignUp = async () => {
     setHasSubmitted(true);
-    if (validateForm()) {
-      navigation?.navigate("Home");
+    if (!validateForm() || isLoading) return;
+
+    try {
+      setIsLoading(true);
+      const credential = await createUserWithEmailAndPassword(
+        auth,
+        email.trim().toLowerCase(),
+        password,
+      );
+
+      await setDoc(doc(db, "users", credential.user.uid), {
+        name: name.trim(),
+        email: credential.user.email,
+        createdAt: serverTimestamp(),
+      });
+
+      await signOut(auth);
+      navigation?.navigate("Login");
+    } catch (error) {
+      const emailAlreadyExists =
+        error.code === "auth/email-already-in-use" ||
+        error.code === "auth/credential-already-in-use";
+      const message =
+        emailAlreadyExists
+          ? "An account with this email already exists. Log in instead or use a different email address."
+          : error.code === "auth/invalid-email"
+            ? "Enter a valid email address."
+            : error.code === "auth/weak-password"
+              ? "Choose a stronger password."
+              : error.code === "auth/network-request-failed"
+                ? "Check your internet connection and try again."
+                : "We could not create your account. Please try again.";
+
+      if (emailAlreadyExists) {
+        setErrors((currentErrors) => ({
+          ...currentErrors,
+          email: message,
+        }));
+      }
+
+      Alert.alert("Sign-up failed", message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -65,7 +111,7 @@ export default function SignUpScreen({ navigation }) {
     if (hasSubmitted) {
       validateForm();
     }
-  }, [email, password, confirmPassword, hasSubmitted]);
+  }, [name, email, password, confirmPassword, hasSubmitted]);
 
   const updateField = (field, value, setter) => {
     setter(value);
@@ -102,7 +148,7 @@ export default function SignUpScreen({ navigation }) {
         <View style={styles.formContainer}>
           <Text style={styles.label}>Full name</Text>
           <View
-            style={[styles.inputContainer, errors.email && styles.inputError]}
+            style={[styles.inputContainer, errors.name && styles.inputError]}
           >
             <Ionicons
               name="person-outline"
@@ -115,13 +161,16 @@ export default function SignUpScreen({ navigation }) {
               placeholder="Enter your full name"
               placeholderTextColor="#A3A3A3"
               value={name}
-              onChangeText={setName}
+              onChangeText={(value) => updateField("name", value, setName)}
               autoCapitalize="words"
             />
           </View>
+          {errors.name && <Text style={styles.errorText}>{errors.name}</Text>}
 
           <Text style={[styles.label, styles.fieldLabel]}>Email address</Text>
-          <View style={styles.inputContainer}>
+          <View
+            style={[styles.inputContainer, errors.email && styles.inputError]}
+          >
             <Ionicons
               name="mail-outline"
               size={20}
@@ -218,11 +267,14 @@ export default function SignUpScreen({ navigation }) {
           )}
 
           <TouchableOpacity
-            style={styles.signUpButton}
+            style={[styles.signUpButton, isLoading && styles.buttonDisabled]}
             activeOpacity={0.8}
             onPress={handleSignUp}
+            disabled={isLoading}
           >
-            <Text style={styles.signUpButtonText}>Create account</Text>
+            <Text style={styles.signUpButtonText}>
+              {isLoading ? "Creating account..." : "Create account"}
+            </Text>
           </TouchableOpacity>
 
           <View style={styles.bottomTextContainer}>
@@ -355,6 +407,9 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 17,
     fontWeight: "700",
+  },
+  buttonDisabled: {
+    opacity: 0.65,
   },
 
   bottomTextContainer: {

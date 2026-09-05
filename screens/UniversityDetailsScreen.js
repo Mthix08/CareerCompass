@@ -33,7 +33,6 @@ export default function UniversityDetailsScreen({ navigation, route }) {
     }
 
     addBookmark(university.id);
-    navigation.navigate("Bookmarks");
   };
 
   const openProspectus = async () => {
