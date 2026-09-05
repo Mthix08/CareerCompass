@@ -62,6 +62,11 @@ export default function HomeScreen({ navigation }) {
     [navigation],
   );
 
+  const openAllApsScores = useCallback(
+    () => navigation.getParent()?.navigate("UniversityApsScores"),
+    [navigation],
+  );
+
   const openFunding = useCallback(
     () => navigation.navigate("NsfasDetails"),
     [navigation],
@@ -253,7 +258,7 @@ export default function HomeScreen({ navigation }) {
             <Text style={styles.helperText}>
               Calculate your APS to see your scores for each university.
             </Text>
-            {universities.slice(0, 3).map((university) => (
+            {universities.slice(0, 5).map((university) => (
               <APSScoreRow
                 key={university.id}
                 university={university}
@@ -262,20 +267,20 @@ export default function HomeScreen({ navigation }) {
               />
             ))}
             <Pressable
-              onPress={openApsCalculator}
+              onPress={openAllApsScores}
               accessibilityRole="button"
-              accessibilityLabel="Calculate APS"
+              accessibilityLabel="See all university APS scores"
               style={({ pressed }) => [
                 styles.outlineButton,
                 pressed && styles.primaryPressed,
               ]}
             >
               <Ionicons
-                name="calculator-outline"
+                name="list-outline"
                 size={19}
                 color={colors.primary}
               />
-              <Text style={styles.outlineButtonText}>Calculate APS</Text>
+              <Text style={styles.outlineButtonText}>See All</Text>
             </Pressable>
           </View>
 

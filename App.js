@@ -8,6 +8,7 @@ import SplashScreen from "./screens/SplashScreen";
 import UniversityDetailsScreen from "./screens/UniversityDetailsScreen";
 import EditProfileScreen from "./screens/EditProfileScreen";
 import ApsCalculatorScreen from "./screens/ApsCalculatorScreen";
+import UniversityApsScoresScreen from "./screens/UniversityApsScoresScreen";
 import NsfasDetails from "./screens/NsfasDetails";
 import Applications from "./screens/Applications";
 import Bookmarks from "./screens/Bookmarks";
@@ -55,7 +56,12 @@ function AppNavigator() {
         <Stack.Screen
           name="ApsCalculator"
           component={ApsCalculatorScreen}
-          options={{ title: "APS Calculator" }}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="UniversityApsScores"
+          component={UniversityApsScoresScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
           name="NsfasDetails"
