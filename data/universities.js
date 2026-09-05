@@ -45,7 +45,7 @@ export const universities = [
   }),
   university({
     id: "stellenbosch", name: "Stellenbosch University", shortName: "SU", province: "Western Cape", type: "Research university",
-    applicationFee: null, applicationFeeLabel: "Confirm current fee", image: require("../assets/stellenboschCampus.jpg"), logo: require("../assets/stellenboschLogo.jpg"),
+    applicationFee: 100 , applicationFeeLabel: "Confirm current fee", image: require("../assets/stellenboschCampus.jpg"), logo: require("../assets/stellenboschLogo.jpg"),
     theme: { accent: "#7A1F3D", accentLight: "#D99AAF", accentSoft: "rgba(122,31,61,0.23)", placeholderBackground: "#32101D" },
     description: "Stellenbosch University is a research-intensive institution with programmes in arts, business, education, engineering, law, medicine, science and agriculture.",
     campuses: ["Stellenbosch", "Tygerberg", "Bellville Park", "Worcester", "Saldanha"], website: "https://www.sun.ac.za/", applicationUrl: "https://www.sun.ac.za/english/maties",
@@ -61,7 +61,7 @@ export const universities = [
   }),
   university({
     id: "ukzn", name: "University of KwaZulu-Natal", shortName: "UKZN", province: "KwaZulu-Natal", type: "Research university",
-    applicationFee: null, applicationFeeLabel: "CAO or university fee may apply", image: require("../assets/ukznCampus.jpg"), logo: require("../assets/ukznLogo.png"),
+    applicationFee: 250, applicationFeeLabel: "Verify with CAO", image: require("../assets/ukznCampus.jpg"), logo: require("../assets/ukznLogo.png"),
     theme: { accent: "#D71920", accentLight: "#F39A9E", accentSoft: "rgba(215,25,32,0.22)", placeholderBackground: "#330B0D" },
     description: "UKZN offers programmes through colleges of agriculture and engineering, health sciences, humanities, and law and management studies.",
     campuses: ["Edgewood", "Howard College", "Pietermaritzburg", "Westville", "Nelson R. Mandela School of Medicine"], website: "https://www.ukzn.ac.za/", contactEmail: "enquiries@ukzn.ac.za", applicationUrl: "https://applications.ukzn.ac.za/applications/ukzn-applications/",
@@ -77,7 +77,7 @@ export const universities = [
   }),
   university({
     id: "up", name: "University of Pretoria", shortName: "UP", province: "Gauteng", type: "Research university",
-    applicationFee: null, applicationFeeLabel: "Confirm current fee", image: require("../assets/upCampus.jpg"), logo: require("../assets/upLogo.jpg"),
+    applicationFee: 100, applicationFeeLabel: "Confirm current fee", image: require("../assets/upCampus.jpg"), logo: require("../assets/upLogo.jpg"),
     theme: { accent: "#D22630", accentLight: "#F29AA0", accentSoft: "rgba(210,38,48,0.21)", placeholderBackground: "#351014" },
     description: "UP is a research-intensive university in Tshwane with programmes including engineering, health sciences, law, veterinary science, humanities and business.",
     campuses: ["Hatfield", "Groenkloof", "Prinshof", "Onderstepoort", "Mamelodi"], website: "https://www.up.ac.za/", applicationUrl: "https://www.up.ac.za/online-application",
@@ -85,7 +85,7 @@ export const universities = [
   }),
   university({
     id: "dut", name: "Durban University of Technology", shortName: "DUT", province: "KwaZulu-Natal", type: "University of technology",
-    applicationFee: null, applicationFeeLabel: "Apply through CAO", image: require("../assets/dutCampus.jpg"), logo: require("../assets/dutLogo.jpg"),
+    applicationFee: 250, applicationFeeLabel: "Apply through CAO", image: require("../assets/dutCampus.jpg"), logo: require("../assets/dutLogo.jpg"),
     theme: { accent: "#0077B5", accentLight: "#88C9E8", accentSoft: "rgba(0,119,181,0.21)", placeholderBackground: "#06283B" },
     description: "DUT offers applied qualifications in accounting, engineering, health sciences, arts and design, management sciences and applied sciences.",
     campuses: ["Steve Biko", "ML Sultan", "Ritson", "Brickfield", "Indumiso", "Riverside"], website: "https://www.dut.ac.za/", applicationUrl: "https://www.dut.ac.za/student_portal/student_registration_information/",
@@ -93,7 +93,7 @@ export const universities = [
   }),
   university({
     id: "mut", name: "Mangosuthu University of Technology", shortName: "MUT", province: "KwaZulu-Natal", type: "University of technology",
-    applicationFee: null, applicationFeeLabel: "Apply through CAO", image: require("../assets/mutCampus.png"), logo: require("../assets/mutLogo.png"),
+    applicationFee: 250, applicationFeeLabel: "Apply through CAO", image: require("../assets/mutCampus.png"), logo: require("../assets/mutLogo.png"),
     theme: { accent: "#E0A526", accentLight: "#F2D68C", accentSoft: "rgba(224,165,38,0.20)", placeholderBackground: "#13243D" },
     description: "MUT is a career-focused university of technology in Umlazi, offering qualifications in engineering, management sciences and natural sciences.",
     campuses: ["Main Campus, Umlazi", "Engineering Campus", "Natural Sciences Campus"], website: "https://www.mut.ac.za/", applicationUrl: "https://www.mut.ac.za/how-to-apply-to-mut/",
@@ -101,7 +101,7 @@ export const universities = [
   }),
   university({
     id: "unizulu", name: "University of Zululand", shortName: "UNIZULU", province: "KwaZulu-Natal", type: "Comprehensive university",
-    applicationFee: null, applicationFeeLabel: "Apply through CAO", image: require("../assets/unizuluCampus.jpg"), logo: require("../assets/unizuluLogo.jpg"),
+    applicationFee: 250, applicationFeeLabel: "Apply through CAO", image: require("../assets/unizuluCampus.jpg"), logo: require("../assets/unizuluLogo.jpg"),
     theme: { accent: "#007A78", accentLight: "#7FD1CF", accentSoft: "rgba(0,122,120,0.22)", placeholderBackground: "#082F2E" },
     description: "UNIZULU serves northern KwaZulu-Natal through programmes in arts, education, commerce, law, science, agriculture and engineering.",
     campuses: ["KwaDlangezwa Campus", "Richards Bay Campus"], website: "https://www.unizulu.ac.za/", applicationUrl: "https://www.unizulu.ac.za/apply/",
@@ -109,7 +109,7 @@ export const universities = [
   }),
   university({
     id: "cput", name: "Cape Peninsula University of Technology", shortName: "CPUT", province: "Western Cape", type: "University of technology",
-    applicationFee: null, applicationFeeLabel: "Confirm current fee", image: require("../assets/cputCampus.jpg"), logo: require("../assets/cputLogo.png"),
+    applicationFee: 0, applicationFeeLabel: "Free to apply", image: require("../assets/cputCampus.jpg"), logo: require("../assets/cputLogo.png"),
     theme: { accent: "#005596", accentLight: "#83BEE7", accentSoft: "rgba(0,85,150,0.23)", placeholderBackground: "#071F35" },
     description: "CPUT offers career-focused education across applied sciences, business, education, engineering, health sciences, and informatics and design.",
     campuses: ["Bellville", "District Six", "Granger Bay", "Mowbray", "Wellington"], website: "https://www.cput.ac.za/", contactEmail: "admissions@cput.ac.za", applicationUrl: "https://www.cput.ac.za/study-at-cput/undergraduate/apply",
@@ -125,7 +125,7 @@ export const universities = [
   }),
   university({
     id: "vut", name: "Vaal University of Technology", shortName: "VUT", province: "Gauteng", type: "University of technology",
-    applicationFee: null, applicationFeeLabel: "Confirm current fee", image: require("../assets/vutCampus.jpg"), logo: require("../assets/vutLogo.jpg"),
+    applicationFee: 110, applicationFeeLabel: "Confirm current fee", image: require("../assets/vutCampus.jpg"), logo: require("../assets/vutLogo.jpg"),
     theme: { accent: "#F28C28", accentLight: "#F8C98F", accentSoft: "rgba(242,140,40,0.20)", placeholderBackground: "#102A45" },
     description: "VUT delivers technology-focused education in applied and computer sciences, engineering, human sciences and management sciences.",
     campuses: ["Vanderbijlpark Campus"], website: "https://vut.ac.za/", applicationUrl: "https://vut.ac.za/how-to-apply/",
@@ -133,7 +133,7 @@ export const universities = [
   }),
   university({
     id: "ufh", name: "University of Fort Hare", shortName: "UFH", province: "Eastern Cape", type: "Traditional university",
-    applicationFee: null, applicationFeeLabel: "Confirm current fee", image: require("../assets/ufhCampus.jpg"), logo: require("../assets/ufhLogo.png"),
+    applicationFee: 120, applicationFeeLabel: "Confirm current fee", image: require("../assets/ufhCampus.jpg"), logo: require("../assets/ufhLogo.png"),
     theme: { accent: "#184B8A", accentLight: "#90B5E0", accentSoft: "rgba(24,75,138,0.24)", placeholderBackground: "#0B203A" },
     description: "UFH offers study in education, health sciences, law, management and commerce, science and agriculture, and social sciences and humanities.",
     campuses: ["Alice Campus", "East London Campus", "Bhisho Campus"], website: "https://www.ufh.ac.za/", contactEmail: "info@ufh.ac.za", contactPhone: "+27 (0)40 602 2011", applicationUrl: "https://www.ufh.ac.za/apply",
@@ -141,7 +141,7 @@ export const universities = [
   }),
   university({
     id: "tut", name: "Tshwane University of Technology", shortName: "TUT", province: "Gauteng", type: "University of technology",
-    applicationFee: null, applicationFeeLabel: "Confirm current fee", image: require("../assets/tutCampus.png"), logo: require("../assets/tutLogo.png"),
+    applicationFee: 240, applicationFeeLabel: "Confirm current fee", image: require("../assets/tutCampus.png"), logo: require("../assets/tutLogo.png"),
     theme: { accent: "#0055A5", accentLight: "#86B9E8", accentSoft: "rgba(0,85,165,0.23)", placeholderBackground: "#081F38" },
     description: "TUT offers vocationally focused programmes in arts and design, business, engineering, humanities, ICT, science and health sciences.",
     campuses: ["Arcadia", "Arts", "Ga-Rankuwa", "Mbombela", "Polokwane", "Pretoria", "Soshanguve"], website: "https://www.tut.ac.za/", applicationUrl: "https://www.tut.ac.za/study-at-tut/i-want-to-study/online-application",
@@ -165,7 +165,7 @@ export const universities = [
   }),
   university({
     id: "univen", name: "University of Venda", shortName: "UNIVEN", province: "Limpopo", type: "Comprehensive university",
-    applicationFee: null, applicationFeeLabel: "Confirm current fee", image: require("../assets/univenCampus.jpg"), logo: require("../assets/univenLogo.png"),
+    applicationFee: 0, applicationFeeLabel: "Confirm current fee", image: require("../assets/univenCampus.jpg"), logo: require("../assets/univenLogo.png"),
     theme: { accent: "#138447", accentLight: "#83D4A7", accentSoft: "rgba(19,132,71,0.22)", placeholderBackground: "#092E1B" },
     description: "UNIVEN offers programmes in agriculture, education, health sciences, humanities, law, management sciences, and mathematical and natural sciences.",
     campuses: ["Thohoyandou Campus"], website: "https://www.univen.ac.za/", applicationUrl: "https://www.univen.ac.za/students/how-to-apply/",
@@ -189,7 +189,7 @@ export const universities = [
   }),
   university({
     id: "smu", name: "Sefako Makgatho Health Sciences University", shortName: "SMU", province: "Gauteng", type: "Health sciences university",
-    applicationFee: null, applicationFeeLabel: "Confirm current fee", image: require("../assets/smuCampus.jpg"), logo: require("../assets/smuLogo.jpg"),
+    applicationFee: 300, applicationFeeLabel: "Confirm current fee", image: require("../assets/smuCampus.jpg"), logo: require("../assets/smuLogo.jpg"),
     theme: { accent: "#0B5E9A", accentLight: "#87C0E6", accentSoft: "rgba(11,94,154,0.22)", placeholderBackground: "#08243A" },
     description: "SMU is a specialist university educating professionals in medicine, dentistry, pharmacy, health care sciences and science and technology.",
     campuses: ["Ga-Rankuwa Campus"], website: "https://www.smu.ac.za/", applicationUrl: "https://www.smu.ac.za/",
@@ -221,7 +221,7 @@ export const universities = [
   }),
   university({
     id: "unisa", name: "University of South Africa", shortName: "UNISA", province: "National / Distance", type: "Open distance-learning university",
-    applicationFee: null, applicationFeeLabel: "Confirm current fee", image: require("../assets/unisaCampus.jpg"), logo: require("../assets/unisaLogo.png"),
+    applicationFee: 160, applicationFeeLabel: "Confirm current fee", image: require("../assets/unisaCampus.jpg"), logo: require("../assets/unisaLogo.png"),
     theme: { accent: "#153E75", accentLight: "#8EABD1", accentSoft: "rgba(21,62,117,0.24)", placeholderBackground: "#0A1D38" },
     description: "UNISA is South Africa's open distance-learning university, offering flexible qualifications across business, education, human sciences, law, science, engineering and technology.",
     campuses: ["Muckleneuk Campus", "Science Campus, Florida", "Regional service centres nationwide"], website: "https://www.unisa.ac.za/", applicationUrl: "https://www.unisa.ac.za/sites/corporate/default/Apply-for-admission",
