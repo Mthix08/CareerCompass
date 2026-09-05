@@ -309,7 +309,7 @@ function OtpStep({
         />
         <TextLink label="Change email" onPress={onChangeEmail} />
       </View>
-      <DevelopmentNote>Development preview code: 123456</DevelopmentNote>
+      {/* <DevelopmentNote>Development preview code: 123456</DevelopmentNote> */}
     </View>
   );
 }

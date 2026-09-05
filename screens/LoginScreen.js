@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Image,
   View,
   Text,
   TextInput,
@@ -14,8 +15,6 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebaseConfig";
-
-
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState("");
@@ -59,11 +58,12 @@ export default function LoginScreen({ navigation }) {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.brandContainer}>
-          <View style={styles.logo}>
-            <Text style={styles.logoText}></Text>
-          </View>
-
-          <Text style={styles.brandName}>CareerCompass</Text>
+          <Image
+            source={require("../assets/CC.png")}
+            style={styles.logo}
+            resizeMode="contain"
+            accessibilityLabel="CareerCompass logo"
+          />
         </View>
 
         <View style={styles.headerContainer}>
@@ -136,7 +136,6 @@ export default function LoginScreen({ navigation }) {
             <Text style={styles.forgotText}>Forgot password?</Text>
           </TouchableOpacity>
 
-          
           <TouchableOpacity
             style={styles.loginButton}
             activeOpacity={0.8}
@@ -147,7 +146,6 @@ export default function LoginScreen({ navigation }) {
             </Text>
           </TouchableOpacity>
 
-          
           <View style={styles.dividerContainer}>
             <View style={styles.divider} />
 
@@ -156,7 +154,6 @@ export default function LoginScreen({ navigation }) {
             <View style={styles.divider} />
           </View>
 
-          
           <TouchableOpacity
             style={styles.createButton}
             activeOpacity={0.8}
@@ -165,7 +162,6 @@ export default function LoginScreen({ navigation }) {
             <Text style={styles.createButtonText}>Create an account</Text>
           </TouchableOpacity>
 
-          
           <View style={styles.bottomTextContainer}>
             <Text style={styles.bottomText}>Just exploring? </Text>
 
@@ -183,7 +179,6 @@ export default function LoginScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-
   keyboardContainer: {
     flex: 1,
     backgroundColor: "#FAF9F6",
@@ -196,38 +191,16 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
   },
 
-
   brandContainer: {
-    flexDirection: "row",
     alignItems: "center",
-    marginBottom: 38,
+    marginBottom: 50,
+    marginTop: -50,
   },
 
   logo: {
-    marginTop: -70,
-    width: 38,
-    height: 38,
-    borderRadius: 9,
-    backgroundColor: "#117C72",
-    alignItems: "center",
-    justifyContent: "center",
+    width: 210,
+    height: 120,
   },
-
-  logoText: {
-    marginTop: -70,
-    color: "#FFFFFF",
-    fontSize: 20,
-    fontWeight: "700",
-  },
-
-  brandName: {
-    marginTop: -70,
-    marginLeft: 12,
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#176F68",
-  },
-
 
   headerContainer: {
     marginTop: -35,
@@ -246,7 +219,6 @@ const styles = StyleSheet.create({
     color: "#858585",
     lineHeight: 22,
   },
-
 
   formContainer: {
     width: "100%",
@@ -293,7 +265,6 @@ const styles = StyleSheet.create({
     color: "#17796F",
   },
 
-
   forgotContainer: {
     alignSelf: "flex-end",
     marginTop: 27,
@@ -333,7 +304,6 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
 
-
   dividerContainer: {
     flexDirection: "row",
     alignItems: "center",
@@ -352,7 +322,6 @@ const styles = StyleSheet.create({
     color: "#858585",
   },
 
-
   createButton: {
     height: 67,
     borderRadius: 16,
@@ -369,7 +338,6 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: "#176F68",
   },
-
 
   bottomTextContainer: {
     flexDirection: "row",
