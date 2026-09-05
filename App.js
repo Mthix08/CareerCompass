@@ -65,7 +65,7 @@ function AppNavigator() {
         <Stack.Screen
           name="Applications"
           component={Applications}
-          options={{ title: "My Applications" }}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Bookmarks"
