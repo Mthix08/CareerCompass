@@ -284,7 +284,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="briefcase-outline"
             label="My Applications"
-            badge="Pending"
+            badge="0"
             onPress={() => navigation.navigate("Applications")}
             styles={styles}
           />
