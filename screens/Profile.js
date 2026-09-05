@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
 
 const THEMES = ["Light", "Dark", "System"];
@@ -23,10 +24,7 @@ function IconButton({ icon, label, onPress, styles }) {
       accessibilityRole="button"
       accessibilityLabel={label}
       hitSlop={6}
-      style={({ pressed }) => [
-        styles.headerButton,
-        pressed && styles.pressed,
-      ]}
+      style={({ pressed }) => [styles.headerButton, pressed && styles.pressed]}
     >
       <Ionicons name={icon} size={22} color={colors.text} />
     </Pressable>
@@ -36,7 +34,11 @@ function IconButton({ icon, label, onPress, styles }) {
 function ReadOnlyDetail({ icon, label, value, styles }) {
   const { colors } = useProfile();
   return (
-    <View style={styles.detailRow} accessible accessibilityLabel={`${label}: ${value}`}>
+    <View
+      style={styles.detailRow}
+      accessible
+      accessibilityLabel={`${label}: ${value}`}
+    >
       <View style={styles.detailIcon}>
         <Ionicons name={icon} size={18} color={colors.primary} />
       </View>
@@ -66,16 +68,13 @@ function QuickLink({ icon, label, badge, onPress, styles }) {
           <Text style={styles.quickLinkBadgeText}>{badge}</Text>
         </View>
       )}
-      <Ionicons
-        name="chevron-forward"
-        size={19}
-        color={colors.mutedText}
-      />
+      <Ionicons name="chevron-forward" size={19} color={colors.mutedText} />
     </Pressable>
   );
 }
 
 export default function ProfileScreen({ navigation }) {
+  const { bookmarkedIds } = useBookmarks();
   const {
     profile,
     themePreference,
@@ -85,6 +84,7 @@ export default function ProfileScreen({ navigation }) {
     successMessage,
     clearSuccessMessage,
   } = useProfile();
+  const savedItemsLabel = `${bookmarkedIds.length} saved`;
   const styles = useMemo(() => createStyles(colors), [colors]);
   const scrollRef = useRef(null);
 
@@ -193,7 +193,10 @@ export default function ProfileScreen({ navigation }) {
             onPress={handleAvatarPress}
             accessibilityRole="button"
             accessibilityLabel="Change profile photo"
-            style={({ pressed }) => [styles.avatarWrap, pressed && styles.pressed]}
+            style={({ pressed }) => [
+              styles.avatarWrap,
+              pressed && styles.pressed,
+            ]}
           >
             <View style={styles.avatar}>
               <Text style={styles.avatarText}>{initials || "CC"}</Text>
@@ -274,7 +277,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="bookmark-outline"
             label="Saved Universities & Courses"
-            badge="12 saved"
+            badge={savedItemsLabel}
             onPress={() => navigation.navigate("Bookmarks")}
             styles={styles}
           />
@@ -371,7 +374,10 @@ export default function ProfileScreen({ navigation }) {
           onPress={handleSignOut}
           accessibilityRole="button"
           accessibilityLabel="Sign Out"
-          style={({ pressed }) => [styles.signOutButton, pressed && styles.pressed]}
+          style={({ pressed }) => [
+            styles.signOutButton,
+            pressed && styles.pressed,
+          ]}
         >
           <Ionicons name="log-out-outline" size={20} color={colors.text} />
           <Text style={styles.signOutText}>Sign Out</Text>
@@ -381,13 +387,17 @@ export default function ProfileScreen({ navigation }) {
           onPress={handleDeleteAccount}
           accessibilityRole="button"
           accessibilityLabel="Delete Account"
-          style={({ pressed }) => [styles.deleteButton, pressed && styles.pressed]}
+          style={({ pressed }) => [
+            styles.deleteButton,
+            pressed && styles.pressed,
+          ]}
         >
           <Ionicons name="trash-outline" size={19} color={colors.danger} />
           <Text style={styles.deleteText}>Delete Account</Text>
         </Pressable>
         <Text style={styles.deleteExplanation}>
-          This action is permanent and deletes your profile and academic progression.
+          This action is permanent and deletes your profile and academic
+          progression.
         </Text>
       </ScrollView>
     </SafeAreaView>
@@ -430,7 +440,13 @@ function createStyles(colors) {
       alignItems: "center",
       backgroundColor: colors.primary,
     },
-    successBannerText: { flex: 1, marginLeft: 9, color: "#FFFFFF", fontSize: 14, fontWeight: "700" },
+    successBannerText: {
+      flex: 1,
+      marginLeft: 9,
+      color: "#FFFFFF",
+      fontSize: 14,
+      fontWeight: "700",
+    },
     identityCard: {
       padding: 22,
       borderRadius: 24,
@@ -464,43 +480,243 @@ function createStyles(colors) {
       justifyContent: "center",
       backgroundColor: colors.accent,
     },
-    learnerBadge: { marginTop: 10, paddingHorizontal: 10, paddingVertical: 5, borderRadius: 999, backgroundColor: colors.accent },
-    learnerBadgeText: { color: "#FFFFFF", fontSize: 10, fontWeight: "900", textTransform: "uppercase" },
-    profileName: { marginTop: 13, color: colors.text, fontSize: 24, lineHeight: 30, fontWeight: "900", textAlign: "center" },
+    learnerBadge: {
+      marginTop: 10,
+      paddingHorizontal: 10,
+      paddingVertical: 5,
+      borderRadius: 999,
+      backgroundColor: colors.accent,
+    },
+    learnerBadgeText: {
+      color: "#FFFFFF",
+      fontSize: 10,
+      fontWeight: "900",
+      textTransform: "uppercase",
+    },
+    profileName: {
+      marginTop: 13,
+      color: colors.text,
+      fontSize: 24,
+      lineHeight: 30,
+      fontWeight: "900",
+      textAlign: "center",
+    },
     locationRow: { marginTop: 5, flexDirection: "row", alignItems: "center" },
-    locationText: { flexShrink: 1, marginLeft: 4, color: colors.secondaryText, fontSize: 13, textAlign: "center" },
-    sectionCard: { marginTop: 18, padding: 20, borderRadius: 22, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
+    locationText: {
+      flexShrink: 1,
+      marginLeft: 4,
+      color: colors.secondaryText,
+      fontSize: 13,
+      textAlign: "center",
+    },
+    sectionCard: {
+      marginTop: 18,
+      padding: 20,
+      borderRadius: 22,
+      borderWidth: 1,
+      borderColor: colors.border,
+      backgroundColor: colors.surface,
+    },
     sectionTitle: { color: colors.text, fontSize: 19, fontWeight: "800" },
-    sectionIntro: { marginTop: 5, color: colors.secondaryText, fontSize: 13, lineHeight: 19 },
+    sectionIntro: {
+      marginTop: 5,
+      color: colors.secondaryText,
+      fontSize: 13,
+      lineHeight: 19,
+    },
     detailsList: { marginTop: 15, gap: 10 },
-    detailRow: { minHeight: 68, paddingHorizontal: 14, paddingVertical: 11, borderRadius: 15, borderWidth: 1, borderColor: colors.border, flexDirection: "row", alignItems: "center", backgroundColor: colors.input },
-    detailIcon: { width: 36, height: 36, borderRadius: 11, alignItems: "center", justifyContent: "center", backgroundColor: colors.primarySoft },
+    detailRow: {
+      minHeight: 68,
+      paddingHorizontal: 14,
+      paddingVertical: 11,
+      borderRadius: 15,
+      borderWidth: 1,
+      borderColor: colors.border,
+      flexDirection: "row",
+      alignItems: "center",
+      backgroundColor: colors.input,
+    },
+    detailIcon: {
+      width: 36,
+      height: 36,
+      borderRadius: 11,
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: colors.primarySoft,
+    },
     detailTextWrap: { flex: 1, marginLeft: 12 },
-    detailLabel: { color: colors.secondaryText, fontSize: 11, fontWeight: "700", textTransform: "uppercase", letterSpacing: 0.4 },
-    detailValue: { marginTop: 4, color: colors.text, fontSize: 15, lineHeight: 20, fontWeight: "600" },
-    primaryButton: { minHeight: 56, marginTop: 19, paddingHorizontal: 18, borderRadius: 16, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8, backgroundColor: colors.primary },
-    primaryButtonText: { flexShrink: 1, color: "#FFFFFF", fontSize: 15, fontWeight: "800", textAlign: "center" },
-    groupTitle: { marginTop: 25, marginBottom: 10, color: colors.text, fontSize: 18, fontWeight: "800" },
-    quickLinksCard: { overflow: "hidden", borderRadius: 22, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
-    quickLink: { minHeight: 66, paddingHorizontal: 14, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: colors.border, flexDirection: "row", alignItems: "center" },
-    quickLinkIcon: { width: 38, height: 38, borderRadius: 12, alignItems: "center", justifyContent: "center", backgroundColor: colors.primarySoft },
-    quickLinkText: { flex: 1, marginHorizontal: 11, color: colors.text, fontSize: 14, lineHeight: 19, fontWeight: "700" },
-    quickLinkBadge: { maxWidth: 82, marginRight: 7, paddingHorizontal: 8, paddingVertical: 5, borderRadius: 999, backgroundColor: colors.primarySoft },
-    quickLinkBadgeText: { color: colors.primary, fontSize: 9, fontWeight: "900", textTransform: "uppercase" },
-    themeCard: { marginTop: 24, padding: 19, borderRadius: 22, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
+    detailLabel: {
+      color: colors.secondaryText,
+      fontSize: 11,
+      fontWeight: "700",
+      textTransform: "uppercase",
+      letterSpacing: 0.4,
+    },
+    detailValue: {
+      marginTop: 4,
+      color: colors.text,
+      fontSize: 15,
+      lineHeight: 20,
+      fontWeight: "600",
+    },
+    primaryButton: {
+      minHeight: 56,
+      marginTop: 19,
+      paddingHorizontal: 18,
+      borderRadius: 16,
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 8,
+      backgroundColor: colors.primary,
+    },
+    primaryButtonText: {
+      flexShrink: 1,
+      color: "#FFFFFF",
+      fontSize: 15,
+      fontWeight: "800",
+      textAlign: "center",
+    },
+    groupTitle: {
+      marginTop: 25,
+      marginBottom: 10,
+      color: colors.text,
+      fontSize: 18,
+      fontWeight: "800",
+    },
+    quickLinksCard: {
+      overflow: "hidden",
+      borderRadius: 22,
+      borderWidth: 1,
+      borderColor: colors.border,
+      backgroundColor: colors.surface,
+    },
+    quickLink: {
+      minHeight: 66,
+      paddingHorizontal: 14,
+      borderBottomWidth: StyleSheet.hairlineWidth,
+      borderBottomColor: colors.border,
+      flexDirection: "row",
+      alignItems: "center",
+    },
+    quickLinkIcon: {
+      width: 38,
+      height: 38,
+      borderRadius: 12,
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: colors.primarySoft,
+    },
+    quickLinkText: {
+      flex: 1,
+      marginHorizontal: 11,
+      color: colors.text,
+      fontSize: 14,
+      lineHeight: 19,
+      fontWeight: "700",
+    },
+    quickLinkBadge: {
+      maxWidth: 82,
+      marginRight: 7,
+      paddingHorizontal: 8,
+      paddingVertical: 5,
+      borderRadius: 999,
+      backgroundColor: colors.primarySoft,
+    },
+    quickLinkBadgeText: {
+      color: colors.primary,
+      fontSize: 9,
+      fontWeight: "900",
+      textTransform: "uppercase",
+    },
+    themeCard: {
+      marginTop: 24,
+      padding: 19,
+      borderRadius: 22,
+      borderWidth: 1,
+      borderColor: colors.border,
+      backgroundColor: colors.surface,
+    },
     themeHeadingRow: { flexDirection: "row", alignItems: "center" },
-    themeTitle: { marginLeft: 9, color: colors.text, fontSize: 15, fontWeight: "800" },
-    currentTheme: { flex: 1, marginLeft: 10, color: colors.secondaryText, fontSize: 13, textAlign: "right" },
-    themeOptions: { marginTop: 15, padding: 4, borderRadius: 13, borderWidth: 1, borderColor: colors.border, flexDirection: "row", backgroundColor: colors.input },
-    themeOption: { flex: 1, minHeight: 42, borderRadius: 10, alignItems: "center", justifyContent: "center" },
-    themeOptionSelected: { backgroundColor: colors.surface, shadowColor: "#000000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.09, shadowRadius: 5, elevation: 2 },
-    themeOptionText: { color: colors.secondaryText, fontSize: 13, fontWeight: "600" },
+    themeTitle: {
+      marginLeft: 9,
+      color: colors.text,
+      fontSize: 15,
+      fontWeight: "800",
+    },
+    currentTheme: {
+      flex: 1,
+      marginLeft: 10,
+      color: colors.secondaryText,
+      fontSize: 13,
+      textAlign: "right",
+    },
+    themeOptions: {
+      marginTop: 15,
+      padding: 4,
+      borderRadius: 13,
+      borderWidth: 1,
+      borderColor: colors.border,
+      flexDirection: "row",
+      backgroundColor: colors.input,
+    },
+    themeOption: {
+      flex: 1,
+      minHeight: 42,
+      borderRadius: 10,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    themeOptionSelected: {
+      backgroundColor: colors.surface,
+      shadowColor: "#000000",
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.09,
+      shadowRadius: 5,
+      elevation: 2,
+    },
+    themeOptionText: {
+      color: colors.secondaryText,
+      fontSize: 13,
+      fontWeight: "600",
+    },
     themeOptionTextSelected: { color: colors.text, fontWeight: "800" },
-    signOutButton: { minHeight: 54, marginTop: 20, borderRadius: 16, borderWidth: 1, borderColor: colors.border, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 7, backgroundColor: colors.surface },
+    signOutButton: {
+      minHeight: 54,
+      marginTop: 20,
+      borderRadius: 16,
+      borderWidth: 1,
+      borderColor: colors.border,
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 7,
+      backgroundColor: colors.surface,
+    },
     signOutText: { color: colors.text, fontSize: 15, fontWeight: "800" },
-    deleteButton: { minHeight: 50, alignSelf: "center", marginTop: 25, paddingHorizontal: 20, borderRadius: 13, borderWidth: 1, borderColor: colors.danger, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, backgroundColor: colors.dangerSoft },
+    deleteButton: {
+      minHeight: 50,
+      alignSelf: "center",
+      marginTop: 25,
+      paddingHorizontal: 20,
+      borderRadius: 13,
+      borderWidth: 1,
+      borderColor: colors.danger,
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 6,
+      backgroundColor: colors.dangerSoft,
+    },
     deleteText: { color: colors.danger, fontSize: 14, fontWeight: "800" },
-    deleteExplanation: { marginTop: 8, paddingHorizontal: 12, color: colors.secondaryText, fontSize: 12, lineHeight: 18, textAlign: "center" },
+    deleteExplanation: {
+      marginTop: 8,
+      paddingHorizontal: 12,
+      color: colors.secondaryText,
+      fontSize: 12,
+      lineHeight: 18,
+      textAlign: "center",
+    },
     pressed: { opacity: 0.65 },
   });
 }

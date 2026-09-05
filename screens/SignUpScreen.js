@@ -222,9 +222,7 @@ export default function SignUpScreen({ navigation }) {
             activeOpacity={0.8}
             onPress={handleSignUp}
           >
-            <Text style={styles.signUpButtonText}>
-              {isLoading ? "Creating account..." : "Create account"}
-            </Text>
+            <Text style={styles.signUpButtonText}>Create account</Text>
           </TouchableOpacity>
 
           <View style={styles.bottomTextContainer}>

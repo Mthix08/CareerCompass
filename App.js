@@ -17,6 +17,7 @@ import LanguageScreen from "./screens/LanguageScreen";
 import FaqsScreen from "./screens/FaqsScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import { ProfileProvider } from "./context/ProfileContext";
+import { BookmarksProvider } from "./context/BookmarksContext";
 
 const Stack = createNativeStackNavigator();
 
@@ -99,7 +100,9 @@ function AppNavigator() {
 export default function App() {
   return (
     <ProfileProvider>
-      <AppNavigator />
+      <BookmarksProvider>
+        <AppNavigator />
+      </BookmarksProvider>
     </ProfileProvider>
   );
 }
