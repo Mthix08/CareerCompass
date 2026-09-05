@@ -23,7 +23,7 @@ export const universities = [
     description: "UJ is a comprehensive public university in Johannesburg, offering career-focused and research-led programmes across business, engineering, health sciences, humanities, education, law, art and science.",
     campuses: ["Auckland Park Kingsway", "Auckland Park Bunting Road", "Doornfontein", "Soweto"],
     virtualCampusUrl: "https://www.uj.ac.za/virtual-campus/", website: "https://www.uj.ac.za/", contactEmail: "mylife@uj.ac.za", applicationUrl: "https://www.uj.ac.za/admissions-aid/",
-    courses: [course("uj-is", "BCom in Information Systems", "College of Business and Economics", ["English", "Mathematics"]), course("uj-eng", "Bachelor of Engineering Technology", "Faculty of Engineering and the Built Environment", ["English", "Mathematics", "Physical Sciences"])],
+    courses: [course("uj-is", "BCom in Information Systems", "College of Business and Economics", ["English", "Mathematics"]), course("uj-eng", "Business Information Technology", "College of Business and Economics", ["English", "Mathematics", "Mathematical Literacy"])],
   }),
   university({
     id: "wits", name: "University of the Witwatersrand", shortName: "Wits", province: "Gauteng", type: "Research university",
