@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
+  Image,
   View,
   Text,
   TextInput,
@@ -83,16 +84,15 @@ export default function SignUpScreen({ navigation }) {
       const emailAlreadyExists =
         error.code === "auth/email-already-in-use" ||
         error.code === "auth/credential-already-in-use";
-      const message =
-        emailAlreadyExists
-          ? "An account with this email already exists. Log in instead or use a different email address."
-          : error.code === "auth/invalid-email"
-            ? "Enter a valid email address."
-            : error.code === "auth/weak-password"
-              ? "Choose a stronger password."
-              : error.code === "auth/network-request-failed"
-                ? "Check your internet connection and try again."
-                : "We could not create your account. Please try again.";
+      const message = emailAlreadyExists
+        ? "An account with this email already exists. Log in instead or use a different email address."
+        : error.code === "auth/invalid-email"
+          ? "Enter a valid email address."
+          : error.code === "auth/weak-password"
+            ? "Choose a stronger password."
+            : error.code === "auth/network-request-failed"
+              ? "Check your internet connection and try again."
+              : "We could not create your account. Please try again.";
 
       if (emailAlreadyExists) {
         setErrors((currentErrors) => ({
@@ -132,10 +132,12 @@ export default function SignUpScreen({ navigation }) {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.brandContainer}>
-          <View style={styles.logo}>
-            <Text style={styles.logoText}>C</Text>
-          </View>
-          <Text style={styles.brandName}>CareerCompass</Text>
+          <Image
+            source={require("../assets/CC.png")}
+            style={styles.logo}
+            resizeMode="contain"
+            accessibilityLabel="CareerCompass logo"
+          />
         </View>
 
         <View style={styles.headerContainer}>
@@ -304,31 +306,13 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
   },
   brandContainer: {
-    flexDirection: "row",
     alignItems: "center",
-    marginBottom: 38,
+    marginBottom: 50,
+    marginTop: -50,
   },
   logo: {
-    marginTop: -70,
-    width: 38,
-    height: 38,
-    borderRadius: 9,
-    backgroundColor: "#117C72",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  logoText: {
-    marginTop: -70,
-    color: "#FFFFFF",
-    fontSize: 20,
-    fontWeight: "700",
-  },
-  brandName: {
-    marginTop: -70,
-    marginLeft: 12,
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#176F68",
+    width: 210,
+    height: 120,
   },
   headerContainer: {
     marginTop: -35,
