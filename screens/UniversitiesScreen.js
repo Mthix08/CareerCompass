@@ -23,9 +23,10 @@ export default function UniversitiesScreen({ navigation }) {
   const [filtersVisible, setFiltersVisible] = useState(false);
 
   const provinces = useMemo(
-    () => [...new Set(universities.map(({ province }) => province))].sort((a, b) =>
-      a.localeCompare(b),
-    ),
+    () =>
+      [...new Set(universities.map(({ province }) => province))].sort((a, b) =>
+        a.localeCompare(b),
+      ),
     [],
   );
 
@@ -62,7 +63,6 @@ export default function UniversitiesScreen({ navigation }) {
     }
 
     addBookmark(universityId);
-    navigation.navigate("Bookmarks");
   };
 
   return (
@@ -89,8 +89,8 @@ export default function UniversitiesScreen({ navigation }) {
             <Text style={styles.eyebrow}>EXPLORE YOUR OPTIONS</Text>
             <Text style={styles.title}>Universities</Text>
             <Text style={styles.subtitle}>
-              Compare all {universities.length} public universities, their courses
-              and application information.
+              Compare all {universities.length} public universities, their
+              courses and application information.
             </Text>
 
             <View style={styles.searchRow}>
@@ -155,12 +155,19 @@ export default function UniversitiesScreen({ navigation }) {
                     return (
                       <Pressable
                         key={province}
-                        onPress={() => setSelectedProvince(selected ? null : province)}
+                        onPress={() =>
+                          setSelectedProvince(selected ? null : province)
+                        }
                         accessibilityRole="button"
                         accessibilityState={{ selected }}
                         style={[styles.chip, selected && styles.chipSelected]}
                       >
-                        <Text style={[styles.chipText, selected && styles.chipTextSelected]}>
+                        <Text
+                          style={[
+                            styles.chipText,
+                            selected && styles.chipTextSelected,
+                          ]}
+                        >
                           {province}
                         </Text>
                       </Pressable>
@@ -184,7 +191,10 @@ export default function UniversitiesScreen({ navigation }) {
             )}
 
             <Text style={styles.resultCount}>
-              {filteredUniversities.length} {filteredUniversities.length === 1 ? "university" : "universities"}
+              {filteredUniversities.length}{" "}
+              {filteredUniversities.length === 1
+                ? "university"
+                : "universities"}
             </Text>
           </View>
         }
@@ -296,7 +306,12 @@ const styles = StyleSheet.create({
   },
   filterHeading: { color: "#172033", fontSize: 14, fontWeight: "800" },
   clearFilters: { color: "#117C72", fontSize: 13, fontWeight: "700" },
-  chipContainer: { flexDirection: "row", flexWrap: "wrap", marginTop: 12, gap: 8 },
+  chipContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    marginTop: 12,
+    gap: 8,
+  },
   chip: {
     paddingHorizontal: 12,
     paddingVertical: 8,
@@ -309,9 +324,33 @@ const styles = StyleSheet.create({
   chipText: { color: "#667085", fontSize: 12, fontWeight: "600" },
   chipTextSelected: { color: "#117C72", fontWeight: "800" },
   freeFilterRow: { flexDirection: "row", alignItems: "center", marginTop: 17 },
-  freeFilterText: { marginLeft: 9, color: "#172033", fontSize: 14, fontWeight: "700" },
-  resultCount: { marginTop: 14, color: "#7B8798", fontSize: 13, fontWeight: "600" },
-  emptyState: { alignItems: "center", paddingVertical: 44, paddingHorizontal: 20 },
-  emptyTitle: { marginTop: 12, color: "#172033", fontSize: 18, fontWeight: "800" },
-  emptyText: { marginTop: 6, color: "#7B8798", fontSize: 14, textAlign: "center" },
+  freeFilterText: {
+    marginLeft: 9,
+    color: "#172033",
+    fontSize: 14,
+    fontWeight: "700",
+  },
+  resultCount: {
+    marginTop: 14,
+    color: "#7B8798",
+    fontSize: 13,
+    fontWeight: "600",
+  },
+  emptyState: {
+    alignItems: "center",
+    paddingVertical: 44,
+    paddingHorizontal: 20,
+  },
+  emptyTitle: {
+    marginTop: 12,
+    color: "#172033",
+    fontSize: 18,
+    fontWeight: "800",
+  },
+  emptyText: {
+    marginTop: 6,
+    color: "#7B8798",
+    fontSize: 14,
+    textAlign: "center",
+  },
 });
