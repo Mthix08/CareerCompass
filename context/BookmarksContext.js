@@ -1,8 +1,10 @@
 import React, { createContext, useContext, useMemo, useState } from "react";
+import { useProfile } from "./ProfileContext";
 
 const BookmarksContext = createContext(null);
 
 export function BookmarksProvider({ children }) {
+  const { isGuest } = useProfile();
   const [bookmarkedIds, setBookmarkedIds] = useState([]);
   const [bookmarkedCourseIds, setBookmarkedCourseIds] = useState([]);
 
@@ -11,9 +13,11 @@ export function BookmarksProvider({ children }) {
       bookmarkedIds,
       isBookmarked: (universityId) => bookmarkedIds.includes(universityId),
       addBookmark: (universityId) =>
-        setBookmarkedIds((current) =>
-          current.includes(universityId) ? current : [...current, universityId],
-        ),
+        setBookmarkedIds((current) => {
+          if (current.includes(universityId)) return current;
+          if (isGuest && current.length >= 3) return current;
+          return [...current, universityId];
+        }),
       removeBookmark: (universityId) =>
         setBookmarkedIds((current) =>
           current.filter((id) => id !== universityId),
@@ -29,7 +33,7 @@ export function BookmarksProvider({ children }) {
           current.filter((id) => id !== courseId),
         ),
     }),
-    [bookmarkedCourseIds, bookmarkedIds],
+    [bookmarkedIds, isGuest],
   );
 
   return (
