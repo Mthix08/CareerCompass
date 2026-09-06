@@ -74,7 +74,7 @@ function QuickLink({ icon, label, badge, onPress, styles }) {
 }
 
 export default function ProfileScreen({ navigation }) {
-  const { bookmarkedIds } = useBookmarks();
+  const { bookmarkedCourseIds, bookmarkedIds } = useBookmarks();
   const {
     profile,
     themePreference,
@@ -84,7 +84,7 @@ export default function ProfileScreen({ navigation }) {
     successMessage,
     clearSuccessMessage,
   } = useProfile();
-  const savedItemsLabel = `${bookmarkedIds.length} saved`;
+  const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length} saved`;
   const styles = useMemo(() => createStyles(colors), [colors]);
   const scrollRef = useRef(null);
 

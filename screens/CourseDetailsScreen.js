@@ -2,6 +2,7 @@ import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable, ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useBookmarks } from "../context/BookmarksContext";
 
 const COLORS = {
   primary: "#117C72",
@@ -29,6 +30,12 @@ function DetailRow({ icon, label, value }) {
 
 export default function CourseDetailsScreen({ navigation, route }) {
   const course = route.params?.course;
+  const {
+    addCourseBookmark,
+    isCourseBookmarked,
+    removeCourseBookmark,
+  } = useBookmarks();
+  const bookmarked = course ? isCourseBookmarked(course.id) : false;
 
   if (!course) {
     return (
@@ -45,9 +52,24 @@ export default function CourseDetailsScreen({ navigation, route }) {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />
       <View style={styles.header}>
-        <Pressable onPress={() => navigation.goBack()} accessibilityRole="button" accessibilityLabel="Go back" hitSlop={8}>
-          <Ionicons name="arrow-back" size={25} color="#FFFFFF" />
-        </Pressable>
+        <View style={styles.headerActions}>
+          <Pressable onPress={() => navigation.goBack()} accessibilityRole="button" accessibilityLabel="Go back" hitSlop={8} style={styles.headerButton}>
+            <Ionicons name="arrow-back" size={25} color="#FFFFFF" />
+          </Pressable>
+          <Pressable
+            onPress={() =>
+              bookmarked
+                ? removeCourseBookmark(course.id)
+                : addCourseBookmark(course.id)
+            }
+            accessibilityRole="button"
+            accessibilityLabel={`${bookmarked ? "Remove" : "Add"} ${course.name} ${bookmarked ? "from" : "to"} bookmarks`}
+            accessibilityState={{ selected: bookmarked }}
+            style={({ pressed }) => [styles.bookmarkButton, pressed && styles.pressed]}
+          >
+            <Ionicons name={bookmarked ? "bookmark" : "bookmark-outline"} size={23} color="#FFFFFF" />
+          </Pressable>
+        </View>
         <Text style={styles.headerLabel}>COURSE DETAILS</Text>
         <Text style={styles.title}>{course.name}</Text>
         <Text style={styles.university}>{course.universityName}</Text>
@@ -112,6 +134,10 @@ export default function CourseDetailsScreen({ navigation, route }) {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
   header: { paddingHorizontal: 22, paddingTop: 14, paddingBottom: 24, backgroundColor: COLORS.primary },
+  headerActions: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
+  headerButton: { width: 42, height: 42, marginLeft: -8, alignItems: "center", justifyContent: "center" },
+  bookmarkButton: { width: 44, height: 44, borderRadius: 22, borderWidth: 1, borderColor: "rgba(255,255,255,0.46)", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(255,255,255,0.14)" },
+  pressed: { opacity: 0.65 },
   headerLabel: { marginTop: 18, color: "#BFE6E1", fontSize: 10, fontWeight: "900", letterSpacing: 1.2 },
   title: { marginTop: 7, color: "#FFFFFF", fontSize: 25, lineHeight: 32, fontWeight: "900" },
   university: { marginTop: 7, color: "#D8F3EF", fontSize: 14, fontWeight: "700" },
