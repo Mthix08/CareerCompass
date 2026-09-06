@@ -16,6 +16,7 @@ import Notifications from "./screens/Notifications";
 import NotificationPreferences from "./screens/NotificationPreferences";
 import LanguageScreen from "./screens/LanguageScreen";
 import FaqsScreen from "./screens/FaqsScreen";
+import CourseDetailsScreen from "./screens/CourseDetailsScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import { ProfileProvider } from "./context/ProfileContext";
 import { BookmarksProvider } from "./context/BookmarksContext";
@@ -46,6 +47,11 @@ function AppNavigator() {
         <Stack.Screen
           name="UniversityDetails"
           component={UniversityDetailsScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="CourseDetails"
+          component={CourseDetailsScreen}
           options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
