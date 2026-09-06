@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
+  Image,
   Pressable,
   ScrollView,
   StatusBar,
@@ -10,9 +11,11 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { signOut } from "firebase/auth";
 
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
+import { auth } from "./firebaseConfig";
 
 const THEMES = ["Light", "Dark", "System"];
 
@@ -77,6 +80,8 @@ export default function ProfileScreen({ navigation }) {
   const { bookmarkedIds } = useBookmarks();
   const {
     profile,
+    isGuest,
+    isAuthenticated,
     themePreference,
     setThemePreference,
     resolvedTheme,
@@ -103,17 +108,34 @@ export default function ProfileScreen({ navigation }) {
   };
 
   const handleSignOut = () => {
-    Alert.alert("Sign out?", "Are you sure you want to sign out?", [
-      { text: "Cancel", style: "cancel" },
-      {
-        text: "Sign Out",
-        style: "destructive",
-        onPress: () => {
-          // TODO: Connect the real authentication sign-out action later.
-          navigation.getParent()?.navigate("Login");
+    Alert.alert(
+      isGuest ? "Leave guest mode?" : "Sign out?",
+      "You can return to CareerCompass at any time.",
+      [
+        { text: "Cancel", style: "cancel" },
+        {
+          text: "Sign Out",
+          style: "destructive",
+          onPress: async () => {
+            try {
+              if (isAuthenticated) await signOut(auth);
+              navigation
+                .getParent()
+                ?.getParent()
+                ?.reset({
+                  index: 0,
+                  routes: [{ name: "Login" }],
+                });
+            } catch (error) {
+              Alert.alert(
+                "Sign out failed",
+                "We could not sign you out. Check your connection and try again.",
+              );
+            }
+          },
         },
-      },
-    ]);
+      ],
+    );
   };
 
   const handleDeleteAccount = () => {
@@ -151,6 +173,31 @@ export default function ProfileScreen({ navigation }) {
   };
 
   const initials = `${profile.firstName?.[0] || ""}${profile.surname?.[0] || ""}`;
+  const accountType =
+    isGuest ? "Guest"
+    : profile.authProvider === "Google" ? "Google"
+    : "Student";
+  const accountOnly = (action) => {
+    if (isGuest) {
+      Alert.alert(
+        "Create an account",
+        "Create a free account to use this feature and keep your progress.",
+        [
+          { text: "Cancel", style: "cancel" },
+          {
+            text: "Log In",
+            onPress: () => navigation.getParent()?.navigate("Login"),
+          },
+          {
+            text: "Sign Up",
+            onPress: () => navigation.getParent()?.navigate("SignUp"),
+          },
+        ],
+      );
+      return;
+    }
+    action();
+  };
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -198,9 +245,12 @@ export default function ProfileScreen({ navigation }) {
               pressed && styles.pressed,
             ]}
           >
-            <View style={styles.avatar}>
-              <Text style={styles.avatarText}>{initials || "CC"}</Text>
-            </View>
+            {profile.photoURL ?
+              <Image source={{ uri: profile.photoURL }} style={styles.avatar} />
+            : <View style={styles.avatar}>
+                <Text style={styles.avatarText}>{initials || "CC"}</Text>
+              </View>
+            }
             <View style={styles.cameraButton}>
               <Ionicons name="camera" size={15} color="#FFFFFF" />
             </View>
@@ -211,6 +261,9 @@ export default function ProfileScreen({ navigation }) {
           <Text style={styles.profileName}>
             {profile.firstName} {profile.surname}
           </Text>
+          <View style={styles.accountBadge}>
+            <Text style={styles.accountBadgeText}>{accountType} account</Text>
+          </View>
           <View style={styles.locationRow}>
             <Ionicons
               name="location-outline"
@@ -224,42 +277,46 @@ export default function ProfileScreen({ navigation }) {
         <View style={styles.sectionCard}>
           <Text style={styles.sectionTitle}>Personal Details</Text>
           <Text style={styles.sectionIntro}>
-            Your saved account information is shown below.
+            {isGuest ?
+              "Explore freely. Create an account to save your progress."
+            : "Your saved account information is shown below."}
           </Text>
           <View style={styles.detailsList}>
             <ReadOnlyDetail
               icon="mail-outline"
               label="Email Address"
-              value={profile.email}
+              value={isGuest ? "Not available" : profile.email}
               styles={styles}
             />
             <ReadOnlyDetail
               icon="person-outline"
               label="First Name"
-              value={profile.firstName}
+              value={isGuest ? "Not available" : profile.firstName}
               styles={styles}
             />
             <ReadOnlyDetail
               icon="person-outline"
               label="Surname"
-              value={profile.surname}
+              value={isGuest ? "Not available" : profile.surname}
               styles={styles}
             />
             <ReadOnlyDetail
               icon="call-outline"
               label="Phone Number"
-              value={profile.phone}
+              value={isGuest ? "Not available" : profile.phone}
               styles={styles}
             />
             <ReadOnlyDetail
               icon="school-outline"
               label="Category"
-              value={profile.category}
+              value={accountType}
               styles={styles}
             />
           </View>
           <Pressable
-            onPress={() => navigation.navigate("EditProfile")}
+            onPress={() =>
+              accountOnly(() => navigation.navigate("EditProfile"))
+            }
             accessibilityRole="button"
             accessibilityLabel="Edit Personal Details"
             style={({ pressed }) => [
@@ -268,7 +325,9 @@ export default function ProfileScreen({ navigation }) {
             ]}
           >
             <Ionicons name="create-outline" size={20} color="#FFFFFF" />
-            <Text style={styles.primaryButtonText}>Edit Personal Details</Text>
+            <Text style={styles.primaryButtonText}>
+              {isGuest ? "Create an account to edit" : "Edit Personal Details"}
+            </Text>
           </Pressable>
         </View>
 
@@ -276,7 +335,11 @@ export default function ProfileScreen({ navigation }) {
         <View style={styles.quickLinksCard}>
           <QuickLink
             icon="bookmark-outline"
-            label="Saved Universities & Courses"
+            label={
+              isGuest ?
+                "Saved Courses (limited)"
+              : "Saved Universities & Courses"
+            }
             badge={savedItemsLabel}
             onPress={() => navigation.navigate("Bookmarks")}
             styles={styles}
@@ -285,7 +348,9 @@ export default function ProfileScreen({ navigation }) {
             icon="briefcase-outline"
             label="My Applications"
             badge="0"
-            onPress={() => navigation.navigate("Applications")}
+            onPress={() =>
+              accountOnly(() => navigation.navigate("Applications"))
+            }
             styles={styles}
           />
           <QuickLink
@@ -310,13 +375,17 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="options-outline"
             label="Notification Preferences"
-            onPress={() => navigation.navigate("NotificationPreferences")}
+            onPress={() =>
+              accountOnly(() => navigation.navigate("NotificationPreferences"))
+            }
             styles={styles}
           />
           <QuickLink
             icon="notifications-outline"
             label="Notifications"
-            onPress={() => navigation.navigate("Notifications")}
+            onPress={() =>
+              accountOnly(() => navigation.navigate("Notifications"))
+            }
             styles={styles}
           />
           <QuickLink
@@ -383,22 +452,26 @@ export default function ProfileScreen({ navigation }) {
           <Text style={styles.signOutText}>Sign Out</Text>
         </Pressable>
 
-        <Pressable
-          onPress={handleDeleteAccount}
-          accessibilityRole="button"
-          accessibilityLabel="Delete Account"
-          style={({ pressed }) => [
-            styles.deleteButton,
-            pressed && styles.pressed,
-          ]}
-        >
-          <Ionicons name="trash-outline" size={19} color={colors.danger} />
-          <Text style={styles.deleteText}>Delete Account</Text>
-        </Pressable>
-        <Text style={styles.deleteExplanation}>
-          This action is permanent and deletes your profile and academic
-          progression.
-        </Text>
+        {!isGuest && (
+          <>
+            <Pressable
+              onPress={handleDeleteAccount}
+              accessibilityRole="button"
+              accessibilityLabel="Delete Account"
+              style={({ pressed }) => [
+                styles.deleteButton,
+                pressed && styles.pressed,
+              ]}
+            >
+              <Ionicons name="trash-outline" size={19} color={colors.danger} />
+              <Text style={styles.deleteText}>Delete Account</Text>
+            </Pressable>
+            <Text style={styles.deleteExplanation}>
+              This action is permanent and deletes your profile and academic
+              progression.
+            </Text>
+          </>
+        )}
       </ScrollView>
     </SafeAreaView>
   );
@@ -500,6 +573,19 @@ function createStyles(colors) {
       lineHeight: 30,
       fontWeight: "900",
       textAlign: "center",
+    },
+    accountBadge: {
+      marginTop: 8,
+      paddingHorizontal: 11,
+      paddingVertical: 5,
+      borderRadius: 999,
+      backgroundColor: colors.primarySoft,
+    },
+    accountBadgeText: {
+      color: colors.primary,
+      fontSize: 11,
+      fontWeight: "800",
+      textTransform: "uppercase",
     },
     locationRow: { marginTop: 5, flexDirection: "row", alignItems: "center" },
     locationText: {

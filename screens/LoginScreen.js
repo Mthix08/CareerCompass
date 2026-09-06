@@ -14,9 +14,11 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useProfile } from "../context/ProfileContext";
 import { auth } from "./firebaseConfig";
 
 export default function LoginScreen({ navigation }) {
+  const { enterGuestMode } = useProfile();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -34,11 +36,10 @@ export default function LoginScreen({ navigation }) {
       navigation.reset({ index: 0, routes: [{ name: "Home" }] });
     } catch (error) {
       const message =
-        error.code === "auth/invalid-credential"
-          ? "That email address or password is incorrect."
-          : error.code === "auth/invalid-email"
-            ? "Enter a valid email address."
-            : "We could not log you in. Please try again.";
+        error.code === "auth/invalid-credential" ?
+          "That email address or password is incorrect."
+        : error.code === "auth/invalid-email" ? "Enter a valid email address."
+        : "We could not log you in. Please try again.";
       Alert.alert("Login failed", message);
     } finally {
       setIsLoading(false);
@@ -139,7 +140,7 @@ export default function LoginScreen({ navigation }) {
           <TouchableOpacity
             style={styles.loginButton}
             activeOpacity={0.8}
-            onPress={() => navigation?.navigate("Home")}
+            onPress={handleLogin}
           >
             <Text style={styles.loginButtonText}>
               {isLoading ? "Logging in..." : "Log In"}
@@ -167,7 +168,10 @@ export default function LoginScreen({ navigation }) {
 
             <TouchableOpacity
               activeOpacity={0.7}
-              onPress={() => navigation?.navigate("Home")}
+              onPress={() => {
+                enterGuestMode();
+                navigation?.navigate("Home", { guest: true });
+              }}
             >
               <Text style={styles.backText}>Login As A Guest</Text>
             </TouchableOpacity>
