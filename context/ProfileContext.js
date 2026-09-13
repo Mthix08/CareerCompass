@@ -68,6 +68,7 @@ export function ProfileProvider({ children }) {
     return auth.onAuthStateChanged(async (user) => {
       setFirebaseUser(user);
       if (!user) {
+        setIsGuest(false);
         setProfile(initialProfile);
         return;
       }
@@ -103,6 +104,12 @@ export function ProfileProvider({ children }) {
     setIsGuest(true);
     setFirebaseUser(null);
     setProfile(initialProfile);
+  }, []);
+  const clearSession = useCallback(() => {
+    setIsGuest(false);
+    setFirebaseUser(null);
+    setProfile(initialProfile);
+    setSuccessMessage("");
   }, []);
 
   const resolvedTheme =
@@ -141,6 +148,7 @@ export function ProfileProvider({ children }) {
       isGuest: isGuest && !firebaseUser,
       isAuthenticated: Boolean(firebaseUser),
       enterGuestMode,
+      clearSession,
       updateProfile,
       themePreference,
       setThemePreference,
@@ -154,6 +162,7 @@ export function ProfileProvider({ children }) {
       firebaseUser,
       isGuest,
       enterGuestMode,
+      clearSession,
       updateProfile,
       themePreference,
       resolvedTheme,
