@@ -1,6 +1,5 @@
-import React, { useMemo, useState } from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import React from "react";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 
 function CourseCard({ course }) {
   return (
@@ -11,7 +10,7 @@ function CourseCard({ course }) {
       <View style={styles.metaRow}>
         <View style={styles.metaItem}>
           <Text style={styles.metaLabel}>Minimum APS</Text>
-          <Text style={styles.metaValue}>{course.minimumAPS}</Text>
+          <Text style={styles.metaValue}>{course.apsDisplay || course.minimumAPS}</Text>
         </View>
         <View style={styles.metaItem}>
           <Text style={styles.metaLabel}>Duration</Text>
@@ -34,44 +33,37 @@ function CourseCard({ course }) {
   );
 }
 
-export default function CoursesSection({ courses = [], accentColor = "#F4B08F" }) {
-  const [query, setQuery] = useState("");
-  const filteredCourses = useMemo(() => {
-    const search = query.trim().toLowerCase();
-    if (!search) return courses;
-    return courses.filter((course) =>
-      `${course.name} ${course.faculty}`.toLowerCase().includes(search),
-    );
-  }, [courses, query]);
-
+export default function CoursesSection({ courses = [], accentColor = "#F4B08F", onSeeMore }) {
+  const previewCourses = courses.slice(0, 5);
   return (
     <View style={styles.section}>
       <Text style={styles.heading}>Courses</Text>
       <Text style={[styles.notice, { color: accentColor }]}>
-        Representative programmes are shown below. Confirm current offerings and
-        entry requirements in the university's latest prospectus.
+        {courses[0]?.prospectusYear
+          ? `Showing courses from the ${courses[0].prospectusYear} prospectus. Confirm current entry requirements with the university.`
+          : "Representative programmes are shown below. Confirm current offerings and entry requirements in the university's latest prospectus."}
       </Text>
-      <View style={styles.searchBox}>
-        <Ionicons name="search-outline" size={20} color="#9CA6B5" />
-        <TextInput
-          value={query}
-          onChangeText={setQuery}
-          placeholder="Search courses or faculties"
-          placeholderTextColor="#737D8C"
-          style={styles.searchInput}
-          accessibilityLabel="Search university courses"
-          returnKeyType="search"
-        />
-      </View>
-      {filteredCourses.length ? (
-        filteredCourses.map((course) => (
-          <CourseCard key={course.id} course={course} />
-        ))
+      {previewCourses.length ? (
+        <ScrollView
+          nestedScrollEnabled
+          style={styles.previewList}
+          showsVerticalScrollIndicator
+        >
+          {previewCourses.map((course) => (
+            <CourseCard key={course.id} course={course} />
+          ))}
+        </ScrollView>
       ) : (
-        <Text style={styles.emptyText}>
-          No example courses match your search.
-        </Text>
+        <Text style={styles.emptyText}>No courses available yet.</Text>
       )}
+      <Pressable
+        onPress={onSeeMore}
+        accessibilityRole="button"
+        accessibilityLabel="See more courses"
+        style={({ pressed }) => [styles.seeMoreButton, pressed && styles.pressed]}
+      >
+        <Text style={styles.seeMoreText}>See More</Text>
+      </Pressable>
     </View>
   );
 }
@@ -80,24 +72,10 @@ const styles = StyleSheet.create({
   section: { paddingTop: 24 },
   heading: { color: "#FFFFFF", fontSize: 22, fontWeight: "800" },
   notice: { marginTop: 8, fontSize: 13, lineHeight: 19 },
-  searchBox: {
-    minHeight: 52,
-    marginTop: 18,
-    paddingHorizontal: 15,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: "#29313D",
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "#151A22",
-  },
-  searchInput: {
-    flex: 1,
-    minHeight: 50,
-    marginLeft: 9,
-    color: "#FFFFFF",
-    fontSize: 15,
-  },
+  previewList: { maxHeight: 550, marginTop: 3 },
+  seeMoreButton: { minHeight: 50, marginTop: 18, borderRadius: 14, alignItems: "center", justifyContent: "center", backgroundColor: "#29313D" },
+  seeMoreText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
+  pressed: { opacity: 0.7 },
   courseCard: {
     marginTop: 15,
     padding: 18,

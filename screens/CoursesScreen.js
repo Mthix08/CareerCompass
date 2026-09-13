@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   FlatList,
@@ -62,6 +62,10 @@ function CourseCard({ course, onPress }) {
 
 function FilterSheet({ visible, filters, onApply, onClose }) {
   const [draft, setDraft] = useState(filters);
+
+  useEffect(() => {
+    if (visible) setDraft(filters);
+  }, [visible, filters]);
 
   const close = () => {
     setDraft(filters);
@@ -168,10 +172,17 @@ function FilterSheet({ visible, filters, onApply, onClose }) {
   );
 }
 
-export default function CoursesScreen({ navigation }) {
+export default function CoursesScreen({ navigation, route }) {
   const [query, setQuery] = useState("");
   const [filters, setFilters] = useState(EMPTY_FILTERS);
   const [filterVisible, setFilterVisible] = useState(false);
+
+  useEffect(() => {
+    if (route.params?.universityId) {
+      setQuery("");
+      setFilters({ ...EMPTY_FILTERS, universityId: route.params.universityId });
+    }
+  }, [route.params?.universityId, route.params?.filterRequestId]);
 
   const filteredCourses = useMemo(() => {
     const search = query.trim().toLowerCase();
