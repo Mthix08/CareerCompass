@@ -88,6 +88,7 @@ export default function ProfileScreen({ navigation }) {
     colors,
     successMessage,
     clearSuccessMessage,
+    clearSession,
   } = useProfile();
   const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length} saved`;
   const styles = useMemo(() => createStyles(colors), [colors]);
@@ -119,13 +120,11 @@ export default function ProfileScreen({ navigation }) {
           onPress: async () => {
             try {
               if (isAuthenticated) await signOut(auth);
-              navigation
-                .getParent()
-                ?.getParent()
-                ?.reset({
-                  index: 0,
-                  routes: [{ name: "Login" }],
-                });
+              clearSession();
+              navigation.getParent()?.reset({
+                index: 0,
+                routes: [{ name: "Login" }],
+              });
             } catch (error) {
               Alert.alert(
                 "Sign out failed",

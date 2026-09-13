@@ -10,7 +10,6 @@ import {
   ScrollView,
   Platform,
   StatusBar,
-  Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -23,10 +22,16 @@ export default function LoginScreen({ navigation }) {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [errors, setErrors] = useState({ email: "", password: "" });
 
   const handleLogin = async () => {
-    if (!email.trim() || !password) {
-      Alert.alert("Missing details", "Enter your email address and password.");
+    if (isLoading) return;
+    const nextErrors = {
+      email: !email.trim() ? "Enter your email address." : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()) ? "Enter a valid email address." : "",
+      password: !password ? "Enter your password." : "",
+    };
+    setErrors(nextErrors);
+    if (nextErrors.email || nextErrors.password) {
       return;
     }
 
@@ -35,12 +40,18 @@ export default function LoginScreen({ navigation }) {
       await signInWithEmailAndPassword(auth, email.trim(), password);
       navigation.reset({ index: 0, routes: [{ name: "Home" }] });
     } catch (error) {
-      const message =
-        error.code === "auth/invalid-credential" ?
-          "That email address or password is incorrect."
-        : error.code === "auth/invalid-email" ? "Enter a valid email address."
-        : "We could not log you in. Please try again.";
-      Alert.alert("Login failed", message);
+      if (error.code === "auth/invalid-email") {
+        setErrors({ email: "Enter a valid email address.", password: "" });
+      } else if (error.code === "auth/user-not-found") {
+        setErrors({ email: "No account was found for this email address.", password: "" });
+      } else {
+        setErrors({
+          email: "",
+          password: error.code === "auth/invalid-credential" || error.code === "auth/wrong-password"
+            ? "That email address or password is incorrect."
+            : "We could not log you in. Please try again.",
+        });
+      }
     } finally {
       setIsLoading(false);
     }
@@ -79,7 +90,7 @@ export default function LoginScreen({ navigation }) {
           {}
           <Text style={styles.label}>Email address</Text>
 
-          <View style={styles.inputContainer}>
+          <View style={[styles.inputContainer, errors.email && styles.inputError]}>
             <Ionicons
               name="mail-outline"
               size={20}
@@ -92,16 +103,21 @@ export default function LoginScreen({ navigation }) {
               placeholder="your.email@example.com"
               placeholderTextColor="#A3A3A3"
               value={email}
-              onChangeText={setEmail}
+              onChangeText={(value) => {
+                setEmail(value);
+                setErrors((current) => ({ ...current, email: "", password: "" }));
+              }}
+              accessibilityLabel="Email address"
               keyboardType="email-address"
               autoCapitalize="none"
               autoCorrect={false}
             />
           </View>
+          {!!errors.email && <Text style={styles.errorText} accessibilityRole="alert">{errors.email}</Text>}
 
           <Text style={[styles.label, styles.passwordLabel]}>Password</Text>
 
-          <View style={styles.inputContainer}>
+          <View style={[styles.inputContainer, errors.password && styles.inputError]}>
             <Ionicons
               name="lock-closed-outline"
               size={20}
@@ -114,7 +130,11 @@ export default function LoginScreen({ navigation }) {
               placeholder="Enter your password"
               placeholderTextColor="#A3A3A3"
               value={password}
-              onChangeText={setPassword}
+              onChangeText={(value) => {
+                setPassword(value);
+                setErrors((current) => ({ ...current, password: "" }));
+              }}
+              accessibilityLabel="Password"
               secureTextEntry={!showPassword}
               autoCapitalize="none"
             />
@@ -128,6 +148,7 @@ export default function LoginScreen({ navigation }) {
               </Text>
             </TouchableOpacity>
           </View>
+          {!!errors.password && <Text style={styles.errorText} accessibilityRole="alert">{errors.password}</Text>}
 
           <TouchableOpacity
             style={styles.forgotContainer}
@@ -251,6 +272,8 @@ const styles = StyleSheet.create({
 
     paddingHorizontal: 16,
   },
+  inputError: { borderColor: "#D64545" },
+  errorText: { marginTop: 7, color: "#C53030", fontSize: 13, lineHeight: 18 },
 
   inputIcon: {
     marginRight: 10,
