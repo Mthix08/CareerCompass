@@ -6,6 +6,7 @@ const BookmarksContext = createContext(null);
 export function BookmarksProvider({ children }) {
   const { isGuest } = useProfile();
   const [bookmarkedIds, setBookmarkedIds] = useState([]);
+  const [bookmarkedCourseIds, setBookmarkedCourseIds] = useState([]);
 
   const value = useMemo(
     () => ({
@@ -20,6 +21,16 @@ export function BookmarksProvider({ children }) {
       removeBookmark: (universityId) =>
         setBookmarkedIds((current) =>
           current.filter((id) => id !== universityId),
+        ),
+      bookmarkedCourseIds,
+      isCourseBookmarked: (courseId) => bookmarkedCourseIds.includes(courseId),
+      addCourseBookmark: (courseId) =>
+        setBookmarkedCourseIds((current) =>
+          current.includes(courseId) ? current : [...current, courseId],
+        ),
+      removeCourseBookmark: (courseId) =>
+        setBookmarkedCourseIds((current) =>
+          current.filter((id) => id !== courseId),
         ),
     }),
     [bookmarkedIds, isGuest],

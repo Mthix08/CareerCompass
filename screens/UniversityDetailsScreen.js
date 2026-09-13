@@ -18,6 +18,7 @@ import CoursesSection from "../components/CoursesSection";
 import UniversityTabs from "../components/UniversityTabs";
 import { useBookmarks } from "../context/BookmarksContext";
 import { getUniversityTheme } from "../data/universityTheme";
+import { courseExamples } from "../data/courseExamples";
 
 export default function UniversityDetailsScreen({ navigation, route }) {
   const university = route.params?.university;
@@ -25,6 +26,9 @@ export default function UniversityDetailsScreen({ navigation, route }) {
   const { addBookmark, isBookmarked, removeBookmark } = useBookmarks();
   const bookmarked = university ? isBookmarked(university.id) : false;
   const universityTheme = getUniversityTheme(university);
+  const previewCourses = university?.id === "uj"
+    ? courseExamples.filter((course) => course.universityId === university.id)
+    : university?.courses || [];
 
   const handleBookmarkPress = () => {
     if (bookmarked) {
@@ -102,8 +106,12 @@ export default function UniversityDetailsScreen({ navigation, route }) {
     if (activeTab === "Courses") {
       return (
         <CoursesSection
-          courses={university.courses}
+          courses={previewCourses}
           accentColor={universityTheme.accentLight}
+          onSeeMore={() => navigation.navigate("Home", {
+            screen: "Courses",
+            params: { universityId: university.id, filterRequestId: Date.now() },
+          })}
         />
       );
     }
