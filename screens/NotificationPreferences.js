@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable, ScrollView, StyleSheet, Switch, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useProfile } from "../context/ProfileContext";
 
 const GREEN = "rgba(8, 76, 70, 0.88)";
 
@@ -30,12 +31,26 @@ const PREFERENCE_OPTIONS = [
 ];
 
 export default function NotificationPreferences({ navigation }) {
+  const { profile, updateProfile } = useProfile();
   const [preferences, setPreferences] = useState(() =>
     Object.fromEntries(PREFERENCE_OPTIONS.map(({ id }) => [id, true])),
   );
 
+  useEffect(() => {
+    if (profile?.notificationPreferences) {
+      setPreferences((current) => ({
+        ...current,
+        ...profile.notificationPreferences,
+      }));
+    }
+  }, [profile?.notificationPreferences]);
+
   const togglePreference = (id) => {
-    setPreferences((current) => ({ ...current, [id]: !current[id] }));
+    setPreferences((current) => {
+      const next = { ...current, [id]: !current[id] };
+      updateProfile({ ...profile, notificationPreferences: next }).catch(() => {});
+      return next;
+    });
   };
 
   return (

@@ -54,6 +54,10 @@ const initialProfile = {
   category: "Guest",
   learnerInfo: "",
   location: "Explore CareerCompass",
+  apsScore: 0,
+  matchedUniversities: 0,
+  apsByPeriod: {},
+  apsResults: {},
 };
 
 export function ProfileProvider({ children }) {
@@ -131,11 +135,67 @@ export function ProfileProvider({ children }) {
             email: nextProfile.email,
             phone: nextProfile.phone,
             category: nextProfile.category,
+            location: nextProfile.location,
+            photoURL: nextProfile.photoURL || "",
+            notificationPreferences: nextProfile.notificationPreferences || {},
           },
           { merge: true },
         );
       }
       setSuccessMessage("Profile updated successfully.");
+    },
+    [firebaseUser],
+  );
+  const saveApsResult = useCallback(
+    async ({ period, subjects, totalAps, matchedUniversities }) => {
+      const apsData = {
+        apsScore: totalAps,
+        matchedUniversities,
+        apsByPeriod: {
+          [period]: totalAps,
+        },
+        apsResults: {
+          [period]: { subjects, totalAps, matchedUniversities },
+        },
+      };
+
+      setProfile((currentProfile) => ({
+        ...currentProfile,
+        apsScore: totalAps,
+        matchedUniversities,
+        apsByPeriod: {
+          ...(currentProfile.apsByPeriod || {}),
+          [period]: totalAps,
+        },
+        apsResults: {
+          ...(currentProfile.apsResults || {}),
+          [period]: { subjects, totalAps, matchedUniversities },
+        },
+      }));
+
+      if (firebaseUser) {
+        const currentUserSnapshot = await getDoc(
+          doc(db, "users", firebaseUser.uid),
+        );
+        const currentUserData = currentUserSnapshot.exists()
+          ? currentUserSnapshot.data()
+          : {};
+        await setDoc(
+          doc(db, "users", firebaseUser.uid),
+          {
+            ...apsData,
+            apsByPeriod: {
+              ...(currentUserData.apsByPeriod || {}),
+              [period]: totalAps,
+            },
+            apsResults: {
+              ...(currentUserData.apsResults || {}),
+              [period]: { subjects, totalAps, matchedUniversities },
+            },
+          },
+          { merge: true },
+        );
+      }
     },
     [firebaseUser],
   );
@@ -150,6 +210,7 @@ export function ProfileProvider({ children }) {
       enterGuestMode,
       clearSession,
       updateProfile,
+      saveApsResult,
       themePreference,
       setThemePreference,
       resolvedTheme,
@@ -164,6 +225,7 @@ export function ProfileProvider({ children }) {
       enterGuestMode,
       clearSession,
       updateProfile,
+      saveApsResult,
       themePreference,
       resolvedTheme,
       colors,

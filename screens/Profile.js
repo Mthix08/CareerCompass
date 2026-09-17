@@ -3,19 +3,30 @@ import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
   Image,
+  KeyboardAvoidingView,
+  Modal,
+  Platform,
   Pressable,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
+  TextInput,
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { signOut } from "firebase/auth";
+import {
+  deleteUser,
+  EmailAuthProvider,
+  reauthenticateWithCredential,
+  signOut,
+} from "firebase/auth";
+import { deleteDoc, doc } from "firebase/firestore";
 
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
-import { auth } from "./firebaseConfig";
+import { auth, db } from "./firebaseConfig";
+import { signInWithGoogle } from "./googleAuth";
 
 const THEMES = ["Light", "Dark", "System"];
 
@@ -90,9 +101,13 @@ export default function ProfileScreen({ navigation }) {
     clearSuccessMessage,
     clearSession,
   } = useProfile();
+  const apsScore = profile?.apsScore || 0;
   const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length} saved`;
   const styles = useMemo(() => createStyles(colors), [colors]);
   const scrollRef = useRef(null);
+  const [deletePassword, setDeletePassword] = React.useState("");
+  const [reauthVisible, setReauthVisible] = React.useState(false);
+  const [isDeleting, setIsDeleting] = React.useState(false);
 
   useEffect(() => {
     if (!successMessage) return undefined;
@@ -137,6 +152,90 @@ export default function ProfileScreen({ navigation }) {
     );
   };
 
+  const performAccountDeletion = async () => {
+    const user = auth.currentUser;
+    if (!user) {
+      Alert.alert(
+        "Delete account failed",
+        "Your session has expired. Please sign in again and retry.",
+      );
+      return;
+    }
+
+    try {
+      setIsDeleting(true);
+      await deleteDoc(doc(db, "users", user.uid));
+      await deleteUser(user);
+      clearSession();
+      navigation.getParent()?.getParent()?.reset({
+        index: 0,
+        routes: [{ name: "Login" }],
+      });
+    } catch (error) {
+      Alert.alert(
+        "Account deletion failed",
+        "We could not delete your account. Check your connection and try again.",
+      );
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
+  const beginAccountDeletion = async () => {
+    const user = auth.currentUser;
+    if (!user) {
+      Alert.alert(
+        "Delete account failed",
+        "Your session has expired. Please sign in again and retry.",
+      );
+      return;
+    }
+
+    const usesPassword = user.providerData.some(
+      ({ providerId }) => providerId === "password",
+    );
+    if (usesPassword) {
+      setReauthVisible(true);
+      return;
+    }
+
+    try {
+      setIsDeleting(true);
+      await signInWithGoogle();
+      await performAccountDeletion();
+    } catch (error) {
+      Alert.alert(
+        "Sign in required",
+        "Sign in with Google again before deleting your account.",
+      );
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
+  const confirmPasswordReauthentication = async () => {
+    const user = auth.currentUser;
+    if (!user || !deletePassword) return;
+
+    try {
+      setIsDeleting(true);
+      const credential = EmailAuthProvider.credential(user.email, deletePassword);
+      await reauthenticateWithCredential(user, credential);
+      setDeletePassword("");
+      setReauthVisible(false);
+      await performAccountDeletion();
+    } catch (error) {
+      Alert.alert(
+        "Verification failed",
+        error.code === "auth/wrong-password"
+          ? "The password is incorrect. Try again."
+          : "We could not verify your account. Please try again.",
+      );
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
   const handleDeleteAccount = () => {
     Alert.alert(
       "Delete account?",
@@ -155,13 +254,7 @@ export default function ProfileScreen({ navigation }) {
                 {
                   text: "Delete Permanently",
                   style: "destructive",
-                  onPress: () => {
-                    // TODO: Connect secure server-side account deletion later.
-                    Alert.alert(
-                      "Backend required",
-                      "No account was deleted. Secure account deletion has not been connected yet.",
-                    );
-                  },
+                  onPress: beginAccountDeletion,
                 },
               ],
             );
@@ -355,7 +448,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="calculator-outline"
             label="APS Calculator"
-            badge="Score: 15"
+            badge={`Score: ${apsScore}`}
             onPress={() => navigation.navigate("ApsCalculator")}
             styles={styles}
           />
@@ -472,6 +565,57 @@ export default function ProfileScreen({ navigation }) {
           </>
         )}
       </ScrollView>
+
+      <Modal
+        visible={reauthVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={() => !isDeleting && setReauthVisible(false)}
+      >
+        <KeyboardAvoidingView
+          style={styles.reauthRoot}
+          behavior={Platform.OS === "ios" ? "padding" : undefined}
+        >
+          <View style={styles.reauthCard}>
+            <Text style={styles.reauthTitle}>Confirm your password</Text>
+            <Text style={styles.reauthText}>
+              Sign in again to permanently delete your account.
+            </Text>
+            <TextInput
+              value={deletePassword}
+              onChangeText={setDeletePassword}
+              placeholder="Password"
+              placeholderTextColor={colors.mutedText}
+              secureTextEntry
+              autoCapitalize="none"
+              style={styles.reauthInput}
+              editable={!isDeleting}
+              accessibilityLabel="Account password"
+            />
+            <View style={styles.reauthActions}>
+              <Pressable
+                onPress={() => setReauthVisible(false)}
+                disabled={isDeleting}
+                style={styles.reauthCancel}
+              >
+                <Text style={styles.reauthCancelText}>Cancel</Text>
+              </Pressable>
+              <Pressable
+                onPress={confirmPasswordReauthentication}
+                disabled={isDeleting || !deletePassword}
+                style={[
+                  styles.reauthDelete,
+                  (isDeleting || !deletePassword) && styles.reauthDisabled,
+                ]}
+              >
+                <Text style={styles.reauthDeleteText}>
+                  {isDeleting ? "Deleting..." : "Delete Account"}
+                </Text>
+              </Pressable>
+            </View>
+          </View>
+        </KeyboardAvoidingView>
+      </Modal>
     </SafeAreaView>
   );
 }
@@ -479,6 +623,53 @@ export default function ProfileScreen({ navigation }) {
 function createStyles(colors) {
   return StyleSheet.create({
     safeArea: { flex: 1, backgroundColor: colors.background },
+    reauthRoot: {
+      flex: 1,
+      padding: 24,
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: "rgba(0, 0, 0, 0.52)",
+    },
+    reauthCard: {
+      width: "100%",
+      maxWidth: 420,
+      padding: 22,
+      borderRadius: 18,
+      backgroundColor: colors.surface,
+    },
+    reauthTitle: { color: colors.text, fontSize: 20, fontWeight: "900" },
+    reauthText: {
+      marginTop: 8,
+      color: colors.secondaryText,
+      fontSize: 14,
+      lineHeight: 20,
+    },
+    reauthInput: {
+      minHeight: 48,
+      marginTop: 18,
+      paddingHorizontal: 14,
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: 10,
+      color: colors.text,
+      backgroundColor: colors.input,
+    },
+    reauthActions: {
+      marginTop: 18,
+      flexDirection: "row",
+      justifyContent: "flex-end",
+      gap: 10,
+    },
+    reauthCancel: { paddingHorizontal: 14, paddingVertical: 12 },
+    reauthCancelText: { color: colors.secondaryText, fontWeight: "800" },
+    reauthDelete: {
+      paddingHorizontal: 14,
+      paddingVertical: 12,
+      borderRadius: 10,
+      backgroundColor: colors.danger,
+    },
+    reauthDisabled: { opacity: 0.5 },
+    reauthDeleteText: { color: "#FFFFFF", fontWeight: "900" },
     fixedHeader: {
       minHeight: 66,
       paddingHorizontal: 20,

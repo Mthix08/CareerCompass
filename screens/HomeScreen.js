@@ -22,10 +22,7 @@ import {
   ViewAllUniversitiesCard,
 } from "../components/HomeComponents";
 import { useProfile } from "../context/ProfileContext";
-import {
-  HOME_PREVIEW_VALUES,
-  MOCK_APPLICATION_DEADLINES,
-} from "../data/homeMockData";
+import { MOCK_APPLICATION_DEADLINES } from "../data/homeMockData";
 import { universities } from "../data/universities";
 
 const NSFAS_IMAGE = require("../assets/nsfas.jpg");
@@ -40,6 +37,8 @@ export default function HomeScreen({ navigation }) {
     [colors, resolvedTheme, headerAccent],
   );
   const learnerName = profile?.firstName?.trim() || "Zethembe";
+  const matchedUniversities = profile?.matchedUniversities || 0;
+  const apsScore = profile?.apsScore || 0;
   const sliderCardWidth = Math.min(Math.max(screenWidth - 66, 254), 310);
   const universityCardWidth = Math.min(
     Math.max(screenWidth * 0.73, 258),
@@ -160,7 +159,7 @@ export default function HomeScreen({ navigation }) {
             </View>
             <View style={styles.matchedCopy}>
               <Text style={styles.matchedTitle}>
-                {HOME_PREVIEW_VALUES.matchedUniversities} universities matched
+                {matchedUniversities} universities matched
               </Text>
               <Text style={styles.matchedText}>
                 Calculate your APS to discover matching courses.
@@ -262,7 +261,7 @@ export default function HomeScreen({ navigation }) {
               <APSScoreRow
                 key={university.id}
                 university={university}
-                score={HOME_PREVIEW_VALUES.defaultAps}
+                score={apsScore}
                 colors={colors}
               />
             ))}

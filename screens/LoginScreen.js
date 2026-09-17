@@ -10,11 +10,13 @@ import {
   ScrollView,
   Platform,
   StatusBar,
+  Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useProfile } from "../context/ProfileContext";
 import { auth } from "./firebaseConfig";
+import { signInWithGoogle } from "./googleAuth";
 
 export default function LoginScreen({ navigation }) {
   const { enterGuestMode } = useProfile();
@@ -22,7 +24,29 @@ export default function LoginScreen({ navigation }) {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isGoogleLoading, setIsGoogleLoading] = useState(false);
   const [errors, setErrors] = useState({ email: "", password: "" });
+
+  const handleGoogleLogin = async () => {
+    if (isLoading || isGoogleLoading) return;
+
+    try {
+      setIsGoogleLoading(true);
+      await signInWithGoogle();
+      navigation.reset({ index: 0, routes: [{ name: "Home" }] });
+    } catch (error) {
+      if (error.code !== "auth/popup-closed-by-user") {
+        Alert.alert(
+          "Google sign-in unavailable",
+          error.code === "auth/google-client-id-missing"
+            ? "Add the Google OAuth client ID before using Google sign-in on mobile."
+            : "We could not sign you in with Google. Please try again.",
+        );
+      }
+    } finally {
+      setIsGoogleLoading(false);
+    }
+  };
 
   const handleLogin = async () => {
     if (isLoading) return;
@@ -175,6 +199,18 @@ export default function LoginScreen({ navigation }) {
 
             <View style={styles.divider} />
           </View>
+
+          <TouchableOpacity
+            style={[styles.googleButton, isGoogleLoading && styles.buttonDisabled]}
+            activeOpacity={0.8}
+            onPress={handleGoogleLogin}
+            disabled={isLoading || isGoogleLoading}
+          >
+            <Ionicons name="logo-google" size={19} color="#4285F4" />
+            <Text style={styles.googleButtonText}>
+              {isGoogleLoading ? "Connecting..." : "Continue with Google"}
+            </Text>
+          </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.createButton}
@@ -358,6 +394,25 @@ const styles = StyleSheet.create({
 
     alignItems: "center",
     justifyContent: "center",
+  },
+
+  googleButton: {
+    height: 67,
+    borderRadius: 16,
+    borderWidth: 1.3,
+    borderColor: "#DEDCD7",
+    backgroundColor: "#FFFFFF",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 10,
+    marginBottom: 12,
+  },
+
+  googleButtonText: {
+    fontSize: 17,
+    fontWeight: "700",
+    color: "#242B2A",
   },
 
   createButtonText: {

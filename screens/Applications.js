@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   FlatList,
@@ -14,8 +14,11 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { addDoc, collection, getDocs } from "firebase/firestore";
 
 import { universities } from "../data/universities";
+import { useProfile } from "../context/ProfileContext";
+import { db } from "./firebaseConfig";
 
 const COLORS = {
   primary: "#117C72",
@@ -297,8 +300,46 @@ function ApplicationCard({ application }) {
 }
 
 export default function Applications({ navigation }) {
+  const { firebaseUser } = useProfile();
   const [applications, setApplications] = useState([]);
   const [formVisible, setFormVisible] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    if (!firebaseUser) {
+      setApplications([]);
+      return undefined;
+    }
+
+    getDocs(collection(db, "users", firebaseUser.uid, "applications"))
+      .then((snapshot) => {
+        if (!active) return;
+        setApplications(
+          snapshot.docs
+            .map((applicationDoc) => ({ id: applicationDoc.id, ...applicationDoc.data() }))
+            .sort((a, b) => (b.createdAt?.toMillis?.() || 0) - (a.createdAt?.toMillis?.() || 0)),
+        );
+      })
+      .catch(() => {
+        if (active) setApplications([]);
+      });
+
+    return () => {
+      active = false;
+    };
+  }, [firebaseUser]);
+
+  const saveApplication = async (application) => {
+    if (!firebaseUser) return;
+    const applicationRef = await addDoc(
+      collection(db, "users", firebaseUser.uid, "applications"),
+      { ...application, createdAt: new Date() },
+    );
+    setApplications((current) => [
+      { ...application, id: applicationRef.id },
+      ...current,
+    ]);
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -359,9 +400,7 @@ export default function Applications({ navigation }) {
       <ApplicationForm
         visible={formVisible}
         onClose={() => setFormVisible(false)}
-        onSubmit={(application) =>
-          setApplications((current) => [application, ...current])
-        }
+        onSubmit={saveApplication}
       />
     </SafeAreaView>
   );

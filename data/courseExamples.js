@@ -61,3 +61,13 @@ export const courseExamples = ujCourseData.courses.map((course) => {
     verificationNote: course.verification?.note,
   };
 });
+
+export function getMatchedUniversityCount(apsScore) {
+  const matchedUniversityIds = new Set(
+    courseExamples
+      .filter((course) => course.minimumAps <= apsScore)
+      .map((course) => course.universityId),
+  );
+
+  return matchedUniversityIds.size;
+}

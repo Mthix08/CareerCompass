@@ -169,7 +169,16 @@ export default function EditProfileScreen({ navigation }) {
     setSaving(true);
     // Frontend-only pause; replace with the real profile update request later.
     await new Promise((resolve) => setTimeout(resolve, 450));
-    updateProfile({ ...profile, ...normalizedForm });
+    try {
+      await updateProfile({ ...profile, ...normalizedForm });
+    } catch (error) {
+      Alert.alert(
+        "Could not save profile",
+        "We could not save your changes. Check your connection and try again.",
+      );
+      setSaving(false);
+      return;
+    }
     setAllowNavigation(true);
     setSaving(false);
     requestAnimationFrame(() => navigation.goBack());

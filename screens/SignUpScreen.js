@@ -16,6 +16,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { auth, db } from "./firebaseConfig";
+import { signInWithGoogle } from "./googleAuth";
 
 export default function SignUpScreen({ navigation }) {
   const [name, setName] = useState("");
@@ -27,6 +28,41 @@ export default function SignUpScreen({ navigation }) {
   const [errors, setErrors] = useState({});
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+
+  const handleGoogleSignUp = async () => {
+    if (isLoading || isGoogleLoading) return;
+
+    try {
+      setIsGoogleLoading(true);
+      const credential = await signInWithGoogle();
+      const googleName = credential.user.displayName?.trim() || "Student";
+
+      await setDoc(
+        doc(db, "users", credential.user.uid),
+        {
+          name: googleName,
+          email: credential.user.email,
+          photoURL: credential.user.photoURL || "",
+          createdAt: serverTimestamp(),
+        },
+        { merge: true },
+      );
+
+      navigation?.reset({ index: 0, routes: [{ name: "Home" }] });
+    } catch (error) {
+      if (error.code !== "auth/popup-closed-by-user") {
+        Alert.alert(
+          "Google sign-up unavailable",
+          error.code === "auth/google-client-id-missing"
+            ? "Add the Google OAuth client ID before using Google sign-in on mobile."
+            : "We could not create your account with Google. Please try again.",
+        );
+      }
+    } finally {
+      setIsGoogleLoading(false);
+    }
+  };
 
   const validateForm = () => {
     const nextErrors = {};
@@ -269,13 +305,28 @@ export default function SignUpScreen({ navigation }) {
           )}
 
           <TouchableOpacity
-            style={[styles.signUpButton, isLoading && styles.buttonDisabled]}
+            style={[
+              styles.signUpButton,
+              (isLoading || isGoogleLoading) && styles.buttonDisabled,
+            ]}
             activeOpacity={0.8}
             onPress={handleSignUp}
-            disabled={isLoading}
+            disabled={isLoading || isGoogleLoading}
           >
             <Text style={styles.signUpButtonText}>
               {isLoading ? "Creating account..." : "Create account"}
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.googleButton, isGoogleLoading && styles.buttonDisabled]}
+            activeOpacity={0.8}
+            onPress={handleGoogleSignUp}
+            disabled={isLoading || isGoogleLoading}
+          >
+            <Ionicons name="logo-google" size={19} color="#4285F4" />
+            <Text style={styles.googleButtonText}>
+              {isGoogleLoading ? "Connecting..." : "Continue with Google"}
             </Text>
           </TouchableOpacity>
 
@@ -394,6 +445,25 @@ const styles = StyleSheet.create({
   },
   buttonDisabled: {
     opacity: 0.65,
+  },
+
+  googleButton: {
+    height: 67,
+    borderRadius: 16,
+    borderWidth: 1.3,
+    borderColor: "#DEDCD7",
+    backgroundColor: "#FFFFFF",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 10,
+    marginTop: 12,
+  },
+
+  googleButtonText: {
+    fontSize: 17,
+    fontWeight: "700",
+    color: "#242B2A",
   },
 
   bottomTextContainer: {

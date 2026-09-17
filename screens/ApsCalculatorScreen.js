@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
@@ -15,6 +15,9 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+
+import { useProfile } from "../context/ProfileContext";
+import { getMatchedUniversityCount } from "../data/courseExamples";
 
 const COLORS = {
   primary: "#117C72",
@@ -325,6 +328,7 @@ function ApsResultModal({ result, onClose }) {
 }
 
 export default function ApsCalculatorScreen({ navigation }) {
+  const { profile, saveApsResult } = useProfile();
   const [selectedPeriod, setSelectedPeriod] = useState(PERIODS[0]);
   const [marksByPeriod, setMarksByPeriod] = useState(() =>
     Object.fromEntries(PERIODS.map((period) => [period, []])),
@@ -332,7 +336,21 @@ export default function ApsCalculatorScreen({ navigation }) {
   const [savedPeriods, setSavedPeriods] = useState([]);
   const [pickerVisible, setPickerVisible] = useState(false);
   const [apsResult, setApsResult] = useState(null);
+  const [hasLoadedSavedMarks, setHasLoadedSavedMarks] = useState(false);
   const currentMarks = marksByPeriod[selectedPeriod];
+
+  useEffect(() => {
+    if (hasLoadedSavedMarks) return;
+    const savedResults = profile?.apsResults || {};
+    const restoredMarks = Object.fromEntries(
+      PERIODS.map((period) => [period, savedResults[period]?.subjects || []]),
+    );
+    setMarksByPeriod(restoredMarks);
+    setSavedPeriods(
+      PERIODS.filter((period) => Boolean(savedResults[period])),
+    );
+    setHasLoadedSavedMarks(true);
+  }, [hasLoadedSavedMarks, profile?.apsResults]);
 
   const addSubject = (subject) => {
     setMarksByPeriod((current) => ({
@@ -368,7 +386,7 @@ export default function ApsCalculatorScreen({ navigation }) {
     );
   };
 
-  const saveMarks = () => {
+  const saveMarks = async () => {
     if (currentMarks.length === 0) {
       Alert.alert(
         "Add subjects",
@@ -394,11 +412,26 @@ export default function ApsCalculatorScreen({ navigation }) {
       (total, { mark }) => total + getAchievementLevel(mark),
       0,
     );
-    setApsResult({
-      totalAps,
-      subjectCount: eligibleMarks.length,
-      period: selectedPeriod,
-    });
+    const matchedUniversities = getMatchedUniversityCount(totalAps);
+
+    try {
+      await saveApsResult({
+        period: selectedPeriod,
+        subjects: currentMarks,
+        totalAps,
+        matchedUniversities,
+      });
+      setApsResult({
+        totalAps,
+        subjectCount: eligibleMarks.length,
+        period: selectedPeriod,
+      });
+    } catch (error) {
+      Alert.alert(
+        "Could not save APS",
+        "Your APS was calculated, but we could not save it. Please try again.",
+      );
+    }
   };
 
   const isSaved = savedPeriods.includes(selectedPeriod);

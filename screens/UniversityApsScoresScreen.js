@@ -11,6 +11,8 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { useProfile } from "../context/ProfileContext";
+import { courseExamples } from "../data/courseExamples";
 import { universities } from "../data/universities";
 
 const COLORS = {
@@ -24,12 +26,15 @@ const COLORS = {
   border: "#DDE4ED",
 };
 
-function UniversityScoreCard({ university, onPress }) {
+function UniversityScoreCard({ university, onPress, score }) {
+  const matchingCourses = courseExamples.filter(
+    (course) => course.universityId === university.id && course.minimumAps <= score,
+  ).length;
   return (
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
-      accessibilityLabel={`${university.name}, 0 APS, 0 matching courses`}
+      accessibilityLabel={`${university.name}, ${score} APS, ${matchingCourses} matching courses`}
       style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}
     >
       <View style={styles.logoWrap}>
@@ -48,10 +53,10 @@ function UniversityScoreCard({ university, onPress }) {
         <Text style={styles.universityName} numberOfLines={2}>
           {university.name}
         </Text>
-        <Text style={styles.courseCount}>0 matching courses</Text>
+        <Text style={styles.courseCount}>{matchingCourses} matching courses</Text>
       </View>
       <View style={styles.scoreWrap}>
-        <Text style={styles.score}>0</Text>
+        <Text style={styles.score}>{score}</Text>
         <Text style={styles.scoreLabel}>APS</Text>
       </View>
     </Pressable>
@@ -59,6 +64,8 @@ function UniversityScoreCard({ university, onPress }) {
 }
 
 export default function UniversityApsScoresScreen({ navigation }) {
+  const { profile } = useProfile();
+  const score = profile?.apsScore || 0;
   const sortedUniversities = useMemo(
     () => [...universities].sort((a, b) => a.name.localeCompare(b.name)),
     [],
@@ -78,9 +85,9 @@ export default function UniversityApsScoresScreen({ navigation }) {
           <Ionicons name="arrow-back" size={25} color="#FFFFFF" />
         </Pressable>
         <Text style={styles.headerTitle}>{sortedUniversities.length} universities</Text>
-        <Text style={styles.headerSubtitle}>
-          APS and course matching will appear here
-        </Text>
+          <Text style={styles.headerSubtitle}>
+            Your saved APS and available course matches
+          </Text>
       </View>
 
       <FlatList
@@ -92,10 +99,10 @@ export default function UniversityApsScoresScreen({ navigation }) {
           <View style={styles.listHeadingRow}>
             <View>
               <Text style={styles.listTitle}>University APS Scores</Text>
-              <Text style={styles.listSubtitle}>General preview values</Text>
+              <Text style={styles.listSubtitle}>Based on your saved APS score</Text>
             </View>
             <View style={styles.previewBadge}>
-              <Text style={styles.previewBadgeText}>COMING SOON</Text>
+              <Text style={styles.previewBadgeText}>APS {score}</Text>
             </View>
           </View>
         }
@@ -103,6 +110,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
         renderItem={({ item }) => (
           <UniversityScoreCard
             university={item}
+            score={score}
             onPress={() =>
               navigation.navigate("UniversityDetails", { university: item })
             }
