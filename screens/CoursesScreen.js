@@ -50,7 +50,7 @@ function CourseCard({ course, onPress }) {
         <Text style={styles.courseName}>{course.name}</Text>
         <View style={styles.metaRow}>
           <View style={styles.apsBadge}>
-            <Text style={styles.apsBadgeText}>APS {course.minimumAps}+</Text>
+            <Text style={styles.apsBadgeText}>{course.minimumAps == null ? "Check requirements" : `APS ${course.minimumAps}+`}</Text>
           </View>
           <Text style={styles.typeText}>{course.qualificationType}</Text>
         </View>
@@ -191,8 +191,8 @@ export default function CoursesScreen({ navigation, route }) {
 
     return courseExamples.filter((course) => {
       const matchesSearch = !search || `${course.name} ${course.universityName} ${course.universityShortName}`.toLowerCase().includes(search);
-      const matchesMinimum = minimum === null || course.minimumAps >= minimum;
-      const matchesMaximum = maximum === null || course.minimumAps <= maximum;
+      const matchesMinimum = minimum === null || (course.minimumAps !== null && course.minimumAps >= minimum);
+      const matchesMaximum = maximum === null || (course.minimumAps !== null && course.minimumAps <= maximum);
       const matchesType = !filters.type || course.qualificationType === filters.type;
       const matchesUniversity = !filters.universityId || course.universityId === filters.universityId;
       return matchesSearch && matchesMinimum && matchesMaximum && matchesType && matchesUniversity;

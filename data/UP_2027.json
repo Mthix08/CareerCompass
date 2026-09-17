@@ -1,0 +1,5077 @@
+{
+  "university": {
+    "name": "University of Pretoria",
+    "abbreviation": "UP",
+    "prospectus_year": 2027,
+    "country": "South Africa"
+  },
+  "schema_version": "1.0.0",
+  "generated_from": "UP Prospectus.pdf",
+  "important_notice": "This dataset is an extraction aid, not an admission decision. Requirements can change and meeting minimum requirements does not guarantee selection.",
+  "course_count": 110,
+  "courses": [
+    {
+      "name": "Bachelor of Commerce specialising in Law",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce specialising in Law, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "First step towards becoming attorneys",
+        "legal advisors",
+        "advocates",
+        "prosecutors",
+        "presiding officers (magistrates",
+        "judges)",
+        "academics in the legal field"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Statistics and Data Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce specialising in Statistics and Data Science, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Data scientists",
+        "statistical analysts in several industries",
+        "researchers",
+        "consultants",
+        "lecturers"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Information Systems",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce specialising in Information Systems, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Managers in the information technology environment",
+        "computer software",
+        "hardware support services",
+        "computer systems analysts",
+        "financial information systems analysts",
+        "business analysts",
+        "information facilitators",
+        "IT training officers",
+        "systems developers",
+        "business systems analysts"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Agribusiness Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce specialising in Agribusiness Management, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Opportunities exist in banking",
+        "finance",
+        "insurance",
+        "policy design",
+        "implementation",
+        "research",
+        "consultation",
+        "food processing",
+        "manufacturing",
+        "commodity trading on global",
+        "local stock markets",
+        "logistics"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Business Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce specialising in Business Management, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Opportunities exist in the areas of administration",
+        "finance",
+        "marketing",
+        "human resources management",
+        "including employment as teachers",
+        "lecturers",
+        "general managers",
+        "management consultants"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Supply Chain Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce specialising in Supply Chain Management, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "production",
+        "operations management",
+        "warehousing",
+        "transport management",
+        "supply chain strategy"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Marketing Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce specialising in Marketing Management, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Product management",
+        "customer service management",
+        "customer relationship management",
+        "strategic marketing",
+        "sales management",
+        "brand management",
+        "advertising management",
+        "media planning",
+        "marketing research management",
+        "promotions management"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Human Resource Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce specialising in Human Resource Management, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Human resources practitioners",
+        "human resources consultants",
+        "mediators",
+        "labour relations specialists",
+        "human resources managers",
+        "personnel managers",
+        "training officers",
+        "liaison officers",
+        "psychometrists",
+        "industrial psychologists. As human resources practitioners",
+        "policies",
+        "human resource planning"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Administration specialising in Public Administration and International Relations",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics_or_mathematical_literacy": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "Mathematics 3 or Mathematical Literacy 4"
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Administration specialising in Public Administration and International Relations, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Diplomats",
+        "political analysts",
+        "managers in the public sector",
+        "local government",
+        "the private sector",
+        "non-governmental organisations",
+        "international organisations",
+        "planning",
+        "general administrative divisions"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Accounting Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce in Accounting Sciences, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "First step towards qualifying as chartered accountants",
+        "external auditors",
+        "government auditors",
+        "taxation professionals",
+        "advisors",
+        "financial directors",
+        "managers"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Investment Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce specialising in Investment Management, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Portfolio/fund managers",
+        "investment analysts",
+        "risk managers/analysts",
+        "quantitative analysts",
+        "financial advisors/planners",
+        "wealth managers",
+        "investment strategists"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Financial Management Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce specialising in Financial Management Sciences, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Careers with a focus on",
+        "Business accounting: Financial reporting specialists",
+        "Financial management: Management accountants",
+        "management consultants",
+        "financial advisors",
+        "cost accountants",
+        "financial managers",
+        "Taxation: Tax advisors",
+        "tax auditors in public practice",
+        "tax policy designers",
+        "tax professionals",
+        "tax compliance managers"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Econometrics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce specialising in Econometrics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Econometricians are employed by the government",
+        "the central bank",
+        "private",
+        "commercial banks",
+        "leading stockbrokers",
+        "consultancies",
+        "both locally",
+        "internationally. Positions include analysts",
+        "consultants",
+        "researchers",
+        "traders",
+        "brokers"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Economics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce specialising in Economics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Economists may specialise in banking",
+        "public finance",
+        "international trade",
+        "investment",
+        "economic development. They are employed by the government",
+        "the central bank",
+        "private",
+        "commercial banks",
+        "stock brokerage firms",
+        "consultancies",
+        "both locally",
+        "internationally. Positions include analysts"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Business administrator",
+        "Management professional",
+        "Financial-services professional",
+        "Entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Commerce, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Business administrator",
+        "Management professional",
+        "Financial-services professional",
+        "Entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Early Childhood Care and Education",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Education in Early Childhood Care and Education, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Teachers",
+        "training officials at pre-primary",
+        "primary schools"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Foundation Phase Teaching [Grade R to Grade 3]",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Education in Foundation Phase Teaching [Grade R to Grade 3], preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Teachers",
+        "training officials at pre-primary",
+        "primary schools"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Intermediate Phase Teaching [Grades 4 to 6]",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Education in Intermediate Phase Teaching [Grades 4 to 6], preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Teachers",
+        "training officials at primary schools"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Senior Phase and Further Education and Training Teaching [Grades 7 to 12] Additional subject requirements for elective modules in Physical Sciences or Life Sciences are Physical Sciences, passed with an achievement level of at least 5 (60%–69%), and Mathematics passed with an achievement level of at least 5 (60%–69%) in the final NSC/IEB examination.",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Education in Senior Phase and Further Education and Training Teaching [Grades 7 to 12] Additional subject requirements for elective modules in Physical Sciences or Life Sciences are Physical Sciences, passed with an achievement level of at least 5 (60%–69%), and Mathematics passed with an achievement level of at least 5 (60%–69%) in the final NSC/IEB examination., preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Teachers",
+        "training officials at primary",
+        "secondary schools"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Higher Certificate in Sports Sciences",
+      "qualification_code": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [],
+        "display": "20"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Sports Sciences, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Sports coaching",
+        "roles in the sports",
+        "exercise industry"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Higher Certificate in Sports Sciences",
+      "qualification_code": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 2,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [],
+        "display": "20"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Sports Sciences, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "coaches across various sporting disciplines",
+        "in both the private",
+        "public sectors. Career opportunities may include roles in community sports clubs",
+        "sports coaching environments"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Electronic Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Engineering in Electronic Engineering, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Electronic engineers work across telecommunications",
+        "medical technology (MRI",
+        "X-rays",
+        "ECGs)",
+        "integrated circuit design",
+        "bioengineering",
+        "military systems",
+        "transport technology (GPS",
+        "e-tags",
+        "railway signalling)",
+        "security systems",
+        "banking"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Industrial Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Engineering in Industrial Engineering, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Industrial engineers design",
+        "manage production",
+        "service delivery systems. They optimise facility layout",
+        "manufacturing",
+        "inventory control",
+        "supply chain management",
+        "quality management",
+        "cost control",
+        "maintenance",
+        "information systems",
+        "human resources"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Mechanical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Engineering in Mechanical Engineering, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Mechanical",
+        "aeronautical engineers work with power-generating machines including vehicles",
+        "aircraft",
+        "engines",
+        "turbines",
+        "nuclear reactors",
+        "biomedical systems. Specialisations include product design",
+        "manufacturing",
+        "marine",
+        "naval architecture",
+        "biomedical engineering",
+        "air-conditioning"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Metallurgical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Engineering in Metallurgical Engineering, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Metallurgical engineers extract metals from ores",
+        "optimise metallic components",
+        "products. They work in minerals processing",
+        "extractive metallurgy",
+        "materials engineering",
+        "advanced manufacturing (including laser-assisted additive manufacturing",
+        "welding)",
+        "failure analysis"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Mining Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Engineering in Mining Engineering, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Mining engineers work in mine management",
+        "technical operations (ventilation",
+        "rock mechanics)",
+        "financial evaluation",
+        "mine design",
+        "mining contracting (tunnelling",
+        "shaft sinking)",
+        "mining research",
+        "equipment design",
+        "manufacture",
+        "mining administration at national",
+        "provincial"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 5,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "33"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 65
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 65
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 65
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Engineering, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering project professional",
+        "Technical consultant",
+        "Engineering manager"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Chemical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Engineering in Chemical Engineering, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Chemical engineers work across petroleum",
+        "food processing",
+        "minerals",
+        "power generation",
+        "paper",
+        "pulp",
+        "water",
+        "effluent treatment",
+        "environmental engineering",
+        "air pollution control. Roles include research",
+        "development",
+        "plant design"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Civil Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Engineering in Civil Engineering, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Civil engineers design",
+        "build",
+        "maintain constructions such as tower blocks",
+        "skyscrapers",
+        "dams",
+        "canals",
+        "pipelines",
+        "roads",
+        "bridges",
+        "tunnels",
+        "railways",
+        "airports"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Computer Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Engineering in Computer Engineering, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Computer engineers work across computer systems",
+        "software engineering",
+        "networks",
+        "embedded software",
+        "electronics",
+        "automation",
+        "data security",
+        "e-commerce",
+        "pattern recognition",
+        "artificial intelligence. They specialise in integrating hardware",
+        "software",
+        "communications to optimise system performance"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Electrical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Engineering in Electrical Engineering, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Electrical engineers work in power generation",
+        "storage",
+        "transmission",
+        "distribution",
+        "renewable energy. They design",
+        "manage electrical installations for municipalities",
+        "buildings",
+        "factories",
+        "mines",
+        "rail transport",
+        "water pumping",
+        "electrical grids"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Architecture",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Architecture, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "a candidate architect"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Construction Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "or Accounting"
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Construction Management, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "project managers",
+        "with opportunities in property development",
+        "portfolio management",
+        "commercial marketing",
+        "corporate management positions"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Real Estate",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "or Accounting"
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Real Estate, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "finance",
+        "facilities management",
+        "employees in private",
+        "government",
+        "semi-government sectors"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Quantity Surveying",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "or Accounting"
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Quantity Surveying, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Quantity surveyors provide financial",
+        "government",
+        "semi-government sectors",
+        "as well as property",
+        "banking",
+        "insurance",
+        "mining",
+        "manufacturing industries"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Town and Regional Planning",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": false,
+          "level": null,
+          "percentage": null
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Town and Regional Planning, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "regional planners",
+        "development practitioners",
+        "urban managers",
+        "real estate analysts. They work as private consultants",
+        "with government",
+        "research agencies (CSIR",
+        "HSRC)",
+        "NGOs",
+        "financial institutions",
+        "regional planners with the South African Council for Planners"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Information Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": false,
+          "level": null,
+          "percentage": null
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Information Science, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "knowledge managers",
+        "information",
+        "e-commerce specialists",
+        "consultants on information products",
+        "systems",
+        "information brokers (infopreneurs)",
+        "system specialists who develop information systems"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Information Science specialising in Publishing",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": false,
+          "level": null,
+          "percentage": null
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Information Science specialising in Publishing, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Entry-level opportunities include assisting publishing house managers",
+        "commissioning editors",
+        "production",
+        "marketing managers. Roles encompass market research",
+        "copyright negotiations",
+        "copy-editing",
+        "proofreading",
+        "marketing",
+        "promotion",
+        "distribution"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Information Science specialising in Multimedia",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Information Science specialising in Multimedia, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "web designers",
+        "animation specialists",
+        "video editors",
+        "electronic artists. They work for content producers across paper publications",
+        "television",
+        "radio",
+        "phone technologies",
+        "the web",
+        "as coders for programming companies",
+        "specialising in digital music",
+        "video programming",
+        "graphics"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Information Technology in Information Systems",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Information Technology in Information Systems, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Data scientists",
+        "IT auditors",
+        "IT entrepreneurs",
+        "IT tax specialists",
+        "e-business consultants",
+        "business analysts",
+        "project managers",
+        "CIOs",
+        "CTOs",
+        "knowledge managers"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Computer Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Computer Science, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "systems analysts",
+        "systems architects",
+        "consultants",
+        "database administrators",
+        "network analysts",
+        "researchers"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Information Technology in Information and Knowledge Systems",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Information Technology in Information and Knowledge Systems, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "genetics",
+        "geographical information systems",
+        "enterprises",
+        "law",
+        "music",
+        "software development to differentiate themselves in the application environment"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Dental Surgery",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 5,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Dental Surgery, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Dentists",
+        "specialists",
+        "academics",
+        "researchers"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Oral Hygiene",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Oral Hygiene, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Oral hygienists"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Dietetics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Dietetics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Dieticians",
+        "academics",
+        "researchers"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Nursing Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "Life Sciences (not Physical Sciences)"
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Nursing Science, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "General nursing",
+        "midwifery"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Occupational Therapy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Occupational Therapy, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Occupational therapists",
+        "academics",
+        "researchers"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Physiotherapy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Physiotherapy, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Physiotherapists",
+        "academics",
+        "researchers"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Radiography in Diagnostics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Radiography in Diagnostics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Radiographers",
+        "academics",
+        "researchers"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Clinical Medical Practice",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences_or_life_sciences": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "Physical Sciences or Life Sciences"
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Clinical Medical Practice, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Clinical associates",
+        "academics",
+        "researchers"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Medicine and Surgery",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 6,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Medicine and Surgery, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "General medical practitioners",
+        "specialists (after postgraduate training)"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Sports Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences_or_life_sciences": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "Physical Sciences or Life Sciences"
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Sports Science, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Sports scientists",
+        "biokineticists",
+        "personal trainers",
+        "strength",
+        "conditioning specialists",
+        "fitness instructors",
+        "exercise scientists",
+        "gym managers/owners",
+        "academics",
+        "Biokinetics to qualify as sports scientists",
+        "biokineticists respectively"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Information Design",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Arts in Information Design, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "graphic designers",
+        "illustrators",
+        "art directors",
+        "typographers for advertising agencies",
+        "publishing industries",
+        "broadcasting studios",
+        "corporate design departments",
+        "as freelance designers",
+        "studio owners"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Arts, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Depending on the choice of disciplines majoring in",
+        "the Bachelor of Arts lays the foundation for further studies",
+        "work in the following fields: Community engagement",
+        "development",
+        "counselling",
+        "cultural studies",
+        "diplomacy",
+        "politics",
+        "education",
+        "governance",
+        "heritage conservation",
+        "journalism"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Work",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Social Work, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Social worker"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts specialising in Law",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Arts specialising in Law, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Legal professional after completing the required LLB",
+        "Policy professional",
+        "Legal researcher"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts specialising in Languages",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Arts specialising in Languages, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "media",
+        "copywriting",
+        "editing",
+        "language teaching",
+        "lexicography",
+        "technical writing",
+        "public relations",
+        "translation",
+        "publishing",
+        "diplomacy",
+        "a Postgraduate Certificate in Education leads to teaching careers"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science specialising in Industrial Sociology and Labour Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Social Science specialising in Industrial Sociology and Labour Studies, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Labour relations practice",
+        "arbitration",
+        "conflict management",
+        "resolution",
+        "labour administration",
+        "research",
+        "gender issues",
+        "dismissals",
+        "work for government institutions",
+        "parastatals",
+        "private sector",
+        "trade union organisations"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science in Heritage and Cultural Sciences Option: Heritage and Cultural Tourism",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Social Science in Heritage and Cultural Sciences Option: Heritage and Cultural Tourism, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Travel",
+        "tourism",
+        "tourist guides",
+        "management",
+        "hospitality",
+        "marketing",
+        "journalism",
+        "government",
+        "education and/or work in the broader museum",
+        "heritage fields on a local",
+        "national",
+        "international level"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Speech-Language Pathology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Arts in Speech-Language Pathology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Work in education",
+        "special education",
+        "hospitals",
+        "clinics",
+        "rural communities",
+        "private practices",
+        "government",
+        "military",
+        "academic institutions (teaching",
+        "research)"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Audiology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Arts in Audiology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Diagnostic audiometry",
+        "rehabilitative audiology",
+        "work in education",
+        "special education",
+        "private",
+        "public hospitals",
+        "clinics",
+        "private practice",
+        "military",
+        "higher education (teaching",
+        "research)"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Music",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "music": {
+          "accepted": true,
+          "level": 4,
+          "percentage": null,
+          "raw_note": "4 (50-59%)or Grade VII Practical and Grade V Theory (Unisa/Royal Schools/Trinity) or a comparable standard and Practical audition and theoretical test passed with 60%"
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Music, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Music teachers",
+        "music technicians",
+        "solo and/or chamber music performers",
+        "orchestral musicians",
+        "composers"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Music",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 5,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "music": {
+          "accepted": true,
+          "level": 4,
+          "percentage": null,
+          "raw_note": "4 (50-59%) or Grade V Practical and Grade III Theory (Unisa/ Royal Schools/ Trinity) or a comparable standard and Practical audition and theoretical test passed with 50%"
+        },
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Music, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Music teachers",
+        "music technicians",
+        "solo and/or chamber music performers",
+        "orchestral musicians",
+        "composers"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Drama",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Drama, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "physical theatre artists",
+        "theatre critics",
+        "radio",
+        "television presenters",
+        "directors",
+        "educational theatre practitioners",
+        "light",
+        "sound operators",
+        "voice artists",
+        "stage managers",
+        "performing arts administrators",
+        "documentary film-makers"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Drama",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Drama, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "physical theatre artists",
+        "theatre critics",
+        "radio",
+        "television presenters",
+        "directors",
+        "educational theatre practitioners",
+        "light",
+        "sound operators",
+        "voice artists",
+        "stage managers",
+        "performing arts administrators",
+        "documentary film-makers"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts specialising in Philosophy, Politics and Economics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Arts specialising in Philosophy, Politics and Economics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Economic",
+        "political policy-making",
+        "journalism",
+        "diplomatic service"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Political Science specialising in International Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Political Science specialising in International Studies, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "International relations",
+        "diplomatic service",
+        "political consultation",
+        "conflict resolution",
+        "policy analysis",
+        "strategic intelligence",
+        "governance",
+        "international political economics",
+        "risk analysis"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Political Science specialising in Political Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Political Science specialising in Political Studies, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Policy analysis",
+        "consultation",
+        "political analysis",
+        "communication",
+        "governance",
+        "conflict resolution",
+        "strategic intelligence",
+        "political development",
+        "mobilisation",
+        "risk analysis"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Fine Arts",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Arts in Fine Arts, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Gallery managers",
+        "art facilitators",
+        "art consultants/advisors",
+        "art educators",
+        "artists in the fine arts",
+        "artists in new media",
+        "artists in applied arts"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Fine Arts",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 5,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Arts in Fine Arts, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Gallery managers",
+        "art facilitators",
+        "art consultants/advisors",
+        "art educators",
+        "artists in the fine arts",
+        "artists in new media",
+        "artists in applied arts"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts specialising in Visual Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Arts specialising in Visual Studies, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Art",
+        "film critics",
+        "visual culture specialists",
+        "culture educators",
+        "academics",
+        "art historians",
+        "curators",
+        "visual analysts",
+        "visual consultants",
+        "media",
+        "communication analysts",
+        "social media coordinators"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Laws",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Laws, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Attorney",
+        "Advocate",
+        "Legal adviser",
+        "Prosecutor",
+        "Legal researcher"
+      ],
+      "source": {
+        "prospectus_page": 14,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Theology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Theology and Religion",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Theology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Ministers",
+        "pastors",
+        "priests",
+        "preachers in certain denominations",
+        "missionaries"
+      ],
+      "source": {
+        "prospectus_page": 14,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Divinity",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Theology and Religion",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Divinity, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Ministers",
+        "pastors",
+        "priests",
+        "preachers in certain denominations",
+        "missionaries"
+      ],
+      "source": {
+        "prospectus_page": 14,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Diploma in Theology",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Theology and Religion",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Theology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Ministers",
+        "pastors",
+        "priests",
+        "lay preachers in certain denominations",
+        "missionaries",
+        "but without the required university admission"
+      ],
+      "source": {
+        "prospectus_page": 14,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture in Applied Plant and Soil Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Agriculture in Applied Plant and Soil Sciences, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "lecturers at schools",
+        "academic institutions",
+        "as well as researchers",
+        "managers at various public",
+        "private institutions",
+        "Public sector: Roles in national",
+        "provincial departments",
+        "research councils",
+        "municipalities",
+        "SANParks",
+        "farming/food agencies",
+        "Private sector: Work in seed"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture in Plant Pathology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Agriculture in Plant Pathology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Education",
+        "training: Work at universities",
+        "colleges",
+        "schools",
+        "Plant pathologists: Researchers to practitioners working in laboratories",
+        "on commercial farms (including fieldwork)",
+        "in the food trade industry",
+        "Research",
+        "management: Work at research institutes",
+        "government departments",
+        "seed",
+        "fertiliser"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Food Management Option: Culinary Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Food Management Option: Culinary Science, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "culinologists",
+        "sensory analysts",
+        "food researchers",
+        "food product developers",
+        "food safety",
+        "quality assurance managers",
+        "food service managers"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Food Management Option: Nutritional Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Food Management Option: Nutritional Science, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Opportunities exist in food",
+        "related industries such as pharmaceutical",
+        "food manufacturing companies",
+        "government departments",
+        "international organisations such as the United Nations Food",
+        "Agricultural Organisation (FAO)",
+        "the World Health Organisation (WHO)",
+        "NGOs",
+        "research organisations",
+        "as project managers",
+        "advisors in the food",
+        "health"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Food Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Food Science, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Food risk investigators",
+        "quality",
+        "safety assurance managers",
+        "food chemists",
+        "food microbiologists",
+        "biotechnologists",
+        "packaging",
+        "shelf-life specialists",
+        "safety auditors",
+        "product",
+        "process development managers",
+        "technical sales"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture in Agricultural Economics in Agribusiness Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Agriculture in Agricultural Economics in Agribusiness Management, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "support sustainable resource use",
+        "advise the agricultural sector on finances",
+        "risk",
+        "clothing supply by working across supply chains",
+        "training farmers",
+        "trading commodities",
+        "commercial banks",
+        "multinational agribusiness companies",
+        "farmer cooperatives",
+        "commodity trading houses",
+        "food processors",
+        "manufacturers"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture in Animal Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Agriculture in Animal Science, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "product quality",
+        "from conception to consumption",
+        "is based on the latest research",
+        "the needs of both animals",
+        "people. Career opportunities include roles in research",
+        "development",
+        "commercial farming",
+        "the public sector",
+        "the livestock",
+        "feed industries",
+        "nutrition",
+        "breeding consulting"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Biochemistry",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Biochemistry, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "pharmaceutical",
+        "fine chemical",
+        "waste-processing industries",
+        "as well as in research councils",
+        "e.g",
+        "the South African Research Council (SAMRC)",
+        "the Agricultural Research Council (ARC)",
+        "the Cancer Association of South Africa (CANSA)",
+        "the Water Research Commission (WRC)",
+        "academic institutions",
+        "forensic",
+        "pathology laboratories. Career options include researcher"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Biotechnology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Biotechnology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "bio- entrepreneurs using medical",
+        "animal",
+        "plant",
+        "microbe-based technologies to develop products",
+        "pharmaceutical sales",
+        "marketing",
+        "project management",
+        "computer programming (natural computation)",
+        "science journalism"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Ecology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Ecology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "international conservation organisations",
+        "such as the World Wide Fund for Nature",
+        "the International Union for Conservation of Nature",
+        "companies using natural resources (e.g",
+        "agriculture",
+        "mining)",
+        "environmental consultancies",
+        "education initiatives",
+        "academic institutions",
+        "research"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Entomology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Entomology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "researchers in agriculture",
+        "nature reserves",
+        "environmental consultancies",
+        "conservation planning agencies. Opportunities also exist in medical",
+        "veterinary research",
+        "education",
+        "museums",
+        "invasive species management",
+        "quarantine",
+        "inspection services",
+        "biotechnology",
+        "animal feed"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Genetics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Genetics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "medical",
+        "clinical geneticists",
+        "cytogeneticists",
+        "biotechnologists",
+        "agricultural scientists",
+        "molecular ecologists",
+        "forensic scientists",
+        "genetic counsellors",
+        "bioinformaticists",
+        "computational analysts",
+        "veterinary scientists",
+        "teachers"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Human Genetics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Human Genetics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "medical",
+        "clinical geneticists",
+        "cytogeneticists",
+        "biotechnologists",
+        "agricultural scientists",
+        "molecular ecologists",
+        "forensic scientists",
+        "genetic counsellors",
+        "bioinformaticists",
+        "computational analysts",
+        "veterinary scientists",
+        "teachers"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Human Physiology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Human Physiology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "government laboratories",
+        "pharmaceutical companies",
+        "universities",
+        "veterinary",
+        "industrial institutions. Other opportunities include teaching",
+        "sports physiology",
+        "biostatistics",
+        "bioengineering",
+        "biotechnology",
+        "microbiology",
+        "virology",
+        "industrial hygiene"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Human Physiology, Genetics and Psychology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Human Physiology, Genetics and Psychology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "government laboratories",
+        "pharmaceutical companies",
+        "universities",
+        "veterinary",
+        "industrial institutions. Other opportunities include teaching",
+        "sports physiology",
+        "biostatistics",
+        "bioengineering",
+        "biotechnology",
+        "microbiology",
+        "virology",
+        "industrial hygiene"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Medical Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Medical Sciences, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "work in academia",
+        "forensic science",
+        "the health science industry. Other opportunities include sports sciences",
+        "virology",
+        "chemical pathology",
+        "immunology",
+        "health administration",
+        "ergonomics. Technical roles are available in university anatomy",
+        "physiology departments. Postgraduate studies are recommended",
+        "with honours",
+        "master’s",
+        "clinical anatomy"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Microbiology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Microbiology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "research roles across the food",
+        "dairy",
+        "beer",
+        "wine",
+        "baker’s yeast",
+        "fermentation industries",
+        "veterinary microbiology",
+        "microbial genomics",
+        "ecology",
+        "in research",
+        "teaching at organisations such as the Council for Scientific",
+        "Industrial Research"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Plant Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Plant Science, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "pharmaceutical firms",
+        "SANParks",
+        "private ecological companies",
+        "research institutions such as the CSIR",
+        "ARC",
+        "SANBI"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Zoology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Zoology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "private nature conservancies",
+        "environmental consultancies",
+        "conservation agencies",
+        "medical",
+        "veterinary research",
+        "biotechnology",
+        "education",
+        "data management",
+        "the corporate sector. Careers often combine problem-solving",
+        "analytical work",
+        "fieldwork"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Consumer Science specialising in Clothing Retail Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Consumer Science specialising in Clothing Retail Management, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "clothing buyers",
+        "planners",
+        "fashion designers",
+        "fashion marketers",
+        "fashion product developers",
+        "quality controllers",
+        "assurance managers",
+        "store managers",
+        "image consultants",
+        "textile technologists",
+        "visual merchandisers",
+        "pattern technologists"
+      ],
+      "source": {
+        "prospectus_page": 17,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Consumer Science specialising in Food Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Consumer Science specialising in Food Management, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Key retailers",
+        "industry stakeholders such as in2food",
+        "RCL Foods",
+        "UCOOK",
+        "DotActiv",
+        "research companies",
+        "top hotels",
+        "culinary businesses",
+        "sales people",
+        "store managers",
+        "food stylists",
+        "quality assurance officers"
+      ],
+      "source": {
+        "prospectus_page": 17,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Mathematical Statistics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Mathematical Statistics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "computational",
+        "interdisciplinary fields. Career opportunities include data scientist",
+        "data analyst",
+        "financial analyst",
+        "financial risk analyst",
+        "geospatial information analyst",
+        "biostatistician",
+        "traffic prediction",
+        "fraud detection",
+        "financial forecasting",
+        "retail customer analysis",
+        "climate change"
+      ],
+      "source": {
+        "prospectus_page": 17,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Chemistry",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Chemistry, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "research",
+        "academic institutions",
+        "in both private",
+        "journalism",
+        "environmental protection",
+        "food",
+        "beverages",
+        "energy",
+        "water",
+        "health",
+        "sports",
+        "pharmaceuticals"
+      ],
+      "source": {
+        "prospectus_page": 17,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Environmental and Engineering Geology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Environmental and Engineering Geology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Engineering",
+        "environmental geologists study the interaction between human activities",
+        "the geological environment",
+        "such as the pollution of soil",
+        "groundwater. They investigate geological structures as well as soil",
+        "rock properties at construction sites",
+        "for example",
+        "dams",
+        "tunnels",
+        "mines",
+        "to provide valuable information before construction. They also locate",
+        "monitor the responsible exploitation of that water"
+      ],
+      "source": {
+        "prospectus_page": 17,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Geography Option: Geography and Environmental Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Geography Option: Geography and Environmental Science, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "research",
+        "urban",
+        "regional development",
+        "environmental health",
+        "biodiversity conservation. Careers include consultancy in environmental analysis",
+        "management",
+        "law",
+        "standards",
+        "engineering",
+        "real estate",
+        "tourism",
+        "conservation)"
+      ],
+      "source": {
+        "prospectus_page": 17,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Actuarial and Financial Mathematics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 7,
+          "percentage": 80
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Actuarial and Financial Mathematics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "insurance companies",
+        "investment institutions",
+        "brokerage firms. Careers include actuaries",
+        "actuarial technicians",
+        "who manage pensions",
+        "medical scheme benefits",
+        "investments",
+        "insurance reserves. Financial engineers focus on asset management",
+        "trading bonds",
+        "derivatives",
+        "designing financial products",
+        "managing credit"
+      ],
+      "source": {
+        "prospectus_page": 17,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Mathematics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Mathematics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Mathematics",
+        "education",
+        "government",
+        "medical institutions",
+        "engineering",
+        "finance",
+        "the computer industry. Their training in abstract",
+        "analytical",
+        "computational thinking enables them to adapt to changing professional environments",
+        "evaluate",
+        "develop problem-solving techniques to address natural",
+        "technological"
+      ],
+      "source": {
+        "prospectus_page": 17,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Applied Mathematics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Applied Mathematics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Mathematics",
+        "education",
+        "government",
+        "medical institutions",
+        "engineering",
+        "finance",
+        "the computer industry. Their training in abstract",
+        "analytical",
+        "computational thinking enables them to adapt to changing professional environments",
+        "evaluate",
+        "develop problem-solving techniques to address natural",
+        "technological"
+      ],
+      "source": {
+        "prospectus_page": 17,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Geoinformatics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Geoinformatics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "satellite",
+        "GIS consulting firms",
+        "government agencies",
+        "local municipalities. They also work in civil engineering",
+        "tourism",
+        "environmental conservation",
+        "mining",
+        "agriculture",
+        "retail",
+        "utilities",
+        "banking",
+        "providing spatial insights for planning"
+      ],
+      "source": {
+        "prospectus_page": 18,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Geology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Geology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "start-ups",
+        "the Council for Scientific",
+        "Industrial Research (CSIR)",
+        "MINTEK",
+        "government departments",
+        "museums",
+        "engineering firms",
+        "consulting companies",
+        "as self-employed consultants. Roles include laboratory specialists (mineralogists)",
+        "environmental",
+        "engineering geologists studying soil",
+        "rock"
+      ],
+      "source": {
+        "prospectus_page": 18,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Meteorology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Meteorology, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "CSIR",
+        "universities",
+        "agricultural institutions",
+        "municipalities",
+        "private industries. Careers include weather forecasting",
+        "climate research",
+        "air quality monitoring",
+        "academic researchers",
+        "meets World Meteorological Organisation standards"
+      ],
+      "source": {
+        "prospectus_page": 18,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Physics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural and Agricultural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Science in Physics, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "the South African Astronomical Observatory",
+        "iThemba LABS",
+        "in industry at organisations like the CSIR",
+        "Element Six. Other opportunities include science advisory roles",
+        "renewable energy development",
+        "careers as radiation scientists",
+        "medical scientists",
+        "biophysicists",
+        "climatologists",
+        "geophysicists",
+        "computational scientists",
+        "innovators"
+      ],
+      "source": {
+        "prospectus_page": 18,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Veterinary Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Veterinary Science",
+      "campus": null,
+      "duration_years": 6,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Veterinary Science, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Veterinarians can work in private practice (small animals",
+        "farm animals",
+        "equine",
+        "wildlife)",
+        "state veterinary services",
+        "diagnostic laboratories",
+        "veterinary public health (milk",
+        "meat hygiene",
+        "disease control)",
+        "technical services",
+        "research",
+        "product development in the pharmaceutical"
+      ],
+      "source": {
+        "prospectus_page": 19,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Veterinary Nursing",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Veterinary Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A University of Pretoria undergraduate programme focused on Veterinary Nursing, preparing students for related careers or further study.",
+      "career_opportunities": [
+        "Veterinary nurses are employed in veterinary clinics",
+        "hospitals",
+        "specialist veterinary facilities",
+        "the pharmaceutical industry",
+        "the animal food industry",
+        "animal welfare societies",
+        "zoological gardens",
+        "game parks",
+        "laboratory animal units",
+        "rehabilitation centres",
+        "research centres",
+        "animal boarding establishments"
+      ],
+      "source": {
+        "prospectus_page": 19,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Minimum requirements do not guarantee admission; verify against UP before applying."
+      }
+    }
+  ]
+}

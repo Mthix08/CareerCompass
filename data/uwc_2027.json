@@ -1,0 +1,1998 @@
+{
+  "university": {
+    "name": "University of the Western Cape",
+    "abbreviation": "UWC",
+    "country": "South Africa",
+    "province": "Western Cape"
+  },
+  "schema_version": "1.0",
+  "generated_from": "University of the Western Cape 2027 Admissions Criteria poster (uwc.pdf)",
+  "important_notice": "This dataset structures the official 2027 UWC admissions poster for CareerCompass. UWC points are institution-specific and subject requirements apply in addition to the score. The poster states general programme information only; always verify the latest requirements with UWC before applying.",
+  "course_count": 62,
+  "courses": [
+    {
+      "name": "Bachelor of Social Work",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Community and Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "Minimum 34 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL level 4 or English FAL level 5; another language level 4; Mathematics level 3 or Mathematical Literacy level 4."
+        }
+      },
+      "description": "Professional social-work education focused on people, families and communities.",
+      "career_opportunities": [
+        "Social worker",
+        "Community-development practitioner",
+        "Social-services officer"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Community Development",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Community and Health Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum 30 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics level 3 or Mathematical Literacy level 4; English HL level 4 or FAL level 5; another language level 4."
+        }
+      },
+      "description": "Prepares graduates for participatory community and development work.",
+      "career_opportunities": [
+        "Community-development practitioner",
+        "Project coordinator",
+        "NGO programme officer"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Sport, Recreation and Exercise Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Community and Health Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum 30 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics level 3 or Mathematical Literacy level 4; general language requirements apply."
+        }
+      },
+      "description": "Studies sport, recreation, exercise and community wellness.",
+      "career_opportunities": [
+        "Sport-development officer",
+        "Recreation coordinator",
+        "Exercise programme practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Dietetics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Community and Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics level 4 or Mathematical Literacy level 6; Life Sciences level 4; general language requirements apply."
+        }
+      },
+      "description": "Professional study of food, nutrition and therapeutic dietetics.",
+      "career_opportunities": [
+        "Dietitian",
+        "Nutrition practitioner",
+        "Food-service professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Sport and Exercise Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Community and Health Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics level 4 or Mathematical Literacy level 6; Life Sciences level 4; general language requirements apply."
+        }
+      },
+      "description": "Scientific study of human movement, exercise and sport performance.",
+      "career_opportunities": [
+        "Sport scientist",
+        "Exercise specialist",
+        "Performance analyst"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Occupational Therapy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Community and Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics level 3 or Mathematical Literacy level 5; Life Sciences level 4; general language requirements apply."
+        }
+      },
+      "description": "Professional education in rehabilitation and participation in everyday activities.",
+      "career_opportunities": [
+        "Occupational therapist",
+        "Rehabilitation practitioner",
+        "Community-health professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Physiotherapy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Community and Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 39,
+        "alternatives": [],
+        "display": "Minimum 39 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics level 4 or Mathematical Literacy level 6; Life Sciences level 4 and Physical Sciences level 4; general language requirements apply."
+        }
+      },
+      "description": "Professional education in movement, injury management and physical rehabilitation.",
+      "career_opportunities": [
+        "Physiotherapist",
+        "Rehabilitation practitioner",
+        "Sports physiotherapy pathway"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Nursing",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Community and Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum 30 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics level 4 or Mathematical Literacy level 6; Life Sciences level 4; English HL level 4 or FAL level 5; another language level 4."
+        }
+      },
+      "description": "Professional nursing preparation for clinical and community healthcare.",
+      "career_opportunities": [
+        "Professional nurse",
+        "Community-health nurse",
+        "Clinical nursing practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Administration",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum 30 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 3 or Mathematical Literacy level 5."
+        }
+      },
+      "description": "Studies administration, governance and organisational management.",
+      "career_opportunities": [
+        "Public administrator",
+        "Administrative officer",
+        "Management practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum 30 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4."
+        }
+      },
+      "description": "Broad commerce programme in business, economics and management.",
+      "career_opportunities": [
+        "Business analyst",
+        "Management trainee",
+        "Entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Financial Accounting",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum 30 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4."
+        }
+      },
+      "description": "Develops financial accounting, reporting and business-finance skills.",
+      "career_opportunities": [
+        "Financial accountant",
+        "Auditing associate",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Information Systems",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum 30 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4."
+        }
+      },
+      "description": "Combines business knowledge with organisational information systems.",
+      "career_opportunities": [
+        "Business analyst",
+        "Systems analyst",
+        "IT consultant"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Accounting",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum 30 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4 and Accounting level 5; Accounting is not required where Mathematics is level 5."
+        }
+      },
+      "description": "Professional accounting preparation for advanced accounting study and practice.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor pathway",
+        "Financial manager"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce - Four-Year Stream",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum 30 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 3 and another language level 3; Mathematics level 2 or Mathematical Literacy level 6."
+        }
+      },
+      "description": "Extended Commerce route with additional academic development support.",
+      "career_opportunities": [
+        "Business professional",
+        "Management trainee",
+        "Entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Accounting - Four-Year Stream",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum 30 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 3 and another language level 3; Mathematics level 3 and Accounting level 4; Accounting is not required where Mathematics is level 4."
+        }
+      },
+      "description": "Extended accounting route with additional academic development support.",
+      "career_opportunities": [
+        "Accounting practitioner",
+        "Auditing pathway",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Flexible humanities and social-science degree with a range of majors.",
+      "career_opportunities": [
+        "Communications professional",
+        "Researcher",
+        "Public-sector or cultural-sector professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Theology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Academic study of theology, faith, society and community leadership.",
+      "career_opportunities": [
+        "Community or faith-based worker",
+        "Youth-development worker",
+        "Further theology study"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Library and Information Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4. Mathematics level 3 or Mathematical Literacy level 4."
+        }
+      },
+      "description": "Professional study of libraries, information organisation and knowledge services.",
+      "career_opportunities": [
+        "Librarian",
+        "Information officer",
+        "Records or knowledge-management practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Afrikaans en Nederlands",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Afrikaans en Nederlands.",
+      "career_opportunities": [
+        "Language practitioner",
+        "Editor",
+        "Education pathway"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Afrikaans vir Taalprofessies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Afrikaans vir Taalprofessies.",
+      "career_opportunities": [
+        "Afrikaans language professional",
+        "Translator",
+        "Communications practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Anthropology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Anthropology.",
+      "career_opportunities": [
+        "Social researcher",
+        "Community researcher",
+        "Development practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Arabic",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Arabic.",
+      "career_opportunities": [
+        "Language practitioner",
+        "Translator",
+        "Cultural-sector professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Classical Culture",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Classical Culture.",
+      "career_opportunities": [
+        "Cultural researcher",
+        "Heritage practitioner",
+        "Education pathway"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in English",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on English.",
+      "career_opportunities": [
+        "Writer or editor",
+        "Communications professional",
+        "Education pathway"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Ethics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Ethics.",
+      "career_opportunities": [
+        "Ethics officer",
+        "Policy researcher",
+        "Community-sector professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in French",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on French.",
+      "career_opportunities": [
+        "French language practitioner",
+        "Translator",
+        "Tourism or diplomatic-services professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Geography and Environmental Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4. Mathematics level 3 or Mathematical Literacy level 4 is additionally required."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Geography and Environmental Studies.",
+      "career_opportunities": [
+        "Environmental practitioner",
+        "GIS or planning assistant",
+        "Sustainability officer"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in German",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on German.",
+      "career_opportunities": [
+        "German language practitioner",
+        "Translator",
+        "Tourism professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in History",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on History.",
+      "career_opportunities": [
+        "Historian",
+        "Heritage practitioner",
+        "Researcher"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Industrial Psychology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4. Mathematics level 3 or Mathematical Literacy level 4 is additionally required."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Industrial Psychology.",
+      "career_opportunities": [
+        "Human-resources practitioner",
+        "Workplace analyst",
+        "Organisational-development pathway"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Islamic Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Islamic Studies.",
+      "career_opportunities": [
+        "Community researcher",
+        "Cultural adviser",
+        "Education pathway"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Language and Communication Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Language and Communication Studies.",
+      "career_opportunities": [
+        "Communications professional",
+        "Language practitioner",
+        "Media officer"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Latin",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Latin.",
+      "career_opportunities": [
+        "Language researcher",
+        "Classics practitioner",
+        "Education pathway"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Psychology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4. Mathematics level 3 or Mathematical Literacy level 4 is additionally required."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Psychology.",
+      "career_opportunities": [
+        "Behavioural-services pathway",
+        "Research assistant",
+        "Community-support practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Philosophy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Philosophy.",
+      "career_opportunities": [
+        "Policy researcher",
+        "Ethics practitioner",
+        "Academic pathway"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Political Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Political Studies.",
+      "career_opportunities": [
+        "Policy analyst",
+        "Public-sector researcher",
+        "Political researcher"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Sociology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Sociology.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Policy assistant"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Theological Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Theological Studies.",
+      "career_opportunities": [
+        "Faith-based community worker",
+        "Theology researcher",
+        "Further ministry study"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Women's and Gender Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Women's and Gender Studies.",
+      "career_opportunities": [
+        "Gender-policy practitioner",
+        "Advocacy officer",
+        "Social researcher"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Xhosa Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Xhosa Studies.",
+      "career_opportunities": [
+        "Language practitioner",
+        "Translator",
+        "Education pathway"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts majoring in Xhosa Language Acquisition",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "Minimum 35 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 4."
+        }
+      },
+      "description": "Bachelor of Arts study with a major focus on Xhosa Language Acquisition.",
+      "career_opportunities": [
+        "Language-support practitioner",
+        "Translator",
+        "Community communications officer"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Environmental and Water Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4; Physical Sciences or Life Sciences level 4."
+        }
+      },
+      "description": "Studies environmental systems, water resources and scientific management.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "Water-quality analyst",
+        "Environmental consultant"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Biotechnology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4; Physical Sciences or Life Sciences level 4."
+        }
+      },
+      "description": "Applies biological science and technology to health, industry and the environment.",
+      "career_opportunities": [
+        "Biotechnologist",
+        "Laboratory analyst",
+        "Research assistant"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Biodiversity and Conservation Biology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4; Physical Sciences or Life Sciences level 4."
+        }
+      },
+      "description": "Studies biodiversity, ecology and conservation of living systems.",
+      "career_opportunities": [
+        "Conservation biologist",
+        "Ecologist",
+        "Environmental practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Medical Bioscience",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4; Life Sciences level 4."
+        }
+      },
+      "description": "Studies biological sciences relevant to human health and disease.",
+      "career_opportunities": [
+        "Medical laboratory researcher",
+        "Biomedical scientist pathway",
+        "Research assistant"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Chemical Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4; Physical Sciences level 4."
+        }
+      },
+      "description": "Studies chemistry, laboratory analysis and chemical applications.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory analyst",
+        "Quality-control scientist"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Applied Geology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4; Physical Sciences level 4."
+        }
+      },
+      "description": "Studies Earth materials and geological applications to resources and the environment.",
+      "career_opportunities": [
+        "Geologist",
+        "Environmental geoscientist",
+        "Mineral-exploration practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Physical Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 5; Physical Sciences level 4."
+        }
+      },
+      "description": "Studies physics and related physical-science principles and applications.",
+      "career_opportunities": [
+        "Physical scientist",
+        "Laboratory researcher",
+        "Technical analyst"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Mathematics and Statistical Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 5; Physical Sciences, Life Sciences or Information Technology level 4."
+        }
+      },
+      "description": "Develops mathematical, statistical and quantitative problem-solving expertise.",
+      "career_opportunities": [
+        "Statistician",
+        "Data analyst",
+        "Quantitative analyst"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Computer Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 5; Physical Sciences, Life Sciences or Information Technology level 4."
+        }
+      },
+      "description": "Studies software, computing systems, algorithms and data processing.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems analyst",
+        "Data engineer pathway"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Pharmacy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 38,
+        "alternatives": [],
+        "display": "Minimum 38 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4; Physical Sciences and Life Sciences level 4."
+        }
+      },
+      "description": "Professional programme covering medicines, pharmaceutical science and patient care.",
+      "career_opportunities": [
+        "Pharmacist",
+        "Pharmaceutical-industry professional",
+        "Medicines information practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Dental Surgery",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Dentistry",
+      "campus": null,
+      "duration_years": 5,
+      "aps": {
+        "minimum": 40,
+        "alternatives": [],
+        "display": "Minimum 40 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4; Physical Sciences and Life Sciences level 4."
+        }
+      },
+      "description": "Professional dental programme in oral diagnosis, prevention and treatment.",
+      "career_opportunities": [
+        "Dentist",
+        "Oral-health clinician",
+        "Dental-practice professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Oral Health",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Dentistry",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 3 or Mathematical Literacy level 4; Life Sciences level 4."
+        }
+      },
+      "description": "Professional preparation in preventive and community oral healthcare.",
+      "career_opportunities": [
+        "Oral hygienist",
+        "Community oral-health practitioner",
+        "Preventive dental-care professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Laws",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 37,
+        "alternatives": [],
+        "display": "Minimum 37 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 3 or Mathematical Literacy level 5."
+        }
+      },
+      "description": "Four-year professional law degree for legal and law-related careers.",
+      "career_opportunities": [
+        "Attorney pathway",
+        "Advocate pathway",
+        "Legal adviser"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Law",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum 30 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 4."
+        }
+      },
+      "description": "Combines commerce and legal study and can lead to further LLB study.",
+      "career_opportunities": [
+        "Commercial-law pathway",
+        "Compliance analyst",
+        "Further LLB study"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Law",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 37,
+        "alternatives": [],
+        "display": "Minimum 37 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL or FAL level 4; another HL or FAL level 3. Mathematics level 3 or Mathematical Literacy level 5."
+        }
+      },
+      "description": "Combines humanities and foundational legal study and can lead to further LLB study.",
+      "career_opportunities": [
+        "Legal-services pathway",
+        "Policy practitioner",
+        "Further LLB study"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education: Accounting (FET), Economic and Management Sciences (Senior Phase) and Mathematics (Senior Phase)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4; another language level 4; Mathematics level 4 or Mathematical Literacy level 6; Accounting, Business Studies or Economics level 4."
+        }
+      },
+      "description": "Teacher education spanning Accounting, EMS and Mathematics.",
+      "career_opportunities": [
+        "Accounting teacher",
+        "EMS teacher",
+        "Senior-phase Mathematics teacher"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education: Mathematics and Mathematical Literacy (Senior and FET Phases) and Natural Science (Senior Phase)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4; another language level 4; Mathematics level 4 or Mathematical Literacy level 6; Life Sciences or Physical Sciences level 4."
+        }
+      },
+      "description": "Teacher education for Mathematics, Mathematical Literacy and Natural Sciences.",
+      "career_opportunities": [
+        "Mathematics teacher",
+        "Mathematical Literacy teacher",
+        "Natural Sciences teacher"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education: Languages and Life Orientation",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4 and another language level 4; Mathematics level 3 or Mathematical Literacy level 5; Life Orientation level 4."
+        }
+      },
+      "description": "Teacher education specialising in languages and Life Orientation.",
+      "career_opportunities": [
+        "Language teacher",
+        "Life Orientation teacher",
+        "Education practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education: Languages and Mathematics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4 and another language level 4; Mathematics level 4 or Mathematical Literacy level 6."
+        }
+      },
+      "description": "Teacher education specialising in languages and Mathematics.",
+      "career_opportunities": [
+        "Language teacher",
+        "Mathematics teacher",
+        "Education practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education: Languages and Social Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4 and another language level 4; Mathematics level 3 or Mathematical Literacy level 5; History or Geography level 4."
+        }
+      },
+      "description": "Teacher education specialising in languages and Social Sciences.",
+      "career_opportunities": [
+        "Language teacher",
+        "History or Geography teacher",
+        "Education practitioner"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Foundation Phase Teaching",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "Minimum 33 UWC points"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4 and another language level 4; Mathematics level 3 or Mathematical Literacy level 5."
+        }
+      },
+      "description": "Professional teacher education for the foundation phase.",
+      "career_opportunities": [
+        "Foundation-phase teacher",
+        "Primary-school educator",
+        "Learning-support pathway"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_admissions_poster",
+        "note": "The UWC 2027 admissions poster publishes programme requirements but no dedicated career descriptions. Career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee admission; verify current requirements with UWC before applying."
+      }
+    }
+  ]
+}
