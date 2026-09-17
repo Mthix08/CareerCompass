@@ -1,0 +1,3479 @@
+{
+  "university": {
+    "name": "University of Zululand",
+    "abbreviation": "UNIZULU",
+    "country": "South Africa",
+    "province": "KwaZulu-Natal"
+  },
+  "schema_version": "1.0",
+  "generated_from": "UNIZULU Undergraduate Programmes 2026 guide (unizulu 2026.pdf)",
+  "important_notice": "INTERIM 2026 DATASET: A 2027 prospectus was not available when this file was prepared. Admission points and subject requirements come from UNIZULU's 2026 undergraduate programme guide and may change. Verify against current UNIZULU information before applying and replace this dataset when the 2027 guide is published.",
+  "course_count": 105,
+  "courses": [
+    {
+      "name": "B A Environmental Planning & Development",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Geography 4; four other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a environmental planning & development, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B A in Intercultural Communication",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a in intercultural communication, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Diploma in Media Studies",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "Minimum admission points: 24."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC Diploma endorsement; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on diploma in media studies, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Media practitioner",
+        "Content producer",
+        "Communication officer"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B A Correctional Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 5; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a correctional studies, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B A Industrial Sociology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a industrial sociology, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B A (Anthropology & History)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a (anthropology & history), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B A (Geography & History)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a (geography & history), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B A (Geography & Tourism)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a (geography & tourism), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Tourism manager",
+        "Tour operator",
+        "Destination-marketing professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B A (History & IsiZulu)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a (history & isizulu), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B A (Linguistics & English)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a (linguistics & english), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B A (Philosophy & Psychology)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a (philosophy & psychology), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Community or support-services practitioner",
+        "Research assistant",
+        "Further professional study in psychology"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "BA in Psychology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Geography or History 4; four other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on ba in psychology, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Community or support-services practitioner",
+        "Research assistant",
+        "Further professional study in psychology"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "BA in Drama, Theatre and Performance",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Dramatic Arts or Visual Arts 4; four other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on ba in drama, theatre and performance, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Diploma in Public Relations Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "Minimum admission points: 24."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC Diploma endorsement; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on diploma in public relations management, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B A Development Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a development studies, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B A Information Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a information science, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Information professional",
+        "Records or knowledge manager",
+        "Information-services specialist"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Library & Information Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b library & information science, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Information professional",
+        "Records or knowledge manager",
+        "Information-services specialist"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Social Work",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English Home Language 4 or First Additional Language 5; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b social work, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Social worker",
+        "Community-development practitioner",
+        "Social-services professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B A Sociology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; five other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b a sociology, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Bachelor of Social Sciences in Political and International Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Geography 4; History 4; Economics or Mathematical Literacy 4; two other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on bachelor of social sciences in political and international studies, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Tourism Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Tourism or Geography 4; four other 20-credit subjects"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b tourism studies, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Tourism manager",
+        "Tour operator",
+        "Destination-marketing professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Diploma in Tourism Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Humanities and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "Minimum admission points: 24."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC Diploma endorsement; English 4; five relevant subjects including Mathematics/Mathematical Literacy, Tourism, Geography, Hospitality Studies, Business Studies or Accounting at level 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on diploma in tourism management, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Tourism manager",
+        "Tour operator",
+        "Destination-marketing professional"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Foundation Phase Teaching",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; IsiZulu Home Language 4; English First Additional Language 4; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on bachelor of education in foundation phase teaching, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Teacher",
+        "Curriculum practitioner",
+        "Education specialist"
+      ],
+      "source": {
+        "prospectus_page": 3,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Intermediate Phase Teaching: Languages and Humanities",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; IsiZulu 4; English 4; Geography and History 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on bachelor of education in intermediate phase teaching: languages and humanities, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Teacher",
+        "Curriculum practitioner",
+        "Education specialist"
+      ],
+      "source": {
+        "prospectus_page": 3,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Intermediate Phase Teaching: Languages, Mathematics, Natural Science and Technology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; IsiZulu Home/First Additional Language 4; English Home/First Additional Language 4; Mathematics 4 and Physical Sciences 3, or Mathematics 3 and Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on bachelor of education in intermediate phase teaching: languages, mathematics, natural science and technology, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Teacher",
+        "Curriculum practitioner",
+        "Education specialist"
+      ],
+      "source": {
+        "prospectus_page": 3,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Admin: Public Administration and Business Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b admin: public administration and business management, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Public administrator",
+        "Government programme officer",
+        "Policy practitioner"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Admin: Public Administration and Economics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b admin: public administration and economics, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Public administrator",
+        "Government programme officer",
+        "Policy practitioner"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Admin: Public Administration and Human Resources",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b admin: public administration and human resources, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Public administrator",
+        "Government programme officer",
+        "Policy practitioner"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Admin: Public Administration and Political Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b admin: public administration and political science, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Public administrator",
+        "Government programme officer",
+        "Policy practitioner"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Accounting and Economics)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (accounting and economics), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Finance professional"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Accounting and Economics) 4-year programme",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (accounting and economics) 4-year programme, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Finance professional"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Accounting) 4-year programme",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (accounting) 4-year programme, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Finance professional"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Banking and Business Management)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (banking and business management), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Banking and Business Management) 4-year programme",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (banking and business management) 4-year programme, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Business Management and Accounting)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (business management and accounting), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Finance professional"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Business Management and Accounting) 4-year programme",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (business management and accounting) 4-year programme, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Finance professional"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Business Management and Economics)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (business management and economics), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Business Management and Economics) 4-year programme",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (business management and economics) 4-year programme, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Business Management and Human Resource Management) 4-year programme",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (business management and human resource management) 4-year programme, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Economics and Banking)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (economics and banking), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Economics and Banking) 4-year programme",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (economics and banking) 4-year programme, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Economics and Human Resource Management)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (economics and human resource management), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Economics and Human Resource Management) 4-year programme",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (economics and human resource management) 4-year programme, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Human Resource Management and Business Management)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (human resource management and business management), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Management Information Systems)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English and Mathematics 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (management information systems), preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Information professional",
+        "Records or knowledge manager",
+        "Information-services specialist"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com (Management Information Systems) 4-year programme",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com (management information systems) 4-year programme, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Information professional",
+        "Records or knowledge manager",
+        "Information-services specialist"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com Accounting Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English and Mathematics 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com accounting science, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Finance professional"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Com in Accounting",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English and Mathematics 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b com in accounting, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Finance professional"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Laws",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum admission points: 30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC degree endorsement; English 4; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b laws, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Legal practitioner",
+        "Legal adviser",
+        "Compliance professional"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Diploma in Co-Operatives Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "Minimum admission points: 24."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC Diploma endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on diploma in co-operatives management, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Diploma in Logistics Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "Minimum admission points: 24."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC Diploma endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on diploma in logistics management, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Diploma in Transport Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "Minimum admission points: 24."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC Diploma endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on diploma in transport management, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Sport and exercise technologist",
+        "Fitness practitioner",
+        "Sport programme coordinator"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Higher Certificate in Accountancy",
+      "qualification_code": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Commerce, Administration and Law",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "Minimum admission points: 22."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC Certificate endorsement; English 3; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on higher certificate in accountancy, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Finance professional"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Consumer Science: Extension & Rural Development",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English and Life Orientation 4; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b consumer science: extension & rural development, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Consumer Science: Hospitality & Tourism",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English and Life Orientation 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b consumer science: hospitality & tourism, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Tourism manager",
+        "Tour operator",
+        "Destination-marketing professional"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Eng Electrical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum admission points: 30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 5"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b eng electrical engineering, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering technologist",
+        "Project engineer"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Eng Electrical Engineering and Computer Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum admission points: 30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 5"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b eng electrical engineering and computer engineering, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering technologist",
+        "Project engineer"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Eng Mechanical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum admission points: 30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 5"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b eng mechanical engineering, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering technologist",
+        "Project engineer"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Eng Mechatronic Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum admission points: 30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 5"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b eng mechatronic engineering, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering technologist",
+        "Project engineer"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Nursing Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Minimum admission points: 30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English and Life Sciences 4; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b nursing science, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Professional nurse",
+        "Community-health practitioner",
+        "Nurse manager"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Agric: Agronomy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics 4; Physical Sciences 3; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc agric: agronomy, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Agricultural scientist",
+        "Agribusiness professional",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Agric: Animal Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics 4; Physical Sciences 3; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc agric: animal science, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Agricultural scientist",
+        "Agribusiness professional",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Agricultural Economics: Agribusiness Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics 4; Physical Sciences 3; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc agricultural economics: agribusiness management, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Agricultural scientist",
+        "Agribusiness professional",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Applied Mathematics with Computer Sciences as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc applied mathematics with computer sciences as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems or data analyst",
+        "ICT specialist"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Applied Mathematics with Hydrology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc applied mathematics with hydrology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Applied Mathematics with Mathematics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc applied mathematics with mathematics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Applied Mathematics with Physics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc applied mathematics with physics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Applied Mathematics with Statistics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc applied mathematics with statistics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Augmented: Life Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 3; Mathematics and Physical Sciences 3; Life Sciences or Agricultural Sciences 3"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc augmented: life sciences, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Augmented: Physical Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 3; Mathematics and Physical Sciences 3"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc augmented: physical sciences, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Biochemistry with Botany as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics 4; Physical Sciences 3; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc biochemistry with botany as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist",
+        "Quality-control analyst"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Biochemistry with Chemistry as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics 5; Physical Sciences 4; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc biochemistry with chemistry as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist",
+        "Quality-control analyst"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Biochemistry with Human Movement Science as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics and Physical Sciences 4; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc biochemistry with human movement science as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist",
+        "Quality-control analyst"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Biochemistry with Microbiology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics 4; Physical Sciences 3; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc biochemistry with microbiology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist",
+        "Quality-control analyst"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Biochemistry with Zoology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics 4; Physical Sciences 3; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc biochemistry with zoology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist",
+        "Quality-control analyst"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Botany with Geography as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics 4; Physical Sciences 3; Geography 4; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc botany with geography as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Botany with Hydrology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics and Physical Sciences 4; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc botany with hydrology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Botany with Microbiology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics 4; Physical Sciences 3; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc botany with microbiology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Botany with Zoology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics 4; Physical Sciences 3; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc botany with zoology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Chemistry with Computer Science as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc chemistry with computer science as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems or data analyst",
+        "ICT specialist"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Chemistry with Hydrology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc chemistry with hydrology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist",
+        "Quality-control analyst"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Chemistry with Mathematics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc chemistry with mathematics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist",
+        "Quality-control analyst"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Chemistry with Physics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc chemistry with physics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist",
+        "Quality-control analyst"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Chemistry with Zoology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc chemistry with zoology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist",
+        "Quality-control analyst"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Computer Science with Hydrology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc computer science with hydrology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems or data analyst",
+        "ICT specialist"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Computer Science with Mathematics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc computer science with mathematics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems or data analyst",
+        "ICT specialist"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Computer Science with Physics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc computer science with physics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems or data analyst",
+        "ICT specialist"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Computer Science with Statistics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc computer science with statistics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems or data analyst",
+        "ICT specialist"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Geography with Hydrology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics, Physical Sciences and Geography 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc geography with hydrology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Geography with Physics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences and Geography 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc geography with physics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Geography with Statistics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences and Geography 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc geography with statistics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Geography with Zoology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics 4; Physical Sciences 3; Geography 4; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc geography with zoology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Human Movement Science with Physics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc human movement science with physics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Human Movement Science with Zoology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics and Physical Sciences 4; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc human movement science with zoology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Hydrology with Microbiology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics and Physical Sciences 4; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc hydrology with microbiology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Hydrology with Physics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc hydrology with physics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Hydrology with Statistics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc hydrology with statistics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Hydrology with Zoology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics and Physical Sciences 4; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc hydrology with zoology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Mathematics with Physics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc mathematics with physics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Mathematics with Statistics as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 4; Mathematics 5; Physical Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc mathematics with statistics as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Microbiology with Human Movement Science as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics and Physical Sciences 4; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc microbiology with human movement science as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Microbiology with Zoology as Major 2",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum admission points: 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English; Mathematics 4; Physical Sciences 3; Life Sciences or Agricultural Sciences 4"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc microbiology with zoology as major 2, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "B Sc Foundation",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; English 3; Mathematics 3; Physical Sciences 2; Agricultural Sciences or Life Sciences 3"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on b sc foundation, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Field-related practitioner",
+        "Public- or private-sector specialist",
+        "Postgraduate study or research"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Diploma in Hospitality Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC Diploma endorsement; English 4; four other 20-credit subjects at level 3"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on diploma in hospitality management, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Hospitality manager",
+        "Food-service professional",
+        "Hospitality entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    },
+    {
+      "name": "Diploma in Sport & Exercise Technology",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Science, Agriculture and Engineering",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum admission points: 26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement as applicable; NSC Diploma endorsement; English Home Language 4 or First Additional Language 3; three designated subjects at level 3"
+        },
+        "aps_calculation_method": "UNIZULU admission points are calculated from six subjects, excluding Life Orientation; programme subject levels still apply."
+      },
+      "description": "An undergraduate UNIZULU programme focused on diploma in sport & exercise technology, preparing students for related professional, public-sector or postgraduate pathways.",
+      "career_opportunities": [
+        "Sport and exercise technologist",
+        "Fitness practitioner",
+        "Sport programme coordinator"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2026
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_2026_programme_guide",
+        "note": "This is a 2026 interim dataset because a 2027 guide was not available. Verify current requirements with UNIZULU before applying and replace with 2027 data when published."
+      }
+    }
+  ]
+}

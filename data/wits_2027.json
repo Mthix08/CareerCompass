@@ -1,0 +1,3136 @@
+{
+  "university": {
+    "name": "University of the Witwatersrand",
+    "abbreviation": "Wits",
+    "prospectus_year": 2027,
+    "country": "South Africa"
+  },
+  "schema_version": "1.0.0",
+  "generated_from": "wits-prospectus.pdf",
+  "important_notice": "This dataset is an extraction aid, not an admission decision. Requirements can change and meeting minimum requirements does not guarantee selection.",
+  "course_count": 68,
+  "courses": [
+    {
+      "name": "Bachelor of Commerce (General)",
+      "qualification_code": "CBA00",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Law and Management",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 38,
+        "alternatives": [],
+        "display": "38+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Commerce (General), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Chartered Certified Accountant",
+        "Chartered Financial Analyst",
+        "Internal Auditor",
+        "Management Accountant",
+        "Management Consultant",
+        "Professional Accountant"
+      ],
+      "source": {
+        "prospectus_page": 45,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce (Accounting)",
+      "qualification_code": "CBA14",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Law and Management",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 38,
+        "alternatives": [],
+        "display": "38+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Commerce (Accounting), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Chartered Certified Accountant",
+        "Chartered Financial Analyst",
+        "Internal Auditor",
+        "Management Accountant",
+        "Management Consultant",
+        "Professional Accountant"
+      ],
+      "source": {
+        "prospectus_page": 46,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Accounting Science",
+      "qualification_code": "CBA08",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Law and Management",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 44,
+        "alternatives": [],
+        "display": "44+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Accounting Science, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Chartered Accountant",
+        "Fund Manager",
+        "Internal Auditor",
+        "Tax Specialist"
+      ],
+      "source": {
+        "prospectus_page": 47,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce (Law)",
+      "qualification_code": "CBA13",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Law and Management",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 43,
+        "alternatives": [],
+        "display": "43+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Commerce (Law), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Attorney",
+        "Legal adviser",
+        "Compliance officer",
+        "Corporate governance specialist"
+      ],
+      "source": {
+        "prospectus_page": 48,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Economic Science",
+      "qualification_code": "CBA17",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Law and Management",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 7,
+          "percentage": 80
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Economic Science, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Budget Analyst",
+        "Economist",
+        "Financial Analyst",
+        "Industry Analyst",
+        "Management Consultant",
+        "Policy Analyst"
+      ],
+      "source": {
+        "prospectus_page": 49,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce (Financial Sciences)",
+      "qualification_code": "CBA18",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Law and Management",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 7,
+          "percentage": 80
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Commerce (Financial Sciences), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Financial Analyst",
+        "Financial Data Scientist",
+        "Financial Technology (Fintech) Specialist",
+        "Blockchain Analyst",
+        "Financial Engineer",
+        "Financial Risk Manager",
+        "Corporate Finance Specialist",
+        "Investment Analyst 5500 www.wits.ac.za/course-finder/un"
+      ],
+      "source": {
+        "prospectus_page": 50,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce (Information Systems)",
+      "qualification_code": "CBA10",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Law and Management",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 38,
+        "alternatives": [],
+        "display": "38+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Commerce (Information Systems), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Business analyst",
+        "Information systems specialist",
+        "IT consultant",
+        "Systems analyst"
+      ],
+      "source": {
+        "prospectus_page": 51,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce (Politics, Philosophy and Economics)",
+      "qualification_code": "CBA12",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Law and Management",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 38,
+        "alternatives": [],
+        "display": "38+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Commerce (Politics, Philosophy and Economics), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Academia",
+        "Civil Service",
+        "Development  International Banking or Finance",
+        "Diplomatic Corps  Journalism",
+        "Economics  Politics",
+        "Research"
+      ],
+      "source": {
+        "prospectus_page": 52,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Laws (Two-year stream for graduates)",
+      "qualification_code": "LFA12",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Law and Management",
+      "campus": null,
+      "duration_years": 2,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No matric APS calculation; graduate-entry assessment applies"
+      },
+      "subject_requirements": {},
+      "description": "An undergraduate Wits programme focused on Laws (Two-year stream for graduates), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Advocate",
+        "Arbitrator",
+        "Attorney",
+        "Conveyancer",
+        "Judge",
+        "Legal Advisor",
+        "Legal Practitioner",
+        "Legal, Risk and Compliance Consultant",
+        "Magistrate"
+      ],
+      "source": {
+        "prospectus_page": 53,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Laws (Three-year stream for graduates)",
+      "qualification_code": "LFA13",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Law and Management",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No matric APS calculation; graduate-entry assessment applies"
+      },
+      "subject_requirements": {},
+      "description": "An undergraduate Wits programme focused on Laws (Three-year stream for graduates), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Advocate",
+        "Arbitrator",
+        "Attorney",
+        "Conveyancer",
+        "Judge",
+        "Legal Advisor",
+        "Legal Practitioner",
+        "Legal, Risk and Compliance Consultant",
+        "Magistrate",
+        "Mediator",
+        "Negotiator",
+        "Professional Counsellor",
+        "Prosecutor 54 www.wits.ac.za/course-fin"
+      ],
+      "source": {
+        "prospectus_page": 54,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Laws (Four-year stream)",
+      "qualification_code": "LFA14",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce, Law and Management",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 46,
+        "alternatives": [],
+        "display": "46+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "english": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Laws (Four-year stream), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Advocate",
+        "Arbitrator",
+        "Attorney",
+        "Conveyancer",
+        "Judge",
+        "Legal Advisor",
+        "Legal Practitioner",
+        "Legal, Risk and Compliance Consultant",
+        "Magistrate",
+        "Mediator",
+        "Negotiator",
+        "Professional Counsellor",
+        "Prosecutor"
+      ],
+      "source": {
+        "prospectus_page": 55,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Engineering in Chemical Engineering",
+      "qualification_code": "EFA00",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Chemical Engineering, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Biochemical Engineer",
+        "Environmental Engineer",
+        "Food Processing Engineer",
+        "Process Control Engineer",
+        "Process Design Engineer",
+        "Process Plant Manager",
+        "Systems Engineer",
+        "Technical Sales Engineer"
+      ],
+      "source": {
+        "prospectus_page": 59,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Engineering in Metallurgy and Materials Engineering",
+      "qualification_code": "EFA08",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Metallurgy and Materials Engineering, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Corrosion Engineer",
+        "Extractive Metallurgist",
+        "Failure Analysis Consultant",
+        "Foundry Engineer",
+        "Heat Treatment Engineer",
+        "Metallurgical Plant Design Engineer",
+        "Process Control Engineer",
+        "Tribologist Materials Consultant 60 www.wits.ac.za/course-finder/undergradua"
+      ],
+      "source": {
+        "prospectus_page": 60,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Engineering in Civil Engineering",
+      "qualification_code": "EFA01",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Civil Engineering, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Bridge Engineer",
+        "Earthquake Design Engineer",
+        "Consulting Engineer",
+        "Construction Manager",
+        "Environmental Engineer",
+        "Geotechnical Engineer",
+        "Hydrologist",
+        "Structural Engineer",
+        "Water Resource Manager"
+      ],
+      "source": {
+        "prospectus_page": 61,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Engineering in Electrical Engineering",
+      "qualification_code": "EFA03",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Electrical Engineering, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Antennas Engineering",
+        "Computer Engineer",
+        "Control and Automation Engineer",
+        "High Voltage Engineer",
+        "Machines and Drives Engineer",
+        "Power Engineer",
+        "Power Systems Manager",
+        "Telecommunications Engineer 6622 www.wits.ac.za/course-finder/und"
+      ],
+      "source": {
+        "prospectus_page": 62,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Engineering in Information Engineering",
+      "qualification_code": "EFA03",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Information Engineering, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Computer Engineer",
+        "Information Engineer",
+        "Software Developer",
+        "Software Engineer",
+        "Software Project Manager",
+        "Software Systems Architect",
+        "Network Engineer",
+        "Telecommunications Engineer",
+        "Information Technology Consultant"
+      ],
+      "source": {
+        "prospectus_page": 63,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering Science in Biomedical Engineering",
+      "qualification_code": "EBA00",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Engineering Science in Biomedical Engineering, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Artificial organs",
+        "Information Technology for Healthcare",
+        "Medical Imaging System Design (e.g. ultrasound or CT scanning)",
+        "Modelling and simulation of physiological states and disease",
+        "Therapeutic Equipment Design 64 www.wits.ac.za/course-finder/unde"
+      ],
+      "source": {
+        "prospectus_page": 64,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering Science in Digital Arts",
+      "qualification_code": "EBA01",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Engineering Science in Digital Arts, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Animation",
+        "Game Design",
+        "Software Engineer",
+        "Software Development"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Engineering in Mechanical Engineering",
+      "qualification_code": "EFA05",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Mechanical Engineering, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Energy Engineer",
+        "Mechanical Design and Development Engineer",
+        "Manufacturing Engineer Systems Engineer",
+        "Production Engineer",
+        "Technical Marketing Manager",
+        "Transport Engineer 66 www.wits.ac.za/course-finder/unde"
+      ],
+      "source": {
+        "prospectus_page": 66,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Engineering in Industrial Engineering",
+      "qualification_code": "EFA07",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Industrial Engineering, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Enterprise Resource Planning Consultant",
+        "Inventory Engineer",
+        "IT Consultant",
+        "Logistics Engineer",
+        "Management Consultant",
+        "Production and Operations Manager",
+        "Process Engineer",
+        "Quality Control Engineer",
+        "Supply Chain Consultant",
+        "Technical Manager"
+      ],
+      "source": {
+        "prospectus_page": 67,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Engineering in Aeronautical Engineering",
+      "qualification_code": "EFA06",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Aeronautical Engineering, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Aircraft Design Engineer",
+        "Aircraft Systems Design Engineer",
+        "Airline Manager",
+        "Automotive Aerodynamics Engineer",
+        "Research",
+        "Production Manager",
+        "Propulsion Engineer",
+        "Technical Director"
+      ],
+      "source": {
+        "prospectus_page": 68,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Engineering in Mining Engineering",
+      "qualification_code": "EFA09",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Mining Engineering, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Blasting Engineer",
+        "Consulting Mining Engineer",
+        "Environmental, Safety and Health Manager",
+        "Financial Analyst",
+        "Mine Manager",
+        "Mine Design Engineer",
+        "Mineral Resources Manager",
+        "Project Manager",
+        "Rock Engineer"
+      ],
+      "source": {
+        "prospectus_page": 69,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Architectural Studies",
+      "qualification_code": "FBA00",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Architectural Studies, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Architect",
+        "Architectural Technologist",
+        "Draughtsperson",
+        "Landscape Designer",
+        "Interior Designer Lecturer",
+        "Researcher",
+        "Urban Planner/Studies"
+      ],
+      "source": {
+        "prospectus_page": 70,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc in Urban and Regional Planning",
+      "qualification_code": "FBA05",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Urban and Regional Planning, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Built Environment Analyst",
+        "Consulting Damage Assessor",
+        "Development and Corporate Real Estate",
+        "Local, Provincial or National Government Planner",
+        "Policy Analyst",
+        "Property Management"
+      ],
+      "source": {
+        "prospectus_page": 71,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc in Construction Studies",
+      "qualification_code": "FBA04",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Construction Studies, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Careers within local Authorities and Government",
+        "Commercial Trading as a Materials or Equipment Supplier",
+        "Construction Management",
+        "Project Management",
+        "Quantity Surveying Practice",
+        "Subcontractor in the Construction Industry Management Professions"
+      ],
+      "source": {
+        "prospectus_page": 72,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc in Property Studies",
+      "qualification_code": "FBA07",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Property Studies, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Banking, Investment and Finance",
+        "Built Environment Analyst Consulting",
+        "Damage Assessor",
+        "Development and Corporate Real Estate",
+        "Policy Analyst Property Management",
+        "Property Valuation"
+      ],
+      "source": {
+        "prospectus_page": 73,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences (Biokinetics)",
+      "qualification_code": "MBA05",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Selection uses the Wits Health Sciences Composite Index; no fixed APS is published"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Health Sciences (Biokinetics), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Biokineticist",
+        "Exercise and Healthcare Scientist/Researcher",
+        "Exercise Physiologist",
+        "Sports Massage Therapist",
+        "Sports Scientist"
+      ],
+      "source": {
+        "prospectus_page": 76,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences (Biomedical Sciences)",
+      "qualification_code": "MBA05",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Selection uses the Wits Health Sciences Composite Index; no fixed APS is published"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Health Sciences (Biomedical Sciences), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Biomedical Scientist",
+        "Forensic Scientist",
+        "Healthcare Scientist",
+        "Medical Sales Representative",
+        "Microbiologist",
+        "Research Scientist",
+        "Science Journalist/Writer"
+      ],
+      "source": {
+        "prospectus_page": 77,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences (Health Systems Sciences)",
+      "qualification_code": "MBA05",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Selection uses the Wits Health Sciences Composite Index; no fixed APS is published"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Health Sciences (Health Systems Sciences), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Epidemiologist",
+        "Health systems manager",
+        "Public health practitioner",
+        "Health policy analyst"
+      ],
+      "source": {
+        "prospectus_page": 78,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Clinical Medical Practice",
+      "qualification_code": "MBA01",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Selection uses the Wits Health Sciences Composite Index; no fixed APS is published"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 7,
+          "percentage": 80
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Clinical Medical Practice, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Clinical associate",
+        "District hospital practitioner",
+        "Community healthcare practitioner"
+      ],
+      "source": {
+        "prospectus_page": 79,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Dental Science",
+      "qualification_code": "MFA08",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 5,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Selection uses the Wits Health Sciences Composite Index; no fixed APS is published"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Dental Science, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Dentist",
+        "Community dental practitioner",
+        "Private-practice dentist",
+        "Public-service dentist"
+      ],
+      "source": {
+        "prospectus_page": 80,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Oral Health Sciences (Oral Hygiene)",
+      "qualification_code": "MBA04",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Selection uses the Wits Health Sciences Composite Index; no fixed APS is published"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 7,
+          "percentage": 80
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Oral Health Sciences (Oral Hygiene), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Oral hygienist",
+        "Community oral-health practitioner",
+        "Private-practice oral hygienist"
+      ],
+      "source": {
+        "prospectus_page": 81,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Medicine and Bachelor of Surgery",
+      "qualification_code": "MFA00",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 6,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Selection uses the Wits Health Sciences Composite Index; no fixed APS is published"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Medicine and Bachelor of Surgery, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Anaesthesiology",
+        "Clinical Microbiology and Infectious Disease",
+        "Community Health",
+        "Family Medicine",
+        "Forensic Medicine",
+        "Internal Medicine",
+        "Obstetrics and Gynaecology",
+        "Ophthalmology Pathology",
+        "Paediatrics",
+        "Psychiatry",
+        "Radiology",
+        "Surgery"
+      ],
+      "source": {
+        "prospectus_page": 82,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Nursing",
+      "qualification_code": "MFA07",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Selection uses the Wits Health Sciences Composite Index; no fixed APS is published"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Nursing, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "General Nursing",
+        "Child Nursing",
+        "Intensive Care Nursing",
+        "Nursing Education",
+        "Nephrology Nursing",
+        "Oncology and Palliative Nursing",
+        "Psychiatric Nursing",
+        "Research",
+        "Trauma and Emergency Nursing",
+        "Midwife"
+      ],
+      "source": {
+        "prospectus_page": 83,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc in Occupational Therapy",
+      "qualification_code": "MFA03",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Selection uses the Wits Health Sciences Composite Index; no fixed APS is published"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Occupational Therapy, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Aged Care Facilities",
+        "Community Health Centres",
+        "Home Care Services",
+        "Hospitals and Rehabilitation Units",
+        "Independent Living and Respite Centres",
+        "Private Practice",
+        "Psychiatric Clinics",
+        "Schools and Education Facilities",
+        "Vocational Rehabilitation Centres"
+      ],
+      "source": {
+        "prospectus_page": 84,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Pharmacy",
+      "qualification_code": "MFA04",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Selection uses the Wits Health Sciences Composite Index; no fixed APS is published"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Pharmacy, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Academia and Research",
+        "Community Pharmacy",
+        "Hospital Pharmacy",
+        "Industrial Pharmacy"
+      ],
+      "source": {
+        "prospectus_page": 85,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc in Physiotherapy",
+      "qualification_code": "MFA02",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Selection uses the Wits Health Sciences Composite Index; no fixed APS is published"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Physiotherapy, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Cardiopulmonary",
+        "Community Health",
+        "Neuromusculo-skeletal",
+        "Neurology",
+        "Orthopaedic",
+        "Paediatrics",
+        "Sport Physiotherapy (specialised branch of sports person)"
+      ],
+      "source": {
+        "prospectus_page": 86,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts (General)",
+      "qualification_code": "ABA00",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Arts (General), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Researcher",
+        "Policy analyst",
+        "Writer",
+        "Communications practitioner",
+        "Public-sector professional"
+      ],
+      "source": {
+        "prospectus_page": 89,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts (Law)",
+      "qualification_code": "ABA02",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 43,
+        "alternatives": [],
+        "display": "43+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Arts (Law), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Advocate",
+        "Arbitrator",
+        "Attorney",
+        "Conveyancer",
+        "Judge",
+        "Legal Advisor",
+        "Mediator Negotiator",
+        "Professional Counsellor"
+      ],
+      "source": {
+        "prospectus_page": 94,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Digital Arts",
+      "qualification_code": "AFA11",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Arts in Digital Arts, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Animator",
+        "Game Developer",
+        "Systems Administrator",
+        "Game Writer",
+        "VR Developer"
+      ],
+      "source": {
+        "prospectus_page": 96,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Film and Television",
+      "qualification_code": "AFA10",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Arts in Film and Television, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Director",
+        "Editor",
+        "Film-Maker",
+        "Producer",
+        "Writer"
+      ],
+      "source": {
+        "prospectus_page": 97,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Fine Arts",
+      "qualification_code": "AFA01",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Arts in Fine Arts, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Animator",
+        "Art Historian",
+        "Artist",
+        "Curator",
+        "Critic",
+        "Designer",
+        "Photographer",
+        "Teacher 9988 www.wits.ac.z"
+      ],
+      "source": {
+        "prospectus_page": 98,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Music",
+      "qualification_code": "AFA02",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Music, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Arrangement",
+        "Composing",
+        "Conducting",
+        "Education",
+        "Entertainment Law",
+        "Music Journalism",
+        "Music Therapy",
+        "Performance",
+        "Radio/TV/Digital Media",
+        "Recording Industry"
+      ],
+      "source": {
+        "prospectus_page": 99,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Theatre and Performance",
+      "qualification_code": "AFA14",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Arts in Theatre and Performance, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Choreographer  Production and Arts Manager",
+        "Critics  Teachers/Facilitators/Academics",
+        "Director  Theatre-Maker",
+        "Designer  Theorists",
+        "Performer  Writer"
+      ],
+      "source": {
+        "prospectus_page": 100,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education: Foundation Phase Teaching",
+      "qualification_code": "HFA00",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 37,
+        "alternatives": [],
+        "display": "37+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "technical_mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Education: Foundation Phase Teaching, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Foundation phase teacher",
+        "Primary-school educator",
+        "Education specialist"
+      ],
+      "source": {
+        "prospectus_page": 102,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education: Intermediate Phase Teaching",
+      "qualification_code": "HFA01",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 37,
+        "alternatives": [],
+        "display": "37+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "technical_mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Education: Intermediate Phase Teaching, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Intermediate phase teacher",
+        "Primary-school educator",
+        "Education specialist"
+      ],
+      "source": {
+        "prospectus_page": 103,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education: Senior Phase and FET Teaching",
+      "qualification_code": "HFA02",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 37,
+        "alternatives": [],
+        "display": "37+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Education: Senior Phase and FET Teaching, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Senior phase teacher",
+        "Further Education and Training teacher",
+        "Education specialist"
+      ],
+      "source": {
+        "prospectus_page": 104,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Audiology",
+      "qualification_code": "AFA13",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Audiology, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Community Work and Outreach",
+        "Educational Setting",
+        "Government Healthcare Settings",
+        "Private Practice"
+      ],
+      "source": {
+        "prospectus_page": 107,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Speech-Language Pathology",
+      "qualification_code": "AFA12",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Speech-Language Pathology, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Community Work and Outreach",
+        "Educational Settings",
+        "Government Healthcare Settings",
+        "Private Practice"
+      ],
+      "source": {
+        "prospectus_page": 108,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Work",
+      "qualification_code": "AFA04",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Social Work, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Marriage and Divorce Counsellor",
+        "Substance Abuse Counsellor",
+        "Development Planner Working with Disadvantaged Communities",
+        "Lecturer",
+        "Personnel Manager",
+        "Probation Officer",
+        "Social Welfare Manager",
+        "Social Welfare Researcher",
+        "Social Worker in the fields of:",
+        "Child and Family Welfare",
+        "Geriatrics",
+        "Occupational",
+        "Medical",
+        "Educational Social Work"
+      ],
+      "source": {
+        "prospectus_page": 109,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Biological Sciences: Applied Ecology and Global Change",
+      "qualification_code": "SBA11",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 43,
+        "alternatives": [],
+        "display": "43+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Biological Sciences: Applied Ecology and Global Change, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Agricultural Research Council (ARC)",
+        "Biodiversity Planner",
+        "Biology Education",
+        "Department of Water Affairs and Forestry (DWA)",
+        "Education Officer",
+        "Herbaria (e.g. at Kirstenbosch)",
+        "Medical Research (Linked to Herbal Medicines)",
+        "Nature Conversation",
+        "Research for the Council for Scientific and Industrial"
+      ],
+      "source": {
+        "prospectus_page": 113,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Biological Sciences: Biodiversity in a Changing World",
+      "qualification_code": "SBA11",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 43,
+        "alternatives": [],
+        "display": "43+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Biological Sciences: Biodiversity in a Changing World, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Biodiversity Planner",
+        "Biology Education",
+        "Education Officer",
+        "Private Consulting Firms",
+        "Scientific Journalism",
+        "Veterinary Research Institute 111144 www.wits.ac.za/course-finder/undergr"
+      ],
+      "source": {
+        "prospectus_page": 114,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Biological Sciences: Applied Bioinformatics",
+      "qualification_code": "SBA11",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 43,
+        "alternatives": [],
+        "display": "43+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Biological Sciences: Applied Bioinformatics, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Biomechanics  Genomics",
+        "Biostatistics  Healthcare Scientist",
+        "Conservation Genomics  Molecular Modelling",
+        "Data Management  Pharmacogenomics",
+        "Drug Discovery  Precision Medicine"
+      ],
+      "source": {
+        "prospectus_page": 115,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Biological Sciences: Biochemistry and Cell Biology",
+      "qualification_code": "SBA11",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 43,
+        "alternatives": [],
+        "display": "43+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Biological Sciences: Biochemistry and Cell Biology, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Analytical Biochemistry",
+        "Biomedical Scientist",
+        "Clinical Biochemistry",
+        "Forensic Scientist",
+        "Healthcare Scientist",
+        "Industrial Enzymology",
+        "Life Science Research Scientist",
+        "Nanotechnologist",
+        "Personalised Medicines",
+        "Protein Biotechnology"
+      ],
+      "source": {
+        "prospectus_page": 116,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Biological Sciences: Genetics and Developmental Biology",
+      "qualification_code": "SBA11",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 43,
+        "alternatives": [],
+        "display": "43+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Biological Sciences: Genetics and Developmental Biology, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Clinical Research Associate",
+        "Genetic Counselling",
+        "Healthcare Scientist (Immunology)",
+        "Medical Diagnostics",
+        "Pharmacogenetics",
+        "Plant and Animal Breeding",
+        "Research Scientist (Life Sciences and Medical)",
+        "Scientific and Medical Research"
+      ],
+      "source": {
+        "prospectus_page": 117,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Biological Sciences: Microbiology and Biotechnology",
+      "qualification_code": "SBA11",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 43,
+        "alternatives": [],
+        "display": "43+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Biological Sciences: Microbiology and Biotechnology, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Agricultural, Medical, Environmental and Veterinary Biotechnology",
+        "Brewing",
+        "Industrial Biotechnology",
+        "Food Security",
+        "Insecticides Research and Production",
+        "Healthcare Scientist (Immunology)",
+        "Microbiology",
+        "Nanotechnology",
+        "Pharmacology",
+        "Production of Scientific Products",
+        "Water Quality Research 111188 www.wits.ac.za/course-finder/undergradu"
+      ],
+      "source": {
+        "prospectus_page": 118,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Geographical and Archaeological Sciences",
+      "qualification_code": "SBA10",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Geographical and Archaeological Sciences, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Biodiversity Conservation  Tourism Development",
+        "Climate Change  Water or Aquatic Resources",
+        "Environmental Assessment Management",
+        "Ecosystem Services  Contract Archaeology",
+        "Food Security  Conservation",
+        "Geomorphology  Environmental and Cultural",
+        "Hydrology Heritage Management",
+        "Market Research  Heritage Assessors",
+        "Meteorology and Weather  Museum Curator Forecasting  Museum Development",
+        "Property Development  Research",
+        "Urban Development  Site Development",
+        "Rural Development  Tourism and Media"
+      ],
+      "source": {
+        "prospectus_page": 119,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Environmental Studies",
+      "qualification_code": "SBA22",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Environmental Studies, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Environmental manager",
+        "Environmental consultant",
+        "Hydrologist",
+        "Government",
+        "Resource manager",
+        "Conservationist",
+        "Environmental Impact assessment",
+        "Tourism officer",
+        "Climate change impacts analyst"
+      ],
+      "source": {
+        "prospectus_page": 120,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Geospatial Sciences",
+      "qualification_code": "SBA20",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Geospatial Sciences, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Applications Specialist",
+        "Cartographer",
+        "Computer Scientist",
+        "Database Administrator",
+        "Geographer",
+        "GIS Image Analyst",
+        "Photogrammetrist",
+        "Physical Scientist",
+        "Project Manager",
+        "Remote Sensing Scientist",
+        "Surveyor"
+      ],
+      "source": {
+        "prospectus_page": 121,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Geological Sciences",
+      "qualification_code": "SBA09",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Geological Sciences, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Mining Geologist",
+        "Hydrogeologist",
+        "Academic Researcher",
+        "Environmental Consultant",
+        "Geochemist",
+        "Exploration Geologist",
+        "Geophysics Consultant",
+        "GIS-Remote Sensing Specialist",
+        "Government Survey Geologist",
+        "Mineralogist",
+        "Heritage/Tourism Consultant",
+        "Mining Analyst",
+        "Minerals and Oil Exploration Geologist",
+        "Palaeontologist",
+        "Teacher 112222 www.wits.ac.za/course-finder/unde"
+      ],
+      "source": {
+        "prospectus_page": 122,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Actuarial Science",
+      "qualification_code": "SBA03",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 44,
+        "alternatives": [],
+        "display": "44+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 7,
+          "percentage": 80
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 7,
+          "percentage": 80
+        },
+        "english": {
+          "accepted": true,
+          "level": 7,
+          "percentage": 80
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Actuarial Science, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Asset Management  General Management",
+        "Banking  Health Care",
+        "Consulting  Life Insurance",
+        "Enterprise Risk Management  Research and Planning",
+        "General Insurance  Retirement Funding"
+      ],
+      "source": {
+        "prospectus_page": 123,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Computational and Applied Mathematics",
+      "qualification_code": "SBA21",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 44,
+        "alternatives": [],
+        "display": "44+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Computational and Applied Mathematics, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Analytics (Data, Quantitative,  Data Scientist Risk, Supply Chain)  Systems and",
+        "Forecasting Modelling Engineer",
+        "Consulting  Programmer",
+        "Investment Banking  Developer",
+        "Finance and Financial Services  Research and",
+        "Operations Research Academia",
+        "Teaching"
+      ],
+      "source": {
+        "prospectus_page": 124,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Computer Science",
+      "qualification_code": "SBA13",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 44,
+        "alternatives": [],
+        "display": "44+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Computer Science, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Game Design",
+        "Software Development",
+        "Software and System Architects",
+        "Teaching",
+        "Research",
+        "Database and System Administration",
+        "App Development",
+        "Data Scientist",
+        "Machine Learning Engineer",
+        "Robotics",
+        "Artificial Intelligence",
+        "Consulting",
+        "Cyber Security"
+      ],
+      "source": {
+        "prospectus_page": 125,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Mathematical Sciences",
+      "qualification_code": "SBA08",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 44,
+        "alternatives": [],
+        "display": "44+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 7,
+          "percentage": 80
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 7,
+          "percentage": 80
+        },
+        "english": {
+          "accepted": true,
+          "level": 7,
+          "percentage": 80
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Mathematical Sciences, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Banking",
+        "Statistician"
+      ],
+      "source": {
+        "prospectus_page": 126,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Physical Sciences (Chemistry)",
+      "qualification_code": "SBA12",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Physical Sciences (Chemistry), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Administrators",
+        "Agricultural Research",
+        "Applied Chemical Research",
+        "Biotechnology",
+        "Chemical Analysis",
+        "Chemical Services",
+        "Consultants",
+        "Environmental Research",
+        "Food and Drink Technology",
+        "Forensic Science",
+        "Forestry Research",
+        "Hazardous Waste Management"
+      ],
+      "source": {
+        "prospectus_page": 127,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Chemistry with Chemical Engineering",
+      "qualification_code": "SBA04",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 43,
+        "alternatives": [],
+        "display": "43+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Chemistry with Chemical Engineering, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Administrators  Patents",
+        "Agricultural Research  Pesticides Industry",
+        "Applied Chemical Research  Petrochemical Industry",
+        "Biotechnology  Personal Care Chemistry",
+        "Chemical Analysis  Sales of Scientific",
+        "Chemical Services Equipment",
+        "Consultants  Science Publishing",
+        "Environmental Research  Science Teacher",
+        "Food and Drink Technology  Textile Chemistry",
+        "Forensic Science  Water Treatment and",
+        "Forestry Research Analysis",
+        "Hazardous Waste  Quality Control and Management Management",
+        "Medical Research 128 www.wits.ac.za/course-finder/undergraduat"
+      ],
+      "source": {
+        "prospectus_page": 128,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Astronomy and Astrophysics",
+      "qualification_code": "SBA15",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 43,
+        "alternatives": [],
+        "display": "43+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Astronomy and Astrophysics, with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Astrophysicist",
+        "Physicist"
+      ],
+      "source": {
+        "prospectus_page": 129,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    },
+    {
+      "name": "BSc Physical Sciences (Physics)",
+      "qualification_code": "SBA12",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 42,
+        "alternatives": [],
+        "display": "42+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "An undergraduate Wits programme focused on Physical Sciences (Physics), with academic and practical preparation for related careers or further study.",
+      "career_opportunities": [
+        "Communications",
+        "Consultants and Administrators",
+        "Education",
+        "Environmental Science",
+        "Law",
+        "Physics Research",
+        "Project Managers",
+        "Software Engineers 130 www.wits.ac.za/course-finde"
+      ],
+      "source": {
+        "prospectus_page": 130,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "extracted_from_official_prospectus",
+        "note": "Requirements and selection rules can change; verify against Wits before applying."
+      }
+    }
+  ]
+}

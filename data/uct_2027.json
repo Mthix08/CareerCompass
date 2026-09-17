@@ -1,0 +1,4530 @@
+{
+  "university": {
+    "name": "University of Cape Town",
+    "abbreviation": "UCT",
+    "country": "South Africa",
+    "province": "Western Cape"
+  },
+  "schema_version": "1.0",
+  "generated_from": "UCT 2027 Undergraduate Prospectus (uct.pdf)",
+  "important_notice": "This structured dataset summarises the official 2027 prospectus for discovery in CareerCompass. UCT selection is capacity-limited and uses faculty-specific APS/FPS/WPS calculations, NBT results, subject thresholds, portfolios or auditions. Always verify against the current official UCT prospectus and admissions guidance before applying.",
+  "course_count": 82,
+  "courses": [
+    {
+      "name": "Bachelor of Business Science specialising in Actuarial Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 500,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 525,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 475,
+            "maximum": 479,
+            "outcome": "possible EDU"
+          }
+        ],
+        "display": "Band A: FPS 500+; Band B: WPS 525+; targeted-redress Band C: FPS 475-479; Mathematics 80%"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 80,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 80,
+          "accepted": true,
+          "raw_note": "If English FAL is used, Proficient AL and QL NBT results are required."
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Applies mathematics and statistics to financial uncertainty and professional actuarial work.",
+      "career_opportunities": [
+        "Actuary",
+        "Risk analyst",
+        "Insurance or pensions specialist"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Science specialising in Quantitative Finance",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 500,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 525,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 475,
+            "maximum": 479,
+            "outcome": "possible EDU"
+          }
+        ],
+        "display": "Band A: FPS 500+; Band B: WPS 525+; targeted-redress Band C: FPS 475-479; Mathematics 80%"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 80,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 80,
+          "accepted": true,
+          "raw_note": "If English FAL is used, Proficient AL and QL NBT results are required."
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Combines quantitative methods, finance and risk analysis for investment markets.",
+      "career_opportunities": [
+        "Quantitative analyst",
+        "Investment analyst",
+        "Risk specialist"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Science specialising in Computer Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "outcome": "possible EDU"
+          }
+        ],
+        "display": "Band A: FPS 435+; Band B: WPS 470+; targeted-redress Band C: FPS 430-434; Mathematics 70%"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Combines computing foundations with business and management studies.",
+      "career_opportunities": [
+        "Software developer",
+        "Data analyst",
+        "Technology consultant"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Science specialising in Economics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Builds economic analysis and business-science skills for policy and management decisions.",
+      "career_opportunities": [
+        "Economist",
+        "Policy analyst",
+        "Management consultant"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Science specialising in Economics with Law",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Combines economics and commercial legal study as preparation for business or further law study.",
+      "career_opportunities": [
+        "Economic analyst",
+        "Compliance analyst",
+        "Commercial-law pathway"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Science specialising in Finance, Investment and Banking",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Develops finance, investment and banking expertise within a business-science curriculum.",
+      "career_opportunities": [
+        "Investment analyst",
+        "Banking analyst",
+        "Asset-management professional"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Science specialising in Finance with Accounting",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Combines finance and accounting and can support the Chartered Accountant pathway with further study.",
+      "career_opportunities": [
+        "Financial analyst",
+        "Accountant",
+        "Corporate-finance professional"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Science specialising in Information Systems",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Examines how organisations design and use information technologies and business systems.",
+      "career_opportunities": [
+        "Business analyst",
+        "Systems analyst",
+        "Technology consultant"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Science specialising in Marketing",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Combines quantitative marketing, strategy and general business education.",
+      "career_opportunities": [
+        "Marketing analyst",
+        "Brand manager",
+        "Market-research specialist"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Science specialising in Industrial and Organisational Psychology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Applies psychology to people, teams and organisational performance.",
+      "career_opportunities": [
+        "Human-resources practitioner",
+        "Organisational-development consultant",
+        "Talent-management specialist"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Science specialising in Statistics and Data Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "outcome": "possible EDU"
+          }
+        ],
+        "display": "Band A: FPS 435+; Band B: WPS 470+; targeted-redress Band C: FPS 430-434; Mathematics 70%"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Develops statistical, computational and business skills for extracting insight from data.",
+      "career_opportunities": [
+        "Data analyst",
+        "Statistician",
+        "Data scientist"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Actuarial Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 500,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 525,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 475,
+            "maximum": 479,
+            "outcome": "possible EDU"
+          }
+        ],
+        "display": "Band A: FPS 500+; Band B: WPS 525+; targeted-redress Band C: FPS 475-479; Mathematics 80%"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 80,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 80,
+          "accepted": true,
+          "raw_note": "If English FAL is used, Proficient AL and QL NBT results are required."
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Provides actuarial, statistical and financial foundations in a Commerce degree.",
+      "career_opportunities": [
+        "Actuarial analyst",
+        "Risk analyst",
+        "Insurance specialist"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Quantitative Finance",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 500,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 525,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 475,
+            "maximum": 479,
+            "outcome": "possible EDU"
+          }
+        ],
+        "display": "Band A: FPS 500+; Band B: WPS 525+; targeted-redress Band C: FPS 475-479; Mathematics 80%"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 80,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 80,
+          "accepted": true,
+          "raw_note": "If English FAL is used, Proficient AL and QL NBT results are required."
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Applies mathematical and statistical methods to investment and financial problems.",
+      "career_opportunities": [
+        "Quantitative analyst",
+        "Investment analyst",
+        "Financial risk analyst"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Financial Accounting (General)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Develops accounting and financial-information skills for broad professional practice.",
+      "career_opportunities": [
+        "Accountant",
+        "Internal auditor",
+        "Financial consultant"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Financial Accounting (Chartered Accountant)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Undergraduate academic route toward CA(SA), followed by the required postgraduate and professional training.",
+      "career_opportunities": [
+        "Chartered-accountancy pathway",
+        "Auditor",
+        "Financial manager"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Economics with Law",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Combines economic study with law for commerce and possible postgraduate LLB study.",
+      "career_opportunities": [
+        "Economic analyst",
+        "Compliance practitioner",
+        "Commercial-law pathway"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Economics with Finance",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Connects economic analysis with financial markets and decision-making.",
+      "career_opportunities": [
+        "Financial analyst",
+        "Economist",
+        "Investment professional"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Economics and Statistics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Emphasises quantitative economics and statistical interpretation of economic and financial data.",
+      "career_opportunities": [
+        "Economic analyst",
+        "Statistician",
+        "Policy analyst"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Information Systems",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Focuses on organisational information needs, technology infrastructure and business systems.",
+      "career_opportunities": [
+        "Business analyst",
+        "Systems analyst",
+        "IT consultant"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Information Systems and Computer Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "outcome": "possible EDU"
+          }
+        ],
+        "display": "Band A: FPS 435+; Band B: WPS 470+; targeted-redress Band C: FPS 430-434; Mathematics 70%"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Combines organisational systems analysis with software and computing foundations.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems analyst",
+        "Technology consultant"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Information Systems and Finance",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Combines business technology with finance for digitally enabled financial work.",
+      "career_opportunities": [
+        "Fintech analyst",
+        "Business analyst",
+        "Financial-systems consultant"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Management Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "A flexible Commerce degree combining a business core with broad elective choice.",
+      "career_opportunities": [
+        "Management trainee",
+        "Business consultant",
+        "Entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce specialising in Philosophy, Politics and Economics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 435,
+            "out_of": 600,
+            "admission_band": "A",
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 470,
+            "admission_band": "B",
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 430,
+            "maximum": 434,
+            "admission_band": "C",
+            "outcome": "possible EDU",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 435+ (guaranteed); Band B: WPS 470+ (likely); targeted-redress Band C: FPS 430-434 (possible EDU)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy and Quantitative Literacy: Upper Intermediate or above"
+        }
+      },
+      "description": "Integrates economic, political and ethical analysis of public and commercial problems.",
+      "career_opportunities": [
+        "Policy analyst",
+        "Economic researcher",
+        "Public-sector consultant"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Architectural Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 450,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 408,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 348,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 450+ (guaranteed); Band B: WPS 408+ (likely); targeted-redress Band C: FPS 348+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are not used for EBE admission."
+        },
+        "english": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "additional": {
+          "raw_note": "Portfolio required: 75% Band A, 68% Band B, 50% Band C."
+        }
+      },
+      "description": "Develops architectural design, rational problem-solving and judgement in the built and natural environment.",
+      "career_opportunities": [
+        "Candidate architectural technologist",
+        "Architectural designer",
+        "Further professional architecture study"
+      ],
+      "source": {
+        "prospectus_page": 33,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Engineering in Chemical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 500,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 480,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 420,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 500+ (guaranteed); Band B: WPS 480+ (likely); targeted-redress Band C: FPS 420+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 80,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are not used for EBE admission."
+        },
+        "physical_sciences": {
+          "percentage": 75,
+          "accepted": true
+        },
+        "additional": {
+          "raw_note": "Band B/C Physical Sciences minimum: 70%."
+        }
+      },
+      "description": "Applies chemistry, physics and mathematics to sustainable industrial processes and products.",
+      "career_opportunities": [
+        "Chemical engineer",
+        "Process engineer",
+        "Production or plant engineer"
+      ],
+      "source": {
+        "prospectus_page": 33,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Engineering in Civil Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 500,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 480,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 420,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 500+ (guaranteed); Band B: WPS 480+ (likely); targeted-redress Band C: FPS 420+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 80,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are not used for EBE admission."
+        },
+        "physical_sciences": {
+          "percentage": 70,
+          "accepted": true
+        }
+      },
+      "description": "Covers infrastructure, structures, water, transport, geotechnics, construction and environmental evaluation.",
+      "career_opportunities": [
+        "Civil engineer",
+        "Structural engineer",
+        "Water or transport engineer"
+      ],
+      "source": {
+        "prospectus_page": 33,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Construction Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 450,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 420,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 390,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 450+ (guaranteed); Band B: WPS 420+ (likely); targeted-redress Band C: FPS 390+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 65,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are not used for EBE admission."
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "additional": {
+          "raw_note": "Band B/C Physical Sciences minimum: 55%."
+        }
+      },
+      "description": "Prepares students for construction contracts, costing, project finance and building management.",
+      "career_opportunities": [
+        "Construction manager pathway",
+        "Quantity surveying pathway",
+        "Project-cost consultant"
+      ],
+      "source": {
+        "prospectus_page": 33,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Engineering in Electrical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 500,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 480,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 420,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 500+ (guaranteed); Band B: WPS 480+ (likely); targeted-redress Band C: FPS 420+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 80,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are not used for EBE admission."
+        },
+        "physical_sciences": {
+          "percentage": 75,
+          "accepted": true
+        }
+      },
+      "description": "Covers power, energy, telecommunications, electronics, automation and system design.",
+      "career_opportunities": [
+        "Electrical engineer",
+        "Power-systems engineer",
+        "Telecommunications engineer"
+      ],
+      "source": {
+        "prospectus_page": 34,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Engineering in Electrical and Computer Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 500,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 480,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 420,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 500+ (guaranteed); Band B: WPS 480+ (likely); targeted-redress Band C: FPS 420+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 80,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are not used for EBE admission."
+        },
+        "physical_sciences": {
+          "percentage": 75,
+          "accepted": true
+        }
+      },
+      "description": "Integrates electrical engineering and computer science for computing, signal and control systems.",
+      "career_opportunities": [
+        "Computer engineer",
+        "Embedded-systems engineer",
+        "Electronics engineer"
+      ],
+      "source": {
+        "prospectus_page": 34,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Geomatics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 450,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 420,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 390,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 450+ (guaranteed); Band B: WPS 420+ (likely); targeted-redress Band C: FPS 390+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 75,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are not used for EBE admission."
+        },
+        "physical_sciences": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "additional": {
+          "raw_note": "Band B/C: Mathematics 65% and Physical Sciences 60%."
+        }
+      },
+      "description": "Focuses on surveying, mapping, GIS, remote sensing and spatial-information management.",
+      "career_opportunities": [
+        "Professional surveyor pathway",
+        "GIS specialist",
+        "Geomatics practitioner"
+      ],
+      "source": {
+        "prospectus_page": 34,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Engineering in Mechanical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 500,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 480,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 420,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 500+ (guaranteed); Band B: WPS 480+ (likely); targeted-redress Band C: FPS 420+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 80,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are not used for EBE admission."
+        },
+        "physical_sciences": {
+          "percentage": 75,
+          "accepted": true
+        }
+      },
+      "description": "Studies forces, energy, machines, design, manufacturing and mechanical systems.",
+      "career_opportunities": [
+        "Mechanical engineer",
+        "Design engineer",
+        "Manufacturing engineer"
+      ],
+      "source": {
+        "prospectus_page": 34,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Engineering in Mechanical and Mechatronic Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 500,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 480,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 420,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 500+ (guaranteed); Band B: WPS 480+ (likely); targeted-redress Band C: FPS 420+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 80,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are not used for EBE admission."
+        },
+        "physical_sciences": {
+          "percentage": 75,
+          "accepted": true
+        }
+      },
+      "description": "Combines mechanical engineering with embedded systems, robotics and industrial automation.",
+      "career_opportunities": [
+        "Mechatronics engineer",
+        "Robotics engineer",
+        "Automation engineer"
+      ],
+      "source": {
+        "prospectus_page": 34,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Engineering in Mechatronics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 500,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 480,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 420,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 500+ (guaranteed); Band B: WPS 480+ (likely); targeted-redress Band C: FPS 420+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 80,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are not used for EBE admission."
+        },
+        "physical_sciences": {
+          "percentage": 75,
+          "accepted": true
+        }
+      },
+      "description": "Combines mechanical fundamentals with light-current electrical and electronic engineering.",
+      "career_opportunities": [
+        "Mechatronics engineer",
+        "Control-systems engineer",
+        "Automation engineer"
+      ],
+      "source": {
+        "prospectus_page": 34,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Property Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 450,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 420,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 390,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A: FPS 450+ (guaranteed); Band B: WPS 420+ (likely); targeted-redress Band C: FPS 390+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 65,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are not used for EBE admission."
+        }
+      },
+      "description": "Builds knowledge of property finance, economics, law, valuation and development.",
+      "career_opportunities": [
+        "Property analyst",
+        "Property-development professional",
+        "Property valuation pathway"
+      ],
+      "source": {
+        "prospectus_page": 33,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Medicine and Bachelor of Surgery",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 6,
+      "aps": {
+        "minimum": 450,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 810,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 807,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 644,
+            "outcome": "possible"
+          }
+        ],
+        "display": "Sub-minimum APS 450; Band A FPS 810+; Band B WPS 807+; targeted-redress Band C FPS 644+"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "english": {
+          "percentage": 65,
+          "accepted": true
+        },
+        "next_three_best_subjects": {
+          "percentage": 70,
+          "raw_note": "Excluding Life Orientation"
+        },
+        "nbt": {
+          "raw_note": "Band A requires Proficient AL, QL and Mathematics; Bands B/C require Intermediate or above."
+        }
+      },
+      "description": "Six-year professional medical degree followed by the prescribed internship and community service.",
+      "career_opportunities": [
+        "Medical doctor",
+        "Clinical practitioner",
+        "Further specialist training"
+      ],
+      "source": {
+        "prospectus_page": 43,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Physiotherapy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 360,
+        "alternatives": [],
+        "display": "Sub-minimum APS 360; Band A FPS 730+; Band B WPS 797+; Band C varies by redress category"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "physical_sciences_or_life_sciences": {
+          "percentage": 65,
+          "accepted": true
+        },
+        "english": {
+          "percentage": 65,
+          "accepted": true
+        },
+        "next_three_best_subjects": {
+          "percentage": 60,
+          "raw_note": "Excluding Life Orientation"
+        },
+        "nbt": {
+          "raw_note": "Intermediate or above in AL, QL and Mathematics."
+        }
+      },
+      "description": "Professional programme in movement, rehabilitation, injury prevention and physical treatment.",
+      "career_opportunities": [
+        "Physiotherapist",
+        "Rehabilitation practitioner",
+        "Sports-team physiotherapist"
+      ],
+      "source": {
+        "prospectus_page": 43,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Occupational Therapy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 340,
+        "alternatives": [],
+        "display": "Sub-minimum APS 340; Band A FPS 730+; Band B WPS 782+; Band C varies by redress category"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "mathematical_literacy": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences_or_life_sciences": {
+          "percentage": 65,
+          "accepted": true
+        },
+        "english": {
+          "percentage": 65,
+          "accepted": true
+        },
+        "next_three_best_subjects": {
+          "percentage": 60,
+          "raw_note": "Excluding Life Orientation"
+        },
+        "nbt": {
+          "raw_note": "Intermediate or above; special Mathematics-NBT rule applies to Mathematical Literacy applicants."
+        }
+      },
+      "description": "Prepares practitioners to help people participate independently in home, work and leisure activities.",
+      "career_opportunities": [
+        "Occupational therapist",
+        "Community rehabilitation practitioner",
+        "Private-practice therapist"
+      ],
+      "source": {
+        "prospectus_page": 44,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Audiology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 340,
+        "alternatives": [],
+        "display": "Sub-minimum APS 340; Band A FPS 720+; Band B WPS 710+; Band C varies by redress category"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "mathematical_literacy": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences_or_life_sciences": {
+          "percentage": 65,
+          "accepted": true
+        },
+        "english": {
+          "percentage": 65,
+          "accepted": true
+        },
+        "next_three_best_subjects": {
+          "percentage": 60,
+          "raw_note": "Excluding Life Orientation"
+        },
+        "nbt": {
+          "raw_note": "Intermediate or above; special Mathematics-NBT rule applies to Mathematical Literacy applicants."
+        }
+      },
+      "description": "Professional study of hearing assessment, hearing support and noise measurement.",
+      "career_opportunities": [
+        "Audiologist",
+        "Hearing-aid practitioner",
+        "Clinical or school audiologist"
+      ],
+      "source": {
+        "prospectus_page": 44,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Speech-Language Pathology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 340,
+        "alternatives": [],
+        "display": "Sub-minimum APS 340; Band A FPS 715+; Band B WPS 670+; Band C varies by redress category"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "mathematical_literacy": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences_or_life_sciences": {
+          "percentage": 65,
+          "accepted": true
+        },
+        "english": {
+          "percentage": 65,
+          "accepted": true
+        },
+        "next_three_best_subjects": {
+          "percentage": 60,
+          "raw_note": "Excluding Life Orientation"
+        },
+        "nbt": {
+          "raw_note": "Intermediate or above; Mathematical Literacy applicants are considered individually."
+        }
+      },
+      "description": "Professional programme for assessing and treating communication and swallowing disorders.",
+      "career_opportunities": [
+        "Speech-language therapist",
+        "School-based therapist",
+        "Clinical rehabilitation practitioner"
+      ],
+      "source": {
+        "prospectus_page": 45,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Higher Certificate in Disability Practice",
+      "qualification_code": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No APS band published; NSC or approved HEQSF level-4 qualification and qualifying NBT results"
+      },
+      "subject_requirements": {
+        "school_leaving_qualification": {
+          "raw_note": "National Senior Certificate or approved HEQSF level-4 qualification."
+        },
+        "nbt": {
+          "raw_note": "Upper Intermediate to Proficient in Academic and Quantitative Literacy."
+        }
+      },
+      "description": "Develops foundational community-based disability prevention, care and inclusive-development skills.",
+      "career_opportunities": [
+        "Community disability worker",
+        "Home-based carer",
+        "Disability-inclusion support worker"
+      ],
+      "source": {
+        "prospectus_page": 40,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Advanced Diploma in Cosmetic Formulation Science",
+      "qualification_code": null,
+      "qualification_type": "Advanced Diploma",
+      "faculty": "Faculty of Health Sciences",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Prior tertiary study required; no school-leaver APS band published"
+      },
+      "subject_requirements": {
+        "prior_study": {
+          "raw_note": "Degree with Biochemistry 3 and at least Chemistry 2, or partially completed/non-degree study with Chemistry 2 plus relevant work experience."
+        }
+      },
+      "description": "Advanced study in the science and formulation of cosmetic products.",
+      "career_opportunities": [
+        "Cosmetic formulation scientist",
+        "Product-development technologist",
+        "Cosmetics quality specialist"
+      ],
+      "source": {
+        "prospectus_page": 45,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Higher Certificate in Adult and Community Education and Training",
+      "qualification_code": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No school-leaver APS published"
+      },
+      "subject_requirements": {
+        "entry_qualification": {
+          "raw_note": "NSC, Level 4 NC(V), appropriate Level 4 adult/community/early-childhood education certificate, or recognition of prior learning."
+        }
+      },
+      "description": "Provides introductory preparation for adult and community education practice.",
+      "career_opportunities": [
+        "Community education facilitator",
+        "Adult-learning support worker",
+        "Training assistant"
+      ],
+      "source": {
+        "prospectus_page": 49,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Advanced Certificate in Foundation Phase Teaching",
+      "qualification_code": null,
+      "qualification_type": "Advanced Certificate",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Prior teaching qualification required; consult faculty requirements"
+      },
+      "subject_requirements": {
+        "prior_qualification": {
+          "raw_note": "Advanced certificates are post-school professional qualifications; verify the specific teacher-qualification route with UCT."
+        }
+      },
+      "description": "Professional development focused on teaching in the foundation phase.",
+      "career_opportunities": [
+        "Foundation-phase teacher development",
+        "Curriculum support",
+        "Education practitioner"
+      ],
+      "source": {
+        "prospectus_page": 49,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Advanced Certificate in Intermediate Phase Teaching",
+      "qualification_code": null,
+      "qualification_type": "Advanced Certificate",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Prior teaching qualification required; consult faculty requirements"
+      },
+      "subject_requirements": {
+        "prior_qualification": {
+          "raw_note": "Verify current programme-specific teacher-qualification requirements with UCT."
+        }
+      },
+      "description": "Professional development focused on intermediate-phase teaching.",
+      "career_opportunities": [
+        "Intermediate-phase teacher development",
+        "Curriculum support",
+        "Education practitioner"
+      ],
+      "source": {
+        "prospectus_page": 49,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Advanced Certificate in Senior Phase Teaching",
+      "qualification_code": null,
+      "qualification_type": "Advanced Certificate",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Prior teaching qualification required; consult faculty requirements"
+      },
+      "subject_requirements": {
+        "prior_qualification": {
+          "raw_note": "Verify current programme-specific teacher-qualification requirements with UCT."
+        }
+      },
+      "description": "Professional development focused on senior-phase teaching.",
+      "career_opportunities": [
+        "Senior-phase teacher development",
+        "Subject teaching support",
+        "Education practitioner"
+      ],
+      "source": {
+        "prospectus_page": 49,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Music Performance",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Diploma endorsement; no numeric APS published"
+      },
+      "subject_requirements": {
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy at Intermediate level."
+        },
+        "selection": {
+          "raw_note": "Satisfactory audition, interview and music-theory test."
+        }
+      },
+      "description": "Performance-focused music training offered in several instrumental and vocal streams.",
+      "career_opportunities": [
+        "Professional musician",
+        "Performer",
+        "Music educator pathway"
+      ],
+      "source": {
+        "prospectus_page": 52,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Theatre and Performance",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Diploma endorsement; no numeric APS published"
+      },
+      "subject_requirements": {
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy at Intermediate level."
+        },
+        "selection": {
+          "raw_note": "Satisfactory audition."
+        }
+      },
+      "description": "Practical and academic preparation for theatre, dance and performance work.",
+      "career_opportunities": [
+        "Performer",
+        "Theatre practitioner",
+        "Production practitioner"
+      ],
+      "source": {
+        "prospectus_page": 52,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Advanced Diploma in Adult and Community Education and Training",
+      "qualification_code": null,
+      "qualification_type": "Advanced Diploma",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Prior Level 6 qualification or recognised equivalent required"
+      },
+      "subject_requirements": {
+        "prior_qualification": {
+          "raw_note": "Approved Level 6 Diploma in ACET or another route listed by the faculty, including possible RPL pathways."
+        }
+      },
+      "description": "Advanced professional preparation for adult and community education.",
+      "career_opportunities": [
+        "Adult-education practitioner",
+        "Community training coordinator",
+        "Education programme manager"
+      ],
+      "source": {
+        "prospectus_page": 49,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Advanced Diploma in School Leadership and Management",
+      "qualification_code": null,
+      "qualification_type": "Advanced Diploma",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Prior professional qualification required; consult faculty requirements"
+      },
+      "subject_requirements": {
+        "prior_qualification": {
+          "raw_note": "Professional school-leadership programme; verify current entry requirements with UCT."
+        }
+      },
+      "description": "Develops leadership and management capability for school settings.",
+      "career_opportunities": [
+        "School manager",
+        "Education leader",
+        "Department head pathway"
+      ],
+      "source": {
+        "prospectus_page": 49,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 450,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 450,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 380,
+            "outcome": "possible"
+          }
+        ],
+        "display": "Band A FPS 450+; Band B WPS 450+; targeted-redress Band C FPS 380+"
+      },
+      "subject_requirements": {
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy: Proficient for Band A, Upper Intermediate for Band B, Intermediate for Band C."
+        }
+      },
+      "description": "Flexible humanities degree allowing combinations of arts, languages, media and related majors.",
+      "career_opportunities": [
+        "Communications professional",
+        "Researcher",
+        "Public-sector or cultural-sector professional"
+      ],
+      "source": {
+        "prospectus_page": 49,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 450,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 450,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 380,
+            "outcome": "possible"
+          }
+        ],
+        "display": "Band A FPS 450+; Band B WPS 450+; targeted-redress Band C FPS 380+"
+      },
+      "subject_requirements": {
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy: Proficient for Band A, Upper Intermediate for Band B, Intermediate for Band C."
+        }
+      },
+      "description": "Flexible social-science degree drawing from disciplines such as politics, sociology, psychology and economics.",
+      "career_opportunities": [
+        "Social researcher",
+        "Policy analyst",
+        "Public or NGO-sector professional"
+      ],
+      "source": {
+        "prospectus_page": 49,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science in Philosophy, Politics and Economics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 450
+          }
+        ],
+        "display": "FPS 450+ with required NBT and Mathematics results"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic and Quantitative Literacy: Upper Intermediate or above; Band A AL is Proficient."
+        }
+      },
+      "description": "Structured interdisciplinary degree integrating philosophical, political and economic analysis.",
+      "career_opportunities": [
+        "Policy analyst",
+        "Economic researcher",
+        "Government or NGO consultant"
+      ],
+      "source": {
+        "prospectus_page": 51,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Fine Art",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 380
+          }
+        ],
+        "display": "FPS 380+ plus successful portfolio evaluation"
+      },
+      "subject_requirements": {
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy: Proficient for Band A, Upper Intermediate for Band B, Intermediate for Band C."
+        },
+        "selection": {
+          "raw_note": "Satisfactory portfolio evaluation; portfolio performance is the leading selection indicator."
+        }
+      },
+      "description": "Studio and critical study in fine art, visual practice and art discourse.",
+      "career_opportunities": [
+        "Visual artist",
+        "Curatorial assistant",
+        "Arts practitioner"
+      ],
+      "source": {
+        "prospectus_page": 50,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Theatre and Performance",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 380
+          }
+        ],
+        "display": "FPS 380+ plus successful audition"
+      },
+      "subject_requirements": {
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy: Proficient for Band A, Upper Intermediate for Band B, Intermediate for Band C."
+        },
+        "selection": {
+          "raw_note": "Satisfactory audition; audition performance is the leading selection indicator."
+        }
+      },
+      "description": "Structured professional and academic preparation in theatre and performance.",
+      "career_opportunities": [
+        "Actor or performer",
+        "Theatre-maker",
+        "Performance practitioner"
+      ],
+      "source": {
+        "prospectus_page": 50,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Music",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 380
+          }
+        ],
+        "display": "FPS 380+ plus successful audition, interview and music-theory test"
+      },
+      "subject_requirements": {
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy: Proficient for Band A, Upper Intermediate for Band B, Intermediate for Band C."
+        },
+        "music": {
+          "raw_note": "NSC Music 60%, or UNISA Music Theory Grade V and Practical Grade VII, plus audition, interview and theory test."
+        }
+      },
+      "description": "Four-year music degree offered through performance and academic streams.",
+      "career_opportunities": [
+        "Professional musician",
+        "Composer or arranger",
+        "Music educator pathway"
+      ],
+      "source": {
+        "prospectus_page": 52,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Work",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 450,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 450,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 380,
+            "outcome": "possible"
+          }
+        ],
+        "display": "Band A FPS 450+; Band B WPS 450+; targeted-redress Band C FPS 380+"
+      },
+      "subject_requirements": {
+        "english_home_language": {
+          "percentage": 50,
+          "accepted": true
+        },
+        "english_first_additional_language": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Academic Literacy: Proficient for Band A, Upper Intermediate for Band B, Intermediate for Band C."
+        },
+        "selection": {
+          "raw_note": "Applicants may be interviewed and must be able to meet professional council requirements."
+        }
+      },
+      "description": "Professional social-work programme focused on social development, support and community empowerment.",
+      "career_opportunities": [
+        "Social worker",
+        "Community-development practitioner",
+        "Social-services programme officer"
+      ],
+      "source": {
+        "prospectus_page": 51,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Advanced Diploma in Music",
+      "qualification_code": null,
+      "qualification_type": "Advanced Diploma",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Diploma in Music Performance or equivalent with 65% average, plus selection"
+      },
+      "subject_requirements": {
+        "prior_qualification": {
+          "raw_note": "Relevant diploma with 65% average; satisfactory audition and theory test or specified first-class performance result."
+        }
+      },
+      "description": "Advanced specialist development in music performance.",
+      "career_opportunities": [
+        "Professional musician",
+        "Advanced performer",
+        "Music educator pathway"
+      ],
+      "source": {
+        "prospectus_page": 56,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Advanced Diploma in Opera",
+      "qualification_code": null,
+      "qualification_type": "Advanced Diploma",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Relevant music-performance diploma with 65% average, plus selection"
+      },
+      "subject_requirements": {
+        "prior_qualification": {
+          "raw_note": "Diploma in Music Performance specialising in Opera or equivalent; audition and theory requirements apply."
+        }
+      },
+      "description": "Advanced professional preparation for operatic performance.",
+      "career_opportunities": [
+        "Opera singer",
+        "Stage performer",
+        "Vocal-performance practitioner"
+      ],
+      "source": {
+        "prospectus_page": 56,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Advanced Diploma in Theatre",
+      "qualification_code": null,
+      "qualification_type": "Advanced Diploma",
+      "faculty": "Faculty of Humanities",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Relevant theatre diploma with prescribed academic averages"
+      },
+      "subject_requirements": {
+        "prior_qualification": {
+          "raw_note": "Diploma in Theatre and Performance or equivalent with prescribed third- and second-year averages."
+        }
+      },
+      "description": "Advanced practical and academic theatre training.",
+      "career_opportunities": [
+        "Theatre performer",
+        "Theatre-maker",
+        "Production practitioner"
+      ],
+      "source": {
+        "prospectus_page": 56,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Laws",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 500,
+            "outcome": "guaranteed",
+            "eligibility": "SA applicants"
+          },
+          {
+            "type": "WPS",
+            "minimum": 500,
+            "outcome": "likely",
+            "eligibility": "SA applicants"
+          },
+          {
+            "type": "FPS",
+            "minimum": 470,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          },
+          {
+            "type": "FPS",
+            "minimum": 510,
+            "outcome": "probable",
+            "eligibility": "international applicants"
+          }
+        ],
+        "display": "SA Band A FPS 500+; Band B WPS 500+; targeted-redress Band C FPS 470+; international probable FPS 510+"
+      },
+      "subject_requirements": {
+        "nbt": {
+          "raw_note": "Band A/B: Proficient Academic Literacy and Intermediate-or-above Quantitative Literacy. Band C: Proficient AL and QL."
+        }
+      },
+      "description": "Four-year undergraduate professional law degree covering legal foundations and preparation for legal practice or related careers.",
+      "career_opportunities": [
+        "Attorney pathway",
+        "Advocate pathway",
+        "Legal adviser",
+        "Compliance professional"
+      ],
+      "source": {
+        "prospectus_page": 62,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Applied Mathematics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Applies mathematical methods to scientific, technological and social problems.",
+      "career_opportunities": [
+        "Applied mathematician",
+        "Quantitative analyst",
+        "Modelling specialist"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Applied Statistics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Uses statistics, operational research and data science to solve real-world problems.",
+      "career_opportunities": [
+        "Statistician",
+        "Data analyst",
+        "Operations-research analyst"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Archaeology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        },
+        "major_specific_note": {
+          "raw_note": "Where Physical Sciences or Information Technology was not taken, major choice may be restricted to these areas under faculty rules."
+        }
+      },
+      "description": "Studies past human societies through material evidence, with a strong African focus.",
+      "career_opportunities": [
+        "Archaeologist",
+        "Heritage practitioner",
+        "Museum or research professional"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Artificial Intelligence",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Provides foundations in AI architecture, regulation and application, normally paired with a quantitative co-major.",
+      "career_opportunities": [
+        "AI developer",
+        "Machine-learning analyst",
+        "AI research pathway"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Astrophysics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Combines astronomy, physics and mathematics to study stars, galaxies and the universe.",
+      "career_opportunities": [
+        "Astronomy researcher",
+        "Data analyst",
+        "Science communicator"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Biology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Examines living organisms, ecology, evolution and biodiversity conservation.",
+      "career_opportunities": [
+        "Biologist",
+        "Ecology practitioner",
+        "Conservation scientist"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Biochemistry",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Studies molecules and chemical processes in living organisms, including proteins, metabolism and gene expression.",
+      "career_opportunities": [
+        "Biochemist",
+        "Laboratory researcher",
+        "Biotechnology practitioner"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Chemistry",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Covers organic, inorganic and physical chemistry with modern laboratory and analytical training.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory analyst",
+        "Quality-control scientist"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Computer Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Studies computing principles, software, algorithms and computational problem-solving.",
+      "career_opportunities": [
+        "Software developer",
+        "Computer scientist",
+        "Systems analyst"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Computer Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Links computer science with the design and application of computing systems.",
+      "career_opportunities": [
+        "Computer-systems specialist",
+        "Software engineer",
+        "Technology developer"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Business Computing",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        },
+        "major_specific_note": {
+          "raw_note": "For the Computer Science and Business Computing combination, Information Technology may replace Physical Sciences where Physical Sciences was not taken."
+        }
+      },
+      "description": "Combines computer science with business-oriented computing applications.",
+      "career_opportunities": [
+        "Business-systems analyst",
+        "Software developer",
+        "Technology consultant"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Environmental and Geographical Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        },
+        "major_specific_note": {
+          "raw_note": "Where Physical Sciences or Information Technology was not taken, major choice may be restricted to these areas under faculty rules."
+        }
+      },
+      "description": "Studies relationships between people and environmental systems, including climate, sustainability and risk.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "GIS or sustainability analyst",
+        "Disaster-risk practitioner"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Genetics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Covers classical, molecular and evolutionary genetics, genomics and gene regulation.",
+      "career_opportunities": [
+        "Genetics researcher",
+        "Laboratory scientist",
+        "Biotechnology practitioner"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Geology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Studies Earth materials, processes, resources, hazards and planetary evolution.",
+      "career_opportunities": [
+        "Geologist",
+        "Earth-science consultant",
+        "Mineral or environmental specialist"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Human Anatomy and Physiology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Integrates human structure and body function across cells, organs and physiological systems.",
+      "career_opportunities": [
+        "Biomedical research assistant",
+        "Physiology researcher",
+        "Health-science laboratory professional"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Marine Biology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Studies marine organisms, ecosystems, resources and conservation.",
+      "career_opportunities": [
+        "Marine biologist",
+        "Marine conservation practitioner",
+        "Fisheries or environmental scientist"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Mathematics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Develops rigorous understanding of mathematical structure, quantity, change and logical proof.",
+      "career_opportunities": [
+        "Mathematician",
+        "Quantitative analyst",
+        "Research or education pathway"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Mathematical Statistics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Studies mathematical theory and methods for experimental design and data analysis.",
+      "career_opportunities": [
+        "Mathematical statistician",
+        "Data scientist",
+        "Risk analyst"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Ocean and Atmosphere Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Examines oceans, atmosphere, climate, weather and their interactions.",
+      "career_opportunities": [
+        "Oceanographer",
+        "Climate scientist",
+        "Atmospheric-science researcher"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Physics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Studies matter, radiation and fundamental physical principles through mathematics and experimentation.",
+      "career_opportunities": [
+        "Physicist",
+        "Research scientist",
+        "Technical analyst"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Quantitative Biology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Combines biology, statistics and mathematics for biological modelling and data science.",
+      "career_opportunities": [
+        "Quantitative ecologist",
+        "Bio-data analyst",
+        "Biological modeller"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science majoring in Statistics and Data Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          {
+            "type": "FPS",
+            "minimum": 660,
+            "outcome": "guaranteed"
+          },
+          {
+            "type": "WPS",
+            "minimum": 640,
+            "outcome": "likely"
+          },
+          {
+            "type": "FPS",
+            "minimum": 550,
+            "outcome": "possible",
+            "eligibility": "SA targeted-redress applicants"
+          }
+        ],
+        "display": "Band A FPS 660+ (guaranteed); Band B WPS 640+ (likely); targeted-redress Band C FPS 550+ (possible)"
+      },
+      "subject_requirements": {
+        "mathematics": {
+          "percentage": 70,
+          "accepted": true
+        },
+        "physical_sciences": {
+          "percentage": 60,
+          "accepted": true
+        },
+        "nbt": {
+          "raw_note": "Mathematics, Academic Literacy and Quantitative Literacy NBTs must be written; results are used for placement, not admission."
+        }
+      },
+      "description": "Provides rigorous statistical, computational and database skills for analysing complex data.",
+      "career_opportunities": [
+        "Data scientist",
+        "Statistician",
+        "Data analyst"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "UCT uses APS, FPS, WPS, NBT results and selection bands differently by faculty. Meeting a published threshold does not guarantee an offer unless the prospectus explicitly labels that band as guaranteed. Verify current requirements with UCT before applying."
+      }
+    }
+  ]
+}

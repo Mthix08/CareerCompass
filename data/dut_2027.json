@@ -1,0 +1,2822 @@
+{
+  "university": {
+    "name": "Durban University of Technology",
+    "abbreviation": "DUT",
+    "country": "South Africa",
+    "province": "KwaZulu-Natal"
+  },
+  "schema_version": "1.0",
+  "generated_from": "DUT Study Opportunities 2027 prospectus (dut.pdf)",
+  "important_notice": "This dataset summarises DUT's official 2027 prospectus for CareerCompass. DUT commonly publishes compulsory NSC subject ratings rather than a single programme APS total. Numeric minimum points are included only where explicitly stated. CAO codes, campuses, extended programmes and special selection conditions should always be verified with DUT and CAO before application.",
+  "course_count": 83,
+  "courses": [
+    {
+      "name": "Bachelor of Information and Communication Technology",
+      "qualification_code": "DU-D-BIT",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4 and Mathematics level 4, plus the programme's specified recognised subjects; degree or diploma endorsement as applicable."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of information and communication technology, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Software or systems professional",
+        "Business or data analyst",
+        "ICT support or project professional"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Information and Communication Technology: Internet of Things",
+      "qualification_code": "DU-D-IOT",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4 and Mathematics level 4, plus the programme's specified recognised subjects; degree or diploma endorsement as applicable."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of information and communication technology: internet of things, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Software or systems professional",
+        "Business or data analyst",
+        "ICT support or project professional"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Accounting",
+      "qualification_code": [
+        "DU-D-DAT",
+        "DU-P-DAT"
+      ],
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": [
+        "Durban",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum 26 DUT points."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language level 3 or First Additional Language level 4; Mathematics level 3 or Mathematical Literacy level 5; Accounting level 4 where specified; required additional NSC subjects. The prospectus states a minimum overall points total of 26, excluding Life Orientation where indicated."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in accounting, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Accounting technician",
+        "Auditor or tax practitioner",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Accounting (Extended Curriculum Programme)",
+      "qualification_code": [
+        "DU-D-DA4",
+        "DU-P-DA4"
+      ],
+      "qualification_type": "Extended Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": [
+        "Durban",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "Minimum 24 DUT points."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language level 3 or First Additional Language level 4; Mathematics level 3 or Mathematical Literacy level 5; Accounting level 4 where specified; required additional NSC subjects. The prospectus states a minimum overall points total of 24, excluding Life Orientation where indicated."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT extended diploma in diploma in accounting, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Accounting technician",
+        "Auditor or tax practitioner",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Business and Information Management",
+      "qualification_code": [
+        "DU-D-BI3",
+        "DU-P-B13"
+      ],
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": [
+        "Durban",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC with the appropriate qualification endorsement; DUT programme-specific subject ratings and competitive selection apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in business and information management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Software or systems professional",
+        "Business or data analyst",
+        "ICT support or project professional"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Business and Information Management (Extended Curriculum Programme)",
+      "qualification_code": "DU-D-BI4",
+      "qualification_type": "Extended Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC with the appropriate qualification endorsement; DUT programme-specific subject ratings and competitive selection apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT extended diploma in diploma in business and information management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Software or systems professional",
+        "Business or data analyst",
+        "ICT support or project professional"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in ICT: Applications Development",
+      "qualification_code": [
+        "DU-D-APD",
+        "DU-I-APD"
+      ],
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": [
+        "Durban",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4 and Mathematics level 4, plus the programme's specified recognised subjects; degree or diploma endorsement as applicable."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in ict: applications development, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Software or systems professional",
+        "Business or data analyst",
+        "ICT support or project professional"
+      ],
+      "source": {
+        "prospectus_page": 14,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in ICT: Applications Development (Extended Curriculum Programme)",
+      "qualification_code": "DU-D-APF",
+      "qualification_type": "Extended Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4 and Mathematics level 4, plus the programme's specified recognised subjects; degree or diploma endorsement as applicable."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT extended diploma in diploma in ict: applications development, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Software or systems professional",
+        "Business or data analyst",
+        "ICT support or project professional"
+      ],
+      "source": {
+        "prospectus_page": 14,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in ICT: Business Analysis",
+      "qualification_code": "DU-D-BUA",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4 and Mathematics level 4, plus the programme's specified recognised subjects; degree or diploma endorsement as applicable."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in ict: business analysis, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Software or systems professional",
+        "Business or data analyst",
+        "ICT support or project professional"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Internal Auditing",
+      "qualification_code": "DU-D-DIA",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language level 3 or First Additional Language level 4; Mathematics level 3 or Mathematical Literacy level 5; Accounting level 4 where specified; required additional NSC subjects."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in internal auditing, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Accounting technician",
+        "Auditor or tax practitioner",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 18,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Internal Auditing (Extended Curriculum Programme)",
+      "qualification_code": "DU-D-DI4",
+      "qualification_type": "Extended Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language level 3 or First Additional Language level 4; Mathematics level 3 or Mathematical Literacy level 5; Accounting level 4 where specified; required additional NSC subjects."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT extended diploma in diploma in internal auditing, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Accounting technician",
+        "Auditor or tax practitioner",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 18,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Library and Information Studies",
+      "qualification_code": "DUDLS3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC with the appropriate qualification endorsement; DUT programme-specific subject ratings and competitive selection apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in library and information studies, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Software or systems professional",
+        "Business or data analyst",
+        "ICT support or project professional"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Management Accounting",
+      "qualification_code": "DUDMAC",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language level 3 or First Additional Language level 4; Mathematics level 3 or Mathematical Literacy level 5; Accounting level 4 where specified; required additional NSC subjects."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in management accounting, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Accounting technician",
+        "Auditor or tax practitioner",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Taxation",
+      "qualification_code": "DU-D-DTA",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language level 3 or First Additional Language level 4; Mathematics level 3 or Mathematical Literacy level 5; Accounting level 4 where specified; required additional NSC subjects."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in taxation, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Accounting technician",
+        "Auditor or tax practitioner",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Taxation (Extended Curriculum Programme)",
+      "qualification_code": "DU-D-DT6",
+      "qualification_type": "Extended Diploma",
+      "faculty": "Faculty of Accounting and Informatics",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language level 3 or First Additional Language level 4; Mathematics level 3 or Mathematical Literacy level 5; Accounting level 4 where specified; required additional NSC subjects."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT extended diploma in diploma in taxation, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Accounting technician",
+        "Auditor or tax practitioner",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Applied Science in Biotechnology",
+      "qualification_code": "DU-D-BBT",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of applied science in biotechnology, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Biotechnologist",
+        "Laboratory scientist",
+        "Quality-control analyst"
+      ],
+      "source": {
+        "prospectus_page": 26,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Applied Science in Food Science and Technology",
+      "qualification_code": "DU-D-BFS",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of applied science in food science and technology, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Food technologist",
+        "Nutrition or food-service professional",
+        "Quality assurance practitioner"
+      ],
+      "source": {
+        "prospectus_page": 27,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Applied Science in Industrial Chemistry",
+      "qualification_code": "DU-D-BSY",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of applied science in industrial chemistry, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory analyst",
+        "Chemical-industry technologist"
+      ],
+      "source": {
+        "prospectus_page": 29,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Sport Science and Management",
+      "qualification_code": "DU-D-SSM",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of sport science and management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Sport scientist",
+        "Sport manager",
+        "Fitness or wellness practitioner"
+      ],
+      "source": {
+        "prospectus_page": 30,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Applied Science in Textile Technology",
+      "qualification_code": "DU-D-ATT",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of applied science in textile technology, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Textile or fashion technologist",
+        "Production or quality manager",
+        "Designer or product developer"
+      ],
+      "source": {
+        "prospectus_page": 32,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Analytical Chemistry",
+      "qualification_code": "DU-D-CH3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in analytical chemistry, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory analyst",
+        "Chemical-industry technologist"
+      ],
+      "source": {
+        "prospectus_page": 33,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Clothing Management",
+      "qualification_code": "DU-D-CLM",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in clothing management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Textile or fashion technologist",
+        "Production or quality manager",
+        "Designer or product developer"
+      ],
+      "source": {
+        "prospectus_page": 35,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Consumer Sciences in Food and Nutrition",
+      "qualification_code": "DU-D-DFN",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in consumer sciences in food and nutrition, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Food technologist",
+        "Nutrition or food-service professional",
+        "Quality assurance practitioner"
+      ],
+      "source": {
+        "prospectus_page": 37,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Nautical Studies (Sea Going)",
+      "qualification_code": "DU-D-NS3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in nautical studies (sea going), combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Deck officer or maritime professional",
+        "Shipping operations officer",
+        "Logistics coordinator"
+      ],
+      "source": {
+        "prospectus_page": 39,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Shipping and Logistics (Shore-based)",
+      "qualification_code": "DU-D-SL3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in shipping and logistics (shore-based), combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Deck officer or maritime professional",
+        "Shipping operations officer",
+        "Logistics coordinator"
+      ],
+      "source": {
+        "prospectus_page": 41,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Sustainable Horticulture and Landscaping",
+      "qualification_code": "DU-D-SHL",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in sustainable horticulture and landscaping, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Horticulturist",
+        "Landscape practitioner",
+        "Nursery or parks manager"
+      ],
+      "source": {
+        "prospectus_page": 42,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Higher Certificate in Applied Sciences",
+      "qualification_code": "DU-D-HAS",
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT higher certificate in higher certificate in applied sciences, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Industry practitioner",
+        "Public- or private-sector specialist",
+        "Entrepreneur or postgraduate student"
+      ],
+      "source": {
+        "prospectus_page": 44,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Higher Certificate in Sport Management Science",
+      "qualification_code": "DU-D-SMS",
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": "Durban",
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement with programme-specific English, Mathematics or Mathematical Literacy, and relevant science subjects; competitive selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT higher certificate in higher certificate in sport management science, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Sport scientist",
+        "Sport manager",
+        "Fitness or wellness practitioner"
+      ],
+      "source": {
+        "prospectus_page": 46,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Applied Arts in Commercial Photography",
+      "qualification_code": "DU-D-COP",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Design",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement and programme-specific English/subject levels; portfolio, audition, interview or practical selection may apply to creative programmes."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of applied arts in commercial photography, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Photographer or cinematography professional",
+        "Post-production specialist",
+        "Creative producer"
+      ],
+      "source": {
+        "prospectus_page": 49,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Applied Arts in Screen Arts and Technology",
+      "qualification_code": "DU-C-SAT",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Design",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement and programme-specific English/subject levels; portfolio, audition, interview or practical selection may apply to creative programmes."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of applied arts in screen arts and technology, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Photographer or cinematography professional",
+        "Post-production specialist",
+        "Creative producer"
+      ],
+      "source": {
+        "prospectus_page": 51,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Design in Visual Communication Design",
+      "qualification_code": "DU-C-BDV",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Design",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement and programme-specific English/subject levels; portfolio, audition, interview or practical selection may apply to creative programmes."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of design in visual communication design, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Graphic or visual communication designer",
+        "Art director",
+        "Digital designer"
+      ],
+      "source": {
+        "prospectus_page": 54,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Senior Phase and Further Education and Training",
+      "qualification_code": [
+        "DU-I-EDE",
+        "DU-I-EDN",
+        "DU-I-EDL",
+        "DU-I-ECT",
+        "DU-I-EET",
+        "DU-I-EMT"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Design",
+      "campus": "Pietermaritzburg",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement and programme-specific English/subject levels; portfolio, audition, interview or practical selection may apply to creative programmes."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of education in senior phase and further education and training, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Teacher",
+        "Curriculum practitioner",
+        "Education specialist"
+      ],
+      "source": {
+        "prospectus_page": 56,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Journalism",
+      "qualification_code": "DU-C-BJO",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Design",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement and programme-specific English/subject levels; portfolio, audition, interview or practical selection may apply to creative programmes."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of journalism, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Journalist or content producer",
+        "Editor",
+        "Communication professional"
+      ],
+      "source": {
+        "prospectus_page": 61,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Drama",
+      "qualification_code": "DU-D-DR3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Arts and Design",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement and programme-specific English/subject levels; portfolio, audition, interview or practical selection may apply to creative programmes."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in drama, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Performer",
+        "Theatre production professional",
+        "Arts administrator"
+      ],
+      "source": {
+        "prospectus_page": 63,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Fashion Design",
+      "qualification_code": "DU-B-DIF",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Arts and Design",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement and programme-specific English/subject levels; portfolio, audition, interview or practical selection may apply to creative programmes."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in fashion design, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Textile or fashion technologist",
+        "Production or quality manager",
+        "Designer or product developer"
+      ],
+      "source": {
+        "prospectus_page": 65,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Fine Art",
+      "qualification_code": "DUCDFA",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Arts and Design",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement and programme-specific English/subject levels; portfolio, audition, interview or practical selection may apply to creative programmes."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in fine art, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Artist or designer",
+        "Studio practitioner",
+        "Arts entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 68,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Interior Design",
+      "qualification_code": "DUCID3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Arts and Design",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement and programme-specific English/subject levels; portfolio, audition, interview or practical selection may apply to creative programmes."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in interior design, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Interior or architectural designer",
+        "Design technologist",
+        "Built-environment consultant"
+      ],
+      "source": {
+        "prospectus_page": 70,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Jewellery Design and Manufacture",
+      "qualification_code": "DU-C-DJM",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Arts and Design",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement and programme-specific English/subject levels; portfolio, audition, interview or practical selection may apply to creative programmes."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in jewellery design and manufacture, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Artist or designer",
+        "Studio practitioner",
+        "Arts entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 71,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Language Practice",
+      "qualification_code": "DU-D-DLP",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Arts and Design",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement and programme-specific English/subject levels; portfolio, audition, interview or practical selection may apply to creative programmes."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in language practice, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Journalist or content producer",
+        "Editor",
+        "Communication professional"
+      ],
+      "source": {
+        "prospectus_page": 73,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Higher Certificate in Performing Arts Technology",
+      "qualification_code": "DU-D-HP2",
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Arts and Design",
+      "campus": "Durban",
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC endorsement and programme-specific English/subject levels; portfolio, audition, interview or practical selection may apply to creative programmes."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT higher certificate in higher certificate in performing arts technology, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Performer",
+        "Theatre production professional",
+        "Arts administrator"
+      ],
+      "source": {
+        "prospectus_page": 75,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering Technology in Chemical Engineering",
+      "qualification_code": "DU-D-ECH",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of engineering technology in chemical engineering, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory analyst",
+        "Chemical-industry technologist"
+      ],
+      "source": {
+        "prospectus_page": 79,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering Technology in Civil Engineering",
+      "qualification_code": "DU-D-BNC",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of engineering technology in civil engineering, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Engineering technologist",
+        "Production or project engineer",
+        "Technical consultant"
+      ],
+      "source": {
+        "prospectus_page": 81,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering Technology in Electronic Engineering",
+      "qualification_code": "DU-D-BGL",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of engineering technology in electronic engineering, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Engineering technologist",
+        "Production or project engineer",
+        "Technical consultant"
+      ],
+      "source": {
+        "prospectus_page": 83,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering Technology in Industrial Engineering",
+      "qualification_code": "DU-D-BIE",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of engineering technology in industrial engineering, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Engineering technologist",
+        "Production or project engineer",
+        "Technical consultant"
+      ],
+      "source": {
+        "prospectus_page": 85,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering Technology in Mechanical Engineering",
+      "qualification_code": "DU-D-BGM",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of engineering technology in mechanical engineering, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Engineering technologist",
+        "Production or project engineer",
+        "Technical consultant"
+      ],
+      "source": {
+        "prospectus_page": 87,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering Technology in Power Engineering",
+      "qualification_code": "DU-D-BGH",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of engineering technology in power engineering, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Engineering technologist",
+        "Production or project engineer",
+        "Technical consultant"
+      ],
+      "source": {
+        "prospectus_page": 89,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of the Built Environment in Architecture",
+      "qualification_code": "DU-D-BAT",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of the built environment in architecture, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Interior or architectural designer",
+        "Design technologist",
+        "Built-environment consultant"
+      ],
+      "source": {
+        "prospectus_page": 91,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of the Built Environment in Construction Studies",
+      "qualification_code": "DU-D-BBU",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of the built environment in construction studies, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Construction manager",
+        "Quantity-surveying or project professional",
+        "Built-environment consultant"
+      ],
+      "source": {
+        "prospectus_page": 93,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of the Built Environment in Geomatics",
+      "qualification_code": "DU-D-BBE",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of the built environment in geomatics, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Geomatics professional",
+        "Surveying or GIS specialist",
+        "Geospatial analyst"
+      ],
+      "source": {
+        "prospectus_page": 94,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of the Built Environment in Urban and Regional Planning",
+      "qualification_code": "DU-D-BUR",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of the built environment in urban and regional planning, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Urban and regional planner",
+        "Development planner",
+        "Municipal planning professional"
+      ],
+      "source": {
+        "prospectus_page": 96,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Engineering Technology in Civil Engineering",
+      "qualification_code": "DU-I-DNC",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Pietermaritzburg",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in engineering technology in civil engineering, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Engineering technologist",
+        "Production or project engineer",
+        "Technical consultant"
+      ],
+      "source": {
+        "prospectus_page": 98,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Built Environment in Construction Studies",
+      "qualification_code": "DU-I-DBE",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Pietermaritzburg",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in built environment in construction studies, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Construction manager",
+        "Quantity-surveying or project professional",
+        "Built-environment consultant"
+      ],
+      "source": {
+        "prospectus_page": 100,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Pulp and Paper Technology",
+      "qualification_code": "DU-D-DPP",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and the Built Environment",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at the programme-specific NSC levels, with the required degree or diploma endorsement; selection is competitive."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in pulp and paper technology, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Engineering technologist",
+        "Production or project engineer",
+        "Technical consultant"
+      ],
+      "source": {
+        "prospectus_page": 102,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Child and Youth Care",
+      "qualification_code": "DU-D-CYC",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of child and youth care, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Child and youth care practitioner",
+        "Community-support professional",
+        "Youth programme coordinator"
+      ],
+      "source": {
+        "prospectus_page": 106,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Chiropractic",
+      "qualification_code": "DUDCHI",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 6,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of health sciences in chiropractic, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Registered healthcare practitioner",
+        "Private-practice professional",
+        "Health researcher"
+      ],
+      "source": {
+        "prospectus_page": 108,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Clinical Technology",
+      "qualification_code": "DU-D-DCT",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of health sciences in clinical technology, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Clinical or medical laboratory technologist",
+        "Diagnostic-services practitioner",
+        "Biomedical researcher"
+      ],
+      "source": {
+        "prospectus_page": 110,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Emergency Medical Care and Rescue",
+      "qualification_code": "DUDHS4",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of health sciences in emergency medical care and rescue, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Emergency-care practitioner",
+        "Rescue professional",
+        "Emergency-services manager"
+      ],
+      "source": {
+        "prospectus_page": 112,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Environmental Health",
+      "qualification_code": "DUDEVH",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of health sciences in environmental health, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Environmental health practitioner",
+        "Public-health inspector",
+        "Health and safety officer"
+      ],
+      "source": {
+        "prospectus_page": 114,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Homoeopathy",
+      "qualification_code": "DUDHM4",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 5,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of health sciences in homoeopathy, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Registered healthcare practitioner",
+        "Private-practice professional",
+        "Health researcher"
+      ],
+      "source": {
+        "prospectus_page": 115,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Medical Laboratory Science",
+      "qualification_code": "DUDBLS",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of health sciences in medical laboratory science, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Clinical or medical laboratory technologist",
+        "Diagnostic-services practitioner",
+        "Biomedical researcher"
+      ],
+      "source": {
+        "prospectus_page": 117,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Medical Orthotics and Prosthetics",
+      "qualification_code": "DUDHSP",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of health sciences in medical orthotics and prosthetics, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Medical orthotist and prosthetist",
+        "Rehabilitation-device practitioner",
+        "Clinical technologist"
+      ],
+      "source": {
+        "prospectus_page": 119,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Radiography",
+      "qualification_code": [
+        "DU-D-RAD",
+        "DU-D-RAS",
+        "DU-D-RTO"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of health sciences in radiography, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Radiography or imaging practitioner",
+        "Sonographer or radiation-therapy practitioner",
+        "Clinical imaging professional"
+      ],
+      "source": {
+        "prospectus_page": 121,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Diagnostic Radiography",
+      "qualification_code": "DU-D-RAD",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of health sciences in diagnostic radiography, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Radiography or imaging practitioner",
+        "Sonographer or radiation-therapy practitioner",
+        "Clinical imaging professional"
+      ],
+      "source": {
+        "prospectus_page": 121,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Diagnostic Sonography",
+      "qualification_code": "DU-D-RAS",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of health sciences in diagnostic sonography, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Radiography or imaging practitioner",
+        "Sonographer or radiation-therapy practitioner",
+        "Clinical imaging professional"
+      ],
+      "source": {
+        "prospectus_page": 121,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Radiotherapy",
+      "qualification_code": "DU-D-RTO",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of health sciences in radiotherapy, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Radiography or imaging practitioner",
+        "Sonographer or radiation-therapy practitioner",
+        "Clinical imaging professional"
+      ],
+      "source": {
+        "prospectus_page": 121,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Bachelor of Nursing",
+      "qualification_code": "DU-I-BN1",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Pietermaritzburg",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT bachelor's degree in bachelor of nursing, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Professional nurse",
+        "Community-health practitioner",
+        "Nurse manager or educator"
+      ],
+      "source": {
+        "prospectus_page": 126,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Somatology",
+      "qualification_code": "DUDST3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in somatology, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Somatologist",
+        "Wellness or spa practitioner",
+        "Beauty-industry entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 128,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Higher Certificate in Dental Assisting",
+      "qualification_code": "DU-D-HDA",
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Durban",
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree or diploma endorsement as applicable, with programme-specific levels in English, Mathematics or Mathematical Literacy, Life Sciences and/or Physical Sciences; additional selection may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT higher certificate in higher certificate in dental assisting, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Dental assistant",
+        "Oral-health support practitioner",
+        "Dental-practice coordinator"
+      ],
+      "source": {
+        "prospectus_page": 129,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Catering Management",
+      "qualification_code": "DU-D-CKM",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in catering management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Hospitality or catering manager",
+        "Food-service manager",
+        "Hospitality entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 133,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Ecotourism Management",
+      "qualification_code": "DU-P-ET3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Pietermaritzburg",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in ecotourism management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Tourism operator or consultant",
+        "Tour guide or destination marketer",
+        "Tourism entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 134,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Hospitality Management",
+      "qualification_code": "DU-D-HPM",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in hospitality management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Hospitality or catering manager",
+        "Food-service manager",
+        "Hospitality entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 136,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Management Sciences: Business Administration",
+      "qualification_code": [
+        "DU-D-MN3",
+        "DU-P-MN3",
+        "DU-P-MB5"
+      ],
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": [
+        "Durban",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in management sciences: business administration, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Business administrator",
+        "Manager or supervisor",
+        "Entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 138,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Management Sciences: Business Law",
+      "qualification_code": "DU-D-BL3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in management sciences: business law, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Business administrator",
+        "Manager or supervisor",
+        "Entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 140,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Management Sciences: Human Resources",
+      "qualification_code": [
+        "DU-D-HR3",
+        "DU-P-HR3"
+      ],
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": [
+        "Durban",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in management sciences: human resources, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Human-resources practitioner",
+        "Recruitment or labour-relations officer",
+        "Training coordinator"
+      ],
+      "source": {
+        "prospectus_page": 141,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Management Sciences: Marketing",
+      "qualification_code": "DU-D-MK3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in management sciences: marketing, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Marketing or retail manager",
+        "Public-relations practitioner",
+        "Brand or communication specialist"
+      ],
+      "source": {
+        "prospectus_page": 144,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Management Sciences: Operations Management",
+      "qualification_code": [
+        "DU-D-PD3",
+        "DU-D-PDY"
+      ],
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in management sciences: operations management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Operations or supply-chain manager",
+        "Logistics or procurement officer",
+        "Production planner"
+      ],
+      "source": {
+        "prospectus_page": 146,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Management Sciences: Public Relations and Communication Management",
+      "qualification_code": [
+        "DU-D-MP3",
+        "DU-P-MP3"
+      ],
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": [
+        "Durban",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in management sciences: public relations and communication management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Marketing or retail manager",
+        "Public-relations practitioner",
+        "Brand or communication specialist"
+      ],
+      "source": {
+        "prospectus_page": 147,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Management Sciences: Retail Management",
+      "qualification_code": "DU-D-RB3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total is stated in the prospectus table; programme-specific subject ratings and selection rules apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in management sciences: retail management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Marketing or retail manager",
+        "Public-relations practitioner",
+        "Brand or communication specialist"
+      ],
+      "source": {
+        "prospectus_page": 149,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Public Administration: Disaster and Risk Management",
+      "qualification_code": "DU-D-RM3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "Minimum 25 DUT points."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply. The prospectus states a minimum overall points total of 25, excluding Life Orientation where indicated."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in public administration: disaster and risk management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Public-administration officer",
+        "Municipal or government manager",
+        "Policy or programme practitioner"
+      ],
+      "source": {
+        "prospectus_page": 151,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Public Administration: Local Government",
+      "qualification_code": "DU-D-GV3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "Minimum 25 DUT points."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply. The prospectus states a minimum overall points total of 25, excluding Life Orientation where indicated."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in public administration: local government, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Public-administration officer",
+        "Municipal or government manager",
+        "Policy or programme practitioner"
+      ],
+      "source": {
+        "prospectus_page": 151,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Public Administration: Public Management",
+      "qualification_code": [
+        "DU-D-PM3",
+        "DU-P-PM3"
+      ],
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": [
+        "Durban",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "Minimum 25 DUT points."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply. The prospectus states a minimum overall points total of 25, excluding Life Orientation where indicated."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in public administration: public management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Public-administration officer",
+        "Municipal or government manager",
+        "Policy or programme practitioner"
+      ],
+      "source": {
+        "prospectus_page": 151,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Public Administration: Supply Chain Management",
+      "qualification_code": [
+        "DU-D-SC3",
+        "DU-P-SC3"
+      ],
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": [
+        "Durban",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "Minimum 25 DUT points."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply. The prospectus states a minimum overall points total of 25, excluding Life Orientation where indicated."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in public administration: supply chain management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Operations or supply-chain manager",
+        "Logistics or procurement officer",
+        "Production planner"
+      ],
+      "source": {
+        "prospectus_page": 151,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "name": "Diploma in Tourism Management",
+      "qualification_code": "DU-D-DTM",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "Minimum 26 DUT points."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC diploma entry with programme-specific English, Mathematics or Mathematical Literacy and recognised subject ratings; additional selection criteria may apply. The prospectus states a minimum overall points total of 26, excluding Life Orientation where indicated."
+        },
+        "aps_calculation_method": "DUT selection uses NSC rating codes/points and excludes Life Orientation where the programme specifies an overall total."
+      },
+      "description": "A career-focused DUT diploma in diploma in tourism management, combining academic foundations with applied or professional preparation.",
+      "career_opportunities": [
+        "Tourism operator or consultant",
+        "Tour guide or destination marketer",
+        "Tourism entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 154,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_summarised_from_official_prospectus",
+        "note": "Subject requirements and selection conditions are concise summaries. Check the cited DUT prospectus page and current DUT/CAO information before applying; meeting minimum requirements does not guarantee admission."
+      }
+    }
+  ]
+}

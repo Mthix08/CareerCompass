@@ -1,0 +1,2320 @@
+{
+  "university": {
+    "name": "University of KwaZulu-Natal",
+    "abbreviation": "UKZN",
+    "country": "South Africa",
+    "province": "KwaZulu-Natal"
+  },
+  "schema_version": "1.0",
+  "generated_from": "UKZN Undergraduate Prospectus 2027 (ukzn.pdf)",
+  "important_notice": "This dataset summarises UKZN's official 2027 undergraduate prospectus for CareerCompass. APS values are generally competitive selection ranges rather than guaranteed admission thresholds. Programme-specific subjects, choice restrictions, auditions, portfolios and selection rules are preserved in summary form. Always verify current requirements with UKZN before applying.",
+  "course_count": 66,
+  "courses": [
+    {
+      "name": "B Sc Engineering: Agricultural",
+      "qualification_code": "KN-P-BEA",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Pietermaritzburg",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-33."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics and Physical Sciences level 5 (at least 65%); English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science engineering: agricultural, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering consultant",
+        "Project engineer"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Engineering: Chemical",
+      "qualification_code": "KN-H-BEC",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Howard College",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-33."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics and Physical Sciences level 5 (at least 65%); English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science engineering: chemical, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering consultant",
+        "Project engineer"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Engineering: Civil",
+      "qualification_code": [
+        "KN-H-BEV",
+        "KN-P-BEV"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": [
+        "Howard College",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-33."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics and Physical Sciences level 5 (at least 65%); English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science engineering: civil, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering consultant",
+        "Project engineer"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Engineering: Computer",
+      "qualification_code": [
+        "KN-H-BEK",
+        "KN-P-BEK"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": [
+        "Howard College",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-33."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics and Physical Sciences level 5 (at least 65%); English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science engineering: computer, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering consultant",
+        "Project engineer"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Engineering: Electrical",
+      "qualification_code": [
+        "KN-H-BEE",
+        "KN-P-BEE"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": [
+        "Howard College",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-33."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics and Physical Sciences level 5 (at least 65%); English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science engineering: electrical, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering consultant",
+        "Project engineer"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Engineering: Electronic",
+      "qualification_code": [
+        "KN-H-BEF",
+        "KN-P-BEF"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": [
+        "Howard College",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-33."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics and Physical Sciences level 5 (at least 65%); English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science engineering: electronic, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering consultant",
+        "Project engineer"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Engineering: Mechanical",
+      "qualification_code": [
+        "KN-H-BEM",
+        "KN-P-BEM"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": [
+        "Howard College",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-33."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics and Physical Sciences level 5 (at least 65%); English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science engineering: mechanical, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering consultant",
+        "Project engineer"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Land Surveying",
+      "qualification_code": "KN-H-BSL",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Howard College",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-33."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics and Physical Sciences level 5 (at least 65%); English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science land surveying, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Professional land surveyor",
+        "Geospatial specialist",
+        "Mapping consultant"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Architectural Studies",
+      "qualification_code": "KN-H-BAR",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Howard College",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics level 5; English and Life Orientation level 4; one approved subject at level 5. Shortlisted applicants may need a creative portfolio, essay and questionnaire."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on bachelor of architectural studies, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Research or policy professional",
+        "Public- or private-sector specialist",
+        "Postgraduate study in the field"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Agriculture: Agricultural Economics",
+      "qualification_code": "KN-P-SAE",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Pietermaritzburg",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English, Life Orientation and Mathematics level 4; Agricultural Sciences, Economics, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science agriculture: agricultural economics, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Agricultural scientist",
+        "Agribusiness or farm manager",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Agricultural Management",
+      "qualification_code": "KN-P-BAQ",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Pietermaritzburg",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English, Life Orientation and Mathematics level 4; Agricultural Sciences, Economics, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on bachelor of agricultural management, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Agricultural scientist",
+        "Agribusiness or farm manager",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Agriculture: Agricultural Plant Sciences",
+      "qualification_code": "KN-P-SAP",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Pietermaritzburg",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics, English and Life Orientation level 4; Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science agriculture: agricultural plant sciences, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Agricultural scientist",
+        "Agribusiness or farm manager",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Agriculture: Agribusiness",
+      "qualification_code": "KN-P-BSB",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Pietermaritzburg",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics, English and Life Orientation level 4; Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science agriculture: agribusiness, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Agricultural scientist",
+        "Agribusiness or farm manager",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Agriculture: Plant Pathology",
+      "qualification_code": "KN-P-BSP",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Pietermaritzburg",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics, English and Life Orientation level 4; Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science agriculture: plant pathology, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Agricultural scientist",
+        "Agribusiness or farm manager",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Agriculture: Soil Science",
+      "qualification_code": "KN-P-BS1",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Pietermaritzburg",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics, English and Life Orientation level 4; Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science agriculture: soil science, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Agricultural scientist",
+        "Agribusiness or farm manager",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Agriculture: Animal and Poultry Science",
+      "qualification_code": "KN-P-SAA",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Pietermaritzburg",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics, English and Life Orientation level 4; Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science agriculture: animal and poultry science, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Agricultural scientist",
+        "Agribusiness or farm manager",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Stream: Life and Earth Sciences",
+      "qualification_code": [
+        "KN-P-BS2",
+        "KN-W-BS2"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": [
+        "Pietermaritzburg",
+        "Westville"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics, English and Life Orientation level 4; Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science stream: life and earth sciences, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "GIS or geospatial analyst",
+        "Environmental consultant"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Stream: Mathematics",
+      "qualification_code": [
+        "KN-P-BS3",
+        "KN-W-BS3"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": [
+        "Pietermaritzburg",
+        "Westville"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics level 5; English and Life Orientation level 4; Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science stream: mathematics, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Research or policy professional",
+        "Public- or private-sector specialist",
+        "Postgraduate study in the field"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Geographic Information Systems and Earth Observation",
+      "qualification_code": "KN-P-GEO",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Pietermaritzburg",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics level 5; English and Life Orientation level 4; Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science geographic information systems and earth observation, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "GIS or geospatial analyst",
+        "Environmental consultant"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Applied Chemistry",
+      "qualification_code": "KN-W-BSR",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Westville",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics level 4 (level 5 where specified); Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science applied chemistry, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist",
+        "Chemical-industry professional"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Chemistry and Chemical Technology",
+      "qualification_code": "KN-P-SIK",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Pietermaritzburg",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics level 4 (level 5 where specified); Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science chemistry and chemical technology, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist",
+        "Chemical-industry professional"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Computer Science and Information Technology",
+      "qualification_code": [
+        "KN-P-BSU",
+        "KN-W-BSU"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": [
+        "Pietermaritzburg",
+        "Westville"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics level 4 (level 5 where specified); Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science computer science and information technology, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Software developer",
+        "Data or systems analyst",
+        "IT consultant"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Crop and Horticultural Science",
+      "qualification_code": "KN-P-SIH",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Pietermaritzburg",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics level 4 (level 5 where specified); Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science crop and horticultural science, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Agricultural scientist",
+        "Agribusiness or farm manager",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Environmental Science",
+      "qualification_code": [
+        "KN-P-BSS",
+        "KN-W-BSS"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": [
+        "Pietermaritzburg",
+        "Westville"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics level 4 (level 5 where specified); Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science environmental science, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "GIS or geospatial analyst",
+        "Environmental consultant"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Environmental and Earth Science",
+      "qualification_code": "KN-P-EES",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Pietermaritzburg",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics level 4 (level 5 where specified); Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science environmental and earth science, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "GIS or geospatial analyst",
+        "Environmental consultant"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Geological Science",
+      "qualification_code": "KN-W-BSG",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Westville",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics level 4 (level 5 where specified); Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science geological science, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "GIS or geospatial analyst",
+        "Environmental consultant"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Marine Biology",
+      "qualification_code": "KN-W-BSM",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Westville",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics level 4 (level 5 where specified); Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science marine biology, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "GIS or geospatial analyst",
+        "Environmental consultant"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Augmented Programme",
+      "qualification_code": [
+        "KN-P-BS4",
+        "KN-W-BS4"
+      ],
+      "qualification_type": "Extended bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": [
+        "Pietermaritzburg",
+        "Westville"
+      ],
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics and Agricultural Sciences, Life Sciences or Physical Sciences level 3. Intended for qualifying applicants from educationally disadvantaged schools."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science augmented programme, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Research or policy professional",
+        "Public- or private-sector specialist",
+        "Postgraduate study in the field"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sc Engineering Access",
+      "qualification_code": "KN-H-UNT",
+      "qualification_type": "Extended bachelor's degree",
+      "faculty": "College of Agriculture, Engineering and Science",
+      "campus": "Howard College",
+      "duration_years": 5,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum APS 28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics and Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on science engineering access, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Engineer",
+        "Engineering consultant",
+        "Project engineer"
+      ],
+      "source": {
+        "prospectus_page": 21,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Audiology",
+      "qualification_code": "KN-W-BPA",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Westville",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics and Life Sciences or Physical Sciences level 3. Only application choices 1–3 are considered."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on bachelor of audiology, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Audiologist",
+        "Hearing-care practitioner",
+        "Audiology researcher"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Speech-Language Therapy",
+      "qualification_code": "KN-W-BPB",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Westville",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics and Life Sciences or Physical Sciences level 3. Only application choices 1–3 are considered."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on bachelor of speech-language therapy, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Speech-language therapist",
+        "Communication-disorders clinician",
+        "Speech-language researcher"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Occupational Therapy",
+      "qualification_code": "KN-W-BOT",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Westville",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics and Life Sciences or Physical Sciences level 3. Only application choices 1–3 are considered."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b occupational therapy, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Occupational therapist",
+        "Community rehabilitation practitioner",
+        "Disability-services practitioner"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Dental Therapy",
+      "qualification_code": "KN-W-BDT",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Westville",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Life Sciences and Mathematics level 3. Only application choices 1–3 are considered."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b dental therapy, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Dental therapist",
+        "Oral-health practitioner",
+        "Community oral-health professional"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Oral Hygiene",
+      "qualification_code": "KN-W-BON",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Westville",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Life Sciences and Mathematics level 3. Only application choices 1–3 are considered."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b oral hygiene, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Oral hygienist",
+        "Preventive oral-health practitioner",
+        "Community oral-health educator"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Medical Science, Innovation and Entrepreneurship",
+      "qualification_code": "KN-W-BMS-IE",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Westville",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English, Mathematics, Physical Sciences and Life Sciences level 4. Only application choices 1–3 are considered."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on bachelor of medical science, innovation and entrepreneurship, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Research or policy professional",
+        "Public- or private-sector specialist",
+        "Postgraduate study in the field"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Optometry",
+      "qualification_code": "KN-W-BOP",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Westville",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-33."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English, Life Orientation, Mathematics, Life Sciences and Physical Sciences level 4. Only application choices 1–3 are considered."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b optometry, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Optometrist",
+        "Vision-care practitioner",
+        "Optometry researcher"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Pharmacy",
+      "qualification_code": "KN-W-BPR",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Westville",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-33."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English, Life Orientation, Mathematics, Life Sciences and Physical Sciences level 4. Only application choices 1–3 are considered."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b pharmacy, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Pharmacist",
+        "Clinical pharmacy practitioner",
+        "Pharmaceutical-industry professional"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Physiotherapy",
+      "qualification_code": "KN-W-BPH",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Westville",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English, Life Orientation, Mathematics, Life Sciences and Physical Sciences level 4. Only application choices 1–3 are considered."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b physiotherapy, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Physiotherapist",
+        "Rehabilitation practitioner",
+        "Sports physiotherapy practitioner"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Science Dietetics and Human Nutrition",
+      "qualification_code": "KN-P-BSD",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Pietermaritzburg",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English, Life Orientation and Mathematics level 4; Agricultural Sciences, Life Sciences or Physical Sciences level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on scienceience dietetics and human nutrition, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Dietitian",
+        "Nutrition professional",
+        "Community-health practitioner"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Sport Science",
+      "qualification_code": "KN-W-BRT",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Westville",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics or Mathematical Literacy level 3."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b sport science, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Sport scientist",
+        "Fitness or wellness practitioner",
+        "Sport and recreation officer"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Nursing",
+      "qualification_code": "KN-H-BN1",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Howard College",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics or Mathematical Literacy level 3; Life Sciences level 4. First-choice applications only."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b nursing, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Professional nurse",
+        "Community-health nurse",
+        "Nurse educator or manager"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Medicine and B Surgery",
+      "qualification_code": "KN-M-MBC",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Health Sciences",
+      "campus": "Nelson R. Mandela School of Medicine",
+      "duration_years": 6,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "APS not used in the qualification table; minimum 65% aggregate and 60% in specified subjects."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences each at least 60%, Life Orientation level 4, and at least 65% aggregate. Selection uses academic merit and College targets."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b medicine and b surgery, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Medical practitioner",
+        "Medical researcher",
+        "Public-health or clinical professional"
+      ],
+      "source": {
+        "prospectus_page": 22,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Ed (Foundation Phase)",
+      "qualification_code": "KN-E-BFP",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": "Edgewood",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English, Life Orientation and isiZulu level 4; Mathematical Literacy level 4 or Mathematics level 3."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b ed (foundation phase), combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Teacher",
+        "Education specialist",
+        "Curriculum or learning-support practitioner"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Ed (Intermediate Phase)",
+      "qualification_code": "KN-E-BIP",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": "Edgewood",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; level 5 in any two of Mathematics, Mathematical Literacy, Technology, Life Sciences or Physical Sciences."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b ed (intermediate phase), combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Teacher",
+        "Education specialist",
+        "Curriculum or learning-support practitioner"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Ed (Senior Phase/Further Education and Training)",
+      "qualification_code": "KN-E-BSN/FET",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": "Edgewood",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; level 5 in two NSC subjects relevant to the selected teaching package."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b ed (senior phase/further education and training), combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Teacher",
+        "Education specialist",
+        "Curriculum or learning-support practitioner"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "BA (General Studies)",
+      "qualification_code": [
+        "KN-H-BA2",
+        "KN-P-BA2"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": [
+        "Howard College",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; one approved humanities/language/science subject at level 5."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on ba (general studies), combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Research or policy professional",
+        "Public- or private-sector specialist",
+        "Postgraduate study in the field"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "BA in Music",
+      "qualification_code": "KN-H-BAM",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": "Howard College",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Minimum APS 28; audition required."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; audition required."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on ba in music, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Musician",
+        "Music educator",
+        "Arts administrator"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "BA in Music Foundation",
+      "qualification_code": "KN-H-BMX",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": "Howard College",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "Minimum APS 22; audition required."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; audition required."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on ba in music foundation, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Musician",
+        "Music educator",
+        "Arts administrator"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Soc Sc (General Studies)",
+      "qualification_code": [
+        "KN-H-SO2",
+        "KN-P-SO2"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": [
+        "Howard College",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; one approved humanities/language/science subject at level 5."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on social science (general studies), combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Research or policy professional",
+        "Public- or private-sector specialist",
+        "Postgraduate study in the field"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Soc Sc Geography and Environmental Management",
+      "qualification_code": [
+        "KN-H-SGE",
+        "KN-P-SGE"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": [
+        "Howard College",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; one approved humanities/language/science subject at level 5."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on social science geography and environmental management, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "GIS or geospatial analyst",
+        "Environmental consultant"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Soc Sc (Housing)",
+      "qualification_code": "KN-H-SOR",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": "Howard College",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Mathematics level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on social science (housing), combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Housing practitioner",
+        "Human-settlements planner",
+        "Housing-policy professional"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Social Work",
+      "qualification_code": "KN-H-BSX",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": "Howard College",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; one approved humanities/language/science subject at level 5."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on b social work, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Social worker",
+        "Community-development practitioner",
+        "Social-services professional"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "BA Philosophy, Politics and Law",
+      "qualification_code": [
+        "KN-H-ABP",
+        "KN-P-ABP"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": [
+        "Howard College",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; one approved humanities/language/science subject at level 5."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on ba philosophy, politics and law, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Legal practitioner",
+        "Legal adviser",
+        "Policy or compliance professional"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "BA Visual Art",
+      "qualification_code": "KN-P-AAV",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": "Pietermaritzburg",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; one approved humanities/language/science subject at level 5."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on ba visual art, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Visual artist",
+        "Art educator",
+        "Gallery or arts professional"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Soc Sc Government, Business and Ethics",
+      "qualification_code": "KN-P-SOG",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": "Pietermaritzburg",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; one approved humanities/language/science subject at level 5."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on social science government, business and ethics, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Business manager",
+        "Management consultant",
+        "Entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "Humanities Extended Curriculum",
+      "qualification_code": [
+        "KN-H-SO4",
+        "KN-P-SO4"
+      ],
+      "qualification_type": "Extended bachelor's degree",
+      "faculty": "College of Humanities",
+      "campus": [
+        "Howard College",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 4,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          27
+        ],
+        "display": "APS 20/27 as shown in the prospectus qualification table."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4. The table shows differentiated APS thresholds of 20/27."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on humanities extended curriculum, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Research or policy professional",
+        "Public- or private-sector specialist",
+        "Postgraduate study in the field"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Laws",
+      "qualification_code": [
+        "KN-H-BL1",
+        "KN-P-BL1"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Law and Management Studies",
+      "campus": [
+        "Howard College",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-32."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English Home Language level 5 or First Additional Language level 6; Mathematics level 3 or Mathematical Literacy level 5; Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on bachelor of laws, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Legal practitioner",
+        "Legal adviser",
+        "Policy or compliance professional"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Laws (part-time)",
+      "qualification_code": "KN-H-BLZ",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Law and Management Studies",
+      "campus": "Howard College",
+      "duration_years": 6,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-32."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English Home Language level 5 or First Additional Language level 6; Mathematics level 3 or Mathematical Literacy level 5; Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on bachelor of laws (part-time), combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Legal practitioner",
+        "Legal adviser",
+        "Policy or compliance professional"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Administration",
+      "qualification_code": "KN-W-BAD",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Law and Management Studies",
+      "campus": "Westville",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics level 3."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on bachelor of administration, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Business manager",
+        "Management consultant",
+        "Entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Administration",
+      "qualification_code": [
+        "KN-W-BBA",
+        "KN-P-BBA"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Law and Management Studies",
+      "campus": [
+        "Westville",
+        "Pietermaritzburg"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics level 3. The Pietermaritzburg offering is presented as evening classes."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on bachelor of business administration, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Business manager",
+        "Management consultant",
+        "Entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Science in Finance",
+      "qualification_code": "KN-W-B5F",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Law and Management Studies",
+      "campus": "Westville",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-33."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics level 6; English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on bachelor of business science in finance, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Financial analyst",
+        "Investment analyst",
+        "Risk or portfolio professional"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Science in Investment Science",
+      "qualification_code": "KN-W-B5I",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Law and Management Studies",
+      "campus": "Westville",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-33."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics level 6; English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on bachelor of business science in investment science, combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Financial analyst",
+        "Investment analyst",
+        "Risk or portfolio professional"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Com (General)",
+      "qualification_code": [
+        "KN-P-BC1",
+        "KN-W-BC1"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Law and Management Studies",
+      "campus": [
+        "Pietermaritzburg",
+        "Westville"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-30."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; English and Life Orientation level 4; Mathematics level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on commerce (general), combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Research or policy professional",
+        "Public- or private-sector specialist",
+        "Postgraduate study in the field"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Com (Accounting)",
+      "qualification_code": [
+        "KN-P-BCN",
+        "KN-W-BCN"
+      ],
+      "qualification_type": "Bachelor's degree",
+      "faculty": "College of Law and Management Studies",
+      "campus": [
+        "Pietermaritzburg",
+        "Westville"
+      ],
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-32."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics level 5; English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on commerce (accounting), combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Financial manager"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Com 4 General (Extended Curriculum)",
+      "qualification_code": [
+        "KN-P-BCG",
+        "KN-W-BCG"
+      ],
+      "qualification_type": "Extended bachelor's degree",
+      "faculty": "College of Law and Management Studies",
+      "campus": [
+        "Pietermaritzburg",
+        "Westville"
+      ],
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-26."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics level 3; English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on commerce 4 general (extended curriculum), combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Research or policy professional",
+        "Public- or private-sector specialist",
+        "Postgraduate study in the field"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    },
+    {
+      "name": "B Com 4 Accounting (Extended Curriculum)",
+      "qualification_code": [
+        "KN-P-BCO",
+        "KN-W-BCO"
+      ],
+      "qualification_type": "Extended bachelor's degree",
+      "faculty": "College of Law and Management Studies",
+      "campus": [
+        "Pietermaritzburg",
+        "Westville"
+      ],
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "APS selection range shown as 48-28."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC degree pass; Mathematics level 4; English and Life Orientation level 4."
+        },
+        "aps_calculation_method": "UKZN APS: English plus Mathematics/Mathematical Literacy plus the best four other subjects; Life Orientation excluded."
+      },
+      "description": "An undergraduate UKZN programme focused on commerce 4 accounting (extended curriculum), combining disciplinary knowledge with applied learning and preparation for related professional or postgraduate pathways.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Financial manager"
+      ],
+      "source": {
+        "prospectus_page": 24,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Programme description and career pathways are concise field-based summaries. Meeting minimum requirements does not guarantee selection; verify current rules with UKZN before applying."
+      }
+    }
+  ]
+}
