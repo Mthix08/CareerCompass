@@ -1,0 +1,2896 @@
+{
+  "university": {
+    "name": "University of Fort Hare",
+    "abbreviation": "UFH",
+    "country": "South Africa",
+    "province": "Eastern Cape"
+  },
+  "schema_version": "1.0",
+  "generated_from": "Study at the University of Fort Hare 2027 (two-page admissions poster supplied by the user)",
+  "important_notice": "Minimum requirements do not guarantee admission. The source is an admissions poster, not a full prospectus. Programme availability, campuses, duration, closing dates, capacity limits and professional accreditation should be confirmed directly with UFH. Descriptions and careers are concise inferred guidance and are not quotations from UFH.",
+  "course_count": 81,
+  "courses": [
+    {
+      "name": "Bachelor of Education Senior and FET Phase (Agriculture specialisation)",
+      "qualification_code": "500491",
+      "saqa_id": "112523",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          "29 with Mathematical Literacy"
+        ],
+        "display": "28 (29 with Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4 or Mathematical Literacy L5; Agricultural Science L4; Life Sciences L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Prepares graduates to teach in the Agriculture field or phase.",
+      "career_opportunities": [
+        "Teacher",
+        "Education programme coordinator",
+        "Curriculum support practitioner"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education Senior and FET Phase (Commerce specialisation)",
+      "qualification_code": "500492",
+      "saqa_id": "112523",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          "27 with Mathematics"
+        ],
+        "display": "28 (27 with Mathematics)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3 or Mathematical Literacy L4; any two of Accounting, Economics or Business Management L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Prepares graduates to teach in the Commerce field or phase.",
+      "career_opportunities": [
+        "Teacher",
+        "Education programme coordinator",
+        "Curriculum support practitioner"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education Senior and FET Phase (Science specialisation)",
+      "qualification_code": "500493",
+      "saqa_id": "112523",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; one of Physical Science, Life Science, Geography or Computer Science L4; three other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Prepares graduates to teach in the Science field or phase.",
+      "career_opportunities": [
+        "Teacher",
+        "Education programme coordinator",
+        "Curriculum support practitioner"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education Senior and FET Phase (Social Science specialisation)",
+      "qualification_code": "500494",
+      "saqa_id": "112523",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; isiXhosa or Afrikaans HL/FAL L4; History or Geography L4; three other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Prepares graduates to teach in the Social Science field or phase.",
+      "career_opportunities": [
+        "Teacher",
+        "Education programme coordinator",
+        "Curriculum support practitioner"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Foundation Phase Teaching",
+      "qualification_code": "50045",
+      "saqa_id": "103090",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          "29 with Mathematical Literacy"
+        ],
+        "display": "28 (29 with Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4 or Mathematical Literacy L5; isiXhosa or Afrikaans HL/FAL L4; three other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Prepares graduates to teach in the Foundation Phase field or phase.",
+      "career_opportunities": [
+        "Teacher",
+        "Education programme coordinator",
+        "Curriculum support practitioner"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Intermediate Phase Teaching",
+      "qualification_code": "50046",
+      "saqa_id": "99690",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          "29 with Mathematical Literacy"
+        ],
+        "display": "28 (29 with Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4 or Mathematical Literacy L5; isiXhosa or Afrikaans HL/FAL L4; three other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Prepares graduates to teach in the Intermediate Phase field or phase.",
+      "career_opportunities": [
+        "Teacher",
+        "Education programme coordinator",
+        "Curriculum support practitioner"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Laws",
+      "qualification_code": "21525",
+      "saqa_id": "15577",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3, Mathematical Literacy L4, or Technical Mathematics L4; four other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Professional undergraduate law degree covering South African legal foundations and practice.",
+      "career_opportunities": [
+        "Attorney (after professional requirements)",
+        "Advocate (after professional requirements)",
+        "Legal adviser",
+        "Compliance officer"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Laws (Extended Programme)",
+      "qualification_code": "21526",
+      "saqa_id": "15577",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          "with Mathematical Literacy or Technical Mathematics"
+        ],
+        "display": "28 (with Mathematical Literacy or Technical Mathematics)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L2, Mathematical Literacy L4, or Technical Mathematics L4; four other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended-curriculum route into the LLB with additional academic support.",
+      "career_opportunities": [
+        "Attorney (after professional requirements)",
+        "Advocate (after professional requirements)",
+        "Legal adviser"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Law",
+      "qualification_code": "21527",
+      "saqa_id": "15573",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          "29 with Mathematical Literacy or Technical Mathematics"
+        ],
+        "display": "28 (29 with Mathematical Literacy or Technical Mathematics)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4, Mathematical Literacy L5, or Technical Mathematics L5; four other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Combines commerce foundations with legal studies.",
+      "career_opportunities": [
+        "Compliance officer",
+        "Legal administrator",
+        "Corporate governance officer",
+        "Business analyst"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Administration in Public Administration",
+      "qualification_code": "62005",
+      "saqa_id": "94224",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Commerce",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [
+          "28 with Mathematical Literacy"
+        ],
+        "display": "26 (28 with Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L4; Mathematics L2 or Mathematical Literacy L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Public-sector administration and governance.",
+      "career_opportunities": [
+        "Public administrator",
+        "Municipal administrator",
+        "Policy support officer"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce",
+      "qualification_code": "60025",
+      "saqa_id": "115313",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Commerce",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L4; Mathematics L4; four other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Broad commerce studies with business and management foundations.",
+      "career_opportunities": [
+        "Business analyst",
+        "Management trainee",
+        "Entrepreneur"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce: Extended Curriculum Programme",
+      "qualification_code": "61025",
+      "saqa_id": "115313",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Commerce",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L4; Mathematics L3; four other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended commerce route with additional academic development.",
+      "career_opportunities": [
+        "Business analyst",
+        "Management trainee",
+        "Entrepreneur"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce (Economics)",
+      "qualification_code": "600251",
+      "saqa_id": "115313",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Commerce",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L4; Mathematics L4; four other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Commerce programme focused on economic analysis.",
+      "career_opportunities": [
+        "Economist",
+        "Economic analyst",
+        "Policy analyst"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce (Economics) Extended Curriculum Programme",
+      "qualification_code": "610251",
+      "saqa_id": "115313",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Commerce",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L4; Mathematics L3; four other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended economics route with additional academic development.",
+      "career_opportunities": [
+        "Economic analyst",
+        "Policy support officer",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce (Industrial Psychology)",
+      "qualification_code": "600252",
+      "saqa_id": "115313",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Commerce",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L4; Mathematics L4; four other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Commerce programme focused on workplace behaviour and people management.",
+      "career_opportunities": [
+        "Human-resources practitioner",
+        "Training officer",
+        "Organisational-development assistant"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce (Industrial Psychology) Extended Curriculum Programme",
+      "qualification_code": "610252",
+      "saqa_id": "115313",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Commerce",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L4; Mathematics L3; four other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended industrial-psychology route with academic support.",
+      "career_opportunities": [
+        "Human-resources practitioner",
+        "Training officer"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Information Systems",
+      "qualification_code": "60021",
+      "saqa_id": "118062",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Commerce",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L4; Mathematics L4; four other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Combines business studies with information systems analysis.",
+      "career_opportunities": [
+        "Business systems analyst",
+        "IT consultant",
+        "Information-systems officer"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Information Systems Extended Curriculum Programme",
+      "qualification_code": "60201",
+      "saqa_id": "118062",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Commerce",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L4; Mathematics L3; four other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended information-systems route with academic support.",
+      "career_opportunities": [
+        "Business systems analyst",
+        "IT support analyst"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Accounting",
+      "qualification_code": "60001",
+      "saqa_id": "17394",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Commerce",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L5; Mathematics L5; among four other subjects, two at L4 and two at L5; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Accounting-focused commerce programme.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor (subject to professional requirements)",
+        "Financial analyst"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Accounting Extended Curriculum Programme",
+      "qualification_code": "60006",
+      "saqa_id": "17394",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Commerce",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L4; Mathematics L4; among four other subjects, two at L4 and two at L5; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended accounting route with additional academic support.",
+      "career_opportunities": [
+        "Accountant",
+        "Audit trainee",
+        "Finance officer"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Human Movement Science",
+      "qualification_code": "84001",
+      "saqa_id": "115314",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          "29 with Mathematical Literacy"
+        ],
+        "display": "28 (29 with Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4 or Mathematical Literacy L5; Life Sciences L4; three other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Human movement, exercise, wellness and performance studies.",
+      "career_opportunities": [
+        "Exercise specialist",
+        "Sport programme coordinator",
+        "Wellness practitioner"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Speech Language Pathology",
+      "qualification_code": "84033",
+      "saqa_id": "101706",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          "29 with Mathematical Literacy"
+        ],
+        "display": "28 (29 with Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4 or Mathematical Literacy L5; Physical Science L4; Life Sciences L4; two other subjects L4; Life Orientation L4. Contact faculty for availability."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Professional study of communication and swallowing assessment and intervention.",
+      "career_opportunities": [
+        "Speech-language therapist (after registration)",
+        "Communication-health practitioner"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Nursing",
+      "qualification_code": "84040",
+      "saqa_id": "117790",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          "29 with Mathematical Literacy"
+        ],
+        "display": "28 (29 with Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4 or Mathematical Literacy L5; Physical Science L4; Life Sciences L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Professional nursing education combining health science and clinical practice.",
+      "career_opportunities": [
+        "Professional nurse (after registration)",
+        "Community-health nurse"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 1
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Botany and Entomology)",
+      "qualification_code": "40008",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Botany and Entomology.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Botany and Microbiology)",
+      "qualification_code": "40009",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Botany and Microbiology.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Chemistry and Botany)",
+      "qualification_code": "40011",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Chemistry and Botany.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Chemistry Single Major)",
+      "qualification_code": "40012",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Chemistry Single Major.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Chemistry and Geology)",
+      "qualification_code": "40013",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Chemistry and Geology.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Computer Science and Applied Mathematics)",
+      "qualification_code": "40014",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Computer Science and Applied Mathematics.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Computer Science and Physics)",
+      "qualification_code": "40015",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Computer Science and Physics.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Computer Science and Statistics)",
+      "qualification_code": "40016",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Computer Science and Statistics.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Geography and Geology)",
+      "qualification_code": "40017",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Geography and Geology.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Geography and GIS)",
+      "qualification_code": "40018",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Geography and GIS.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (GIS and Computer Science)",
+      "qualification_code": "40020",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in GIS and Computer Science.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Geology and GIS)",
+      "qualification_code": "40022",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Geology and GIS.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Geology and Physics)",
+      "qualification_code": "40023",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Geology and Physics.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Mathematics and Physics)",
+      "qualification_code": "40024",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Mathematics and Physics.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Mathematics and Computer Science)",
+      "qualification_code": "40025",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Mathematics and Computer Science.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Mathematics and Chemistry)",
+      "qualification_code": "40026",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Mathematics and Chemistry.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Microbiology and Zoology)",
+      "qualification_code": "40027",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Microbiology and Zoology.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Mathematical Statistics and Mathematics)",
+      "qualification_code": "40028",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Mathematical Statistics and Mathematics.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Statistics and Geology)",
+      "qualification_code": "40029",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Statistics and Geology.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Entomology and Microbiology)",
+      "qualification_code": "40032",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Entomology and Microbiology.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (GIS and Zoology)",
+      "qualification_code": "40033",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in GIS and Zoology.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (GIS and Entomology)",
+      "qualification_code": "40034",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in GIS and Entomology.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Applied Mathematics and Mathematics)",
+      "qualification_code": "40035",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Applied Mathematics and Mathematics.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Applied Mathematics and Statistics)",
+      "qualification_code": "40036",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Applied Mathematics and Statistics.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Applied Mathematics and Physics)",
+      "qualification_code": "40037",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Applied Mathematics and Physics.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Biochemistry and Microbiology)",
+      "qualification_code": "40039",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Biochemistry and Microbiology.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Biochemistry and Chemistry)",
+      "qualification_code": "40040",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Biochemistry and Chemistry.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Biochemistry and Computer Science)",
+      "qualification_code": "40041",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Biochemistry and Computer Science.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Botany and Zoology)",
+      "qualification_code": "40042",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Botany and Zoology.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Chemistry and Physics)",
+      "qualification_code": "40043",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Science degree combining study in Chemistry and Physics.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (Extended Programme)",
+      "qualification_code": "40400",
+      "saqa_id": "19236",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics and Physical Science: one at L3 and the other at L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended science route with additional academic development.",
+      "career_opportunities": [
+        "Scientific officer",
+        "Laboratory or field technician",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture (Soil Science)",
+      "qualification_code": "71522",
+      "saqa_id": "100997",
+      "qualification_type": "Bachelor of Science in Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Agricultural science degree specialising in Soil Science.",
+      "career_opportunities": [
+        "Soil Science specialist",
+        "Agricultural adviser",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture (Soil Science) Extended Programme",
+      "qualification_code": "71422",
+      "saqa_id": "100997",
+      "qualification_type": "Bachelor of Science in Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics and Physical Science: one at L3 and the other at L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended agricultural-science route specialising in Soil Science.",
+      "career_opportunities": [
+        "Soil Science specialist",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture (Horticulture)",
+      "qualification_code": "71523",
+      "saqa_id": "100998",
+      "qualification_type": "Bachelor of Science in Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Agricultural science degree specialising in Horticulture.",
+      "career_opportunities": [
+        "Horticulture specialist",
+        "Agricultural adviser",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture (Horticulture) Extended Programme",
+      "qualification_code": "71423",
+      "saqa_id": "100998",
+      "qualification_type": "Bachelor of Science in Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics and Physical Science: one at L3 and the other at L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended agricultural-science route specialising in Horticulture.",
+      "career_opportunities": [
+        "Horticulture specialist",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture (Crops)",
+      "qualification_code": "71524",
+      "saqa_id": "101000",
+      "qualification_type": "Bachelor of Science in Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Agricultural science degree specialising in Crops.",
+      "career_opportunities": [
+        "Crops specialist",
+        "Agricultural adviser",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture (Crops) Extended Programme",
+      "qualification_code": "71424",
+      "saqa_id": "101000",
+      "qualification_type": "Bachelor of Science in Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics and Physical Science: one at L3 and the other at L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended agricultural-science route specialising in Crops.",
+      "career_opportunities": [
+        "Crops specialist",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture (Animal Production)",
+      "qualification_code": "71525",
+      "saqa_id": "100996",
+      "qualification_type": "Bachelor of Science in Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Agricultural science degree specialising in Animal Production.",
+      "career_opportunities": [
+        "Animal Production specialist",
+        "Agricultural adviser",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture (Animal Production) Extended Programme",
+      "qualification_code": "71425",
+      "saqa_id": "100996",
+      "qualification_type": "Bachelor of Science in Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics and Physical Science: one at L3 and the other at L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended agricultural-science route specialising in Animal Production.",
+      "career_opportunities": [
+        "Animal Production specialist",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture (Pasture Science)",
+      "qualification_code": "71526",
+      "saqa_id": "100999",
+      "qualification_type": "Bachelor of Science in Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Agricultural science degree specialising in Pasture Science.",
+      "career_opportunities": [
+        "Pasture Science specialist",
+        "Agricultural adviser",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture (Pasture Science) Extended Programme",
+      "qualification_code": "71426",
+      "saqa_id": "100999",
+      "qualification_type": "Bachelor of Science in Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics and Physical Science: one at L3 and the other at L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended agricultural-science route specialising in Pasture Science.",
+      "career_opportunities": [
+        "Pasture Science specialist",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture (Agricultural Economics)",
+      "qualification_code": "71521",
+      "saqa_id": "100995",
+      "qualification_type": "Bachelor of Science in Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Agricultural science degree specialising in Agricultural Economics.",
+      "career_opportunities": [
+        "Agricultural Economics specialist",
+        "Agricultural adviser",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture (Agricultural Economics) Extended Programme",
+      "qualification_code": "71421",
+      "saqa_id": "100995",
+      "qualification_type": "Bachelor of Science in Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics and Physical Science: one at L3 and the other at L4; one of Life Sciences, Geography, Agriculture or Information Technology L4; two other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended agricultural-science route specialising in Agricultural Economics.",
+      "career_opportunities": [
+        "Agricultural Economics specialist",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Agriculture",
+      "qualification_code": "70001",
+      "saqa_id": "3393",
+      "qualification_type": "Bachelor of Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          "29 with Mathematical Literacy"
+        ],
+        "display": "28 (29 with Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematical Literacy L5 or Mathematics L4; Agriculture L4; three other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Applied agricultural studies, including production, management and extension.",
+      "career_opportunities": [
+        "Agricultural extension officer",
+        "Farm manager",
+        "Agribusiness officer"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Agriculture (Extended Programme)",
+      "qualification_code": "70401",
+      "saqa_id": "3393",
+      "qualification_type": "Bachelor of Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [
+          "28 with Mathematical Literacy"
+        ],
+        "display": "27 (28 with Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematical Literacy L4 or Mathematics L3; Agriculture L4; three other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Applied agricultural studies, including production, management and extension.",
+      "career_opportunities": [
+        "Agricultural extension officer",
+        "Farm manager",
+        "Agribusiness officer"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Agriculture (Agricultural Extension)",
+      "qualification_code": "70002",
+      "saqa_id": "100994",
+      "qualification_type": "Bachelor of Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          "29 with Mathematical Literacy"
+        ],
+        "display": "28 (29 with Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematical Literacy L5 or Mathematics L4; Agriculture L4; three other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Applied agricultural studies, including production, management and extension.",
+      "career_opportunities": [
+        "Agricultural extension officer",
+        "Farm manager",
+        "Agribusiness officer"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Agriculture (Agricultural Extension) Extended Programme",
+      "qualification_code": "70402",
+      "saqa_id": "100994",
+      "qualification_type": "Bachelor of Agriculture",
+      "faculty": "Faculty of Science and Agriculture",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [
+          "28 with Mathematical Literacy"
+        ],
+        "display": "27 (28 with Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematical Literacy L4 or Mathematics L3; Agriculture L4; three other subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Applied agricultural studies, including production, management and extension.",
+      "career_opportunities": [
+        "Agricultural extension officer",
+        "Farm manager",
+        "Agribusiness officer"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts",
+      "qualification_code": "30000",
+      "saqa_id": "115408",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Social Science and Humanities",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another language L4; among four other subjects, one at L3 and three at L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Broad humanities education.",
+      "career_opportunities": [
+        "Communications officer",
+        "Research assistant",
+        "Public-service administrator"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts (Extended Programme)",
+      "qualification_code": "30040",
+      "saqa_id": "115408",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Social Science and Humanities",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another language L4; among four other subjects, one at L2 and three at L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended humanities route with academic development.",
+      "career_opportunities": [
+        "Communications officer",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Fine Art",
+      "qualification_code": "30100",
+      "saqa_id": "3799",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Social Science and Humanities",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another language L4; among four other subjects, one at L3 and three at L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Studio and contextual study of visual art.",
+      "career_opportunities": [
+        "Visual artist",
+        "Arts administrator",
+        "Gallery assistant"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Library and Information Science",
+      "qualification_code": "32000",
+      "saqa_id": "96531",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Social Science and Humanities",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another language L4; among four other subjects, one at L3 and three at L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Study of information organisation, access and library services.",
+      "career_opportunities": [
+        "Librarian (subject to employer requirements)",
+        "Information officer",
+        "Records officer"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Music",
+      "qualification_code": "30003",
+      "saqa_id": "116486",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Social Science and Humanities",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another language L4; among four other subjects, one at L3 and three at L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Academic and practical music studies.",
+      "career_opportunities": [
+        "Musician",
+        "Music educator (with required teaching qualification)",
+        "Arts administrator"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science",
+      "qualification_code": "30002",
+      "saqa_id": "3923",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Social Science and Humanities",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another language L4; among four other subjects, one at L3 and three at L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Interdisciplinary study of society and human behaviour.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Extended Programme)",
+      "qualification_code": "30041",
+      "saqa_id": "3926",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Social Science and Humanities",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another language L4; among four other subjects, one at L2 and three at L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Extended social-science route with academic development.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science in Communication",
+      "qualification_code": "30201",
+      "saqa_id": "3957",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Social Science and Humanities",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another language L4; among four other subjects, one at L3 and three at L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Study of communication, media and society.",
+      "career_opportunities": [
+        "Communication officer",
+        "Media researcher",
+        "Public-relations practitioner"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Work",
+      "qualification_code": "33002",
+      "saqa_id": "96466",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Social Science and Humanities",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another language L4; among four other subjects, one at L3 and three at L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Professional preparation for social-work practice.",
+      "career_opportunities": [
+        "Social worker (after professional registration)",
+        "Community-development practitioner"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Philosophy, Politics and Law",
+      "qualification_code": "30006",
+      "saqa_id": "111455",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Social Science and Humanities",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another language L4; among four other subjects, one at L3 and three at L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Interdisciplinary study of philosophy, politics and law.",
+      "career_opportunities": [
+        "Policy analyst",
+        "Public-service officer",
+        "Legal-policy researcher"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    },
+    {
+      "name": "Diploma in Fine Art",
+      "qualification_code": "35000",
+      "saqa_id": "4019",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Social Science and Humanities",
+      "campus": "Not specified in source",
+      "duration_years": null,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; four 20-credit NSC subjects at L3 or higher; one 20-credit NSC subject at L2 or higher; Life Orientation L4."
+        },
+        "aps_calculation_method": "Use the University of Fort Hare APS method; faculty selection and programme capacity may apply."
+      },
+      "description": "Practice-oriented fine-art diploma.",
+      "career_opportunities": [
+        "Visual artist",
+        "Studio assistant",
+        "Arts administrator"
+      ],
+      "source": {
+        "document": "Study at the University of Fort Hare 2027",
+        "page": 2
+      },
+      "verification": {
+        "admission_data": "Directly transcribed and normalised from the supplied 2027 UFH admission poster.",
+        "description_and_careers": "Concise general guidance inferred from the qualification title; not stated in the source poster.",
+        "duration_and_campus": "Not supplied by the source poster; confirm with UFH before applying."
+      }
+    }
+  ]
+}

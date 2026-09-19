@@ -1,0 +1,702 @@
+{
+  "university": {
+    "name": "Sefako Makgatho Health Sciences University",
+    "abbreviation": "SMU",
+    "country": "South Africa",
+    "province": "Gauteng"
+  },
+  "schema_version": "1.0",
+  "academic_year": 2027,
+  "generated_from": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet supplied by the user",
+  "important_notice": "SMU receives more applications than it can accommodate; meeting minimum requirements does not guarantee admission. Many health programmes use competitive selection, fitness checks, observation requirements or professional-registration rules. Confirm final requirements directly with SMU before applying.",
+  "application_information": {
+    "opening_date": "2026-04-01",
+    "undergraduate_closing_date": "2026-07-31",
+    "application_fee_zar": 300,
+    "maximum_choices": 2
+  },
+  "course_count": 18,
+  "courses": [
+    {
+      "name": "Bachelor of Medicine and Bachelor of Surgery",
+      "qualification_code": "MBChB",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Medicine",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 6,
+      "aps": {
+        "minimum": 38,
+        "alternatives": [],
+        "display": "38"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L6; Physical Sciences L6; Life Sciences L6; English L6; one additional subject L5; another additional subject L4; Life Orientation L5. Entry is highly competitive."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Professional medical degree preparing graduates for clinical practice, community service and later specialisation.",
+      "career_opportunities": [
+        "Medical practitioner after registration",
+        "Medical specialist after further training",
+        "Clinical researcher",
+        "Medical academic"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 13
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Bachelor of Medicine and Bachelor of Surgery Extended Curriculum Programme",
+      "qualification_code": "MBChB-ECP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Medicine",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 7,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Physical Sciences L5; Life Sciences L5; Mathematics L5; English L5; Life Orientation L4; two additional subjects L4. Reserved for eligible South African Black learners from Quintile 1 and 2 schools who have not previously entered tertiary education; limited competitive intake."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "One-year foundation route followed by entry into the mainstream MBChB programme.",
+      "career_opportunities": [
+        "Medical practitioner after completing the full programme and registration",
+        "Clinical researcher"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 14
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The source states a one-year foundation programme followed by the mainstream six-year MBChB; duration is represented as seven years in total. Eligibility restrictions and competitive selection apply."
+      }
+    },
+    {
+      "name": "Diploma in Emergency Medical Care",
+      "qualification_code": "DIP EMC",
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "School of Medicine",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 2,
+      "aps": {
+        "minimum": 18,
+        "alternatives": [],
+        "display": "18"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L3; Mathematics L3; Life Sciences L3; Physical Sciences L3; two additional subjects L3. Medical and physical fitness evaluations are required."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Prepares mid-level emergency-care practitioners for pre-hospital assessment and treatment.",
+      "career_opportunities": [
+        "Paramedic after HPCSA registration",
+        "Emergency medical services practitioner"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 14
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Higher Certificate in Emergency Medical Care",
+      "qualification_code": "HCERT EMC",
+      "saqa_id": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "School of Medicine",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": 15,
+        "alternatives": [],
+        "display": "15"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L3; Mathematics L3 or Mathematical Literacy L4; Life Sciences and/or Physical Sciences L3; two additional subjects L3. Medical and physical fitness evaluations are required."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Entry-level emergency medical care training for work in emergency medical services.",
+      "career_opportunities": [
+        "Emergency Care Assistant after HPCSA registration",
+        "Emergency medical services responder"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 14
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Bachelor of Diagnostic Radiography",
+      "qualification_code": "B RAD",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Health Care Sciences",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 16,
+        "alternatives": [],
+        "display": "16"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Degree-endorsed NSC with Mathematics, Physical Sciences, Life Sciences and English each at L4. The brochure states a minimum total of 16 across these four core subjects; Life Orientation L3 and remaining-subject points also apply."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Professional diagnostic-imaging programme with clinical training at accredited hospitals.",
+      "career_opportunities": [
+        "Diagnostic radiographer after registration",
+        "Imaging specialist after further training",
+        "Radiography educator"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 15
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "APS 16 is the brochure’s stated total for the four required core subjects, not a conventional six- or seven-subject aggregate. Additional subjects and competitive selection apply."
+      }
+    },
+    {
+      "name": "Bachelor of Dental Surgery",
+      "qualification_code": "BDS",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Dentistry",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 5,
+      "aps": {
+        "minimum": 37,
+        "alternatives": [],
+        "display": "37"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L6; Physical Sciences L6; Life Sciences L6; English L5; one additional subject L5; another additional subject L4; Life Orientation L5."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Professional dentistry programme covering prevention, diagnosis and treatment of oral conditions.",
+      "career_opportunities": [
+        "Dentist after professional registration",
+        "Public oral-health practitioner",
+        "Dental academic",
+        "Dental specialist after further training"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 16
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Bachelor of Dental Therapy",
+      "qualification_code": "BDT",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Dentistry",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L4; Physical Sciences L4; Life Sciences L4; English L4; two additional subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Professional preparation for preventive and basic clinical oral-health services.",
+      "career_opportunities": [
+        "Dental therapist after registration",
+        "Public dental-service practitioner",
+        "Academic dental therapist"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 17
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Bachelor of Oral Hygiene",
+      "qualification_code": "BOH",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Dentistry",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          "APS 31 with Mathematical Literacy L7"
+        ],
+        "display": "28 (APS 31 with Mathematical Literacy L7)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L4; Physical Sciences L4; Life Sciences L4; English L4; two additional subjects L4; Life Orientation L4. Mathematical Literacy route: Mathematical Literacy L7 with the other listed subjects at L4."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Professional oral-hygiene education focused on prevention, oral-health promotion and clinical care.",
+      "career_opportunities": [
+        "Oral hygienist after registration",
+        "Oral-health promotion practitioner",
+        "Public dental-service practitioner"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 17
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Online Higher Certificate in Vaccinology",
+      "qualification_code": "SCV01",
+      "saqa_id": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "School of Pharmacy",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "Online",
+      "nqf_level": 5,
+      "credits": 120,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [
+          "Maximum completion period: 2 years"
+        ],
+        "display": "Not applicable / prior qualification required"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Applicants must be a Registered General Nurse and Midwife with the South African Nursing Council, or hold a three-year health-sciences qualification that includes vaccination training from an HPCSA-registered institution. A motivation is required; priority is given to in-service vaccination healthcare workers."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Online programme developing the theoretical and practical expertise needed to operate an up-to-date vaccination clinic.",
+      "career_opportunities": [
+        "Vaccination programme coordinator",
+        "Immunisation-clinic healthcare worker",
+        "Vaccine-services practitioner"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 18
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Bachelor of Pharmacy",
+      "qualification_code": "BPharm",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Pharmacy",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L5; Physical Sciences L5; Life Sciences L5; English L5; two additional subjects L4 (the brochure notes Accounting and Economics as preferred); Life Orientation L4. BPharm should be indicated as first choice; competitive screening applies."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Integrated professional pharmacy degree covering pharmaceutical sciences and patient-centred pharmacy practice.",
+      "career_opportunities": [
+        "Pharmacist after internship, community service and registration",
+        "Hospital pharmacist",
+        "Community pharmacist",
+        "Industrial pharmacist"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 20
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Bachelor of Nursing and Midwifery",
+      "qualification_code": "BNAM",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Health Care Sciences",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [
+          "The brochure also mentions “Total Combined APS of 18” before presenting a table totalling 26"
+        ],
+        "display": "26 (The brochure also mentions “Total Combined APS of 18” before presenting a table totalling 26)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L4; Physical Sciences L4; Life Sciences L4; English L4; one additional subject L4; another additional subject L3; Life Orientation L3. The narrative also states Life Sciences and English should be at least L5."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Professional nursing and midwifery education for practice across hospital, primary-care and community settings.",
+      "career_opportunities": [
+        "Professional nurse after registration",
+        "Midwife",
+        "Community-health nurse",
+        "Nursing researcher"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 24
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The source contains conflicting wording: it states “Total Combined APS of 18” but its detailed subject table totals 26. This record uses the detailed table total and preserves the conflict as an alternative note."
+      }
+    },
+    {
+      "name": "Bachelor of Occupational Therapy",
+      "qualification_code": "B OCC THER",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Health Care Sciences",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L4; Physical Sciences L4; Life Sciences L4; English L4; two additional subjects L3; Life Orientation L3."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Professional programme using purposeful activity to help people participate independently in everyday life.",
+      "career_opportunities": [
+        "Occupational therapist after registration",
+        "Rehabilitation practitioner",
+        "Community-based therapist",
+        "Occupational-health practitioner"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 25
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Physiotherapy",
+      "qualification_code": "BSc Physio",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Health Care Sciences",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L4; Physical Sciences L4; Life Sciences L4; English L4; two additional subjects L4; Life Orientation L4."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Professional physiotherapy education focused on assessing, treating and preventing movement disorders and dysfunction.",
+      "career_opportunities": [
+        "Physiotherapist after registration",
+        "Sports physiotherapist after further training",
+        "Rehabilitation practitioner",
+        "Private-practice physiotherapist"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 26
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Bachelor of Audiology",
+      "qualification_code": "B.AUD01",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Health Care Sciences",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L4; English L4; Life Sciences L4; a Home Language or First Additional Language L4; Life Orientation L3; two additional subjects L3. Departmental selection criteria and observation requirements apply."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Professional education in preventing, identifying, assessing and treating hearing and balance disorders.",
+      "career_opportunities": [
+        "Audiologist after registration",
+        "Hearing-care practitioner",
+        "Audiology researcher",
+        "Clinical audiologist"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 26
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Bachelor of Speech-Language Pathology",
+      "qualification_code": "BSLP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Health Care Sciences",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L4; English L4; Life Sciences L4; a Home Language or First Additional Language L4; Life Orientation L3; two additional subjects L3. Departmental selection criteria and observation requirements apply."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Professional education in assessing and treating speech, language, communication, feeding and swallowing disorders.",
+      "career_opportunities": [
+        "Speech-language pathologist after registration",
+        "Communication-disorders practitioner",
+        "Speech-language researcher"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 27
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Dietetics",
+      "qualification_code": "BSc Dietetics",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Health Care Sciences",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L4; Physical Sciences L4; Life Sciences L4; English L4; two additional subjects L3; Life Orientation L3."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Professional dietetics education applying food and nutrition science to individual and population health.",
+      "career_opportunities": [
+        "Dietitian after registration and community service",
+        "Clinical dietitian",
+        "Food-service manager",
+        "Nutrition adviser"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 28
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure does not provide a formal qualification code or SAQA ID for this programme; the displayed programme abbreviation is used as the code. Minimum requirements do not guarantee selection."
+      }
+    },
+    {
+      "name": "Bachelor of Science",
+      "qualification_code": "BSc",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Science and Technology",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L5; Physical Sciences L4; Life Sciences L4; English L4; two other NSC subjects L4."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Flexible science degree supporting study in chemistry, biochemistry, mathematics, statistics, computer science, physiology, psychology, physics, biology and environmental sciences.",
+      "career_opportunities": [
+        "Laboratory scientist",
+        "Data analyst",
+        "Software developer",
+        "Research assistant",
+        "Science educator after required teaching qualification"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 29
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The prospectus presents BSc as one qualification and describes multiple disciplinary study areas without separate application codes, so they are retained as fields within this single record."
+      }
+    },
+    {
+      "name": "Bachelor of Science Extended Curriculum Programme",
+      "qualification_code": "BSc-ECP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "School of Science and Technology",
+      "campus": "Ga-Rankuwa Campus, Pretoria",
+      "delivery_mode": "On campus",
+      "nqf_level": null,
+      "credits": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics L4; Physical Sciences L4; Life Sciences L4; English L4; two other NSC subjects L4."
+        },
+        "aps_calculation_method": "SMU converts NSC achievement levels to points and sums the programme-specific subjects shown in each admission table. Life Orientation is included where the programme table explicitly includes it."
+      },
+      "description": "Extended-curriculum route into science disciplines with additional academic development.",
+      "career_opportunities": [
+        "Laboratory scientist",
+        "Data analyst",
+        "Software developer",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Sefako Makgatho Health Sciences University Prospectus 2026/2027 Booklet",
+        "page": 29
+      },
+      "verification": {
+        "status": "Extracted and normalised from the supplied SMU 2026/2027 prospectus.",
+        "note": "The brochure presents the ECP as one four-year qualification and does not provide separate application codes for its disciplinary study areas."
+      }
+    }
+  ]
+}

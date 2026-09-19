@@ -1,0 +1,2358 @@
+{
+  "university": {
+    "name": "University of Limpopo",
+    "abbreviation": "UL",
+    "country": "South Africa",
+    "province": "Limpopo"
+  },
+  "schema_version": "1.0",
+  "academic_year": 2027,
+  "generated_from": "University of Limpopo Undergraduate Prospectus 2027 supplied by the user",
+  "important_notice": "UL may withdraw, add or amend programmes or prospectus information without notice. Meeting minimum admission requirements does not guarantee admission because places are limited. Verify requirements directly with UL before applying.",
+  "application_information": {
+    "application_method": "Online via www.ul.ac.za",
+    "application_fee": {
+      "south_african_students_zar": 200,
+      "international_students_zar": 750
+    },
+    "contact_email": "enrolment@ul.ac.za",
+    "telephone": "015 268 3332"
+  },
+  "course_count": 54,
+  "courses": [
+    {
+      "record_id": "UL-2027-001",
+      "name": "Bachelor of Education in Senior Phase and FET Teaching (Languages and Life Orientation)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Education",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 5 (60-69%)",
+          "additional_language": "Level 4 (50-59%)",
+          "note": "Other subjects must contribute to APS 24."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Education in Senior Phase and FET Teaching (Languages and Life Orientation) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Life Orientation teacher",
+        "Language teacher",
+        "Research assistant",
+        "Laboratory assistant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-002",
+      "name": "Bachelor of Education in Senior Phase and FET Teaching (Languages and Social Sciences)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Education",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 3 (40-49%), or Level 4 (50-59%) when majoring in English",
+          "additional_language": "Level 4 (50-59%)",
+          "social_science_subject": "Level 4 (50-59%); Geography or History",
+          "note": "Other subjects must contribute to APS 24."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Education in Senior Phase and FET Teaching (Languages and Social Sciences) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Social Sciences teacher",
+        "Language teacher",
+        "Research assistant",
+        "Laboratory assistant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-003",
+      "name": "Bachelor of Education in Senior Phase and FET Teaching (Economics and Management Studies)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Education",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 3 (40-49%)",
+          "ems_subjects": "Level 4 (50-59%); subjects selected from Accounting, Economics and Business Studies",
+          "note": "Other subjects must contribute to APS 24."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Education in Senior Phase and FET Teaching (Economics and Management Studies) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Accounting teacher",
+        "Business Studies teacher",
+        "Economics teacher",
+        "Research assistant",
+        "Laboratory assistant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-004",
+      "name": "Bachelor of Education in Senior Phase and FET Teaching (Mathematics, Science and Technology)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Education",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 3 (40-49%)",
+          "Mathematics": "Level 4 (50-59%)",
+          "science": "Level 4 (50-59%); Physical Sciences or Life Sciences",
+          "note": "Other subjects must contribute to APS 24."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Education in Senior Phase and FET Teaching (Mathematics, Science and Technology) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Mathematics teacher",
+        "Life Sciences teacher",
+        "Technology teacher",
+        "Physical Sciences teacher",
+        "Research assistant",
+        "Laboratory assistant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-005",
+      "name": "Bachelor of Education in Foundation Phase Teaching",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Education",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 3 (40-49%) or Level 4 (50-59%)",
+          "first_language": "Level 4 (50-59%)",
+          "note": "Other subjects must contribute to APS 24."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Education in Foundation Phase Teaching programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Foundation Phase teacher",
+        "Curriculum adviser",
+        "School principal",
+        "Community consultant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-006",
+      "name": "Bachelor of Arts (Criminology and Psychology stream)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Social Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [
+          25
+        ],
+        "display": "23/25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "additional_language": "Level 4",
+          "Mathematics": "Level 3 or Mathematical Literacy Level 5",
+          "additional_subjects": "Three subjects at Level 4; five subjects may be used for the higher APS route."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (Criminology and Psychology stream) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Psychometrist",
+        "Trauma counsellor",
+        "Employee assistance practitioner",
+        "Guidance counsellor",
+        "Criminologist",
+        "Police officer",
+        "Crime-scene specialist",
+        "Correctional officer",
+        "Metro police officer",
+        "Private investigator"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-007",
+      "name": "Bachelor of Arts (Cultural Studies stream)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Social Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [
+          25
+        ],
+        "display": "23/25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "additional_language": "Level 4",
+          "Mathematics": "Level 3 or Mathematical Literacy Level 5",
+          "note": "If an African language is selected as an elective, the additional language must be Northern Sotho, Tshivenda or Xitsonga."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (Cultural Studies stream) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Development officer",
+        "Cultural officer",
+        "Heritage officer",
+        "Museum curator",
+        "Records officer",
+        "Knowledge-management officer",
+        "Community officer"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-008",
+      "name": "Bachelor of Arts (Sociology and Anthropology stream)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Social Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [
+          25
+        ],
+        "display": "23/25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "additional_language": "Level 4",
+          "Mathematics": "Level 3 or Mathematical Literacy Level 5",
+          "additional_subjects": "Three subjects at Level 4."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (Sociology and Anthropology stream) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Labour-relations specialist",
+        "Social-policy analyst",
+        "Community-development officer",
+        "Outreach coordinator",
+        "Research officer",
+        "Population analyst"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-009",
+      "name": "Bachelor of Arts (Political Studies stream)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Social Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "additional_subjects": "Subjects sufficient to reach APS 25."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (Political Studies stream) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Political analyst",
+        "Politician"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-010",
+      "name": "Bachelor of Psychology",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Social Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [
+          25
+        ],
+        "display": "23/25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "additional_language": "Level 4",
+          "Mathematics": "Level 3 or Mathematical Literacy Level 5",
+          "additional_subjects": "Three subjects at Level 4."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Psychology programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Psychometrist",
+        "Trauma counsellor",
+        "Employee assistance practitioner",
+        "Guidance counsellor"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-011",
+      "name": "Bachelor of Arts (Criminology and Psychology stream) (Extended Curriculum Programme)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Social Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [
+          24
+        ],
+        "display": "22/24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "additional_language": "Level 4",
+          "Mathematics": "Level 2 or Mathematical Literacy Level 4",
+          "additional_subjects": "Three subjects at Level 4."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (Criminology and Psychology stream) (Extended Curriculum Programme) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Psychometrist",
+        "Trauma counsellor",
+        "Employee assistance practitioner",
+        "Guidance counsellor",
+        "Criminologist",
+        "Police officer",
+        "Crime-scene specialist",
+        "Correctional officer",
+        "Metro police officer",
+        "Private investigator"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-012",
+      "name": "Bachelor of Social Work",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Social Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [
+          25
+        ],
+        "display": "23/25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "additional_language": "Level 4",
+          "Mathematics": "Level 3 or Mathematical Literacy Level 5",
+          "additional_subjects": "Three subjects at Level 4."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Social Work programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Social worker",
+        "Counsellor",
+        "Employee assistance practitioner"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-013",
+      "name": "Bachelor of Arts (Languages stream)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Language and Communication Studies",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4 (50-59%)",
+          "another_language": "Level 5 (60-69%); Northern Sotho, Tshivenda or Xitsonga",
+          "note": "Other subjects must contribute to APS 25."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (Languages stream) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Language practitioner"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-014",
+      "name": "Bachelor of Arts (Translation and Linguistics stream)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Language and Communication Studies",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4 (50-59%)",
+          "another_language": "Level 5 (60-69%); Northern Sotho, Tshivenda or Xitsonga",
+          "note": "Other subjects must contribute to APS 25."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (Translation and Linguistics stream) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Language practitioner",
+        "Interpreter",
+        "Translator"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-015",
+      "name": "Bachelor of Arts (Performing Arts stream)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Language and Communication Studies",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4 (50-59%)",
+          "another_language": "Level 5 (60-69%); Northern Sotho, Tshivenda or Xitsonga",
+          "note": "Other subjects must contribute to APS 25."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (Performing Arts stream) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Performing artist",
+        "Dramatist",
+        "Scriptwriter"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-016",
+      "name": "Bachelor of Information Studies",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Language and Communication Studies",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4 (50-59%)",
+          "another_language": "Level 5 (60-69%); Northern Sotho, Tshivenda or Xitsonga",
+          "note": "Other subjects must contribute to APS 25."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Information Studies programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Indexer",
+        "Abstracter",
+        "Information consultant",
+        "Information analyst",
+        "Information specialist",
+        "Librarian"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-017",
+      "name": "Bachelor of Arts in Contemporary English and Multilingual Studies",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Language and Communication Studies",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "another_language": "Level 5; English and Northern Sotho only",
+          "note": "Other subjects must contribute to APS 25."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts in Contemporary English and Multilingual Studies programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Bilingual specialist",
+        "Translator",
+        "Interpreter"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-018",
+      "name": "Bachelor of Arts in Communication Studies",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Language and Communication Studies",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4 (50-59%)",
+          "another_language": "Level 5 (60-69%); Northern Sotho, Tshivenda or Xitsonga",
+          "note": "Other subjects must contribute to APS 25."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts in Communication Studies programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Public-relations officer",
+        "Communications practitioner",
+        "Marketing manager",
+        "Sales promoter"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-019",
+      "name": "Bachelor of Arts in Media Studies",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Language and Communication Studies",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4 (50-59%)",
+          "another_language": "Level 5 (60-69%); Northern Sotho, Tshivenda or Xitsonga",
+          "note": "Other subjects must contribute to APS 25."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts in Media Studies programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Radio broadcaster",
+        "Newspaper or magazine editor",
+        "Journalist",
+        "Radio or film producer",
+        "Marketing manager",
+        "Radio or television announcer",
+        "Information technologist",
+        "Media economist"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-020",
+      "name": "Bachelor of Arts in Media Studies (Extended Curriculum Programme)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities",
+      "school": "Language and Communication Studies",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "another_language": "Level 4; Northern Sotho, Tshivenda or Xitsonga",
+          "note": "Other subjects must contribute to APS 23."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts in Media Studies (Extended Curriculum Programme) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Radio broadcaster",
+        "Newspaper or magazine editor",
+        "Journalist",
+        "Radio or film producer",
+        "Marketing manager",
+        "Radio or television announcer",
+        "Information technologist",
+        "Media economist"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 1
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-021",
+      "name": "Bachelor of Accountancy",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Accountancy",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "note": "Other subjects must contribute to APS 30."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Accountancy programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Management accountant",
+        "Internal auditor",
+        "Tax consultant",
+        "Business entrepreneur",
+        "Accountant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-022",
+      "name": "Bachelor of Commerce in Accountancy",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Accountancy",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "note": "Other subjects must contribute to APS 28."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Accountancy programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Internal auditor",
+        "Consultant",
+        "Business entrepreneur",
+        "Accountant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-023",
+      "name": "Bachelor of Commerce in Accountancy (Extended Curriculum Programme)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Accountancy",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "note": "Other subjects must contribute to APS 26."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Accountancy (Extended Curriculum Programme) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Internal auditor",
+        "Consultant",
+        "Business entrepreneur",
+        "Accountant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-024",
+      "name": "Bachelor of Commerce in Human Resource Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Economics and Management",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics_or_Economics": "Level 3 (40-49%)",
+          "note": "Other subjects must contribute to APS 26."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Human Resource Management programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Marketing officer",
+        "Human-resource practitioner",
+        "Purchasing officer",
+        "Business entrepreneur"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-025",
+      "name": "Bachelor of Commerce in Human Resource Management (Extended Curriculum Programme)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Economics and Management",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics_or_Economics": "Level 3 (40-49%)",
+          "note": "Other subjects must contribute to APS 22."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Human Resource Management (Extended Curriculum Programme) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Marketing officer",
+        "Human-resource practitioner",
+        "Purchasing officer",
+        "Business entrepreneur"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-026",
+      "name": "Bachelor of Commerce in Business Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Economics and Management",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics_or_Economics": "Level 3 (40-49%); Mathematical Literacy accepted",
+          "note": "Other subjects must contribute to APS 26."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Business Management programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Financial officer",
+        "Marketing officer",
+        "Human-resource practitioner",
+        "Purchasing officer",
+        "Business entrepreneur"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-027",
+      "name": "Bachelor of Commerce in Business Management (Extended Curriculum Programme)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Economics and Management",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics_or_Economics": "Level 3 (40-49%)",
+          "note": "Other subjects must contribute to APS 22."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Business Management (Extended Curriculum Programme) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Financial officer",
+        "Marketing officer",
+        "Human-resource practitioner",
+        "Purchasing officer",
+        "Business entrepreneur"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-028",
+      "name": "Bachelor of Commerce in Economics",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Economics and Management",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 3",
+          "Economics": "Level 4",
+          "note": "Other subjects must contribute to APS 26."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Economics programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Economist",
+        "Consultant",
+        "Business entrepreneur"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-029",
+      "name": "Bachelor of Commerce in Economics (Extended Curriculum Programme)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Economics and Management",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 3",
+          "Economics": "Level 4",
+          "note": "Other subjects must contribute to APS 22."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Economics (Extended Curriculum Programme) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Economist",
+        "Consultant",
+        "Business entrepreneur"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-030",
+      "name": "Bachelor of Administration",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Economics and Management",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics_or_Economics": "Not specified",
+          "note": "Other subjects must contribute to APS 26."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Administration programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Local-government practitioner",
+        "Public-relations practitioner",
+        "Consultant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-031",
+      "name": "Bachelor of Administration in Local Government",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Economics and Management",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics_or_Economics": "Not specified",
+          "note": "Other subjects must contribute to APS 26."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Administration in Local Government programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Project manager",
+        "Local-government officer",
+        "Consultant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-032",
+      "name": "Bachelor of Development in Planning and Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Economics and Management",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 3 or Mathematical Literacy Level 5",
+          "additional_subjects": "Each additional subject at least Level 4."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Development in Planning and Management programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Development manager",
+        "Environmental manager",
+        "Facilitator",
+        "Planner",
+        "Development-project manager"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-033",
+      "name": "Bachelor of Laws",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Law",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 5; English Home Language Level 4 is accepted",
+          "note": "Other subjects must contribute to APS 30."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Laws programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Judge",
+        "Magistrate",
+        "Advocate",
+        "Attorney",
+        "Director of Public Prosecutions",
+        "Registrar",
+        "Master of the High Court",
+        "Legal adviser",
+        "Legal administrative officer",
+        "Labour consultant",
+        "Commissioner"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-034",
+      "name": "Bachelor of Laws (Extended Curriculum Programme)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Law",
+      "school": "Law",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 5,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 5; English Home Language Level 4 is accepted",
+          "note": "Other subjects must contribute to APS 26."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Laws (Extended Curriculum Programme) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Judge",
+        "Magistrate",
+        "Advocate",
+        "Attorney",
+        "Director of Public Prosecutions",
+        "Registrar",
+        "Master of the High Court",
+        "Legal adviser",
+        "Legal administrative officer",
+        "Labour consultant",
+        "Commissioner"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-035",
+      "name": "Bachelor of Agricultural Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Agriculture and Environmental Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 3",
+          "Life_Sciences": "Level 4",
+          "Agricultural_subject": "Level 4",
+          "note": "Other subjects must contribute to APS 24."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Agricultural Management programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Agricultural extension officer",
+        "Agricultural officer",
+        "Farm manager",
+        "Agricultural technician",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-036",
+      "name": "Bachelor of Science in Agriculture in Agricultural Economics",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Agriculture and Environmental Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "Agricultural_subject": "Level 4",
+          "note": "Other subjects must contribute to APS 24."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Agriculture in Agricultural Economics programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Agricultural economist",
+        "Agribusiness manager",
+        "Agricultural-policy analyst",
+        "Farm manager",
+        "Consultant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-037",
+      "name": "Bachelor of Science in Agriculture in Plant Production",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Agriculture and Environmental Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "Life_Sciences": "Level 4",
+          "Agricultural_subject": "Level 4",
+          "note": "Other subjects must contribute to APS 24."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Agriculture in Plant Production programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Agronomist",
+        "Plant breeder",
+        "Farm manager",
+        "Consultant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-038",
+      "name": "Bachelor of Science in Agriculture in Animal Production",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Agriculture and Environmental Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "Physical_Science": "Level 4",
+          "Life_Sciences": "Level 4",
+          "note": "Other subjects must contribute to APS 24."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Agriculture in Animal Production programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Livestock-products marketing officer",
+        "Livestock scientist",
+        "Animal breeder",
+        "Animal nutritionist",
+        "Farm manager",
+        "Consultant"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-039",
+      "name": "Bachelor of Science in Agriculture in Soil Science",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Agriculture and Environmental Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "Physical_Science": "Level 5",
+          "Life_Sciences": "Level 4",
+          "note": "Other subjects must contribute to APS 25."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Agriculture in Soil Science programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Soil scientist",
+        "Laboratory manager",
+        "Soil analyst"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-040",
+      "name": "Bachelor of Science in Environmental and Resource Studies",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Agriculture and Environmental Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "Life_Sciences": "Level 4",
+          "Geography": "Level 4",
+          "note": "Other subjects must contribute to APS 24."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Environmental and Resource Studies programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Environmental officer",
+        "Development planner",
+        "Cartographer"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-041",
+      "name": "Bachelor of Science in Water and Sanitation Sciences",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Agriculture and Environmental Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 5",
+          "Physical_Science": "Level 5",
+          "Life_Sciences": "Level 4",
+          "note": "Other subjects must contribute to APS 24."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Water and Sanitation Sciences programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Water-supply and sanitation scientist",
+        "Community water-supply project planner",
+        "Community sanitation project manager",
+        "Water-catchment manager",
+        "Water-resources planner",
+        "Water-treatment plant manager",
+        "Wastewater-treatment manager"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-042",
+      "name": "Bachelor of Science (Mathematical Sciences stream)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Mathematical and Computer Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 5",
+          "note": "Students selecting Physics as an elective require Physical Sciences Level 5. Other subjects contribute to APS 24."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science (Mathematical Sciences stream) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Systems analyst",
+        "Computer programmer",
+        "Network specialist",
+        "Project manager",
+        "Logistics specialist",
+        "Financial analyst",
+        "Insurance underwriter",
+        "Mathematician"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-043",
+      "name": "Bachelor of Science (Mathematical Sciences stream) (Extended Curriculum Programme)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Mathematical and Computer Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "Physical_Science": "Level 4",
+          "note": "Other subjects must contribute to APS 22."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science (Mathematical Sciences stream) (Extended Curriculum Programme) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Systems analyst",
+        "Computer consultant",
+        "Computer programmer",
+        "Computer-modelling consultant",
+        "Aerospace engineer",
+        "Network specialist",
+        "Statistician"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-044",
+      "name": "Bachelor of Science (Life Sciences stream)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Molecular and Life Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 5",
+          "Physical_Science": "Level 5",
+          "Life_Sciences": "Level 4",
+          "note": "Other subjects must contribute to APS 26."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science (Life Sciences stream) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Biotechnology specialist",
+        "Bioinformatics specialist",
+        "Biological consultant",
+        "Environmental-health specialist",
+        "Occupational-hygiene specialist",
+        "Environmental manager",
+        "Biochemist",
+        "Microbiologist",
+        "Entomologist"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-045",
+      "name": "Bachelor of Science (Life Sciences stream) (Extended Curriculum Programme)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Molecular and Life Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "Physical_Science": "Level 4",
+          "Life_Sciences": "Level 3",
+          "note": "Other subjects must contribute to APS 22."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science (Life Sciences stream) (Extended Curriculum Programme) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Biotechnology specialist",
+        "Bioinformatics specialist",
+        "Biological consultant",
+        "Environmental-health specialist",
+        "Occupational-hygiene specialist",
+        "Environmental manager",
+        "Biochemist",
+        "Microbiologist",
+        "Entomologist"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-046",
+      "name": "Bachelor of Science (Physical Sciences stream)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Physical and Mineral Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 5",
+          "Physical_Science": "Level 5",
+          "note": "Students selecting Life Sciences as an elective require Life Sciences Level 4. Other subjects contribute to APS 26."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science (Physical Sciences stream) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Physicist",
+        "Chemical-industry scientist",
+        "Laboratory analyst",
+        "Consultant",
+        "Industrial-process manager",
+        "Metallurgist"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-047",
+      "name": "Bachelor of Science (Physical Sciences stream) (Extended Curriculum Programme)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Physical and Mineral Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "Physical_Science": "Level 4",
+          "Life_Sciences": "Level 3",
+          "note": "Other subjects must contribute to APS 22."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science (Physical Sciences stream) (Extended Curriculum Programme) programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Physicist",
+        "Chemical-industry scientist",
+        "Laboratory analyst",
+        "Consultant",
+        "Industrial-process manager",
+        "Metallurgist"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-048",
+      "name": "Bachelor of Science in Geology",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science and Agriculture",
+      "school": "Physical and Mineral Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 5",
+          "Physical_Science": "Level 5",
+          "note": "Other subjects must contribute to APS 26."
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Geology programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Geologist",
+        "Environmental scientist",
+        "Earth scientist",
+        "Hydrologist",
+        "Mining specialist",
+        "Regional planner",
+        "Mineralogist",
+        "Palaeontologist",
+        "Geophysicist",
+        "Geochemist"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-049",
+      "name": "Bachelor of Medicine and Bachelor of Surgery",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "school": "Medicine",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 5",
+          "Physical_Science": "Level 5",
+          "Life_Sciences": "Level 5",
+          "additional_subjects": "Two subjects at Level 4"
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Medicine and Bachelor of Surgery programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "General medical practitioner",
+        "Medical researcher"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-050",
+      "name": "Bachelor of Science in Medical Sciences",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "school": "Medicine",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "Physical_Science": "Level 5",
+          "Life_Sciences": "Level 5",
+          "additional_subjects": "Two subjects at Level 4"
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Medical Sciences programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Medical scientist",
+        "Laboratory researcher"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-051",
+      "name": "Bachelor of Science in Dietetics",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "school": "Health Care Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "Physical_Science": "Level 5",
+          "Life_Sciences": "Level 5",
+          "additional_subjects": "Two subjects at Level 4"
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Dietetics programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Hospital dietitian",
+        "Community dietitian",
+        "Food-service manager",
+        "Food-company consultant",
+        "Nutritional-products medical representative",
+        "Private practitioner",
+        "Researcher"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-052",
+      "name": "Bachelor of Optometry",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "school": "Health Care Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 5",
+          "Physical_Science": "Level 5",
+          "Life_Sciences": "Level 5",
+          "additional_subjects": "Two subjects at Level 4"
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Optometry programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Optometrist in the public or private sector"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-053",
+      "name": "Bachelor of Nursing",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "school": "Health Care Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 4",
+          "Physical_Science": "Level 5",
+          "Life_Sciences": "Level 5",
+          "additional_subjects": "Two subjects at Level 4"
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Nursing programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "General nurse",
+        "Psychiatric nurse",
+        "Community nurse",
+        "Midwife",
+        "Occupational-health nurse",
+        "Home-based-care nurse",
+        "Private-practice nurse"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    },
+    {
+      "record_id": "UL-2027-054",
+      "name": "Bachelor of Pharmacy",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "school": "Health Care Sciences",
+      "campus": "Turfloop Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "English": "Level 4",
+          "Mathematics": "Level 5",
+          "Physical_Science": "Level 5",
+          "Life_Sciences": "Level 5",
+          "additional_subjects": "Two subjects at Level 4"
+        },
+        "aps_calculation_method": "UL adds the achievement levels of six recognised 20-credit NSC subjects; Life Orientation is excluded from the APS calculation."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Pharmacy programme offered by the University of Limpopo.",
+      "career_opportunities": [
+        "Retail pharmacist",
+        "Medicines-control specialist",
+        "Public-health pharmacist",
+        "Industrial pharmacist",
+        "Private-practice pharmacist"
+      ],
+      "source": {
+        "document": "University of Limpopo Undergraduate Prospectus 2027",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, duration, APS, subject thresholds and careers were normalised from the supplied 2027 prospectus.",
+        "note": "The prospectus does not print formal programme or SAQA codes; those fields are intentionally null. Meeting minimum requirements does not guarantee admission."
+      }
+    }
+  ]
+}
