@@ -1,0 +1,814 @@
+{
+  "university": {
+    "name": "University of Mpumalanga",
+    "abbreviation": "UMP",
+    "country": "South Africa",
+    "province": "Mpumalanga"
+  },
+  "schema_version": "1.0",
+  "academic_year": null,
+  "generated_from": "University of Mpumalanga Undergraduate Programmes booklet supplied by the user; the booklet does not state its academic year.",
+  "important_notice": "The supplied booklet does not state an academic year and was created in October 2023. Requirements may have changed. Verify every programme directly with UMP before using the data for an application.",
+  "application_information": {
+    "website": "https://www.ump.ac.za",
+    "general_enquiries_telephone": "+27 (0)13 002 0001",
+    "email": "info@ump.ac.za"
+  },
+  "course_count": 20,
+  "courses": [
+    {
+      "record_id": "UMP-001",
+      "name": "Higher Certificate in Event Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty not specified in the supplied prospectus",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 1,
+      "credits": 120,
+      "aps": {
+        "minimum": 19,
+        "alternatives": [
+          21
+        ],
+        "display": "19 with Mathematics; 21 with Mathematical Literacy or Technical Mathematics"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Diploma/Higher Certificate endorsement; English Level 4; Mathematics Level 2 or Mathematical Literacy/Technical Mathematics Level 4; any three additional vocational subjects Level 2. NCV Level 4 applicants are recommended to have Business Studies, Hospitality Studies and Tourism."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Higher Certificate in Event Management programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Event coordinator",
+        "Conference organiser",
+        "Events venue assistant"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-002",
+      "name": "Diploma in Hospitality Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty not specified in the supplied prospectus",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [
+          25
+        ],
+        "display": "24 with Mathematics; 25 with Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Diploma endorsement; English Level 4; Mathematics Level 3 or Mathematical Literacy Level 4; one additional language and four other subjects."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Diploma in Hospitality Management programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Hotel manager",
+        "Guest-services supervisor",
+        "Food-and-beverage manager"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-003",
+      "name": "Bachelor of Social Work",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Economics, Development and Business Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "credits": 480,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Level 4; Mathematics Level 2 or Mathematical Literacy Level 3."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Social Work programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Social worker",
+        "Community-development practitioner",
+        "Employee-assistance practitioner"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-004",
+      "name": "Bachelor of Development Studies",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Economics, Development and Business Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Level 4; Mathematics Level 2 or Mathematical Literacy Level 3; Geography or History plus one other Social or Commercial Sciences subject at Level 4."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Development Studies programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Development practitioner",
+        "Policy researcher",
+        "Community-project coordinator"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 2
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-005",
+      "name": "Bachelor of Commerce (General)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Economics, Development and Business Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Level 4 and Mathematics Level 4. Mathematical Literacy is not accepted."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce (General) programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Business analyst",
+        "Financial officer",
+        "Entrepreneur"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 3
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-006",
+      "name": "Bachelor of Arts (General)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty not specified in the supplied prospectus",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Level 4; Mathematics Level 2 or Mathematical Literacy Level 3."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (General) programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Public-sector professional",
+        "Communications officer",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 3
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-007",
+      "name": "Bachelor of Administration",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Economics, Development and Business Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Level 4; second language Level 4; Mathematics Level 2 or Mathematical Literacy Level 3. Mathematics Level 4 is required to take Economics as an elective."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Administration programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Public administrator",
+        "Municipal administrator",
+        "Policy officer"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 3
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-008",
+      "name": "Bachelor of Laws",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "credits": 480,
+      "aps": {
+        "minimum": 33,
+        "alternatives": [],
+        "display": "33"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor endorsement; English Level 4; additional language Level 4; Mathematics Level 3 or Mathematical Literacy Level 4. Selection is competitive and conducted monthly."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Laws programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Attorney",
+        "Advocate",
+        "Legal adviser"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 3
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-009",
+      "name": "Higher Certificate in ICT in User Support",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Computing and Mathematical Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 1,
+      "credits": 120,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          22
+        ],
+        "display": "20 with Mathematics; 22 with Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Diploma/Higher Certificate endorsement; English Level 4; Mathematics Level 2 or Mathematical Literacy Level 4; any three content subjects Level 2. NCV applicants must have Level 4 in an Information Technology or Computer Science/Studies discipline."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Higher Certificate in ICT in User Support programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "ICT support technician",
+        "Help-desk technician",
+        "Systems-support assistant"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 4
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-010",
+      "name": "Diploma in Agriculture in Plant Production",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Agriculture and Natural Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [
+          24
+        ],
+        "display": "23 with Mathematics; 24 with Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Level 4; Mathematics Level 3 or Mathematical Literacy Level 4; Agriculture, Geography or Life Sciences Level 4. NCV Level 4 in Primary Agriculture: English 50%, Mathematics 40% or Mathematical Literacy 70%."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Diploma in Agriculture in Plant Production programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Crop-production technician",
+        "Farm manager",
+        "Agricultural extension assistant"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 4
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-011",
+      "name": "Diploma in Nature Conservation",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Agriculture and Natural Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Level 4; Mathematics Level 2 or Mathematical Literacy Level 3; Life Sciences and Geography Level 4 recommended. NCV Level 4 in Primary Agriculture: English 50%, Mathematics 30% or Mathematical Literacy 40%."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Diploma in Nature Conservation programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Conservation officer",
+        "Park ranger",
+        "Environmental educator"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 4
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-012",
+      "name": "Diploma in Animal Production",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Agriculture and Natural Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [
+          27
+        ],
+        "display": "24 with Mathematics; 27 with Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Level 4; Mathematics Level 3 or Mathematical Literacy Level 6; Physical Sciences Level 3; Life Sciences or Agriculture Level 4. NCV Level 4 in Primary Agriculture: English 50%, Mathematics 40% or Mathematical Literacy 70%."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Diploma in Animal Production programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Animal-production technician",
+        "Livestock manager",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 5
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-013",
+      "name": "Bachelor of Science in Agriculture",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Agriculture and Natural Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "credits": 480,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Level 4; Mathematics Level 4 or Mathematical Literacy Level 6; Life Sciences, Biology or Agriculture Level 4; Physical Sciences Level 4; another relevant subject Level 4."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Agriculture programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Agricultural scientist",
+        "Farm manager",
+        "Agribusiness specialist"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 5
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-014",
+      "name": "Bachelor of Science in Forestry",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Agriculture and Natural Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "credits": 498,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC/IEB bachelor endorsement; English Level 4; Mathematics Level 4; Physical Sciences Level 4; two of Life Sciences, Agricultural Sciences or Geography at Level 4."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Forestry programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Forester",
+        "Forest manager",
+        "Natural-resource specialist"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 5
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-015",
+      "name": "Bachelor of Agriculture in Agricultural Extension and Rural Resource Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Agriculture and Natural Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [
+          28
+        ],
+        "display": "26 with Mathematics; 28 with Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Level 4; Mathematics Level 4 or Mathematical Literacy Level 6; Agriculture or Life Sciences Level 4; Physical Sciences Level 4."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Agriculture in Agricultural Extension and Rural Resource Management programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Agricultural extension officer",
+        "Rural-development practitioner",
+        "Farm adviser"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 6
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-016",
+      "name": "Bachelor of Science in Environmental Science",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Agriculture and Natural Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Level 4; Mathematics Level 4 or Mathematical Literacy Level 6; two of Life Sciences, Physical Sciences or Geography at Level 4. Relevant 360-credit diploma holders may be considered."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Environmental Science programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "Environmental consultant",
+        "Conservation specialist"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 6
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-017",
+      "name": "Bachelor of Science",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Agriculture and Natural Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Level 4; Mathematics Level 4 or Mathematical Literacy Level 6; Life Sciences, Physical Sciences or Geography Level 4. Relevant 360-credit diploma holders may be considered."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Laboratory scientist",
+        "Research assistant",
+        "Environmental or data analyst"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 6
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-018",
+      "name": "Diploma in ICT in Applications Development",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Computing and Mathematical Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Diploma endorsement; English Level 4; one additional language; Mathematics Level 4; four other modules/subjects."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Diploma in ICT in Applications Development programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Software developer",
+        "Mobile-app developer",
+        "Systems analyst"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 7
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-019",
+      "name": "Bachelor of Information and Communication Technology",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Computing and Mathematical Sciences",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "credits": 360,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor endorsement; English Level 4; Mathematics Level 4. NCV Level 4: English 60%, Mathematics 60%, and 70% in four vocational subjects relevant to ICT. Relevant Higher Certificate or Diploma holders may be considered for articulation."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Information and Communication Technology programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "ICT specialist",
+        "Systems analyst",
+        "Network or software professional"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 7
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    },
+    {
+      "record_id": "UMP-020",
+      "name": "Bachelor of Education in Foundation Phase Teaching",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Education",
+      "school": null,
+      "campus": null,
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "credits": 480,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [
+          27
+        ],
+        "display": "26 with Mathematics; 27 with Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Admission is based initially on final Grade 11 results and finally on Grade 12 results. APS uses the prescribed seven subjects; Life Orientation points are divided by two. Where more than three electives are taken, the four compulsory subjects and three best electives are used."
+        },
+        "aps_calculation_method": "The booklet does not provide a general APS conversion table. The Foundation Phase Teaching programme states that seven prescribed subjects are used and Life Orientation points are divided by two."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Education in Foundation Phase Teaching programme offered by the University of Mpumalanga.",
+      "career_opportunities": [
+        "Foundation Phase teacher",
+        "Curriculum-support practitioner",
+        "Education administrator"
+      ],
+      "source": {
+        "document": "University of Mpumalanga Undergraduate Programmes booklet",
+        "page": 7
+      },
+      "verification": {
+        "status": "Programme name, APS, duration, credits and subject thresholds were normalised from the supplied booklet.",
+        "note": "The booklet does not state an academic year, formal programme codes, campus allocations or career lists. Faculty groupings and career examples are inferred and should be verified with UMP."
+      }
+    }
+  ]
+}

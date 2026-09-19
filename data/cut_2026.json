@@ -1,0 +1,2842 @@
+{
+  "university": "Central University of Technology, Free State",
+  "abbreviation": "CUT",
+  "schema_version": "1.0",
+  "academic_year": 2026,
+  "generated_from": "Official CUT programmes-offered webpage and linked official programme pages",
+  "generated_on": "2026-09-18",
+  "important_notice": "CUT labels the source webpage 'The 2026 Prospectus of Programmes'. Requirements can change and admission is capacity-dependent. Confirm the latest requirements directly with CUT before applying. Descriptions and career lists are concise editorial summaries rather than verbatim CUT text.",
+  "application_information": {
+    "minimum_general_aps": 27,
+    "selection_test_band": "24–26 points may be eligible for a selection test, subject to capacity and programme rules.",
+    "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+    "campuses": [
+      "Bloemfontein Campus",
+      "Welkom Campus"
+    ],
+    "life_orientation_aps_rule": "Life Orientation is assigned one APS point in the catalogue table."
+  },
+  "course_count": 43,
+  "courses": [
+    {
+      "record_id": "CUT-2026-001-higher-certificate-in-information-technology",
+      "name": "Higher Certificate in Information Technology",
+      "qualification_code": "HC_ITC",
+      "saqa_id": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 1,
+      "credits": null,
+      "nqf_level": 5,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 3",
+          "Mathematical Literacy: achievement level 6",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 3
+          },
+          {
+            "subject": "Mathematical Literacy",
+            "minimum_achievement_level": 6
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate higher certificate focused on the knowledge and applied skills required for information technology.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "software developer",
+        "systems analyst",
+        "IT support technician",
+        "database administrator"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/information-technology-2",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-002-diploma-in-information-technology",
+      "name": "Diploma in Information Technology",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 3",
+          "Mathematical Literacy: achievement level 6",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 3
+          },
+          {
+            "subject": "Mathematical Literacy",
+            "minimum_achievement_level": 6
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for information technology.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "software developer",
+        "systems analyst",
+        "IT support technician",
+        "database administrator"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/Programmes/information-technology",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-003-diploma-in-computer-networking",
+      "name": "Diploma in Computer Networking",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 3",
+          "Mathematical Literacy: achievement level 6",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4",
+          "Information Technology: achievement level 3"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 3
+          },
+          {
+            "subject": "Mathematical Literacy",
+            "minimum_achievement_level": 6
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Information Technology",
+            "minimum_achievement_level": 3
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for computer networking.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "network technician",
+        "network administrator",
+        "IT infrastructure support specialist",
+        "cybersecurity support technician"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/computer-networking",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-004-higher-certificate-in-construction",
+      "name": "Higher Certificate in Construction",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 1,
+      "credits": null,
+      "nqf_level": 5,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate higher certificate focused on the knowledge and applied skills required for construction.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "construction technician",
+        "site supervisor",
+        "construction project assistant",
+        "building inspector"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/construction",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-005-higher-certificate-in-renewable-energy-technologies",
+      "name": "Higher Certificate in Renewable Energy Technologies",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 1,
+      "credits": null,
+      "nqf_level": 5,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate higher certificate focused on the knowledge and applied skills required for renewable energy technologies.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "renewable-energy technician",
+        "solar-energy installer",
+        "energy project assistant",
+        "energy systems technologist"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/renewable-energy-technologies",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-006-bachelor-of-construction-in-construction-management",
+      "name": "Bachelor of Construction in Construction Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor of Construction",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 32,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 32"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 5",
+          "Physical Sciences: achievement level 5",
+          "English: achievement level 5"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 5
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 5
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 5
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor of construction focused on the knowledge and applied skills required for construction in construction management.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "construction technician",
+        "site supervisor",
+        "construction project assistant",
+        "building inspector"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/construction-management",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-007-bachelor-in-health-and-safety-management-construction",
+      "name": "Bachelor in Health and Safety Management (Construction)",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 32,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 32"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor's degree focused on the knowledge and applied skills required for health and safety management (construction).",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "construction technician",
+        "site supervisor",
+        "construction project assistant",
+        "building inspector"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/health-and-safety-management",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-008-diploma-in-civil-engineering",
+      "name": "Diploma in Civil Engineering",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 32,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 32"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Mathematical Literacy: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Mathematical Literacy",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for civil engineering.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "civil engineering technologist",
+        "design technician",
+        "site engineer",
+        "infrastructure project coordinator"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/civil-engineering",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-009-bachelor-of-engineering-technology-in-civil-engineering",
+      "name": "Bachelor of Engineering Technology in Civil Engineering",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 32,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 32"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Mathematical Literacy: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Mathematical Literacy",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor's degree focused on the knowledge and applied skills required for engineering technology in civil engineering.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "civil engineering technologist",
+        "design technician",
+        "site engineer",
+        "infrastructure project coordinator"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/civil-engineering-0",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-010-bachelor-in-quantity-surveying",
+      "name": "Bachelor in Quantity Surveying",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 32,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 32"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "Life Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4",
+          "Language: achievement level 4",
+          "Accounting: achievement level 4",
+          "Agricultural Sciences: achievement level 4",
+          "Economics: achievement level 4",
+          "Business Studies: achievement level 4",
+          "Information Technology: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Language",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Accounting",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Agricultural Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Economics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Business Studies",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Information Technology",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor's degree focused on the knowledge and applied skills required for quantity surveying.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "quantity surveyor",
+        "cost consultant",
+        "estimator",
+        "contracts manager"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/quantity-surveying",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-011-bachelor-of-science-in-hydrology-and-water-resources-management",
+      "name": "Bachelor of Science in Hydrology and Water Resources Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 28,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 28"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "Life Sciences: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Sciences",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor's degree focused on the knowledge and applied skills required for science in hydrology and water resources management.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "hydrology technician",
+        "water-resources practitioner",
+        "catchment-management officer",
+        "environmental monitoring officer"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/hydrology-and-water-resources-management",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-012-diploma-in-engineering-technology-in-electrical-engineering",
+      "name": "Diploma in Engineering Technology in Electrical Engineering",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "English: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for engineering technology in electrical engineering.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "electrical engineering technologist",
+        "electrical technician",
+        "automation technician",
+        "maintenance technologist"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/dp-engineering-technology-in-electrical-engineer",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-013-bachelor-of-engineering-technology-in-electrical-engineering",
+      "name": "Bachelor of Engineering Technology in Electrical Engineering",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 32,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 32"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "English: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor's degree focused on the knowledge and applied skills required for engineering technology in electrical engineering.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "electrical engineering technologist",
+        "electrical technician",
+        "automation technician",
+        "maintenance technologist"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/engineering-technology-in-electrical-engineer",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-014-diploma-in-engineering-technology-in-mechanical-engineering",
+      "name": "Diploma in Engineering Technology in Mechanical Engineering",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "English: achievement level 3"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 3
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for engineering technology in mechanical engineering.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "mechanical engineering technologist",
+        "mechanical technician",
+        "maintenance planner",
+        "production technologist"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/engineering-technology-mechanical",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-015-bachelor-of-engineering-technology-in-mechanical-engineering",
+      "name": "Bachelor of Engineering Technology in Mechanical Engineering",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 32,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 32"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 5",
+          "Physical Sciences: achievement level 4",
+          "English: achievement level 3"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 5
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 3
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor's degree focused on the knowledge and applied skills required for engineering technology in mechanical engineering.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "mechanical engineering technologist",
+        "mechanical technician",
+        "maintenance planner",
+        "production technologist"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/engineering-technology-mechanical-0",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-016-higher-certificate-in-mathematics-for-engineering-technology",
+      "name": "Higher Certificate in Mathematics for Engineering Technology",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 1,
+      "credits": null,
+      "nqf_level": 5,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 2",
+          "Physical Sciences: achievement level 4",
+          "English: achievement level 3"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 2
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 3
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate higher certificate focused on the knowledge and applied skills required for mathematics for engineering technology.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "engineering studies pathway",
+        "technical support trainee",
+        "further engineering-technology study"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/hc-mathematics-for-engineering-technology",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-017-higher-certificate-in-dental-assisting",
+      "name": "Higher Certificate in Dental Assisting",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Health and Environmental Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 1,
+      "credits": null,
+      "nqf_level": 5,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Life Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Life Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate higher certificate focused on the knowledge and applied skills required for dental assisting.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "dental assistant",
+        "oral-health practice assistant",
+        "dental clinic administrator"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/dental-assisting",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-018-diploma-in-agricultural-management",
+      "name": "Diploma in Agricultural Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Health and Environmental Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Mathematical Literacy: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "Life Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4",
+          "Language: achievement level 4",
+          "Accounting: achievement level 4",
+          "Agricultural Sciences: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Mathematical Literacy",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Language",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Accounting",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Agricultural Sciences",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for agricultural management.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "farm manager",
+        "agricultural extension assistant",
+        "agribusiness officer",
+        "production supervisor"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/dip-agricultural-management",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-019-diploma-in-somatology",
+      "name": "Diploma in Somatology",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Health and Environmental Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Physical Sciences: achievement level 4",
+          "Life Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for somatology.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "somatologist",
+        "spa therapist",
+        "skin-care therapist",
+        "wellness-centre manager"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/somatology",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-020-bachelor-of-radiography-in-diagnostics",
+      "name": "Bachelor of Radiography in Diagnostics",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Health and Environmental Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 8,
+      "aps": {
+        "minimum": 30,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "Life Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor's degree focused on the knowledge and applied skills required for radiography in diagnostics.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "diagnostic radiographer",
+        "medical imaging practitioner",
+        "radiography applications specialist"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/radiography-in-diagnostics",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-021-bachelor-of-health-sciences-in-clinical-technology",
+      "name": "Bachelor of Health Sciences in Clinical Technology",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Health and Environmental Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 8,
+      "aps": {
+        "minimum": 30,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "Life Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor's degree focused on the knowledge and applied skills required for health sciences in clinical technology.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "clinical technologist",
+        "cardiology technologist",
+        "neurophysiology technologist",
+        "critical-care technologist"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/bachelor-health-sciences-clinical-tech",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-022-bachelor-of-health-sciences-in-medical-laboratory-sciences",
+      "name": "Bachelor of Health Sciences in Medical Laboratory Sciences",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Health and Environmental Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 8,
+      "aps": {
+        "minimum": 30,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "Life Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor's degree focused on the knowledge and applied skills required for health sciences in medical laboratory sciences.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "medical laboratory scientist",
+        "diagnostic laboratory practitioner",
+        "laboratory quality officer",
+        "research laboratory scientist"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/bachelor-health-sciences-medical-lab-science",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-023-bachelor-of-environmental-health",
+      "name": "Bachelor of Environmental Health",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Health and Environmental Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 8,
+      "aps": {
+        "minimum": 30,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "Life Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor's degree focused on the knowledge and applied skills required for environmental health.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "environmental health practitioner",
+        "municipal health officer",
+        "food-safety officer",
+        "occupational hygiene officer"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/environmental-health-0",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-024-diploma-in-design-and-studio-art",
+      "name": "Diploma in Design and Studio Art",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Humanities",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for design and studio art.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "visual artist",
+        "designer",
+        "illustrator",
+        "studio practitioner"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/design-and-studio-art",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-025-diploma-in-language-practice-and-media-studies",
+      "name": "Diploma in Language Practice and Media Studies",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Humanities",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "English: achievement level 5",
+          "Life Orientation: achievement level 4",
+          "Language: achievement level 5"
+        ],
+        "structured": [
+          {
+            "subject": "English",
+            "minimum_achievement_level": 5
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Language",
+            "minimum_achievement_level": 5
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for language practice and media studies.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "language practitioner",
+        "editor",
+        "translator",
+        "media content producer"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/language-practice-and-media-studies-1",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-026-bachelor-of-education-in-foundation-phase-teaching",
+      "name": "Bachelor of Education in Foundation Phase Teaching",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Humanities",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "English: achievement level 4",
+          "Language: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Language",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor of education focused on the knowledge and applied skills required for education in foundation phase teaching.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "foundation-phase teacher",
+        "education support practitioner",
+        "learning-material developer"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/foundation-phase-teaching",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-027-bachelor-of-education-sp-fet-computer-science",
+      "name": "Bachelor of Education (SP & FET): Computer Science",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Humanities",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor of education focused on the knowledge and applied skills required for education (sp & fet): computer science.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "secondary-school teacher",
+        "subject specialist",
+        "education support practitioner",
+        "learning-material developer"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/computer-science",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-028-bachelor-of-education-sp-fet-economic-and-management-sciences",
+      "name": "Bachelor of Education (SP & FET): Economic and Management Sciences",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Humanities",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4",
+          "Accounting: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Accounting",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor of education focused on the knowledge and applied skills required for education (sp & fet): economic and management sciences.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "secondary-school teacher",
+        "subject specialist",
+        "education support practitioner",
+        "learning-material developer"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/economic-and-management-sciences",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-029-bachelor-of-education-sp-fet-language-education",
+      "name": "Bachelor of Education (SP & FET): Language Education",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Humanities",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4",
+          "Language: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Language",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor of education focused on the knowledge and applied skills required for education (sp & fet): language education.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "secondary-school teacher",
+        "subject specialist",
+        "education support practitioner",
+        "learning-material developer"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/language-education",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-030-bachelor-of-education-sp-fet-mathematics",
+      "name": "Bachelor of Education (SP & FET): Mathematics",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Humanities",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor of education focused on the knowledge and applied skills required for education (sp & fet): mathematics.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "secondary-school teacher",
+        "subject specialist",
+        "education support practitioner",
+        "learning-material developer"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/mathematics",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-031-bachelor-of-education-sp-fet-natural-sciences",
+      "name": "Bachelor of Education (SP & FET): Natural Sciences",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Humanities",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "Life Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor of education focused on the knowledge and applied skills required for education (sp & fet): natural sciences.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "secondary-school teacher",
+        "subject specialist",
+        "education support practitioner",
+        "learning-material developer"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/natural-sciences",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-032-bachelor-of-education-sp-fet-technology",
+      "name": "Bachelor of Education (SP & FET): Technology",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Humanities",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Physical Sciences: achievement level 4",
+          "English: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Physical Sciences",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "English",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor of education focused on the knowledge and applied skills required for education (sp & fet): technology.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "secondary-school teacher",
+        "subject specialist",
+        "education support practitioner",
+        "learning-material developer"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/technology-0",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-033-higher-certificate-in-community-development-work",
+      "name": "Higher Certificate in Community Development Work",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Management Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 1,
+      "credits": null,
+      "nqf_level": 5,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Economics: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Economics",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate higher certificate focused on the knowledge and applied skills required for community development work.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "community development practitioner",
+        "project facilitator",
+        "community outreach coordinator",
+        "NGO programme assistant"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/community-development-work",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-034-higher-certificate-in-retail-management",
+      "name": "Higher Certificate in Retail Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Management Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 1,
+      "credits": null,
+      "nqf_level": 5,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Economics: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Economics",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate higher certificate focused on the knowledge and applied skills required for retail management.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "retail supervisor",
+        "store manager",
+        "merchandising coordinator",
+        "sales operations assistant"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/Programmes/hcert-retail-management",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-035-diploma-in-human-resources-management",
+      "name": "Diploma in Human Resources Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Life Orientation: achievement level 4",
+          "Economics: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Economics",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for human resources management.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "human-resources practitioner",
+        "recruitment officer",
+        "training coordinator",
+        "labour-relations assistant"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/human-resources-management",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-036-diploma-in-management",
+      "name": "Diploma in Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 30,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Economics: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Economics",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for management.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "management trainee",
+        "operations supervisor",
+        "project administrator",
+        "entrepreneur"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/diploma-management",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-037-diploma-in-marketing",
+      "name": "Diploma in Marketing",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Life Orientation: achievement level 4",
+          "Economics: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Economics",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for marketing.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "marketing coordinator",
+        "digital marketing assistant",
+        "brand assistant",
+        "market researcher"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/marketing-2",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-038-diploma-in-office-management-and-technology",
+      "name": "Diploma in Office Management and Technology",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for office management and technology.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "office manager",
+        "administrative coordinator",
+        "executive assistant",
+        "information administrator"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://cms.cut.ac.za/Department/business-support-studies",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-039-diploma-in-public-management",
+      "name": "Diploma in Public Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Economics: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Economics",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for public management.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "public administration officer",
+        "municipal administrator",
+        "project administrator",
+        "public-service supervisor"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/public-management",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-040-diploma-in-hospitality-management",
+      "name": "Diploma in Hospitality Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 27,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 27"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4",
+          "Life Orientation: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Life Orientation",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for hospitality management.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "hotel supervisor",
+        "food-and-beverage manager",
+        "guest-services manager",
+        "hospitality entrepreneur"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/hospitality-management",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-041-bachelor-of-management-sciences-in-accountancy",
+      "name": "Bachelor of Management Sciences in Accountancy",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Management Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 8,
+      "aps": {
+        "minimum": 30,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 3",
+          "Mathematical Literacy: achievement level 4",
+          "Accounting: achievement level 5",
+          "Economics: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 3
+          },
+          {
+            "subject": "Mathematical Literacy",
+            "minimum_achievement_level": 4
+          },
+          {
+            "subject": "Accounting",
+            "minimum_achievement_level": 5
+          },
+          {
+            "subject": "Economics",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor's degree focused on the knowledge and applied skills required for management sciences in accountancy.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "accountant",
+        "financial accountant",
+        "management accountant",
+        "tax practitioner"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/management-sciences-in-accountancy",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-042-bachelor-of-management-sciences-in-internal-auditing",
+      "name": "Bachelor of Management Sciences in Internal Auditing",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Management Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 8,
+      "aps": {
+        "minimum": 30,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 3",
+          "Mathematical Literacy: achievement level 5",
+          "Accounting: achievement level 6",
+          "Economics: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 3
+          },
+          {
+            "subject": "Mathematical Literacy",
+            "minimum_achievement_level": 5
+          },
+          {
+            "subject": "Accounting",
+            "minimum_achievement_level": 6
+          },
+          {
+            "subject": "Economics",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate bachelor's degree focused on the knowledge and applied skills required for management sciences in internal auditing.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "internal auditor",
+        "risk analyst",
+        "compliance officer",
+        "governance assurance practitioner"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/internal-auditing-1",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    },
+    {
+      "record_id": "CUT-2026-043-diploma-in-tourism-management",
+      "name": "Diploma in Tourism Management",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "school": null,
+      "campus": [],
+      "campus_note": "Campus availability is not stated in the central comparison table; confirm on the linked programme page or with CUT.",
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 28,
+        "alternatives": "Applicants with 24–26 points may be considered for a selection test, subject to programme capacity; this does not replace a higher published programme minimum.",
+        "display": "Minimum APS: 28"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "Mathematics: achievement level 4"
+        ],
+        "structured": [
+          {
+            "subject": "Mathematics",
+            "minimum_achievement_level": 4
+          }
+        ],
+        "aps_calculation_method": "CUT's table uses NSC achievement levels 1–7. Life Orientation contributes one APS point according to the catalogue note."
+      },
+      "fields_or_subjects": [],
+      "description": "An undergraduate diploma focused on the knowledge and applied skills required for tourism management.",
+      "description_status": "Editorial summary derived from the official programme title; not quoted from CUT.",
+      "career_opportunities": [
+        "tourism officer",
+        "travel consultant",
+        "destination coordinator",
+        "tour operations manager"
+      ],
+      "career_information_status": "Concise occupational examples aligned to the field; verify professional registration and role requirements with CUT and the relevant professional body.",
+      "source": {
+        "document": "CUT 2026 Prospectus of Programmes (web catalogue)",
+        "catalogue_url": "https://www.cut.ac.za/programmes-offered",
+        "programme_url": "https://www.cut.ac.za/programmes/tourism-management",
+        "accessed": "2026-09-18"
+      },
+      "verification": {
+        "programme_aps_subjects": "Verified against the official CUT central programme table.",
+        "description_and_careers": "Editorially normalized; programme page supplied for verification.",
+        "admission_warning": "Meeting minimum requirements does not guarantee admission; selection and capacity constraints apply."
+      }
+    }
+  ]
+}
