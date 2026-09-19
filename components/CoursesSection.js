@@ -9,7 +9,7 @@ function CourseCard({ course }) {
       <View style={styles.divider} />
       <View style={styles.metaRow}>
         <View style={styles.metaItem}>
-          <Text style={styles.metaLabel}>Minimum APS</Text>
+          <Text style={styles.metaLabel}>{course.minimumAps == null && course.apsDisplay ? "Admission points" : "Minimum APS"}</Text>
           <Text style={styles.metaValue}>{course.apsDisplay || course.minimumAPS}</Text>
         </View>
         <View style={styles.metaItem}>

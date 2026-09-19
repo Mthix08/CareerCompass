@@ -22,7 +22,7 @@ function SavedCourseCard({ course, onPress, onRemove }) {
       <View style={styles.courseDetails}>
         <Text style={styles.courseUniversity}>{course.universityShortName}</Text>
         <Text style={styles.courseName} numberOfLines={2}>{course.name}</Text>
-        <Text style={styles.courseMeta}>APS {course.minimumAps}+ · {course.qualificationType}</Text>
+        <Text style={styles.courseMeta}>{course.minimumAps == null ? "Check requirements" : `APS ${course.minimumAps}+`} · {course.qualificationType}</Text>
       </View>
       <Pressable
         onPress={(event) => {

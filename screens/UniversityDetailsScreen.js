@@ -26,9 +26,10 @@ export default function UniversityDetailsScreen({ navigation, route }) {
   const { addBookmark, isBookmarked, removeBookmark } = useBookmarks();
   const bookmarked = university ? isBookmarked(university.id) : false;
   const universityTheme = getUniversityTheme(university);
-  const previewCourses = university?.id === "uj"
+  const publishedCourses = university
     ? courseExamples.filter((course) => course.universityId === university.id)
-    : university?.courses || [];
+    : [];
+  const previewCourses = publishedCourses.length ? publishedCourses : university?.courses || [];
 
   const handleBookmarkPress = () => {
     if (bookmarked) {

@@ -1,0 +1,3182 @@
+{
+  "university": {
+    "name": "Cape Peninsula University of Technology",
+    "abbreviation": "CPUT",
+    "country": "South Africa",
+    "province": "Western Cape"
+  },
+  "schema_version": "1.0",
+  "generated_from": "CPUT 2027 Prospectus, Edition 2/2026 (cput.pdf)",
+  "important_notice": "This dataset summarises the official CPUT 2027 prospectus for CareerCompass. CPUT uses multiple APS calculation methods plus programme-specific subject and selection rules. Mainstream, ECP and waitlist thresholds are preserved in display text. Always verify current requirements with CPUT before applying.",
+  "course_count": 96,
+  "courses": [
+    {
+      "name": "Diploma in Agriculture",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Mainstream: 30 with Mathematics; 31 with Technical Mathematics. ECP: 28/29."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Technical Mathematics 4; Life Sciences 4; Physical Sciences 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Agriculture.",
+      "career_opportunities": [
+        "Agricultural technician",
+        "Farm or production manager",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Agricultural Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Mainstream: 30 Mathematics, 31 Technical Mathematics, 32 Mathematical Literacy; lower ECP thresholds."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3, Technical Mathematics 4 or Mathematical Literacy 5; Life Sciences 4; Physical Sciences 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Agricultural Management.",
+      "career_opportunities": [
+        "Agricultural technician",
+        "Farm or production manager",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Analytical Chemistry",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Mainstream: 30 with Mathematics; 31 with Technical Mathematics. ECP: 28/29."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4 or Technical Mathematics 5; Physical Sciences 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Analytical Chemistry.",
+      "career_opportunities": [
+        "Analytical chemistry technician",
+        "Laboratory analyst",
+        "Quality-control practitioner"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Biotechnology",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Mainstream: 30 with Mathematics; 31 with Technical Mathematics. ECP: 28/29."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4 or Technical Mathematics 5; Life Sciences 4; Physical Sciences 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Biotechnology.",
+      "career_opportunities": [
+        "Biotechnology technician",
+        "Laboratory analyst",
+        "Research assistant"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Consumer Science: Food and Nutrition",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Mainstream: 28 with Mathematics; 29 with Technical Mathematics. ECP: 26/27."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Technical Mathematics 4; Physical Sciences 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Consumer Science: Food and Nutrition.",
+      "career_opportunities": [
+        "Diploma in Consumer Science: Food and Nutrition practitioner",
+        "Industry technician or coordinator",
+        "Further specialist study"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Environmental Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Mainstream: 28 Mathematics, 29 Technical Mathematics, 30 Mathematical Literacy; lower ECP thresholds."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3, Technical Mathematics 4 or Mathematical Literacy 5; Life Sciences 4; Physical Sciences 3; Geography or Life Sciences 4 plus two other subjects 3."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Environmental Management.",
+      "career_opportunities": [
+        "Environmental practitioner",
+        "Sustainability officer",
+        "Environmental consultant"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Environmental Health",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "Mainstream: 32 with Mathematics; 33 with Technical Mathematics. ECP: 30/31."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4 or Technical Mathematics 5; Life Sciences 4; Physical Sciences 4; two additional subjects level 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Environmental Health.",
+      "career_opportunities": [
+        "Environmental health practitioner",
+        "Health inspector",
+        "Public-health officer"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Food Science and Technology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32 with Mathematics; 33 with Technical Mathematics."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4 or Technical Mathematics 5; Life Sciences 3; Physical Sciences 4; two additional non-language subjects level 3."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Food Science and Technology.",
+      "career_opportunities": [
+        "Food technologist",
+        "Quality-assurance practitioner",
+        "Product-development specialist"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Marine Science",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Mainstream: 30 with Mathematics; 31 with Technical Mathematics. ECP: 28/29."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4 or Technical Mathematics 5; Physical Sciences 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Marine Science.",
+      "career_opportunities": [
+        "Marine-science technician",
+        "Conservation practitioner",
+        "Environmental field officer"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Nature Conservation",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Mainstream: 30 Mathematics, 31 Technical Mathematics, 32 Mathematical Literacy; lower ECP thresholds."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3, Technical Mathematics 4 or Mathematical Literacy 5; Life Sciences 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Nature Conservation.",
+      "career_opportunities": [
+        "Conservation practitioner",
+        "Environmental educator",
+        "Protected-area officer"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Mathematical Sciences",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "Mainstream: 28 with Mathematics; 29 with Technical Mathematics. ECP: 26/27."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4 or Technical Mathematics 5; one of Physical Sciences, Accounting, Business Studies, Economics or Geography."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Mathematical Sciences.",
+      "career_opportunities": [
+        "Data analyst",
+        "Quantitative analyst",
+        "Statistical practitioner"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Horticulture",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Mainstream: 30 Mathematics, 31 Technical Mathematics, 32 Mathematical Literacy; lower ECP thresholds."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3, Technical Mathematics 4 or Mathematical Literacy 5; Life Sciences 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Horticulture.",
+      "career_opportunities": [
+        "Horticulturist",
+        "Production manager",
+        "Landscape or nursery practitioner"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Landscape Architecture",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "Mainstream: 30 Mathematics, 31 Technical Mathematics, 32 Mathematical Literacy; lower ECP thresholds."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3, Technical Mathematics 4 or Mathematical Literacy 5; Life Sciences 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Landscape Architecture.",
+      "career_opportunities": [
+        "Landscape design practitioner",
+        "Landscape technician",
+        "Environmental design assistant"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Accountancy",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 38,
+        "alternatives": [],
+        "display": "38"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 3 or Mathematical Literacy 5 or Accounting 4."
+        },
+        "aps_calculation_method": 3
+      },
+      "description": "A career-focused CPUT programme in Accountancy.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditing practitioner",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Accountancy (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 3 or Mathematical Literacy 4 or Accounting 3."
+        },
+        "aps_calculation_method": 3
+      },
+      "description": "A career-focused CPUT programme in Accountancy (Extended).",
+      "career_opportunities": [
+        "Accountant",
+        "Auditing practitioner",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Entrepreneurship",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; Business Studies, Economics, Accounting or Consumer Studies level 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Entrepreneurship.",
+      "career_opportunities": [
+        "Entrepreneur",
+        "Business-development officer",
+        "Small-business adviser"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Entrepreneurship (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Same subject requirements as mainstream."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Entrepreneurship (Extended).",
+      "career_opportunities": [
+        "Entrepreneur",
+        "Business-development officer",
+        "Small-business adviser"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Banking",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24 with Mathematics; 26 with Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 3 or Mathematical Literacy 4; relevant business subject."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Banking.",
+      "career_opportunities": [
+        "Banking officer",
+        "Credit analyst",
+        "Financial-services consultant"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Business Informatics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25 with Mathematics; 27 with Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 3 or Mathematical Literacy 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Business Informatics.",
+      "career_opportunities": [
+        "Business analyst",
+        "Systems analyst",
+        "IT consultant"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Human Resources Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26 Mathematics; 28 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; Economics, Business Studies or Accounting."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Human Resources Management.",
+      "career_opportunities": [
+        "Human-resources practitioner",
+        "Talent-development officer",
+        "Labour-relations practitioner"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Human Resources Management (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24 Mathematics; 26 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; relevant business subject."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Human Resources Management (Extended).",
+      "career_opportunities": [
+        "Human-resources practitioner",
+        "Talent-development officer",
+        "Labour-relations practitioner"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28 Mathematics; 30 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; Economics, Business Studies or Accounting."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Management.",
+      "career_opportunities": [
+        "Diploma in Management practitioner",
+        "Industry technician or coordinator",
+        "Further specialist study"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Management (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24 Mathematics; 26 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; relevant business subject."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Management (Extended).",
+      "career_opportunities": [
+        "Diploma in Management (Extended) practitioner",
+        "Industry technician or coordinator",
+        "Further specialist study"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Marketing",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26 Mathematics; 28 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; Business Studies, Accounting or Economics level 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Marketing.",
+      "career_opportunities": [
+        "Marketing coordinator",
+        "Brand practitioner",
+        "Market-research analyst"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Marketing (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24 Mathematics; 26 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Marketing (Extended).",
+      "career_opportunities": [
+        "Marketing coordinator",
+        "Brand practitioner",
+        "Market-research analyst"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Business and Information Administration",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26 Mathematics; 28 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; relevant business or ICT subject."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Business and Information Administration.",
+      "career_opportunities": [
+        "Office administrator",
+        "Information coordinator",
+        "Business-support officer"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Business and Information Administration (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24 Mathematics; 26 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Business and Information Administration (Extended).",
+      "career_opportunities": [
+        "Office administrator",
+        "Information coordinator",
+        "Business-support officer"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Operations Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 3; Mathematical Literacy is not accepted."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Operations Management.",
+      "career_opportunities": [
+        "Operations manager",
+        "Production planner",
+        "Quality coordinator"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Public Administration",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; Economics, Business Studies or Accounting level 3."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Public Administration.",
+      "career_opportunities": [
+        "Public administrator",
+        "Municipal officer",
+        "Government programme coordinator"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Public Administration (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 3; Economics, Business Studies or Accounting level 2."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Public Administration (Extended).",
+      "career_opportunities": [
+        "Public administrator",
+        "Municipal officer",
+        "Government programme coordinator"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Retail Business Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Retail Business Management.",
+      "career_opportunities": [
+        "Retail manager",
+        "Merchandising practitioner",
+        "Store operations coordinator"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Tourism Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28 Mathematics; 30 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; relevant tourism/business subject; motivation letter."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Tourism Management.",
+      "career_opportunities": [
+        "Tourism manager",
+        "Travel consultant",
+        "Destination coordinator"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Tourism Management (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24 Mathematics; 26 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; motivation letter."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Tourism Management (Extended).",
+      "career_opportunities": [
+        "Tourism manager",
+        "Travel consultant",
+        "Destination coordinator"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Events Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28 Mathematics; 30 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; relevant tourism/business/ICT subject; motivation letter."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Events Management.",
+      "career_opportunities": [
+        "Events coordinator",
+        "Venue manager",
+        "Conference organiser"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Events Management (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24 Mathematics; 26 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; motivation letter."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Events Management (Extended).",
+      "career_opportunities": [
+        "Events coordinator",
+        "Venue manager",
+        "Conference organiser"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Sport and Leisure Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25 Mathematics; 27 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; non-academic sport review."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Sport and Leisure Management.",
+      "career_opportunities": [
+        "Sport manager",
+        "Recreation coordinator",
+        "Sport-development officer"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Sport and Leisure Management (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23 Mathematics; 25 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; non-academic sport review."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Sport and Leisure Management (Extended).",
+      "career_opportunities": [
+        "Sport manager",
+        "Recreation coordinator",
+        "Sport-development officer"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Hospitality and Hotel Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26 Mathematics; 28 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Hospitality and Hotel Management.",
+      "career_opportunities": [
+        "Hospitality manager",
+        "Hotel operations practitioner",
+        "Food-service manager"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Hospitality and Food and Beverage Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26 Mathematics; 28 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; relevant hospitality/business subject."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Hospitality and Food and Beverage Management.",
+      "career_opportunities": [
+        "Hospitality manager",
+        "Hotel operations practitioner",
+        "Food-service manager"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Hospitality Management and Professional Cookery",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26 Mathematics; 28 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Hospitality Management and Professional Cookery.",
+      "career_opportunities": [
+        "Hospitality manager",
+        "Hotel operations practitioner",
+        "Food-service manager"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Real Estate",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 2 or Mathematical Literacy 4; Economics, Business Studies or Accounting level 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Real Estate.",
+      "career_opportunities": [
+        "Property practitioner",
+        "Real-estate administrator",
+        "Property manager"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Paralegal Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Business & Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4. Mathematics 3 or Mathematical Literacy 4; another official language level 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Paralegal Studies.",
+      "career_opportunities": [
+        "Paralegal",
+        "Legal administrator",
+        "Compliance assistant"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor in Education: Foundation Phase Teaching",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 4 and First Additional Language 3 in Afrikaans, English or isiXhosa; Mathematics 3 or Mathematical Literacy 5."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Education: Foundation Phase Teaching.",
+      "career_opportunities": [
+        "Teacher",
+        "Education practitioner",
+        "Curriculum-support professional"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor in Education: Intermediate Phase Teaching",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 4; First Additional Language 3; Mathematics 3 or Mathematical Literacy 5; two or three relevant elective subjects level 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Education: Intermediate Phase Teaching.",
+      "career_opportunities": [
+        "Teacher",
+        "Education practitioner",
+        "Curriculum-support professional"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor in Education: Senior Phase and Further Education and Training Teaching",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 4; First Additional Language 3; three relevant elective subjects level 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Education: Senior Phase and Further Education and Training Teaching.",
+      "career_opportunities": [
+        "Teacher",
+        "Education practitioner",
+        "Curriculum-support professional"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "BHSc in Medical Laboratory Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 38,
+        "alternatives": [],
+        "display": "38+"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4; Life Sciences 5; Physical Sciences 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Medical Laboratory Sciences.",
+      "career_opportunities": [
+        "Medical laboratory scientist",
+        "Laboratory technologist",
+        "Research practitioner"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "BHSc in Medical Laboratory Sciences (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30-37"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4; Life Sciences 4; Physical Sciences 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Medical Laboratory Sciences (Extended).",
+      "career_opportunities": [
+        "Medical laboratory scientist",
+        "Laboratory technologist",
+        "Research practitioner"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Higher Certificate in Dental Assisting",
+      "qualification_code": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25+"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 3; Mathematics 2 or Mathematical Literacy 3; Life Sciences 3."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Dental Assisting.",
+      "career_opportunities": [
+        "Dental assistant",
+        "Oral-health support practitioner",
+        "Dental-practice assistant"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Higher Certificate in Emergency Medical Care",
+      "qualification_code": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26+"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 3; Mathematics 3 or Technical Mathematics 4 or Mathematical Literacy 6; Life Sciences 3; Physical Sciences 3."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Emergency Medical Care.",
+      "career_opportunities": [
+        "Emergency-care practitioner",
+        "Paramedic pathway",
+        "Emergency-services officer"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Emergency Care",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28+"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 3; Mathematics 3; Life Sciences 3; Physical Sciences 3; selection assessments apply."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Emergency Care.",
+      "career_opportunities": [
+        "Emergency-care practitioner",
+        "Paramedic pathway",
+        "Emergency-services officer"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Emergency Medical Care",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35+"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4; Life Sciences 4; Physical Sciences 4; selection assessments apply."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Emergency Medical Care.",
+      "career_opportunities": [
+        "Emergency-care practitioner",
+        "Paramedic pathway",
+        "Emergency-services officer"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Emergency Medical Care (ECP)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30-34"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4; Life Sciences 4; Physical Sciences 4; selection assessments apply."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Emergency Medical Care (ECP).",
+      "career_opportunities": [
+        "Emergency-care practitioner",
+        "Paramedic pathway",
+        "Emergency-services officer"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Somatology",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24 Mathematics; 25 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Mathematical Literacy 4; Life Sciences 4; health requirements apply."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Somatology.",
+      "career_opportunities": [
+        "Somatology practitioner",
+        "Wellness therapist",
+        "Spa or skincare manager"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Nursing",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30+"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4 or Mathematical Literacy 5; Life Sciences 4; Physical Sciences may substitute for Life Sciences; interview."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Nursing.",
+      "career_opportunities": [
+        "Professional nurse",
+        "Community-health nurse",
+        "Clinical practitioner"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Nursing (ECP)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27-29"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Mathematical Literacy 4; Life Sciences 4; interview."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Nursing (ECP).",
+      "career_opportunities": [
+        "Professional nurse",
+        "Community-health nurse",
+        "Clinical practitioner"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "BHSc in Opticianry",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32+"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4 or Mathematical Literacy 5; Life Sciences 4; Physical Sciences 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Opticianry.",
+      "career_opportunities": [
+        "Optician",
+        "Optical-dispensing practitioner",
+        "Eye-care support professional"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "BSc in Diagnostic Radiography",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30+"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4; Life Sciences 4; Physical Sciences 4; screening questionnaire."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Diagnostic Radiography.",
+      "career_opportunities": [
+        "Diagnostic radiographer",
+        "Medical-imaging practitioner",
+        "Radiology technologist"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "BSc in Diagnostic Ultrasound",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30+"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4; Life Sciences 4; Physical Sciences 4; screening questionnaire."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Diagnostic Ultrasound.",
+      "career_opportunities": [
+        "Sonographer",
+        "Diagnostic ultrasound practitioner",
+        "Medical-imaging professional"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "BSc in Radiation Therapy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30+"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4; Life Sciences 4; Physical Sciences 4; screening questionnaire."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Radiation Therapy.",
+      "career_opportunities": [
+        "Radiation therapist",
+        "Oncology treatment technologist",
+        "Clinical imaging practitioner"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "BSc in Nuclear Medicine Technology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Health & Wellness Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30+"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4; Life Sciences 4 and Physical Sciences 4 compulsory."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Nuclear Medicine Technology.",
+      "career_opportunities": [
+        "Nuclear medicine technologist",
+        "Medical-imaging practitioner",
+        "Clinical technologist"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Architectural Technology",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30 Mathematics; 32 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4 or Mathematical Literacy 6 or Technical Mathematics 5."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Architectural Technology.",
+      "career_opportunities": [
+        "Architectural technologist",
+        "Design technician",
+        "Built-environment practitioner"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Architectural Technology (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26 Mathematics; 28 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Mathematical Literacy 5 or Technical Mathematics 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Architectural Technology (Extended).",
+      "career_opportunities": [
+        "Architectural technologist",
+        "Design technician",
+        "Built-environment practitioner"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Interior Design",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30 Mathematics; 32 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 4 or Mathematical Literacy 6 or Technical Mathematics 5."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Interior Design.",
+      "career_opportunities": [
+        "Interior designer",
+        "Spatial-design practitioner",
+        "Design consultant"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Interior Design (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26 Mathematics; 28 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Mathematical Literacy 5 or Technical Mathematics 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Interior Design (Extended).",
+      "career_opportunities": [
+        "Interior designer",
+        "Spatial-design practitioner",
+        "Design consultant"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Fashion",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Mathematical Literacy 5 or Technical Mathematics 4; selection may apply."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Fashion.",
+      "career_opportunities": [
+        "Fashion designer",
+        "Apparel production practitioner",
+        "Fashion entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Visual Communication Design",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Mathematical Literacy 5 or Technical Mathematics 4; portfolio or selection may apply."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Visual Communication Design.",
+      "career_opportunities": [
+        "Graphic designer",
+        "Visual communicator",
+        "Brand designer"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Product Design",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Mathematical Literacy 5 or Technical Mathematics 4; portfolio or selection may apply."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Product Design.",
+      "career_opportunities": [
+        "Product designer",
+        "Industrial-design practitioner",
+        "Design developer"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Jewellery Design and Manufacture",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Mathematical Literacy 5 or Technical Mathematics 4; portfolio or selection may apply."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Jewellery Design and Manufacture.",
+      "career_opportunities": [
+        "Jewellery designer",
+        "Jewellery manufacturer",
+        "Design entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Film Production",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 5; selection requirements apply."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Film Production.",
+      "career_opportunities": [
+        "Film-production practitioner",
+        "Editor",
+        "Production coordinator"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Photography",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; selection requirements apply."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Photography.",
+      "career_opportunities": [
+        "Photographer",
+        "Image editor",
+        "Visual-media practitioner"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Journalism",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28 Mathematics; 30 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 5; another language 50%; Mathematics 3 or Mathematical Literacy 4 or Technical Mathematics 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Journalism.",
+      "career_opportunities": [
+        "Journalist",
+        "Reporter",
+        "Digital-content producer"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Public Relations and Communication",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28 Mathematics; 30 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 5; another language 50%; Mathematics 2 or Mathematical Literacy 4 or Technical Mathematics 3."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Public Relations and Communication.",
+      "career_opportunities": [
+        "Public-relations practitioner",
+        "Communications officer",
+        "Media liaison"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Applications Development",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28 Mathematics; 30 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Mathematical Literacy 5 or Technical Mathematics 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Applications Development.",
+      "career_opportunities": [
+        "Software developer",
+        "Application programmer",
+        "Systems developer"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Communication Networks",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28 Mathematics; 30 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Mathematical Literacy 5 or Technical Mathematics 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Communication Networks.",
+      "career_opportunities": [
+        "Network technician",
+        "Network administrator",
+        "ICT support specialist"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Multimedia Applications",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28 Mathematics; 30 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Mathematical Literacy 5 or Technical Mathematics 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Multimedia Applications.",
+      "career_opportunities": [
+        "Multimedia developer",
+        "UX or digital-media practitioner",
+        "Interactive-content producer"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Higher Certificate in ICT",
+      "qualification_code": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24 Mathematics; 26 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; Mathematics 3 or Mathematical Literacy 5 or Technical Mathematics 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in ICT.",
+      "career_opportunities": [
+        "Higher Certificate in ICT practitioner",
+        "Industry technician or coordinator",
+        "Further specialist study"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Urban and Regional Planning",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Informatics & Design",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28 Mathematics; 30 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 4; another language 4; Mathematics 4 or Mathematical Literacy 5 or Technical Mathematics 5; Geography, Economics, Business Studies or Tourism level 4."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Urban and Regional Planning.",
+      "career_opportunities": [
+        "Urban and regional planning technician",
+        "Development planner",
+        "Municipal planning practitioner"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Chemical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30 mainstream; 27-29 ECP; 23-26 waitlist"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics 4 or Technical Mathematics 5; Physical Sciences 4."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Chemical Engineering.",
+      "career_opportunities": [
+        "Chemical engineering technologist",
+        "Process technician",
+        "Production technologist"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering Technology in Chemical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 5; Mathematics 5 or Technical Mathematics 5; Physical Sciences 5."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Engineering Technology in Chemical Engineering.",
+      "career_opportunities": [
+        "Chemical engineering technologist",
+        "Process technician",
+        "Production technologist"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Civil Engineering",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30 mainstream; 27-29 ECP; 23-26 waitlist"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics 4 or Technical Mathematics 5; Physical or Technical Science requirements apply."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Civil Engineering.",
+      "career_opportunities": [
+        "Civil engineering technologist",
+        "Construction technologist",
+        "Infrastructure technician"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Geomatics (Surveying and Cartography)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics 4 or Technical Mathematics 5; science requirements apply."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Geomatics (Surveying and Cartography).",
+      "career_opportunities": [
+        "Geomatics practitioner",
+        "Surveying technician",
+        "GIS specialist"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering Technology in Civil Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 5; Mathematics 5 or Technical Mathematics 5; Physical or Technical Science 5."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Engineering Technology in Civil Engineering.",
+      "career_opportunities": [
+        "Civil engineering technologist",
+        "Construction technologist",
+        "Infrastructure technician"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Geomatics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 5; Mathematics 5 or Technical Mathematics 5; science requirements apply."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Geomatics.",
+      "career_opportunities": [
+        "Geomatics practitioner",
+        "Surveying technician",
+        "GIS specialist"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Clothing and Textile Technology",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26 Mathematics; 28 Mathematical Literacy"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics 3, Mathematical Literacy 4 or Technical Mathematics 5; online selection test."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Clothing and Textile Technology.",
+      "career_opportunities": [
+        "Clothing technologist",
+        "Textile production practitioner",
+        "Quality specialist"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Construction",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25 mainstream; 23-24 ECP"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics 4 or Technical Mathematics 5; commerce/technical subjects recommended."
+        },
+        "aps_calculation_method": 1
+      },
+      "description": "A career-focused CPUT programme in Construction.",
+      "career_opportunities": [
+        "Construction manager pathway",
+        "Quantity-surveying pathway",
+        "Site coordinator"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Engineering Technology in Electrical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30 mainstream; 27-29 ECP; 23-26 waitlist"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics 4 or Technical Mathematics 5; Physical Science 4 or Electrical Technology 4."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Engineering Technology in Electrical Engineering.",
+      "career_opportunities": [
+        "Electrical engineering technologist",
+        "Control-systems technician",
+        "Power-systems practitioner"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Engineering Technology in Computer Engineering",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30 mainstream; 27-29 ECP; 23-26 waitlist"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics 4 or Technical Mathematics 5; Physical Science 4 or Electrical Technology 4; CAT, IT or Electronics recommended."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Engineering Technology in Computer Engineering.",
+      "career_opportunities": [
+        "Computer engineering technologist",
+        "Embedded-systems technician",
+        "ICT systems practitioner"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering Technology in Electrical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 5; Mathematics 5 or Technical Mathematics 5; Physical Science or Electrical Technology 5."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Engineering Technology in Electrical Engineering.",
+      "career_opportunities": [
+        "Electrical engineering technologist",
+        "Control-systems technician",
+        "Power-systems practitioner"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering Technology in Computer Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 5; Mathematics 5 or Technical Mathematics 5; Physical Science or Electrical Technology 5; CAT, IT or Electronics recommended."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Engineering Technology in Computer Engineering.",
+      "career_opportunities": [
+        "Computer engineering technologist",
+        "Embedded-systems technician",
+        "ICT systems practitioner"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Industrial Engineering",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30 mainstream; 27-29 ECP; 23-26 waitlist"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics 4 or Technical Mathematics 5; Physical or Technical Science requirements apply."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Industrial Engineering.",
+      "career_opportunities": [
+        "Industrial engineering technologist",
+        "Operations analyst",
+        "Process-improvement practitioner"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Mechanical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30 mainstream; 27-29 ECP; 23-26 waitlist"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics 4 or Technical Mathematics 5; Physical or Technical Science requirements apply."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Mechanical Engineering.",
+      "career_opportunities": [
+        "Mechanical engineering technologist",
+        "Design technician",
+        "Maintenance practitioner"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Mechanical Engineering (Mechatronics)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics 4 or Technical Mathematics 5; Physical or Technical Science requirements apply."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Mechanical Engineering (Mechatronics).",
+      "career_opportunities": [
+        "Mechanical engineering technologist",
+        "Design technician",
+        "Maintenance practitioner"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Marine Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics 5 or Technical Mathematics 5; Physical or Technical Science 5; SAMSA medical and eyesight requirements."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Marine Engineering.",
+      "career_opportunities": [
+        "Marine-science technician",
+        "Conservation practitioner",
+        "Environmental field officer"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Nautical Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics 5 or Technical Mathematics 5; Physical or Technical Science 5; SAMSA medical and eyesight requirements."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Nautical Science.",
+      "career_opportunities": [
+        "Deck officer pathway",
+        "Navigation officer",
+        "Maritime operations practitioner"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Marine Engineering (ECP)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 31,
+        "alternatives": [],
+        "display": "31-35; 28-30 waitlist"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics or Technical Mathematics 4; Physical or Technical Science 4; SAMSA medical and eyesight requirements."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Marine Engineering (ECP).",
+      "career_opportunities": [
+        "Marine-science technician",
+        "Conservation practitioner",
+        "Environmental field officer"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Nautical Science (ECP)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering & the Built Environment",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 31,
+        "alternatives": [],
+        "display": "31-35; 28-30 waitlist"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematical Literacy is not accepted unless specifically stated.  English 4; Mathematics or Technical Mathematics 4; Physical or Technical Science 4; SAMSA medical and eyesight requirements."
+        },
+        "aps_calculation_method": 2
+      },
+      "description": "A career-focused CPUT programme in Nautical Science (ECP).",
+      "career_opportunities": [
+        "Deck officer pathway",
+        "Navigation officer",
+        "Maritime operations practitioner"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries. CPUT applies programme-specific subjects, selection rules and APS methods; meeting minimum requirements does not guarantee admission. Verify current requirements with CPUT before applying."
+      }
+    }
+  ]
+}

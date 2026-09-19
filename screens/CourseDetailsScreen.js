@@ -77,18 +77,19 @@ export default function CourseDetailsScreen({ navigation, route }) {
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.apsCard}>
           <View>
-            <Text style={styles.apsLabel}>Minimum APS</Text>
+            <Text style={styles.apsLabel}>{course.minimumAps == null ? "Admission points" : "Minimum APS"}</Text>
             <Text style={styles.apsHint}>Confirm this in the latest prospectus</Text>
           </View>
           <View style={styles.apsValueWrap}>
-            <Text style={styles.apsValue}>{course.minimumAps}</Text>
-            <Text style={styles.apsUnit}>APS</Text>
+            <Text style={styles.apsValue}>{course.minimumAps ?? "—"}</Text>
+            <Text style={styles.apsUnit}>{course.minimumAps == null ? "SEE BELOW" : "APS"}</Text>
           </View>
         </View>
         <View style={styles.sectionCard}>
           <Text style={styles.sectionTitle}>Programme overview</Text>
           <Text style={styles.description}>{course.description}</Text>
           <View style={styles.detailsList}>
+            <DetailRow icon="stats-chart-outline" label="Admission points" value={course.apsDisplay} />
             <DetailRow icon="ribbon-outline" label="Qualification" value={course.qualificationType} />
             <DetailRow icon="barcode-outline" label="Qualification code" value={course.qualificationCode} />
             <DetailRow icon="business-outline" label="Faculty" value={course.faculty} />
@@ -122,7 +123,7 @@ export default function CourseDetailsScreen({ navigation, route }) {
         <View style={styles.notice}>
           <Ionicons name="information-circle-outline" size={20} color={COLORS.primary} />
           <Text style={styles.noticeText}>
-            Extracted from the UJ {course.prospectusYear} undergraduate prospectus
+            From {course.universityShortName}'s {course.prospectusYear ? `${course.prospectusYear} ` : ""}programme information
             {course.prospectusPage ? `, page ${course.prospectusPage}` : ""}. {course.verificationNote}
           </Text>
         </View>
