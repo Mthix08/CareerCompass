@@ -68,7 +68,7 @@ export default function HomeScreen({ navigation }) {
   );
 
   const openFunding = useCallback(
-    () => navigation.navigate("NsfasDetails"),
+    () => navigation.getParent()?.navigate("Funding"),
     [navigation],
   );
 

@@ -9,7 +9,8 @@ import UniversityDetailsScreen from "./screens/UniversityDetailsScreen";
 import EditProfileScreen from "./screens/EditProfileScreen";
 import ApsCalculatorScreen from "./screens/ApsCalculatorScreen";
 import UniversityApsScoresScreen from "./screens/UniversityApsScoresScreen";
-import NsfasDetails from "./screens/NsfasDetails";
+import FundingScreen from "./screens/FundingScreen";
+import FundingDetailsScreen from "./screens/FundingDetailsScreen";
 import Applications from "./screens/Applications";
 import Bookmarks from "./screens/Bookmarks";
 import Notifications from "./screens/Notifications";
@@ -70,9 +71,14 @@ function AppNavigator() {
           options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
-          name="NsfasDetails"
-          component={NsfasDetails}
-          options={{ title: "NSFAS Funding" }}
+          name="Funding"
+          component={FundingScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="FundingDetails"
+          component={FundingDetailsScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
           name="Applications"
