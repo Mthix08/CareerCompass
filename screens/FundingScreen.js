@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
-import { NSFAS, getFundingCountdown } from "../data/funding";
+import { NSFAS, SAMPLE_BURSARY, getFundingCountdown } from "../data/funding";
 
 const NSFAS_IMAGE = require("../assets/nsfas.jpg");
 const FUNDING_OPTIONS = [
@@ -12,6 +12,7 @@ const FUNDING_OPTIONS = [
     ...NSFAS,
     description: "Funding for eligible students at public universities and TVET colleges.",
   },
+  SAMPLE_BURSARY,
 ];
 
 export default function FundingScreen({ navigation }) {
@@ -95,7 +96,10 @@ export default function FundingScreen({ navigation }) {
             <View style={styles.listCardContent}>
               <View style={styles.listIcon}><Ionicons name="wallet-outline" size={24} color={colors.primary} /></View>
               <View style={styles.listCopy}>
-                <Text style={styles.listTitle}>{option.name}</Text>
+                <View style={styles.listTitleRow}>
+                  <Text style={styles.listTitle}>{option.name}</Text>
+                  {option.isPlaceholder && <View style={styles.exampleBadge}><Text style={styles.exampleBadgeText}>EXAMPLE</Text></View>}
+                </View>
                 <Text style={styles.listDescription}>{option.description}</Text>
               </View>
               <Ionicons name="chevron-forward" size={20} color={colors.mutedText} />
@@ -139,7 +143,10 @@ function makeStyles(c) {
     listCardContent: { flexDirection: "row", alignItems: "center", gap: 12, padding: 17 },
     listIcon: { width: 46, height: 46, borderRadius: 13, backgroundColor: c.primarySoft, alignItems: "center", justifyContent: "center" },
     listCopy: { flex: 1 },
+    listTitleRow: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 8 },
     listTitle: { color: c.text, fontSize: 16, fontWeight: "700" },
+    exampleBadge: { backgroundColor: c.primarySoft, borderRadius: 20, paddingHorizontal: 8, paddingVertical: 4 },
+    exampleBadgeText: { color: c.primary, fontSize: 9, fontWeight: "800", letterSpacing: 0.7 },
     listDescription: { color: c.secondaryText, fontSize: 13, lineHeight: 18, marginTop: 4 },
     pressed: { opacity: 0.88 },
     imageBackground: { minHeight: 290, justifyContent: "flex-end" },
