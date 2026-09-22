@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
-import { NSFAS, getFundingCountdown } from "../data/funding";
+import { NSFAS, SAMPLE_BURSARY, getFundingCountdown } from "../data/funding";
 
 const SECTIONS = [
   { title: "Who qualifies?", icon: "people-outline", items: [
@@ -33,6 +33,24 @@ const SECTIONS = [
   ] },
 ];
 
+const SAMPLE_SECTIONS = [
+  { title: "Who can apply?", icon: "people-outline", items: [
+    "South African students planning to study full-time at a recognised university or TVET college.",
+    "Applicants should demonstrate financial need and involvement in their school or community.",
+  ] },
+  { title: "Fields of study", icon: "school-outline", items: [
+    "Example priority fields include education, engineering, information technology, and health sciences.",
+  ] },
+  { title: "What could it cover?", icon: "wallet-outline", items: [
+    "Tuition fees, prescribed learning materials, and a possible living allowance.",
+    "Final benefits would need to be confirmed with the real bursary provider.",
+  ] },
+  { title: "Documents to prepare", icon: "document-text-outline", items: [
+    "A certified ID copy, latest academic results, proof of household income, and proof of admission.",
+    "A short motivation letter explaining your study plans and career goals.",
+  ] },
+];
+
 export default function FundingDetailsScreen({ navigation, route }) {
   const { colors, resolvedTheme } = useProfile();
   const styles = useMemo(() => makeStyles(colors), [colors]);
@@ -42,7 +60,12 @@ export default function FundingDetailsScreen({ navigation, route }) {
     return () => clearInterval(timer);
   }, []);
   const { days, isClosed } = getFundingCountdown(now);
-  const validFunding = route.params?.fundingId === NSFAS.id;
+  const fundingId = route.params?.fundingId;
+  const isNsfas = fundingId === NSFAS.id;
+  const isSample = fundingId === SAMPLE_BURSARY.id;
+  const validFunding = isNsfas || isSample;
+  const funding = isSample ? SAMPLE_BURSARY : NSFAS;
+  const sections = isSample ? SAMPLE_SECTIONS : SECTIONS;
 
   const openLink = async (url) => {
     try {
@@ -58,6 +81,52 @@ export default function FundingDetailsScreen({ navigation, route }) {
         <Text style={styles.title}>Funding option not found</Text>
         <Pressable onPress={() => navigation.goBack()} accessibilityRole="button"><Text style={styles.link}>Go back</Text></Pressable>
       </View>
+    </SafeAreaView>
+  );
+
+  if (isSample) return (
+    <SafeAreaView style={styles.safeArea} edges={["top", "left", "right"]}>
+      <StatusBar style={resolvedTheme === "dark" ? "light" : "dark"} />
+      <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+        <Pressable onPress={() => navigation.goBack()} accessibilityRole="button" accessibilityLabel="Go back" style={styles.back}>
+          <Ionicons name="arrow-back" size={22} color={colors.text} />
+          <Text style={styles.backText}>Funding</Text>
+        </Pressable>
+        <View style={styles.sampleNotice}>
+          <Ionicons name="information-circle-outline" size={21} color={colors.primary} />
+          <Text style={styles.sampleNoticeText}>Example bursary — placeholder content demonstrating the expected layout.</Text>
+        </View>
+        <View style={styles.hero}>
+          <View style={styles.heroIcon}><Ionicons name="ribbon-outline" size={28} color="#FFFFFF" /></View>
+          <Text style={styles.heroEyebrow}>BURSARY OPPORTUNITY</Text>
+          <Text style={styles.sampleHeroTitle}>{funding.name}</Text>
+          <Text style={styles.heroSubtitle}>{funding.provider}</Text>
+          <Text style={styles.heroDescription}>{funding.description}</Text>
+        </View>
+        <View style={styles.deadlineCard}>
+          <View style={styles.deadlineHeader}>
+            <Ionicons name="calendar-outline" size={22} color={colors.primary} />
+            <Text style={styles.deadlineTitle}>{funding.cycle}</Text>
+          </View>
+          <View style={styles.dates}>
+            <View><Text style={styles.dateLabel}>OPENS</Text><Text style={styles.dateValue}>{funding.opens}</Text></View>
+            <View><Text style={styles.dateLabel}>CLOSES</Text><Text style={styles.dateValue}>{funding.closes}</Text></View>
+          </View>
+        </View>
+        {sections.map((section) => (
+          <View key={section.title} style={styles.section}>
+            <View style={styles.sectionHeader}>
+              <Ionicons name={section.icon} size={21} color={colors.primary} />
+              <Text style={styles.sectionTitle}>{section.title}</Text>
+            </View>
+            {section.items.map((item) => (
+              <View key={item} style={styles.bulletRow}><View style={styles.bullet} /><Text style={styles.bulletText}>{item}</Text></View>
+            ))}
+          </View>
+        ))}
+        <View style={styles.disabledButton}><Text style={styles.disabledButtonText}>Application link not available</Text></View>
+        <Text style={styles.footnote}>This bursary is fictional. Replace all example content with verified details and an official application link before publishing it as a real opportunity.</Text>
+      </ScrollView>
     </SafeAreaView>
   );
 
@@ -133,6 +202,7 @@ function makeStyles(c) {
     heroIcon: { width: 52, height: 52, borderRadius: 15, backgroundColor: "rgba(255,255,255,0.16)", alignItems: "center", justifyContent: "center", marginBottom: 22 },
     heroEyebrow: { color: "#CFEAE5", fontSize: 11, fontWeight: "800", letterSpacing: 1.2 },
     heroTitle: { color: "#FFFFFF", fontSize: 37, fontWeight: "800", marginTop: 5 },
+    sampleHeroTitle: { color: "#FFFFFF", fontSize: 30, lineHeight: 36, fontWeight: "800", marginTop: 5 },
     heroSubtitle: { color: "#E0F0ED", fontSize: 15, fontWeight: "600", marginTop: 2 },
     heroDescription: { color: "#FFFFFF", fontSize: 14, lineHeight: 22, marginTop: 18 },
     deadlineCard: { backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 18, padding: 18, marginTop: 17 },
@@ -156,5 +226,9 @@ function makeStyles(c) {
     link: { color: c.primary, fontSize: 14, fontWeight: "700" },
     footnote: { color: c.mutedText, fontSize: 12, lineHeight: 18, marginTop: 22 },
     title: { color: c.text, fontSize: 24, fontWeight: "800" },
+    sampleNotice: { flexDirection: "row", alignItems: "flex-start", gap: 9, backgroundColor: c.primarySoft, borderRadius: 14, padding: 14, marginBottom: 16 },
+    sampleNoticeText: { color: c.primary, fontSize: 13, lineHeight: 19, fontWeight: "700", flex: 1 },
+    disabledButton: { backgroundColor: c.border, borderRadius: 14, padding: 16, marginTop: 25, alignItems: "center" },
+    disabledButtonText: { color: c.mutedText, fontSize: 15, fontWeight: "700" },
   });
 }
