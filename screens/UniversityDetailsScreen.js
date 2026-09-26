@@ -3,7 +3,6 @@ import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
   Image,
-  Linking,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -40,7 +39,7 @@ export default function UniversityDetailsScreen({ navigation, route }) {
     addBookmark(university.id);
   };
 
-  const openProspectus = async () => {
+  const openProspectus = () => {
     const url = university.prospectusUrl || university.website;
     if (!url || !/^https?:\/\//i.test(url)) {
       Alert.alert(
@@ -50,39 +49,7 @@ export default function UniversityDetailsScreen({ navigation, route }) {
       return;
     }
 
-    try {
-      const supported = await Linking.canOpenURL(url);
-      if (!supported) {
-        Alert.alert(
-          "Cannot open link",
-          "Your device cannot open this prospectus website.",
-        );
-        return;
-      }
-      await Linking.openURL(url);
-    } catch {
-      Alert.alert(
-        "Could not open prospectus",
-        "Please try again or visit the university website in your browser.",
-      );
-    }
-  };
-
-  const confirmOpenProspectus = () => {
-    const url = university.prospectusUrl || university.website;
-    if (!url || !/^https?:\/\//i.test(url)) {
-      openProspectus();
-      return;
-    }
-
-    Alert.alert(
-      "Open external website?",
-      `You are about to leave CareerCompass and view ${university.shortName}'s prospectus.`,
-      [
-        { text: "Cancel", style: "cancel" },
-        { text: "Continue", onPress: openProspectus },
-      ],
-    );
+    navigation.navigate("Prospectus", { university, url });
   };
 
   if (!university) {
@@ -255,8 +222,8 @@ export default function UniversityDetailsScreen({ navigation, route }) {
           </View>
           {renderActiveSection()}
           <Pressable
-            onPress={confirmOpenProspectus}
-            accessibilityRole="link"
+            onPress={openProspectus}
+            accessibilityRole="button"
             accessibilityLabel={`View ${university.name} prospectus`}
             style={({ pressed }) => [
               styles.prospectusButton,
@@ -265,7 +232,7 @@ export default function UniversityDetailsScreen({ navigation, route }) {
             ]}
           >
             <Text style={styles.prospectusButtonText}>View Prospectus</Text>
-            <Ionicons name="open-outline" size={20} color="#FFFFFF" />
+            <Ionicons name="document-text-outline" size={20} color="#FFFFFF" />
           </Pressable>
         </View>
       </ScrollView>
