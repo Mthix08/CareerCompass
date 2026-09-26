@@ -23,10 +23,6 @@ const TAB_ICONS = {
   Profile: "person-outline",
 };
 
-const TAB_BACKGROUNDS = {
-  Universities: "#05080D",
-};
-
 export default function NavBar({ state, descriptors, navigation, insets }) {
   const { colors } = useProfile();
   const { width: screenWidth } = useWindowDimensions();
@@ -36,7 +32,7 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
   const screenBackground =
     activeRoute.name === "Profile" || activeRoute.name === "Home"
       ? colors.background
-      : TAB_BACKGROUNDS[activeRoute.name] || "#F6F8FC";
+      : "#F6F8FC";
 
   const handlePress = (route, isFocused) => {
     const event = navigation.emit({
