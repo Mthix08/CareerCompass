@@ -4,35 +4,43 @@ import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
-import { NSFAS, SAMPLE_BURSARY, getFundingCountdown } from "../data/funding";
+import { NSFAS, SAMPLE_BURSARY, fetchBursaries, getFundingCountdown } from "../data/funding";
 
 const NSFAS_IMAGE = require("../assets/nsfas.jpg");
-const FUNDING_OPTIONS = [
-  {
-    ...NSFAS,
-    description: "Funding for eligible students at public universities and TVET colleges.",
-  },
-  SAMPLE_BURSARY,
-];
+const FALLBACK_FUNDING_OPTIONS = [NSFAS, SAMPLE_BURSARY];
 
 export default function FundingScreen({ navigation }) {
   const { colors, resolvedTheme } = useProfile();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [now, setNow] = useState(() => new Date());
   const [searchQuery, setSearchQuery] = useState("");
+  const [fundingOptions, setFundingOptions] = useState(FALLBACK_FUNDING_OPTIONS);
+
   useEffect(() => {
     const timer = setInterval(() => setNow(new Date()), 60000);
     return () => clearInterval(timer);
   }, []);
-  const { days, isClosed } = getFundingCountdown(now);
+
+  useEffect(() => {
+    let mounted = true;
+    fetchBursaries().then((items) => {
+      if (mounted) {
+        setFundingOptions(items);
+      }
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   const filteredOptions = useMemo(() => {
     const query = searchQuery.trim().toLocaleLowerCase();
-    if (!query) return FUNDING_OPTIONS;
-    return FUNDING_OPTIONS.filter((option) =>
-      [option.name, option.fullName, option.description]
-        .some((value) => value.toLocaleLowerCase().includes(query)),
+    if (!query) return fundingOptions;
+    return fundingOptions.filter((option) =>
+      [option.name, option.fullName, option.description, option.provider]
+        .some((value) => value && value.toLocaleLowerCase().includes(query)),
     );
-  }, [searchQuery]);
+  }, [searchQuery, fundingOptions]);
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top", "left", "right"]}>
@@ -67,46 +75,52 @@ export default function FundingScreen({ navigation }) {
         </View>
 
         <Text style={styles.sectionTitle}>Funding opportunities</Text>
-        {filteredOptions.map((option) => (
-        <Pressable
-          key={option.id}
-          onPress={() => navigation.navigate("FundingDetails", { fundingId: option.id })}
-          accessibilityRole="button"
-          accessibilityLabel={`View ${option.name} funding details`}
-          style={({ pressed }) => [option.id === NSFAS.id ? styles.featureCard : styles.listCard, pressed && styles.pressed]}
-        >
-          {option.id === NSFAS.id ? (
-          <ImageBackground source={NSFAS_IMAGE} resizeMode="cover" imageStyle={styles.image} style={styles.imageBackground}>
-            <View style={styles.shade} />
-            <View style={styles.cardContent}>
-              <View style={styles.topRow}>
-                <View style={styles.featureBadge}><Text style={styles.featureBadgeText}>FEATURED FUNDING</Text></View>
-                <Ionicons name="arrow-forward-circle" size={30} color="#FFFFFF" />
-              </View>
-              <Text style={styles.cardTitle}>{option.name}</Text>
-              <Text style={styles.cardSubtitle}>{option.fullName}</Text>
-              <Text style={styles.cardDescription}>{option.description}</Text>
-              <View style={styles.dateRow}>
-                <Ionicons name="calendar-outline" size={17} color="#FFFFFF" />
-                <Text style={styles.dateText}>{isClosed ? "Applications closed" : `${days} day${days === 1 ? "" : "s"} until closing`} · Closes {option.closes}</Text>
-              </View>
-            </View>
-          </ImageBackground>
-          ) : (
-            <View style={styles.listCardContent}>
-              <View style={styles.listIcon}><Ionicons name="wallet-outline" size={24} color={colors.primary} /></View>
-              <View style={styles.listCopy}>
-                <View style={styles.listTitleRow}>
-                  <Text style={styles.listTitle}>{option.name}</Text>
-                  {option.isPlaceholder && <View style={styles.exampleBadge}><Text style={styles.exampleBadgeText}>EXAMPLE</Text></View>}
+        {filteredOptions.map((option) => {
+          const { days, isClosed } = getFundingCountdown(now, option);
+          const isFeatured = option.id === NSFAS.id;
+
+          return (
+            <Pressable
+              key={option.id}
+              onPress={() => navigation.navigate("FundingDetails", { fundingId: option.id })}
+              accessibilityRole="button"
+              accessibilityLabel={`View ${option.name} funding details`}
+              style={({ pressed }) => [isFeatured ? styles.featureCard : styles.listCard, pressed && styles.pressed]}
+            >
+              {isFeatured ? (
+                <ImageBackground source={NSFAS_IMAGE} resizeMode="cover" imageStyle={styles.image} style={styles.imageBackground}>
+                  <View style={styles.shade} />
+                  <View style={styles.cardContent}>
+                    <View style={styles.topRow}>
+                      <View style={styles.featureBadge}><Text style={styles.featureBadgeText}>FEATURED FUNDING</Text></View>
+                      <Ionicons name="arrow-forward-circle" size={30} color="#FFFFFF" />
+                    </View>
+                    <Text style={styles.cardTitle}>{option.name}</Text>
+                    <Text style={styles.cardSubtitle}>{option.fullName}</Text>
+                    <Text style={styles.cardDescription}>{option.description}</Text>
+                    <View style={styles.dateRow}>
+                      <Ionicons name="calendar-outline" size={17} color="#FFFFFF" />
+                      <Text style={styles.dateText}>{isClosed ? "Applications closed" : `${days} day${days === 1 ? "" : "s"} until closing`} · Closes {option.closes}</Text>
+                    </View>
+                  </View>
+                </ImageBackground>
+              ) : (
+                <View style={styles.listCardContent}>
+                  <View style={styles.listIcon}><Ionicons name="wallet-outline" size={24} color={colors.primary} /></View>
+                  <View style={styles.listCopy}>
+                    <View style={styles.listTitleRow}>
+                      <Text style={styles.listTitle}>{option.name}</Text>
+                      {option.isPlaceholder && <View style={styles.exampleBadge}><Text style={styles.exampleBadgeText}>EXAMPLE</Text></View>}
+                    </View>
+                    <Text style={styles.listDescription}>{option.description}</Text>
+                    <Text style={styles.listMeta}>{option.provider} · closes {option.closes}</Text>
+                  </View>
+                  <Ionicons name="chevron-forward" size={20} color={colors.mutedText} />
                 </View>
-                <Text style={styles.listDescription}>{option.description}</Text>
-              </View>
-              <Ionicons name="chevron-forward" size={20} color={colors.mutedText} />
-            </View>
-          )}
-        </Pressable>
-        ))}
+              )}
+            </Pressable>
+          );
+        })}
         {filteredOptions.length === 0 && (
           <View style={styles.emptyState}>
             <Ionicons name="search-outline" size={32} color={colors.primary} />
@@ -117,8 +131,8 @@ export default function FundingScreen({ navigation }) {
         {!searchQuery.trim() && <View style={styles.comingSoon}>
           <Ionicons name="add-circle-outline" size={24} color={colors.primary} />
           <View style={styles.comingSoonText}>
-            <Text style={styles.comingSoonTitle}>More bursaries coming soon</Text>
-            <Text style={styles.comingSoonBody}>New funding opportunities will appear here.</Text>
+            <Text style={styles.comingSoonTitle}>Live bursary directory</Text>
+            <Text style={styles.comingSoonBody}>Updated from the Ithuba bursary API when available.</Text>
           </View>
         </View>}
       </ScrollView>
@@ -145,6 +159,7 @@ function makeStyles(c) {
     listCopy: { flex: 1 },
     listTitleRow: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 8 },
     listTitle: { color: c.text, fontSize: 16, fontWeight: "700" },
+    listMeta: { color: c.mutedText, fontSize: 12, marginTop: 6 },
     exampleBadge: { backgroundColor: c.primarySoft, borderRadius: 20, paddingHorizontal: 8, paddingVertical: 4 },
     exampleBadgeText: { color: c.primary, fontSize: 9, fontWeight: "800", letterSpacing: 0.7 },
     listDescription: { color: c.secondaryText, fontSize: 13, lineHeight: 18, marginTop: 4 },
