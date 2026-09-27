@@ -74,6 +74,7 @@ export default function FundingDetailsScreen({ navigation, route }) {
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [now, setNow] = useState(() => new Date());
   const [fundingOptions, setFundingOptions] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => setNow(new Date()), 60000);
@@ -85,6 +86,12 @@ export default function FundingDetailsScreen({ navigation, route }) {
     fetchBursaries().then((items) => {
       if (mounted) {
         setFundingOptions(items);
+        setIsLoading(false);
+      }
+    }).catch(() => {
+      if (mounted) {
+        setFundingOptions([]);
+        setIsLoading(false);
       }
     });
     return () => {
@@ -93,13 +100,14 @@ export default function FundingDetailsScreen({ navigation, route }) {
   }, []);
 
   const fundingId = route.params?.fundingId;
-  const isNsfas = fundingId === NSFAS.id;
-  const isSample = fundingId === SAMPLE_BURSARY.id;
+  const fundingIdKey = String(fundingId ?? "");
+  const isNsfas = fundingIdKey === String(NSFAS.id);
+  const isSample = fundingIdKey === String(SAMPLE_BURSARY.id);
   const funding = useMemo(() => {
-    if (fundingId === NSFAS.id) return NSFAS;
-    if (fundingId === SAMPLE_BURSARY.id) return SAMPLE_BURSARY;
-    return fundingOptions.find((option) => option.id === fundingId) ?? null;
-  }, [fundingId, fundingOptions]);
+    if (fundingIdKey === String(NSFAS.id)) return NSFAS;
+    if (fundingIdKey === String(SAMPLE_BURSARY.id)) return SAMPLE_BURSARY;
+    return fundingOptions.find((option) => String(option.id) === fundingIdKey) ?? null;
+  }, [fundingIdKey, fundingOptions]);
   const validFunding = Boolean(funding);
   const { days, isClosed } = getFundingCountdown(now, funding || NSFAS);
   const sections = isSample ? SAMPLE_SECTIONS : isNsfas ? SECTIONS : [
@@ -125,6 +133,14 @@ export default function FundingDetailsScreen({ navigation, route }) {
       Alert.alert("Could not open website", "Please try again later or visit the bursary provider's website in your browser.");
     }
   };
+
+  if (isLoading) return (
+    <SafeAreaView style={styles.safeArea}>
+      <View style={styles.content}>
+        <Text style={styles.title}>Loading funding details...</Text>
+      </View>
+    </SafeAreaView>
+  );
 
   if (!validFunding) return (
     <SafeAreaView style={styles.safeArea}>
