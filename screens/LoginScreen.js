@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Image,
   View,
@@ -16,6 +16,22 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useProfile } from "../context/ProfileContext";
 import { auth } from "./firebaseConfig";
 
+//google 
+import * as Google from "expo-auth-session/providers/google";
+import * as WebBrowser from "expo-web-browser";
+import { getAuth, GoogleAuthProvider, signInWithCredential } from "firebase/auth";
+WebBrowser.maybeCompleteAuthSession();
+//
+
+//
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
+
+GoogleSignin.configure({
+  webClientId:
+    "YOUR_WEB_CLIENT_ID.apps.googleusercontent.com",
+});
+
+//
 export default function LoginScreen({ navigation }) {
   const { enterGuestMode } = useProfile();
   const [email, setEmail] = useState("");
@@ -23,6 +39,31 @@ export default function LoginScreen({ navigation }) {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({ email: "", password: "" });
+
+ // ===== GOOGLE SIGN IN START =====
+const [request, response, promptAsync] = Google.useAuthRequest({
+  webClientId:
+    "425184714090-dr8ku4ks136316duqmsii0h7do638o1s.apps.googleusercontent.com",
+});
+
+const handleGoogleSignIn = async () => {
+  try {
+    await GoogleSignin.hasPlayServices();
+    const userInfo = await GoogleSignin.signIn();
+
+    if (userInfo.data?.idToken) {
+      const credential = GoogleAuthProvider.credential(userInfo.data.idToken);
+      await signInWithCredential(auth, credential);
+
+      navigation.reset({
+        index: 0,
+        routes: [{ name: "Home" }],
+      });
+    }
+  } catch (error) {
+    console.log("Google Login Error:", error);
+  }
+};
 
   const handleLogin = async () => {
     if (isLoading) return;
@@ -169,20 +210,34 @@ export default function LoginScreen({ navigation }) {
           </TouchableOpacity>
 
           <View style={styles.dividerContainer}>
-            <View style={styles.divider} />
+  <View style={styles.divider} />
+  <Text style={styles.orText}>or</Text>
+  <View style={styles.divider} />
+</View>
 
-            <Text style={styles.orText}>or</Text>
+{/* ===== GOOGLE SIGN IN START ===== */}
+<TouchableOpacity
+  style={styles.googleButton}
+  activeOpacity={0.8}
+  onPress={handleGoogleSignIn}
+>
+  <Ionicons
+    name="logo-google"
+    size={22}
+    color="#DB4437"
+    style={{ marginRight: 10 }}
+  />
+  <Text style={styles.googleButtonText}>Continue with Google</Text>
+</TouchableOpacity>
+{/* ===== GOOGLE SIGN IN END ===== */}
 
-            <View style={styles.divider} />
-          </View>
-
-          <TouchableOpacity
-            style={styles.createButton}
-            activeOpacity={0.8}
-            onPress={() => navigation?.navigate("SignUp")}
-          >
-            <Text style={styles.createButtonText}>Create an account</Text>
-          </TouchableOpacity>
+<TouchableOpacity
+  style={styles.createButton}
+  activeOpacity={0.8}
+  onPress={() => navigation?.navigate("SignUp")}
+>
+  <Text style={styles.createButtonText}>Create an account</Text>
+</TouchableOpacity>
 
           <View style={styles.bottomTextContainer}>
             <Text style={styles.bottomText}>Just exploring? </Text>
@@ -343,11 +398,34 @@ const styles = StyleSheet.create({
     backgroundColor: "#DAD8D3",
   },
 
-  orText: {
-    marginHorizontal: 14,
-    fontSize: 14,
-    color: "#858585",
-  },
+ orText: {
+  marginHorizontal: 14,
+  fontSize: 14,
+  color: "#858585",
+},
+
+googleButton: {
+  height: 58,
+  borderWidth: 1,
+  borderColor: "#DEDCD7",
+  borderRadius: 14,
+  backgroundColor: "#FFFFFF",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: 18,
+},
+
+googleButtonText: {
+  fontSize: 16,
+  fontWeight: "600",
+  color: "#242B2A",
+},
+
+createButton: {
+  height: 67,
+
+},
 
   createButton: {
     height: 67,
