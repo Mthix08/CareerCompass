@@ -17,6 +17,7 @@ import NotificationPreferences from "./screens/NotificationPreferences";
 import LanguageScreen from "./screens/LanguageScreen";
 import FaqsScreen from "./screens/FaqsScreen";
 import CourseDetailsScreen from "./screens/CourseDetailsScreen";
+import AssistantScreen from "./screens/AssistantScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import { ProfileProvider } from "./context/ProfileContext";
 import { BookmarksProvider } from "./context/BookmarksContext";
@@ -103,6 +104,11 @@ function AppNavigator() {
           name="Faqs"
           component={FaqsScreen}
           options={{ title: "FAQs" }}
+        />
+        <Stack.Screen
+          name="Assistant"
+          component={AssistantScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,6 +1,12 @@
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { Pressable, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
 import { useProfile } from "../context/ProfileContext";
 
 const BAR_MARGIN = 16;
@@ -27,9 +33,9 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
   const barWidth = Math.min(screenWidth - BAR_MARGIN * 2, BAR_MAX_WIDTH);
   const activeRoute = state.routes[state.index];
   const screenBackground =
-    activeRoute.name === "Profile" || activeRoute.name === "Home"
-      ? colors.background
-      : TAB_BACKGROUNDS[activeRoute.name] || "#F6F8FC";
+    activeRoute.name === "Profile" || activeRoute.name === "Home" ?
+      colors.background
+    : TAB_BACKGROUNDS[activeRoute.name] || "#F6F8FC";
 
   const handlePress = (route, isFocused) => {
     const event = navigation.emit({
@@ -46,6 +52,8 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
     navigation.emit({ type: "tabLongPress", target: route.key });
   };
 
+  const openAssistant = () => navigation.getParent()?.navigate("Assistant");
+
   return (
     <View
       style={[
@@ -53,6 +61,17 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
         { backgroundColor: screenBackground, paddingBottom: safeBottom + 10 },
       ]}
     >
+      <Pressable
+        onPress={openAssistant}
+        accessibilityRole="button"
+        accessibilityLabel="Open CareerCompass Assistant"
+        style={({ pressed }) => [
+          styles.assistantButton,
+          pressed && styles.tabPressed,
+        ]}
+      >
+        <Ionicons name="sparkles-outline" size={23} color="#FFFFFF" />
+      </Pressable>
       <View style={[styles.card, { width: barWidth }]}>
         {state.routes.map((route, index) => {
           const options = descriptors[route.key].options;
@@ -68,7 +87,10 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
               accessibilityRole="tab"
               accessibilityLabel={options.tabBarAccessibilityLabel || label}
               accessibilityState={{ selected: isFocused }}
-              style={({ pressed }) => [styles.tab, pressed && styles.tabPressed]}
+              style={({ pressed }) => [
+                styles.tab,
+                pressed && styles.tabPressed,
+              ]}
             >
               <Ionicons
                 name={TAB_ICONS[route.name] || "ellipse-outline"}
@@ -77,11 +99,17 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
               />
               <Text
                 numberOfLines={1}
-                style={[styles.label, { color: itemColor }, isFocused && styles.activeLabel]}
+                style={[
+                  styles.label,
+                  { color: itemColor },
+                  isFocused && styles.activeLabel,
+                ]}
               >
                 {label}
               </Text>
-              <View style={[styles.indicator, isFocused && styles.activeIndicator]} />
+              <View
+                style={[styles.indicator, isFocused && styles.activeIndicator]}
+              />
             </Pressable>
           );
         })}
@@ -95,6 +123,26 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingTop: 8,
     alignItems: "center",
+    position: "relative",
+  },
+  assistantButton: {
+    position: "absolute",
+    right: 24,
+    top: -28,
+    zIndex: 2,
+    width: 54,
+    height: 54,
+    borderRadius: 27,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: ACTIVE_COLOR,
+    borderWidth: 4,
+    borderColor: "#FFFFFF",
+    elevation: 8,
+    shadowColor: "#102D36",
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.22,
+    shadowRadius: 6,
   },
   card: {
     height: BAR_HEIGHT,
