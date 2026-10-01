@@ -7,7 +7,7 @@ import React, {
   useState,
 } from "react";
 import { useColorScheme } from "react-native";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import { auth } from "../screens/firebaseConfig";
@@ -117,7 +117,7 @@ export function ProfileProvider({ children }) {
             )
           ) ?
             "Google"
-          : "Email",
+            : "Email",
       });
     });
   }, []);
@@ -138,8 +138,8 @@ export function ProfileProvider({ children }) {
     themePreference === "System" ?
       systemColorScheme === "dark" ?
         "dark"
-      : "light"
-    : themePreference.toLowerCase();
+        : "light"
+      : themePreference.toLowerCase();
   const colors = resolvedTheme === "dark" ? darkColors : lightColors;
 
   const updateProfile = useCallback(
@@ -161,6 +161,32 @@ export function ProfileProvider({ children }) {
     },
     [firebaseUser],
   );
+  const saveApsRecord = useCallback(
+    async (period, record) => {
+      if (!firebaseUser) {
+        throw new Error("Sign in to save your APS marks to your account.");
+      }
+
+      await setDoc(
+        doc(db, "users", firebaseUser.uid),
+        {
+          apsRecords: {
+            [period]: { ...record, updatedAt: serverTimestamp() },
+          },
+        },
+        { merge: true },
+      );
+
+      setProfile((current) => ({
+        ...current,
+        apsRecords: {
+          ...current.apsRecords,
+          [period]: record,
+        },
+      }));
+    },
+    [firebaseUser],
+  );
   const clearSuccessMessage = useCallback(() => setSuccessMessage(""), []);
 
   const value = useMemo(
@@ -172,6 +198,7 @@ export function ProfileProvider({ children }) {
       enterGuestMode,
       clearSession,
       updateProfile,
+      saveApsRecord,
       themePreference,
       setThemePreference,
       resolvedTheme,
@@ -186,6 +213,7 @@ export function ProfileProvider({ children }) {
       enterGuestMode,
       clearSession,
       updateProfile,
+      saveApsRecord,
       themePreference,
       setThemePreference,
       resolvedTheme,
