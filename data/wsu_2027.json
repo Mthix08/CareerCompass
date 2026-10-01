@@ -1,0 +1,3807 @@
+{
+  "university": {
+    "name": "Walter Sisulu University",
+    "abbreviation": "WSU",
+    "country": "South Africa",
+    "province": "Eastern Cape"
+  },
+  "schema_version": "1.0",
+  "academic_year": 2027,
+  "generated_from": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements supplied by the user",
+  "important_notice": "Minimum requirements do not guarantee admission. Confirm programme availability, selection tests, professional accreditation, application deadlines and final requirements directly with WSU. Descriptions and career lists are concise guidance; the coded admission data is normalised from the brochure.",
+  "course_count": 105,
+  "courses": [
+    {
+      "name": "Diploma in Accountancy",
+      "qualification_code": "W63001",
+      "saqa_id": "114798",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Economic and Financial Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Mathematics L3; two additional subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops accounting, reporting and financial decision-making knowledge.",
+      "career_opportunities": [
+        "Accountant",
+        "Audit trainee",
+        "Finance officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 6
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Financial Information Systems",
+      "qualification_code": "W63002",
+      "saqa_id": "101210",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Economic and Financial Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Mathematics L3; two additional subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Combines finance processes with business information systems.",
+      "career_opportunities": [
+        "Financial systems analyst",
+        "Accounting technician",
+        "Finance officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 6
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Internal Auditing",
+      "qualification_code": "W63004",
+      "saqa_id": "101212",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Economic and Financial Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Mathematics or Accounting L3, or Mathematical Literacy L5."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops internal audit, risk and control competencies.",
+      "career_opportunities": [
+        "Internal auditor",
+        "Risk officer",
+        "Compliance officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 6
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Internal Auditing Extended Curriculum Programme (ECP)",
+      "qualification_code": "W63005",
+      "saqa_id": "101212",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Economic and Financial Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [],
+        "display": "20"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Mathematics or Accounting L3, or Mathematical Literacy L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops internal audit, risk and control competencies.",
+      "career_opportunities": [
+        "Internal auditor",
+        "Risk officer",
+        "Compliance officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 6
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Accounting",
+      "qualification_code": "W63008",
+      "saqa_id": "78283",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Economic and Financial Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops accounting, reporting and financial decision-making knowledge.",
+      "career_opportunities": [
+        "Accountant",
+        "Audit trainee",
+        "Finance officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 6
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Accounting Science",
+      "qualification_code": "W63009",
+      "saqa_id": "114813",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Economic and Financial Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 480,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L5; Mathematics L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops accounting, reporting and financial decision-making knowledge.",
+      "career_opportunities": [
+        "Accountant",
+        "Audit trainee",
+        "Finance officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 6
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce",
+      "qualification_code": "W63010",
+      "saqa_id": "80806",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Economic and Financial Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3 or Mathematical Literacy L5."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Provides broad commerce and business foundations.",
+      "career_opportunities": [
+        "Business analyst",
+        "Management trainee",
+        "Entrepreneur"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 6
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Business Management",
+      "qualification_code": "W63011",
+      "saqa_id": "112328",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Economic and Financial Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3 or Mathematical Literacy L5."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops business planning, management and decision-making skills.",
+      "career_opportunities": [
+        "Business manager",
+        "Management trainee",
+        "Entrepreneur"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 6
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Economics",
+      "qualification_code": "W63012",
+      "saqa_id": "112323",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Economic and Financial Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3 or Mathematical Literacy L6."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops economic analysis and policy-related knowledge.",
+      "career_opportunities": [
+        "Economic analyst",
+        "Policy analyst",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 6
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Foundation Phase Teaching",
+      "qualification_code": "W62006",
+      "saqa_id": "99749",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Mthatha / Komani",
+      "nqf_level": 7,
+      "credits": 480,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Life Orientation L5; isiXhosa HL L4; English FAL L4; Mathematics L2 or Mathematical Literacy L4; two additional subjects totalling 8 APS."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional teacher education for the stated phase or specialisation.",
+      "career_opportunities": [
+        "Teacher",
+        "Subject specialist",
+        "Education programme coordinator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 9
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Senior Phase & FET Teaching (Creative Arts History)",
+      "qualification_code": "W62007",
+      "saqa_id": "117038",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 480,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L4; History L4; Music, Dance Studies, Dramatic Arts or Visual Arts L4; three additional subjects totalling 8 APS. Applicants without matric Music undergo audition and aptitude testing."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional teacher education for the stated phase or specialisation.",
+      "career_opportunities": [
+        "Teacher",
+        "Subject specialist",
+        "Education programme coordinator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 9
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Senior Phase & FET Teaching (Creative Arts English)",
+      "qualification_code": "W62019",
+      "saqa_id": "117038",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 480,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L5; another African language L4; Music, Dance Studies, Dramatic Arts or Visual Arts L4; another subject L4; three additional subjects totalling 7 APS. Applicants without matric Music undergo audition and aptitude testing."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional teacher education for the stated phase or specialisation.",
+      "career_opportunities": [
+        "Teacher",
+        "Subject specialist",
+        "Education programme coordinator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 9
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Senior Phase & FET Teaching (Creative Arts English) Extended Curriculum Programme (ECP)",
+      "qualification_code": "W62023",
+      "saqa_id": "117038",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 480,
+      "duration_years": null,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L4; Music, Dance Studies, Dramatic Arts or Visual Arts L3; another subject L4; three additional subjects totalling 7 APS. Applicants without matric Music undergo audition and aptitude testing."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional teacher education for the stated phase or specialisation.",
+      "career_opportunities": [
+        "Teacher",
+        "Subject specialist",
+        "Education programme coordinator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 9
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "This ECP appears in the detailed admission table but is omitted from the faculty summary table; duration is therefore not stated in the summary."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Senior Phase & FET Teaching (Consumer & Management Science)",
+      "qualification_code": "W62008",
+      "saqa_id": "117038",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 480,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L4; Mathematics L2 or Mathematical Literacy L4; one of Consumer Studies, Hospitality or Tourism L4; two additional subjects totalling 10 APS."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional teacher education for the stated phase or specialisation.",
+      "career_opportunities": [
+        "Teacher",
+        "Subject specialist",
+        "Education programme coordinator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 9
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Senior Phase & FET Teaching (Economic & Management Science)",
+      "qualification_code": "W62009",
+      "saqa_id": "117038",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Mthatha / Komani",
+      "nqf_level": 7,
+      "credits": 480,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L4; Mathematics L2 or Mathematical Literacy L4; two of Accounting, Business Studies or Economics L4; two additional subjects totalling 6 APS."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional teacher education for the stated phase or specialisation.",
+      "career_opportunities": [
+        "Teacher",
+        "Subject specialist",
+        "Education programme coordinator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 9
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Senior Phase & FET Teaching (Humanities)",
+      "qualification_code": "W62010",
+      "saqa_id": "117038",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Mthatha / Komani",
+      "nqf_level": 7,
+      "credits": 480,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L4; History L4; Geography L4; three additional subjects totalling 8 APS."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional teacher education for the stated phase or specialisation.",
+      "career_opportunities": [
+        "Teacher",
+        "Subject specialist",
+        "Education programme coordinator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 9
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Senior Phase & FET Teaching (Languages)",
+      "qualification_code": "W62011",
+      "saqa_id": "117038",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Mthatha / Komani",
+      "nqf_level": 7,
+      "credits": 480,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L5; isiXhosa HL/FAL L4; two other subjects L4; three additional subjects totalling 7 APS."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional teacher education for the stated phase or specialisation.",
+      "career_opportunities": [
+        "Teacher",
+        "Subject specialist",
+        "Education programme coordinator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 10
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Senior Phase & FET Teaching (Maths, Science & Technology)",
+      "qualification_code": "W62012",
+      "saqa_id": "117038",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Mthatha / Komani",
+      "nqf_level": 7,
+      "credits": 480,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L4; Mathematics L4; one of Life Sciences or Physical Sciences L4; two additional subjects totalling 8 APS."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional teacher education for the stated phase or specialisation.",
+      "career_opportunities": [
+        "Teacher",
+        "Subject specialist",
+        "Education programme coordinator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 10
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Senior Phase & FET Teaching (Technical and Vocational Education)",
+      "qualification_code": "W62018",
+      "saqa_id": "117038",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 480,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L4; any two listed technical/science subjects L4; two additional subjects totalling 8 APS."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional teacher education for the stated phase or specialisation.",
+      "career_opportunities": [
+        "Teacher",
+        "Subject specialist",
+        "Education programme coordinator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 10
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Building Technology",
+      "qualification_code": "W60001",
+      "saqa_id": "101196",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City / Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4 or Technical Mathematics L5; Physical Science L3 or Technical Science L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Vocational preparation for construction and building-technology work.",
+      "career_opportunities": [
+        "Construction technician",
+        "Quantity-surveying assistant",
+        "Site supervisor"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 12
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Building Technology Extended Curriculum Programme (ECP)",
+      "qualification_code": "W60002",
+      "saqa_id": "101196",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City / Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mainstream subject requirements, with one of English, Mathematics/Technical Mathematics, or Physical/Technical Science permitted one achievement level below the mainstream threshold."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Vocational preparation for construction and building-technology work.",
+      "career_opportunities": [
+        "Construction technician",
+        "Quantity-surveying assistant",
+        "Site supervisor"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 12
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Civil Engineering",
+      "qualification_code": "W60003",
+      "saqa_id": "101195",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City / Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4 (or accepted Technical Mathematics level where stated); Physical Sciences L4 or accepted Technical Science level where stated."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Prepares engineering technicians for civil infrastructure work.",
+      "career_opportunities": [
+        "Civil engineering technician",
+        "Site technician",
+        "Infrastructure project assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 12
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Civil Engineering Extended Curriculum Programme (ECP)",
+      "qualification_code": "W60004",
+      "saqa_id": "101195",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City / Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mainstream subject requirements, with one of English, Mathematics/Technical Mathematics, or Physical/Technical Science permitted one achievement level below the mainstream threshold."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Prepares engineering technicians for civil infrastructure work.",
+      "career_opportunities": [
+        "Civil engineering technician",
+        "Site technician",
+        "Infrastructure project assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 12
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Electrical Engineering",
+      "qualification_code": "W60005",
+      "saqa_id": "101197",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4 (or accepted Technical Mathematics level where stated); Physical Sciences L4 or accepted Technical Science level where stated."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Prepares engineering technicians for electrical systems work.",
+      "career_opportunities": [
+        "Electrical engineering technician",
+        "Maintenance technician",
+        "Technical project assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 12
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Electrical Engineering Extended Curriculum Programme (ECP)",
+      "qualification_code": "W60006",
+      "saqa_id": "101197",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mainstream subject requirements, with one of English, Mathematics/Technical Mathematics, or Physical/Technical Science permitted one achievement level below the mainstream threshold."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Prepares engineering technicians for electrical systems work.",
+      "career_opportunities": [
+        "Electrical engineering technician",
+        "Maintenance technician",
+        "Technical project assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 12
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Mechanical Engineering",
+      "qualification_code": "W60007",
+      "saqa_id": "101198",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4 (or accepted Technical Mathematics level where stated); Physical Sciences L4 or accepted Technical Science level where stated."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Prepares engineering technicians for mechanical systems work.",
+      "career_opportunities": [
+        "Mechanical engineering technician",
+        "Maintenance planner",
+        "Production technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 12
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Mechanical Engineering Extended Curriculum Programme (ECP)",
+      "qualification_code": "W60008",
+      "saqa_id": "101198",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mainstream subject requirements, with one of English, Mathematics/Technical Mathematics, or Physical/Technical Science permitted one achievement level below the mainstream threshold."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Prepares engineering technicians for mechanical systems work.",
+      "career_opportunities": [
+        "Mechanical engineering technician",
+        "Maintenance planner",
+        "Production technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 12
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Information and Communications Technology in Applications Development",
+      "qualification_code": "W60009",
+      "saqa_id": "101175",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [
+          "APS 24 when using Mathematical Literacy"
+        ],
+        "display": "22 (APS 24 when using Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3 or Mathematical Literacy L5."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Combines software-development theory with practical ICT work.",
+      "career_opportunities": [
+        "Software developer",
+        "Application support analyst",
+        "QA tester"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 14
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Information and Communications Technology in Applications Development Extended Curriculum Programme (ECP)",
+      "qualification_code": "W60010",
+      "saqa_id": "101175",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 18,
+        "alternatives": [
+          "APS 20 when using Mathematical Literacy"
+        ],
+        "display": "18 (APS 20 when using Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mainstream requirements with one of English or Mathematics/Mathematical Literacy permitted one achievement level below the mainstream threshold."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Combines software-development theory with practical ICT work.",
+      "career_opportunities": [
+        "Software developer",
+        "Application support analyst",
+        "QA tester"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 14
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Information and Communications Technology in Business Analysis",
+      "qualification_code": "W60011",
+      "saqa_id": "101194",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [
+          "APS 24 when using Mathematical Literacy"
+        ],
+        "display": "22 (APS 24 when using Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3 or Mathematical Literacy L5."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops ICT business-analysis and solution-specification skills.",
+      "career_opportunities": [
+        "Business analyst",
+        "Systems analyst",
+        "Product support analyst"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 14
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Information and Communications Technology in Business Analysis Extended Curriculum Programme (ECP)",
+      "qualification_code": "W60012",
+      "saqa_id": "101194",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 18,
+        "alternatives": [
+          "APS 20 when using Mathematical Literacy"
+        ],
+        "display": "18 (APS 20 when using Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mainstream requirements with one of English or Mathematics/Mathematical Literacy permitted one achievement level below the mainstream threshold."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops ICT business-analysis and solution-specification skills.",
+      "career_opportunities": [
+        "Business analyst",
+        "Systems analyst",
+        "Product support analyst"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 14
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Information and Communications Technology in Communication Networks",
+      "qualification_code": "W60013",
+      "saqa_id": "101193",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [
+          "APS 24 when using Mathematical Literacy"
+        ],
+        "display": "22 (APS 24 when using Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3 or Mathematical Literacy L5."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops computer-network design, implementation and support skills.",
+      "career_opportunities": [
+        "Network technician",
+        "Network administrator",
+        "Infrastructure support technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 14
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Information and Communications Technology in Communication Networks Extended Curriculum Programme (ECP)",
+      "qualification_code": "W60014",
+      "saqa_id": "101193",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 18,
+        "alternatives": [
+          "APS 20 when using Mathematical Literacy"
+        ],
+        "display": "18 (APS 20 when using Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mainstream requirements with one of English or Mathematics/Mathematical Literacy permitted one achievement level below the mainstream threshold."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops computer-network design, implementation and support skills.",
+      "career_opportunities": [
+        "Network technician",
+        "Network administrator",
+        "Infrastructure support technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 14
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Information and Communications Technology in Support Services",
+      "qualification_code": "W60015",
+      "saqa_id": "101176",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [
+          "APS 24 when using Mathematical Literacy"
+        ],
+        "display": "22 (APS 24 when using Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3 or Mathematical Literacy L5."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops ICT support, service-management and equipment-maintenance skills.",
+      "career_opportunities": [
+        "IT support technician",
+        "Service-desk analyst",
+        "Systems support technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 14
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Information and Communications Technology in Support Services Extended Curriculum Programme (ECP)",
+      "qualification_code": "W60016",
+      "saqa_id": "101176",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering, Built Environment and Information Technology",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 18,
+        "alternatives": [
+          "APS 20 when using Mathematical Literacy"
+        ],
+        "display": "18 (APS 20 when using Mathematical Literacy)"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mainstream requirements with one of English or Mathematics/Mathematical Literacy permitted one achievement level below the mainstream threshold."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops ICT support, service-management and equipment-maintenance skills.",
+      "career_opportunities": [
+        "IT support technician",
+        "Service-desk analyst",
+        "Systems support technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 14
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Fashion",
+      "qualification_code": "W66001",
+      "saqa_id": "97040",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 19,
+        "alternatives": [],
+        "display": "19"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L2, Mathematical Literacy L3, or Accounting L2; evaluation required for final placement."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops fashion design and garment-production skills.",
+      "career_opportunities": [
+        "Fashion designer",
+        "Stylist",
+        "Garment-production assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Fine Art",
+      "qualification_code": "W66002",
+      "saqa_id": "97041",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 19,
+        "alternatives": [],
+        "display": "19"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; portfolio/internal assessment may apply."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops studio-art practice and knowledge of the visual-arts sector.",
+      "career_opportunities": [
+        "Visual artist",
+        "Gallery assistant",
+        "Arts administrator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Arts",
+      "qualification_code": "W66004",
+      "saqa_id": "80197",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4 plus any two of isiXhosa, Sesotho, Geography or History at L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Broad humanities study supporting advanced disciplinary specialisation.",
+      "career_opportunities": [
+        "Communications officer",
+        "Research assistant",
+        "Public-service administrator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Arts (English)",
+      "qualification_code": "W66029",
+      "saqa_id": "80197",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English L5 plus any one of isiXhosa, Sesotho, Geography or History at L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Broad humanities study supporting advanced disciplinary specialisation.",
+      "career_opportunities": [
+        "Communications officer",
+        "Research assistant",
+        "Public-service administrator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Anthropology)",
+      "qualification_code": "W66007",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Interdisciplinary study of society with the named disciplinary focus.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Anthropology) Extended Curriculum Programme (ECP)",
+      "qualification_code": "W66008",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Interdisciplinary study of society with the named disciplinary focus.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Criminology)",
+      "qualification_code": "W66009",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Interdisciplinary study of society with the named disciplinary focus.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Criminology) Extended Curriculum Programme (ECP)",
+      "qualification_code": "W66010",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Interdisciplinary study of society with the named disciplinary focus.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Philosophy)",
+      "qualification_code": "W66011",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Interdisciplinary study of society with the named disciplinary focus.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Philosophy) Extended Curriculum Programme (ECP)",
+      "qualification_code": "W66012",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Interdisciplinary study of society with the named disciplinary focus.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Political Studies)",
+      "qualification_code": "W66013",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Interdisciplinary study of society with the named disciplinary focus.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Political Studies) Extended Curriculum Programme (ECP)",
+      "qualification_code": "W66014",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Interdisciplinary study of society with the named disciplinary focus.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Population Studies)",
+      "qualification_code": "W66015",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Interdisciplinary study of society with the named disciplinary focus.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Population Studies) Extended Curriculum Programme (ECP)",
+      "qualification_code": "W66016",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Interdisciplinary study of society with the named disciplinary focus.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Psychology)",
+      "qualification_code": "W66017",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Examines human cognition, development and behaviour.",
+      "career_opportunities": [
+        "Behavioural research assistant",
+        "Community programme officer",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Psychology) Extended Curriculum Programme (ECP)",
+      "qualification_code": "W66018",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Examines human cognition, development and behaviour.",
+      "career_opportunities": [
+        "Behavioural research assistant",
+        "Community programme officer",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Sociology)",
+      "qualification_code": "W66019",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Interdisciplinary study of society with the named disciplinary focus.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (Sociology) Extended Curriculum Programme (ECP)",
+      "qualification_code": "W66020",
+      "saqa_id": "115218",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3 and four subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Interdisciplinary study of society with the named disciplinary focus.",
+      "career_opportunities": [
+        "Social researcher",
+        "Development practitioner",
+        "Public-service officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Laws",
+      "qualification_code": "W66021",
+      "saqa_id": "117039",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 8,
+      "credits": 512,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L5; Mathematics L3 or Mathematical Literacy L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional undergraduate legal education in South African law.",
+      "career_opportunities": [
+        "Attorney or advocate after professional requirements",
+        "Legal adviser",
+        "Compliance officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Psychology",
+      "qualification_code": "W66022",
+      "saqa_id": "80194",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 8,
+      "credits": 512,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L4; Life Sciences L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Examines human cognition, development and behaviour.",
+      "career_opportunities": [
+        "Behavioural research assistant",
+        "Community programme officer",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Social Work",
+      "qualification_code": "W66023",
+      "saqa_id": "111505",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Law, Humanities and Social Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 8,
+      "credits": 516,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L5; Life Sciences L4; three other subjects L4 excluding Life Orientation; character-reference checks apply."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional preparation for ethical social-work practice.",
+      "career_opportunities": [
+        "Social worker after registration",
+        "Community-development practitioner",
+        "Case-management officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 16
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Higher Certificate in Versatile Broadcasting",
+      "qualification_code": "W61001",
+      "saqa_id": "97037",
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Buffalo City",
+      "nqf_level": 5,
+      "credits": 120,
+      "duration_years": 1,
+      "aps": {
+        "minimum": 18,
+        "alternatives": [],
+        "display": "18"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another language L3; two additional subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops practical skills across radio, television, film and digital media.",
+      "career_opportunities": [
+        "Broadcast assistant",
+        "Content producer",
+        "Media technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Administrative Management",
+      "qualification_code": "W61002",
+      "saqa_id": "114801",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L2 or Mathematical Literacy L4; two additional subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Undergraduate study in the named professional or academic field.",
+      "career_opportunities": [
+        "Graduate trainee",
+        "Programme assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Hospitality Management",
+      "qualification_code": "W61003",
+      "saqa_id": "97042",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3 or Mathematical Literacy L4; three relevant subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops operational and management skills for hospitality services.",
+      "career_opportunities": [
+        "Hospitality supervisor",
+        "Guest-services officer",
+        "Food-service manager"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Human Resources Management",
+      "qualification_code": "W61004",
+      "saqa_id": "97043",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth / Komani",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Mathematics L3 or Mathematical Literacy L4; two subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops human-resource management and employee-relations competencies.",
+      "career_opportunities": [
+        "HR practitioner",
+        "Recruitment officer",
+        "Training coordinator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Human Resources Management Extended Curriculum Programme (ECP)",
+      "qualification_code": "W61005",
+      "saqa_id": "97043",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth / Komani",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [],
+        "display": "20"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Mathematics L2 or Mathematical Literacy L3; two subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops human-resource management and employee-relations competencies.",
+      "career_opportunities": [
+        "HR practitioner",
+        "Recruitment officer",
+        "Training coordinator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Journalism",
+      "qualification_code": "W61006",
+      "saqa_id": "97044",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L5; another language L4; two additional subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops news gathering, verification and multimedia reporting skills.",
+      "career_opportunities": [
+        "Journalist",
+        "Content producer",
+        "Media researcher"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Local Government Finance",
+      "qualification_code": "W61007",
+      "saqa_id": "97045",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth / Komani",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Accounting or Mathematics L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops municipal finance and audit competencies.",
+      "career_opportunities": [
+        "Municipal finance officer",
+        "Budget analyst",
+        "Audit assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Local Government Finance Extended Curriculum Programme (ECP)",
+      "qualification_code": "W61008",
+      "saqa_id": "97045",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth / Komani",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [],
+        "display": "20"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Accounting or Mathematics L2."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops municipal finance and audit competencies.",
+      "career_opportunities": [
+        "Municipal finance officer",
+        "Budget analyst",
+        "Audit assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Management",
+      "qualification_code": "W61009",
+      "saqa_id": "97046",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Accounting or Mathematics L3, or Mathematical Literacy L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Undergraduate study in the named professional or academic field.",
+      "career_opportunities": [
+        "Graduate trainee",
+        "Programme assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Management Extended Curriculum Programme (ECP)",
+      "qualification_code": "W61010",
+      "saqa_id": "97046",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [],
+        "display": "20"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Accounting or Mathematics L2, or Mathematical Literacy L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Undergraduate study in the named professional or academic field.",
+      "career_opportunities": [
+        "Graduate trainee",
+        "Programme assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Marketing Management",
+      "qualification_code": "W61011",
+      "saqa_id": "97048",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Mathematics L3 or Mathematical Literacy L4; two other subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops marketing planning, customer and digital-market skills.",
+      "career_opportunities": [
+        "Marketing coordinator",
+        "Digital marketing assistant",
+        "Market researcher"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Policing",
+      "qualification_code": "W61012",
+      "saqa_id": "97050",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; four other subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Provides academic and vocational preparation for law-enforcement contexts.",
+      "career_opportunities": [
+        "Law-enforcement administrator",
+        "Community-safety officer",
+        "Compliance officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Office Management & Technology",
+      "qualification_code": "W61013",
+      "saqa_id": "97049",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3 or Mathematical Literacy L4; two subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops administrative, information-management and business-technology skills.",
+      "career_opportunities": [
+        "Office manager",
+        "Administrative officer",
+        "Executive assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Office Management & Technology Extended Curriculum Programme (ECP)",
+      "qualification_code": "W61014",
+      "saqa_id": "97049",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 19,
+        "alternatives": [],
+        "display": "19"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Mathematics L2 or Mathematical Literacy L3; two subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops administrative, information-management and business-technology skills.",
+      "career_opportunities": [
+        "Office manager",
+        "Administrative officer",
+        "Executive assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Public Management",
+      "qualification_code": "W61015",
+      "saqa_id": "97051",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth / Komani",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; four other subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops management competencies for public-sector service delivery.",
+      "career_opportunities": [
+        "Public administrator",
+        "Municipal officer",
+        "Programme administrator"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Public Relations Management",
+      "qualification_code": "W61016",
+      "saqa_id": "101179",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L5; another language L4; two subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops organisational communication, media-relations and reputation-management skills.",
+      "career_opportunities": [
+        "Public-relations practitioner",
+        "Communications officer",
+        "Media liaison"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Public Relations Management Extended Curriculum Programme (ECP)",
+      "qualification_code": "W61017",
+      "saqa_id": "101179",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 19,
+        "alternatives": [],
+        "display": "19"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another language L3; two subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops organisational communication, media-relations and reputation-management skills.",
+      "career_opportunities": [
+        "Public-relations practitioner",
+        "Communications officer",
+        "Media liaison"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Small Business Management",
+      "qualification_code": "W61018",
+      "saqa_id": "117828",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Mathematics or Accounting L3, or Mathematical Literacy L4; two subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops business planning, management and decision-making skills.",
+      "career_opportunities": [
+        "Business manager",
+        "Management trainee",
+        "Entrepreneur"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Sport Management",
+      "qualification_code": "W61019",
+      "saqa_id": "97052",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; three other subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Applies management principles in sport, fitness and recreation contexts.",
+      "career_opportunities": [
+        "Sport administrator",
+        "Events coordinator",
+        "Club operations officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Tourism Management",
+      "qualification_code": "W61020",
+      "saqa_id": "97053",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3 or Mathematical Literacy L4; three relevant subjects L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops management knowledge for tourism and leisure services.",
+      "career_opportunities": [
+        "Tourism officer",
+        "Travel consultant",
+        "Destination-marketing assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Administration",
+      "qualification_code": "W61029",
+      "saqa_id": "80826",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management and Public Administration Sciences",
+      "campus": "Butterworth",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; four other subjects L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops organisational and public-administration leadership skills.",
+      "career_opportunities": [
+        "Public administrator",
+        "Operations officer",
+        "Management trainee"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 19
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Medical Sciences",
+      "qualification_code": "W65001",
+      "saqa_id": "87492",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Medicine and Health Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L4; Mathematics L4; Physical Sciences L4; Life Sciences L4; another subject L4 excluding Life Orientation; additional selection criteria apply."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Provides foundational biomedical-science knowledge with later disciplinary streams.",
+      "career_opportunities": [
+        "Medical-science technologist",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 22
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Medicine in Clinical Practice",
+      "qualification_code": "W65002",
+      "saqa_id": "97150",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Medicine and Health Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L4; Mathematics L4; Physical Sciences L4; Life Sciences L4; another subject L4 excluding Life Orientation; additional selection criteria apply."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional preparation for work as a clinical associate.",
+      "career_opportunities": [
+        "Clinical associate after registration",
+        "District-health practitioner"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 22
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Nursing",
+      "qualification_code": "W65004",
+      "saqa_id": "118180",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Medicine and Health Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 8,
+      "credits": 480,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L4; Mathematics L4; Physical Sciences L4; Life Sciences L4; another subject L4 excluding Life Orientation; additional selection criteria apply."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional nursing education integrating science and clinical practice.",
+      "career_opportunities": [
+        "Professional nurse after registration",
+        "Community-health nurse"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 22
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Medical Orthotics and Prosthetics",
+      "qualification_code": "W65005",
+      "saqa_id": "111953",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Medicine and Health Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 8,
+      "credits": 480,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; another African language L4; Mathematics L4; Physical Sciences L4; Life Sciences L4; another subject L4 excluding Life Orientation; additional selection criteria apply."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional education in orthotic and prosthetic clinical practice.",
+      "career_opportunities": [
+        "Medical orthotist and prosthetist after registration",
+        "Rehabilitation practitioner"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 22
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Medicine and Bachelor of Surgery",
+      "qualification_code": "W65006",
+      "saqa_id": "80128",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Medicine and Health Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 8,
+      "credits": 720,
+      "duration_years": 6,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L5; another African language L5; Mathematics L5; Physical Sciences L5; Life Sciences L5; another subject L5 excluding Life Orientation; additional selection criteria apply."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Professional medical education for clinical practice.",
+      "career_opportunities": [
+        "Medical practitioner after registration",
+        "Community-service doctor"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 22
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Analytical Chemistry",
+      "qualification_code": "W64001",
+      "saqa_id": "97039",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops laboratory and analytical skills for chemical industries.",
+      "career_opportunities": [
+        "Laboratory analyst",
+        "Quality-control technician",
+        "Chemical technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Analytical Chemistry Extended Curriculum Programme (ECP)",
+      "qualification_code": "W64002",
+      "saqa_id": "97039",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [],
+        "display": "20"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L3; Mathematics L3; Physical Sciences L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops laboratory and analytical skills for chemical industries.",
+      "career_opportunities": [
+        "Laboratory analyst",
+        "Quality-control technician",
+        "Chemical technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Consumer Science in Food and Nutrition",
+      "qualification_code": "W64004",
+      "saqa_id": "96787",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3; Physical Sciences L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Integrates food, nutrition, product and consumer-industry knowledge.",
+      "career_opportunities": [
+        "Food product developer",
+        "Food-service manager",
+        "Quality-control officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Consumer Science in Food and Nutrition Extended Curriculum Programme (ECP)",
+      "qualification_code": "W64039",
+      "saqa_id": "96787",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Buffalo City",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [],
+        "display": "20"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3; Physical Sciences L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Integrates food, nutrition, product and consumer-industry knowledge.",
+      "career_opportunities": [
+        "Food product developer",
+        "Food-service manager",
+        "Quality-control officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Diploma in Pest Management",
+      "qualification_code": "W64005",
+      "saqa_id": "112034",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 6,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L3; Life Sciences L3; Physical Sciences L2."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops scientific and applied pest-diagnosis and control skills.",
+      "career_opportunities": [
+        "Pest-management practitioner",
+        "Agricultural adviser",
+        "Field technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Applied Mathematics",
+      "qualification_code": "W64007",
+      "saqa_id": "101254",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 480,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L5; Physical Sciences L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Applies advanced mathematical methods to scientific and technical problems.",
+      "career_opportunities": [
+        "Quantitative analyst",
+        "Modelling assistant",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Applied Mathematics Extended Curriculum Programme (ECP)",
+      "qualification_code": "W64008",
+      "saqa_id": "101254",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Applies advanced mathematical methods to scientific and technical problems.",
+      "career_opportunities": [
+        "Quantitative analyst",
+        "Modelling assistant",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Applied Statistical Sciences",
+      "qualification_code": "W64009",
+      "saqa_id": "101255",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L5; Physical Sciences L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops applied statistics, mathematics and computational problem-solving skills.",
+      "career_opportunities": [
+        "Data analyst",
+        "Statistical analyst",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Applied Statistical Sciences Extended Curriculum Programme (ECP)",
+      "qualification_code": "W64010",
+      "saqa_id": "101255",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops applied statistics, mathematics and computational problem-solving skills.",
+      "career_opportunities": [
+        "Data analyst",
+        "Statistical analyst",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Biological Sciences",
+      "qualification_code": "W64011",
+      "saqa_id": "112304",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L5; Physical Sciences L5; Life Sciences L5."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops investigation skills across plant, animal and microbial sciences.",
+      "career_opportunities": [
+        "Biological-science technician",
+        "Laboratory analyst",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Biological Sciences Extended Curriculum Programme (ECP)",
+      "qualification_code": "W64012",
+      "saqa_id": "112304",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; two of Mathematics, Physical Sciences and Life Sciences at L3 and the third at L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops investigation skills across plant, animal and microbial sciences.",
+      "career_opportunities": [
+        "Biological-science technician",
+        "Laboratory analyst",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Chemistry",
+      "qualification_code": "W64013",
+      "saqa_id": "116397",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L5; Physical Sciences L5."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops theoretical and laboratory foundations across chemistry.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory analyst",
+        "Quality-control scientist"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Chemistry Extended Curriculum Programme (ECP)",
+      "qualification_code": "W64014",
+      "saqa_id": "116397",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops theoretical and laboratory foundations across chemistry.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory analyst",
+        "Quality-control scientist"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Computer Science",
+      "qualification_code": "W64015",
+      "saqa_id": "112446",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L5; Physical Sciences L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops software, algorithms and computing-systems knowledge.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems analyst",
+        "Data technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Computer Science Extended Curriculum Programme (ECP)",
+      "qualification_code": "W64016",
+      "saqa_id": "112446",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops software, algorithms and computing-systems knowledge.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems analyst",
+        "Data technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Environmental Studies",
+      "qualification_code": "W64017",
+      "saqa_id": "116190",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; Life Sciences (or Agriculture/Tourism for Environmental Studies) L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops environmental assessment, resource and legal knowledge.",
+      "career_opportunities": [
+        "Environmental officer",
+        "EIA assistant",
+        "Conservation project officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Environmental Studies Extended Curriculum Programme (ECP)",
+      "qualification_code": "W64018",
+      "saqa_id": "116190",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; two of Mathematics, Physical Sciences and Life Sciences at L3 and the third at L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops environmental assessment, resource and legal knowledge.",
+      "career_opportunities": [
+        "Environmental officer",
+        "EIA assistant",
+        "Conservation project officer"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Mathematics",
+      "qualification_code": "W64019",
+      "saqa_id": "101253",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L5; Physical Sciences L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops rigorous mathematical reasoning and problem-solving skills.",
+      "career_opportunities": [
+        "Quantitative analyst",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Mathematics Extended Curriculum Programme (ECP)",
+      "qualification_code": "W64020",
+      "saqa_id": "101253",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L3."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops rigorous mathematical reasoning and problem-solving skills.",
+      "career_opportunities": [
+        "Quantitative analyst",
+        "Research assistant",
+        "Further-study candidate"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Pest Management",
+      "qualification_code": "W64021",
+      "saqa_id": "112432",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4; Life Sciences (or Agriculture/Tourism for Environmental Studies) L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops scientific and applied pest-diagnosis and control skills.",
+      "career_opportunities": [
+        "Pest-management practitioner",
+        "Agricultural adviser",
+        "Field technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Pest Management Extended Curriculum Programme (ECP)",
+      "qualification_code": "W64022",
+      "saqa_id": "112432",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; two of Mathematics, Physical Sciences and Life Sciences at L3 and the third at L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops scientific and applied pest-diagnosis and control skills.",
+      "career_opportunities": [
+        "Pest-management practitioner",
+        "Agricultural adviser",
+        "Field technician"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Physics",
+      "qualification_code": "W64023",
+      "saqa_id": "112445",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "25"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L5; Physical Sciences L5."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops theoretical, experimental and analytical foundations in physics.",
+      "career_opportunities": [
+        "Physics laboratory technician",
+        "Data analyst",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Physics Extended Curriculum Programme (ECP)",
+      "qualification_code": "W64024",
+      "saqa_id": "112445",
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Mthatha",
+      "nqf_level": 7,
+      "credits": 360,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL/FAL L4; Mathematics L4; Physical Sciences L4."
+        },
+        "aps_calculation_method": "WSU APS uses the best six subjects: up to two languages plus the four highest-scoring remaining subjects, including subjects required by the qualification and excluding Life Orientation unless specifically required. Percentages are converted using the WSU APS table."
+      },
+      "description": "Develops theoretical, experimental and analytical foundations in physics.",
+      "career_opportunities": [
+        "Physics laboratory technician",
+        "Data analyst",
+        "Research assistant"
+      ],
+      "source": {
+        "document": "Walter Sisulu University 2027 Undergraduate Information Brochure & Admission Requirements",
+        "page": 25
+      },
+      "verification": {
+        "status": "Directly extracted and normalised from the supplied WSU 2027 brochure.",
+        "note": "Programme title, code, SAQA ID, NQF, credits, duration, campus, APS and subject thresholds come from the brochure. Description and careers are concise guidance based on the brochure overview and qualification field."
+      }
+    }
+  ]
+}

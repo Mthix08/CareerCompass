@@ -1,0 +1,623 @@
+{
+  "university": {
+    "name": "Rhodes University",
+    "abbreviation": "RU",
+    "country": "South Africa",
+    "province": "Eastern Cape"
+  },
+  "schema_version": "1.0",
+  "generated_from": "Rhodes University Undergraduate Prospectus supplied as rhodes.pdf (created March 2026)",
+  "important_notice": "This dataset summarises Rhodes University's undergraduate degree routes and APS requirements. Rhodes distinguishes between Dean's-discretion ranges and provisional-offer thresholds; both are preserved. Programme combinations are flexible, so listed fields represent study options rather than separate qualifications. Verify current requirements with Rhodes before applying.",
+  "course_count": 16,
+  "courses": [
+    {
+      "name": "Bachelor of Business Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": "Makhanda",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 38,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 45
+          }
+        ],
+        "display": "APS 38-44: Dean's discretion; APS 45+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4; Mathematics level 6"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of business science, with study options including Computer Science; Economics; Information Systems; Management; Quantitative Management.",
+      "career_opportunities": [
+        "Business analyst",
+        "Management consultant",
+        "Quantitative or information-systems professional"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce (BCom)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": "Makhanda",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 40
+          }
+        ],
+        "display": "APS 34-39: Dean's discretion; APS 40+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4; Mathematics level 4"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of commerce (bcom), with study options including Accounting; General Curriculum.",
+      "career_opportunities": [
+        "Accountant or financial professional",
+        "Business manager",
+        "Management consultant"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Economics (BEco)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": "Makhanda",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 40
+          }
+        ],
+        "display": "APS 34-39: Dean's discretion; APS 40+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4; Mathematics level 4"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of economics (beco), with study options including Business Sciences; Environmental Economics; Mineral Economics; Social Sciences.",
+      "career_opportunities": [
+        "Economist",
+        "Economic or policy analyst",
+        "Financial-sector professional"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "BCom Extended Studies",
+      "qualification_code": null,
+      "qualification_type": "Extended bachelor's degree",
+      "faculty": "Faculty of Commerce",
+      "campus": "Makhanda",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "Minimum APS 34 through the extended-studies selection route."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics at least 50%; admission through the extended-studies selection route"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bcom extended studies, with study options including Additional literacy and numeracy courses.",
+      "career_opportunities": [
+        "Research or policy professional",
+        "Communication or cultural-sector practitioner",
+        "Public- or private-sector specialist"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts (BA)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": "Makhanda",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 45
+          }
+        ],
+        "display": "APS 34-44: Dean's discretion; APS 45+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 60% or English First Additional Language 65%"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of arts (ba), with study options including Anthropology; Drama; English; Languages; Literature; Politics; Psychology; Sociology.",
+      "career_opportunities": [
+        "Research or policy professional",
+        "Communication or cultural-sector practitioner",
+        "Public- or private-sector specialist"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Science (BSS)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": "Makhanda",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 45
+          }
+        ],
+        "display": "APS 34-44: Dean's discretion; APS 45+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 60% or English First Additional Language 65%"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of social science (bss), with study options including Anthropology; Economics; Management; Politics; Psychology; Sociology.",
+      "career_opportunities": [
+        "Scientist or laboratory professional",
+        "Environmental or computational specialist",
+        "Researcher"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Fine Arts (BFA)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": "Makhanda",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 45
+          }
+        ],
+        "display": "APS 34-44: Dean's discretion; APS 45+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 60% or English First Additional Language 65%; a portfolio may be required"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of fine arts (bfa), with study options including Art History; Fine Art Practice; Visual Culture.",
+      "career_opportunities": [
+        "Visual artist",
+        "Curator or gallery professional",
+        "Creative-industry practitioner"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Music (BMus)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": "Makhanda",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 45
+          }
+        ],
+        "display": "APS 34-44: Dean's discretion; APS 45+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 60% or English First Additional Language 65%"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of music (bmus), with study options including Instrumental Music; Music Theory.",
+      "career_opportunities": [
+        "Musician",
+        "Music educator",
+        "Arts administrator"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Journalism (BJourn)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": "Makhanda",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 45
+          }
+        ],
+        "display": "APS 34-44: Dean's discretion; APS 45+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 60% or English First Additional Language 65%"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of journalism (bjourn), with study options including BA/BSS-aligned study with Journalism in the fourth year.",
+      "career_opportunities": [
+        "Journalist",
+        "Media producer or editor",
+        "Communication professional"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "BA or BSS Extended Studies",
+      "qualification_code": null,
+      "qualification_type": "Extended bachelor's degree",
+      "faculty": "Faculty of Humanities",
+      "campus": "Makhanda",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "Minimum APS 34 through the extended-studies selection route."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 60% or English First Additional Language 65%; admission through the extended-studies selection route"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in ba or bss extended studies, with study options including Limited first-year curriculum including Journalism and Anthropology, or Politics and Sociology.",
+      "career_opportunities": [
+        "Research or policy professional",
+        "Communication or cultural-sector practitioner",
+        "Public- or private-sector specialist"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Foundation Phase Teaching (BEDFP)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": "Makhanda",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 39,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 44
+          }
+        ],
+        "display": "APS 39-43: Dean's discretion; APS 44+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 4; Mathematics level 3 or Mathematical Literacy level 4"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of education in foundation phase teaching (bedfp), with study options including Foundation Phase Teaching.",
+      "career_opportunities": [
+        "Teacher",
+        "Curriculum practitioner",
+        "Education specialist"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Postgraduate Certificate in Education (PGCE)",
+      "qualification_code": null,
+      "qualification_type": "Postgraduate Certificate",
+      "faculty": "Faculty of Education",
+      "campus": "Makhanda",
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No school-leaving APS applies; a completed bachelor's degree is required."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "A suitable bachelor's degree with appropriate teaching subjects"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in postgraduate certificate in education (pgce), with study options including Senior Phase and Further Education and Training teaching.",
+      "career_opportunities": [
+        "Teacher",
+        "Curriculum practitioner",
+        "Education specialist"
+      ],
+      "source": {
+        "prospectus_page": 16,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Laws (LLB)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Law",
+      "campus": "Makhanda",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 40,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 45
+          }
+        ],
+        "display": "APS 40-44: Dean's discretion; APS 45+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language level 5 or First Additional Language level 6; Mathematics level 4 or Mathematical Literacy level 5"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of laws (llb), with study options including Law.",
+      "career_opportunities": [
+        "Legal practitioner",
+        "Legal adviser",
+        "Policy or compliance professional"
+      ],
+      "source": {
+        "prospectus_page": 17,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Pharmacy (BPharm)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Pharmacy",
+      "campus": "Makhanda",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 40,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 45
+          }
+        ],
+        "display": "APS 40-44: Dean's discretion; APS 45+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Dean's-discretion route: Mathematics, Life Sciences and Physical Sciences level 5. Provisional-offer route: each at level 6."
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of pharmacy (bpharm), with study options including Pharmacy and pharmaceutical sciences.",
+      "career_opportunities": [
+        "Pharmacist",
+        "Pharmaceutical-industry professional",
+        "Clinical or research pharmacist"
+      ],
+      "source": {
+        "prospectus_page": 18,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science (BSc)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": "Makhanda",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 39,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 45
+          }
+        ],
+        "display": "APS 39-44: Dean's discretion; APS 45+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 60% or First Additional Language 65%; Life Sciences level 5 or Mathematics level 4; Physical Sciences level 5"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of science (bsc), with study options including Biological Sciences; Computational Sciences; Earth Sciences; Life Sciences.",
+      "career_opportunities": [
+        "Scientist or laboratory professional",
+        "Environmental or computational specialist",
+        "Researcher"
+      ],
+      "source": {
+        "prospectus_page": 19,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Information Systems (BScInfoSys)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": "Makhanda",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 40,
+        "alternatives": [
+          {
+            "route": "provisional_offer",
+            "minimum": 45
+          }
+        ],
+        "display": "APS 40-44: Dean's discretion; APS 45+: provisional offer."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English level 5; Mathematics level 4; Physical Sciences level 5"
+        },
+        "aps_calculation_method": "Rhodes APS is the sum of the percentages for six subjects divided by 10. Life Orientation is excluded, but at least level 4 is required."
+      },
+      "description": "A Rhodes University programme in bachelor of information systems (bscinfosys), with study options including Computer Science; Economics; Management; Information Systems.",
+      "career_opportunities": [
+        "Systems analyst",
+        "Software or data professional",
+        "IT consultant"
+      ],
+      "source": {
+        "prospectus_page": 19,
+        "edition": 2027,
+        "document_note": "The supplied undergraduate prospectus was created in March 2026."
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Meeting the minimum or discretion range does not guarantee admission. Verify current requirements and any portfolio, NBT or faculty-selection conditions with Rhodes University before applying."
+      }
+    }
+  ]
+}

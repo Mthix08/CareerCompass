@@ -193,7 +193,10 @@ export default function CoursesScreen({ navigation, route }) {
       const matchesSearch = !search || `${course.name} ${course.universityName} ${course.universityShortName}`.toLowerCase().includes(search);
       const matchesMinimum = minimum === null || (course.minimumAps !== null && course.minimumAps >= minimum);
       const matchesMaximum = maximum === null || (course.minimumAps !== null && course.minimumAps <= maximum);
-      const matchesType = !filters.type || course.qualificationType === filters.type;
+      const matchesType = !filters.type
+        || (filters.type === "Bachelor's Degree" && /bachelor/i.test(course.qualificationType))
+        || (filters.type === "Diploma" && /diploma/i.test(course.qualificationType))
+        || course.qualificationType === filters.type;
       const matchesUniversity = !filters.universityId || course.universityId === filters.universityId;
       return matchesSearch && matchesMinimum && matchesMaximum && matchesType && matchesUniversity;
     });

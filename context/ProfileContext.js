@@ -8,11 +8,13 @@ import React, {
 } from "react";
 import { useColorScheme } from "react-native";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import { auth } from "../screens/firebaseConfig";
 import { db } from "../screens/firebaseConfig";
 
 const ProfileContext = createContext(null);
+const THEME_STORAGE_KEY = "@careercompass:themePreference";
 
 const lightColors = {
   background: "#F6F8FC",
@@ -61,8 +63,28 @@ export function ProfileProvider({ children }) {
   const [profile, setProfile] = useState(initialProfile);
   const [firebaseUser, setFirebaseUser] = useState(null);
   const [isGuest, setIsGuest] = useState(false);
-  const [themePreference, setThemePreference] = useState("Light");
+  const [themePreference, setThemePreferenceState] = useState("Light");
   const [successMessage, setSuccessMessage] = useState("");
+
+  // Load saved theme preference once on mount.
+  useEffect(() => {
+    (async () => {
+      try {
+        const storedTheme = await AsyncStorage.getItem(THEME_STORAGE_KEY);
+        if (storedTheme) setThemePreferenceState(storedTheme);
+      } catch (error) {
+        // If storage fails, we just keep the default "Light" theme.
+      }
+    })();
+  }, []);
+
+  // Wrap the setter so every change is also saved to AsyncStorage.
+  const setThemePreference = useCallback((nextTheme) => {
+    setThemePreferenceState(nextTheme);
+    AsyncStorage.setItem(THEME_STORAGE_KEY, nextTheme).catch(() => {
+      // Non-fatal: theme just won't persist this time.
+    });
+  }, []);
 
   useEffect(() => {
     return auth.onAuthStateChanged(async (user) => {
@@ -165,6 +187,7 @@ export function ProfileProvider({ children }) {
       clearSession,
       updateProfile,
       themePreference,
+      setThemePreference,
       resolvedTheme,
       colors,
       successMessage,

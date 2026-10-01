@@ -17,13 +17,10 @@ const INACTIVE_COLOR = "#84919D";
 
 const TAB_ICONS = {
   Home: "home-outline",
+  Funding: "wallet-outline",
   Universities: "business-outline",
   Courses: "book-outline",
   Profile: "person-outline",
-};
-
-const TAB_BACKGROUNDS = {
-  Universities: "#05080D",
 };
 
 export default function NavBar({ state, descriptors, navigation, insets }) {
@@ -33,9 +30,9 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
   const barWidth = Math.min(screenWidth - BAR_MARGIN * 2, BAR_MAX_WIDTH);
   const activeRoute = state.routes[state.index];
   const screenBackground =
-    activeRoute.name === "Profile" || activeRoute.name === "Home" ?
-      colors.background
-    : TAB_BACKGROUNDS[activeRoute.name] || "#F6F8FC";
+    activeRoute.name === "Profile" || activeRoute.name === "Home"
+      ? colors.background
+      : "#F6F8FC";
 
   const handlePress = (route, isFocused) => {
     const event = navigation.emit({

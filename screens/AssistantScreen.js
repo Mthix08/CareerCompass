@@ -25,7 +25,7 @@ import {
 import { useProfile } from "../context/ProfileContext";
 
 const WELCOME_MESSAGE =
-  "Hi, I’m your CareerCompass Assistant. let engage.";
+  "Hi, I’m your CareerCompass Assistant. Ask me about universities, courses, careers, funding, or using the app.";
 
 async function getAssistantAnswer(question) {
   const apiKey = process.env.EXPO_PUBLIC_GEMINI_API_KEY;
