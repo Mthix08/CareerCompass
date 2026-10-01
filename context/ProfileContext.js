@@ -109,7 +109,7 @@ export function ProfileProvider({ children }) {
         firstName: nameParts[0] || "Student",
         surname: nameParts.slice(1).join(" "),
         category: "Student",
-        photoURL: user.photoURL || storedProfile.photoURL || "",
+        photoURL: storedProfile.photoURL || user.photoURL || "",
         authProvider:
           (
             user.providerData?.some(
