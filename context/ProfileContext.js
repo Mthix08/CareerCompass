@@ -8,10 +8,10 @@ import React, {
 } from "react";
 import { useColorScheme } from "react-native";
 import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import { auth } from "../screens/firebaseConfig";
-import { db } from "../screens/firebaseConfig";
+import { auth, db, storage } from "../screens/firebaseConfig";
 
 const ProfileContext = createContext(null);
 const THEME_STORAGE_KEY = "@careercompass:themePreference";
@@ -144,7 +144,17 @@ export function ProfileProvider({ children }) {
 
   const updateProfile = useCallback(
     async (nextProfile) => {
-      setProfile(nextProfile);
+      let photoURL = nextProfile.photoURL || "";
+      if (nextProfile.photoAsset && firebaseUser) {
+        const response = await fetch(nextProfile.photoAsset.uri);
+        const photoBlob = await response.blob();
+        const photoRef = ref(storage, `profilePhotos/${firebaseUser.uid}`);
+        await uploadBytes(photoRef, photoBlob, {
+          contentType: nextProfile.photoAsset.mimeType || "image/jpeg",
+        });
+        photoURL = await getDownloadURL(photoRef);
+      }
+
       if (firebaseUser) {
         await setDoc(
           doc(db, "users", firebaseUser.uid),
@@ -153,10 +163,14 @@ export function ProfileProvider({ children }) {
             email: nextProfile.email,
             phone: nextProfile.phone,
             category: nextProfile.category,
+            photoURL,
           },
           { merge: true },
         );
       }
+      const updatedProfile = { ...nextProfile, photoURL };
+      delete updatedProfile.photoAsset;
+      setProfile(updatedProfile);
       setSuccessMessage("Profile updated successfully.");
     },
     [firebaseUser],

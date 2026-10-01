@@ -24,6 +24,16 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "CareerCompass uses your photos to set your profile picture.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-status-bar"
+    ]
   }
 }
