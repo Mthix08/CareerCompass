@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
+  Image,
   Pressable,
   ScrollView,
   StatusBar,
@@ -10,8 +11,11 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { signOut } from "firebase/auth";
 
+import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
+import { auth } from "./firebaseConfig";
 
 const THEMES = ["Light", "Dark", "System"];
 
@@ -23,10 +27,7 @@ function IconButton({ icon, label, onPress, styles }) {
       accessibilityRole="button"
       accessibilityLabel={label}
       hitSlop={6}
-      style={({ pressed }) => [
-        styles.headerButton,
-        pressed && styles.pressed,
-      ]}
+      style={({ pressed }) => [styles.headerButton, pressed && styles.pressed]}
     >
       <Ionicons name={icon} size={22} color={colors.text} />
     </Pressable>
@@ -36,7 +37,11 @@ function IconButton({ icon, label, onPress, styles }) {
 function ReadOnlyDetail({ icon, label, value, styles }) {
   const { colors } = useProfile();
   return (
-    <View style={styles.detailRow} accessible accessibilityLabel={`${label}: ${value}`}>
+    <View
+      style={styles.detailRow}
+      accessible
+      accessibilityLabel={`${label}: ${value}`}
+    >
       <View style={styles.detailIcon}>
         <Ionicons name={icon} size={18} color={colors.primary} />
       </View>
@@ -66,25 +71,26 @@ function QuickLink({ icon, label, badge, onPress, styles }) {
           <Text style={styles.quickLinkBadgeText}>{badge}</Text>
         </View>
       )}
-      <Ionicons
-        name="chevron-forward"
-        size={19}
-        color={colors.mutedText}
-      />
+      <Ionicons name="chevron-forward" size={19} color={colors.mutedText} />
     </Pressable>
   );
 }
 
 export default function ProfileScreen({ navigation }) {
+  const { bookmarkedCourseIds, bookmarkedIds } = useBookmarks();
   const {
     profile,
+    isGuest,
+    isAuthenticated,
     themePreference,
     setThemePreference,
     resolvedTheme,
     colors,
     successMessage,
     clearSuccessMessage,
+    clearSession,
   } = useProfile();
+  const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length} saved`;
   const styles = useMemo(() => createStyles(colors), [colors]);
   const scrollRef = useRef(null);
 
@@ -103,17 +109,32 @@ export default function ProfileScreen({ navigation }) {
   };
 
   const handleSignOut = () => {
-    Alert.alert("Sign out?", "Are you sure you want to sign out?", [
-      { text: "Cancel", style: "cancel" },
-      {
-        text: "Sign Out",
-        style: "destructive",
-        onPress: () => {
-          // TODO: Connect the real authentication sign-out action later.
-          navigation.getParent()?.navigate("Login");
+    Alert.alert(
+      isGuest ? "Leave guest mode?" : "Sign out?",
+      "You can return to CareerCompass at any time.",
+      [
+        { text: "Cancel", style: "cancel" },
+        {
+          text: "Sign Out",
+          style: "destructive",
+          onPress: async () => {
+            try {
+              if (isAuthenticated) await signOut(auth);
+              clearSession();
+              navigation.getParent()?.reset({
+                index: 0,
+                routes: [{ name: "Login" }],
+              });
+            } catch (error) {
+              Alert.alert(
+                "Sign out failed",
+                "We could not sign you out. Check your connection and try again.",
+              );
+            }
+          },
         },
-      },
-    ]);
+      ],
+    );
   };
 
   const handleDeleteAccount = () => {
@@ -151,6 +172,31 @@ export default function ProfileScreen({ navigation }) {
   };
 
   const initials = `${profile.firstName?.[0] || ""}${profile.surname?.[0] || ""}`;
+  const accountType =
+    isGuest ? "Guest"
+    : profile.authProvider === "Google" ? "Google"
+    : "Student";
+  const accountOnly = (action) => {
+    if (isGuest) {
+      Alert.alert(
+        "Create an account",
+        "Create a free account to use this feature and keep your progress.",
+        [
+          { text: "Cancel", style: "cancel" },
+          {
+            text: "Log In",
+            onPress: () => navigation.getParent()?.navigate("Login"),
+          },
+          {
+            text: "Sign Up",
+            onPress: () => navigation.getParent()?.navigate("SignUp"),
+          },
+        ],
+      );
+      return;
+    }
+    action();
+  };
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -193,11 +239,17 @@ export default function ProfileScreen({ navigation }) {
             onPress={handleAvatarPress}
             accessibilityRole="button"
             accessibilityLabel="Change profile photo"
-            style={({ pressed }) => [styles.avatarWrap, pressed && styles.pressed]}
+            style={({ pressed }) => [
+              styles.avatarWrap,
+              pressed && styles.pressed,
+            ]}
           >
-            <View style={styles.avatar}>
-              <Text style={styles.avatarText}>{initials || "CC"}</Text>
-            </View>
+            {profile.photoURL ?
+              <Image source={{ uri: profile.photoURL }} style={styles.avatar} />
+            : <View style={styles.avatar}>
+                <Text style={styles.avatarText}>{initials || "CC"}</Text>
+              </View>
+            }
             <View style={styles.cameraButton}>
               <Ionicons name="camera" size={15} color="#FFFFFF" />
             </View>
@@ -208,6 +260,9 @@ export default function ProfileScreen({ navigation }) {
           <Text style={styles.profileName}>
             {profile.firstName} {profile.surname}
           </Text>
+          <View style={styles.accountBadge}>
+            <Text style={styles.accountBadgeText}>{accountType} account</Text>
+          </View>
           <View style={styles.locationRow}>
             <Ionicons
               name="location-outline"
@@ -221,42 +276,46 @@ export default function ProfileScreen({ navigation }) {
         <View style={styles.sectionCard}>
           <Text style={styles.sectionTitle}>Personal Details</Text>
           <Text style={styles.sectionIntro}>
-            Your saved account information is shown below.
+            {isGuest ?
+              "Explore freely. Create an account to save your progress."
+            : "Your saved account information is shown below."}
           </Text>
           <View style={styles.detailsList}>
             <ReadOnlyDetail
               icon="mail-outline"
               label="Email Address"
-              value={profile.email}
+              value={isGuest ? "Not available" : profile.email}
               styles={styles}
             />
             <ReadOnlyDetail
               icon="person-outline"
               label="First Name"
-              value={profile.firstName}
+              value={isGuest ? "Not available" : profile.firstName}
               styles={styles}
             />
             <ReadOnlyDetail
               icon="person-outline"
               label="Surname"
-              value={profile.surname}
+              value={isGuest ? "Not available" : profile.surname}
               styles={styles}
             />
             <ReadOnlyDetail
               icon="call-outline"
               label="Phone Number"
-              value={profile.phone}
+              value={isGuest ? "Not available" : profile.phone}
               styles={styles}
             />
             <ReadOnlyDetail
               icon="school-outline"
               label="Category"
-              value={profile.category}
+              value={accountType}
               styles={styles}
             />
           </View>
           <Pressable
-            onPress={() => navigation.navigate("EditProfile")}
+            onPress={() =>
+              accountOnly(() => navigation.navigate("EditProfile"))
+            }
             accessibilityRole="button"
             accessibilityLabel="Edit Personal Details"
             style={({ pressed }) => [
@@ -265,7 +324,9 @@ export default function ProfileScreen({ navigation }) {
             ]}
           >
             <Ionicons name="create-outline" size={20} color="#FFFFFF" />
-            <Text style={styles.primaryButtonText}>Edit Personal Details</Text>
+            <Text style={styles.primaryButtonText}>
+              {isGuest ? "Create an account to edit" : "Edit Personal Details"}
+            </Text>
           </Pressable>
         </View>
 
@@ -273,16 +334,22 @@ export default function ProfileScreen({ navigation }) {
         <View style={styles.quickLinksCard}>
           <QuickLink
             icon="bookmark-outline"
-            label="Saved Universities & Courses"
-            badge="12 saved"
+            label={
+              isGuest ?
+                "Saved Courses (limited)"
+              : "Saved Universities & Courses"
+            }
+            badge={savedItemsLabel}
             onPress={() => navigation.navigate("Bookmarks")}
             styles={styles}
           />
           <QuickLink
             icon="briefcase-outline"
             label="My Applications"
-            badge="Pending"
-            onPress={() => navigation.navigate("Applications")}
+            badge="0"
+            onPress={() =>
+              accountOnly(() => navigation.navigate("Applications"))
+            }
             styles={styles}
           />
           <QuickLink
@@ -307,13 +374,17 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="options-outline"
             label="Notification Preferences"
-            onPress={() => navigation.navigate("NotificationPreferences")}
+            onPress={() =>
+              accountOnly(() => navigation.navigate("NotificationPreferences"))
+            }
             styles={styles}
           />
           <QuickLink
             icon="notifications-outline"
             label="Notifications"
-            onPress={() => navigation.navigate("Notifications")}
+            onPress={() =>
+              accountOnly(() => navigation.navigate("Notifications"))
+            }
             styles={styles}
           />
           <QuickLink
@@ -371,24 +442,35 @@ export default function ProfileScreen({ navigation }) {
           onPress={handleSignOut}
           accessibilityRole="button"
           accessibilityLabel="Sign Out"
-          style={({ pressed }) => [styles.signOutButton, pressed && styles.pressed]}
+          style={({ pressed }) => [
+            styles.signOutButton,
+            pressed && styles.pressed,
+          ]}
         >
           <Ionicons name="log-out-outline" size={20} color={colors.text} />
           <Text style={styles.signOutText}>Sign Out</Text>
         </Pressable>
 
-        <Pressable
-          onPress={handleDeleteAccount}
-          accessibilityRole="button"
-          accessibilityLabel="Delete Account"
-          style={({ pressed }) => [styles.deleteButton, pressed && styles.pressed]}
-        >
-          <Ionicons name="trash-outline" size={19} color={colors.danger} />
-          <Text style={styles.deleteText}>Delete Account</Text>
-        </Pressable>
-        <Text style={styles.deleteExplanation}>
-          This action is permanent and deletes your profile and academic progression.
-        </Text>
+        {!isGuest && (
+          <>
+            <Pressable
+              onPress={handleDeleteAccount}
+              accessibilityRole="button"
+              accessibilityLabel="Delete Account"
+              style={({ pressed }) => [
+                styles.deleteButton,
+                pressed && styles.pressed,
+              ]}
+            >
+              <Ionicons name="trash-outline" size={19} color={colors.danger} />
+              <Text style={styles.deleteText}>Delete Account</Text>
+            </Pressable>
+            <Text style={styles.deleteExplanation}>
+              This action is permanent and deletes your profile and academic
+              progression.
+            </Text>
+          </>
+        )}
       </ScrollView>
     </SafeAreaView>
   );
@@ -430,7 +512,13 @@ function createStyles(colors) {
       alignItems: "center",
       backgroundColor: colors.primary,
     },
-    successBannerText: { flex: 1, marginLeft: 9, color: "#FFFFFF", fontSize: 14, fontWeight: "700" },
+    successBannerText: {
+      flex: 1,
+      marginLeft: 9,
+      color: "#FFFFFF",
+      fontSize: 14,
+      fontWeight: "700",
+    },
     identityCard: {
       padding: 22,
       borderRadius: 24,
@@ -464,43 +552,256 @@ function createStyles(colors) {
       justifyContent: "center",
       backgroundColor: colors.accent,
     },
-    learnerBadge: { marginTop: 10, paddingHorizontal: 10, paddingVertical: 5, borderRadius: 999, backgroundColor: colors.accent },
-    learnerBadgeText: { color: "#FFFFFF", fontSize: 10, fontWeight: "900", textTransform: "uppercase" },
-    profileName: { marginTop: 13, color: colors.text, fontSize: 24, lineHeight: 30, fontWeight: "900", textAlign: "center" },
+    learnerBadge: {
+      marginTop: 10,
+      paddingHorizontal: 10,
+      paddingVertical: 5,
+      borderRadius: 999,
+      backgroundColor: colors.accent,
+    },
+    learnerBadgeText: {
+      color: "#FFFFFF",
+      fontSize: 10,
+      fontWeight: "900",
+      textTransform: "uppercase",
+    },
+    profileName: {
+      marginTop: 13,
+      color: colors.text,
+      fontSize: 24,
+      lineHeight: 30,
+      fontWeight: "900",
+      textAlign: "center",
+    },
+    accountBadge: {
+      marginTop: 8,
+      paddingHorizontal: 11,
+      paddingVertical: 5,
+      borderRadius: 999,
+      backgroundColor: colors.primarySoft,
+    },
+    accountBadgeText: {
+      color: colors.primary,
+      fontSize: 11,
+      fontWeight: "800",
+      textTransform: "uppercase",
+    },
     locationRow: { marginTop: 5, flexDirection: "row", alignItems: "center" },
-    locationText: { flexShrink: 1, marginLeft: 4, color: colors.secondaryText, fontSize: 13, textAlign: "center" },
-    sectionCard: { marginTop: 18, padding: 20, borderRadius: 22, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
+    locationText: {
+      flexShrink: 1,
+      marginLeft: 4,
+      color: colors.secondaryText,
+      fontSize: 13,
+      textAlign: "center",
+    },
+    sectionCard: {
+      marginTop: 18,
+      padding: 20,
+      borderRadius: 22,
+      borderWidth: 1,
+      borderColor: colors.border,
+      backgroundColor: colors.surface,
+    },
     sectionTitle: { color: colors.text, fontSize: 19, fontWeight: "800" },
-    sectionIntro: { marginTop: 5, color: colors.secondaryText, fontSize: 13, lineHeight: 19 },
+    sectionIntro: {
+      marginTop: 5,
+      color: colors.secondaryText,
+      fontSize: 13,
+      lineHeight: 19,
+    },
     detailsList: { marginTop: 15, gap: 10 },
-    detailRow: { minHeight: 68, paddingHorizontal: 14, paddingVertical: 11, borderRadius: 15, borderWidth: 1, borderColor: colors.border, flexDirection: "row", alignItems: "center", backgroundColor: colors.input },
-    detailIcon: { width: 36, height: 36, borderRadius: 11, alignItems: "center", justifyContent: "center", backgroundColor: colors.primarySoft },
+    detailRow: {
+      minHeight: 68,
+      paddingHorizontal: 14,
+      paddingVertical: 11,
+      borderRadius: 15,
+      borderWidth: 1,
+      borderColor: colors.border,
+      flexDirection: "row",
+      alignItems: "center",
+      backgroundColor: colors.input,
+    },
+    detailIcon: {
+      width: 36,
+      height: 36,
+      borderRadius: 11,
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: colors.primarySoft,
+    },
     detailTextWrap: { flex: 1, marginLeft: 12 },
-    detailLabel: { color: colors.secondaryText, fontSize: 11, fontWeight: "700", textTransform: "uppercase", letterSpacing: 0.4 },
-    detailValue: { marginTop: 4, color: colors.text, fontSize: 15, lineHeight: 20, fontWeight: "600" },
-    primaryButton: { minHeight: 56, marginTop: 19, paddingHorizontal: 18, borderRadius: 16, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8, backgroundColor: colors.primary },
-    primaryButtonText: { flexShrink: 1, color: "#FFFFFF", fontSize: 15, fontWeight: "800", textAlign: "center" },
-    groupTitle: { marginTop: 25, marginBottom: 10, color: colors.text, fontSize: 18, fontWeight: "800" },
-    quickLinksCard: { overflow: "hidden", borderRadius: 22, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
-    quickLink: { minHeight: 66, paddingHorizontal: 14, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: colors.border, flexDirection: "row", alignItems: "center" },
-    quickLinkIcon: { width: 38, height: 38, borderRadius: 12, alignItems: "center", justifyContent: "center", backgroundColor: colors.primarySoft },
-    quickLinkText: { flex: 1, marginHorizontal: 11, color: colors.text, fontSize: 14, lineHeight: 19, fontWeight: "700" },
-    quickLinkBadge: { maxWidth: 82, marginRight: 7, paddingHorizontal: 8, paddingVertical: 5, borderRadius: 999, backgroundColor: colors.primarySoft },
-    quickLinkBadgeText: { color: colors.primary, fontSize: 9, fontWeight: "900", textTransform: "uppercase" },
-    themeCard: { marginTop: 24, padding: 19, borderRadius: 22, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
+    detailLabel: {
+      color: colors.secondaryText,
+      fontSize: 11,
+      fontWeight: "700",
+      textTransform: "uppercase",
+      letterSpacing: 0.4,
+    },
+    detailValue: {
+      marginTop: 4,
+      color: colors.text,
+      fontSize: 15,
+      lineHeight: 20,
+      fontWeight: "600",
+    },
+    primaryButton: {
+      minHeight: 56,
+      marginTop: 19,
+      paddingHorizontal: 18,
+      borderRadius: 16,
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 8,
+      backgroundColor: colors.primary,
+    },
+    primaryButtonText: {
+      flexShrink: 1,
+      color: "#FFFFFF",
+      fontSize: 15,
+      fontWeight: "800",
+      textAlign: "center",
+    },
+    groupTitle: {
+      marginTop: 25,
+      marginBottom: 10,
+      color: colors.text,
+      fontSize: 18,
+      fontWeight: "800",
+    },
+    quickLinksCard: {
+      overflow: "hidden",
+      borderRadius: 22,
+      borderWidth: 1,
+      borderColor: colors.border,
+      backgroundColor: colors.surface,
+    },
+    quickLink: {
+      minHeight: 66,
+      paddingHorizontal: 14,
+      borderBottomWidth: StyleSheet.hairlineWidth,
+      borderBottomColor: colors.border,
+      flexDirection: "row",
+      alignItems: "center",
+    },
+    quickLinkIcon: {
+      width: 38,
+      height: 38,
+      borderRadius: 12,
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: colors.primarySoft,
+    },
+    quickLinkText: {
+      flex: 1,
+      marginHorizontal: 11,
+      color: colors.text,
+      fontSize: 14,
+      lineHeight: 19,
+      fontWeight: "700",
+    },
+    quickLinkBadge: {
+      maxWidth: 82,
+      marginRight: 7,
+      paddingHorizontal: 8,
+      paddingVertical: 5,
+      borderRadius: 999,
+      backgroundColor: colors.primarySoft,
+    },
+    quickLinkBadgeText: {
+      color: colors.primary,
+      fontSize: 9,
+      fontWeight: "900",
+      textTransform: "uppercase",
+    },
+    themeCard: {
+      marginTop: 24,
+      padding: 19,
+      borderRadius: 22,
+      borderWidth: 1,
+      borderColor: colors.border,
+      backgroundColor: colors.surface,
+    },
     themeHeadingRow: { flexDirection: "row", alignItems: "center" },
-    themeTitle: { marginLeft: 9, color: colors.text, fontSize: 15, fontWeight: "800" },
-    currentTheme: { flex: 1, marginLeft: 10, color: colors.secondaryText, fontSize: 13, textAlign: "right" },
-    themeOptions: { marginTop: 15, padding: 4, borderRadius: 13, borderWidth: 1, borderColor: colors.border, flexDirection: "row", backgroundColor: colors.input },
-    themeOption: { flex: 1, minHeight: 42, borderRadius: 10, alignItems: "center", justifyContent: "center" },
-    themeOptionSelected: { backgroundColor: colors.surface, shadowColor: "#000000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.09, shadowRadius: 5, elevation: 2 },
-    themeOptionText: { color: colors.secondaryText, fontSize: 13, fontWeight: "600" },
+    themeTitle: {
+      marginLeft: 9,
+      color: colors.text,
+      fontSize: 15,
+      fontWeight: "800",
+    },
+    currentTheme: {
+      flex: 1,
+      marginLeft: 10,
+      color: colors.secondaryText,
+      fontSize: 13,
+      textAlign: "right",
+    },
+    themeOptions: {
+      marginTop: 15,
+      padding: 4,
+      borderRadius: 13,
+      borderWidth: 1,
+      borderColor: colors.border,
+      flexDirection: "row",
+      backgroundColor: colors.input,
+    },
+    themeOption: {
+      flex: 1,
+      minHeight: 42,
+      borderRadius: 10,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    themeOptionSelected: {
+      backgroundColor: colors.surface,
+      shadowColor: "#000000",
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.09,
+      shadowRadius: 5,
+      elevation: 2,
+    },
+    themeOptionText: {
+      color: colors.secondaryText,
+      fontSize: 13,
+      fontWeight: "600",
+    },
     themeOptionTextSelected: { color: colors.text, fontWeight: "800" },
-    signOutButton: { minHeight: 54, marginTop: 20, borderRadius: 16, borderWidth: 1, borderColor: colors.border, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 7, backgroundColor: colors.surface },
+    signOutButton: {
+      minHeight: 54,
+      marginTop: 20,
+      borderRadius: 16,
+      borderWidth: 1,
+      borderColor: colors.border,
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 7,
+      backgroundColor: colors.surface,
+    },
     signOutText: { color: colors.text, fontSize: 15, fontWeight: "800" },
-    deleteButton: { minHeight: 50, alignSelf: "center", marginTop: 25, paddingHorizontal: 20, borderRadius: 13, borderWidth: 1, borderColor: colors.danger, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, backgroundColor: colors.dangerSoft },
+    deleteButton: {
+      minHeight: 50,
+      alignSelf: "center",
+      marginTop: 25,
+      paddingHorizontal: 20,
+      borderRadius: 13,
+      borderWidth: 1,
+      borderColor: colors.danger,
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 6,
+      backgroundColor: colors.dangerSoft,
+    },
     deleteText: { color: colors.danger, fontSize: 14, fontWeight: "800" },
-    deleteExplanation: { marginTop: 8, paddingHorizontal: 12, color: colors.secondaryText, fontSize: 12, lineHeight: 18, textAlign: "center" },
+    deleteExplanation: {
+      marginTop: 8,
+      paddingHorizontal: 12,
+      color: colors.secondaryText,
+      fontSize: 12,
+      lineHeight: 18,
+      textAlign: "center",
+    },
     pressed: { opacity: 0.65 },
   });
 }

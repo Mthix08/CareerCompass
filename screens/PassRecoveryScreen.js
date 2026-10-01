@@ -229,9 +229,9 @@ function EmailStep({ email, error, loading, onEmailChange, onSubmit, onBack }) {
       <View style={styles.centeredLink}>
         <TextLink label="Back to login" onPress={onBack} />
       </View>
-      <DevelopmentNote>
+      {/* <DevelopmentNote>
         Development preview: backend email delivery will be added later.
-      </DevelopmentNote>
+      </DevelopmentNote> */}
     </View>
   );
 }
@@ -309,7 +309,7 @@ function OtpStep({
         />
         <TextLink label="Change email" onPress={onChangeEmail} />
       </View>
-      <DevelopmentNote>Development preview code: 123456</DevelopmentNote>
+      {/* <DevelopmentNote>Development preview code: 123456</DevelopmentNote> */}
     </View>
   );
 }

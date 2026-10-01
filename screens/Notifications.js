@@ -28,7 +28,8 @@ const MOCK_NOTIFICATIONS = [
     description: "Review your application status and make sure all supporting documents are submitted.",
     time: "2d ago",
     icon: "wallet",
-    routeName: "NsfasDetails",
+    routeName: "FundingDetails",
+    fundingId: "nsfas",
   },
   {
     id: "new-university-guides",
@@ -78,7 +79,7 @@ export default function Notifications({ navigation }) {
       return;
     }
 
-    if (notification.routeName) navigation.navigate(notification.routeName);
+    if (notification.routeName) navigation.navigate(notification.routeName, notification.fundingId ? { fundingId: notification.fundingId } : undefined);
   };
 
   const renderNotification = ({ item }) => (

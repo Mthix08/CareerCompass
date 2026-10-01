@@ -1,0 +1,2527 @@
+{
+  "university": {
+    "name": "Vaal University of Technology",
+    "abbreviation": "VUT",
+    "prospectus_year": 2027,
+    "country": "South Africa"
+  },
+  "schema_version": "1.0.0",
+  "generated_from": "vut.pdf",
+  "important_notice": "This dataset is an extraction aid, not an admission decision. Requirements can change and meeting minimum requirements does not guarantee selection.",
+  "course_count": 49,
+  "courses": [
+    {
+      "name": "Diploma in Analytical Chemistry",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied and Computer Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "other_three_subjects": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "Combined level total of 9"
+        }
+      },
+      "description": "A career-focused VUT programme in Analytical Chemistry.",
+      "career_opportunities": [
+        "Analytical Chemistry technician",
+        "Laboratory or research assistant",
+        "Quality-control practitioner"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Biotechnology",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied and Computer Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_engineering_mathematics": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "Level 4 or 60% for TVET N4 Engineering Mathematics"
+        },
+        "physical_science_or_engineering_science": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "Level 4 or 60% for TVET N4 Engineering Science"
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Biotechnology.",
+      "career_opportunities": [
+        "Biotechnology technician",
+        "Laboratory or research assistant",
+        "Quality-control practitioner"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Agricultural Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied and Computer Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 22,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "21 (Mathematics or Technical Mathematics route) OR 22 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "agriculture_or_life_science": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A career-focused VUT programme in Agricultural Management.",
+      "career_opportunities": [
+        "Agricultural Management practitioner",
+        "Supervisor",
+        "Business administrator"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Environmental Science",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied and Computer Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [],
+        "display": "21"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Environmental Science.",
+      "career_opportunities": [
+        "Environmental Science technician",
+        "Laboratory or research assistant",
+        "Quality-control practitioner"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Information Technology",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied and Computer Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [
+          {
+            "minimum_aps": 26,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 28,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "26 (Mathematics or Technical Mathematics route) OR 28 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A career-focused VUT programme in Information Technology.",
+      "career_opportunities": [
+        "Software developer",
+        "IT support specialist",
+        "Systems administrator"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Information Technology (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied and Computer Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [
+          {
+            "minimum_aps": 24,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 26,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "24 (Mathematics or Technical Mathematics route) OR 26 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A career-focused VUT programme in Information Technology (Extended).",
+      "career_opportunities": [
+        "Software developer",
+        "IT support specialist",
+        "Systems administrator"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Non-Destructive Testing",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Applied and Computer Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 19,
+        "alternatives": [],
+        "display": "19"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "physical_science_or_technical_science": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Non-Destructive Testing.",
+      "career_opportunities": [
+        "Practitioner in Non-Destructive Testing",
+        "Industry support professional",
+        "Further-study pathway"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Health Sciences in Medical Laboratory Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Applied and Computer Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 27,
+        "alternatives": [],
+        "display": "27"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "life_sciences": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A career-focused VUT programme in Medical Laboratory Science.",
+      "career_opportunities": [
+        "Medical Laboratory Science technician",
+        "Laboratory or research assistant",
+        "Quality-control practitioner"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Financial Information Systems",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 22,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 22 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "accounting": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A career-focused VUT programme in Financial Information Systems.",
+      "career_opportunities": [
+        "Accounting or finance practitioner",
+        "Financial administrator",
+        "Audit or compliance support"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Cost and Management Accounting",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 22,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 22 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "accounting": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        }
+      },
+      "description": "A career-focused VUT programme in Cost and Management Accounting.",
+      "career_opportunities": [
+        "Accounting or finance practitioner",
+        "Financial administrator",
+        "Audit or compliance support"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Internal Auditing",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 23,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 23 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "accounting": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        }
+      },
+      "description": "A career-focused VUT programme in Internal Auditing.",
+      "career_opportunities": [
+        "Accounting or finance practitioner",
+        "Financial administrator",
+        "Audit or compliance support"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Human Resources Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 21 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "one_other_subject": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Human Resources Management.",
+      "career_opportunities": [
+        "Human Resources Management practitioner",
+        "Supervisor",
+        "Business administrator"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Logistics and Supply Chain Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 21 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "one_other_subject": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Logistics and Supply Chain Management.",
+      "career_opportunities": [
+        "Logistics and Supply Chain Management practitioner",
+        "Supervisor",
+        "Business administrator"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Marketing",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 21 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "one_other_subject": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Marketing.",
+      "career_opportunities": [
+        "Marketing practitioner",
+        "Supervisor",
+        "Business administrator"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Retail Business Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 21 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "one_other_subject": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Retail Business Management.",
+      "career_opportunities": [
+        "Retail Business Management practitioner",
+        "Supervisor",
+        "Business administrator"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Sport Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 21 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "one_other_subject": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Sport Management.",
+      "career_opportunities": [
+        "Sport Management practitioner",
+        "Supervisor",
+        "Business administrator"
+      ],
+      "source": {
+        "prospectus_page": 1,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Fashion",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 22,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "21 (Mathematics or Technical Mathematics route) OR 22 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 2,
+          "percentage": 30
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "selection": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "Practical interview and portfolio required"
+        }
+      },
+      "description": "A career-focused VUT programme in Fashion.",
+      "career_opportunities": [
+        "Fashion practitioner",
+        "Creative-industry professional",
+        "Freelancer or entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Photography",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 22,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "21 (Mathematics or Technical Mathematics route) OR 22 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 2,
+          "percentage": 30
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "selection": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "Practical interview and portfolio required"
+        }
+      },
+      "description": "A career-focused VUT programme in Photography.",
+      "career_opportunities": [
+        "Photography practitioner",
+        "Creative-industry professional",
+        "Freelancer or entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Graphic Design",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 22,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "21 (Mathematics or Technical Mathematics route) OR 22 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 2,
+          "percentage": 30
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "selection": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "Practical interview and portfolio required"
+        }
+      },
+      "description": "A career-focused VUT programme in Graphic Design.",
+      "career_opportunities": [
+        "Graphic Design practitioner",
+        "Creative-industry professional",
+        "Freelancer or entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Fine Art",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 22,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "21 (Mathematics or Technical Mathematics route) OR 22 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 2,
+          "percentage": 30
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "selection": {
+          "accepted": true,
+          "level": null,
+          "percentage": null,
+          "raw_note": "Practical interview and portfolio required"
+        }
+      },
+      "description": "A career-focused VUT programme in Fine Art.",
+      "career_opportunities": [
+        "Fine Art practitioner",
+        "Creative-industry professional",
+        "Freelancer or entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Food Service Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 21 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "relevant_subject": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Food Service Management.",
+      "career_opportunities": [
+        "Food Service Management practitioner",
+        "Supervisor",
+        "Business administrator"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Tourism Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 21 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "relevant_subject": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Tourism Management.",
+      "career_opportunities": [
+        "Tourism Management practitioner",
+        "Supervisor",
+        "Business administrator"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Public Relations Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 21 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "other_language": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Public Relations Management.",
+      "career_opportunities": [
+        "Public Relations Management practitioner",
+        "Supervisor",
+        "Business administrator"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Ecotourism Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 21 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "biology_or_life_science": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Ecotourism Management.",
+      "career_opportunities": [
+        "Ecotourism Management practitioner",
+        "Supervisor",
+        "Business administrator"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Legal Assistance",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [
+          {
+            "minimum_aps": 23,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 24,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "23 (Mathematics or Technical Mathematics route) OR 24 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "other_language": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Legal Assistance.",
+      "career_opportunities": [
+        "Legal Assistance practitioner",
+        "Public-service or compliance support",
+        "Administrative support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Labour Law",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [
+          {
+            "minimum_aps": 23,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 24,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "23 (Mathematics or Technical Mathematics route) OR 24 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "other_language": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Labour Law.",
+      "career_opportunities": [
+        "Labour Law practitioner",
+        "Public-service or compliance support",
+        "Administrative support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Safety Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 21,
+        "alternatives": [
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 22,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "21 (Mathematics or Technical Mathematics route) OR 22 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Safety Management.",
+      "career_opportunities": [
+        "Safety Management practitioner",
+        "Supervisor",
+        "Business administrator"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Policing",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 21 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "other_language": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Policing.",
+      "career_opportunities": [
+        "Policing practitioner",
+        "Public-service or compliance support",
+        "Administrative support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Senior Phase and FET Teaching",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [
+          {
+            "minimum_aps": 22,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 24,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "22 (Mathematics or Technical Mathematics route) OR 24 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "language_of_teaching_and_learning": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 6,
+          "percentage": 70
+        },
+        "physical_science_or_technical_science": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A career-focused VUT programme in Education in Senior Phase and FET Teaching.",
+      "career_opportunities": [
+        "Teacher",
+        "Education practitioner",
+        "Training facilitator"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Communication Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Human Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 20,
+        "alternatives": [
+          {
+            "minimum_aps": 20,
+            "condition": "Mathematics or Technical Mathematics route"
+          },
+          {
+            "minimum_aps": 21,
+            "condition": "Mathematical Literacy route"
+          }
+        ],
+        "display": "20 (Mathematics or Technical Mathematics route) OR 21 (Mathematical Literacy route)"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 5,
+          "percentage": 60
+        },
+        "additional_language": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics_or_technical_mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematical_literacy": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Communication Studies.",
+      "career_opportunities": [
+        "Practitioner in Communication Studies",
+        "Industry support professional",
+        "Further-study pathway"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Chemical Engineering (Mainstream)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Chemical Engineering (Mainstream).",
+      "career_opportunities": [
+        "Chemical Engineering technician",
+        "Chemical Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Civil Engineering (Mainstream)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Civil Engineering (Mainstream).",
+      "career_opportunities": [
+        "Civil Engineering technician",
+        "Civil Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Industrial Engineering (Mainstream)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Industrial Engineering (Mainstream).",
+      "career_opportunities": [
+        "Industrial Engineering technician",
+        "Industrial Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Mechanical Engineering (Mainstream)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Mechanical Engineering (Mainstream).",
+      "career_opportunities": [
+        "Mechanical Engineering technician",
+        "Mechanical Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Metallurgical Engineering (Mainstream)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Metallurgical Engineering (Mainstream).",
+      "career_opportunities": [
+        "Metallurgical Engineering technician",
+        "Metallurgical Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Electronic Engineering (Mainstream)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Electronic Engineering (Mainstream).",
+      "career_opportunities": [
+        "Electronic Engineering technician",
+        "Electronic Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Power Engineering (Mainstream)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Power Engineering (Mainstream).",
+      "career_opportunities": [
+        "Power Engineering technician",
+        "Power Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Process Control Engineering (Mainstream)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Process Control Engineering (Mainstream).",
+      "career_opportunities": [
+        "Process Control Engineering technician",
+        "Process Control Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Computer Systems Engineering (Mainstream)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        }
+      },
+      "description": "A career-focused VUT programme in Computer Systems Engineering (Mainstream).",
+      "career_opportunities": [
+        "Computer Systems Engineering technician",
+        "Computer Systems Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Chemical Engineering (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A career-focused VUT programme in Chemical Engineering (Extended).",
+      "career_opportunities": [
+        "Chemical Engineering technician",
+        "Chemical Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Civil Engineering (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A career-focused VUT programme in Civil Engineering (Extended).",
+      "career_opportunities": [
+        "Civil Engineering technician",
+        "Civil Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Industrial Engineering (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A career-focused VUT programme in Industrial Engineering (Extended).",
+      "career_opportunities": [
+        "Industrial Engineering technician",
+        "Industrial Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Mechanical Engineering (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A career-focused VUT programme in Mechanical Engineering (Extended).",
+      "career_opportunities": [
+        "Mechanical Engineering technician",
+        "Mechanical Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Metallurgical Engineering (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A career-focused VUT programme in Metallurgical Engineering (Extended).",
+      "career_opportunities": [
+        "Metallurgical Engineering technician",
+        "Metallurgical Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Electronic Engineering (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A career-focused VUT programme in Electronic Engineering (Extended).",
+      "career_opportunities": [
+        "Electronic Engineering technician",
+        "Electronic Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Power Engineering (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A career-focused VUT programme in Power Engineering (Extended).",
+      "career_opportunities": [
+        "Power Engineering technician",
+        "Power Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Process Control Engineering (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A career-focused VUT programme in Process Control Engineering (Extended).",
+      "career_opportunities": [
+        "Process Control Engineering technician",
+        "Process Control Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Computer Systems Engineering (Extended)",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": 22,
+        "alternatives": [],
+        "display": "22"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A career-focused VUT programme in Computer Systems Engineering (Extended).",
+      "career_opportunities": [
+        "Computer Systems Engineering technician",
+        "Computer Systems Engineering technologist",
+        "Engineering project support"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    },
+    {
+      "name": "Diploma in Operations Management",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering and Technology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "23"
+      },
+      "subject_requirements": {
+        "english": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "mathematics": {
+          "accepted": true,
+          "level": 4,
+          "percentage": 50
+        },
+        "physical_sciences": {
+          "accepted": true,
+          "level": 3,
+          "percentage": 40
+        }
+      },
+      "description": "A career-focused VUT programme in Operations Management.",
+      "career_opportunities": [
+        "Operations Management practitioner",
+        "Supervisor",
+        "Business administrator"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "requirements_extracted_from_official_prospectus",
+        "note": "Career pathways are concise field-based summaries because this VUT admission brochure does not publish career descriptions. Verify current requirements with VUT before applying."
+      }
+    }
+  ]
+}

@@ -8,15 +8,20 @@ import SplashScreen from "./screens/SplashScreen";
 import UniversityDetailsScreen from "./screens/UniversityDetailsScreen";
 import EditProfileScreen from "./screens/EditProfileScreen";
 import ApsCalculatorScreen from "./screens/ApsCalculatorScreen";
-import NsfasDetails from "./screens/NsfasDetails";
+import UniversityApsScoresScreen from "./screens/UniversityApsScoresScreen";
+import FundingScreen from "./screens/FundingScreen";
+import FundingDetailsScreen from "./screens/FundingDetailsScreen";
 import Applications from "./screens/Applications";
 import Bookmarks from "./screens/Bookmarks";
 import Notifications from "./screens/Notifications";
 import NotificationPreferences from "./screens/NotificationPreferences";
 import LanguageScreen from "./screens/LanguageScreen";
 import FaqsScreen from "./screens/FaqsScreen";
+import CourseDetailsScreen from "./screens/CourseDetailsScreen";
+import ProspectusScreen from "./screens/ProspectusScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import { ProfileProvider } from "./context/ProfileContext";
+import { BookmarksProvider } from "./context/BookmarksContext";
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +52,16 @@ function AppNavigator() {
           options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
+          name="CourseDetails"
+          component={CourseDetailsScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="Prospectus"
+          component={ProspectusScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
           name="EditProfile"
           component={EditProfileScreen}
           options={{ headerShown: false, animation: "slide_from_right" }}
@@ -54,17 +69,27 @@ function AppNavigator() {
         <Stack.Screen
           name="ApsCalculator"
           component={ApsCalculatorScreen}
-          options={{ title: "APS Calculator" }}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="NsfasDetails"
-          component={NsfasDetails}
-          options={{ title: "NSFAS Funding" }}
+          name="UniversityApsScores"
+          component={UniversityApsScoresScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="Funding"
+          component={FundingScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="FundingDetails"
+          component={FundingDetailsScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
           name="Applications"
           component={Applications}
-          options={{ title: "My Applications" }}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Bookmarks"
@@ -99,7 +124,9 @@ function AppNavigator() {
 export default function App() {
   return (
     <ProfileProvider>
-      <AppNavigator />
+      <BookmarksProvider>
+        <AppNavigator />
+      </BookmarksProvider>
     </ProfileProvider>
   );
 }

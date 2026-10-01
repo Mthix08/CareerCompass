@@ -1,0 +1,885 @@
+{
+  "university": "Sol Plaatje University",
+  "abbreviation": "SPU",
+  "schema_version": "1.0",
+  "academic_year": 2027,
+  "generated_from": "Official SPU 2027 Undergraduate Prospectus published through Adobe InDesign",
+  "generated_on": "2026-09-19",
+  "important_notice": "This dataset covers the 15 first-entry undergraduate qualifications in the prospectus. Advanced Diplomas and the Postgraduate Certificate in Education are excluded because they require a prior tertiary qualification. Programme availability and admission decisions remain subject to SPU confirmation.",
+  "application_information": {
+    "language_of_learning": "English",
+    "general_english_requirement": "English Home Language level 4 or English First Additional Language level 5 applies to all academic programmes.",
+    "campus_location": "Kimberley, Northern Cape",
+    "prospectus_url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+    "aps_note": "SPU applies its own APS scale, including bonus points for Mathematics and Home Language and points for Life Orientation."
+  },
+  "excluded_prior_qualification_programmes": [
+    "Advanced Diploma in Information and Communication Technology in Applications Development",
+    "Advanced Diploma in Management",
+    "Advanced Diploma in School Leadership and Management",
+    "Postgraduate Certificate in Education"
+  ],
+  "course_count": 15,
+  "courses": [
+    {
+      "record_id": "SPU-2027-001-bachelor-of-education-in-foundation-phase-teaching",
+      "name": "Bachelor of Education in Foundation Phase Teaching",
+      "qualification_code": null,
+      "saqa_id": "119582",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 30,
+        "alternatives": null,
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass with Bachelor's Degree admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Afrikaans, Setswana or isiXhosa (Home or First Additional Language) level 4",
+          "Mathematics level 3 or Mathematical Literacy level 4"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Foundation Phase Teaching (Grades R–3)"
+      ],
+      "description": "Prepares beginner teachers to teach learners in Grades R–3, combining professional education studies with language, mathematics and early-years classroom practice.",
+      "career_opportunities": [
+        "foundation-phase teacher",
+        "early-years education practitioner",
+        "education support practitioner",
+        "learning-material developer"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          7
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-002-bachelor-of-education-in-intermediate-phase-teaching",
+      "name": "Bachelor of Education in Intermediate Phase Teaching",
+      "qualification_code": null,
+      "saqa_id": "99722",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 30,
+        "alternatives": null,
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass with Bachelor's Degree admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Afrikaans, Setswana or isiXhosa (Home or First Additional Language) level 4",
+          "For Languages, Mathematics, Natural Sciences and Technology: Mathematics level 4, Physical Sciences level 4 and Life Sciences level 4",
+          "For Languages, Social Sciences and Life Skills: Geography level 4 or History level 4"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Languages, Mathematics, Natural Sciences and Technology",
+        "Languages, Social Sciences and Life Skills"
+      ],
+      "description": "Prepares teachers for Grades 4–6 through either a mathematics, science and technology pathway or a languages, social sciences and life-skills pathway.",
+      "career_opportunities": [
+        "intermediate-phase teacher",
+        "subject teacher",
+        "education support practitioner",
+        "learning-material developer"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          7
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-003-bachelor-of-education-in-senior-phase-and-fet-phase-teaching",
+      "name": "Bachelor of Education in Senior Phase and FET Phase Teaching",
+      "qualification_code": null,
+      "saqa_id": "96406",
+      "qualification_type": "Bachelor of Education",
+      "faculty": "Faculty of Education",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 30,
+        "alternatives": null,
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass with Bachelor's Degree admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Subject requirements depend on the selected specialisation",
+          "Life Sciences/Natural Sciences/Mathematics: Mathematics level 4 and Life Sciences level 4",
+          "Languages or Language and History: Afrikaans or Setswana level 4; History level 4 if selected",
+          "History/Social Sciences/Language: Geography level 4 and History level 4, plus Afrikaans or Setswana level 4",
+          "Commerce: any two of Accounting, Business Studies or Economics at level 4"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Life Sciences, Natural Sciences and Mathematics",
+        "Languages or Language and History",
+        "History, Social Sciences and Language",
+        "Accounting, Economics, Business Studies and Economic and Management Sciences"
+      ],
+      "description": "Prepares professionally qualified teachers for Grades 7–9 and Grades 10–12 in selected science, language, humanities or commerce teaching subjects.",
+      "career_opportunities": [
+        "senior-phase teacher",
+        "FET-phase teacher",
+        "subject specialist",
+        "education support practitioner"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          8,
+          9
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-004-higher-certificate-in-entrepreneurship",
+      "name": "Higher Certificate in Entrepreneurship",
+      "qualification_code": null,
+      "saqa_id": "123433",
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 1,
+      "credits": null,
+      "nqf_level": 5,
+      "aps": {
+        "minimum": 25,
+        "alternatives": null,
+        "display": "Minimum APS: 25"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass or equivalent with Higher Certificate admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Mathematics level 3 or Mathematical Literacy level 4",
+          "At least one of Accounting, Business Studies or Economics at level 3"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Entrepreneurship",
+        "Small Business Management",
+        "Business Administration"
+      ],
+      "description": "Provides practical foundations in entrepreneurship and small-business management, including management, finance, communication and leadership for venture creation and employability.",
+      "career_opportunities": [
+        "small-business owner",
+        "start-up entrepreneur",
+        "business consultant",
+        "franchise manager",
+        "business administrator",
+        "junior manager"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          13
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-005-diploma-in-retail-business-management",
+      "name": "Diploma in Retail Business Management",
+      "qualification_code": null,
+      "saqa_id": "93648",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 25,
+        "alternatives": null,
+        "display": "Minimum APS: 25"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass or equivalent with Diploma admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Mathematics level 3 or Mathematical Literacy level 5",
+          "At least one of Accounting, Business Studies or Economics at level 4"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Retail Management",
+        "Wholesale Management",
+        "Work-integrated Learning"
+      ],
+      "description": "Develops the management, communication and problem-solving skills needed in retail and wholesale environments, supported by work-integrated learning.",
+      "career_opportunities": [
+        "retail management trainee",
+        "buyer",
+        "stock controller",
+        "merchandiser",
+        "sales administrator",
+        "logistics assistant"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          14
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-006-bachelor-of-commerce-in-accounting",
+      "name": "Bachelor of Commerce in Accounting",
+      "qualification_code": null,
+      "saqa_id": "118404",
+      "qualification_type": "Bachelor of Commerce",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 30,
+        "alternatives": null,
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass or equivalent with Bachelor's Degree admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Mathematics level 5; alternatively Mathematics level 4 together with Accounting level 3"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Accounting",
+        "Taxation",
+        "Auditing",
+        "Financial Management",
+        "Management Control Systems"
+      ],
+      "description": "Provides a technically focused accounting education with analytical, quantitative and digital competencies in accounting, tax, auditing, financial management and governance.",
+      "career_opportunities": [
+        "financial accountant",
+        "management accountant",
+        "financial manager",
+        "tax practitioner",
+        "internal auditor",
+        "management consultant",
+        "entrepreneur"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          15,
+          16
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-007-bachelor-of-commerce-in-economics",
+      "name": "Bachelor of Commerce in Economics",
+      "qualification_code": null,
+      "saqa_id": "118906",
+      "qualification_type": "Bachelor of Commerce",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 30,
+        "alternatives": null,
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass or equivalent with Bachelor's Degree admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Mathematics level 5; alternatively Mathematics level 4 together with Economics or Business Studies level 3"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Economics",
+        "Quantitative Analysis",
+        "Technology-enabled Economic Analysis"
+      ],
+      "description": "Builds strong economics and quantitative-analysis competencies, using technology to prepare graduates to analyse and communicate economic issues in public and private sectors.",
+      "career_opportunities": [
+        "economist",
+        "economic researcher",
+        "economic analyst",
+        "forecaster",
+        "financial risk analyst",
+        "investment analyst",
+        "consultant"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          16
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-008-higher-certificate-in-heritage-studies",
+      "name": "Higher Certificate in Heritage Studies",
+      "qualification_code": null,
+      "saqa_id": "94804",
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Humanities",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 1,
+      "credits": null,
+      "nqf_level": 5,
+      "aps": {
+        "minimum": 25,
+        "alternatives": null,
+        "display": "Minimum APS: 25"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass with Higher Certificate admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Mathematics level 2 or Mathematical Literacy level 3"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Heritage Studies",
+        "Heritage Practice"
+      ],
+      "description": "Provides theoretical and practical grounding in the heritage sector and creates a pathway into further undergraduate study.",
+      "career_opportunities": [
+        "heritage organisation administrator",
+        "museum assistant",
+        "archives assistant",
+        "tourism-sector practitioner",
+        "heritage-project assistant"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          18
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-009-higher-certificate-in-court-interpreting",
+      "name": "Higher Certificate in Court Interpreting",
+      "qualification_code": null,
+      "saqa_id": "115460",
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Humanities",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 1,
+      "credits": null,
+      "nqf_level": 5,
+      "aps": {
+        "minimum": 25,
+        "alternatives": null,
+        "display": "Minimum APS: 25"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass with Higher Certificate admission, or an NC(V) with appropriate subjects",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "At least one other African language: Home Language level 4 or First Additional Language level 5",
+          "Mature-age applicants with relevant industry experience and level-4 qualifications may be considered"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Court Interpreting",
+        "Legal Interpreting",
+        "Community Interpreting"
+      ],
+      "description": "Professionally equips new and practising interpreters with specialised interpreting skills for courts and related legal, public-service and community contexts.",
+      "career_opportunities": [
+        "court interpreter",
+        "legal interpreter",
+        "community interpreter",
+        "conference interpreter",
+        "healthcare interpreter",
+        "government-language practitioner"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          19
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-010-bachelor-of-arts",
+      "name": "Bachelor of Arts",
+      "qualification_code": null,
+      "saqa_id": "98922",
+      "qualification_type": "Bachelor of Arts",
+      "faculty": "Faculty of Humanities",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 30,
+        "alternatives": null,
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass with Bachelor's Degree admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Mathematics level 2 or Mathematical Literacy level 3",
+          "Geography level 4 is required for students wishing to major in Geography"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Afrikaans",
+        "English",
+        "Setswana",
+        "History",
+        "Heritage Studies",
+        "Geography",
+        "Mathematics",
+        "Sociology"
+      ],
+      "description": "Develops critical thinking, communication and disciplinary knowledge across languages, history, heritage, geography, mathematics and sociology, with Heritage Studies compulsory in first year.",
+      "career_opportunities": [
+        "public-sector administrator",
+        "heritage practitioner",
+        "language practitioner",
+        "research assistant",
+        "community-development practitioner",
+        "communications officer"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          20
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-011-diploma-in-agriculture",
+      "name": "Diploma in Agriculture",
+      "qualification_code": null,
+      "saqa_id": "120923",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural and Applied Sciences",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 25,
+        "alternatives": null,
+        "display": "Minimum APS: 25"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass with Diploma admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Mathematics level 3 or Mathematical Literacy level 5",
+          "Physical Sciences level 3",
+          "Life Sciences level 3 or Agricultural Sciences level 3"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Mixed Farming",
+        "Crop Production",
+        "Livestock Production",
+        "Agricultural Entrepreneurship"
+      ],
+      "description": "Provides broad practical and scientific grounding in commercial crop and livestock production, particularly for water-stressed regions, before later specialisation or further study.",
+      "career_opportunities": [
+        "agricultural entrepreneur",
+        "agricultural technician",
+        "farm manager",
+        "agricultural adviser",
+        "extension practitioner",
+        "production officer"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          22
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-012-diploma-in-information-and-communication-technology-in-applications-development",
+      "name": "Diploma in Information and Communication Technology in Applications Development",
+      "qualification_code": null,
+      "saqa_id": "93728",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural and Applied Sciences",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 6,
+      "aps": {
+        "minimum": 25,
+        "alternatives": null,
+        "display": "Minimum APS: 25"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass with Diploma admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Mathematics level 3 or Mathematical Literacy level 5",
+          "Computer Applications Technology or Information Technology is highly recommended"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Applications Development",
+        "Computer Programming",
+        "Systems Analysis and Design",
+        "Web Development",
+        "Databases",
+        "Software Deployment"
+      ],
+      "description": "A career-focused ICT qualification covering the design, development, implementation, testing and secure deployment of software applications for standalone, distributed and web environments.",
+      "career_opportunities": [
+        "software analyst",
+        "application programmer",
+        "software developer",
+        "web developer",
+        "web administrator",
+        "network administrator",
+        "systems administrator",
+        "network analyst"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          23,
+          24
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-013-bachelor-of-environmental-science",
+      "name": "Bachelor of Environmental Science",
+      "qualification_code": null,
+      "saqa_id": "123429",
+      "qualification_type": "Bachelor's Degree",
+      "faculty": "Faculty of Natural and Applied Sciences",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 4,
+      "credits": null,
+      "nqf_level": 8,
+      "aps": {
+        "minimum": 30,
+        "alternatives": null,
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass with Bachelor's Degree admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Mathematics level 4; Mathematical Literacy is not accepted",
+          "Physical Sciences level 4",
+          "Life Sciences level 4"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Environmental Sustainability",
+        "Environmental Planning",
+        "Environmental Management Systems",
+        "Remote Sensing and Earth Observation",
+        "Ecology",
+        "Geography"
+      ],
+      "description": "Examines interactions among organisms, people and Earth's physical systems while developing skills in environmental sustainability, spatial analysis, planning and management.",
+      "career_opportunities": [
+        "environmental scientist",
+        "environmental consultant",
+        "environmental manager",
+        "sustainability practitioner",
+        "environmental impact assessment practitioner",
+        "conservation officer"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          26
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-014-bachelor-of-science",
+      "name": "Bachelor of Science",
+      "qualification_code": null,
+      "saqa_id": "97908",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Natural and Applied Sciences",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 30,
+        "alternatives": null,
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass with Bachelor's Degree admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Mathematics level 4; Mathematical Literacy is not accepted",
+          "Physical Sciences level 4",
+          "Life Sciences level 4"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Mathematical and Computer Sciences",
+        "Physical Sciences",
+        "Biological Sciences"
+      ],
+      "description": "Develops scientific knowledge, analytical ability, research competence and communication skills through specialisations in mathematical and computer sciences, physical sciences or biological sciences.",
+      "career_opportunities": [
+        "biologist",
+        "ecologist",
+        "molecular biologist",
+        "statistician",
+        "computer programmer",
+        "cybersecurity analyst",
+        "physicist",
+        "chemical analyst",
+        "geographer"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          27
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    },
+    {
+      "record_id": "SPU-2027-015-bachelor-of-science-in-data-science",
+      "name": "Bachelor of Science in Data Science",
+      "qualification_code": null,
+      "saqa_id": "96105",
+      "qualification_type": "Bachelor of Science",
+      "faculty": "Faculty of Natural and Applied Sciences",
+      "school": null,
+      "campus": [
+        "Kimberley"
+      ],
+      "delivery_mode": "Full-time",
+      "duration_years": 3,
+      "credits": null,
+      "nqf_level": 7,
+      "aps": {
+        "minimum": 30,
+        "alternatives": null,
+        "display": "Minimum APS: 30"
+      },
+      "subject_requirements": {
+        "raw_requirements": [
+          "NSC pass with Bachelor's Degree admission",
+          "English Home Language level 4 or English First Additional Language level 5",
+          "Mathematics level 5; Mathematical Literacy is not accepted"
+        ],
+        "aps_calculation_method": "SPU's 2027 APS table awards 1–8 points according to NSC percentage, adds Mathematics and Home Language bonuses, and awards up to four Life Orientation points. Consult the prospectus table for the exact scale."
+      },
+      "fields_or_subjects": [
+        "Data Science",
+        "Mathematics",
+        "Predictive Modelling",
+        "Data Analytics",
+        "Big Data"
+      ],
+      "description": "Combines a strong mathematics core with data-science methods and applications for predictive modelling, analytics and evidence-based decision-making across industries.",
+      "career_opportunities": [
+        "data scientist",
+        "data architect",
+        "data analyst",
+        "analytics manager",
+        "data engineer",
+        "intelligence analyst",
+        "data-mining engineer"
+      ],
+      "source": {
+        "document": "SPU 2027 Undergraduate Prospectus",
+        "url": "https://indd.adobe.com/view/57eda609-9efc-43e8-b806-791d2e347328",
+        "prospectus_pages": [
+          28
+        ],
+        "accessed": "2026-09-19"
+      },
+      "verification": {
+        "status": "Verified against searchable text embedded in the official SPU Adobe InDesign prospectus.",
+        "admission_warning": "Meeting the minimum requirements does not guarantee admission. Confirm current requirements and programme availability with SPU before applying."
+      }
+    }
+  ]
+}

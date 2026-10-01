@@ -3,11 +3,18 @@ import React, {
   useCallback,
   useContext,
   useMemo,
+  useEffect,
   useState,
 } from "react";
 import { useColorScheme } from "react-native";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+import { auth } from "../screens/firebaseConfig";
+import { db } from "../screens/firebaseConfig";
 
 const ProfileContext = createContext(null);
+const THEME_STORAGE_KEY = "@careercompass:themePreference";
 
 const lightColors = {
   background: "#F6F8FC",
@@ -42,38 +49,128 @@ const darkColors = {
 };
 
 const initialProfile = {
-  email: "mehndonyela@gmail.com",
-  firstName: "Meh",
-  surname: "Ndonyela",
-  phone: "+27 82 123 4567",
-  category: "Matric Learner",
-  learnerInfo: "Class of 2024",
-  location: "Soweto, Gauteng • South Africa",
+  email: "",
+  firstName: "Guest",
+  surname: "User",
+  phone: "",
+  category: "Guest",
+  learnerInfo: "",
+  location: "Explore CareerCompass",
 };
 
 export function ProfileProvider({ children }) {
   const systemColorScheme = useColorScheme();
   const [profile, setProfile] = useState(initialProfile);
-  const [themePreference, setThemePreference] = useState("Light");
+  const [firebaseUser, setFirebaseUser] = useState(null);
+  const [isGuest, setIsGuest] = useState(false);
+  const [themePreference, setThemePreferenceState] = useState("Light");
   const [successMessage, setSuccessMessage] = useState("");
 
+  // Load saved theme preference once on mount.
+  useEffect(() => {
+    (async () => {
+      try {
+        const storedTheme = await AsyncStorage.getItem(THEME_STORAGE_KEY);
+        if (storedTheme) setThemePreferenceState(storedTheme);
+      } catch (error) {
+        // If storage fails, we just keep the default "Light" theme.
+      }
+    })();
+  }, []);
+
+  // Wrap the setter so every change is also saved to AsyncStorage.
+  const setThemePreference = useCallback((nextTheme) => {
+    setThemePreferenceState(nextTheme);
+    AsyncStorage.setItem(THEME_STORAGE_KEY, nextTheme).catch(() => {
+      // Non-fatal: theme just won't persist this time.
+    });
+  }, []);
+
+  useEffect(() => {
+    return auth.onAuthStateChanged(async (user) => {
+      setFirebaseUser(user);
+      if (!user) {
+        setIsGuest(false);
+        setProfile(initialProfile);
+        return;
+      }
+
+      setIsGuest(false);
+      const userSnapshot = await getDoc(doc(db, "users", user.uid));
+      const storedProfile = userSnapshot.exists() ? userSnapshot.data() : {};
+      const nameParts = (storedProfile.name || user.displayName || "Student")
+        .trim()
+        .split(/\s+/);
+
+      setProfile({
+        ...initialProfile,
+        ...storedProfile,
+        email: user.email || storedProfile.email || "",
+        firstName: nameParts[0] || "Student",
+        surname: nameParts.slice(1).join(" "),
+        category: "Student",
+        photoURL: user.photoURL || storedProfile.photoURL || "",
+        authProvider:
+          (
+            user.providerData?.some(
+              ({ providerId }) => providerId === "google.com",
+            )
+          ) ?
+            "Google"
+          : "Email",
+      });
+    });
+  }, []);
+
+  const enterGuestMode = useCallback(() => {
+    setIsGuest(true);
+    setFirebaseUser(null);
+    setProfile(initialProfile);
+  }, []);
+  const clearSession = useCallback(() => {
+    setIsGuest(false);
+    setFirebaseUser(null);
+    setProfile(initialProfile);
+    setSuccessMessage("");
+  }, []);
+
   const resolvedTheme =
-    themePreference === "System"
-      ? systemColorScheme === "dark"
-        ? "dark"
-        : "light"
-      : themePreference.toLowerCase();
+    themePreference === "System" ?
+      systemColorScheme === "dark" ?
+        "dark"
+      : "light"
+    : themePreference.toLowerCase();
   const colors = resolvedTheme === "dark" ? darkColors : lightColors;
 
-  const updateProfile = useCallback((nextProfile) => {
-    setProfile(nextProfile);
-    setSuccessMessage("Profile updated successfully.");
-  }, []);
+  const updateProfile = useCallback(
+    async (nextProfile) => {
+      setProfile(nextProfile);
+      if (firebaseUser) {
+        await setDoc(
+          doc(db, "users", firebaseUser.uid),
+          {
+            name: `${nextProfile.firstName} ${nextProfile.surname}`.trim(),
+            email: nextProfile.email,
+            phone: nextProfile.phone,
+            category: nextProfile.category,
+          },
+          { merge: true },
+        );
+      }
+      setSuccessMessage("Profile updated successfully.");
+    },
+    [firebaseUser],
+  );
   const clearSuccessMessage = useCallback(() => setSuccessMessage(""), []);
 
   const value = useMemo(
     () => ({
       profile,
+      firebaseUser,
+      isGuest: isGuest && !firebaseUser,
+      isAuthenticated: Boolean(firebaseUser),
+      enterGuestMode,
+      clearSession,
       updateProfile,
       themePreference,
       setThemePreference,
@@ -84,8 +181,13 @@ export function ProfileProvider({ children }) {
     }),
     [
       profile,
+      firebaseUser,
+      isGuest,
+      enterGuestMode,
+      clearSession,
       updateProfile,
       themePreference,
+      setThemePreference,
       resolvedTheme,
       colors,
       successMessage,

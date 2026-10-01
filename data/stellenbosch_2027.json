@@ -1,0 +1,2478 @@
+{
+  "university": {
+    "name": "Stellenbosch University",
+    "abbreviation": "SU",
+    "country": "South Africa",
+    "province": "Western Cape"
+  },
+  "schema_version": "1.0",
+  "generated_from": "Stellenbosch University 2027 Undergraduate Prospectus (stellenbosch.pdf)",
+  "important_notice": "This dataset summarises the official 2027 undergraduate prospectus for CareerCompass. Stellenbosch University uses NSC aggregates, subject percentages and faculty selection rather than a universal APS. All programmes are selection programmes and requirements can change; verify with the official University before applying.",
+  "course_count": 77,
+  "courses": [
+    {
+      "name": "Bachelor of Agriculture in Agribusiness Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of AgriSciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English or Afrikaans HL/FAL 50%; Mathematics 60%; Physical Sciences 50%."
+        }
+      },
+      "description": "Combines agricultural production knowledge with business and economic management.",
+      "career_opportunities": [
+        "Agribusiness manager",
+        "Agricultural economist",
+        "Farm-business consultant"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture in Agricultural Economics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of AgriSciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English or Afrikaans HL/FAL 50%; Mathematics 60%; Physical Sciences 50%."
+        }
+      },
+      "description": "Studies agricultural economics, policy, analysis, management and food-system decisions.",
+      "career_opportunities": [
+        "Agricultural economist",
+        "Policy researcher",
+        "Agricultural finance analyst"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Agriculture in Agricultural Production and Management: Elsenburg",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of AgriSciences",
+      "campus": "Elsenburg campus",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 55% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English or Afrikaans HL/FAL 50%; Mathematics 50% or Mathematical Literacy 60%; Physical Sciences, Life Sciences or Agricultural Sciences 50%."
+        }
+      },
+      "description": "Career-focused agricultural production and management training offered with Elsenburg Agricultural Training Institute.",
+      "career_opportunities": [
+        "Farm manager",
+        "Agricultural extension officer",
+        "Production supervisor"
+      ],
+      "source": {
+        "prospectus_page": 2,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture in Animal Production Systems",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of AgriSciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English or Afrikaans HL/FAL 50%; Mathematics 60%; Physical Sciences 50%."
+        }
+      },
+      "description": "Covers animal production, nutrition, physiology, reproduction and breeding systems.",
+      "career_opportunities": [
+        "Animal scientist",
+        "Production manager",
+        "Agricultural consultant"
+      ],
+      "source": {
+        "prospectus_page": 3,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Conservation Ecology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of AgriSciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English or Afrikaans HL/FAL 50%; Mathematics 60%; Physical Sciences 50%."
+        }
+      },
+      "description": "Focuses on conservation biology, ecosystems, restoration and natural-resource management.",
+      "career_opportunities": [
+        "Conservation scientist",
+        "Environmental consultant",
+        "Ecology researcher"
+      ],
+      "source": {
+        "prospectus_page": 3,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Data Science - Statistical Genetics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of AgriSciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 80% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 80%; Afrikaans or English HL 60%, or FAL 75%."
+        }
+      },
+      "description": "Uses statistical and data-science methods to analyse genetic and biological data.",
+      "career_opportunities": [
+        "Statistical geneticist",
+        "Genetic data analyst",
+        "Bioinformatics researcher"
+      ],
+      "source": {
+        "prospectus_page": 3,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Food Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of AgriSciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English or Afrikaans HL/FAL 50%; Mathematics 60%; Physical Sciences 50%."
+        }
+      },
+      "description": "Studies food composition, processing, safety, quality and product development.",
+      "career_opportunities": [
+        "Food scientist",
+        "Quality-assurance specialist",
+        "Product developer"
+      ],
+      "source": {
+        "prospectus_page": 3,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Forestry: Forestry and Natural Resources Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of AgriSciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English or Afrikaans HL/FAL 50%; Mathematics 60%; Physical Sciences 50%."
+        }
+      },
+      "description": "Prepares students for sustainable forestry and natural-resource science and management.",
+      "career_opportunities": [
+        "Forester",
+        "Forest researcher",
+        "Natural-resources consultant"
+      ],
+      "source": {
+        "prospectus_page": 3,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Forestry: Wood and Wood Products Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of AgriSciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English or Afrikaans HL/FAL 50%; Mathematics 70%; Physical Sciences 60%."
+        }
+      },
+      "description": "Covers wood science, product development, processing, production and quality management.",
+      "career_opportunities": [
+        "Wood scientist",
+        "Production manager",
+        "Product-development specialist"
+      ],
+      "source": {
+        "prospectus_page": 3,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture in Plant and Soil Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of AgriSciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English or Afrikaans HL/FAL 50%; Mathematics 60%; Physical Sciences 50%."
+        }
+      },
+      "description": "Covers crop systems, crop protection and breeding, and soil and water management.",
+      "career_opportunities": [
+        "Crop-production specialist",
+        "Soil scientist",
+        "Agricultural researcher"
+      ],
+      "source": {
+        "prospectus_page": 3,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Agriculture in Viticulture and Oenology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of AgriSciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English or Afrikaans HL/FAL 50%; Mathematics 60%; Physical Sciences 50%."
+        }
+      },
+      "description": "Studies grape production, winemaking, wine science and related production systems.",
+      "career_opportunities": [
+        "Winemaker",
+        "Viticulturist",
+        "Wine laboratory analyst"
+      ],
+      "source": {
+        "prospectus_page": 3,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Humanities",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 63% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 50%; First Additional Language 40%; Organisational Informatics additionally requires Mathematics 50% or Mathematical Literacy 70%."
+        }
+      },
+      "description": "Flexible humanities study across thought, language, culture, art, people and society.",
+      "career_opportunities": [
+        "Language practitioner",
+        "Journalist",
+        "Research or education professional"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Language and Culture",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 63% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 50%; First Additional Language 50%."
+        }
+      },
+      "description": "Develops advanced expertise in languages, culture and communication.",
+      "career_opportunities": [
+        "Translator",
+        "Publishing professional",
+        "Diplomatic or tourism professional"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Development and the Environment",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 63% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 50%; First Additional Language 40%; Economics option requires Mathematics 60%."
+        }
+      },
+      "description": "Examines development, communities, planning, resources and environmental management.",
+      "career_opportunities": [
+        "Development practitioner",
+        "Environmental planner",
+        "Community-development officer"
+      ],
+      "source": {
+        "prospectus_page": 4,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Drama and Theatre Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 63% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 50%; First Additional Language 40%; selection requirements may apply."
+        }
+      },
+      "description": "Combines performance, theatre studies and production training.",
+      "career_opportunities": [
+        "Actor or performer",
+        "Theatre practitioner",
+        "Production specialist"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Human Resource Management",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 63% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 50%; First Additional Language 40%."
+        }
+      },
+      "description": "Studies people management, organisational behaviour and workplace development.",
+      "career_opportunities": [
+        "Human-resources practitioner",
+        "Talent-development officer",
+        "Labour-relations practitioner"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in International Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 63% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 50%; First Additional Language 50%."
+        }
+      },
+      "description": "Interdisciplinary study of global politics, economics, language and culture.",
+      "career_opportunities": [
+        "Diplomatic-service professional",
+        "International-relations analyst",
+        "Policy researcher"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Music",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language requirements plus music-theory and practical standard; audition and theory assessment apply."
+        }
+      },
+      "description": "Combines music study with a broader arts curriculum.",
+      "career_opportunities": [
+        "Music teacher",
+        "Conductor",
+        "Music practitioner"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Music",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 50%; First Additional Language 40%; music theory, practical standard and selection audition apply."
+        }
+      },
+      "description": "Professional music training in education, musicology, technology, composition and performance.",
+      "career_opportunities": [
+        "Music educator",
+        "Professional musician",
+        "Composer or music technologist"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Diploma in Practical Music",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "NSC diploma admission plus music selection"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "At least 40% in four designated NSC subjects; practical and theory standards; audition applies."
+        }
+      },
+      "description": "Practical performance-centred music training.",
+      "career_opportunities": [
+        "Instrumental teacher",
+        "Singing teacher",
+        "Professional musician"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Advanced Diploma in Practical Music",
+      "qualification_code": null,
+      "qualification_type": "Advanced Diploma",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Prior diploma plus selection"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Diploma in Practical Music or equivalent; selection audition and possible supplementary work."
+        }
+      },
+      "description": "Advanced practical and performance development for diploma graduates.",
+      "career_opportunities": [
+        "Performing artist",
+        "Accompanist",
+        "Advanced music practitioner"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Higher Certificate in Music",
+      "qualification_code": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "NSC plus music selection"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Required practical standard in main instrument or singing; selection assessment applies."
+        }
+      },
+      "description": "Foundation music training that can support entry into further music qualifications.",
+      "career_opportunities": [
+        "Community music facilitator",
+        "Music assistant",
+        "Further music-study pathway"
+      ],
+      "source": {
+        "prospectus_page": 5,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Political, Philosophical and Economic Studies",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 63% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 50%; First Additional Language 40%; Mathematics 60%."
+        }
+      },
+      "description": "Integrates politics, philosophy and economics for analytical study of society and institutions.",
+      "career_opportunities": [
+        "Policy analyst",
+        "Business or investment analyst",
+        "Researcher"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Social Work",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 63% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 50%; First Additional Language 50%."
+        }
+      },
+      "description": "Professional education for social support, welfare and community development.",
+      "career_opportunities": [
+        "Social worker",
+        "Community-development practitioner",
+        "Social-services officer"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Visual Arts",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Home Language 50%; First Additional Language 40%; prescribed art portfolio required by the published deadline."
+        }
+      },
+      "description": "Professional visual-arts training in fine art, jewellery and metal design, or visual communication design.",
+      "career_opportunities": [
+        "Visual artist",
+        "Graphic designer",
+        "Jewellery designer"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Data Science - Geoinformatics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 80% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 80%; Afrikaans or English HL 60%, or FAL 75%."
+        }
+      },
+      "description": "Applies data science to spatial information capture, analysis and communication.",
+      "career_opportunities": [
+        "Geospatial data scientist",
+        "GIS specialist",
+        "Earth-observation analyst"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Diploma in Sustainable Development",
+      "qualification_code": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 55% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English HL 50% or FAL 60%; Mathematics 50% or Mathematical Literacy 60%, with an alternative combination involving Business Studies, Economics or Accounting; departmental selection form required."
+        }
+      },
+      "description": "Develops sustainable-development, entrepreneurship, leadership and social-innovation capability.",
+      "career_opportunities": [
+        "Sustainability practitioner",
+        "Social entrepreneur",
+        "Development-project coordinator"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Economic Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 60%; English or Afrikaans HL 50%, or FAL 70%; some focal areas require Mathematics 70%."
+        }
+      },
+      "description": "Economics degree with focal options including econometrics, financial sector, transport and consultation.",
+      "career_opportunities": [
+        "Economist",
+        "Economic analyst",
+        "Public-sector policy analyst"
+      ],
+      "source": {
+        "prospectus_page": 6,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Management Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 60%; English or Afrikaans HL 50%, or FAL 70%."
+        }
+      },
+      "description": "Broad management degree with focal areas such as analytics, entrepreneurship, finance, logistics, marketing and public management.",
+      "career_opportunities": [
+        "Business analyst",
+        "Marketing or logistics manager",
+        "Management consultant"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Management Sciences - Extended Curriculum Programme",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Same academic minimum plus ECP selection"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Same academic minimum as BCom Management Sciences; preference and selection rules include socio-economic criteria."
+        }
+      },
+      "description": "Extended route through Management Sciences with additional academic support.",
+      "career_opportunities": [
+        "Business professional",
+        "Management trainee",
+        "Entrepreneur"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Mathematical Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 70%; language requirements as published by the faculty."
+        }
+      },
+      "description": "Combines mathematical, statistical and financial methods for quantitative business careers.",
+      "career_opportunities": [
+        "Quantitative analyst",
+        "Data analyst",
+        "Operations-research analyst"
+      ],
+      "source": {
+        "prospectus_page": 7,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in International Business",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 60%; language requirements and programme selection process apply."
+        }
+      },
+      "description": "Prepares students for international markets, cross-border business and innovation.",
+      "career_opportunities": [
+        "International business analyst",
+        "Export or trade professional",
+        "Innovation manager"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Actuarial Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 80% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 80%; faculty language and aggregate requirements apply."
+        }
+      },
+      "description": "Professional actuarial education in risk, finance, insurance and quantitative modelling.",
+      "career_opportunities": [
+        "Actuary pathway",
+        "Actuarial analyst",
+        "Risk specialist"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Industrial Psychology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 60%; faculty language requirements apply."
+        }
+      },
+      "description": "Studies workplace psychology, assessment and organisational behaviour.",
+      "career_opportunities": [
+        "Industrial-psychology pathway",
+        "Psychometrist pathway",
+        "Human-resources specialist"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Accountancy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 70%; faculty language and aggregate requirements apply."
+        }
+      },
+      "description": "Professional accounting degree forming the first stage of the chartered-accountancy route.",
+      "career_opportunities": [
+        "Chartered-accountancy pathway",
+        "Auditor",
+        "Financial accountant"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Data Science - Behavioural Economics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 80% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 80%; Afrikaans or English HL 60%, or FAL 75%."
+        }
+      },
+      "description": "Uses data science to analyse economic behaviour and decision-making.",
+      "career_opportunities": [
+        "Behavioural data analyst",
+        "Economic data scientist",
+        "Market researcher"
+      ],
+      "source": {
+        "prospectus_page": 8,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Management Accounting",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 60%; faculty language requirements apply."
+        }
+      },
+      "description": "Prepares students for management accounting, business finance and professional CIMA-aligned development.",
+      "career_opportunities": [
+        "Management accountant",
+        "Business controller",
+        "Financial manager"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Financial Accounting",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Economic and Management Sciences",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 60%; faculty language requirements apply."
+        }
+      },
+      "description": "Develops financial accounting, reporting, internal audit and advisory skills.",
+      "career_opportunities": [
+        "Financial accountant",
+        "Internal auditor",
+        "Financial adviser"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Foundation Phase Education",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language requirements and faculty selection rules apply."
+        }
+      },
+      "description": "Professional teacher education for Grades R to 3.",
+      "career_opportunities": [
+        "Foundation-phase teacher",
+        "Education practitioner",
+        "Learning-support pathway"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Education in Intermediate Phase Education",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Further subject requirements depend on the chosen teaching subjects."
+        }
+      },
+      "description": "Professional teacher education for Grades 4 to 7.",
+      "career_opportunities": [
+        "Intermediate-phase teacher",
+        "Primary-school educator",
+        "Curriculum practitioner"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Postgraduate Certificate in Education",
+      "qualification_code": null,
+      "qualification_type": "Postgraduate Certificate",
+      "faculty": "Faculty of Education",
+      "campus": null,
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Prior bachelor's degree required"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Relevant completed bachelor's degree and teaching-subject requirements."
+        }
+      },
+      "description": "One-year professional teacher qualification for graduates.",
+      "career_opportunities": [
+        "High-school teacher",
+        "Subject educator",
+        "Education practitioner"
+      ],
+      "source": {
+        "prospectus_page": 9,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Chemical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC aggregate and selection mark requirements apply; Mathematics 70%; Physical Sciences 60%; language requirements as published. Recent competitive selection marks may be higher than minimums."
+        }
+      },
+      "description": "Applies science and engineering to large-scale chemical and process systems.",
+      "career_opportunities": [
+        "Chemical engineer",
+        "Process engineer",
+        "Production engineer"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Civil Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC aggregate and selection mark requirements apply; Mathematics 70%; Physical Sciences 60%; language requirements as published. Recent competitive selection marks may be higher than minimums."
+        }
+      },
+      "description": "Covers design and management of infrastructure, structures, water and transport systems.",
+      "career_opportunities": [
+        "Civil engineer",
+        "Structural engineer",
+        "Infrastructure engineer"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Electrical and Electronic Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC aggregate and selection mark requirements apply; Mathematics 70%; Physical Sciences 60%; language requirements as published. Recent competitive selection marks may be higher than minimums."
+        }
+      },
+      "description": "Studies electrical, electronic, energy, control and communication systems.",
+      "career_opportunities": [
+        "Electrical engineer",
+        "Electronics engineer",
+        "Control-systems engineer"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Electrical and Electronic Engineering (Data Engineering)",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC aggregate and selection mark requirements apply; Mathematics 70%; Physical Sciences 60%; language requirements as published. Recent competitive selection marks may be higher than minimums."
+        }
+      },
+      "description": "Combines electrical and electronic engineering with data systems and analytics.",
+      "career_opportunities": [
+        "Data engineer",
+        "Data analyst",
+        "Systems engineer"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Industrial Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC aggregate and selection mark requirements apply; Mathematics 70%; Physical Sciences 60%; language requirements as published. Recent competitive selection marks may be higher than minimums."
+        }
+      },
+      "description": "Optimises complex production, logistics, operations and organisational systems.",
+      "career_opportunities": [
+        "Industrial engineer",
+        "Operations analyst",
+        "Supply-chain engineer"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Mechanical Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC aggregate and selection mark requirements apply; Mathematics 70%; Physical Sciences 60%; language requirements as published. Recent competitive selection marks may be higher than minimums."
+        }
+      },
+      "description": "Studies machines, energy, materials, design and mechanical systems.",
+      "career_opportunities": [
+        "Mechanical engineer",
+        "Design engineer",
+        "Manufacturing engineer"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Engineering in Mechatronic Engineering",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Engineering",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC aggregate and selection mark requirements apply; Mathematics 70%; Physical Sciences 60%; language requirements as published. Recent competitive selection marks may be higher than minimums."
+        }
+      },
+      "description": "Integrates mechanical, electronic, control and computing systems.",
+      "career_opportunities": [
+        "Mechatronics engineer",
+        "Automation engineer",
+        "Robotics engineer"
+      ],
+      "source": {
+        "prospectus_page": 10,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Laws",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Law",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NBTs are required for all Faculty of Law applicants in 2027; programme-specific aggregate and language thresholds and faculty selection guidelines apply."
+        }
+      },
+      "description": "Four-year professional law degree for legal practice and law-related careers.",
+      "career_opportunities": [
+        "Attorney pathway",
+        "Advocate pathway",
+        "Legal adviser"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Commerce in Law",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NBTs are required for all Faculty of Law applicants in 2027; programme-specific aggregate and language thresholds and faculty selection guidelines apply."
+        }
+      },
+      "description": "Combines commercial subjects with law and may lead to further LLB study.",
+      "career_opportunities": [
+        "Commercial-law pathway",
+        "Compliance analyst",
+        "Further LLB study"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Accountancy and Bachelor of Laws",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Law",
+      "campus": null,
+      "duration_years": 5,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NBTs are required for all Faculty of Law applicants in 2027; programme-specific aggregate and language thresholds and faculty selection guidelines apply."
+        }
+      },
+      "description": "Integrated accountancy and law programme combining professional financial and legal study.",
+      "career_opportunities": [
+        "Legal practitioner",
+        "Accounting professional",
+        "Tax or commercial-law specialist"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Arts in Law",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Law",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 70% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NBTs are required for all Faculty of Law applicants in 2027; programme-specific aggregate and language thresholds and faculty selection guidelines apply."
+        }
+      },
+      "description": "Combines arts and social-science study with law, followed where desired by further LLB study.",
+      "career_opportunities": [
+        "Legal-services pathway",
+        "Policy professional",
+        "Further LLB study"
+      ],
+      "source": {
+        "prospectus_page": 11,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Medicine and Bachelor of Surgery",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Medicine and Health Sciences",
+      "campus": null,
+      "duration_years": 6,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 75% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC aggregate 75%; Mathematics, Physical Sciences, Life Sciences and language thresholds plus faculty selection requirements apply."
+        }
+      },
+      "description": "Professional medical degree followed by the prescribed internship and community service.",
+      "career_opportunities": [
+        "Medical doctor",
+        "Clinical practitioner",
+        "Specialist-training pathway"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Nursing",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Medicine and Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Programme subject and language requirements plus faculty selection apply."
+        }
+      },
+      "description": "Professional nursing education across clinical and community health settings.",
+      "career_opportunities": [
+        "Professional nurse",
+        "Community-health nurse",
+        "Clinical nursing practitioner"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Dietetics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Medicine and Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics, Physical Sciences and/or Life Sciences plus language requirements apply."
+        }
+      },
+      "description": "Professional study of nutrition, food and therapeutic dietetics.",
+      "career_opportunities": [
+        "Dietitian",
+        "Community nutrition practitioner",
+        "Clinical nutrition professional"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Occupational Therapy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Medicine and Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Programme science and language requirements plus faculty selection apply."
+        }
+      },
+      "description": "Professional education in supporting participation, independence and rehabilitation.",
+      "career_opportunities": [
+        "Occupational therapist",
+        "Rehabilitation practitioner",
+        "Community-health professional"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Physiotherapy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Medicine and Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Programme Mathematics/science and language requirements plus faculty selection apply."
+        }
+      },
+      "description": "Professional education in movement, physical rehabilitation and injury management.",
+      "career_opportunities": [
+        "Physiotherapist",
+        "Rehabilitation practitioner",
+        "Sports physiotherapy pathway"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Speech-Language and Hearing Therapy",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Medicine and Health Sciences",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "At least two of the three specified languages and programme subject requirements; faculty selection applies."
+        }
+      },
+      "description": "Professional training in communication, speech, language and hearing assessment and therapy.",
+      "career_opportunities": [
+        "Speech-language therapist",
+        "Audiology-related practitioner",
+        "Communication rehabilitation professional"
+      ],
+      "source": {
+        "prospectus_page": 12,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Biodiversity and Ecology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Mathematics 60%; Physical Sciences 50%."
+        }
+      },
+      "description": "Studies biodiversity, ecology, organisms and environmental change.",
+      "career_opportunities": [
+        "Ecologist",
+        "Conservation scientist",
+        "Environmental consultant"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Human Life Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Physical Sciences 50%; Mathematics 60% or 70% depending on first-year choices."
+        }
+      },
+      "description": "Studies human biology with focal options connecting physiology, genetics and related life sciences.",
+      "career_opportunities": [
+        "Biomedical researcher",
+        "Physiologist",
+        "Forensic-science pathway"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Molecular Biology and Biotechnology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Mathematics 60%; Physical Sciences 50%."
+        }
+      },
+      "description": "Studies molecular life processes, genetics, microbiology and biotechnology.",
+      "career_opportunities": [
+        "Biotechnologist",
+        "Molecular biology researcher",
+        "Forensic scientist"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Sport Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Mathematics 60%; Physical Sciences 50%."
+        }
+      },
+      "description": "Studies human movement, sport performance, coaching and exercise science.",
+      "career_opportunities": [
+        "Sport scientist",
+        "Sport coach",
+        "Sport manager"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Chemistry",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Mathematics 70%; Physical Sciences 50%."
+        }
+      },
+      "description": "Studies chemistry, polymers, chemical biology and sustainable chemical applications.",
+      "career_opportunities": [
+        "Chemist",
+        "Quality-assurance scientist",
+        "Product-development scientist"
+      ],
+      "source": {
+        "prospectus_page": 13,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Earth Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Physical Sciences 50%; Mathematics 60% or 70% depending on first-year choices."
+        }
+      },
+      "description": "Studies Earth systems, geology and geo-environmental applications.",
+      "career_opportunities": [
+        "Geologist",
+        "Environmental consultant",
+        "Groundwater specialist"
+      ],
+      "source": {
+        "prospectus_page": 14,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in GeoInformatics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Physical Sciences 50%; Mathematics 60%, or 70% with Computer Science."
+        }
+      },
+      "description": "Studies GIS, remote sensing, spatial data and geospatial software.",
+      "career_opportunities": [
+        "GIS specialist",
+        "Remote-sensing analyst",
+        "Geospatial software engineer"
+      ],
+      "source": {
+        "prospectus_page": 14,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Physics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Mathematics 70%; Physical Sciences 50%."
+        }
+      },
+      "description": "Studies physical and theoretical principles with laser and related focal areas.",
+      "career_opportunities": [
+        "Physicist",
+        "Data analyst",
+        "Radiation-protection practitioner"
+      ],
+      "source": {
+        "prospectus_page": 14,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Mathematical Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Mathematics 70%; Physical Sciences 50% if Chemistry or Physics is taken."
+        }
+      },
+      "description": "Offers focal study in applied mathematics, mathematics and operations research.",
+      "career_opportunities": [
+        "Mathematician",
+        "Operations-research analyst",
+        "Quantitative analyst"
+      ],
+      "source": {
+        "prospectus_page": 14,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science in Computer Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Mathematics 70%; Physical Sciences 50% if Chemistry or Physics is taken."
+        }
+      },
+      "description": "Studies software, computer systems, algorithms and data science.",
+      "career_opportunities": [
+        "Software developer",
+        "Data scientist",
+        "Computer-systems analyst"
+      ],
+      "source": {
+        "prospectus_page": 14,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science - Biomedical Mathematical Sciences",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Mathematics 70%; Physical Sciences 50%."
+        }
+      },
+      "description": "Interdisciplinary combination of mathematics and biomedical science.",
+      "career_opportunities": [
+        "Biomedical data analyst",
+        "Research assistant",
+        "Health-data scientist"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science - Applied Medicinal Chemistry",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Mathematics 70%; Physical Sciences 50%."
+        }
+      },
+      "description": "Integrates chemistry and life sciences for medicines and pharmaceutical applications.",
+      "career_opportunities": [
+        "Medicinal chemist",
+        "Pharmaceutical scientist",
+        "Quality-assurance specialist"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science - Bioinformatics and Computational Biology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Mathematics 70%; Physical Sciences 50%."
+        }
+      },
+      "description": "Combines biology, computing and quantitative analysis of biological data.",
+      "career_opportunities": [
+        "Bioinformatician",
+        "Computational biologist",
+        "Genomics data analyst"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Science - Biomathematics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 65% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Language 50%; Mathematics 70%; Physical Sciences 50%."
+        }
+      },
+      "description": "Applies mathematical modelling to biological systems and questions.",
+      "career_opportunities": [
+        "Biomathematician",
+        "Biological modeller",
+        "Research analyst"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Data Science - Computer Science",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 80% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 80%; Afrikaans or English HL 60%, or FAL 75%."
+        }
+      },
+      "description": "Advanced data-science study with a computer-science focal area.",
+      "career_opportunities": [
+        "Data scientist",
+        "Machine-learning engineer",
+        "Data engineer"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Data Science - Applied Mathematics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 80% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 80%; Afrikaans or English HL 60%, or FAL 75%."
+        }
+      },
+      "description": "Advanced data science with mathematical modelling and applied mathematics.",
+      "career_opportunities": [
+        "Data scientist",
+        "Quantitative analyst",
+        "Machine-learning scientist"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Data Science - Statistical Physics",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Science",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 80% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 80%; Afrikaans or English HL 60%, or FAL 75%."
+        }
+      },
+      "description": "Uses data science and statistical physics to analyse complex systems.",
+      "career_opportunities": [
+        "Data scientist",
+        "Statistical modeller",
+        "Research scientist"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Theology",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Theology",
+      "campus": null,
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC aggregate 60%; faculty selection guidelines apply."
+        }
+      },
+      "description": "Academic theological study supporting community, youth and further ministry-related work.",
+      "career_opportunities": [
+        "Youth worker",
+        "Community worker",
+        "Further theology study"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    },
+    {
+      "name": "Bachelor of Divinity",
+      "qualification_code": null,
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Theology",
+      "campus": null,
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Minimum NSC aggregate: 60% (excluding Life Orientation); selection applies"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "NSC aggregate 60%; faculty selection guidelines apply."
+        }
+      },
+      "description": "Professional and academic foundation for denominational ministerial training and further study.",
+      "career_opportunities": [
+        "Ministerial-training pathway",
+        "Community or church worker",
+        "Further theology study"
+      ],
+      "source": {
+        "prospectus_page": 15,
+        "edition": 2027
+      },
+      "verification": {
+        "status": "programme_and_requirements_extracted_from_official_prospectus",
+        "note": "Stellenbosch University uses NSC aggregate and programme-specific subject thresholds rather than one universal APS. All programmes are selection programmes; meeting minimum requirements does not guarantee admission. Verify current requirements with Stellenbosch University before applying."
+      }
+    }
+  ]
+}

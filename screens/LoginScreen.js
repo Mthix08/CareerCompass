@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Image,
   View,
   Text,
   TextInput,
@@ -9,23 +10,28 @@ import {
   ScrollView,
   Platform,
   StatusBar,
-  Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useProfile } from "../context/ProfileContext";
 import { auth } from "./firebaseConfig";
 
-
-
 export default function LoginScreen({ navigation }) {
+  const { enterGuestMode } = useProfile();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [errors, setErrors] = useState({ email: "", password: "" });
 
   const handleLogin = async () => {
-    if (!email.trim() || !password) {
-      Alert.alert("Missing details", "Enter your email address and password.");
+    if (isLoading) return;
+    const nextErrors = {
+      email: !email.trim() ? "Enter your email address." : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()) ? "Enter a valid email address." : "",
+      password: !password ? "Enter your password." : "",
+    };
+    setErrors(nextErrors);
+    if (nextErrors.email || nextErrors.password) {
       return;
     }
 
@@ -34,13 +40,18 @@ export default function LoginScreen({ navigation }) {
       await signInWithEmailAndPassword(auth, email.trim(), password);
       navigation.reset({ index: 0, routes: [{ name: "Home" }] });
     } catch (error) {
-      const message =
-        error.code === "auth/invalid-credential"
-          ? "That email address or password is incorrect."
-          : error.code === "auth/invalid-email"
-            ? "Enter a valid email address."
-            : "We could not log you in. Please try again.";
-      Alert.alert("Login failed", message);
+      if (error.code === "auth/invalid-email") {
+        setErrors({ email: "Enter a valid email address.", password: "" });
+      } else if (error.code === "auth/user-not-found") {
+        setErrors({ email: "No account was found for this email address.", password: "" });
+      } else {
+        setErrors({
+          email: "",
+          password: error.code === "auth/invalid-credential" || error.code === "auth/wrong-password"
+            ? "That email address or password is incorrect."
+            : "We could not log you in. Please try again.",
+        });
+      }
     } finally {
       setIsLoading(false);
     }
@@ -59,11 +70,12 @@ export default function LoginScreen({ navigation }) {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.brandContainer}>
-          <View style={styles.logo}>
-            <Text style={styles.logoText}></Text>
-          </View>
-
-          <Text style={styles.brandName}>CareerCompass</Text>
+          <Image
+            source={require("../assets/CC.png")}
+            style={styles.logo}
+            resizeMode="contain"
+            accessibilityLabel="CareerCompass logo"
+          />
         </View>
 
         <View style={styles.headerContainer}>
@@ -78,7 +90,7 @@ export default function LoginScreen({ navigation }) {
           {}
           <Text style={styles.label}>Email address</Text>
 
-          <View style={styles.inputContainer}>
+          <View style={[styles.inputContainer, errors.email && styles.inputError]}>
             <Ionicons
               name="mail-outline"
               size={20}
@@ -91,16 +103,21 @@ export default function LoginScreen({ navigation }) {
               placeholder="your.email@example.com"
               placeholderTextColor="#A3A3A3"
               value={email}
-              onChangeText={setEmail}
+              onChangeText={(value) => {
+                setEmail(value);
+                setErrors((current) => ({ ...current, email: "", password: "" }));
+              }}
+              accessibilityLabel="Email address"
               keyboardType="email-address"
               autoCapitalize="none"
               autoCorrect={false}
             />
           </View>
+          {!!errors.email && <Text style={styles.errorText} accessibilityRole="alert">{errors.email}</Text>}
 
           <Text style={[styles.label, styles.passwordLabel]}>Password</Text>
 
-          <View style={styles.inputContainer}>
+          <View style={[styles.inputContainer, errors.password && styles.inputError]}>
             <Ionicons
               name="lock-closed-outline"
               size={20}
@@ -113,7 +130,11 @@ export default function LoginScreen({ navigation }) {
               placeholder="Enter your password"
               placeholderTextColor="#A3A3A3"
               value={password}
-              onChangeText={setPassword}
+              onChangeText={(value) => {
+                setPassword(value);
+                setErrors((current) => ({ ...current, password: "" }));
+              }}
+              accessibilityLabel="Password"
               secureTextEntry={!showPassword}
               autoCapitalize="none"
             />
@@ -127,6 +148,7 @@ export default function LoginScreen({ navigation }) {
               </Text>
             </TouchableOpacity>
           </View>
+          {!!errors.password && <Text style={styles.errorText} accessibilityRole="alert">{errors.password}</Text>}
 
           <TouchableOpacity
             style={styles.forgotContainer}
@@ -136,18 +158,16 @@ export default function LoginScreen({ navigation }) {
             <Text style={styles.forgotText}>Forgot password?</Text>
           </TouchableOpacity>
 
-          
           <TouchableOpacity
             style={styles.loginButton}
             activeOpacity={0.8}
-            onPress={() => navigation?.navigate("Home")}
+            onPress={handleLogin}
           >
             <Text style={styles.loginButtonText}>
               {isLoading ? "Logging in..." : "Log In"}
             </Text>
           </TouchableOpacity>
 
-          
           <View style={styles.dividerContainer}>
             <View style={styles.divider} />
 
@@ -156,7 +176,6 @@ export default function LoginScreen({ navigation }) {
             <View style={styles.divider} />
           </View>
 
-          
           <TouchableOpacity
             style={styles.createButton}
             activeOpacity={0.8}
@@ -165,13 +184,15 @@ export default function LoginScreen({ navigation }) {
             <Text style={styles.createButtonText}>Create an account</Text>
           </TouchableOpacity>
 
-          
           <View style={styles.bottomTextContainer}>
             <Text style={styles.bottomText}>Just exploring? </Text>
 
             <TouchableOpacity
               activeOpacity={0.7}
-              onPress={() => navigation?.navigate("Home")}
+              onPress={() => {
+                enterGuestMode();
+                navigation?.navigate("Home", { guest: true });
+              }}
             >
               <Text style={styles.backText}>Login As A Guest</Text>
             </TouchableOpacity>
@@ -183,7 +204,6 @@ export default function LoginScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-
   keyboardContainer: {
     flex: 1,
     backgroundColor: "#FAF9F6",
@@ -196,38 +216,16 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
   },
 
-
   brandContainer: {
-    flexDirection: "row",
     alignItems: "center",
-    marginBottom: 38,
+    marginBottom: 50,
+    marginTop: -50,
   },
 
   logo: {
-    marginTop: -70,
-    width: 38,
-    height: 38,
-    borderRadius: 9,
-    backgroundColor: "#117C72",
-    alignItems: "center",
-    justifyContent: "center",
+    width: 210,
+    height: 120,
   },
-
-  logoText: {
-    marginTop: -70,
-    color: "#FFFFFF",
-    fontSize: 20,
-    fontWeight: "700",
-  },
-
-  brandName: {
-    marginTop: -70,
-    marginLeft: 12,
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#176F68",
-  },
-
 
   headerContainer: {
     marginTop: -35,
@@ -246,7 +244,6 @@ const styles = StyleSheet.create({
     color: "#858585",
     lineHeight: 22,
   },
-
 
   formContainer: {
     width: "100%",
@@ -275,6 +272,8 @@ const styles = StyleSheet.create({
 
     paddingHorizontal: 16,
   },
+  inputError: { borderColor: "#D64545" },
+  errorText: { marginTop: 7, color: "#C53030", fontSize: 13, lineHeight: 18 },
 
   inputIcon: {
     marginRight: 10,
@@ -292,7 +291,6 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: "#17796F",
   },
-
 
   forgotContainer: {
     alignSelf: "flex-end",
@@ -333,7 +331,6 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
 
-
   dividerContainer: {
     flexDirection: "row",
     alignItems: "center",
@@ -352,7 +349,6 @@ const styles = StyleSheet.create({
     color: "#858585",
   },
 
-
   createButton: {
     height: 67,
     borderRadius: 16,
@@ -369,7 +365,6 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: "#176F68",
   },
-
 
   bottomTextContainer: {
     flexDirection: "row",

@@ -1,0 +1,898 @@
+{
+  "university": {
+    "name": "Mangosuthu University of Technology",
+    "abbreviation": "MUT",
+    "country": "South Africa",
+    "province": "KwaZulu-Natal"
+  },
+  "schema_version": "1.0",
+  "generated_from": "Undated MUT Undergraduate Prospectus (mut.pdf; PDF metadata dated 2020)",
+  "important_notice": "LEGACY DATASET: The supplied MUT prospectus is undated and its PDF metadata dates to 2020. Programme availability, names, codes and requirements may have changed substantially. Use this only as temporary CareerCompass data and verify every entry against current MUT and CAO information before presenting it as current or using it for applications.",
+  "course_count": 26,
+  "courses": [
+    {
+      "name": "Diploma in Chemical Engineering",
+      "qualification_code": "MN-M-CE3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 4; Physical Sciences 4; English First Additional Language 4"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in chemical engineering, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Chemical engineering technician",
+        "Process technician",
+        "Production or quality technician"
+      ],
+      "source": {
+        "prospectus_page": 19,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Civil Engineering",
+      "qualification_code": "MN-M-CV3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 4; Physical Sciences 4; English First Additional Language 4"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in civil engineering, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Civil engineering technician",
+        "Construction-site technician",
+        "Infrastructure project assistant"
+      ],
+      "source": {
+        "prospectus_page": 19,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Surveying",
+      "qualification_code": "MN-M-SV3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 4; Physical Sciences 4; English First Additional Language 4"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in surveying, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Surveying technician",
+        "Geomatics assistant",
+        "Mapping technician"
+      ],
+      "source": {
+        "prospectus_page": 19,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Building",
+      "qualification_code": "MN-M-BU3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 4; Physical Sciences 4; English First Additional Language 4"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in building, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Construction manager or supervisor",
+        "Building inspector",
+        "Construction estimator"
+      ],
+      "source": {
+        "prospectus_page": 19,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Electrical Engineering",
+      "qualification_code": "MN-M-EE5",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 4; Physical Sciences 4; English First Additional Language 4"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in electrical engineering, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Electrical engineering technician",
+        "Maintenance technician",
+        "Power-systems technician"
+      ],
+      "source": {
+        "prospectus_page": 19,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Mechanical Engineering",
+      "qualification_code": "MN-M-ME3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Engineering",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics 4; Physical Sciences 4; English First Additional Language 4; Engineering Graphics and Design 4"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in mechanical engineering, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Mechanical engineering technician",
+        "Maintenance or production technician",
+        "Design technician"
+      ],
+      "source": {
+        "prospectus_page": 19,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Chemical Engineering Bridging Programme",
+      "qualification_code": "MN-M-CEB",
+      "qualification_type": "Bridging programme",
+      "faculty": "Faculty of Engineering",
+      "campus": "Umlazi, Durban",
+      "duration_years": 0.5,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 4 or First Additional Language 3; Mathematics 3; Physical Sciences 3"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT bridging programme in chemical engineering bridging programme, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Chemical engineering technician",
+        "Process technician",
+        "Production or quality technician"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Civil Engineering Bridging Programme",
+      "qualification_code": "MN-M-CVB",
+      "qualification_type": "Bridging programme",
+      "faculty": "Faculty of Engineering",
+      "campus": "Umlazi, Durban",
+      "duration_years": 0.5,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 4 or First Additional Language 3; Mathematics 3; Physical Sciences 3"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT bridging programme in civil engineering bridging programme, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Civil engineering technician",
+        "Construction-site technician",
+        "Infrastructure project assistant"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Electrical Engineering Bridging Programme",
+      "qualification_code": "MN-M-EEB",
+      "qualification_type": "Bridging programme",
+      "faculty": "Faculty of Engineering",
+      "campus": "Umlazi, Durban",
+      "duration_years": 0.5,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 4 or First Additional Language 3; Mathematics 3; Physical Sciences 3"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT bridging programme in electrical engineering bridging programme, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Electrical engineering technician",
+        "Maintenance technician",
+        "Power-systems technician"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Mechanical Engineering Bridging Programme",
+      "qualification_code": "MN-M-MEB",
+      "qualification_type": "Bridging programme",
+      "faculty": "Faculty of Engineering",
+      "campus": "Umlazi, Durban",
+      "duration_years": 0.5,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 4 or First Additional Language 3; Mathematics 3; Physical Sciences 3"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT bridging programme in mechanical engineering bridging programme, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Mechanical engineering technician",
+        "Maintenance or production technician",
+        "Design technician"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Building Bridging Programme",
+      "qualification_code": "MN-M-BUB",
+      "qualification_type": "Bridging programme",
+      "faculty": "Faculty of Engineering",
+      "campus": "Umlazi, Durban",
+      "duration_years": 0.5,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 4 or First Additional Language 3; Mathematics 3; Physical Sciences 3"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT bridging programme in building bridging programme, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Construction manager or supervisor",
+        "Building inspector",
+        "Construction estimator"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Surveying Bridging Programme",
+      "qualification_code": "MN-M-SVB",
+      "qualification_type": "Bridging programme",
+      "faculty": "Faculty of Engineering",
+      "campus": "Umlazi, Durban",
+      "duration_years": 0.5,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 4 or First Additional Language 3; Mathematics 3; Physical Sciences 3"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT bridging programme in surveying bridging programme, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Surveying technician",
+        "Geomatics assistant",
+        "Mapping technician"
+      ],
+      "source": {
+        "prospectus_page": 20,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Accounting",
+      "qualification_code": "MN-M-AC3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 4 or First Additional Language 5; Accounting 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in accounting, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Accounting technician",
+        "Bookkeeper",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Finance and Accounting: Public",
+      "qualification_code": "MN-M-PF3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 4 or First Additional Language 5; Accounting 4; Mathematics 3 or Mathematical Literacy 6"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in finance and accounting: public, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Accounting technician",
+        "Bookkeeper",
+        "Finance officer"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Human Resource Management",
+      "qualification_code": "MN-M-HR3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 3 or First Additional Language 4; Accounting; Mathematics 3 or Mathematical Literacy 4"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in human resource management, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Human-resources practitioner",
+        "Recruitment officer",
+        "Training or labour-relations officer"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Marketing",
+      "qualification_code": "MN-M-MM3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 4 or First Additional Language 5; Mathematics 3 or Mathematical Literacy 4; Accounting 3"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in marketing, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Marketing coordinator",
+        "Sales or brand professional",
+        "Market-research assistant"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Office Management and Technology",
+      "qualification_code": "MN-M-OT3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "Minimum 25 points."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 3 or First Additional Language 4; five other accredited subjects; typing or Computer Studies is advantageous"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in office management and technology, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Office administrator",
+        "Executive assistant",
+        "Administrative coordinator"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Public Management",
+      "qualification_code": "MN-M-PU3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Management Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 25,
+        "alternatives": [],
+        "display": "Minimum 25 points."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English First Additional Language 4; five other accredited subjects"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in public management, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Public-administration officer",
+        "Municipal administrator",
+        "Government programme coordinator"
+      ],
+      "source": {
+        "prospectus_page": 23,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "BSc in Environmental Health",
+      "qualification_code": "MN-M-BE4",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor pass; English Home Language or First Additional Language 4; Mathematics 4 or Mathematical Literacy 5; Physical Sciences 4 or Life Sciences 4; Geography and Agricultural Sciences 5 recommended"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT bachelor's degree in bsc in environmental health, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Environmental health practitioner",
+        "Public-health inspector",
+        "Occupational health and safety officer"
+      ],
+      "source": {
+        "prospectus_page": 26,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Bachelor of Health Science in Medical Laboratory Sciences",
+      "qualification_code": "MN-M-BLS",
+      "qualification_type": "Bachelor's degree",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 4,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor pass; English Home Language 4; Life Sciences 4; Mathematics 4; Physical Sciences 4"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT bachelor's degree in bachelor of health science in medical laboratory sciences, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Medical laboratory scientist",
+        "Clinical laboratory practitioner",
+        "Biomedical researcher"
+      ],
+      "source": {
+        "prospectus_page": 27,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Agriculture",
+      "qualification_code": "MN-M-AG3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Agricultural Sciences or Life Sciences 4; English Home Language or First Additional Language 4; Mathematics 3 or Mathematical Literacy 4; Physical Sciences 3"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in agriculture, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Agricultural technician",
+        "Farm or production manager",
+        "Agricultural adviser"
+      ],
+      "source": {
+        "prospectus_page": 27,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Biomedical Science",
+      "qualification_code": "MN-M-BD3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language or First Additional Language 4; Mathematics 4; Life Sciences or Physical Sciences 4; compulsory entrance test"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in biomedical science, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Biomedical technologist",
+        "Laboratory technician",
+        "Research assistant"
+      ],
+      "source": {
+        "prospectus_page": 27,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Analytical Chemistry",
+      "qualification_code": "MN-M-AN3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language or First Additional Language 4; Mathematics 4; Physical Sciences 4"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in analytical chemistry, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Analytical chemist",
+        "Laboratory analyst",
+        "Quality-control technician"
+      ],
+      "source": {
+        "prospectus_page": 27,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Community Extension",
+      "qualification_code": "MN-M-CX3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language 4 and level 4 in Agricultural Sciences, Consumer Studies, Life Sciences, Geography or Economics"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in community extension, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Community extension officer",
+        "Rural-development practitioner",
+        "Community programme coordinator"
+      ],
+      "source": {
+        "prospectus_page": 27,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Nature Conservation",
+      "qualification_code": "MN-M-NC3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "No single overall APS/points total stated; the listed subject levels and departmental selection requirements apply."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English First Additional Language 4; Agricultural Sciences or Life Sciences 4; Mathematics 3"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in nature conservation, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Conservation officer",
+        "Environmental educator",
+        "Protected-area practitioner"
+      ],
+      "source": {
+        "prospectus_page": 27,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    },
+    {
+      "name": "Diploma in Information Technology",
+      "qualification_code": "MN-M-IT3",
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Natural Sciences",
+      "campus": "Umlazi, Durban",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 23,
+        "alternatives": [],
+        "display": "Minimum 23 points."
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English Home Language and First Additional Language 3; Mathematics 3 or Mathematical Literacy 4; minimum points calculated from the six best subjects; compulsory entrance test for selected applicants"
+        },
+        "aps_calculation_method": "MUT uses programme subject levels and, for some programmes, a points total based on the best six subjects."
+      },
+      "description": "A career-focused MUT diploma in diploma in information technology, combining academic preparation with practical or work-integrated learning.",
+      "career_opportunities": [
+        "Software or support technician",
+        "Systems administrator",
+        "Network or database technician"
+      ],
+      "source": {
+        "prospectus_page": 27,
+        "edition": null,
+        "document_note": "Undated prospectus; PDF metadata indicates 2020."
+      },
+      "verification": {
+        "status": "legacy_prospectus_data_requires_current_verification",
+        "note": "This information comes from an older undated MUT prospectus whose PDF metadata dates to 2020. It must be verified against current MUT and CAO requirements before use for an application."
+      }
+    }
+  ]
+}
