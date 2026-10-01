@@ -9,7 +9,8 @@ import UniversityDetailsScreen from "./screens/UniversityDetailsScreen";
 import EditProfileScreen from "./screens/EditProfileScreen";
 import ApsCalculatorScreen from "./screens/ApsCalculatorScreen";
 import UniversityApsScoresScreen from "./screens/UniversityApsScoresScreen";
-import NsfasDetails from "./screens/NsfasDetails";
+import FundingScreen from "./screens/FundingScreen";
+import FundingDetailsScreen from "./screens/FundingDetailsScreen";
 import Applications from "./screens/Applications";
 import Bookmarks from "./screens/Bookmarks";
 import Notifications from "./screens/Notifications";
@@ -17,6 +18,7 @@ import NotificationPreferences from "./screens/NotificationPreferences";
 import LanguageScreen from "./screens/LanguageScreen";
 import FaqsScreen from "./screens/FaqsScreen";
 import CourseDetailsScreen from "./screens/CourseDetailsScreen";
+import ProspectusScreen from "./screens/ProspectusScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import { ProfileProvider } from "./context/ProfileContext";
 import { BookmarksProvider } from "./context/BookmarksContext";
@@ -55,6 +57,11 @@ function AppNavigator() {
           options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
+          name="Prospectus"
+          component={ProspectusScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
           name="EditProfile"
           component={EditProfileScreen}
           options={{ headerShown: false, animation: "slide_from_right" }}
@@ -70,9 +77,14 @@ function AppNavigator() {
           options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
-          name="NsfasDetails"
-          component={NsfasDetails}
-          options={{ title: "NSFAS Funding" }}
+          name="Funding"
+          component={FundingScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="FundingDetails"
+          component={FundingDetailsScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
           name="Applications"

@@ -1,0 +1,3172 @@
+{
+  "university": {
+    "name": "University of Venda",
+    "abbreviation": "UNIVEN",
+    "country": "South Africa",
+    "province": "Limpopo"
+  },
+  "schema_version": "1.0",
+  "academic_year": 2027,
+  "generated_from": "University of Venda 2027 Undergraduate Prospectus supplied by the user",
+  "important_notice": "Meeting minimum requirements does not guarantee admission. Programme availability and selection rules may change; verify with UNIVEN before applying.",
+  "application_information": {
+    "application_method": "Online through the UNIVEN application portal",
+    "website": "https://www.univen.ac.za"
+  },
+  "course_count": 82,
+  "courses": [
+    {
+      "record_id": "UNIVEN-2027-001",
+      "name": "Bachelor of Arts (Media Studies)",
+      "qualification_code": "HSBAMS",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Humanities and Social Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English or an African Language at 50% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (Media Studies) programme at the University of Venda.",
+      "career_opportunities": [
+        "Journalist",
+        "Media producer",
+        "Communications officer"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-002",
+      "name": "Bachelor of Arts",
+      "qualification_code": "HSBBA",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Humanities and Social Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts programme at the University of Venda.",
+      "career_opportunities": [
+        "Public-sector professional",
+        "Researcher",
+        "Communications practitioner"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-003",
+      "name": "Bachelor of Arts (Development Studies)",
+      "qualification_code": "HSBADS",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Humanities and Social Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English and either History or Economics at 50% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (Development Studies) programme at the University of Venda.",
+      "career_opportunities": [
+        "Development practitioner",
+        "Policy researcher"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-004",
+      "name": "Bachelor of Indigenous Knowledge Systems",
+      "qualification_code": "HSBIKS",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Humanities and Social Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Indigenous Knowledge Systems programme at the University of Venda.",
+      "career_opportunities": [
+        "Indigenous-knowledge practitioner",
+        "Cultural researcher"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-005",
+      "name": "Bachelor of Arts in Language Practice",
+      "qualification_code": "HSBALP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Humanities and Social Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "An African Language and English at 50% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts in Language Practice programme at the University of Venda.",
+      "career_opportunities": [
+        "Language practitioner",
+        "Editor",
+        "Translator"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-006",
+      "name": "Bachelor of Arts (English Language and Literature)",
+      "qualification_code": "HSBAEL",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Humanities and Social Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (English Language and Literature) programme at the University of Venda.",
+      "career_opportunities": [
+        "Language practitioner",
+        "Editor",
+        "Translator"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-007",
+      "name": "Bachelor of Arts in International Relations",
+      "qualification_code": "HSBAIR",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Humanities and Social Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English and either History or Economics at 50% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts in International Relations programme at the University of Venda.",
+      "career_opportunities": [
+        "Diplomatic-services officer",
+        "International-relations analyst"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-008",
+      "name": "Bachelor of Arts in Youth Development",
+      "qualification_code": "HSBAYD",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Humanities and Social Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts in Youth Development programme at the University of Venda.",
+      "career_opportunities": [
+        "Youth-development practitioner",
+        "Programme coordinator"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-009",
+      "name": "Bachelor of Arts (History)",
+      "qualification_code": "HSBBAH",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Humanities and Social Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "History and English at 50% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts (History) programme at the University of Venda.",
+      "career_opportunities": [
+        "Historian",
+        "Heritage practitioner"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-010",
+      "name": "Bachelor of Theology",
+      "qualification_code": "HSBBT",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Humanities and Social Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 30,
+        "alternatives": [],
+        "display": "30"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "APS 30, or admission through Recognition of Prior Learning under university policy"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Theology programme at the University of Venda.",
+      "career_opportunities": [
+        "Minister or pastoral worker",
+        "Community leader"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-011",
+      "name": "Higher Certificate in Music",
+      "qualification_code": null,
+      "saqa_id": null,
+      "qualification_type": "Higher Certificate",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Humanities and Social Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 1,
+      "aps": {
+        "minimum": null,
+        "alternatives": [],
+        "display": "Not specified"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "National Senior Certificate and adequate achievement in English"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Higher Certificate in Music programme at the University of Venda.",
+      "career_opportunities": [
+        "Musician",
+        "Music educator"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-012",
+      "name": "Bachelor of Social Work",
+      "qualification_code": "HSBBSW",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Humanities and Social Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Social Work programme at the University of Venda.",
+      "career_opportunities": [
+        "Social worker",
+        "Community-development practitioner"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-013",
+      "name": "Bachelor of Education in Senior Phase and FET Teaching (Mathematics and Science)",
+      "qualification_code": "SEBESP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Education",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50%, plus two subjects at 50% selected from Mathematics, Physical Sciences and Life Sciences"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Education in Senior Phase and FET Teaching (Mathematics and Science) programme at the University of Venda.",
+      "career_opportunities": [
+        "Teacher",
+        "Curriculum specialist",
+        "Education administrator"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-014",
+      "name": "Bachelor of Education in Senior Phase and FET Teaching (Commerce)",
+      "qualification_code": "SEBECP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Education",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50%, plus two subjects at 50% selected from Accounting, Business Studies and Economics"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Education in Senior Phase and FET Teaching (Commerce) programme at the University of Venda.",
+      "career_opportunities": [
+        "Teacher",
+        "Curriculum specialist",
+        "Education administrator"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-015",
+      "name": "Bachelor of Education in Senior Phase and FET Teaching (Languages and Humanities)",
+      "qualification_code": "SEBELP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Education",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50%, plus two subjects at 50% selected from History, Geography, Sepedi, Tshivenda and Xitsonga"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Education in Senior Phase and FET Teaching (Languages and Humanities) programme at the University of Venda.",
+      "career_opportunities": [
+        "Teacher",
+        "Curriculum specialist",
+        "Education administrator"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-016",
+      "name": "Bachelor of Education in Foundation Phase Teaching",
+      "qualification_code": "SEBEFP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Humanities, Social Sciences and Education",
+      "school": null,
+      "stream": "Education",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English 50%; Mathematical Literacy 50% or Mathematics 40%; and Tshivenda, Sepedi or Xitsonga at 50%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Education in Foundation Phase Teaching programme at the University of Venda.",
+      "career_opportunities": [
+        "Teacher",
+        "Curriculum specialist",
+        "Education administrator"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 12
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-017",
+      "name": "Bachelor of Nursing",
+      "qualification_code": "SHBBN",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "school": null,
+      "stream": "Health Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 38,
+        "alternatives": [],
+        "display": "38"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Life Sciences, English and Physical Sciences at 60-69%; Mathematics at 50-59%; Life Orientation excluded"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Nursing programme at the University of Venda.",
+      "career_opportunities": [
+        "Professional nurse",
+        "Community-health practitioner"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 14
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-018",
+      "name": "Bachelor of Science in Nutrition",
+      "qualification_code": "SHBBSN",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "school": null,
+      "stream": "Health Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Life Sciences, English, Mathematics and Physical Sciences or Agricultural Sciences at 50-59%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Nutrition programme at the University of Venda.",
+      "career_opportunities": [
+        "Nutritionist",
+        "Food-service specialist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 14
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-019",
+      "name": "Bachelor of Science in Sports and Exercise Science",
+      "qualification_code": "SHBSES",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "school": null,
+      "stream": "Health Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Life Sciences, English and Physical Sciences at 50-59%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Sports and Exercise Science programme at the University of Venda.",
+      "career_opportunities": [
+        "Sport scientist",
+        "Exercise specialist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 14
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-020",
+      "name": "Bachelor of Science in Biokinetics",
+      "qualification_code": "SHBBSK",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "school": null,
+      "stream": "Health Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Life Sciences, English, Mathematics and Physical Sciences at 50-59%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Biokinetics programme at the University of Venda.",
+      "career_opportunities": [
+        "Biokineticist",
+        "Exercise rehabilitation practitioner"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 14
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-021",
+      "name": "Bachelor of Science in Recreation and Leisure Studies",
+      "qualification_code": "SHBRLS",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "school": null,
+      "stream": "Health Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50-59%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Recreation and Leisure Studies programme at the University of Venda.",
+      "career_opportunities": [
+        "Recreation manager",
+        "Leisure-programme coordinator"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 14
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-022",
+      "name": "Bachelor of Psychology",
+      "qualification_code": "SHBBP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Health Sciences",
+      "school": null,
+      "stream": "Health Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 36,
+        "alternatives": [],
+        "display": "36"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50-59%, plus a selection test"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Psychology programme at the University of Venda.",
+      "career_opportunities": [
+        "Psychology practitioner",
+        "Human-services researcher"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 14
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-023",
+      "name": "Diploma in Nursing",
+      "qualification_code": "SHDPN",
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Health Sciences",
+      "school": null,
+      "stream": "Health Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [],
+        "display": "28"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Life Sciences, English and Physical Sciences at 50-59%; Mathematics at 40-49%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Diploma in Nursing programme at the University of Venda.",
+      "career_opportunities": [
+        "Professional nurse",
+        "Community-health practitioner"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 14
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-024",
+      "name": "Bachelor of Administration in Public Administration",
+      "qualification_code": "MSBBAD",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Management and Commerce",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50-59% and any three subjects at 40-49%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Administration in Public Administration programme at the University of Venda.",
+      "career_opportunities": [
+        "Public administrator",
+        "Policy officer"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 17
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-025",
+      "name": "Bachelor of Commerce in Accounting Sciences",
+      "qualification_code": "MSBCAS",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Management and Commerce",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50-59% and Mathematics at 50% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Accounting Sciences programme at the University of Venda.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Financial officer"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 17
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-026",
+      "name": "Bachelor of Commerce in Tourism Management",
+      "qualification_code": "MSBTRM",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Management and Commerce",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English and Mathematical Literacy at 50-59%, or Mathematics at 40-49%; plus any two of Accounting, Business Studies, Economics, Information Technology, Geography and Tourism at 40-49%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Tourism Management programme at the University of Venda.",
+      "career_opportunities": [
+        "Tourism manager",
+        "Destination-marketing officer"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 17
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-027",
+      "name": "Bachelor of Commerce in Accounting",
+      "qualification_code": "MSBBCA",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Management and Commerce",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50-59% and Accounting or Mathematics at 50-59%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Accounting programme at the University of Venda.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Financial officer"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 17
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-028",
+      "name": "Bachelor of Commerce in Business Information Systems",
+      "qualification_code": "MSBIS",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Management and Commerce",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50-59%; Mathematics at 40-49% or Mathematical Literacy at 75%; plus any two of Accounting, Business Studies, Economics, Information Technology or Computer Studies at 40-49%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Business Information Systems programme at the University of Venda.",
+      "career_opportunities": [
+        "Business systems analyst",
+        "IT project coordinator"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 17
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-029",
+      "name": "Bachelor of Commerce in Business Management",
+      "qualification_code": "MSBCBM",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Management and Commerce",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English and Business Studies at 50-59%; plus any two of Accounting, Economics, Information Technology and Mathematics at 40-49%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Business Management programme at the University of Venda.",
+      "career_opportunities": [
+        "Business manager",
+        "Entrepreneur"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 17
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-030",
+      "name": "Bachelor of Commerce in Cost and Management Accounting",
+      "qualification_code": "MSBCMA",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Management and Commerce",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50-59% and Accounting or Mathematics at 50-59%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Cost and Management Accounting programme at the University of Venda.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Financial officer"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 17
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-031",
+      "name": "Bachelor of Commerce in Economics",
+      "qualification_code": "MSBBCE",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Management and Commerce",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English and Economics or Mathematics at 50-59%; plus any two of Accounting, Business Studies and Information Technology at 40-49%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Economics programme at the University of Venda.",
+      "career_opportunities": [
+        "Economist",
+        "Economic analyst"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 17
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-032",
+      "name": "Bachelor of Commerce in Human Resource Management",
+      "qualification_code": "MSBHR",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Management and Commerce",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50-59%; plus any two of Accounting, Business Studies, Economics, Information Technology and Mathematics at 40-49%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Human Resource Management programme at the University of Venda.",
+      "career_opportunities": [
+        "Human-resources practitioner",
+        "Labour-relations officer"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 17
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-033",
+      "name": "Bachelor of Commerce in Industrial Psychology",
+      "qualification_code": "MSBIP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Management and Commerce",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50-59%; plus any two of Accounting, Business Studies, Economics, Information Technology and Mathematics at 40-49%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Commerce in Industrial Psychology programme at the University of Venda.",
+      "career_opportunities": [
+        "Psychology practitioner",
+        "Human-services researcher"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 17
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-034",
+      "name": "Bachelor of Laws",
+      "qualification_code": "LWBBL",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Law",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 38,
+        "alternatives": [],
+        "display": "38"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 60% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Laws programme at the University of Venda.",
+      "career_opportunities": [
+        "Attorney",
+        "Advocate",
+        "Legal adviser"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 18
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-035",
+      "name": "Bachelor of Arts in Criminal Justice",
+      "qualification_code": "LWBACJ",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Law",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 34,
+        "alternatives": [],
+        "display": "34"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English at 50% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Arts in Criminal Justice programme at the University of Venda.",
+      "career_opportunities": [
+        "Criminal-justice practitioner",
+        "Corrections officer"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 18
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-036",
+      "name": "Extended Bachelor of Administration",
+      "qualification_code": "MSEBAD",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Extended Degree Programmes",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          31
+        ],
+        "display": "28-31"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor-degree endorsement or matriculation exemption, with APS 28-31 excluding Life Orientation; intended for applicants below the mainstream programme threshold"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended Bachelor of Administration programme at the University of Venda.",
+      "career_opportunities": [
+        "Researcher",
+        "Technical specialist",
+        "Public- or private-sector professional"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 18
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-037",
+      "name": "Extended Bachelor of Commerce (Accounting)",
+      "qualification_code": "MSEBCA",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Extended Degree Programmes",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          31
+        ],
+        "display": "28-31"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor-degree endorsement or matriculation exemption, with APS 28-31 excluding Life Orientation; intended for applicants below the mainstream programme threshold"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended Bachelor of Commerce (Accounting) programme at the University of Venda.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Financial officer"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 18
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-038",
+      "name": "Extended Bachelor of Commerce (Business Information Systems)",
+      "qualification_code": "MSEIS",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Extended Degree Programmes",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          31
+        ],
+        "display": "28-31"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor-degree endorsement or matriculation exemption, with APS 28-31 excluding Life Orientation; intended for applicants below the mainstream programme threshold"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended Bachelor of Commerce (Business Information Systems) programme at the University of Venda.",
+      "career_opportunities": [
+        "Business systems analyst",
+        "IT project coordinator"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 18
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-039",
+      "name": "Extended Bachelor of Commerce (Business Management)",
+      "qualification_code": "MSECBM",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Extended Degree Programmes",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          31
+        ],
+        "display": "28-31"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor-degree endorsement or matriculation exemption, with APS 28-31 excluding Life Orientation; intended for applicants below the mainstream programme threshold"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended Bachelor of Commerce (Business Management) programme at the University of Venda.",
+      "career_opportunities": [
+        "Business manager",
+        "Entrepreneur"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 18
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-040",
+      "name": "Extended Bachelor of Commerce (Cost and Management Accounting)",
+      "qualification_code": "MSECMA",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Extended Degree Programmes",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          31
+        ],
+        "display": "28-31"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor-degree endorsement or matriculation exemption, with APS 28-31 excluding Life Orientation; intended for applicants below the mainstream programme threshold"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended Bachelor of Commerce (Cost and Management Accounting) programme at the University of Venda.",
+      "career_opportunities": [
+        "Accountant",
+        "Auditor",
+        "Financial officer"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 18
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-041",
+      "name": "Extended Bachelor of Commerce (Economics)",
+      "qualification_code": "MSEBCE",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Extended Degree Programmes",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          31
+        ],
+        "display": "28-31"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor-degree endorsement or matriculation exemption, with APS 28-31 excluding Life Orientation; intended for applicants below the mainstream programme threshold"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended Bachelor of Commerce (Economics) programme at the University of Venda.",
+      "career_opportunities": [
+        "Economist",
+        "Economic analyst"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 18
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-042",
+      "name": "Extended Bachelor of Commerce (Human Resource Management)",
+      "qualification_code": "MSEHR",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Management, Commerce and Law",
+      "school": null,
+      "stream": "Extended Degree Programmes",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 28,
+        "alternatives": [
+          31
+        ],
+        "display": "28-31"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor-degree endorsement or matriculation exemption, with APS 28-31 excluding Life Orientation; intended for applicants below the mainstream programme threshold"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended Bachelor of Commerce (Human Resource Management) programme at the University of Venda.",
+      "career_opportunities": [
+        "Human-resources practitioner",
+        "Labour-relations officer"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 18
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-043",
+      "name": "Diploma in Freshwater Technology",
+      "qualification_code": "MNDDFT",
+      "saqa_id": null,
+      "qualification_type": "Diploma",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Diploma",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Diploma endorsement; English at least 30%; four recognised 20-credit subjects at 40-49%; and 50% in Life Sciences, Agricultural Sciences, Physical Sciences or Geography"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Diploma in Freshwater Technology programme at the University of Venda.",
+      "career_opportunities": [
+        "Freshwater technologist",
+        "Water-quality technician"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 22
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-044",
+      "name": "BSc (Biochemistry and Microbiology)",
+      "qualification_code": "MNBBSA",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc (Biochemistry and Microbiology) programme at the University of Venda.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 22
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-045",
+      "name": "BSc (Biochemistry and Biology)",
+      "qualification_code": "MNBBSD",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc (Biochemistry and Biology) programme at the University of Venda.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 22
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-046",
+      "name": "BSc (Microbiology and Botany)",
+      "qualification_code": "MNBBSE",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc (Microbiology and Botany) programme at the University of Venda.",
+      "career_opportunities": [
+        "Microbiologist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 22
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-047",
+      "name": "BSc (Mathematics and Applied Mathematics)",
+      "qualification_code": "MNBBSF",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc (Mathematics and Applied Mathematics) programme at the University of Venda.",
+      "career_opportunities": [
+        "Mathematician",
+        "Data analyst",
+        "Quantitative researcher"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 22
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-048",
+      "name": "BSc (Mathematics and Physics)",
+      "qualification_code": "MNBBSH",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc (Mathematics and Physics) programme at the University of Venda.",
+      "career_opportunities": [
+        "Physicist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 22
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-049",
+      "name": "BSc (Mathematics and Statistics)",
+      "qualification_code": "MNBBSI",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc (Mathematics and Statistics) programme at the University of Venda.",
+      "career_opportunities": [
+        "Mathematician",
+        "Data analyst",
+        "Quantitative researcher"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 22
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-050",
+      "name": "BSc (Physics and Chemistry)",
+      "qualification_code": "MNBBSJ",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc (Physics and Chemistry) programme at the University of Venda.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 22
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-051",
+      "name": "BSc (Chemistry and Mathematics)",
+      "qualification_code": "MNBBSK",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc (Chemistry and Mathematics) programme at the University of Venda.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 22
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-052",
+      "name": "BSc (Chemistry and Biochemistry)",
+      "qualification_code": "MNBBSL",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc (Chemistry and Biochemistry) programme at the University of Venda.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 22
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-053",
+      "name": "BSc in Chemistry and Applied Chemistry",
+      "qualification_code": "MNBBSN",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc in Chemistry and Applied Chemistry programme at the University of Venda.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 22
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-054",
+      "name": "BSc (Botany and Zoology)",
+      "qualification_code": "MNBBSO",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc (Botany and Zoology) programme at the University of Venda.",
+      "career_opportunities": [
+        "Botanist",
+        "Environmental researcher"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-055",
+      "name": "BSc (Computer Science)",
+      "qualification_code": "MNBBSP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc (Computer Science) programme at the University of Venda.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems analyst",
+        "Data analyst"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-056",
+      "name": "BSc (Computer Science and Mathematics)",
+      "qualification_code": "MNBBSQ",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Science",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate BSc (Computer Science and Mathematics) programme at the University of Venda.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems analyst",
+        "Data analyst"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-057",
+      "name": "Bachelor of Environmental Sciences",
+      "qualification_code": "ESBBES",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Environmental Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 3,
+      "aps": {
+        "minimum": 32,
+        "alternatives": [],
+        "display": "32"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences, Life Sciences, Geography or Agricultural Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Environmental Sciences programme at the University of Venda.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "Environmental consultant"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-058",
+      "name": "Bachelor of Earth Sciences in Mining and Environmental Geology",
+      "qualification_code": "ESBMEG",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Environmental Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics at 60-69%; Physical Sciences and English at 50% or better; plus at least three of Agricultural Sciences, Accounting, Life Sciences, Economics and Geography"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Earth Sciences in Mining and Environmental Geology programme at the University of Venda.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "Environmental consultant"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-059",
+      "name": "Bachelor of Earth Sciences in Hydrology and Water Resources",
+      "qualification_code": "ESBHWR",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Environmental Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at 60-69%; plus at least three of Agricultural Sciences, Accounting, Life Sciences, Economics and Geography at 50-59%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Earth Sciences in Hydrology and Water Resources programme at the University of Venda.",
+      "career_opportunities": [
+        "Hydrologist",
+        "Water-resources specialist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-060",
+      "name": "Bachelor of Urban and Regional Planning",
+      "qualification_code": "ESBURP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Environmental Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Physical Sciences, Mathematics, English, Technical Drawing and Geography at 60-69%; English and Mathematics at least 50-59%; plus at least three of Agricultural Sciences, Accounting, Life Sciences, Economics and Geography"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Urban and Regional Planning programme at the University of Venda.",
+      "career_opportunities": [
+        "Urban planner",
+        "Regional planner"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-061",
+      "name": "Bachelor of Environmental Sciences in Disaster Risk Reduction",
+      "qualification_code": "ESBBDR",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Environmental Sciences",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 35,
+        "alternatives": [],
+        "display": "35"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Geography, Mathematics and Life Sciences at 60-69%; English, Physical Sciences and Economics at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Environmental Sciences in Disaster Risk Reduction programme at the University of Venda.",
+      "career_opportunities": [
+        "Environmental scientist",
+        "Environmental consultant"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-062",
+      "name": "Bachelor of Science in Agriculture (Agricultural Economics)",
+      "qualification_code": "AGBAAE",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Agriculture",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Mathematics, Physical Sciences and English at 50-59%, plus Life Sciences or Agricultural Sciences at 50-59%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Agriculture (Agricultural Economics) programme at the University of Venda.",
+      "career_opportunities": [
+        "Economist",
+        "Economic analyst"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-063",
+      "name": "Bachelor of Science in Agriculture (Agribusiness Management)",
+      "qualification_code": "AGBAAM",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Agriculture",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Agriculture (Agribusiness Management) programme at the University of Venda.",
+      "career_opportunities": [
+        "Agribusiness manager",
+        "Agricultural entrepreneur"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-064",
+      "name": "Bachelor of Science in Agriculture (Animal Science)",
+      "qualification_code": "AGBAAS",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Agriculture",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Agriculture (Animal Science) programme at the University of Venda.",
+      "career_opportunities": [
+        "Animal scientist",
+        "Livestock-production specialist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-065",
+      "name": "Bachelor of Science in Agriculture (Horticultural Sciences)",
+      "qualification_code": "AGBAHS",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Agriculture",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Agriculture (Horticultural Sciences) programme at the University of Venda.",
+      "career_opportunities": [
+        "Horticulturist",
+        "Crop-production specialist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-066",
+      "name": "Bachelor of Science in Agriculture (Plant Production)",
+      "qualification_code": "AGBAPP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Agriculture",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Agriculture (Plant Production) programme at the University of Venda.",
+      "career_opportunities": [
+        "Agronomist",
+        "Plant-production specialist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-067",
+      "name": "Bachelor of Science in Soil Science",
+      "qualification_code": "AGBASS",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Agriculture",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Soil Science programme at the University of Venda.",
+      "career_opportunities": [
+        "Soil scientist",
+        "Agricultural consultant"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-068",
+      "name": "Bachelor of Science in Forestry",
+      "qualification_code": "AGBBFR",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Agriculture",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics, Physical Sciences and Life Sciences at 50-59% or better"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Forestry programme at the University of Venda.",
+      "career_opportunities": [
+        "Forester",
+        "Natural-resource manager"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-069",
+      "name": "Bachelor of Science in Food Science and Technology",
+      "qualification_code": "AGBFST",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Agriculture",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "English, Mathematics and Physical Sciences at 50-59%, plus Life Sciences or Agricultural Sciences at 50-59%"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Bachelor of Science in Food Science and Technology programme at the University of Venda.",
+      "career_opportunities": [
+        "Food scientist",
+        "Quality-assurance specialist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 23
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-070",
+      "name": "Extended BSc (Biochemistry and Microbiology)",
+      "qualification_code": "MNEBSA",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor endorsement; English, Mathematics and Physical Sciences at 40-49% or better, plus another relevant subject approved by the department"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Biochemistry and Microbiology) programme at the University of Venda.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-071",
+      "name": "Extended BSc (Biochemistry and Biology)",
+      "qualification_code": "MNEBSD",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor endorsement; English, Mathematics and Physical Sciences at 40-49% or better, plus another relevant subject approved by the department"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Biochemistry and Biology) programme at the University of Venda.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-072",
+      "name": "Extended BSc (Microbiology and Botany)",
+      "qualification_code": "MNEBSE",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor endorsement; English, Mathematics and Physical Sciences at 40-49% or better, plus another relevant subject approved by the department"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Microbiology and Botany) programme at the University of Venda.",
+      "career_opportunities": [
+        "Microbiologist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-073",
+      "name": "Extended BSc (Mathematics and Applied Mathematics)",
+      "qualification_code": "MNEBSF",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor endorsement; English, Mathematics and Physical Sciences at 40-49% or better, plus another relevant subject approved by the department"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Mathematics and Applied Mathematics) programme at the University of Venda.",
+      "career_opportunities": [
+        "Mathematician",
+        "Data analyst",
+        "Quantitative researcher"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-074",
+      "name": "Extended BSc (Computer Science and Mathematics)",
+      "qualification_code": "MNEBSQ",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor endorsement; English, Mathematics and Physical Sciences at 40-49% or better, plus another relevant subject approved by the department"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Computer Science and Mathematics) programme at the University of Venda.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems analyst",
+        "Data analyst"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-075",
+      "name": "Extended BSc (Mathematics and Physics)",
+      "qualification_code": "MNEBSH",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Diploma endorsement; English at least 30%; four recognised 20-credit subjects at 40-49%; and 50% in Life Sciences, Agricultural Sciences, Physical Sciences or Geography"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Mathematics and Physics) programme at the University of Venda.",
+      "career_opportunities": [
+        "Physicist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-076",
+      "name": "Extended BSc (Mathematics and Statistics)",
+      "qualification_code": "MNEBSI",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Diploma endorsement; English at least 30%; four recognised 20-credit subjects at 40-49%; and 50% in Life Sciences, Agricultural Sciences, Physical Sciences or Geography"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Mathematics and Statistics) programme at the University of Venda.",
+      "career_opportunities": [
+        "Mathematician",
+        "Data analyst",
+        "Quantitative researcher"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-077",
+      "name": "Extended BSc (Physics and Chemistry)",
+      "qualification_code": "MNEBSJ",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Diploma endorsement; English at least 30%; four recognised 20-credit subjects at 40-49%; and 50% in Life Sciences, Agricultural Sciences, Physical Sciences or Geography"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Physics and Chemistry) programme at the University of Venda.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-078",
+      "name": "Extended BSc (Chemistry and Mathematics)",
+      "qualification_code": "MNEBSK",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Diploma endorsement; English at least 30%; four recognised 20-credit subjects at 40-49%; and 50% in Life Sciences, Agricultural Sciences, Physical Sciences or Geography"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Chemistry and Mathematics) programme at the University of Venda.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-079",
+      "name": "Extended BSc (Chemistry and Biochemistry)",
+      "qualification_code": "MNEBSL",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 24,
+        "alternatives": [],
+        "display": "24"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Diploma endorsement; English at least 30%; four recognised 20-credit subjects at 40-49%; and 50% in Life Sciences, Agricultural Sciences, Physical Sciences or Geography"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Chemistry and Biochemistry) programme at the University of Venda.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-080",
+      "name": "Extended BSc (Chemistry and Applied Chemistry)",
+      "qualification_code": "MNEBSN",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor endorsement; English, Mathematics and Physical Sciences at 40-49% or better, plus another relevant subject approved by the department"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Chemistry and Applied Chemistry) programme at the University of Venda.",
+      "career_opportunities": [
+        "Chemist",
+        "Laboratory scientist"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-081",
+      "name": "Extended BSc (Botany and Zoology)",
+      "qualification_code": "MNEBSO",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor endorsement; English, Mathematics and Physical Sciences at 40-49% or better, plus another relevant subject approved by the department"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Botany and Zoology) programme at the University of Venda.",
+      "career_opportunities": [
+        "Botanist",
+        "Environmental researcher"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    },
+    {
+      "record_id": "UNIVEN-2027-082",
+      "name": "Extended BSc (Computer Science)",
+      "qualification_code": "MNEBSP",
+      "saqa_id": null,
+      "qualification_type": "Bachelor degree",
+      "faculty": "Faculty of Science, Engineering and Agriculture",
+      "school": null,
+      "stream": "Extended BSc",
+      "campus": "Thohoyandou Campus",
+      "delivery_mode": "Contact",
+      "duration_years": 4,
+      "aps": {
+        "minimum": 26,
+        "alternatives": [],
+        "display": "26"
+      },
+      "subject_requirements": {
+        "raw_requirements": {
+          "raw_note": "Bachelor endorsement; English, Mathematics and Physical Sciences at 40-49% or better, plus another relevant subject approved by the department"
+        },
+        "aps_calculation_method": "UNIVEN uses up to the seven highest-scoring subjects. Life Orientation and subjects below 40% are excluded. The 2027 percentage-to-score scale in the prospectus is used."
+      },
+      "fields_or_subjects": [],
+      "description": "Undergraduate Extended BSc (Computer Science) programme at the University of Venda.",
+      "career_opportunities": [
+        "Software developer",
+        "Systems analyst",
+        "Data analyst"
+      ],
+      "source": {
+        "document": "University of Venda 2027 Undergraduate Prospectus",
+        "page": 24
+      },
+      "verification": {
+        "status": "Programme name, code, APS, duration and subject requirements were normalised from the supplied 2027 prospectus.",
+        "note": "Career examples are inferred from the programme field because the prospectus does not provide career lists. Verify requirements and professional pathways with UNIVEN before applying."
+      }
+    }
+  ]
+}

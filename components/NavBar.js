@@ -1,6 +1,12 @@
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { Pressable, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
 import { useProfile } from "../context/ProfileContext";
 
 const BAR_MARGIN = 16;
@@ -11,13 +17,10 @@ const INACTIVE_COLOR = "#84919D";
 
 const TAB_ICONS = {
   Home: "home-outline",
+  Funding: "wallet-outline",
   Universities: "business-outline",
   Courses: "book-outline",
   Profile: "person-outline",
-};
-
-const TAB_BACKGROUNDS = {
-  Universities: "#05080D",
 };
 
 export default function NavBar({ state, descriptors, navigation, insets }) {
@@ -29,7 +32,7 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
   const screenBackground =
     activeRoute.name === "Profile" || activeRoute.name === "Home"
       ? colors.background
-      : TAB_BACKGROUNDS[activeRoute.name] || "#F6F8FC";
+      : "#F6F8FC";
 
   const handlePress = (route, isFocused) => {
     const event = navigation.emit({
@@ -68,7 +71,10 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
               accessibilityRole="tab"
               accessibilityLabel={options.tabBarAccessibilityLabel || label}
               accessibilityState={{ selected: isFocused }}
-              style={({ pressed }) => [styles.tab, pressed && styles.tabPressed]}
+              style={({ pressed }) => [
+                styles.tab,
+                pressed && styles.tabPressed,
+              ]}
             >
               <Ionicons
                 name={TAB_ICONS[route.name] || "ellipse-outline"}
@@ -77,11 +83,17 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
               />
               <Text
                 numberOfLines={1}
-                style={[styles.label, { color: itemColor }, isFocused && styles.activeLabel]}
+                style={[
+                  styles.label,
+                  { color: itemColor },
+                  isFocused && styles.activeLabel,
+                ]}
               >
                 {label}
               </Text>
-              <View style={[styles.indicator, isFocused && styles.activeIndicator]} />
+              <View
+                style={[styles.indicator, isFocused && styles.activeIndicator]}
+              />
             </Pressable>
           );
         })}

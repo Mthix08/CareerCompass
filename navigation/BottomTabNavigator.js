@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import NavBar from "../components/NavBar";
 import CoursesScreen from "../screens/CoursesScreen";
+import FundingScreen from "../screens/FundingScreen";
 import HomeScreen from "../screens/HomeScreen";
 import ProfileScreen from "../screens/Profile";
 import UniversitiesScreen from "../screens/UniversitiesScreen";
@@ -17,6 +18,7 @@ export default function BottomTabNavigator() {
       tabBar={(props) => <NavBar {...props} />}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Funding" component={FundingScreen} />
       <Tab.Screen
         name="Universities"
         component={UniversitiesScreen}
