@@ -71,25 +71,6 @@ export const courseExamples = courseSources.flatMap(([universityId, data]) =>
       requiredSubjects: requiredSubjects.length
         ? requiredSubjects
         : ["See the official prospectus for subject requirements"],
-<<<<<<< HEAD
-    description: course.description,
-    careerOpportunities: course.career_opportunities || [],
-    prospectusYear: ujCourseData.university.prospectus_year,
-    prospectusPage: course.source?.prospectus_page,
-    verificationNote: course.verification?.note,
-  };
-});
-
-export function getMatchedUniversityCount(apsScore) {
-  const matchedUniversityIds = new Set(
-    courseExamples
-      .filter((course) => course.minimumAps <= apsScore)
-      .map((course) => course.universityId),
-  );
-
-  return matchedUniversityIds.size;
-}
-=======
       description: course.description || "See the official prospectus for programme details.",
       careerOpportunities: course.career_opportunities || [],
       prospectusYear,
@@ -98,4 +79,3 @@ export function getMatchedUniversityCount(apsScore) {
     };
   }),
 );
->>>>>>> 97fe3d29a9d10d97ae3104249835c110b41abd5a
