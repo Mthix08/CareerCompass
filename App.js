@@ -22,7 +22,7 @@ import ProspectusScreen from "./screens/ProspectusScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import { ProfileProvider } from "./context/ProfileContext";
 import { BookmarksProvider } from "./context/BookmarksContext";
-
+import './translation/i18n';
 const Stack = createNativeStackNavigator();
 
 function AppNavigator() {
