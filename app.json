@@ -26,9 +26,6 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-<<<<<<< HEAD
-      "expo-font"
-=======
       [
         "expo-image-picker",
         {
@@ -37,7 +34,6 @@
         }
       ],
       "expo-status-bar"
->>>>>>> fcd4e2079ccd3ff0aa3f36e57ba62a05b6ff8601
     ]
   }
 }
