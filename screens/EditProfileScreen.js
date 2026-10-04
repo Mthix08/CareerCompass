@@ -4,6 +4,7 @@ import { usePreventRemove } from "@react-navigation/native";
 import {
   ActivityIndicator,
   Alert,
+  Image,
   KeyboardAvoidingView,
   Modal,
   Platform,
@@ -16,6 +17,7 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import * as ImagePicker from "expo-image-picker";
 
 import { useProfile } from "../context/ProfileContext";
 
@@ -125,6 +127,7 @@ export default function EditProfileScreen({ navigation }) {
   const [touched, setTouched] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [photoAsset, setPhotoAsset] = useState(null);
   const [categoryOpen, setCategoryOpen] = useState(false);
   const [allowNavigation, setAllowNavigation] = useState(false);
 
@@ -133,7 +136,7 @@ export default function EditProfileScreen({ navigation }) {
   const errors = validate(form);
   const hasChanges = Object.keys(normalizedForm).some(
     (key) => normalizedForm[key] !== normalizedInitial[key],
-  );
+  ) || Boolean(photoAsset);
   const isValid = Object.keys(errors).length === 0;
 
   usePreventRemove(hasChanges && !allowNavigation, ({ data }) => {
@@ -161,18 +164,39 @@ export default function EditProfileScreen({ navigation }) {
   const visibleError = (field) =>
     touched[field] || submitted ? errors[field] : "";
 
+  const handleChoosePhoto = async () => {
+    try {
+      const result = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: ["images"],
+        allowsEditing: true,
+        aspect: [1, 1],
+        quality: 0.8,
+        base64: false,
+      });
+      if (!result.canceled) setPhotoAsset(result.assets[0]);
+    } catch (error) {
+      Alert.alert("Photo unavailable", "We could not open your photo library.");
+    }
+  };
+
   const handleSave = async () => {
     if (saving) return;
     setSubmitted(true);
     if (!hasChanges || !isValid) return;
 
     setSaving(true);
-    // Frontend-only pause; replace with the real profile update request later.
-    await new Promise((resolve) => setTimeout(resolve, 450));
-    updateProfile({ ...profile, ...normalizedForm });
-    setAllowNavigation(true);
-    setSaving(false);
-    requestAnimationFrame(() => navigation.goBack());
+    try {
+      await updateProfile({ ...profile, ...normalizedForm, photoAsset });
+      setAllowNavigation(true);
+      requestAnimationFrame(() => navigation.goBack());
+    } catch (error) {
+      Alert.alert(
+        "Profile update failed",
+        "We could not save your changes. Check your connection and try again.",
+      );
+    } finally {
+      setSaving(false);
+    }
   };
 
   return (
@@ -210,6 +234,34 @@ export default function EditProfileScreen({ navigation }) {
               Keep your information accurate so CareerCompass can personalise your
               experience.
             </Text>
+
+            <View style={styles.photoSection}>
+              {photoAsset?.uri || profile.photoURL ? (
+                <Image
+                  source={{ uri: photoAsset?.uri || profile.photoURL }}
+                  style={styles.photoPreview}
+                />
+              ) : (
+                <View style={styles.photoPlaceholder}>
+                  <Ionicons name="person" size={30} color={colors.mutedText} />
+                </View>
+              )}
+              <Pressable
+                onPress={handleChoosePhoto}
+                disabled={saving}
+                accessibilityRole="button"
+                accessibilityLabel="Choose profile photo"
+                style={({ pressed }) => [
+                  styles.photoButton,
+                  pressed && styles.pressed,
+                ]}
+              >
+                <Ionicons name="camera-outline" size={18} color={colors.primary} />
+                <Text style={styles.photoButtonText}>
+                  {photoAsset || profile.photoURL ? "Change Photo" : "Add Photo"}
+                </Text>
+              </Pressable>
+            </View>
 
             <EditableField
               label="Email Address"
@@ -389,6 +441,11 @@ function createStyles(colors) {
     formCard: { padding: 20, borderRadius: 22, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
     formTitle: { color: colors.text, fontSize: 21, fontWeight: "800" },
     formIntro: { marginTop: 6, color: colors.secondaryText, fontSize: 13, lineHeight: 20 },
+    photoSection: { alignItems: "center", marginTop: 22, marginBottom: 2 },
+    photoPreview: { width: 96, height: 96, borderRadius: 48, backgroundColor: colors.input },
+    photoPlaceholder: { width: 96, height: 96, borderRadius: 48, alignItems: "center", justifyContent: "center", backgroundColor: colors.input },
+    photoButton: { minHeight: 42, marginTop: 8, paddingHorizontal: 12, borderRadius: 12, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 7 },
+    photoButtonText: { color: colors.primary, fontSize: 14, fontWeight: "700" },
     fieldBlock: { marginTop: 20 },
     labelRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
     label: { marginBottom: 8, color: colors.secondaryText, fontSize: 13, fontWeight: "700" },

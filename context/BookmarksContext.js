@@ -7,57 +7,101 @@ import React, {
   useState,
 } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useProfile } from "./ProfileContext";
+import { db } from "../screens/firebaseConfig";
 
 const BookmarksContext = createContext(null);
-const UNIVERSITY_BOOKMARKS_KEY = "@careercompass:bookmarkedIds";
-const COURSE_BOOKMARKS_KEY = "@careercompass:bookmarkedCourseIds";
+const UNIVERSITY_BOOKMARKS_KEY = "@careercompass:bookmarkedIds:";
+const COURSE_BOOKMARKS_KEY = "@careercompass:bookmarkedCourseIds:";
 
 export function BookmarksProvider({ children }) {
-  const { isGuest } = useProfile();
+  const { isGuest, firebaseUser } = useProfile();
   const [bookmarkedIds, setBookmarkedIds] = useState([]);
   const [bookmarkedCourseIds, setBookmarkedCourseIds] = useState([]);
-  const hasLoadedFromStorage = useRef(false);
+  const [loadedScope, setLoadedScope] = useState(null);
+  const [cloudReadyUid, setCloudReadyUid] = useState(null);
+  const userId = firebaseUser?.uid ?? null;
+  const storageScope = userId ?? "guest";
 
-  // Load saved bookmarks once on mount, before any saves are allowed to run.
+  // Load this account's local cache before merging in its cloud copy.
   useEffect(() => {
+    let isActive = true;
+    setLoadedScope(null);
+    setCloudReadyUid(null);
+
     (async () => {
       try {
-        const [storedUniversityIds, storedCourseIds] = await Promise.all([
-          AsyncStorage.getItem(UNIVERSITY_BOOKMARKS_KEY),
-          AsyncStorage.getItem(COURSE_BOOKMARKS_KEY),
-        ]);
-        if (storedUniversityIds) setBookmarkedIds(JSON.parse(storedUniversityIds));
-        if (storedCourseIds) setBookmarkedCourseIds(JSON.parse(storedCourseIds));
-      } catch (error) {
-        // If storage fails or data is corrupted, we just start with empty bookmarks.
+        try {
+          const [storedUniversityIds, storedCourseIds] = await Promise.all([
+            AsyncStorage.getItem(`${UNIVERSITY_BOOKMARKS_KEY}${storageScope}`),
+            AsyncStorage.getItem(`${COURSE_BOOKMARKS_KEY}${storageScope}`),
+          ]);
+          if (!isActive) return;
+          setBookmarkedIds(storedUniversityIds ? JSON.parse(storedUniversityIds) : []);
+          setBookmarkedCourseIds(storedCourseIds ? JSON.parse(storedCourseIds) : []);
+        } catch (error) {
+          if (isActive) {
+            setBookmarkedIds([]);
+            setBookmarkedCourseIds([]);
+          }
+        }
+
+        if (userId) {
+          try {
+            const userSnapshot = await getDoc(doc(db, "users", userId));
+            const userData = userSnapshot.data() || {};
+            if (isActive && Array.isArray(userData.bookmarkedUniversityIds)) {
+              setBookmarkedIds(userData.bookmarkedUniversityIds);
+            }
+            if (isActive && Array.isArray(userData.bookmarkedCourseIds)) {
+              setBookmarkedCourseIds(userData.bookmarkedCourseIds);
+            }
+          } catch (error) {
+            console.warn("Unable to load bookmarks from Firestore.", error);
+          } finally {
+            if (isActive) setCloudReadyUid(userId);
+          }
+        }
       } finally {
-        hasLoadedFromStorage.current = true;
+        if (isActive) setLoadedScope(storageScope);
       }
     })();
-  }, []);
+    return () => {
+      isActive = false;
+    };
+  }, [storageScope, userId]);
 
-  // Save university bookmarks whenever they change (after the initial load).
   useEffect(() => {
-    if (!hasLoadedFromStorage.current) return;
+    if (loadedScope !== storageScope) return;
     AsyncStorage.setItem(
-      UNIVERSITY_BOOKMARKS_KEY,
+      `${UNIVERSITY_BOOKMARKS_KEY}${storageScope}`,
       JSON.stringify(bookmarkedIds),
     ).catch(() => {
-      // Non-fatal: bookmarks just won't persist this time.
+      console.warn("Unable to save university bookmarks locally.");
     });
-  }, [bookmarkedIds]);
+  }, [bookmarkedIds, loadedScope, storageScope]);
 
-  // Save course bookmarks whenever they change (after the initial load).
   useEffect(() => {
-    if (!hasLoadedFromStorage.current) return;
+    if (loadedScope !== storageScope) return;
     AsyncStorage.setItem(
-      COURSE_BOOKMARKS_KEY,
+      `${COURSE_BOOKMARKS_KEY}${storageScope}`,
       JSON.stringify(bookmarkedCourseIds),
     ).catch(() => {
-      // Non-fatal: bookmarks just won't persist this time.
+      console.warn("Unable to save course bookmarks locally.");
     });
-  }, [bookmarkedCourseIds]);
+  }, [bookmarkedCourseIds, loadedScope, storageScope]);
+
+  useEffect(() => {
+    if (!userId || cloudReadyUid !== userId || loadedScope !== storageScope) return;
+    setDoc(
+      doc(db, "users", userId),
+      { bookmarkedUniversityIds: bookmarkedIds, bookmarkedCourseIds },
+      { merge: true },
+    ).catch((error) => {
+      console.warn("Unable to sync bookmarks to Firestore.", error);
+    });
+  }, [bookmarkedIds, bookmarkedCourseIds, cloudReadyUid, loadedScope, storageScope, userId]);
 
   const value = useMemo(
     () => ({
