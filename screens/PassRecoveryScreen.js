@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
   Image,
@@ -18,12 +18,34 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { auth } from "./firebaseConfig";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const RESET_COOLDOWN_STEPS_SECONDS = [30, 60, 120, 240, 300];
 
 export default function PassRecoveryScreen({ navigation }) {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
+  const [cooldownLevel, setCooldownLevel] = useState(0);
+  const [cooldownSeconds, setCooldownSeconds] = useState(0);
+  const isCoolingDown = cooldownSeconds > 0;
+  const cooldownTimer = useRef(null);
+
+  useEffect(() => () => clearInterval(cooldownTimer.current), []);
+
+  useEffect(() => {
+    if (!isCoolingDown) {
+      clearInterval(cooldownTimer.current);
+      cooldownTimer.current = null;
+      return undefined;
+    }
+    cooldownTimer.current = setInterval(() => {
+      setCooldownSeconds((seconds) => Math.max(0, seconds - 1));
+    }, 1000);
+    return () => {
+      clearInterval(cooldownTimer.current);
+      cooldownTimer.current = null;
+    };
+  }, [isCoolingDown]);
 
   const handleEmailChange = (value) => {
     setEmail(value);
@@ -32,7 +54,7 @@ export default function PassRecoveryScreen({ navigation }) {
   };
 
   const handleSubmit = async () => {
-    if (loading) return;
+    if (loading || cooldownSeconds > 0) return;
     const normalizedEmail = email.trim().toLowerCase();
     if (!normalizedEmail) {
       setError("Email address is required.");
@@ -49,6 +71,11 @@ export default function PassRecoveryScreen({ navigation }) {
       await sendPasswordResetEmail(auth, normalizedEmail);
       setEmail(normalizedEmail);
       setSent(true);
+      const cooldown = RESET_COOLDOWN_STEPS_SECONDS[
+        Math.min(cooldownLevel, RESET_COOLDOWN_STEPS_SECONDS.length - 1)
+      ];
+      setCooldownLevel((level) => Math.min(level + 1, RESET_COOLDOWN_STEPS_SECONDS.length - 1));
+      setCooldownSeconds(cooldown);
     } catch (firebaseError) {
       if (firebaseError.code === "auth/invalid-email") {
         setError("Enter a valid email address.");
@@ -105,14 +132,23 @@ export default function PassRecoveryScreen({ navigation }) {
                   </View>
                   <Text style={styles.cardTitle}>Check your email</Text>
                   <Text style={styles.cardIntro}>
-                    If an account exists for {email}, we have sent a password reset link. Follow the instructions in that email to choose a new password.
+                    If an account exists for this email, we’ve sent a password reset link. Follow the instructions in that email to choose a new password.
                   </Text>
+                  {cooldownSeconds > 0 && (
+                    <Text style={styles.cooldownMessage} accessibilityRole="alert">
+                      You can request another email in {cooldownSeconds} seconds.
+                    </Text>
+                  )}
                   <Pressable
                     onPress={() => setSent(false)}
+                    disabled={cooldownSeconds > 0}
                     accessibilityRole="button"
-                    style={({ pressed }) => [styles.secondaryButton, pressed && styles.pressed]}
+                    accessibilityState={{ disabled: cooldownSeconds > 0 }}
+                    style={({ pressed }) => [styles.secondaryButton, cooldownSeconds > 0 && styles.buttonDisabled, pressed && styles.pressed]}
                   >
-                    <Text style={styles.secondaryButtonText}>Try another email</Text>
+                    <Text style={styles.secondaryButtonText}>
+                      {cooldownSeconds > 0 ? `Resend email (${cooldownSeconds}s)` : "Resend reset email"}
+                    </Text>
                   </Pressable>
                   <Pressable
                     onPress={() => navigation.navigate("Login")}
@@ -154,15 +190,17 @@ export default function PassRecoveryScreen({ navigation }) {
                   )}
                   <Pressable
                     onPress={handleSubmit}
-                    disabled={loading}
+                    disabled={loading || cooldownSeconds > 0}
                     accessibilityRole="button"
-                    accessibilityState={{ disabled: loading, busy: loading }}
-                    style={({ pressed }) => [styles.primaryButton, loading && styles.buttonDisabled, pressed && !loading && styles.pressed]}
+                    accessibilityState={{ disabled: loading || cooldownSeconds > 0, busy: loading }}
+                    style={({ pressed }) => [styles.primaryButton, (loading || cooldownSeconds > 0) && styles.buttonDisabled, pressed && !loading && styles.pressed]}
                   >
                     {loading ? (
                       <ActivityIndicator color="#FFFFFF" />
                     ) : (
-                      <Text style={styles.primaryButtonText}>Send reset link</Text>
+                      <Text style={styles.primaryButtonText}>
+                        {cooldownSeconds > 0 ? `Send reset link (${cooldownSeconds}s)` : "Send reset link"}
+                      </Text>
                     )}
                   </Pressable>
                   <View style={styles.centeredLink}>
@@ -290,6 +328,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   secondaryButtonText: { color: "#FFFFFF", fontSize: 15, fontWeight: "700" },
+  cooldownMessage: {
+    marginTop: 13,
+    color: "#AEB7C4",
+    fontSize: 13,
+    lineHeight: 19,
+    textAlign: "center",
+  },
   successContent: { alignItems: "center", paddingTop: 5 },
   successIcon: {
     width: 68,
