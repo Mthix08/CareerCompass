@@ -23,6 +23,10 @@ import {
 } from "../components/HomeComponents";
 import { useProfile } from "../context/ProfileContext";
 import { MOCK_APPLICATION_DEADLINES } from "../data/homeMockData";
+import {
+  getMatchedUniversityCount,
+  getSavedInstitutionalApsScores,
+} from "../data/apsMatching";
 import { universities } from "../data/universities";
 
 const NSFAS_IMAGE = require("../assets/nsfas.jpg");
@@ -37,7 +41,8 @@ export default function HomeScreen({ navigation }) {
     [colors, resolvedTheme, headerAccent],
   );
   const learnerName = profile?.firstName?.trim() || "Zethembe";
-  const matchedUniversities = profile?.matchedUniversities || 0;
+  const apsByUniversity = getSavedInstitutionalApsScores(profile);
+  const matchedUniversities = getMatchedUniversityCount(apsByUniversity);
   const apsScore = profile?.apsScore || 0;
   const sliderCardWidth = Math.min(Math.max(screenWidth - 66, 254), 310);
   const universityCardWidth = Math.min(
@@ -72,7 +77,12 @@ export default function HomeScreen({ navigation }) {
   );
 
   const openCourses = useCallback(
-    () => navigation.navigate("Courses"),
+    () => navigation.navigate("Courses", {
+      matchedOnly: false,
+      apsByUniversity: {},
+      apsScore: null,
+      filterRequestId: Date.now(),
+    }),
     [navigation],
   );
   const openUniversities = useCallback(
@@ -166,7 +176,12 @@ export default function HomeScreen({ navigation }) {
               </Text>
             </View>
             <Pressable
-              onPress={openCourses}
+              onPress={() => navigation.navigate("Courses", {
+                matchedOnly: true,
+                apsScore,
+                apsByUniversity,
+                filterRequestId: Date.now(),
+              })}
               accessibilityRole="button"
               accessibilityLabel="View matching courses"
               style={({ pressed }) => [

@@ -58,6 +58,7 @@ const initialProfile = {
   location: "Explore CareerCompass",
   apsScore: 0,
   matchedUniversities: 0,
+  apsByUniversity: {},
   apsByPeriod: {},
   apsResults: {},
 };
@@ -169,15 +170,16 @@ export function ProfileProvider({ children }) {
     [firebaseUser],
   );
   const saveApsResult = useCallback(
-    async ({ period, subjects, totalAps, matchedUniversities }) => {
+    async ({ period, subjects, totalAps, matchedUniversities, apsByUniversity }) => {
       const apsData = {
         apsScore: totalAps,
         matchedUniversities,
+        apsByUniversity,
         apsByPeriod: {
           [period]: totalAps,
         },
         apsResults: {
-          [period]: { subjects, totalAps, matchedUniversities },
+          [period]: { subjects, totalAps, matchedUniversities, apsByUniversity },
         },
       };
 
@@ -185,13 +187,14 @@ export function ProfileProvider({ children }) {
         ...currentProfile,
         apsScore: totalAps,
         matchedUniversities,
+        apsByUniversity,
         apsByPeriod: {
           ...(currentProfile.apsByPeriod || {}),
           [period]: totalAps,
         },
         apsResults: {
           ...(currentProfile.apsResults || {}),
-          [period]: { subjects, totalAps, matchedUniversities },
+          [period]: { subjects, totalAps, matchedUniversities, apsByUniversity },
         },
       }));
 
@@ -212,7 +215,7 @@ export function ProfileProvider({ children }) {
             },
             apsResults: {
               ...(currentUserData.apsResults || {}),
-              [period]: { subjects, totalAps, matchedUniversities },
+              [period]: { subjects, totalAps, matchedUniversities, apsByUniversity },
             },
           },
           { merge: true },

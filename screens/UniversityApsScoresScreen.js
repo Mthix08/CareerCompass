@@ -12,7 +12,11 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { useProfile } from "../context/ProfileContext";
-import { courseExamples } from "../data/courseExamples";
+import {
+  getInstitutionApsMethod,
+  getMatchingCourses,
+  getSavedInstitutionalApsScores,
+} from "../data/apsMatching";
 import { universities } from "../data/universities";
 
 const COLORS = {
@@ -26,15 +30,14 @@ const COLORS = {
   border: "#DDE4ED",
 };
 
-function UniversityScoreCard({ university, onPress, score }) {
-  const matchingCourses = courseExamples.filter(
-    (course) => course.universityId === university.id && course.minimumAps <= score,
-  ).length;
+function UniversityScoreCard({ university, onPress, apsResult }) {
+  const score = apsResult?.score;
+  const matchingCourses = getMatchingCourses({ [university.id]: apsResult }).length;
   return (
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
-      accessibilityLabel={`${university.name}, ${score} APS, ${matchingCourses} matching courses`}
+      accessibilityLabel={`${university.name}, ${score ?? "no calculated"} APS, ${matchingCourses} matching courses`}
       style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}
     >
       <View style={styles.logoWrap}>
@@ -54,9 +57,12 @@ function UniversityScoreCard({ university, onPress, score }) {
           {university.name}
         </Text>
         <Text style={styles.courseCount}>{matchingCourses} matching courses</Text>
+        <Text style={styles.methodText} numberOfLines={2}>
+          {getInstitutionApsMethod(university.id, apsResult)}
+        </Text>
       </View>
       <View style={styles.scoreWrap}>
-        <Text style={styles.score}>{score}</Text>
+        <Text style={styles.score}>{score ?? "N/A"}</Text>
         <Text style={styles.scoreLabel}>APS</Text>
       </View>
     </Pressable>
@@ -65,6 +71,7 @@ function UniversityScoreCard({ university, onPress, score }) {
 
 export default function UniversityApsScoresScreen({ navigation }) {
   const { profile } = useProfile();
+  const apsByUniversity = getSavedInstitutionalApsScores(profile);
   const score = profile?.apsScore || 0;
   const sortedUniversities = useMemo(
     () => [...universities].sort((a, b) => a.name.localeCompare(b.name)),
@@ -98,11 +105,11 @@ export default function UniversityApsScoresScreen({ navigation }) {
         ListHeaderComponent={
           <View style={styles.listHeadingRow}>
             <View>
-              <Text style={styles.listTitle}>University APS Scores</Text>
-              <Text style={styles.listSubtitle}>Based on your saved APS score</Text>
+              <Text style={styles.listTitle}>Institutional APS Scores</Text>
+              <Text style={styles.listSubtitle}>Calculated using each institution's method</Text>
             </View>
             <View style={styles.previewBadge}>
-              <Text style={styles.previewBadgeText}>APS {score}</Text>
+              <Text style={styles.previewBadgeText}>GENERAL {score}</Text>
             </View>
           </View>
         }
@@ -110,7 +117,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
         renderItem={({ item }) => (
           <UniversityScoreCard
             university={item}
-            score={score}
+            apsResult={apsByUniversity[item.id]}
             onPress={() =>
               navigation.navigate("UniversityDetails", { university: item })
             }
@@ -213,7 +220,8 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "700",
   },
-  scoreWrap: { minWidth: 46, alignItems: "flex-end" },
+  methodText: { marginTop: 4, color: COLORS.secondary, fontSize: 10, lineHeight: 14 },
+  scoreWrap: { minWidth: 55, alignItems: "flex-end" },
   score: { color: COLORS.primary, fontSize: 25, lineHeight: 28, fontWeight: "900" },
   scoreLabel: { marginTop: 2, color: COLORS.primary, fontSize: 9, fontWeight: "900" },
   pressed: { opacity: 0.65 },

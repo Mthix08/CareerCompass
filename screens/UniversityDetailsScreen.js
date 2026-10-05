@@ -78,7 +78,13 @@ export default function UniversityDetailsScreen({ navigation, route }) {
           accentColor={universityTheme.accentLight}
           onSeeMore={() => navigation.navigate("Home", {
             screen: "Courses",
-            params: { universityId: university.id, filterRequestId: Date.now() },
+            params: {
+              universityId: university.id,
+              matchedOnly: false,
+              apsByUniversity: {},
+              apsScore: null,
+              filterRequestId: Date.now(),
+            },
           })}
         />
       );

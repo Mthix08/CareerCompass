@@ -17,7 +17,10 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { useProfile } from "../context/ProfileContext";
-import { getMatchedUniversityCount } from "../data/courseExamples";
+import {
+  getInstitutionalApsScores,
+  getMatchedUniversityCount,
+} from "../data/apsMatching";
 
 const COLORS = {
   primary: "#117C72",
@@ -277,7 +280,7 @@ function MarkRow({ item, onMarkChange, onRemove }) {
   );
 }
 
-function ApsResultModal({ result, onClose }) {
+function ApsResultModal({ result, onClose, onViewMatches }) {
   return (
     <Modal
       visible={Boolean(result)}
@@ -300,6 +303,9 @@ function ApsResultModal({ result, onClose }) {
             {result?.subjectCount === 1 ? "subject" : "subjects"} in{" "}
             {result?.period}. Life Orientation is not included.
           </Text>
+          <Text style={styles.resultDescription}>
+            {result?.matchedUniversities} {result?.matchedUniversities === 1 ? "university" : "universities"} have courses that meet your calculated APS.
+          </Text>
           <View style={styles.resultNotice}>
             <Ionicons
               name="information-circle-outline"
@@ -307,10 +313,16 @@ function ApsResultModal({ result, onClose }) {
               color={COLORS.primary}
             />
             <Text style={styles.resultNoticeText}>
-              This is a general estimate using Level 1 = 1 APS through Level 7 =
-              7 APS.
+              Each institution uses its own scoring method. Estimates are labelled; meeting an APS minimum does not guarantee admission.
             </Text>
           </View>
+          <Pressable
+            onPress={onViewMatches}
+            accessibilityRole="button"
+            style={({ pressed }) => [styles.resultButton, pressed && styles.pressed]}
+          >
+            <Text style={styles.resultButtonText}>View matching courses</Text>
+          </Pressable>
           <Pressable
             onPress={onClose}
             accessibilityRole="button"
@@ -412,7 +424,8 @@ export default function ApsCalculatorScreen({ navigation }) {
       (total, { mark }) => total + getAchievementLevel(mark),
       0,
     );
-    const matchedUniversities = getMatchedUniversityCount(totalAps);
+    const apsByUniversity = getInstitutionalApsScores(currentMarks);
+    const matchedUniversities = getMatchedUniversityCount(apsByUniversity);
 
     try {
       await saveApsResult({
@@ -420,11 +433,14 @@ export default function ApsCalculatorScreen({ navigation }) {
         subjects: currentMarks,
         totalAps,
         matchedUniversities,
+        apsByUniversity,
       });
       setApsResult({
         totalAps,
         subjectCount: eligibleMarks.length,
         period: selectedPeriod,
+        matchedUniversities,
+        apsByUniversity,
       });
     } catch (error) {
       Alert.alert(
@@ -544,7 +560,22 @@ export default function ApsCalculatorScreen({ navigation }) {
         onSelect={addSubject}
         onClose={() => setPickerVisible(false)}
       />
-      <ApsResultModal result={apsResult} onClose={() => setApsResult(null)} />
+      <ApsResultModal
+        result={apsResult}
+        onClose={() => setApsResult(null)}
+        onViewMatches={() => {
+          setApsResult(null);
+          navigation.navigate("Home", {
+            screen: "Courses",
+            params: {
+              matchedOnly: true,
+              apsScore: apsResult?.totalAps,
+              apsByUniversity: apsResult?.apsByUniversity,
+              filterRequestId: Date.now(),
+            },
+          });
+        }}
+      />
     </SafeAreaView>
   );
 }
