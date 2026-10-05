@@ -56,6 +56,7 @@ const initialProfile = {
   category: "Guest",
   learnerInfo: "",
   location: "Explore CareerCompass",
+  applicationCount: 0,
 };
 
 export function ProfileProvider({ children }) {
@@ -175,6 +176,21 @@ export function ProfileProvider({ children }) {
     },
     [firebaseUser],
   );
+  const setApplicationCount = useCallback(
+    async (applicationCount) => {
+      if (profile.applicationCount === applicationCount) return;
+
+      setProfile((current) => ({ ...current, applicationCount }));
+      if (firebaseUser) {
+        await setDoc(
+          doc(db, "users", firebaseUser.uid),
+          { applicationCount },
+          { merge: true },
+        );
+      }
+    },
+    [firebaseUser, profile.applicationCount],
+  );
   const saveApsRecord = useCallback(
     async (period, record) => {
       if (!firebaseUser) {
@@ -212,6 +228,7 @@ export function ProfileProvider({ children }) {
       enterGuestMode,
       clearSession,
       updateProfile,
+      setApplicationCount,
       saveApsRecord,
       themePreference,
       setThemePreference,
@@ -227,6 +244,7 @@ export function ProfileProvider({ children }) {
       enterGuestMode,
       clearSession,
       updateProfile,
+      setApplicationCount,
       saveApsRecord,
       themePreference,
       setThemePreference,

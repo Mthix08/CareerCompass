@@ -15,6 +15,7 @@ import { signOut } from "firebase/auth";
 
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
+import { getLatestApsRecord } from "../data/apsMatching";
 import { auth } from "./firebaseConfig";
 
 const THEMES = ["Light", "Dark", "System"];
@@ -91,6 +92,8 @@ export default function ProfileScreen({ navigation }) {
     clearSession,
   } = useProfile();
   const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length} saved`;
+  const latestApsRecord = getLatestApsRecord(profile?.apsRecords);
+  const apsBadge = latestApsRecord ? `Score: ${latestApsRecord.totalAps}` : "Not calculated";
   const styles = useMemo(() => createStyles(colors), [colors]);
   const scrollRef = useRef(null);
 
@@ -342,7 +345,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="briefcase-outline"
             label="My Applications"
-            badge="0"
+            badge={`${profile.applicationCount ?? 0} submitted`}
             onPress={() =>
               accountOnly(() => navigation.navigate("Applications"))
             }
@@ -351,7 +354,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="calculator-outline"
             label="APS Calculator"
-            badge="Score: 15"
+            badge={apsBadge}
             onPress={() => navigation.navigate("ApsCalculator")}
             styles={styles}
           />
