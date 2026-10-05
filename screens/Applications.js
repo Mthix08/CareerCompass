@@ -1,5 +1,13 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import {
+  collection,
+  doc,
+  getDocs,
+  onSnapshot,
+  setDoc,
+} from "firebase/firestore";
 import {
   FlatList,
   KeyboardAvoidingView,
@@ -19,6 +27,8 @@ import { addDoc, collection, getDocs } from "firebase/firestore";
 import { universities } from "../data/universities";
 import { useProfile } from "../context/ProfileContext";
 import { db } from "./firebaseConfig";
+
+const APPLICATIONS_STORAGE_KEY = "@careercompass:applications:";
 
 const COLORS = {
   primary: "#117C72",
@@ -303,6 +313,82 @@ export default function Applications({ navigation }) {
   const { firebaseUser } = useProfile();
   const [applications, setApplications] = useState([]);
   const [formVisible, setFormVisible] = useState(false);
+  const [loadedScope, setLoadedScope] = useState(null);
+  const { firebaseUser } = useProfile();
+  const userId = firebaseUser?.uid ?? null;
+  const storageScope = userId ?? "guest";
+
+  useEffect(() => {
+    let isActive = true;
+    let unsubscribe;
+    setLoadedScope(null);
+
+    (async () => {
+      let cachedApplications = [];
+      try {
+        const storedApplications = await AsyncStorage.getItem(
+          `${APPLICATIONS_STORAGE_KEY}${storageScope}`,
+        );
+        cachedApplications = storedApplications ? JSON.parse(storedApplications) : [];
+        if (isActive) setApplications(cachedApplications);
+      } catch (error) {
+        console.warn("Unable to load applications from local storage.", error);
+      }
+
+      if (!isActive) return;
+      setLoadedScope(storageScope);
+      if (!userId) return;
+
+      const applicationsRef = collection(db, "users", userId, "applications");
+      try {
+        const snapshot = await getDocs(applicationsRef);
+        if (!isActive) return;
+        if (snapshot.empty && cachedApplications.length) {
+          await Promise.all(
+            cachedApplications.map((application) =>
+              setDoc(doc(db, "users", userId, "applications", application.id), application),
+            ),
+          );
+        }
+        unsubscribe = onSnapshot(
+          applicationsRef,
+          (nextSnapshot) => {
+            if (!isActive) return;
+            const cloudApplications = nextSnapshot.docs.map((application) => application.data());
+            if (cloudApplications.length || cachedApplications.length === 0) {
+              setApplications(cloudApplications);
+            }
+          },
+          (error) => console.warn("Unable to sync applications from Firestore.", error),
+        );
+      } catch (error) {
+        console.warn("Unable to load applications from Firestore.", error);
+      }
+    })();
+
+    return () => {
+      isActive = false;
+      unsubscribe?.();
+    };
+  }, [storageScope, userId]);
+
+  useEffect(() => {
+    if (loadedScope !== storageScope) return;
+    AsyncStorage.setItem(
+      `${APPLICATIONS_STORAGE_KEY}${storageScope}`,
+      JSON.stringify(applications),
+    ).catch((error) => console.warn("Unable to save applications locally.", error));
+  }, [applications, loadedScope, storageScope]);
+
+  const saveApplication = (application) => {
+    setApplications((current) => [application, ...current]);
+    if (userId) {
+      setDoc(
+        doc(db, "users", userId, "applications", application.id),
+        application,
+      ).catch((error) => console.warn("Unable to sync application to Firestore.", error));
+    }
+  };
 
   useEffect(() => {
     let active = true;

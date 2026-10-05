@@ -24,10 +24,10 @@ import {
 import { useProfile } from "../context/ProfileContext";
 import { MOCK_APPLICATION_DEADLINES } from "../data/homeMockData";
 import {
-  getMatchedUniversityCount,
-  getSavedInstitutionalApsScores,
-} from "../data/apsMatching";
+  MOCK_APPLICATION_DEADLINES,
+} from "../data/homeMockData";
 import { universities } from "../data/universities";
+import { getApsUniversityMatches, getLatestApsRecord } from "../data/apsMatching";
 
 const NSFAS_IMAGE = require("../assets/nsfas.jpg");
 const HORIZONTAL_GAP = 14;
@@ -41,9 +41,18 @@ export default function HomeScreen({ navigation }) {
     [colors, resolvedTheme, headerAccent],
   );
   const learnerName = profile?.firstName?.trim() || "Zethembe";
-  const apsByUniversity = getSavedInstitutionalApsScores(profile);
-  const matchedUniversities = getMatchedUniversityCount(apsByUniversity);
-  const apsScore = profile?.apsScore || 0;
+  const apsRecord = useMemo(
+    () => getLatestApsRecord(profile?.apsRecords),
+    [profile?.apsRecords],
+  );
+  const apsMatches = useMemo(
+    () => getApsUniversityMatches(apsRecord?.totalAps),
+    [apsRecord?.totalAps],
+  );
+  const matchedCourseCount = apsMatches.reduce(
+    (total, university) => total + university.qualifyingCourses.length,
+    0,
+  );
   const sliderCardWidth = Math.min(Math.max(screenWidth - 66, 254), 310);
   const universityCardWidth = Math.min(
     Math.max(screenWidth * 0.73, 258),
@@ -169,21 +178,18 @@ export default function HomeScreen({ navigation }) {
             </View>
             <View style={styles.matchedCopy}>
               <Text style={styles.matchedTitle}>
-                {matchedUniversities} universities matched
+                {apsMatches.length} universities with APS matches
               </Text>
               <Text style={styles.matchedText}>
-                Calculate your APS to discover matching courses.
+                {apsRecord
+                  ? `${matchedCourseCount} courses meet the listed APS minimum for ${apsRecord.period}.`
+                  : "Save your marks to see courses that meet their listed APS minimum."}
               </Text>
             </View>
             <Pressable
-              onPress={() => navigation.navigate("Courses", {
-                matchedOnly: true,
-                apsScore,
-                apsByUniversity,
-                filterRequestId: Date.now(),
-              })}
+              onPress={openAllApsScores}
               accessibilityRole="button"
-              accessibilityLabel="View matching courses"
+              accessibilityLabel="View APS course matches"
               style={({ pressed }) => [
                 styles.compactButton,
                 pressed && styles.primaryPressed,
@@ -219,7 +225,7 @@ export default function HomeScreen({ navigation }) {
                   <Text style={styles.fundingLabelText}>STUDENT FUNDING</Text>
                 </View>
                 <Text style={styles.fundingTitle}>
-                  Don’t forget to apply for NSFAS
+                  Don’t forget to apply for Funding
                 </Text>
                 <Text style={styles.fundingText}>
                   Financial support can make your study journey possible. Check
@@ -268,15 +274,18 @@ export default function HomeScreen({ navigation }) {
           </View>
 
           <View style={styles.sectionWithPadding}>
-            <SectionHeader title="Your APS Scores" colors={colors} />
+            <SectionHeader title="Universities with APS matches" colors={colors} />
             <Text style={styles.helperText}>
-              Calculate your APS to see your scores for each university.
+              {apsRecord
+                ? `Using your ${apsRecord.period} result. Meeting an APS minimum does not guarantee admission.`
+                : "Save your marks to compare your APS with course requirements."}
             </Text>
-            {universities.slice(0, 5).map((university) => (
+            {apsMatches.slice(0, 5).map((university) => (
               <APSScoreRow
                 key={university.id}
                 university={university}
-                score={apsScore}
+                score={apsRecord.totalAps}
+                caption={`${university.qualifyingCourses.length} course${university.qualifyingCourses.length === 1 ? "" : "s"} meet APS minimum`}
                 colors={colors}
               />
             ))}

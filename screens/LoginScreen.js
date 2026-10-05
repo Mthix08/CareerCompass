@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Image,
   View,
@@ -18,6 +18,17 @@ import { useProfile } from "../context/ProfileContext";
 import { auth } from "./firebaseConfig";
 import { signInWithGoogle } from "./googleAuth";
 
+const LOGIN_FAILURE_LIMIT = 3;
+const COOLDOWN_STEPS_SECONDS = [30, 60, 120, 240, 300];
+
+function isCredentialFailure(error) {
+  return [
+    "auth/invalid-credential",
+    "auth/wrong-password",
+    "auth/user-not-found",
+  ].includes(error.code);
+}
+
 export default function LoginScreen({ navigation }) {
   const { enterGuestMode } = useProfile();
   const [email, setEmail] = useState("");
@@ -26,6 +37,37 @@ export default function LoginScreen({ navigation }) {
   const [isLoading, setIsLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
   const [errors, setErrors] = useState({ email: "", password: "" });
+  const [failedAttempts, setFailedAttempts] = useState(0);
+  const [cooldownLevel, setCooldownLevel] = useState(0);
+  const [cooldownSeconds, setCooldownSeconds] = useState(0);
+  const isCoolingDown = cooldownSeconds > 0;
+  const cooldownTimer = useRef(null);
+
+  useEffect(() => () => clearInterval(cooldownTimer.current), []);
+
+  useEffect(() => {
+    if (!isCoolingDown) {
+      clearInterval(cooldownTimer.current);
+      cooldownTimer.current = null;
+      return undefined;
+    }
+    cooldownTimer.current = setInterval(() => {
+      setCooldownSeconds((seconds) => Math.max(0, seconds - 1));
+    }, 1000);
+    return () => {
+      clearInterval(cooldownTimer.current);
+      cooldownTimer.current = null;
+    };
+  }, [isCoolingDown]);
+
+  const startCooldown = () => {
+    const duration = COOLDOWN_STEPS_SECONDS[
+      Math.min(cooldownLevel, COOLDOWN_STEPS_SECONDS.length - 1)
+    ];
+    setCooldownLevel((level) => Math.min(level + 1, COOLDOWN_STEPS_SECONDS.length - 1));
+    setFailedAttempts(0);
+    setCooldownSeconds(duration);
+  };
 
   const handleGoogleLogin = async () => {
     if (isLoading || isGoogleLoading) return;
@@ -49,7 +91,7 @@ export default function LoginScreen({ navigation }) {
   };
 
   const handleLogin = async () => {
-    if (isLoading) return;
+    if (isLoading || cooldownSeconds > 0) return;
     const nextErrors = {
       email: !email.trim() ? "Enter your email address." : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()) ? "Enter a valid email address." : "",
       password: !password ? "Enter your password." : "",
@@ -62,12 +104,20 @@ export default function LoginScreen({ navigation }) {
     try {
       setIsLoading(true);
       await signInWithEmailAndPassword(auth, email.trim(), password);
+      setFailedAttempts(0);
+      setCooldownLevel(0);
       navigation.reset({ index: 0, routes: [{ name: "Home" }] });
     } catch (error) {
+      if (isCredentialFailure(error)) {
+        const nextFailedAttempts = failedAttempts + 1;
+        if (nextFailedAttempts >= LOGIN_FAILURE_LIMIT) {
+          startCooldown();
+        } else {
+          setFailedAttempts(nextFailedAttempts);
+        }
+      }
       if (error.code === "auth/invalid-email") {
         setErrors({ email: "Enter a valid email address.", password: "" });
-      } else if (error.code === "auth/user-not-found") {
-        setErrors({ email: "No account was found for this email address.", password: "" });
       } else {
         setErrors({
           email: "",
@@ -183,14 +233,25 @@ export default function LoginScreen({ navigation }) {
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={styles.loginButton}
+            style={[styles.loginButton, (isLoading || cooldownSeconds > 0) && styles.loginButtonDisabled]}
             activeOpacity={0.8}
             onPress={handleLogin}
+            disabled={isLoading || cooldownSeconds > 0}
+            accessibilityState={{ disabled: isLoading || cooldownSeconds > 0, busy: isLoading }}
           >
             <Text style={styles.loginButtonText}>
-              {isLoading ? "Logging in..." : "Log In"}
+              {isLoading
+                ? "Logging in..."
+                : cooldownSeconds > 0
+                  ? `Try again in ${cooldownSeconds}s`
+                  : "Log In"}
             </Text>
           </TouchableOpacity>
+          {cooldownSeconds > 0 && (
+            <Text style={styles.cooldownText} accessibilityRole="alert">
+              Too many unsuccessful attempts. Please try again in {cooldownSeconds} seconds.
+            </Text>
+          )}
 
           <View style={styles.dividerContainer}>
             <View style={styles.divider} />
@@ -359,6 +420,14 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.12,
     shadowRadius: 5,
+  },
+  loginButtonDisabled: { opacity: 0.55 },
+  cooldownText: {
+    marginTop: 9,
+    color: "#C53030",
+    fontSize: 13,
+    lineHeight: 18,
+    textAlign: "center",
   },
 
   loginButtonText: {

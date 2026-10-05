@@ -116,11 +116,7 @@ export default function ProfileScreen({ navigation }) {
   }, [clearSuccessMessage, successMessage]);
 
   const handleAvatarPress = () => {
-    // TODO: Connect an image picker and profile-image upload later.
-    Alert.alert(
-      "Change profile photo",
-      "Photo selection will be added when profile uploads are connected.",
-    );
+    accountOnly(() => navigation.navigate("EditProfile"));
   };
 
   const handleSignOut = () => {
@@ -267,8 +263,8 @@ export default function ProfileScreen({ navigation }) {
   const initials = `${profile.firstName?.[0] || ""}${profile.surname?.[0] || ""}`;
   const accountType =
     isGuest ? "Guest"
-    : profile.authProvider === "Google" ? "Google"
-    : "Student";
+      : profile.authProvider === "Google" ? "Google"
+        : "Student";
   const accountOnly = (action) => {
     if (isGuest) {
       Alert.alert(
@@ -339,7 +335,7 @@ export default function ProfileScreen({ navigation }) {
           >
             {profile.photoURL ?
               <Image source={{ uri: profile.photoURL }} style={styles.avatar} />
-            : <View style={styles.avatar}>
+              : <View style={styles.avatar}>
                 <Text style={styles.avatarText}>{initials || "CC"}</Text>
               </View>
             }
@@ -371,7 +367,7 @@ export default function ProfileScreen({ navigation }) {
           <Text style={styles.sectionIntro}>
             {isGuest ?
               "Explore freely. Create an account to save your progress."
-            : "Your saved account information is shown below."}
+              : "Your saved account information is shown below."}
           </Text>
           <View style={styles.detailsList}>
             <ReadOnlyDetail
@@ -430,7 +426,7 @@ export default function ProfileScreen({ navigation }) {
             label={
               isGuest ?
                 "Saved Courses (limited)"
-              : "Saved Universities & Courses"
+                : "Saved Universities & Courses"
             }
             badge={savedItemsLabel}
             onPress={() => navigation.navigate("Bookmarks")}

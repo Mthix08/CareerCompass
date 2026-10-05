@@ -2,16 +2,17 @@ import React, {
   createContext,
   useCallback,
   useContext,
-  useMemo,
   useEffect,
+  useMemo,
+  useRef,
   useState,
 } from "react";
 import { useColorScheme } from "react-native";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import { auth } from "../screens/firebaseConfig";
-import { db } from "../screens/firebaseConfig";
+import { auth, db, storage } from "../screens/firebaseConfig";
 
 const ProfileContext = createContext(null);
 const THEME_STORAGE_KEY = "@careercompass:themePreference";
@@ -61,10 +62,12 @@ const initialProfile = {
   apsByUniversity: {},
   apsByPeriod: {},
   apsResults: {},
+  apsRecords: {},
 };
 
 export function ProfileProvider({ children }) {
   const systemColorScheme = useColorScheme();
+  const guestModeRef = useRef(false);
   const [profile, setProfile] = useState(initialProfile);
   const [firebaseUser, setFirebaseUser] = useState(null);
   const [isGuest, setIsGuest] = useState(false);
@@ -77,7 +80,7 @@ export function ProfileProvider({ children }) {
       try {
         const storedTheme = await AsyncStorage.getItem(THEME_STORAGE_KEY);
         if (storedTheme) setThemePreferenceState(storedTheme);
-      } catch (error) {
+      } catch (_error) {
         // If storage fails, we just keep the default "Light" theme.
       }
     })();
@@ -92,14 +95,17 @@ export function ProfileProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    return auth.onAuthStateChanged(async (user) => {
+    const unsubscribe = auth.onAuthStateChanged(async (user) => {
       setFirebaseUser(user);
+
       if (!user) {
-        setIsGuest(false);
-        setProfile(initialProfile);
+        if (!guestModeRef.current) {
+          setProfile(initialProfile);
+        }
         return;
       }
 
+      guestModeRef.current = false;
       setIsGuest(false);
       const userSnapshot = await getDoc(doc(db, "users", user.uid));
       const storedProfile = userSnapshot.exists() ? userSnapshot.data() : {};
@@ -114,7 +120,7 @@ export function ProfileProvider({ children }) {
         firstName: nameParts[0] || "Student",
         surname: nameParts.slice(1).join(" "),
         category: "Student",
-        photoURL: user.photoURL || storedProfile.photoURL || "",
+        photoURL: storedProfile.photoURL || user.photoURL || "",
         authProvider:
           (
             user.providerData?.some(
@@ -122,17 +128,21 @@ export function ProfileProvider({ children }) {
             )
           ) ?
             "Google"
-          : "Email",
+            : "Email",
       });
     });
+
+    return unsubscribe;
   }, []);
 
   const enterGuestMode = useCallback(() => {
+    guestModeRef.current = true;
     setIsGuest(true);
     setFirebaseUser(null);
     setProfile(initialProfile);
   }, []);
   const clearSession = useCallback(() => {
+    guestModeRef.current = false;
     setIsGuest(false);
     setFirebaseUser(null);
     setProfile(initialProfile);
@@ -143,13 +153,23 @@ export function ProfileProvider({ children }) {
     themePreference === "System" ?
       systemColorScheme === "dark" ?
         "dark"
-      : "light"
-    : themePreference.toLowerCase();
+        : "light"
+      : themePreference.toLowerCase();
   const colors = resolvedTheme === "dark" ? darkColors : lightColors;
 
   const updateProfile = useCallback(
     async (nextProfile) => {
-      setProfile(nextProfile);
+      let photoURL = nextProfile.photoURL || "";
+      if (nextProfile.photoAsset && firebaseUser) {
+        const response = await fetch(nextProfile.photoAsset.uri);
+        const photoBlob = await response.blob();
+        const photoRef = ref(storage, `profilePhotos/${firebaseUser.uid}`);
+        await uploadBytes(photoRef, photoBlob, {
+          contentType: nextProfile.photoAsset.mimeType || "image/jpeg",
+        });
+        photoURL = await getDownloadURL(photoRef);
+      }
+
       if (firebaseUser) {
         await setDoc(
           doc(db, "users", firebaseUser.uid),
@@ -159,68 +179,43 @@ export function ProfileProvider({ children }) {
             phone: nextProfile.phone,
             category: nextProfile.category,
             location: nextProfile.location,
-            photoURL: nextProfile.photoURL || "",
-            notificationPreferences: nextProfile.notificationPreferences || {},
+            photoURL,
+            notificationPreferences:
+              nextProfile.notificationPreferences || {},
           },
           { merge: true },
         );
       }
+      const updatedProfile = { ...nextProfile, photoURL };
+      delete updatedProfile.photoAsset;
+      setProfile(updatedProfile);
       setSuccessMessage("Profile updated successfully.");
     },
     [firebaseUser],
   );
-  const saveApsResult = useCallback(
-    async ({ period, subjects, totalAps, matchedUniversities, apsByUniversity }) => {
-      const apsData = {
-        apsScore: totalAps,
-        matchedUniversities,
-        apsByUniversity,
-        apsByPeriod: {
-          [period]: totalAps,
-        },
-        apsResults: {
-          [period]: { subjects, totalAps, matchedUniversities, apsByUniversity },
-        },
-      };
+  const saveApsRecord = useCallback(
+    async (period, record) => {
+      if (!firebaseUser) {
+        throw new Error("Sign in to save your APS marks to your account.");
+      }
 
-      setProfile((currentProfile) => ({
-        ...currentProfile,
-        apsScore: totalAps,
-        matchedUniversities,
-        apsByUniversity,
-        apsByPeriod: {
-          ...(currentProfile.apsByPeriod || {}),
-          [period]: totalAps,
+      await setDoc(
+        doc(db, "users", firebaseUser.uid),
+        {
+          apsRecords: {
+            [period]: { ...record, updatedAt: serverTimestamp() },
+          },
         },
-        apsResults: {
-          ...(currentProfile.apsResults || {}),
-          [period]: { subjects, totalAps, matchedUniversities, apsByUniversity },
+        { merge: true },
+      );
+
+      setProfile((current) => ({
+        ...current,
+        apsRecords: {
+          ...current.apsRecords,
+          [period]: record,
         },
       }));
-
-      if (firebaseUser) {
-        const currentUserSnapshot = await getDoc(
-          doc(db, "users", firebaseUser.uid),
-        );
-        const currentUserData = currentUserSnapshot.exists()
-          ? currentUserSnapshot.data()
-          : {};
-        await setDoc(
-          doc(db, "users", firebaseUser.uid),
-          {
-            ...apsData,
-            apsByPeriod: {
-              ...(currentUserData.apsByPeriod || {}),
-              [period]: totalAps,
-            },
-            apsResults: {
-              ...(currentUserData.apsResults || {}),
-              [period]: { subjects, totalAps, matchedUniversities, apsByUniversity },
-            },
-          },
-          { merge: true },
-        );
-      }
     },
     [firebaseUser],
   );
@@ -235,7 +230,7 @@ export function ProfileProvider({ children }) {
       enterGuestMode,
       clearSession,
       updateProfile,
-      saveApsResult,
+      saveApsRecord,
       themePreference,
       setThemePreference,
       resolvedTheme,
@@ -250,7 +245,7 @@ export function ProfileProvider({ children }) {
       enterGuestMode,
       clearSession,
       updateProfile,
-      saveApsResult,
+      saveApsRecord,
       themePreference,
       setThemePreference,
       resolvedTheme,

@@ -27,8 +27,14 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-font",
-      "@react-native-google-signin/google-signin"
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "CareerCompass uses your photos to set your profile picture.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-status-bar"
     ]
   }
 }
