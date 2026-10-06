@@ -15,6 +15,7 @@ import { signOut } from "firebase/auth";
 
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
+import { getLatestApsRecord } from "../data/apsMatching";
 import { auth } from "./firebaseConfig";
 
 const THEMES = ["Light", "Dark", "System"];
@@ -90,6 +91,7 @@ export default function ProfileScreen({ navigation }) {
     clearSuccessMessage,
     clearSession,
   } = useProfile();
+  const latestApsRecord = getLatestApsRecord(profile.apsRecords);
   const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length} saved`;
   const styles = useMemo(() => createStyles(colors), [colors]);
   const scrollRef = useRef(null);
@@ -351,7 +353,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="calculator-outline"
             label="APS Calculator"
-            badge="Score: 15"
+            badge={latestApsRecord ? `Score: ${latestApsRecord.totalAps}` : "Not calculated"}
             onPress={() => navigation.navigate("ApsCalculator")}
             styles={styles}
           />
