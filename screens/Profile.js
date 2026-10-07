@@ -93,6 +93,7 @@ export default function ProfileScreen({ navigation }) {
   } = useProfile();
   const latestApsRecord = getLatestApsRecord(profile.apsRecords);
   const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length} saved`;
+  const apsBadge = latestApsRecord ? `Score: ${latestApsRecord.totalAps}` : "Not calculated";
   const styles = useMemo(() => createStyles(colors), [colors]);
   const scrollRef = useRef(null);
 
@@ -344,7 +345,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="briefcase-outline"
             label="My Applications"
-            badge="0"
+            badge={`${profile.applicationCount ?? 0} submitted`}
             onPress={() =>
               accountOnly(() => navigation.navigate("Applications"))
             }
@@ -353,7 +354,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="calculator-outline"
             label="APS Calculator"
-            badge={latestApsRecord ? `Score: ${latestApsRecord.totalAps}` : "Not calculated"}
+            badge={apsBadge}
             onPress={() => navigation.navigate("ApsCalculator")}
             styles={styles}
           />

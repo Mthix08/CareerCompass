@@ -60,11 +60,20 @@ const initialForm = {
   notes: "",
 };
 
-function ApplicationForm({ visible, onClose, onSubmit }) {
+function ApplicationForm({ visible, application, onClose, onSubmit }) {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [universityMenuVisible, setUniversityMenuVisible] = useState(false);
   const [statusMenuVisible, setStatusMenuVisible] = useState(false);
+
+  useEffect(() => {
+    if (visible) {
+      setForm(application ? { ...initialForm, ...application } : initialForm);
+      setErrors({});
+      setUniversityMenuVisible(false);
+      setStatusMenuVisible(false);
+    }
+  }, [application, visible]);
 
   const universityOptions = useMemo(() => {
     const query = form.university.trim().toLowerCase();
@@ -100,7 +109,7 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
     if (Object.keys(nextErrors).length > 0) return;
 
     onSubmit({
-      id: `${Date.now()}`,
+      id: application?.id || `${Date.now()}`,
       university: form.university.trim(),
       course: form.course.trim(),
       dateApplied: form.dateApplied.trim(),
@@ -130,7 +139,9 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
         <View style={styles.sheet}>
           <View style={styles.sheetHandle} />
           <View style={styles.sheetHeader}>
-            <Text style={styles.sheetTitle}>Track Application</Text>
+          <Text style={styles.sheetTitle}>
+            {application ? "Edit Application" : "Track Application"}
+          </Text>
             <Pressable
               onPress={closeForm}
               accessibilityRole="button"
@@ -269,7 +280,9 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
               accessibilityRole="button"
               style={({ pressed }) => [styles.submitButton, pressed && styles.pressed]}
             >
-              <Text style={styles.submitButtonText}>Track Application</Text>
+              <Text style={styles.submitButtonText}>
+                {application ? "Save Changes" : "Track Application"}
+              </Text>
             </Pressable>
           </ScrollView>
         </View>
@@ -278,9 +291,14 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
   );
 }
 
-function ApplicationCard({ application }) {
+function ApplicationCard({ application, onPress }) {
   return (
-    <View style={styles.card}>
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={`${application.university}, ${application.course}, status ${application.status.label}. Edit application`}
+      style={({ pressed }) => [styles.card, pressed && styles.pressed]}
+    >
       <View style={styles.cardTopRow}>
         <View style={styles.cardIcon}>
           <Ionicons name="school-outline" size={22} color={COLORS.primary} />
@@ -304,15 +322,16 @@ function ApplicationCard({ application }) {
         )}
       </View>
       {!!application.notes && <Text style={styles.cardNotes}>{application.notes}</Text>}
-    </View>
+    </Pressable>
   );
 }
 
 export default function Applications({ navigation }) {
   const [applications, setApplications] = useState([]);
   const [formVisible, setFormVisible] = useState(false);
+  const [editingApplication, setEditingApplication] = useState(null);
   const [loadedScope, setLoadedScope] = useState(null);
-  const { firebaseUser } = useProfile();
+  const { firebaseUser, setApplicationCount } = useProfile();
   const userId = firebaseUser?.uid ?? null;
   const storageScope = userId ?? "guest";
 
@@ -378,8 +397,29 @@ export default function Applications({ navigation }) {
     ).catch((error) => console.warn("Unable to save applications locally.", error));
   }, [applications, loadedScope, storageScope]);
 
+  useEffect(() => {
+    if (loadedScope !== storageScope) return;
+    setApplicationCount(applications.length).catch((error) =>
+      console.warn("Unable to save application count to Firestore.", error),
+    );
+  }, [applications.length, loadedScope, setApplicationCount, storageScope]);
+
+  const openNewApplication = () => {
+    setEditingApplication(null);
+    setFormVisible(true);
+  };
+
+  const openApplicationForEdit = (application) => {
+    setEditingApplication(application);
+    setFormVisible(true);
+  };
+
   const saveApplication = (application) => {
-    setApplications((current) => [application, ...current]);
+    setApplications((current) =>
+      editingApplication
+        ? current.map((item) => item.id === application.id ? application : item)
+        : [application, ...current],
+    );
     if (userId) {
       setDoc(
         doc(db, "users", userId, "applications", application.id),
@@ -402,7 +442,7 @@ export default function Applications({ navigation }) {
         </Pressable>
         <Text style={styles.headerTitle}>My Applications</Text>
         <Pressable
-          onPress={() => setFormVisible(true)}
+          onPress={openNewApplication}
           accessibilityRole="button"
           accessibilityLabel="Add application"
           style={({ pressed }) => [styles.addButton, pressed && styles.pressed]}
@@ -415,7 +455,12 @@ export default function Applications({ navigation }) {
       <FlatList
         data={applications}
         keyExtractor={({ id }) => id}
-        renderItem={({ item }) => <ApplicationCard application={item} />}
+        renderItem={({ item }) => (
+          <ApplicationCard
+            application={item}
+            onPress={() => openApplicationForEdit(item)}
+          />
+        )}
         ItemSeparatorComponent={() => <View style={styles.cardSeparator} />}
         contentContainerStyle={[
           styles.listContent,
@@ -433,7 +478,7 @@ export default function Applications({ navigation }) {
               submitted, and whether you’ve received an offer.
             </Text>
             <Pressable
-              onPress={() => setFormVisible(true)}
+              onPress={openNewApplication}
               accessibilityRole="button"
               style={({ pressed }) => [styles.emptyButton, pressed && styles.pressed]}
             >
@@ -446,7 +491,11 @@ export default function Applications({ navigation }) {
 
       <ApplicationForm
         visible={formVisible}
-        onClose={() => setFormVisible(false)}
+        application={editingApplication}
+        onClose={() => {
+          setFormVisible(false);
+          setEditingApplication(null);
+        }}
         onSubmit={saveApplication}
       />
     </SafeAreaView>

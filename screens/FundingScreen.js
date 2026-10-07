@@ -1,20 +1,19 @@
 import React, { useMemo, useState, useEffect } from "react";
-import { ImageBackground, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { ActivityIndicator, ImageBackground, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
-import { NSFAS, SAMPLE_BURSARY, fetchBursaries, getFundingCountdown } from "../data/funding";
+import { NSFAS, fetchBursaries, getFundingCountdown } from "../data/funding";
 
 const NSFAS_IMAGE = require("../assets/nsfas.jpg");
-const FALLBACK_FUNDING_OPTIONS = [NSFAS, SAMPLE_BURSARY];
-
 export default function FundingScreen({ navigation }) {
   const { colors, resolvedTheme } = useProfile();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [now, setNow] = useState(() => new Date());
   const [searchQuery, setSearchQuery] = useState("");
-  const [fundingOptions, setFundingOptions] = useState(FALLBACK_FUNDING_OPTIONS);
+  const [fundingOptions, setFundingOptions] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => setNow(new Date()), 60000);
@@ -23,11 +22,17 @@ export default function FundingScreen({ navigation }) {
 
   useEffect(() => {
     let mounted = true;
-    fetchBursaries().then((items) => {
-      if (mounted) {
-        setFundingOptions(items);
-      }
-    });
+    fetchBursaries()
+      .then((items) => {
+        if (mounted) setFundingOptions(items);
+      })
+      .catch((error) => {
+        console.warn("Unable to load funding opportunities.", error);
+        if (mounted) setFundingOptions([]);
+      })
+      .finally(() => {
+        if (mounted) setIsLoading(false);
+      });
     return () => {
       mounted = false;
     };
@@ -52,9 +57,9 @@ export default function FundingScreen({ navigation }) {
         </Pressable>
         <Text style={styles.eyebrow}>STUDENT FUNDING</Text>
         <Text style={styles.title}>Funding</Text>
-        <Text style={styles.intro}>Explore support for your studies. Start with South Africa's national student funding scheme.</Text>
+        <Text style={styles.intro}>Explore support for your studies. Start with South Africa&apos;s national student funding scheme.</Text>
 
-        <View style={styles.searchBox}>
+        {!isLoading && <View style={styles.searchBox}>
           <Ionicons name="search-outline" size={21} color={colors.mutedText} />
           <TextInput
             value={searchQuery}
@@ -72,10 +77,16 @@ export default function FundingScreen({ navigation }) {
               <Ionicons name="close-circle" size={21} color={colors.mutedText} />
             </Pressable>
           )}
-        </View>
+        </View>}
 
         <Text style={styles.sectionTitle}>Funding opportunities</Text>
-        {filteredOptions.map((option) => {
+        {isLoading ? (
+          <View style={styles.loadingState} accessibilityRole="progressbar" accessibilityLabel="Loading bursaries">
+            <ActivityIndicator size="large" color={colors.primary} />
+            <Text style={styles.loadingTitle}>Loading bursaries</Text>
+            <Text style={styles.loadingText}>Fetching the latest funding opportunities…</Text>
+          </View>
+        ) : filteredOptions.map((option) => {
           const { days, isClosed } = getFundingCountdown(now, option);
           const isFeatured = option.id === NSFAS.id;
 
@@ -121,14 +132,14 @@ export default function FundingScreen({ navigation }) {
             </Pressable>
           );
         })}
-        {filteredOptions.length === 0 && (
+        {!isLoading && filteredOptions.length === 0 && (
           <View style={styles.emptyState}>
             <Ionicons name="search-outline" size={32} color={colors.primary} />
             <Text style={styles.emptyTitle}>No bursaries found</Text>
             <Text style={styles.emptyText}>Try another name or clear your search.</Text>
           </View>
         )}
-        {!searchQuery.trim() && <View style={styles.comingSoon}>
+        {!isLoading && !searchQuery.trim() && <View style={styles.comingSoon}>
           <Ionicons name="add-circle-outline" size={24} color={colors.primary} />
           <View style={styles.comingSoonText}>
             <Text style={styles.comingSoonTitle}>Live bursary directory</Text>
@@ -152,6 +163,9 @@ function makeStyles(c) {
     searchBox: { flexDirection: "row", alignItems: "center", gap: 10, backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 14, paddingHorizontal: 15, height: 54, marginBottom: 28 },
     searchInput: { flex: 1, color: c.text, fontSize: 15, height: "100%" },
     sectionTitle: { color: c.text, fontSize: 20, fontWeight: "700", marginBottom: 14 },
+    loadingState: { minHeight: 190, alignItems: "center", justifyContent: "center", backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 18, padding: 24 },
+    loadingTitle: { color: c.text, fontSize: 16, fontWeight: "700", marginTop: 14 },
+    loadingText: { color: c.secondaryText, fontSize: 13, textAlign: "center", marginTop: 5 },
     featureCard: { borderRadius: 22, overflow: "hidden", elevation: 4, backgroundColor: c.primary },
     listCard: { backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 18, marginTop: 14 },
     listCardContent: { flexDirection: "row", alignItems: "center", gap: 12, padding: 17 },

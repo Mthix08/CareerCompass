@@ -3,6 +3,7 @@ import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
   Image,
+  Linking,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -29,6 +30,16 @@ export default function UniversityDetailsScreen({ navigation, route }) {
     ? courseExamples.filter((course) => course.universityId === university.id)
     : [];
   const previewCourses = publishedCourses.length ? publishedCourses : university?.courses || [];
+  const registrationFeeInfo = university?.registrationFeeInfo;
+
+  const openFeeSource = async () => {
+    if (!registrationFeeInfo?.sourceUrl) return;
+    try {
+      await Linking.openURL(registrationFeeInfo.sourceUrl);
+    } catch {
+      Alert.alert("Could not open fee information", "Please try again in a moment.");
+    }
+  };
 
   const handleBookmarkPress = () => {
     if (bookmarked) {
@@ -40,7 +51,7 @@ export default function UniversityDetailsScreen({ navigation, route }) {
   };
 
   const openProspectus = () => {
-    const url = university.prospectusUrl || university.website;
+    const url = university.prospectusUrl;
     if (!url || !/^https?:\/\//i.test(url)) {
       Alert.alert(
         "Prospectus unavailable",
@@ -221,6 +232,32 @@ export default function UniversityDetailsScreen({ navigation, route }) {
             />
           </View>
           {renderActiveSection()}
+          <View style={styles.feeCard}>
+            <View style={styles.feeTitleRow}>
+              <Ionicons name="wallet-outline" size={21} color={universityTheme.accentLight} />
+              <Text style={styles.feeTitle}>Plan for registration costs</Text>
+            </View>
+            <Text style={styles.feeYear}>Official information found for {registrationFeeInfo?.year || 2026}</Text>
+            <Text style={styles.feeBody}>
+              {registrationFeeInfo?.summary || "The upfront amount depends on your programme, accommodation and funding. Ask the university for a fee quote before setting a savings target."}
+            </Text>
+            {!!registrationFeeInfo?.details && (
+              <Text style={styles.feeBody}>{registrationFeeInfo.details}</Text>
+            )}
+            <Text style={styles.feeDisclaimer}>
+              Fees are subject to change. These figures and dates are for {registrationFeeInfo?.year || 2026}; confirm the latest amount and payment deadline with the university. Application fees, tuition and residence costs may be separate.
+            </Text>
+            {!!registrationFeeInfo?.sourceUrl && (
+              <Pressable
+                onPress={openFeeSource}
+                accessibilityRole="link"
+                style={({ pressed }) => [styles.feeSourceButton, pressed && styles.pressed]}
+              >
+                <Text style={[styles.feeSourceText, { color: universityTheme.accentLight }]}>Check official fee information</Text>
+                <Ionicons name="open-outline" size={16} color={universityTheme.accentLight} />
+              </Pressable>
+            )}
+          </View>
           <Pressable
             onPress={openProspectus}
             accessibilityRole="button"
@@ -320,6 +357,28 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: 9,
   },
+  feeCard: {
+    marginTop: 24,
+    padding: 17,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: "#293241",
+    backgroundColor: "#101722",
+  },
+  feeTitleRow: { flexDirection: "row", alignItems: "center", gap: 9 },
+  feeTitle: { color: "#FFFFFF", fontSize: 17, fontWeight: "800" },
+  feeYear: { marginTop: 10, color: "#D3DBE7", fontSize: 12, fontWeight: "700" },
+  feeBody: { marginTop: 9, color: "#B3BDCB", fontSize: 13, lineHeight: 20 },
+  feeDisclaimer: { marginTop: 12, color: "#8792A2", fontSize: 12, lineHeight: 18 },
+  feeSourceButton: {
+    alignSelf: "flex-start",
+    minHeight: 38,
+    marginTop: 8,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+  },
+  feeSourceText: { fontSize: 13, fontWeight: "800" },
   prospectusButtonText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
   missingContainer: {
     flex: 1,
