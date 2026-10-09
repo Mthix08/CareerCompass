@@ -5,6 +5,7 @@ import LoginScreen from "./screens/LoginScreen";
 import SignUpScreen from "./screens/SignUpScreen";
 import PassRecoveryScreen from "./screens/PassRecoveryScreen";
 import SplashScreen from "./screens/SplashScreen";
+import OnboardingScreen from "./screens/OnboardingScreen";
 import UniversityDetailsScreen from "./screens/UniversityDetailsScreen";
 import EditProfileScreen from "./screens/EditProfileScreen";
 import ApsCalculatorScreen from "./screens/ApsCalculatorScreen";
@@ -33,6 +34,11 @@ function AppNavigator() {
           name="Splash"
           component={SplashScreen}
           options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Onboarding"
+          component={OnboardingScreen}
+          options={{ headerShown: false, gestureEnabled: false }}
         />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
