@@ -8,6 +8,7 @@ import {
   View,
 } from "react-native";
 import { useProfile } from "../context/ProfileContext";
+import { useBookmarks } from "../context/BookmarksContext";
 
 const BAR_MARGIN = 16;
 const BAR_MAX_WIDTH = 520;
@@ -25,6 +26,7 @@ const TAB_ICONS = {
 
 export default function NavBar({ state, descriptors, navigation, insets }) {
   const { colors } = useProfile();
+  const { bookmarkedFundingIds } = useBookmarks();
   const { width: screenWidth } = useWindowDimensions();
   const safeBottom = insets?.bottom || 0;
   const barWidth = Math.min(screenWidth - BAR_MARGIN * 2, BAR_MAX_WIDTH);
@@ -76,11 +78,18 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
                 pressed && styles.tabPressed,
               ]}
             >
-              <Ionicons
-                name={TAB_ICONS[route.name] || "ellipse-outline"}
-                size={23}
-                color={itemColor}
-              />
+              <View style={styles.iconWrap}>
+                <Ionicons
+                  name={TAB_ICONS[route.name] || "ellipse-outline"}
+                  size={23}
+                  color={itemColor}
+                />
+                {route.name === "Funding" && bookmarkedFundingIds.length > 0 && (
+                  <View style={styles.badge} accessibilityLabel={`${bookmarkedFundingIds.length} saved bursaries`}>
+                    <Text style={styles.badgeText}>{bookmarkedFundingIds.length > 9 ? "9+" : bookmarkedFundingIds.length}</Text>
+                  </View>
+                )}
+              </View>
               <Text
                 numberOfLines={1}
                 style={[
@@ -130,6 +139,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   tabPressed: { opacity: 0.6 },
+  iconWrap: { position: "relative" },
+  badge: { position: "absolute", top: -8, right: -11, minWidth: 17, height: 17, paddingHorizontal: 4, borderRadius: 9, backgroundColor: "#D94B4B", alignItems: "center", justifyContent: "center", borderWidth: 1.5, borderColor: "#FFFFFF" },
+  badgeText: { color: "#FFFFFF", fontSize: 9, fontWeight: "800", lineHeight: 11 },
   label: {
     maxWidth: "100%",
     marginTop: 4,

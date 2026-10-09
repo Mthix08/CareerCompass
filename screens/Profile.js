@@ -78,7 +78,7 @@ function QuickLink({ icon, label, badge, onPress, styles }) {
 }
 
 export default function ProfileScreen({ navigation }) {
-  const { bookmarkedCourseIds, bookmarkedIds } = useBookmarks();
+  const { bookmarkedCourseIds, bookmarkedIds, bookmarkedFundingIds } = useBookmarks();
   const {
     profile,
     isGuest,
@@ -91,7 +91,7 @@ export default function ProfileScreen({ navigation }) {
     clearSuccessMessage,
     clearSession,
   } = useProfile();
-  const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length} saved`;
+  const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length + bookmarkedFundingIds.length} saved`;
   const latestApsRecord = getLatestApsRecord(profile?.apsRecords);
   const apsBadge = latestApsRecord ? `Score: ${latestApsRecord.totalAps}` : "Not calculated";
   const styles = useMemo(() => createStyles(colors), [colors]);
@@ -335,8 +335,8 @@ export default function ProfileScreen({ navigation }) {
             icon="bookmark-outline"
             label={
               isGuest ?
-                "Saved Courses (limited)"
-                : "Saved Universities & Courses"
+                "Saved Items"
+                : "Saved Universities, Courses & Bursaries"
             }
             badge={savedItemsLabel}
             onPress={() => navigation.navigate("Bookmarks")}
