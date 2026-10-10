@@ -26,7 +26,12 @@ const TAB_ICONS = {
 
 export default function NavBar({ state, descriptors, navigation, insets }) {
   const { colors } = useProfile();
-  const { bookmarkedFundingIds } = useBookmarks();
+  const { bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds } = useBookmarks();
+  const bookmarkCounts = {
+    Funding: bookmarkedFundingIds.length,
+    Universities: bookmarkedIds.length,
+    Courses: bookmarkedCourseIds.length,
+  };
   const { width: screenWidth } = useWindowDimensions();
   const safeBottom = insets?.bottom || 0;
   const barWidth = Math.min(screenWidth - BAR_MARGIN * 2, BAR_MAX_WIDTH);
@@ -84,9 +89,9 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
                   size={23}
                   color={itemColor}
                 />
-                {route.name === "Funding" && bookmarkedFundingIds.length > 0 && (
-                  <View style={styles.badge} accessibilityLabel={`${bookmarkedFundingIds.length} saved bursaries`}>
-                    <Text style={styles.badgeText}>{bookmarkedFundingIds.length > 9 ? "9+" : bookmarkedFundingIds.length}</Text>
+                {bookmarkCounts[route.name] > 0 && (
+                  <View style={styles.badge} accessibilityLabel={`${bookmarkCounts[route.name]} saved ${route.name.toLowerCase()}`}>
+                    <Text style={styles.badgeText}>{bookmarkCounts[route.name] > 9 ? "9+" : bookmarkCounts[route.name]}</Text>
                   </View>
                 )}
               </View>
