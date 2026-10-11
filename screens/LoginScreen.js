@@ -14,12 +14,13 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { doc, getDoc } from "firebase/firestore";
 import { useProfile } from "../context/ProfileContext";
-import { auth } from "./firebaseConfig";
+import { auth, db } from "./firebaseConfig";
 import { signInWithGoogle } from "./googleAuth";
 
 const LOGIN_FAILURE_LIMIT = 3;
-const COOLDOWN_STEPS_SECONDS = [30, 60, 120, 240, 300];
+const LOGIN_COOLDOWN_SECONDS = 30;
 
 function isCredentialFailure(error) {
   return [
@@ -35,10 +36,11 @@ export default function LoginScreen({ navigation }) {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isHintLoading, setIsHintLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+  const [passwordHintMessage, setPasswordHintMessage] = useState("");
   const [errors, setErrors] = useState({ email: "", password: "" });
   const [failedAttempts, setFailedAttempts] = useState(0);
-  const [cooldownLevel, setCooldownLevel] = useState(0);
   const [cooldownSeconds, setCooldownSeconds] = useState(0);
   const isCoolingDown = cooldownSeconds > 0;
   const cooldownTimer = useRef(null);
@@ -61,12 +63,41 @@ export default function LoginScreen({ navigation }) {
   }, [isCoolingDown]);
 
   const startCooldown = () => {
-    const duration = COOLDOWN_STEPS_SECONDS[
-      Math.min(cooldownLevel, COOLDOWN_STEPS_SECONDS.length - 1)
-    ];
-    setCooldownLevel((level) => Math.min(level + 1, COOLDOWN_STEPS_SECONDS.length - 1));
     setFailedAttempts(0);
-    setCooldownSeconds(duration);
+    setCooldownSeconds(LOGIN_COOLDOWN_SECONDS);
+  };
+
+  const handleShowPasswordHint = async () => {
+    const normalizedEmail = email.trim().toLowerCase();
+    setPasswordHintMessage("");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
+      setErrors((current) => ({
+        ...current,
+        email: "Enter a valid email address first.",
+      }));
+      return;
+    }
+
+    try {
+      setIsHintLoading(true);
+      const hintSnapshot = await getDoc(
+        doc(db, "passwordHints", encodeURIComponent(normalizedEmail)),
+      );
+      setPasswordHintMessage(
+        hintSnapshot.exists() && hintSnapshot.data().hint
+          ? `Your password hint: ${hintSnapshot.data().hint}`
+          : "No password hint is saved for this email. You can use Forgot password to reset your password.",
+      );
+    } catch (error) {
+      setPasswordHintMessage(
+        error.code === "permission-denied" ||
+          error.code === "firestore/permission-denied"
+          ? "Firestore rules are blocking access to password hints. Allow a single-document get on passwordHints for login, without allowing collection listing."
+          : "Could not load your password hint. Check your connection and try again, or use Forgot password.",
+      );
+    } finally {
+      setIsHintLoading(false);
+    }
   };
 
   const handleGoogleLogin = async () => {
@@ -105,7 +136,6 @@ export default function LoginScreen({ navigation }) {
       setIsLoading(true);
       await signInWithEmailAndPassword(auth, email.trim(), password);
       setFailedAttempts(0);
-      setCooldownLevel(0);
       navigation.reset({ index: 0, routes: [{ name: "Home" }] });
     } catch (error) {
       if (isCredentialFailure(error)) {
@@ -223,6 +253,27 @@ export default function LoginScreen({ navigation }) {
             </TouchableOpacity>
           </View>
           {!!errors.password && <Text style={styles.errorText} accessibilityRole="alert">{errors.password}</Text>}
+
+          <TouchableOpacity
+            style={styles.hintButton}
+            activeOpacity={0.8}
+            onPress={handleShowPasswordHint}
+            disabled={isHintLoading || isLoading}
+            accessibilityRole="button"
+            accessibilityState={{ disabled: isHintLoading || isLoading, busy: isHintLoading }}
+          >
+            <Text style={styles.hintButtonText}>
+              {isHintLoading ? "Loading password hint..." : "Show password hint"}
+            </Text>
+          </TouchableOpacity>
+          {!!passwordHintMessage && (
+            <Text
+              style={styles.passwordHintMessage}
+              accessibilityRole="alert"
+            >
+              {passwordHintMessage}
+            </Text>
+          )}
 
           <TouchableOpacity
             style={styles.forgotContainer}
@@ -399,6 +450,23 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     color: "#176F68",
     textDecorationLine: "underline",
+  },
+  hintButton: {
+    alignSelf: "flex-start",
+    marginTop: 16,
+    paddingVertical: 6,
+  },
+  hintButtonText: {
+    fontSize: 14.5,
+    fontWeight: "600",
+    color: "#176F68",
+    textDecorationLine: "underline",
+  },
+  passwordHintMessage: {
+    marginTop: 6,
+    color: "#526078",
+    fontSize: 13,
+    lineHeight: 18,
   },
 
   loginButton: {

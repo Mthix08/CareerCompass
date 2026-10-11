@@ -23,9 +23,6 @@ import {
 } from "../components/HomeComponents";
 import { useProfile } from "../context/ProfileContext";
 import { MOCK_APPLICATION_DEADLINES } from "../data/homeMockData";
-import {
-  MOCK_APPLICATION_DEADLINES,
-} from "../data/homeMockData";
 import { universities } from "../data/universities";
 import { getApsUniversityMatches, getLatestApsRecord } from "../data/apsMatching";
 

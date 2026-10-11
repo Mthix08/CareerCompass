@@ -22,7 +22,6 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { addDoc, collection, getDocs } from "firebase/firestore";
 
 import { universities } from "../data/universities";
 import { useProfile } from "../context/ProfileContext";
@@ -314,7 +313,6 @@ export default function Applications({ navigation }) {
   const [applications, setApplications] = useState([]);
   const [formVisible, setFormVisible] = useState(false);
   const [loadedScope, setLoadedScope] = useState(null);
-  const { firebaseUser } = useProfile();
   const userId = firebaseUser?.uid ?? null;
   const storageScope = userId ?? "guest";
 
@@ -388,43 +386,6 @@ export default function Applications({ navigation }) {
         application,
       ).catch((error) => console.warn("Unable to sync application to Firestore.", error));
     }
-  };
-
-  useEffect(() => {
-    let active = true;
-    if (!firebaseUser) {
-      setApplications([]);
-      return undefined;
-    }
-
-    getDocs(collection(db, "users", firebaseUser.uid, "applications"))
-      .then((snapshot) => {
-        if (!active) return;
-        setApplications(
-          snapshot.docs
-            .map((applicationDoc) => ({ id: applicationDoc.id, ...applicationDoc.data() }))
-            .sort((a, b) => (b.createdAt?.toMillis?.() || 0) - (a.createdAt?.toMillis?.() || 0)),
-        );
-      })
-      .catch(() => {
-        if (active) setApplications([]);
-      });
-
-    return () => {
-      active = false;
-    };
-  }, [firebaseUser]);
-
-  const saveApplication = async (application) => {
-    if (!firebaseUser) return;
-    const applicationRef = await addDoc(
-      collection(db, "users", firebaseUser.uid, "applications"),
-      { ...application, createdAt: new Date() },
-    );
-    setApplications((current) => [
-      { ...application, id: applicationRef.id },
-      ...current,
-    ]);
   };
 
   return (

@@ -17,7 +17,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
 
-import { useProfile } from "../context/ProfileContext";
+
 import {
   getInstitutionalApsScores,
   getMatchedUniversityCount,
