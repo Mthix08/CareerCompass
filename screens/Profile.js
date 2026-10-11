@@ -25,8 +25,8 @@ import { deleteDoc, doc } from "firebase/firestore";
 
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
-import { auth, db } from "./firebaseConfig";
-import { signInWithGoogle } from "./googleAuth";
+import { getLatestApsRecord } from "../data/apsMatching";
+import { auth } from "./firebaseConfig";
 
 const THEMES = ["Light", "Dark", "System"];
 
@@ -88,7 +88,7 @@ function QuickLink({ icon, label, badge, onPress, styles }) {
 }
 
 export default function ProfileScreen({ navigation }) {
-  const { bookmarkedCourseIds, bookmarkedIds } = useBookmarks();
+  const { bookmarkedCourseIds, bookmarkedIds, bookmarkedFundingIds } = useBookmarks();
   const {
     profile,
     isGuest,
@@ -101,8 +101,9 @@ export default function ProfileScreen({ navigation }) {
     clearSuccessMessage,
     clearSession,
   } = useProfile();
-  const apsScore = profile?.apsScore || 0;
-  const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length} saved`;
+  const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length + bookmarkedFundingIds.length} saved`;
+  const latestApsRecord = getLatestApsRecord(profile?.apsRecords);
+  const apsBadge = latestApsRecord ? `Score: ${latestApsRecord.totalAps}` : "Not calculated";
   const styles = useMemo(() => createStyles(colors), [colors]);
   const scrollRef = useRef(null);
   const [deletePassword, setDeletePassword] = React.useState("");
@@ -425,8 +426,8 @@ export default function ProfileScreen({ navigation }) {
             icon="bookmark-outline"
             label={
               isGuest ?
-                "Saved Courses (limited)"
-                : "Saved Universities & Courses"
+                "Saved Items"
+                : "Saved Universities, Courses & Bursaries"
             }
             badge={savedItemsLabel}
             onPress={() => navigation.navigate("Bookmarks")}
@@ -435,7 +436,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="briefcase-outline"
             label="My Applications"
-            badge="0"
+            badge={`${profile.applicationCount ?? 0} submitted`}
             onPress={() =>
               accountOnly(() => navigation.navigate("Applications"))
             }
@@ -444,7 +445,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="calculator-outline"
             label="APS Calculator"
-            badge={`Score: ${apsScore}`}
+            badge={apsBadge}
             onPress={() => navigation.navigate("ApsCalculator")}
             styles={styles}
           />
