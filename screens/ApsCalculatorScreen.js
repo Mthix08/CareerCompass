@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
@@ -349,69 +349,57 @@ const getSavedPeriodsFromProfile = (apsRecords = {}) => {
 export default function ApsCalculatorScreen({ navigation }) {
   const { profile, saveApsRecord } = useProfile();
   const [selectedPeriod, setSelectedPeriod] = useState(PERIODS[0]);
-  const [marksByPeriod, setMarksByPeriod] = useState(() =>
-    getMarksByPeriodFromProfile(profile.apsRecords),
-  );
-  const [savedPeriods, setSavedPeriods] = useState(() =>
-    getSavedPeriodsFromProfile(profile.apsRecords),
-  );
+  const [marksByPeriod, setMarksByPeriod] = useState({});
+  const [editedPeriods, setEditedPeriods] = useState([]);
   const [pickerVisible, setPickerVisible] = useState(false);
   const [apsResult, setApsResult] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
-  const currentMarks = marksByPeriod[selectedPeriod];
+  const currentMarks =
+    marksByPeriod[selectedPeriod] ??
+    profile.apsRecords?.[selectedPeriod]?.marks ??
+    [];
 
-  useEffect(() => {
-    const savedRecords = profile.apsRecords || {};
-    const savedPeriodsForProfile = getSavedPeriodsFromProfile(savedRecords);
-
-    const timer = setTimeout(() => {
-      setMarksByPeriod((current) => ({
-        ...current,
-        ...Object.fromEntries(
-          savedPeriodsForProfile.map((period) => [
-            period,
-            savedRecords[period].marks,
-          ]),
-        ),
-      }));
-      setSavedPeriods(savedPeriodsForProfile);
-    }, 0);
-
-    return () => clearTimeout(timer);
-  }, [profile.apsRecords]);
+  const markPeriodEdited = () => {
+    setEditedPeriods((current) =>
+      current.includes(selectedPeriod) ? current : [...current, selectedPeriod],
+    );
+  };
 
   const addSubject = (subject) => {
     setMarksByPeriod((current) => ({
       ...current,
-      [selectedPeriod]: [...current[selectedPeriod], { subject, mark: "" }],
+      [selectedPeriod]: [
+        ...(current[selectedPeriod] ??
+          profile.apsRecords?.[selectedPeriod]?.marks ??
+          []),
+        { subject, mark: "" },
+      ],
     }));
-    setSavedPeriods((current) =>
-      current.filter((period) => period !== selectedPeriod),
-    );
+    markPeriodEdited();
   };
 
   const updateMark = (subject, mark) => {
     setMarksByPeriod((current) => ({
       ...current,
-      [selectedPeriod]: current[selectedPeriod].map((item) =>
-        item.subject === subject ? { ...item, mark } : item,
-      ),
+      [selectedPeriod]: (
+        current[selectedPeriod] ??
+        profile.apsRecords?.[selectedPeriod]?.marks ??
+        []
+      ).map((item) => item.subject === subject ? { ...item, mark } : item),
     }));
-    setSavedPeriods((current) =>
-      current.filter((period) => period !== selectedPeriod),
-    );
+    markPeriodEdited();
   };
 
   const removeSubject = (subject) => {
     setMarksByPeriod((current) => ({
       ...current,
-      [selectedPeriod]: current[selectedPeriod].filter(
-        (item) => item.subject !== subject,
-      ),
+      [selectedPeriod]: (
+        current[selectedPeriod] ??
+        profile.apsRecords?.[selectedPeriod]?.marks ??
+        []
+      ).filter((item) => item.subject !== subject),
     }));
-    setSavedPeriods((current) =>
-      current.filter((period) => period !== selectedPeriod),
-    );
+    markPeriodEdited();
   };
 
   const saveMarks = async () => {
@@ -433,6 +421,13 @@ export default function ApsCalculatorScreen({ navigation }) {
     const eligibleMarks = currentMarks.filter(
       ({ subject }) => subject.toLowerCase() !== "life orientation",
     );
+    if (eligibleMarks.length === 0) {
+      Alert.alert(
+        "Add an APS subject",
+        "Life Orientation is not included in this estimate. Add at least one other subject before saving.",
+      );
+      return;
+    }
     const totalAps = eligibleMarks.reduce(
       (total, { mark }) => total + getAchievementLevel(mark),
       0,
@@ -447,8 +442,12 @@ export default function ApsCalculatorScreen({ navigation }) {
     try {
       setIsSaving(true);
       await saveApsRecord(selectedPeriod, result);
-      setSavedPeriods((current) =>
-        current.includes(selectedPeriod) ? current : [...current, selectedPeriod],
+      setMarksByPeriod((current) => {
+        const { [selectedPeriod]: _savedMarks, ...remainingMarks } = current;
+        return remainingMarks;
+      });
+      setEditedPeriods((current) =>
+        current.filter((period) => period !== selectedPeriod),
       );
       setApsResult(result);
     } catch (error) {
@@ -461,7 +460,9 @@ export default function ApsCalculatorScreen({ navigation }) {
     }
   };
 
-  const isSaved = savedPeriods.includes(selectedPeriod);
+  const isSaved =
+    !editedPeriods.includes(selectedPeriod) &&
+    Array.isArray(profile.apsRecords?.[selectedPeriod]?.marks);
 
   return (
     <SafeAreaView style={styles.container}>
