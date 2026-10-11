@@ -16,17 +16,54 @@ import { Ionicons } from "@expo/vector-icons";
 import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { auth, db } from "./firebaseConfig";
+import { signInWithGoogle } from "./googleAuth";
 
 export default function SignUpScreen({ navigation }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordHint, setPasswordHint] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [errors, setErrors] = useState({});
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+
+  const handleGoogleSignUp = async () => {
+    if (isLoading || isGoogleLoading) return;
+
+    try {
+      setIsGoogleLoading(true);
+      const credential = await signInWithGoogle();
+      const googleName = credential.user.displayName?.trim() || "Student";
+
+      await setDoc(
+        doc(db, "users", credential.user.uid),
+        {
+          name: googleName,
+          email: credential.user.email,
+          photoURL: credential.user.photoURL || "",
+          createdAt: serverTimestamp(),
+        },
+        { merge: true },
+      );
+
+      navigation?.reset({ index: 0, routes: [{ name: "Home" }] });
+    } catch (error) {
+      if (error.code !== "auth/popup-closed-by-user") {
+        Alert.alert(
+          "Google sign-up unavailable",
+          error.code === "auth/google-client-id-missing"
+            ? "Add the Google OAuth client ID before using Google sign-in on mobile."
+            : "We could not create your account with Google. Please try again.",
+        );
+      }
+    } finally {
+      setIsGoogleLoading(false);
+    }
+  };
 
   const validateForm = () => {
     const nextErrors = {};
@@ -50,6 +87,12 @@ export default function SignUpScreen({ navigation }) {
         "Use at least 6 characters, including uppercase, lowercase, and a number.";
     }
 
+    if (!passwordHint.trim()) {
+      nextErrors.passwordHint = "Enter a hint to help you remember your password.";
+    } else if (passwordHint.trim().length > 120) {
+      nextErrors.passwordHint = "Keep your password hint under 120 characters.";
+    }
+
     if (!confirmPassword) {
       nextErrors.confirmPassword = "Please confirm your password.";
     } else if (confirmPassword !== password) {
@@ -64,19 +107,40 @@ export default function SignUpScreen({ navigation }) {
     setHasSubmitted(true);
     if (!validateForm() || isLoading) return;
 
+    let accountCreated = false;
     try {
       setIsLoading(true);
       const credential = await createUserWithEmailAndPassword(
         auth,
         email.trim().toLowerCase(),
         password,
+        console.log(password)
       );
+      accountCreated = true;
 
+      const normalizedEmail = credential.user.email?.trim().toLowerCase();
+      if (!normalizedEmail) {
+        throw new Error("The new account does not have an email address.");
+      }
       await setDoc(doc(db, "users", credential.user.uid), {
         name: name.trim(),
-        email: credential.user.email,
+        email: normalizedEmail,
         createdAt: serverTimestamp(),
       });
+      await setDoc(
+        doc(
+          db,
+          "passwordHints",
+          encodeURIComponent(normalizedEmail),
+        ),
+        {
+          uid: credential.user.uid,
+          email: normalizedEmail,
+          hint: passwordHint.trim(),
+          
+        },
+        
+      );
 
       await signOut(auth);
       navigation?.navigate("Login");
@@ -86,6 +150,11 @@ export default function SignUpScreen({ navigation }) {
         error.code === "auth/credential-already-in-use";
       const message = emailAlreadyExists
         ? "An account with this email already exists. Log in instead or use a different email address."
+        : error.code === "permission-denied" ||
+            error.code === "firestore/permission-denied"
+          ? accountCreated
+            ? "Your account was created, but Firestore rules blocked saving the password hint. Update the Firestore rules for the passwordHints collection, then create a new hint for this account."
+            : "Firestore rules prevented this request. Check your Firebase permissions and try again."
         : error.code === "auth/invalid-email"
           ? "Enter a valid email address."
           : error.code === "auth/weak-password"
@@ -101,6 +170,12 @@ export default function SignUpScreen({ navigation }) {
         }));
       }
 
+      if (accountCreated && auth.currentUser) {
+        await signOut(auth).catch((signOutError) => {
+          console.warn("Unable to sign out after incomplete sign-up.", signOutError);
+        });
+      }
+
       Alert.alert("Sign-up failed", message);
     } finally {
       setIsLoading(false);
@@ -111,7 +186,7 @@ export default function SignUpScreen({ navigation }) {
     if (hasSubmitted) {
       validateForm();
     }
-  }, [name, email, password, confirmPassword, hasSubmitted]);
+  }, [name, email, password, passwordHint, confirmPassword, hasSubmitted]);
 
   const updateField = (field, value, setter) => {
     setter(value);
@@ -229,6 +304,40 @@ export default function SignUpScreen({ navigation }) {
             <Text style={styles.errorText}>{errors.password}</Text>
           )}
 
+          <Text style={[styles.label, styles.fieldLabel]}>Password hint</Text>
+          <View
+            style={[
+              styles.inputContainer,
+              errors.passwordHint && styles.inputError,
+            ]}
+          >
+            <Ionicons
+              name="help-circle-outline"
+              size={20}
+              color="#777"
+              style={styles.inputIcon}
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="A clue only you will understand"
+              placeholderTextColor="#A3A3A3"
+              value={passwordHint}
+              onChangeText={(value) =>
+                updateField("passwordHint", value, setPasswordHint)
+              }
+              maxLength={120}
+              autoCapitalize="sentences"
+              autoCorrect={false}
+            />
+          </View>
+          <Text style={styles.hintHelpText}>
+            Do not use your password or include enough information for someone
+            else to guess it.
+          </Text>
+          {errors.passwordHint && (
+            <Text style={styles.errorText}>{errors.passwordHint}</Text>
+          )}
+
           <Text style={[styles.label, styles.fieldLabel]}>
             Confirm password
           </Text>
@@ -269,13 +378,28 @@ export default function SignUpScreen({ navigation }) {
           )}
 
           <TouchableOpacity
-            style={[styles.signUpButton, isLoading && styles.buttonDisabled]}
+            style={[
+              styles.signUpButton,
+              (isLoading || isGoogleLoading) && styles.buttonDisabled,
+            ]}
             activeOpacity={0.8}
             onPress={handleSignUp}
-            disabled={isLoading}
+            disabled={isLoading || isGoogleLoading}
           >
             <Text style={styles.signUpButtonText}>
               {isLoading ? "Creating account..." : "Create account"}
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.googleButton, isGoogleLoading && styles.buttonDisabled]}
+            activeOpacity={0.8}
+            onPress={handleGoogleSignUp}
+            disabled={isLoading || isGoogleLoading}
+          >
+            <Ionicons name="logo-google" size={19} color="#4285F4" />
+            <Text style={styles.googleButtonText}>
+              {isGoogleLoading ? "Connecting..." : "Continue with Google"}
             </Text>
           </TouchableOpacity>
 
@@ -374,6 +498,12 @@ const styles = StyleSheet.create({
     fontSize: 13,
     lineHeight: 18,
   },
+  hintHelpText: {
+    marginTop: 7,
+    color: "#777",
+    fontSize: 13,
+    lineHeight: 18,
+  },
   signUpButton: {
     height: 65,
     borderRadius: 16,
@@ -394,6 +524,25 @@ const styles = StyleSheet.create({
   },
   buttonDisabled: {
     opacity: 0.65,
+  },
+
+  googleButton: {
+    height: 67,
+    borderRadius: 16,
+    borderWidth: 1.3,
+    borderColor: "#DEDCD7",
+    backgroundColor: "#FFFFFF",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 10,
+    marginTop: 12,
+  },
+
+  googleButtonText: {
+    fontSize: 17,
+    fontWeight: "700",
+    color: "#242B2A",
   },
 
   bottomTextContainer: {

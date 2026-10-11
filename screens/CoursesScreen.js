@@ -176,18 +176,19 @@ export default function CoursesScreen({ navigation, route }) {
   const [query, setQuery] = useState("");
   const [filters, setFilters] = useState(EMPTY_FILTERS);
   const [filterVisible, setFilterVisible] = useState(false);
+  const [matchedOnly, setMatchedOnly] = useState(false);
 
   useEffect(() => {
-    if (route.params?.universityId) {
-      setQuery("");
-      setFilters({ ...EMPTY_FILTERS, universityId: route.params.universityId });
-    }
-  }, [route.params?.universityId, route.params?.filterRequestId]);
+    setQuery("");
+    setFilters({ ...EMPTY_FILTERS, universityId: route.params?.universityId || null });
+    setMatchedOnly(Boolean(route.params?.matchedOnly));
+  }, [route.params?.universityId, route.params?.matchedOnly, route.params?.filterRequestId]);
 
   const filteredCourses = useMemo(() => {
     const search = query.trim().toLowerCase();
     const minimum = filters.minimumAps === "" ? null : Number(filters.minimumAps);
     const maximum = filters.maximumAps === "" ? null : Number(filters.maximumAps);
+    const apsByUniversity = route.params?.apsByUniversity || {};
 
     return courseExamples.filter((course) => {
       const matchesSearch = !search || `${course.name} ${course.universityName} ${course.universityShortName}`.toLowerCase().includes(search);
@@ -198,9 +199,15 @@ export default function CoursesScreen({ navigation, route }) {
         || (filters.type === "Diploma" && /diploma/i.test(course.qualificationType))
         || course.qualificationType === filters.type;
       const matchesUniversity = !filters.universityId || course.universityId === filters.universityId;
-      return matchesSearch && matchesMinimum && matchesMaximum && matchesType && matchesUniversity;
+      const universityScore = apsByUniversity[course.universityId]?.score;
+      const matchesAps = !matchedOnly || (
+        typeof universityScore === "number"
+        && typeof course.minimumAps === "number"
+        && universityScore >= course.minimumAps
+      );
+      return matchesSearch && matchesMinimum && matchesMaximum && matchesType && matchesUniversity && matchesAps;
     });
-  }, [filters, query]);
+  }, [filters, matchedOnly, query, route.params?.apsByUniversity]);
 
   const activeFilterCount = [filters.minimumAps, filters.maximumAps, filters.type, filters.universityId].filter(Boolean).length;
 
@@ -208,11 +215,24 @@ export default function CoursesScreen({ navigation, route }) {
     <SafeAreaView style={styles.container} edges={["top", "left", "right"]}>
       <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />
       <View style={styles.header}>
-        <Text style={styles.title}>Courses</Text>
-        <Text style={styles.subtitle}>See which courses may fit your study goals</Text>
+        <Text style={styles.title}>{matchedOnly ? "Matching Courses" : "Courses"}</Text>
+        <Text style={styles.subtitle}>{matchedOnly ? `Based on your saved APS ${route.params?.apsScore ?? ""}` : "See which courses may fit your study goals"}</Text>
         <View style={styles.countBadge}>
-          <Text style={styles.countBadgeText}>{courseExamples.length} courses</Text>
+          <Text style={styles.countBadgeText}>{matchedOnly ? filteredCourses.length : courseExamples.length} courses</Text>
         </View>
+        {matchedOnly && (
+          <Pressable
+            onPress={() => {
+              setMatchedOnly(false);
+              setFilters(EMPTY_FILTERS);
+              setQuery("");
+            }}
+            accessibilityRole="button"
+            style={({ pressed }) => [styles.matchedResetButton, pressed && styles.pressed]}
+          >
+            <Text style={styles.matchedResetText}>Show all courses</Text>
+          </Pressable>
+        )}
       </View>
 
       <View style={styles.searchRow}>
@@ -259,6 +279,8 @@ const styles = StyleSheet.create({
   subtitle: { marginTop: 5, color: "#D8F3EF", fontSize: 14, fontWeight: "600" },
   countBadge: { alignSelf: "flex-start", marginTop: 15, paddingHorizontal: 12, paddingVertical: 7, borderRadius: 999, backgroundColor: "rgba(255,255,255,0.17)" },
   countBadgeText: { color: "#FFFFFF", fontSize: 12, fontWeight: "800" },
+  matchedResetButton: { alignSelf: "flex-start", marginTop: 8, paddingVertical: 5 },
+  matchedResetText: { color: "#FFFFFF", fontSize: 12, fontWeight: "800", textDecorationLine: "underline" },
   searchRow: { padding: 18, paddingBottom: 12, flexDirection: "row", gap: 10 },
   searchShell: { flex: 1, minHeight: 52, paddingHorizontal: 14, borderRadius: 15, borderWidth: 1, borderColor: COLORS.border, flexDirection: "row", alignItems: "center", backgroundColor: COLORS.surface },
   searchInput: { flex: 1, minHeight: 50, marginLeft: 9, color: COLORS.text, fontSize: 14 },

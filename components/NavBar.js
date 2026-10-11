@@ -8,6 +8,7 @@ import {
   View,
 } from "react-native";
 import { useProfile } from "../context/ProfileContext";
+import { useBookmarks } from "../context/BookmarksContext";
 
 const BAR_MARGIN = 16;
 const BAR_MAX_WIDTH = 520;
@@ -25,6 +26,12 @@ const TAB_ICONS = {
 
 export default function NavBar({ state, descriptors, navigation, insets }) {
   const { colors } = useProfile();
+  const { bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds } = useBookmarks();
+  const bookmarkCounts = {
+    Funding: bookmarkedFundingIds.length,
+    Universities: bookmarkedIds.length,
+    Courses: bookmarkedCourseIds.length,
+  };
   const { width: screenWidth } = useWindowDimensions();
   const safeBottom = insets?.bottom || 0;
   const barWidth = Math.min(screenWidth - BAR_MARGIN * 2, BAR_MAX_WIDTH);
@@ -49,6 +56,8 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
     navigation.emit({ type: "tabLongPress", target: route.key });
   };
 
+  const openAssistant = () => navigation.getParent()?.navigate("Assistant");
+
   return (
     <View
       style={[
@@ -56,6 +65,17 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
         { backgroundColor: screenBackground, paddingBottom: safeBottom + 10 },
       ]}
     >
+      <Pressable
+        onPress={openAssistant}
+        accessibilityRole="button"
+        accessibilityLabel="Open CareerCompass Assistant"
+        style={({ pressed }) => [
+          styles.assistantButton,
+          pressed && styles.tabPressed,
+        ]}
+      >
+        <Ionicons name="sparkles-outline" size={23} color="#FFFFFF" />
+      </Pressable>
       <View style={[styles.card, { width: barWidth }]}>
         {state.routes.map((route, index) => {
           const options = descriptors[route.key].options;
@@ -76,11 +96,18 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
                 pressed && styles.tabPressed,
               ]}
             >
-              <Ionicons
-                name={TAB_ICONS[route.name] || "ellipse-outline"}
-                size={23}
-                color={itemColor}
-              />
+              <View style={styles.iconWrap}>
+                <Ionicons
+                  name={TAB_ICONS[route.name] || "ellipse-outline"}
+                  size={23}
+                  color={itemColor}
+                />
+                {bookmarkCounts[route.name] > 0 && (
+                  <View style={styles.badge} accessibilityLabel={`${bookmarkCounts[route.name]} saved ${route.name.toLowerCase()}`}>
+                    <Text style={styles.badgeText}>{bookmarkCounts[route.name] > 9 ? "9+" : bookmarkCounts[route.name]}</Text>
+                  </View>
+                )}
+              </View>
               <Text
                 numberOfLines={1}
                 style={[
@@ -107,6 +134,26 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingTop: 8,
     alignItems: "center",
+    position: "relative",
+  },
+  assistantButton: {
+    position: "absolute",
+    right: 24,
+    top: -28,
+    zIndex: 2,
+    width: 54,
+    height: 54,
+    borderRadius: 27,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: ACTIVE_COLOR,
+    borderWidth: 4,
+    borderColor: "#FFFFFF",
+    elevation: 8,
+    shadowColor: "#102D36",
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.22,
+    shadowRadius: 6,
   },
   card: {
     height: BAR_HEIGHT,
@@ -130,6 +177,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   tabPressed: { opacity: 0.6 },
+  iconWrap: { position: "relative" },
+  badge: { position: "absolute", top: -8, right: -11, minWidth: 17, height: 17, paddingHorizontal: 4, borderRadius: 9, backgroundColor: "#D94B4B", alignItems: "center", justifyContent: "center", borderWidth: 1.5, borderColor: "#FFFFFF" },
+  badgeText: { color: "#FFFFFF", fontSize: 9, fontWeight: "800", lineHeight: 11 },
   label: {
     maxWidth: "100%",
     marginTop: 4,

@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -7,6 +7,7 @@ import UniversityCard from "../components/Varsity-Card";
 import { useBookmarks } from "../context/BookmarksContext";
 import { universities } from "../data/universities";
 import { courseExamples } from "../data/courseExamples";
+import { fetchBursaries } from "../data/funding";
 
 function SavedCourseCard({ course, onPress, onRemove }) {
   return (
@@ -44,9 +45,20 @@ export default function Bookmarks({ navigation }) {
   const {
     bookmarkedCourseIds,
     bookmarkedIds,
+    bookmarkedFundingIds,
+    bookmarkedFunding,
     removeBookmark,
     removeCourseBookmark,
+    removeFundingBookmark,
+    updateFundingBookmarkDetails,
   } = useBookmarks();
+  useEffect(() => {
+    let mounted = true;
+    fetchBursaries().then((items) => {
+      if (mounted) updateFundingBookmarkDetails(items);
+    });
+    return () => { mounted = false; };
+  }, [updateFundingBookmarkDetails]);
   const bookmarkedUniversities = useMemo(
     () =>
       universities
@@ -61,7 +73,13 @@ export default function Bookmarks({ navigation }) {
         .sort((a, b) => a.name.localeCompare(b.name)),
     [bookmarkedCourseIds],
   );
-  const totalBookmarks = bookmarkedUniversities.length + bookmarkedCourses.length;
+  const savedFunding = useMemo(
+    () => bookmarkedFunding
+      .filter(({ id }) => bookmarkedFundingIds.includes(String(id)))
+      .sort((a, b) => a.name.localeCompare(b.name)),
+    [bookmarkedFunding, bookmarkedFundingIds],
+  );
+  const totalBookmarks = bookmarkedUniversities.length + bookmarkedCourses.length + bookmarkedFundingIds.length;
 
   return (
     <SafeAreaView style={styles.container} edges={["left", "right", "bottom"]}>
@@ -91,6 +109,19 @@ export default function Bookmarks({ navigation }) {
                   ))}
                 </View>
               )}
+              {savedFunding.length > 0 && (
+                <View style={styles.savedCoursesSection}>
+                  <Text style={styles.sectionTitle}>Bursaries</Text>
+                  {savedFunding.map((funding) => (
+                    <SavedFundingCard
+                      key={funding.id}
+                      funding={funding}
+                      onPress={() => navigation.navigate("FundingDetails", { fundingId: funding.id })}
+                      onRemove={() => removeFundingBookmark(funding.id)}
+                    />
+                  ))}
+                </View>
+              )}
               {bookmarkedUniversities.length > 0 && <Text style={styles.universitySectionTitle}>Universities</Text>}
             </View>
           ) : null
@@ -102,7 +133,7 @@ export default function Bookmarks({ navigation }) {
             </View>
             <Text style={styles.emptyTitle}>No saved items yet</Text>
             <Text style={styles.emptyText}>
-              Bookmark a university or course to save it here.
+              Bookmark a university, course, or bursary to save it here.
             </Text>
           </View>
         ) : null}
@@ -118,6 +149,24 @@ export default function Bookmarks({ navigation }) {
         )}
       />
     </SafeAreaView>
+  );
+}
+
+function SavedFundingCard({ funding, onPress, onRemove }) {
+  return (
+    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={`Open ${funding.name} details`} style={({ pressed }) => [styles.courseCard, pressed && styles.cardPressed]}>
+      <View style={styles.courseIcon}>
+        <Ionicons name="wallet-outline" size={23} color="#117C72" />
+      </View>
+      <View style={styles.courseDetails}>
+        <Text style={styles.courseUniversity}>BURSARY</Text>
+        <Text style={styles.courseName} numberOfLines={2}>{funding.name}</Text>
+        <Text style={styles.courseMeta}>{funding.provider} · Closes {funding.closes}</Text>
+      </View>
+      <Pressable onPress={(event) => { event.stopPropagation?.(); onRemove(); }} accessibilityRole="button" accessibilityLabel={`Remove ${funding.name} from bookmarks`} hitSlop={8} style={styles.removeCourseButton}>
+        <Ionicons name="bookmark" size={22} color="#117C72" />
+      </Pressable>
+    </Pressable>
   );
 }
 

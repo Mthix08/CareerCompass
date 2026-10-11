@@ -61,19 +61,12 @@ const initialForm = {
 };
 
 function ApplicationForm({ visible, application, onClose, onSubmit }) {
-  const [form, setForm] = useState(initialForm);
+  const [form, setForm] = useState(() =>
+    application ? { ...initialForm, ...application } : initialForm,
+  );
   const [errors, setErrors] = useState({});
   const [universityMenuVisible, setUniversityMenuVisible] = useState(false);
   const [statusMenuVisible, setStatusMenuVisible] = useState(false);
-
-  useEffect(() => {
-    if (visible) {
-      setForm(application ? { ...initialForm, ...application } : initialForm);
-      setErrors({});
-      setUniversityMenuVisible(false);
-      setStatusMenuVisible(false);
-    }
-  }, [application, visible]);
 
   const universityOptions = useMemo(() => {
     const query = form.university.trim().toLowerCase();
@@ -330,6 +323,7 @@ export default function Applications({ navigation }) {
   const [applications, setApplications] = useState([]);
   const [formVisible, setFormVisible] = useState(false);
   const [editingApplication, setEditingApplication] = useState(null);
+  const [formSession, setFormSession] = useState(0);
   const [loadedScope, setLoadedScope] = useState(null);
   const { firebaseUser, setApplicationCount } = useProfile();
   const userId = firebaseUser?.uid ?? null;
@@ -338,9 +332,8 @@ export default function Applications({ navigation }) {
   useEffect(() => {
     let isActive = true;
     let unsubscribe;
-    setLoadedScope(null);
 
-    (async () => {
+    const loadApplications = async () => {
       let cachedApplications = [];
       try {
         const storedApplications = await AsyncStorage.getItem(
@@ -353,7 +346,9 @@ export default function Applications({ navigation }) {
       }
 
       if (!isActive) return;
-      setLoadedScope(storageScope);
+      if (storageScope !== loadedScope) {
+        setLoadedScope(storageScope);
+      }
       if (!userId) return;
 
       const applicationsRef = collection(db, "users", userId, "applications");
@@ -381,13 +376,15 @@ export default function Applications({ navigation }) {
       } catch (error) {
         console.warn("Unable to load applications from Firestore.", error);
       }
-    })();
+    };
+
+    loadApplications();
 
     return () => {
       isActive = false;
       unsubscribe?.();
     };
-  }, [storageScope, userId]);
+  }, [storageScope, userId, loadedScope]);
 
   useEffect(() => {
     if (loadedScope !== storageScope) return;
@@ -407,11 +404,13 @@ export default function Applications({ navigation }) {
   const openNewApplication = () => {
     setEditingApplication(null);
     setFormVisible(true);
+    setFormSession((current) => current + 1);
   };
 
   const openApplicationForEdit = (application) => {
     setEditingApplication(application);
     setFormVisible(true);
+    setFormSession((current) => current + 1);
   };
 
   const saveApplication = (application) => {
@@ -490,6 +489,7 @@ export default function Applications({ navigation }) {
       />
 
       <ApplicationForm
+        key={formSession}
         visible={formVisible}
         application={editingApplication}
         onClose={() => {

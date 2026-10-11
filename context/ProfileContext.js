@@ -2,8 +2,9 @@ import React, {
   createContext,
   useCallback,
   useContext,
-  useMemo,
   useEffect,
+  useMemo,
+  useRef,
   useState,
 } from "react";
 import { useColorScheme } from "react-native";
@@ -61,6 +62,7 @@ const initialProfile = {
 
 export function ProfileProvider({ children }) {
   const systemColorScheme = useColorScheme();
+  const guestModeRef = useRef(false);
   const [profile, setProfile] = useState(initialProfile);
   const [firebaseUser, setFirebaseUser] = useState(null);
   const [isGuest, setIsGuest] = useState(false);
@@ -73,7 +75,7 @@ export function ProfileProvider({ children }) {
       try {
         const storedTheme = await AsyncStorage.getItem(THEME_STORAGE_KEY);
         if (storedTheme) setThemePreferenceState(storedTheme);
-      } catch (error) {
+      } catch (_error) {
         // If storage fails, we just keep the default "Light" theme.
       }
     })();
@@ -88,14 +90,17 @@ export function ProfileProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    return auth.onAuthStateChanged(async (user) => {
+    const unsubscribe = auth.onAuthStateChanged(async (user) => {
       setFirebaseUser(user);
+
       if (!user) {
-        setIsGuest(false);
-        setProfile(initialProfile);
+        if (!guestModeRef.current) {
+          setProfile(initialProfile);
+        }
         return;
       }
 
+      guestModeRef.current = false;
       setIsGuest(false);
       const userSnapshot = await getDoc(doc(db, "users", user.uid));
       const storedProfile = userSnapshot.exists() ? userSnapshot.data() : {};
@@ -121,14 +126,18 @@ export function ProfileProvider({ children }) {
             : "Email",
       });
     });
+
+    return unsubscribe;
   }, []);
 
   const enterGuestMode = useCallback(() => {
+    guestModeRef.current = true;
     setIsGuest(true);
     setFirebaseUser(null);
     setProfile(initialProfile);
   }, []);
   const clearSession = useCallback(() => {
+    guestModeRef.current = false;
     setIsGuest(false);
     setFirebaseUser(null);
     setProfile(initialProfile);
@@ -164,7 +173,10 @@ export function ProfileProvider({ children }) {
             email: nextProfile.email,
             phone: nextProfile.phone,
             category: nextProfile.category,
+            location: nextProfile.location,
             photoURL,
+            notificationPreferences:
+              nextProfile.notificationPreferences || {},
           },
           { merge: true },
         );

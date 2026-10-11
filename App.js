@@ -5,6 +5,7 @@ import LoginScreen from "./screens/LoginScreen";
 import SignUpScreen from "./screens/SignUpScreen";
 import PassRecoveryScreen from "./screens/PassRecoveryScreen";
 import SplashScreen from "./screens/SplashScreen";
+import OnboardingScreen from "./screens/OnboardingScreen";
 import UniversityDetailsScreen from "./screens/UniversityDetailsScreen";
 import EditProfileScreen from "./screens/EditProfileScreen";
 import ApsCalculatorScreen from "./screens/ApsCalculatorScreen";
@@ -18,6 +19,7 @@ import NotificationPreferences from "./screens/NotificationPreferences";
 import LanguageScreen from "./screens/LanguageScreen";
 import FaqsScreen from "./screens/FaqsScreen";
 import CourseDetailsScreen from "./screens/CourseDetailsScreen";
+import AssistantScreen from "./screens/AssistantScreen";
 import ProspectusScreen from "./screens/ProspectusScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import { ProfileProvider } from "./context/ProfileContext";
@@ -33,6 +35,11 @@ function AppNavigator() {
           name="Splash"
           component={SplashScreen}
           options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Onboarding"
+          component={OnboardingScreen}
+          options={{ headerShown: false, gestureEnabled: false }}
         />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
@@ -115,6 +122,11 @@ function AppNavigator() {
           name="Faqs"
           component={FaqsScreen}
           options={{ title: "FAQs" }}
+        />
+        <Stack.Screen
+          name="Assistant"
+          component={AssistantScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -22,9 +22,7 @@ import {
   ViewAllUniversitiesCard,
 } from "../components/HomeComponents";
 import { useProfile } from "../context/ProfileContext";
-import {
-  MOCK_APPLICATION_DEADLINES,
-} from "../data/homeMockData";
+import { MOCK_APPLICATION_DEADLINES } from "../data/homeMockData";
 import { universities } from "../data/universities";
 import { getApsUniversityMatches, getLatestApsRecord } from "../data/apsMatching";
 
@@ -85,7 +83,12 @@ export default function HomeScreen({ navigation }) {
   );
 
   const openCourses = useCallback(
-    () => navigation.navigate("Courses"),
+    () => navigation.navigate("Courses", {
+      matchedOnly: false,
+      apsByUniversity: {},
+      apsScore: null,
+      filterRequestId: Date.now(),
+    }),
     [navigation],
   );
   const openUniversities = useCallback(
