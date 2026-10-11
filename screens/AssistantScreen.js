@@ -32,7 +32,7 @@ async function getAssistantAnswer(question) {
   if (!apiKey) return getLocalCareerCompassAnswer(question);
 
   const response = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -64,9 +64,9 @@ export default function AssistantScreen({ navigation }) {
   ]);
   const [question, setQuestion] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [voiceError, setVoiceError] = useState("");
-  const [isSpeaking, setIsSpeaking] = useState(false);
   const listRef = useRef(null);
 
   useSpeechRecognitionEvent("start", () => {
@@ -86,20 +86,21 @@ export default function AssistantScreen({ navigation }) {
     setVoiceError(
       event.error === "not-allowed" ?
         "Microphone permission is required for voice input."
-      : "Voice input could not hear that. Please try again.",
+      : event.error === "no-speech" ?
+        "No speech was detected. Tap the microphone and try again."
+      : "Voice input is unavailable. Check that speech recognition is enabled on your device.",
     );
   });
 
   useEffect(
     () => () => {
       Speech.stop();
-      ExpoSpeechRecognitionModule.stop();
+      ExpoSpeechRecognitionModule.abort();
     },
     [],
   );
 
   const speak = async (text) => {
-    setVoiceError("");
     Speech.stop();
     setIsSpeaking(true);
 
@@ -123,12 +124,10 @@ export default function AssistantScreen({ navigation }) {
         onStopped: () => setIsSpeaking(false),
         onError: () => {
           setIsSpeaking(false);
-          setVoiceError("Text-to-speech is unavailable on this device.");
         },
       });
     } catch {
       setIsSpeaking(false);
-      setVoiceError("Text-to-speech is unavailable on this device.");
     }
   };
 
@@ -165,23 +164,37 @@ export default function AssistantScreen({ navigation }) {
 
   const toggleVoiceInput = async () => {
     setVoiceError("");
+
     if (isListening) {
       ExpoSpeechRecognitionModule.stop();
       return;
     }
 
-    const permission =
-      await ExpoSpeechRecognitionModule.requestPermissionsAsync();
-    if (!permission.granted) {
-      setVoiceError("Microphone permission is required for voice input.");
-      return;
-    }
+    try {
+      if (!ExpoSpeechRecognitionModule.isRecognitionAvailable()) {
+        setVoiceError(
+          "Speech recognition is unavailable. Enable Siri & Dictation on iOS or install a speech service on Android.",
+        );
+        return;
+      }
 
-    ExpoSpeechRecognitionModule.start({
-      lang: "en-ZA",
-      interimResults: true,
-      continuous: false,
-    });
+      const permission =
+        await ExpoSpeechRecognitionModule.requestPermissionsAsync();
+      if (!permission.granted) {
+        setVoiceError("Allow microphone and speech access to use voice input.");
+        return;
+      }
+
+      ExpoSpeechRecognitionModule.start({
+        lang: "en-ZA",
+        interimResults: true,
+        maxAlternatives: 1,
+        continuous: false,
+      });
+    } catch {
+      setIsListening(false);
+      setVoiceError("Voice input could not start. Please try again.");
+    }
   };
 
   const styles = createStyles(colors);
@@ -203,7 +216,11 @@ export default function AssistantScreen({ navigation }) {
           </Pressable>
           <View style={styles.headerCopy}>
             <Text style={styles.title}>CareerCompass Assistant</Text>
-            <Text style={styles.status}>Ready to help with your next step</Text>
+            <Text style={styles.status}>
+              {isListening ?
+                "Listening... Tap the mic when finished"
+              : "Ready to help with your next step"}
+            </Text>
           </View>
           <View style={styles.headerIcon}>
             <Ionicons name="sparkles-outline" size={21} color="#FFFFFF" />
@@ -292,7 +309,7 @@ export default function AssistantScreen({ navigation }) {
             accessibilityLabel={
               isListening ? "Stop voice input" : "Start voice input"
             }
-            accessibilityState={{ busy: isListening }}
+            accessibilityState={{ busy: isListening, disabled: isLoading }}
           >
             <Ionicons
               name={isListening ? "mic" : "mic-outline"}
