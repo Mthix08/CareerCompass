@@ -17,12 +17,6 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
 
-
-import {
-  getInstitutionalApsScores,
-  getMatchedUniversityCount,
-} from "../data/apsMatching";
-
 const COLORS = {
   primary: "#117C72",
   primaryDark: "#0B665E",
@@ -340,13 +334,27 @@ function ApsResultModal({ result, onClose, onViewMatches }) {
   );
 }
 
+const getMarksByPeriodFromProfile = (apsRecords = {}) => {
+  const records = apsRecords || {};
+  return Object.fromEntries(
+    PERIODS.map((period) => [period, records[period]?.marks || []]),
+  );
+};
+
+const getSavedPeriodsFromProfile = (apsRecords = {}) => {
+  const records = apsRecords || {};
+  return PERIODS.filter((period) => Array.isArray(records[period]?.marks));
+};
+
 export default function ApsCalculatorScreen({ navigation }) {
   const { profile, saveApsRecord } = useProfile();
   const [selectedPeriod, setSelectedPeriod] = useState(PERIODS[0]);
   const [marksByPeriod, setMarksByPeriod] = useState(() =>
-    Object.fromEntries(PERIODS.map((period) => [period, []])),
+    getMarksByPeriodFromProfile(profile.apsRecords),
   );
-  const [savedPeriods, setSavedPeriods] = useState([]);
+  const [savedPeriods, setSavedPeriods] = useState(() =>
+    getSavedPeriodsFromProfile(profile.apsRecords),
+  );
   const [pickerVisible, setPickerVisible] = useState(false);
   const [apsResult, setApsResult] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -354,20 +362,22 @@ export default function ApsCalculatorScreen({ navigation }) {
 
   useEffect(() => {
     const savedRecords = profile.apsRecords || {};
-    const savedPeriodsForProfile = PERIODS.filter((period) =>
-      Array.isArray(savedRecords[period]?.marks),
-    );
+    const savedPeriodsForProfile = getSavedPeriodsFromProfile(savedRecords);
 
-    setMarksByPeriod((current) => ({
-      ...current,
-      ...Object.fromEntries(
-        savedPeriodsForProfile.map((period) => [
-          period,
-          savedRecords[period].marks,
-        ]),
-      ),
-    }));
-    setSavedPeriods(savedPeriodsForProfile);
+    const timer = setTimeout(() => {
+      setMarksByPeriod((current) => ({
+        ...current,
+        ...Object.fromEntries(
+          savedPeriodsForProfile.map((period) => [
+            period,
+            savedRecords[period].marks,
+          ]),
+        ),
+      }));
+      setSavedPeriods(savedPeriodsForProfile);
+    }, 0);
+
+    return () => clearTimeout(timer);
   }, [profile.apsRecords]);
 
   const addSubject = (subject) => {
