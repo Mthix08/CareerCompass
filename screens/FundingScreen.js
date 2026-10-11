@@ -1,20 +1,21 @@
 import React, { useMemo, useState, useEffect } from "react";
-import { ImageBackground, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { ActivityIndicator, ImageBackground, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
-import { NSFAS, SAMPLE_BURSARY, fetchBursaries, getFundingCountdown } from "../data/funding";
+import { useBookmarks } from "../context/BookmarksContext";
+import { NSFAS, fetchBursaries, getFundingCountdown } from "../data/funding";
 
 const NSFAS_IMAGE = require("../assets/nsfas.jpg");
-const FALLBACK_FUNDING_OPTIONS = [NSFAS, SAMPLE_BURSARY];
-
 export default function FundingScreen({ navigation }) {
   const { colors, resolvedTheme } = useProfile();
+  const { isFundingBookmarked, saveFundingBookmark, removeFundingBookmark, updateFundingBookmarkDetails } = useBookmarks();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [now, setNow] = useState(() => new Date());
   const [searchQuery, setSearchQuery] = useState("");
-  const [fundingOptions, setFundingOptions] = useState(FALLBACK_FUNDING_OPTIONS);
+  const [fundingOptions, setFundingOptions] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => setNow(new Date()), 60000);
@@ -23,15 +24,24 @@ export default function FundingScreen({ navigation }) {
 
   useEffect(() => {
     let mounted = true;
-    fetchBursaries().then((items) => {
-      if (mounted) {
-        setFundingOptions(items);
-      }
-    });
+    fetchBursaries()
+      .then((items) => {
+        if (mounted) {
+          setFundingOptions(items);
+          updateFundingBookmarkDetails(items);
+        }
+      })
+      .catch((error) => {
+        console.warn("Unable to load funding opportunities.", error);
+        if (mounted) setFundingOptions([]);
+      })
+      .finally(() => {
+        if (mounted) setIsLoading(false);
+      });
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [updateFundingBookmarkDetails]);
 
   const filteredOptions = useMemo(() => {
     const query = searchQuery.trim().toLocaleLowerCase();
@@ -52,9 +62,9 @@ export default function FundingScreen({ navigation }) {
         </Pressable>
         <Text style={styles.eyebrow}>STUDENT FUNDING</Text>
         <Text style={styles.title}>Funding</Text>
-        <Text style={styles.intro}>Explore support for your studies. Start with South Africa's national student funding scheme.</Text>
+        <Text style={styles.intro}>Explore support for your studies. Start with South Africa&apos;s national student funding scheme.</Text>
 
-        <View style={styles.searchBox}>
+        {!isLoading && <View style={styles.searchBox}>
           <Ionicons name="search-outline" size={21} color={colors.mutedText} />
           <TextInput
             value={searchQuery}
@@ -72,12 +82,23 @@ export default function FundingScreen({ navigation }) {
               <Ionicons name="close-circle" size={21} color={colors.mutedText} />
             </Pressable>
           )}
-        </View>
+        </View>}
 
         <Text style={styles.sectionTitle}>Funding opportunities</Text>
-        {filteredOptions.map((option) => {
+        {isLoading ? (
+          <View style={styles.loadingState} accessibilityRole="progressbar" accessibilityLabel="Loading bursaries">
+            <ActivityIndicator size="large" color={colors.primary} />
+            <Text style={styles.loadingTitle}>Loading bursaries</Text>
+            <Text style={styles.loadingText}>Fetching the latest funding opportunities…</Text>
+          </View>
+        ) : filteredOptions.map((option) => {
           const { days, isClosed } = getFundingCountdown(now, option);
           const isFeatured = option.id === NSFAS.id;
+          const bookmarked = isFundingBookmarked(option.id);
+          const toggleBookmark = (event) => {
+            event.stopPropagation?.();
+            bookmarked ? removeFundingBookmark(option.id) : saveFundingBookmark(option);
+          };
 
           return (
             <Pressable
@@ -93,7 +114,12 @@ export default function FundingScreen({ navigation }) {
                   <View style={styles.cardContent}>
                     <View style={styles.topRow}>
                       <View style={styles.featureBadge}><Text style={styles.featureBadgeText}>FEATURED FUNDING</Text></View>
-                      <Ionicons name="arrow-forward-circle" size={30} color="#FFFFFF" />
+                      <View style={styles.featureActions}>
+                        <Pressable onPress={toggleBookmark} accessibilityRole="button" accessibilityLabel={`${bookmarked ? "Remove" : "Add"} ${option.name} ${bookmarked ? "from" : "to"} bookmarks`} hitSlop={8} style={styles.featureBookmark}>
+                          <Ionicons name={bookmarked ? "bookmark" : "bookmark-outline"} size={20} color="#FFFFFF" />
+                        </Pressable>
+                        <Ionicons name="arrow-forward-circle" size={30} color="#FFFFFF" />
+                      </View>
                     </View>
                     <Text style={styles.cardTitle}>{option.name}</Text>
                     <Text style={styles.cardSubtitle}>{option.fullName}</Text>
@@ -115,20 +141,23 @@ export default function FundingScreen({ navigation }) {
                     <Text style={styles.listDescription}>{option.description}</Text>
                     <Text style={styles.listMeta}>{option.provider} · closes {option.closes}</Text>
                   </View>
+                  <Pressable onPress={toggleBookmark} accessibilityRole="button" accessibilityLabel={`${bookmarked ? "Remove" : "Add"} ${option.name} ${bookmarked ? "from" : "to"} bookmarks`} hitSlop={8} style={styles.listBookmark}>
+                    <Ionicons name={bookmarked ? "bookmark" : "bookmark-outline"} size={20} color={colors.primary} />
+                  </Pressable>
                   <Ionicons name="chevron-forward" size={20} color={colors.mutedText} />
                 </View>
               )}
             </Pressable>
           );
         })}
-        {filteredOptions.length === 0 && (
+        {!isLoading && filteredOptions.length === 0 && (
           <View style={styles.emptyState}>
             <Ionicons name="search-outline" size={32} color={colors.primary} />
             <Text style={styles.emptyTitle}>No bursaries found</Text>
             <Text style={styles.emptyText}>Try another name or clear your search.</Text>
           </View>
         )}
-        {!searchQuery.trim() && <View style={styles.comingSoon}>
+        {!isLoading && !searchQuery.trim() && <View style={styles.comingSoon}>
           <Ionicons name="add-circle-outline" size={24} color={colors.primary} />
           <View style={styles.comingSoonText}>
             <Text style={styles.comingSoonTitle}>Live bursary directory</Text>
@@ -152,6 +181,9 @@ function makeStyles(c) {
     searchBox: { flexDirection: "row", alignItems: "center", gap: 10, backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 14, paddingHorizontal: 15, height: 54, marginBottom: 28 },
     searchInput: { flex: 1, color: c.text, fontSize: 15, height: "100%" },
     sectionTitle: { color: c.text, fontSize: 20, fontWeight: "700", marginBottom: 14 },
+    loadingState: { minHeight: 190, alignItems: "center", justifyContent: "center", backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 18, padding: 24 },
+    loadingTitle: { color: c.text, fontSize: 16, fontWeight: "700", marginTop: 14 },
+    loadingText: { color: c.secondaryText, fontSize: 13, textAlign: "center", marginTop: 5 },
     featureCard: { borderRadius: 22, overflow: "hidden", elevation: 4, backgroundColor: c.primary },
     listCard: { backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 18, marginTop: 14 },
     listCardContent: { flexDirection: "row", alignItems: "center", gap: 12, padding: 17 },
@@ -169,6 +201,9 @@ function makeStyles(c) {
     shade: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0, 42, 42, 0.76)" },
     cardContent: { padding: 22 },
     topRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 30 },
+    featureActions: { flexDirection: "row", alignItems: "center", gap: 10 },
+    featureBookmark: { width: 38, height: 38, borderRadius: 13, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(255,255,255,0.18)" },
+    listBookmark: { width: 38, height: 38, borderRadius: 12, alignItems: "center", justifyContent: "center", backgroundColor: c.primarySoft },
     featureBadge: { backgroundColor: "rgba(255,255,255,0.2)", paddingHorizontal: 11, paddingVertical: 7, borderRadius: 50 },
     featureBadgeText: { color: "#FFFFFF", fontSize: 11, fontWeight: "800", letterSpacing: 0.8 },
     cardTitle: { color: "#FFFFFF", fontSize: 36, fontWeight: "800" },

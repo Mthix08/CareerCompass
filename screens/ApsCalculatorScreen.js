@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
@@ -15,6 +15,7 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useProfile } from "../context/ProfileContext";
 
 const COLORS = {
   primary: "#117C72",
@@ -325,6 +326,7 @@ function ApsResultModal({ result, onClose }) {
 }
 
 export default function ApsCalculatorScreen({ navigation }) {
+  const { profile, saveApsRecord } = useProfile();
   const [selectedPeriod, setSelectedPeriod] = useState(PERIODS[0]);
   const [marksByPeriod, setMarksByPeriod] = useState(() =>
     Object.fromEntries(PERIODS.map((period) => [period, []])),
@@ -332,7 +334,26 @@ export default function ApsCalculatorScreen({ navigation }) {
   const [savedPeriods, setSavedPeriods] = useState([]);
   const [pickerVisible, setPickerVisible] = useState(false);
   const [apsResult, setApsResult] = useState(null);
+  const [isSaving, setIsSaving] = useState(false);
   const currentMarks = marksByPeriod[selectedPeriod];
+
+  useEffect(() => {
+    const savedRecords = profile.apsRecords || {};
+    const savedPeriodsForProfile = PERIODS.filter((period) =>
+      Array.isArray(savedRecords[period]?.marks),
+    );
+
+    setMarksByPeriod((current) => ({
+      ...current,
+      ...Object.fromEntries(
+        savedPeriodsForProfile.map((period) => [
+          period,
+          savedRecords[period].marks,
+        ]),
+      ),
+    }));
+    setSavedPeriods(savedPeriodsForProfile);
+  }, [profile.apsRecords]);
 
   const addSubject = (subject) => {
     setMarksByPeriod((current) => ({
@@ -368,7 +389,8 @@ export default function ApsCalculatorScreen({ navigation }) {
     );
   };
 
-  const saveMarks = () => {
+  const saveMarks = async () => {
+    if (isSaving) return;
     if (currentMarks.length === 0) {
       Alert.alert(
         "Add subjects",
@@ -383,10 +405,6 @@ export default function ApsCalculatorScreen({ navigation }) {
       );
       return;
     }
-    setSavedPeriods((current) =>
-      current.includes(selectedPeriod) ? current : [...current, selectedPeriod],
-    );
-
     const eligibleMarks = currentMarks.filter(
       ({ subject }) => subject.toLowerCase() !== "life orientation",
     );
@@ -394,11 +412,28 @@ export default function ApsCalculatorScreen({ navigation }) {
       (total, { mark }) => total + getAchievementLevel(mark),
       0,
     );
-    setApsResult({
+    const result = {
       totalAps,
       subjectCount: eligibleMarks.length,
       period: selectedPeriod,
-    });
+      marks: currentMarks,
+    };
+
+    try {
+      setIsSaving(true);
+      await saveApsRecord(selectedPeriod, result);
+      setSavedPeriods((current) =>
+        current.includes(selectedPeriod) ? current : [...current, selectedPeriod],
+      );
+      setApsResult(result);
+    } catch (error) {
+      Alert.alert(
+        "Could not save APS",
+        error.message || "Check your connection and try again.",
+      );
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   const isSaved = savedPeriods.includes(selectedPeriod);
@@ -488,6 +523,7 @@ export default function ApsCalculatorScreen({ navigation }) {
       <View style={styles.footer}>
         <Pressable
           onPress={saveMarks}
+          disabled={isSaving}
           accessibilityRole="button"
           style={({ pressed }) => [
             styles.saveButton,
@@ -500,7 +536,7 @@ export default function ApsCalculatorScreen({ navigation }) {
             color="#FFFFFF"
           />
           <Text style={styles.saveButtonText}>
-            {isSaved ? "Update" : "Save"} {selectedPeriod} marks
+            {isSaving ? "Saving" : isSaved ? "Update" : "Save"} {selectedPeriod} marks
           </Text>
         </Pressable>
       </View>

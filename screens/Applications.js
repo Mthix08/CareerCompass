@@ -1,5 +1,13 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import {
+  collection,
+  doc,
+  getDocs,
+  onSnapshot,
+  setDoc,
+} from "firebase/firestore";
 import {
   FlatList,
   KeyboardAvoidingView,
@@ -16,6 +24,10 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { universities } from "../data/universities";
+import { useProfile } from "../context/ProfileContext";
+import { db } from "./firebaseConfig";
+
+const APPLICATIONS_STORAGE_KEY = "@careercompass:applications:";
 
 const COLORS = {
   primary: "#117C72",
@@ -48,11 +60,20 @@ const initialForm = {
   notes: "",
 };
 
-function ApplicationForm({ visible, onClose, onSubmit }) {
+function ApplicationForm({ visible, application, onClose, onSubmit }) {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [universityMenuVisible, setUniversityMenuVisible] = useState(false);
   const [statusMenuVisible, setStatusMenuVisible] = useState(false);
+
+  useEffect(() => {
+    if (visible) {
+      setForm(application ? { ...initialForm, ...application } : initialForm);
+      setErrors({});
+      setUniversityMenuVisible(false);
+      setStatusMenuVisible(false);
+    }
+  }, [application, visible]);
 
   const universityOptions = useMemo(() => {
     const query = form.university.trim().toLowerCase();
@@ -88,7 +109,7 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
     if (Object.keys(nextErrors).length > 0) return;
 
     onSubmit({
-      id: `${Date.now()}`,
+      id: application?.id || `${Date.now()}`,
       university: form.university.trim(),
       course: form.course.trim(),
       dateApplied: form.dateApplied.trim(),
@@ -118,7 +139,9 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
         <View style={styles.sheet}>
           <View style={styles.sheetHandle} />
           <View style={styles.sheetHeader}>
-            <Text style={styles.sheetTitle}>Track Application</Text>
+          <Text style={styles.sheetTitle}>
+            {application ? "Edit Application" : "Track Application"}
+          </Text>
             <Pressable
               onPress={closeForm}
               accessibilityRole="button"
@@ -257,7 +280,9 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
               accessibilityRole="button"
               style={({ pressed }) => [styles.submitButton, pressed && styles.pressed]}
             >
-              <Text style={styles.submitButtonText}>Track Application</Text>
+              <Text style={styles.submitButtonText}>
+                {application ? "Save Changes" : "Track Application"}
+              </Text>
             </Pressable>
           </ScrollView>
         </View>
@@ -266,9 +291,14 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
   );
 }
 
-function ApplicationCard({ application }) {
+function ApplicationCard({ application, onPress }) {
   return (
-    <View style={styles.card}>
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={`${application.university}, ${application.course}, status ${application.status.label}. Edit application`}
+      style={({ pressed }) => [styles.card, pressed && styles.pressed]}
+    >
       <View style={styles.cardTopRow}>
         <View style={styles.cardIcon}>
           <Ionicons name="school-outline" size={22} color={COLORS.primary} />
@@ -292,13 +322,111 @@ function ApplicationCard({ application }) {
         )}
       </View>
       {!!application.notes && <Text style={styles.cardNotes}>{application.notes}</Text>}
-    </View>
+    </Pressable>
   );
 }
 
 export default function Applications({ navigation }) {
   const [applications, setApplications] = useState([]);
   const [formVisible, setFormVisible] = useState(false);
+  const [editingApplication, setEditingApplication] = useState(null);
+  const [loadedScope, setLoadedScope] = useState(null);
+  const { firebaseUser, setApplicationCount } = useProfile();
+  const userId = firebaseUser?.uid ?? null;
+  const storageScope = userId ?? "guest";
+
+  useEffect(() => {
+    let isActive = true;
+    let unsubscribe;
+    setLoadedScope(null);
+
+    (async () => {
+      let cachedApplications = [];
+      try {
+        const storedApplications = await AsyncStorage.getItem(
+          `${APPLICATIONS_STORAGE_KEY}${storageScope}`,
+        );
+        cachedApplications = storedApplications ? JSON.parse(storedApplications) : [];
+        if (isActive) setApplications(cachedApplications);
+      } catch (error) {
+        console.warn("Unable to load applications from local storage.", error);
+      }
+
+      if (!isActive) return;
+      setLoadedScope(storageScope);
+      if (!userId) return;
+
+      const applicationsRef = collection(db, "users", userId, "applications");
+      try {
+        const snapshot = await getDocs(applicationsRef);
+        if (!isActive) return;
+        if (snapshot.empty && cachedApplications.length) {
+          await Promise.all(
+            cachedApplications.map((application) =>
+              setDoc(doc(db, "users", userId, "applications", application.id), application),
+            ),
+          );
+        }
+        unsubscribe = onSnapshot(
+          applicationsRef,
+          (nextSnapshot) => {
+            if (!isActive) return;
+            const cloudApplications = nextSnapshot.docs.map((application) => application.data());
+            if (cloudApplications.length || cachedApplications.length === 0) {
+              setApplications(cloudApplications);
+            }
+          },
+          (error) => console.warn("Unable to sync applications from Firestore.", error),
+        );
+      } catch (error) {
+        console.warn("Unable to load applications from Firestore.", error);
+      }
+    })();
+
+    return () => {
+      isActive = false;
+      unsubscribe?.();
+    };
+  }, [storageScope, userId]);
+
+  useEffect(() => {
+    if (loadedScope !== storageScope) return;
+    AsyncStorage.setItem(
+      `${APPLICATIONS_STORAGE_KEY}${storageScope}`,
+      JSON.stringify(applications),
+    ).catch((error) => console.warn("Unable to save applications locally.", error));
+  }, [applications, loadedScope, storageScope]);
+
+  useEffect(() => {
+    if (loadedScope !== storageScope) return;
+    setApplicationCount(applications.length).catch((error) =>
+      console.warn("Unable to save application count to Firestore.", error),
+    );
+  }, [applications.length, loadedScope, setApplicationCount, storageScope]);
+
+  const openNewApplication = () => {
+    setEditingApplication(null);
+    setFormVisible(true);
+  };
+
+  const openApplicationForEdit = (application) => {
+    setEditingApplication(application);
+    setFormVisible(true);
+  };
+
+  const saveApplication = (application) => {
+    setApplications((current) =>
+      editingApplication
+        ? current.map((item) => item.id === application.id ? application : item)
+        : [application, ...current],
+    );
+    if (userId) {
+      setDoc(
+        doc(db, "users", userId, "applications", application.id),
+        application,
+      ).catch((error) => console.warn("Unable to sync application to Firestore.", error));
+    }
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -314,7 +442,7 @@ export default function Applications({ navigation }) {
         </Pressable>
         <Text style={styles.headerTitle}>My Applications</Text>
         <Pressable
-          onPress={() => setFormVisible(true)}
+          onPress={openNewApplication}
           accessibilityRole="button"
           accessibilityLabel="Add application"
           style={({ pressed }) => [styles.addButton, pressed && styles.pressed]}
@@ -327,7 +455,12 @@ export default function Applications({ navigation }) {
       <FlatList
         data={applications}
         keyExtractor={({ id }) => id}
-        renderItem={({ item }) => <ApplicationCard application={item} />}
+        renderItem={({ item }) => (
+          <ApplicationCard
+            application={item}
+            onPress={() => openApplicationForEdit(item)}
+          />
+        )}
         ItemSeparatorComponent={() => <View style={styles.cardSeparator} />}
         contentContainerStyle={[
           styles.listContent,
@@ -345,7 +478,7 @@ export default function Applications({ navigation }) {
               submitted, and whether you’ve received an offer.
             </Text>
             <Pressable
-              onPress={() => setFormVisible(true)}
+              onPress={openNewApplication}
               accessibilityRole="button"
               style={({ pressed }) => [styles.emptyButton, pressed && styles.pressed]}
             >
@@ -358,10 +491,12 @@ export default function Applications({ navigation }) {
 
       <ApplicationForm
         visible={formVisible}
-        onClose={() => setFormVisible(false)}
-        onSubmit={(application) =>
-          setApplications((current) => [application, ...current])
-        }
+        application={editingApplication}
+        onClose={() => {
+          setFormVisible(false);
+          setEditingApplication(null);
+        }}
+        onSubmit={saveApplication}
       />
     </SafeAreaView>
   );

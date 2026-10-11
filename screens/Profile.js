@@ -15,6 +15,7 @@ import { signOut } from "firebase/auth";
 
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
+import { getLatestApsRecord } from "../data/apsMatching";
 import { auth } from "./firebaseConfig";
 
 const THEMES = ["Light", "Dark", "System"];
@@ -77,7 +78,7 @@ function QuickLink({ icon, label, badge, onPress, styles }) {
 }
 
 export default function ProfileScreen({ navigation }) {
-  const { bookmarkedCourseIds, bookmarkedIds } = useBookmarks();
+  const { bookmarkedCourseIds, bookmarkedIds, bookmarkedFundingIds } = useBookmarks();
   const {
     profile,
     isGuest,
@@ -90,7 +91,9 @@ export default function ProfileScreen({ navigation }) {
     clearSuccessMessage,
     clearSession,
   } = useProfile();
-  const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length} saved`;
+  const savedItemsLabel = `${bookmarkedIds.length + bookmarkedCourseIds.length + bookmarkedFundingIds.length} saved`;
+  const latestApsRecord = getLatestApsRecord(profile?.apsRecords);
+  const apsBadge = latestApsRecord ? `Score: ${latestApsRecord.totalAps}` : "Not calculated";
   const styles = useMemo(() => createStyles(colors), [colors]);
   const scrollRef = useRef(null);
 
@@ -101,11 +104,7 @@ export default function ProfileScreen({ navigation }) {
   }, [clearSuccessMessage, successMessage]);
 
   const handleAvatarPress = () => {
-    // TODO: Connect an image picker and profile-image upload later.
-    Alert.alert(
-      "Change profile photo",
-      "Photo selection will be added when profile uploads are connected.",
-    );
+    accountOnly(() => navigation.navigate("EditProfile"));
   };
 
   const handleSignOut = () => {
@@ -174,8 +173,8 @@ export default function ProfileScreen({ navigation }) {
   const initials = `${profile.firstName?.[0] || ""}${profile.surname?.[0] || ""}`;
   const accountType =
     isGuest ? "Guest"
-    : profile.authProvider === "Google" ? "Google"
-    : "Student";
+      : profile.authProvider === "Google" ? "Google"
+        : "Student";
   const accountOnly = (action) => {
     if (isGuest) {
       Alert.alert(
@@ -246,7 +245,7 @@ export default function ProfileScreen({ navigation }) {
           >
             {profile.photoURL ?
               <Image source={{ uri: profile.photoURL }} style={styles.avatar} />
-            : <View style={styles.avatar}>
+              : <View style={styles.avatar}>
                 <Text style={styles.avatarText}>{initials || "CC"}</Text>
               </View>
             }
@@ -278,7 +277,7 @@ export default function ProfileScreen({ navigation }) {
           <Text style={styles.sectionIntro}>
             {isGuest ?
               "Explore freely. Create an account to save your progress."
-            : "Your saved account information is shown below."}
+              : "Your saved account information is shown below."}
           </Text>
           <View style={styles.detailsList}>
             <ReadOnlyDetail
@@ -336,8 +335,8 @@ export default function ProfileScreen({ navigation }) {
             icon="bookmark-outline"
             label={
               isGuest ?
-                "Saved Courses (limited)"
-              : "Saved Universities & Courses"
+                "Saved Items"
+                : "Saved Universities, Courses & Bursaries"
             }
             badge={savedItemsLabel}
             onPress={() => navigation.navigate("Bookmarks")}
@@ -346,7 +345,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="briefcase-outline"
             label="My Applications"
-            badge="0"
+            badge={`${profile.applicationCount ?? 0} submitted`}
             onPress={() =>
               accountOnly(() => navigation.navigate("Applications"))
             }
@@ -355,7 +354,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="calculator-outline"
             label="APS Calculator"
-            badge="Score: 15"
+            badge={apsBadge}
             onPress={() => navigation.navigate("ApsCalculator")}
             styles={styles}
           />

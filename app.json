@@ -20,6 +20,7 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
+<<<<<<< HEAD
       "expo-font",
       [
         "expo-splash-screen",
@@ -41,6 +42,16 @@
           ]
         }
       ]
+=======
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "CareerCompass uses your photos to set your profile picture.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-status-bar"
+>>>>>>> e8e7adaee0e41e8670b867e02ff95a1bfd5fe6b5
     ]
   }
 }

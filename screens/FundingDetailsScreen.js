@@ -4,6 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
+import { useBookmarks } from "../context/BookmarksContext";
 import { NSFAS, SAMPLE_BURSARY, fetchBursaries, getFundingCountdown } from "../data/funding";
 
 const SECTIONS = [
@@ -71,6 +72,7 @@ const SAMPLE_SECTIONS = [
 
 export default function FundingDetailsScreen({ navigation, route }) {
   const { colors, resolvedTheme } = useProfile();
+  const { isFundingBookmarked, saveFundingBookmark, removeFundingBookmark, updateFundingBookmarkDetails } = useBookmarks();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [now, setNow] = useState(() => new Date());
   const [fundingOptions, setFundingOptions] = useState([]);
@@ -86,6 +88,7 @@ export default function FundingDetailsScreen({ navigation, route }) {
     fetchBursaries().then((items) => {
       if (mounted) {
         setFundingOptions(items);
+        updateFundingBookmarkDetails(items);
         setIsLoading(false);
       }
     }).catch(() => {
@@ -97,7 +100,7 @@ export default function FundingDetailsScreen({ navigation, route }) {
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [updateFundingBookmarkDetails]);
 
   const fundingId = route.params?.fundingId;
   const fundingIdKey = String(fundingId ?? "");
@@ -109,6 +112,11 @@ export default function FundingDetailsScreen({ navigation, route }) {
     return fundingOptions.find((option) => String(option.id) === fundingIdKey) ?? null;
   }, [fundingIdKey, fundingOptions]);
   const validFunding = Boolean(funding);
+  const isBookmarked = funding ? isFundingBookmarked(funding.id) : false;
+  const toggleBookmark = () => {
+    if (!funding) return;
+    isBookmarked ? removeFundingBookmark(funding.id) : saveFundingBookmark(funding);
+  };
   const { days, isClosed } = getFundingCountdown(now, funding || NSFAS);
   const sections = isSample ? SAMPLE_SECTIONS : isNsfas ? SECTIONS : [
     { title: "Who can apply?", icon: "people-outline", items: [funding?.requirements || "Check the official provider page for the latest eligibility rules."] },
@@ -169,6 +177,10 @@ export default function FundingDetailsScreen({ navigation, route }) {
           <Text style={styles.sampleHeroTitle}>{funding.name}</Text>
           <Text style={styles.heroSubtitle}>{funding.provider}</Text>
           <Text style={styles.heroDescription}>{funding.description}</Text>
+          <Pressable onPress={toggleBookmark} accessibilityRole="button" accessibilityLabel={`${isBookmarked ? "Remove" : "Add"} ${funding.name} ${isBookmarked ? "from" : "to"} bookmarks`} style={styles.bookmarkAction}>
+            <Ionicons name={isBookmarked ? "bookmark" : "bookmark-outline"} size={19} color="#FFFFFF" />
+            <Text style={styles.bookmarkActionText}>{isBookmarked ? "Bookmarked" : "Add to bookmarks"}</Text>
+          </Pressable>
         </View>
         <View style={styles.deadlineCard}>
           <View style={styles.deadlineHeader}>
@@ -212,6 +224,10 @@ export default function FundingDetailsScreen({ navigation, route }) {
           <Text style={styles.heroTitle}>{funding.name}</Text>
           <Text style={styles.heroSubtitle}>{funding.provider}</Text>
           <Text style={styles.heroDescription}>{funding.description}</Text>
+          <Pressable onPress={toggleBookmark} accessibilityRole="button" accessibilityLabel={`${isBookmarked ? "Remove" : "Add"} ${funding.name} ${isBookmarked ? "from" : "to"} bookmarks`} style={styles.bookmarkAction}>
+            <Ionicons name={isBookmarked ? "bookmark" : "bookmark-outline"} size={19} color="#FFFFFF" />
+            <Text style={styles.bookmarkActionText}>{isBookmarked ? "Bookmarked" : "Add to bookmarks"}</Text>
+          </Pressable>
         </View>
 
         <View style={styles.deadlineCard}>
@@ -277,6 +293,10 @@ export default function FundingDetailsScreen({ navigation, route }) {
           <Text style={styles.heroTitle}>NSFAS</Text>
           <Text style={styles.heroSubtitle}>{NSFAS.fullName}</Text>
           <Text style={styles.heroDescription}>A national funding scheme that helps eligible students study approved qualifications at South African public universities and TVET colleges.</Text>
+          <Pressable onPress={toggleBookmark} accessibilityRole="button" accessibilityLabel={`${isBookmarked ? "Remove" : "Add"} NSFAS ${isBookmarked ? "from" : "to"} bookmarks`} style={styles.bookmarkAction}>
+            <Ionicons name={isBookmarked ? "bookmark" : "bookmark-outline"} size={19} color="#FFFFFF" />
+            <Text style={styles.bookmarkActionText}>{isBookmarked ? "Bookmarked" : "Add to bookmarks"}</Text>
+          </Pressable>
         </View>
 
         <View style={styles.deadlineCard}>
@@ -337,6 +357,8 @@ function makeStyles(c) {
     sampleHeroTitle: { color: "#FFFFFF", fontSize: 30, lineHeight: 36, fontWeight: "800", marginTop: 5 },
     heroSubtitle: { color: "#E0F0ED", fontSize: 15, fontWeight: "600", marginTop: 2 },
     heroDescription: { color: "#FFFFFF", fontSize: 14, lineHeight: 22, marginTop: 18 },
+    bookmarkAction: { alignSelf: "flex-start", flexDirection: "row", alignItems: "center", gap: 9, backgroundColor: "rgba(255,255,255,0.16)", borderRadius: 12, paddingHorizontal: 13, paddingVertical: 10, marginTop: 18 },
+    bookmarkActionText: { color: "#FFFFFF", fontSize: 13, fontWeight: "700" },
     deadlineCard: { backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 18, padding: 18, marginTop: 17 },
     deadlineHeader: { flexDirection: "row", alignItems: "center", gap: 9 },
     deadlineTitle: { color: c.text, fontSize: 17, fontWeight: "700" },

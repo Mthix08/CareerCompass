@@ -41,7 +41,7 @@ export const DeadlineCard = memo(function DeadlineCard({ item, university, color
   );
 });
 
-export const APSScoreRow = memo(function APSScoreRow({ university, score, colors }) {
+export const APSScoreRow = memo(function APSScoreRow({ university, score, caption, colors }) {
   const styles = useMemo(() => createStyles(colors), [colors]);
   return (
     <View style={styles.apsRow} accessibilityLabel={`${university.name}, current APS score ${score}`}>
@@ -50,9 +50,9 @@ export const APSScoreRow = memo(function APSScoreRow({ university, score, colors
       </View>
       <View style={styles.apsNameWrap}>
         <Text style={styles.apsName} numberOfLines={2}>{university.name}</Text>
-        <Text style={styles.apsDefault}>Not calculated yet</Text>
+        <Text style={styles.apsDefault}>{caption || "Not calculated yet"}</Text>
       </View>
-      <View style={styles.apsValueWrap}><Text style={styles.apsValue}>{score}</Text><Text style={styles.apsLabel}>APS</Text></View>
+      <View style={styles.apsValueWrap}><Text style={styles.apsValue}>{score ?? "—"}</Text><Text style={styles.apsLabel}>APS</Text></View>
     </View>
   );
 });

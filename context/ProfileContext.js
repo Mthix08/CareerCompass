@@ -7,11 +7,11 @@ import React, {
   useState,
 } from "react";
 import { useColorScheme } from "react-native";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import { auth } from "../screens/firebaseConfig";
-import { db } from "../screens/firebaseConfig";
+import { auth, db, storage } from "../screens/firebaseConfig";
 
 const ProfileContext = createContext(null);
 const THEME_STORAGE_KEY = "@careercompass:themePreference";
@@ -56,6 +56,7 @@ const initialProfile = {
   category: "Guest",
   learnerInfo: "",
   location: "Explore CareerCompass",
+  applicationCount: 0,
 };
 
 export function ProfileProvider({ children }) {
@@ -109,7 +110,7 @@ export function ProfileProvider({ children }) {
         firstName: nameParts[0] || "Student",
         surname: nameParts.slice(1).join(" "),
         category: "Student",
-        photoURL: user.photoURL || storedProfile.photoURL || "",
+        photoURL: storedProfile.photoURL || user.photoURL || "",
         authProvider:
           (
             user.providerData?.some(
@@ -117,7 +118,7 @@ export function ProfileProvider({ children }) {
             )
           ) ?
             "Google"
-          : "Email",
+            : "Email",
       });
     });
   }, []);
@@ -138,13 +139,23 @@ export function ProfileProvider({ children }) {
     themePreference === "System" ?
       systemColorScheme === "dark" ?
         "dark"
-      : "light"
-    : themePreference.toLowerCase();
+        : "light"
+      : themePreference.toLowerCase();
   const colors = resolvedTheme === "dark" ? darkColors : lightColors;
 
   const updateProfile = useCallback(
     async (nextProfile) => {
-      setProfile(nextProfile);
+      let photoURL = nextProfile.photoURL || "";
+      if (nextProfile.photoAsset && firebaseUser) {
+        const response = await fetch(nextProfile.photoAsset.uri);
+        const photoBlob = await response.blob();
+        const photoRef = ref(storage, `profilePhotos/${firebaseUser.uid}`);
+        await uploadBytes(photoRef, photoBlob, {
+          contentType: nextProfile.photoAsset.mimeType || "image/jpeg",
+        });
+        photoURL = await getDownloadURL(photoRef);
+      }
+
       if (firebaseUser) {
         await setDoc(
           doc(db, "users", firebaseUser.uid),
@@ -153,11 +164,56 @@ export function ProfileProvider({ children }) {
             email: nextProfile.email,
             phone: nextProfile.phone,
             category: nextProfile.category,
+            photoURL,
           },
           { merge: true },
         );
       }
+      const updatedProfile = { ...nextProfile, photoURL };
+      delete updatedProfile.photoAsset;
+      setProfile(updatedProfile);
       setSuccessMessage("Profile updated successfully.");
+    },
+    [firebaseUser],
+  );
+  const setApplicationCount = useCallback(
+    async (applicationCount) => {
+      if (profile.applicationCount === applicationCount) return;
+
+      setProfile((current) => ({ ...current, applicationCount }));
+      if (firebaseUser) {
+        await setDoc(
+          doc(db, "users", firebaseUser.uid),
+          { applicationCount },
+          { merge: true },
+        );
+      }
+    },
+    [firebaseUser, profile.applicationCount],
+  );
+  const saveApsRecord = useCallback(
+    async (period, record) => {
+      if (!firebaseUser) {
+        throw new Error("Sign in to save your APS marks to your account.");
+      }
+
+      await setDoc(
+        doc(db, "users", firebaseUser.uid),
+        {
+          apsRecords: {
+            [period]: { ...record, updatedAt: serverTimestamp() },
+          },
+        },
+        { merge: true },
+      );
+
+      setProfile((current) => ({
+        ...current,
+        apsRecords: {
+          ...current.apsRecords,
+          [period]: record,
+        },
+      }));
     },
     [firebaseUser],
   );
@@ -172,6 +228,8 @@ export function ProfileProvider({ children }) {
       enterGuestMode,
       clearSession,
       updateProfile,
+      setApplicationCount,
+      saveApsRecord,
       themePreference,
       setThemePreference,
       resolvedTheme,
@@ -186,6 +244,8 @@ export function ProfileProvider({ children }) {
       enterGuestMode,
       clearSession,
       updateProfile,
+      setApplicationCount,
+      saveApsRecord,
       themePreference,
       setThemePreference,
       resolvedTheme,

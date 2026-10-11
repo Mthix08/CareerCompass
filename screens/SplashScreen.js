@@ -33,7 +33,7 @@ export default function SplashScreen({ navigation }) {
 
     animation.start(({ finished }) => {
       if (finished) {
-        navigation.replace("Login");
+        navigation.replace("Onboarding");
       }
     });
 
