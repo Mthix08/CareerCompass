@@ -56,6 +56,8 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
     navigation.emit({ type: "tabLongPress", target: route.key });
   };
 
+  const openAssistant = () => navigation.getParent()?.navigate("Assistant");
+
   return (
     <View
       style={[
@@ -63,6 +65,17 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
         { backgroundColor: screenBackground, paddingBottom: safeBottom + 10 },
       ]}
     >
+      <Pressable
+        onPress={openAssistant}
+        accessibilityRole="button"
+        accessibilityLabel="Open CareerCompass Assistant"
+        style={({ pressed }) => [
+          styles.assistantButton,
+          pressed && styles.tabPressed,
+        ]}
+      >
+        <Ionicons name="sparkles-outline" size={23} color="#FFFFFF" />
+      </Pressable>
       <View style={[styles.card, { width: barWidth }]}>
         {state.routes.map((route, index) => {
           const options = descriptors[route.key].options;
@@ -121,6 +134,26 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingTop: 8,
     alignItems: "center",
+    position: "relative",
+  },
+  assistantButton: {
+    position: "absolute",
+    right: 24,
+    top: -28,
+    zIndex: 2,
+    width: 54,
+    height: 54,
+    borderRadius: 27,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: ACTIVE_COLOR,
+    borderWidth: 4,
+    borderColor: "#FFFFFF",
+    elevation: 8,
+    shadowColor: "#102D36",
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.22,
+    shadowRadius: 6,
   },
   card: {
     height: BAR_HEIGHT,
