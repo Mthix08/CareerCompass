@@ -1,5 +1,32 @@
 import React, { useEffect, useRef } from "react";
 import { Animated, Image, StyleSheet, Text, View } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+import { auth } from "./firebaseConfig";
+
+// Must match the key used in OnboardingScreen.js
+const ONBOARDING_SEEN_KEY = "@careercompass:hasSeenOnboarding";
+
+// NEW: works out where to go once the splash animation finishes.
+// Signed in -> Home, onboarding already seen -> Login, otherwise -> Onboarding.
+async function getStartRoute() {
+  try {
+    const [seenOnboarding, user] = await Promise.all([
+      AsyncStorage.getItem(ONBOARDING_SEEN_KEY),
+      new Promise((resolve) => {
+        let unsubscribe = null;
+        unsubscribe = auth.onAuthStateChanged((currentUser) => {
+          unsubscribe?.();
+          resolve(currentUser);
+        });
+      }),
+    ]);
+    if (user) return "Home";
+    return seenOnboarding ? "Login" : "Onboarding";
+  } catch (_error) {
+    return "Onboarding";
+  }
+}
 
 export default function SplashScreen({ navigation }) {
   const opacity = useRef(new Animated.Value(0)).current;
@@ -7,8 +34,12 @@ export default function SplashScreen({ navigation }) {
   const barAnimations = useRef(
     Array.from({ length: 5 }, () => new Animated.Value(0.35)),
   ).current;
+  const startRoute = useRef(null);
 
   useEffect(() => {
+    // Start checking storage + auth while the animation plays
+    startRoute.current = getStartRoute();
+
     const animation = Animated.sequence([
       Animated.parallel([
         Animated.timing(opacity, {
@@ -31,9 +62,9 @@ export default function SplashScreen({ navigation }) {
       }),
     ]);
 
-    animation.start(({ finished }) => {
+    animation.start(async ({ finished }) => {
       if (finished) {
-        navigation.replace("Onboarding");
+        navigation.replace(await startRoute.current);
       }
     });
 

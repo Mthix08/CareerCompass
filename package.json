@@ -36,7 +36,9 @@
   },
   "private": true,
   "devDependencies": {
+    "dotenv": "^18.0.7",
     "eslint": "^9.0.0",
-    "eslint-config-expo": "~57.0.2"
+    "eslint-config-expo": "~57.0.2",
+    "firebase-admin": "^14.5.0"
   }
 }

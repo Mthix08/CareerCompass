@@ -1,66 +1,52 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { FlatList, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { loadCollection } from "../data/firestoreContent";
 import { universities } from "../data/universities";
 
 const GREEN = "rgba(8, 76, 70, 0.88)";
 const FILTERS = ["All", "Bursaries", "Universities", "New Content", "Announcements"];
 
-const MOCK_NOTIFICATIONS = [
-  {
-    id: "wits-closing-30-days",
-    category: "Universities",
-    eyebrow: "UNIVERSITY APPLICATION",
-    title: "Wits applications close in 30 days",
-    description: "Complete your application and upload the required documents before the deadline.",
-    time: "Today",
-    icon: "business",
-    universityId: "wits",
-  },
-  {
-    id: "nsfas-reminder",
-    category: "Bursaries",
-    eyebrow: "BURSARY",
-    title: "Remember to check your NSFAS application",
-    description: "Review your application status and make sure all supporting documents are submitted.",
-    time: "2d ago",
-    icon: "wallet",
-    routeName: "FundingDetails",
-    fundingId: "nsfas",
-  },
-  {
-    id: "new-university-guides",
-    category: "New Content",
-    eyebrow: "NEW CONTENT",
-    title: "University profiles have been updated",
-    description: "Explore campus information, representative courses and application guidance.",
-    time: "4d ago",
-    icon: "sparkles",
-    routeName: "Home",
-    screen: "Universities",
-  },
-  {
-    id: "preferences-tip",
-    category: "Announcements",
-    eyebrow: "ANNOUNCEMENT",
-    title: "Choose the alerts you want to receive",
-    description: "You can update your notification preferences at any time.",
-    time: "1w ago",
-    icon: "notifications",
-    routeName: "NotificationPreferences",
-  },
-];
+// NEW: turns the Firestore createdAt timestamp into "Today", "2d ago", "1w ago"
+function formatTimeAgo(createdAt) {
+  const date = createdAt?.toDate
+    ? createdAt.toDate()
+    : typeof createdAt?.seconds === "number"
+      ? new Date(createdAt.seconds * 1000)
+      : null;
+  if (!date) return "";
+  const days = Math.floor((Date.now() - date.getTime()) / (24 * 60 * 60 * 1000));
+  if (days < 1) return "Today";
+  if (days < 7) return `${days}d ago`;
+  return `${Math.floor(days / 7)}w ago`;
+}
 
 export default function Notifications({ navigation }) {
   const [activeFilter, setActiveFilter] = useState("All");
+  // CHANGED: notifications now come from the Firestore "notifications" collection
+  // (with an AsyncStorage copy for offline) instead of a hardcoded array.
+  const [notifications, setNotifications] = useState([]);
+
+  useEffect(() => {
+    let active = true;
+    loadCollection("notifications", { sortBy: "createdAt", descending: true }).then(
+      (items) => {
+        if (active) setNotifications(items);
+      },
+    );
+    return () => {
+      active = false;
+    };
+  }, []);
+
   const filteredNotifications = useMemo(
     () => activeFilter === "All"
-      ? MOCK_NOTIFICATIONS
-      : MOCK_NOTIFICATIONS.filter(({ category }) => category === activeFilter),
-    [activeFilter],
+      ? notifications
+      : notifications.filter(({ category }) => category === activeFilter),
+    [activeFilter, notifications],
   );
 
   const openNotification = (notification) => {
@@ -92,7 +78,7 @@ export default function Notifications({ navigation }) {
           <Text style={styles.eyebrow}>{item.eyebrow}</Text>
           <Text style={styles.notificationTitle}>{item.title}</Text>
         </View>
-        <Text style={styles.time}>{item.time}</Text>
+        <Text style={styles.time}>{formatTimeAgo(item.createdAt)}</Text>
       </View>
       <Text style={styles.description}>{item.description}</Text>
       <Pressable

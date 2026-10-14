@@ -10,6 +10,7 @@ import {
   View,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const { width: screenWidth } = Dimensions.get("window");
 
@@ -63,7 +64,14 @@ export default function OnboardingScreen({ navigation }) {
     setActiveIndex(safeIndex);
   };
 
-  const finishOnboarding = () => navigation.replace("Login");
+    const finishOnboarding = async () => {
+    try {
+      await AsyncStorage.setItem("@careercompass:hasSeenOnboarding", "true");
+    } catch (_error) {
+      // non-fatal: onboarding will just show again next launch
+    }
+    navigation.replace("Login");
+  };
 
   return (
     <SafeAreaView style={styles.safeArea}>
