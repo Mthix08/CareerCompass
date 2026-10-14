@@ -199,7 +199,7 @@ export default function CoursesScreen({ navigation, route }) {
         || (filters.type === "Diploma" && /diploma/i.test(course.qualificationType))
         || course.qualificationType === filters.type;
       const matchesUniversity = !filters.universityId || course.universityId === filters.universityId;
-      const universityScore = apsByUniversity[course.universityId]?.score;
+      const universityScore = apsByUniversity[course.universityId]?.score ?? route.params?.apsScore;
       const matchesAps = !matchedOnly || (
         typeof universityScore === "number"
         && typeof course.minimumAps === "number"
@@ -207,7 +207,7 @@ export default function CoursesScreen({ navigation, route }) {
       );
       return matchesSearch && matchesMinimum && matchesMaximum && matchesType && matchesUniversity && matchesAps;
     });
-  }, [filters, matchedOnly, query, route.params?.apsByUniversity]);
+   }, [filters, matchedOnly, query, route.params?.apsByUniversity, route.params?.apsScore]);
 
   const activeFilterCount = [filters.minimumAps, filters.maximumAps, filters.type, filters.universityId].filter(Boolean).length;
 

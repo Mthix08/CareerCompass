@@ -26,7 +26,8 @@ import { deleteDoc, doc } from "firebase/firestore";
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
 import { getLatestApsRecord } from "../data/apsMatching";
-import { auth } from "./firebaseConfig";
+import { auth, db } from "./firebaseConfig";
+import { signInWithGoogle } from "./googleAuth";
 
 const THEMES = ["Light", "Dark", "System"];
 

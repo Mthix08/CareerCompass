@@ -1,10 +1,8 @@
 import React, {
   createContext,
-  useCallback,
   useContext,
   useEffect,
   useMemo,
-  useRef,
   useState,
 } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -126,6 +124,7 @@ export function BookmarksProvider({ children }) {
     });
   }, [bookmarkedFunding, loadedScope, storageScope]);
 
+  // Pushes all three bookmark lists to the user's Firestore document.
   useEffect(() => {
     if (!userId || cloudReadyUid !== userId || loadedScope !== storageScope) return;
     setDoc(
@@ -137,49 +136,9 @@ export function BookmarksProvider({ children }) {
     });
   }, [bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds, cloudReadyUid, loadedScope, storageScope, userId]);
 
-  useEffect(() => {
-    let active = true;
-    const loadBookmarks = async () => {
-      if (!firebaseUser) {
-        setBookmarkedIds([]);
-        setBookmarkedCourseIds([]);
-        return;
-      }
-
-      const snapshot = await getDoc(doc(db, "users", firebaseUser.uid));
-      if (!active) return;
-      const data = snapshot.exists() ? snapshot.data() : {};
-      setBookmarkedIds(Array.isArray(data.bookmarkedIds) ? data.bookmarkedIds : []);
-      setBookmarkedCourseIds(
-        Array.isArray(data.bookmarkedCourseIds) ? data.bookmarkedCourseIds : [],
-      );
-    };
-
-    loadBookmarks().catch(() => {
-      if (active) {
-        setBookmarkedIds([]);
-        setBookmarkedCourseIds([]);
-      }
-    });
-    return () => {
-      active = false;
-    };
-  }, [firebaseUser]);
-
-  const persistBookmarks = useCallback(
-    async (nextBookmarks, nextCourseBookmarks) => {
-      if (!firebaseUser) return;
-      await setDoc(
-        doc(db, "users", firebaseUser.uid),
-        {
-          bookmarkedIds: nextBookmarks,
-          bookmarkedCourseIds: nextCourseBookmarks,
-        },
-        { merge: true },
-      );
-    },
-    [firebaseUser],
-  );
+  // REMOVED: the second "loadBookmarks" effect and "persistBookmarks".
+  // They read/wrote a different Firestore field ("bookmarkedIds"), emptied the lists
+  // for guests, and fought with the sync above. The effects above already do the job.
 
   const value = useMemo(
     () => ({
@@ -189,24 +148,18 @@ export function BookmarksProvider({ children }) {
         setBookmarkedIds((current) => {
           if (current.includes(universityId)) return current;
           if (isGuest && current.length >= 3) return current;
-          const next = [...current, universityId];
-          persistBookmarks(next, bookmarkedCourseIds).catch(() => {});
-          return next;
+          return [...current, universityId];
         }),
       removeBookmark: (universityId) =>
-        setBookmarkedIds((current) => {
-          const next = current.filter((id) => id !== universityId);
-          persistBookmarks(next, bookmarkedCourseIds).catch(() => {});
-          return next;
-        }),
+        setBookmarkedIds((current) =>
+          current.filter((id) => id !== universityId),
+        ),
       bookmarkedCourseIds,
       isCourseBookmarked: (courseId) => bookmarkedCourseIds.includes(courseId),
       addCourseBookmark: (courseId) =>
         setBookmarkedCourseIds((current) => {
           if (current.includes(courseId)) return current;
-          const next = [...current, courseId];
-          persistBookmarks(bookmarkedIds, next).catch(() => {});
-          return next;
+          return [...current, courseId];
         }),
       removeCourseBookmark: (courseId) =>
         setBookmarkedCourseIds((current) =>

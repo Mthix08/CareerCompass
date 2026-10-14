@@ -16,6 +16,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
+import { getApsUniversityMatches } from "../data/apsMatching";
 
 const COLORS = {
   primary: "#117C72",
@@ -450,11 +451,10 @@ export default function ApsCalculatorScreen({ navigation }) {
         current.filter((period) => period !== selectedPeriod),
       );
       setApsResult(result);
-    } catch (error) {
-      Alert.alert(
-        "Could not save APS",
-        error.message || "Check your connection and try again.",
-      );
+    setApsResult({
+  ...result,
+  matchedUniversities: getApsUniversityMatches(totalAps).length,
+});
     } finally {
       setIsSaving(false);
     }

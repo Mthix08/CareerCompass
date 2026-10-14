@@ -114,7 +114,6 @@ export default function SignUpScreen({ navigation }) {
         auth,
         email.trim().toLowerCase(),
         password,
-        console.log(password)
       );
       accountCreated = true;
 
