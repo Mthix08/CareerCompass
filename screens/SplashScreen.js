@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
-import { Animated, Image, StyleSheet, Text, View } from "react-native";
+import React, { useEffect, useMemo, useRef } from "react";
+import { Animated, Image, StatusBar, StyleSheet, Text, View } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import { auth } from "./firebaseConfig";
+import { useProfile } from "../context/ProfileContext";
 
 // Must match the key used in OnboardingScreen.js
 const ONBOARDING_SEEN_KEY = "@careercompass:hasSeenOnboarding";
@@ -29,6 +30,8 @@ async function getStartRoute() {
 }
 
 export default function SplashScreen({ navigation }) {
+  const { publicColors: colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const opacity = useRef(new Animated.Value(0)).current;
   const scale = useRef(new Animated.Value(0.92)).current;
   const barAnimations = useRef(
@@ -97,6 +100,7 @@ export default function SplashScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <Animated.View
         style={[styles.content, { opacity, transform: [{ scale }] }]}
       >
@@ -121,10 +125,11 @@ export default function SplashScreen({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(colors) {
+  return StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "smokewhite",
+    backgroundColor: colors.background,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -138,7 +143,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     marginTop: 16,
-    color: "#3ED6C2",
+    color: colors.primary,
     fontSize: 11,
     fontWeight: "700",
     letterSpacing: 2,
@@ -155,6 +160,7 @@ const styles = StyleSheet.create({
     width: 7,
     height: 34,
     borderRadius: 4,
-    backgroundColor: "#3ED6C2",
+    backgroundColor: colors.primary,
   },
-});
+  });
+}

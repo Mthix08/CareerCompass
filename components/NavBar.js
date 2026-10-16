@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Pressable,
@@ -17,11 +17,8 @@ const BAR_MARGIN = 16;
 const BAR_MAX_WIDTH = 520;
 const BAR_HEIGHT = 72;
 
-const ACTIVE_COLOR = "#117C72";
-const INACTIVE_COLOR = "#84919D";
-
 const TAB_ICONS = {
-  Home: "home-outline",
+  HomeTab: "home-outline",
   Funding: "wallet-outline",
   Universities: "business-outline",
   Courses: "book-outline",
@@ -30,7 +27,7 @@ const TAB_ICONS = {
 
 // Translation key for each navigation tab
 const TAB_TRANSLATIONS = {
-  Home: "home",
+  HomeTab: "home",
   Funding: "funding",
   Universities: "universities",
   Courses: "courses",
@@ -47,6 +44,7 @@ export default function NavBar({
   const { t } = useTranslation();
 
   const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const { bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds } = useBookmarks();
   const bookmarkCounts = {
     Funding: bookmarkedFundingIds.length,
@@ -64,11 +62,7 @@ export default function NavBar({
 
   const activeRoute = state.routes[state.index];
 
-  const screenBackground =
-    activeRoute.name === "Profile" ||
-    activeRoute.name === "Home"
-      ? colors.background
-      : "#F6F8FC";
+  const screenBackground = colors.background;
 
   const handlePress = (route, isFocused) => {
     const event = navigation.emit({
@@ -139,9 +133,7 @@ export default function NavBar({
 
           const isFocused = state.index === index;
 
-          const itemColor = isFocused
-            ? ACTIVE_COLOR
-            : INACTIVE_COLOR;
+          const itemColor = isFocused ? colors.primary : colors.mutedText;
 
           return (
             <Pressable
@@ -204,7 +196,8 @@ export default function NavBar({
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(colors) {
+  return StyleSheet.create({
   container: {
     width: "100%",
     paddingTop: 8,
@@ -221,9 +214,9 @@ const styles = StyleSheet.create({
     borderRadius: 27,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: ACTIVE_COLOR,
+    backgroundColor: colors.primary,
     borderWidth: 4,
-    borderColor: "#FFFFFF",
+    borderColor: colors.background,
     elevation: 8,
     shadowColor: "#102D36",
     shadowOffset: { width: 0, height: 3 },
@@ -245,8 +238,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 22,
     borderWidth: 1,
-    borderColor: "#E5ECEF",
-    backgroundColor: "#FFFFFF",
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
     shadowColor: "#102D36",
     shadowOffset: {
       width: 0,
@@ -265,7 +258,7 @@ const styles = StyleSheet.create({
   },
   tabPressed: { opacity: 0.6 },
   iconWrap: { position: "relative" },
-  badge: { position: "absolute", top: -8, right: -11, minWidth: 17, height: 17, paddingHorizontal: 4, borderRadius: 9, backgroundColor: "#D94B4B", alignItems: "center", justifyContent: "center", borderWidth: 1.5, borderColor: "#FFFFFF" },
+  badge: { position: "absolute", top: -8, right: -11, minWidth: 17, height: 17, paddingHorizontal: 4, borderRadius: 9, backgroundColor: colors.danger, alignItems: "center", justifyContent: "center", borderWidth: 1.5, borderColor: colors.surface },
   badgeText: { color: "#FFFFFF", fontSize: 9, fontWeight: "800", lineHeight: 11 },
   label: {
     maxWidth: "100%",
@@ -288,6 +281,7 @@ const styles = StyleSheet.create({
   },
 
   activeIndicator: {
-    backgroundColor: ACTIVE_COLOR,
+    backgroundColor: colors.primary,
   },
-});
+  });
+}

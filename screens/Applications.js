@@ -29,20 +29,6 @@ import { db } from "./firebaseConfig";
 
 const APPLICATIONS_STORAGE_KEY = "@careercompass:applications:";
 
-const COLORS = {
-  primary: "#117C72",
-  primaryDark: "#0B665E",
-  primarySoft: "#E7F3F1",
-  background: "#F6F8FC",
-  surface: "#FFFFFF",
-  text: "#172033",
-  secondary: "#667085",
-  muted: "#98A2B3",
-  border: "#DDE4ED",
-  input: "#F8FAFC",
-  danger: "#D64545",
-};
-
 const STATUSES = [
   { label: "Applied", color: "#3478F6" },
   { label: "Waiting for documents", color: "#F59E0B" },
@@ -61,6 +47,9 @@ const initialForm = {
 };
 
 function ApplicationForm({ visible, application, onClose, onSubmit }) {
+  const { colors } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const [form, setForm] = useState(() =>
     application ? { ...initialForm, ...application } : initialForm,
   );
@@ -285,6 +274,9 @@ function ApplicationForm({ visible, application, onClose, onSubmit }) {
 }
 
 function ApplicationCard({ application, onPress }) {
+  const { colors } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   return (
     <Pressable
       onPress={onPress}
@@ -325,7 +317,9 @@ export default function Applications({ navigation }) {
   const [editingApplication, setEditingApplication] = useState(null);
   const [formSession, setFormSession] = useState(0);
   const [loadedScope, setLoadedScope] = useState(null);
-  const { firebaseUser, setApplicationCount } = useProfile();
+  const { firebaseUser, setApplicationCount, colors, resolvedTheme } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const userId = firebaseUser?.uid ?? null;
   const storageScope = userId ?? "guest";
 
@@ -429,7 +423,7 @@ export default function Applications({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />
+      <StatusBar barStyle={resolvedTheme === "dark" ? "light-content" : "dark-content"} backgroundColor={COLORS.primary} />
       <View style={styles.header}>
         <Pressable
           onPress={() => navigation.goBack()}
@@ -437,7 +431,7 @@ export default function Applications({ navigation }) {
           accessibilityLabel="Go back"
           style={({ pressed }) => [styles.headerIconButton, pressed && styles.pressed]}
         >
-          <Ionicons name="chevron-back" size={25} color="#FFFFFF" />
+          <Ionicons name="chevron-back" size={25} color={COLORS.onPrimary} />
         </Pressable>
         <Text style={styles.headerTitle}>My Applications</Text>
         <Pressable
@@ -446,7 +440,7 @@ export default function Applications({ navigation }) {
           accessibilityLabel="Add application"
           style={({ pressed }) => [styles.addButton, pressed && styles.pressed]}
         >
-          <Ionicons name="add" size={20} color="#FFFFFF" />
+          <Ionicons name="add" size={20} color={COLORS.onPrimary} />
           <Text style={styles.addButtonText}>Add</Text>
         </Pressable>
       </View>
@@ -481,7 +475,7 @@ export default function Applications({ navigation }) {
               accessibilityRole="button"
               style={({ pressed }) => [styles.emptyButton, pressed && styles.pressed]}
             >
-              <Ionicons name="add" size={21} color="#FFFFFF" />
+              <Ionicons name="add" size={21} color={COLORS.onPrimary} />
               <Text style={styles.emptyButtonText}>Track your first application</Text>
             </Pressable>
           </View>
@@ -502,7 +496,17 @@ export default function Applications({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
+function getThemeColors(colors) {
+  return {
+    ...colors,
+    primaryDark: colors.primary,
+    secondary: colors.secondaryText,
+    muted: colors.mutedText,
+  };
+}
+
+function makeStyles(COLORS) {
+  return StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
   header: {
     minHeight: 66,
@@ -519,7 +523,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "rgba(255,255,255,0.16)",
   },
-  headerTitle: { flex: 1, marginLeft: 12, color: "#FFFFFF", fontSize: 19, fontWeight: "800" },
+  headerTitle: { flex: 1, marginLeft: 12, color: COLORS.onPrimary, fontSize: 19, fontWeight: "800" },
   addButton: {
     minHeight: 42,
     paddingHorizontal: 14,
@@ -530,7 +534,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "rgba(255,255,255,0.12)",
   },
-  addButtonText: { marginLeft: 4, color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
+  addButtonText: { marginLeft: 4, color: COLORS.onPrimary, fontSize: 14, fontWeight: "800" },
   listContent: { padding: 20, paddingBottom: 38 },
   emptyListContent: { flexGrow: 1 },
   emptyState: { flex: 1, alignItems: "center", justifyContent: "center", paddingBottom: 64 },
@@ -561,7 +565,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: COLORS.primary,
   },
-  emptyButtonText: { marginLeft: 7, color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
+  emptyButtonText: { marginLeft: 7, color: COLORS.onPrimary, fontSize: 14, fontWeight: "800" },
   cardSeparator: { height: 14 },
   card: {
     padding: 18,
@@ -569,7 +573,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.border,
     backgroundColor: COLORS.surface,
-    shadowColor: "#172033",
+    shadowColor: COLORS.text,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.07,
     shadowRadius: 10,
@@ -604,7 +608,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 28,
     backgroundColor: COLORS.surface,
   },
-  sheetHandle: { width: 42, height: 4, marginTop: 10, alignSelf: "center", borderRadius: 2, backgroundColor: "#CBD5E1" },
+  sheetHandle: { width: 42, height: 4, marginTop: 10, alignSelf: "center", borderRadius: 2, backgroundColor: COLORS.border },
   sheetHeader: {
     minHeight: 58,
     paddingHorizontal: 22,
@@ -643,5 +647,6 @@ const styles = StyleSheet.create({
   notesShell: { minHeight: 92, alignItems: "flex-start" },
   notesInput: { minHeight: 88, marginLeft: 0, paddingTop: 14 },
   submitButton: { minHeight: 56, marginTop: 24, borderRadius: 28, alignItems: "center", justifyContent: "center", backgroundColor: COLORS.primary },
-  submitButtonText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
-});
+  submitButtonText: { color: COLORS.onPrimary, fontSize: 15, fontWeight: "800" },
+  });
+}

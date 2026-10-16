@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   Image,
   View,
@@ -30,7 +30,8 @@ function isCredentialFailure(error) {
 }
 
 export default function LoginScreen({ navigation }) {
-  const { enterGuestMode } = useProfile();
+  const { enterGuestMode, publicColors: colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -130,7 +131,7 @@ export default function LoginScreen({ navigation }) {
       style={styles.keyboardContainer}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
-      <StatusBar barStyle="dark-content" backgroundColor="#FAF9F6" />
+      <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
 
       <ScrollView
         contentContainerStyle={styles.scrollContainer}
@@ -162,14 +163,14 @@ export default function LoginScreen({ navigation }) {
             <Ionicons
               name="mail-outline"
               size={20}
-              color="#777"
+              color={colors.mutedText}
               style={styles.inputIcon}
             />
 
             <TextInput
               style={styles.input}
               placeholder="your.email@example.com"
-              placeholderTextColor="#A3A3A3"
+              placeholderTextColor={colors.mutedText}
               value={email}
               onChangeText={(value) => {
                 setEmail(value);
@@ -189,14 +190,14 @@ export default function LoginScreen({ navigation }) {
             <Ionicons
               name="lock-closed-outline"
               size={20}
-              color="#777"
+              color={colors.mutedText}
               style={styles.inputIcon}
             />
 
             <TextInput
               style={styles.input}
               placeholder="Enter your password"
-              placeholderTextColor="#A3A3A3"
+              placeholderTextColor={colors.mutedText}
               value={password}
               onChangeText={(value) => {
                 setPassword(value);
@@ -294,10 +295,11 @@ export default function LoginScreen({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(colors) {
+  return StyleSheet.create({
   keyboardContainer: {
     flex: 1,
-    backgroundColor: "#FAF9F6",
+    backgroundColor: colors.background,
   },
 
   scrollContainer: {
@@ -326,13 +328,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: "700",
-    color: "#18201F",
+    color: colors.text,
     marginBottom: 6,
   },
 
   subtitle: {
     fontSize: 15.5,
-    color: "#858585",
+    color: colors.secondaryText,
     lineHeight: 22,
   },
 
@@ -343,7 +345,7 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 15,
     fontWeight: "600",
-    color: "#242B2A",
+    color: colors.text,
     marginBottom: 10,
   },
 
@@ -354,17 +356,17 @@ const styles = StyleSheet.create({
   inputContainer: {
     height: 66,
     borderWidth: 1,
-    borderColor: "#DEDCD7",
+    borderColor: colors.border,
     borderRadius: 15,
-    backgroundColor: "#F7F6F2",
+    backgroundColor: colors.input,
 
     flexDirection: "row",
     alignItems: "center",
 
     paddingHorizontal: 16,
   },
-  inputError: { borderColor: "#D64545" },
-  errorText: { marginTop: 7, color: "#C53030", fontSize: 13, lineHeight: 18 },
+  inputError: { borderColor: colors.danger },
+  errorText: { marginTop: 7, color: colors.danger, fontSize: 13, lineHeight: 18 },
 
   inputIcon: {
     marginRight: 10,
@@ -374,13 +376,13 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     fontSize: 16,
-    color: "#252B2A",
+    color: colors.text,
   },
 
   showText: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#17796F",
+    color: colors.primary,
   },
 
   forgotContainer: {
@@ -391,13 +393,13 @@ const styles = StyleSheet.create({
   forgotText: {
     fontSize: 14.5,
     fontWeight: "500",
-    color: "#176F68",
+    color: colors.primary,
     textDecorationLine: "underline",
   },
   loginButton: {
     height: 65,
     borderRadius: 16,
-    backgroundColor: "#107D72",
+    backgroundColor: colors.primary,
 
     alignItems: "center",
     justifyContent: "center",
@@ -406,7 +408,7 @@ const styles = StyleSheet.create({
 
     elevation: 3,
 
-    shadowColor: "#000",
+    shadowColor: colors.text,
     shadowOffset: {
       width: 0,
       height: 3,
@@ -417,14 +419,14 @@ const styles = StyleSheet.create({
   loginButtonDisabled: { opacity: 0.55 },
   cooldownText: {
     marginTop: 9,
-    color: "#C53030",
+    color: colors.danger,
     fontSize: 13,
     lineHeight: 18,
     textAlign: "center",
   },
 
   loginButtonText: {
-    color: "#FFFFFF",
+    color: colors.onPrimary,
     fontSize: 17,
     fontWeight: "700",
   },
@@ -438,13 +440,13 @@ const styles = StyleSheet.create({
   divider: {
     flex: 1,
     height: 1,
-    backgroundColor: "#DAD8D3",
+    backgroundColor: colors.border,
   },
 
   orText: {
     marginHorizontal: 14,
     fontSize: 14,
-    color: "#858585",
+    color: colors.secondaryText,
   },
 
   createButton: {
@@ -452,7 +454,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
 
     borderWidth: 1.3,
-    borderColor: "#147A72",
+    borderColor: colors.primary,
 
     alignItems: "center",
     justifyContent: "center",
@@ -462,8 +464,8 @@ const styles = StyleSheet.create({
     height: 67,
     borderRadius: 16,
     borderWidth: 1.3,
-    borderColor: "#DEDCD7",
-    backgroundColor: "#FFFFFF",
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -474,13 +476,13 @@ const styles = StyleSheet.create({
   googleButtonText: {
     fontSize: 17,
     fontWeight: "700",
-    color: "#242B2A",
+    color: colors.text,
   },
 
   createButtonText: {
     fontSize: 17,
     fontWeight: "700",
-    color: "#176F68",
+    color: colors.primary,
   },
 
   bottomTextContainer: {
@@ -494,13 +496,14 @@ const styles = StyleSheet.create({
 
   bottomText: {
     fontSize: 14,
-    color: "#858585",
+    color: colors.secondaryText,
   },
 
   backText: {
     fontSize: 14,
     fontWeight: "700",
-    color: "#C39A45",
+    color: colors.accent,
     textDecorationLine: "underline",
   },
-});
+  });
+}

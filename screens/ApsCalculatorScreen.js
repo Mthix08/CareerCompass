@@ -18,20 +18,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
 import { getApsUniversityMatches } from "../data/apsMatching";
 
-const COLORS = {
-  primary: "#117C72",
-  primaryDark: "#0B665E",
-  primarySoft: "#E7F3F1",
-  background: "#F6F8FC",
-  surface: "#FFFFFF",
-  text: "#172033",
-  secondary: "#667085",
-  muted: "#98A2B3",
-  border: "#DDE4ED",
-  input: "#F8FAFC",
-  danger: "#D64545",
-};
-
 const PERIODS = [
   "Grade 11 Final",
   "Grade 12 Term 1",
@@ -134,6 +120,9 @@ function getAchievementLevel(mark) {
 }
 
 function SubjectPicker({ visible, selectedSubjects, onSelect, onClose }) {
+  const { colors } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const [query, setQuery] = useState("");
   const filteredGroups = useMemo(() => {
     const search = query.trim().toLowerCase();
@@ -229,6 +218,9 @@ function SubjectPicker({ visible, selectedSubjects, onSelect, onClose }) {
 }
 
 function MarkRow({ item, onMarkChange, onRemove }) {
+  const { colors } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const level = getAchievementLevel(item.mark);
 
   const handleChange = (value) => {
@@ -277,6 +269,9 @@ function MarkRow({ item, onMarkChange, onRemove }) {
 }
 
 function ApsResultModal({ result, onClose, onViewMatches }) {
+  const { colors } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   return (
     <Modal
       visible={Boolean(result)}
@@ -348,7 +343,9 @@ const getSavedPeriodsFromProfile = (apsRecords = {}) => {
 };
 
 export default function ApsCalculatorScreen({ navigation }) {
-  const { profile, saveApsRecord } = useProfile();
+  const { profile, saveApsRecord, colors, resolvedTheme } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const [selectedPeriod, setSelectedPeriod] = useState(PERIODS[0]);
   const [marksByPeriod, setMarksByPeriod] = useState({});
   const [editedPeriods, setEditedPeriods] = useState([]);
@@ -466,7 +463,7 @@ export default function ApsCalculatorScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />
+      <StatusBar barStyle={resolvedTheme === "dark" ? "light-content" : "dark-content"} backgroundColor={COLORS.primary} />
       <View style={styles.header}>
         <Pressable
           onPress={() => navigation.goBack()}
@@ -475,7 +472,7 @@ export default function ApsCalculatorScreen({ navigation }) {
           hitSlop={8}
           style={({ pressed }) => pressed && styles.pressed}
         >
-          <Ionicons name="arrow-back" size={25} color="#FFFFFF" />
+          <Ionicons name="arrow-back" size={25} color={COLORS.onPrimary} />
         </Pressable>
         <Text style={styles.title}>My Marks</Text>
         <Text style={styles.subtitle}>
@@ -559,7 +556,7 @@ export default function ApsCalculatorScreen({ navigation }) {
           <Ionicons
             name={isSaved ? "checkmark-circle-outline" : "save-outline"}
             size={20}
-            color="#FFFFFF"
+            color={COLORS.onPrimary}
           />
           <Text style={styles.saveButtonText}>
             {isSaving ? "Saving" : isSaved ? "Update" : "Save"} {selectedPeriod} marks
@@ -593,7 +590,17 @@ export default function ApsCalculatorScreen({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
+function getThemeColors(colors) {
+  return {
+    ...colors,
+    primaryDark: colors.primary,
+    secondary: colors.secondaryText,
+    muted: colors.mutedText,
+  };
+}
+
+function makeStyles(COLORS) {
+  return StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
   header: {
     paddingHorizontal: 22,
@@ -603,12 +610,12 @@ const styles = StyleSheet.create({
   },
   title: {
     marginTop: 10,
-    color: "#FFFFFF",
+    color: COLORS.onPrimary,
     fontSize: 28,
     lineHeight: 34,
     fontWeight: "900",
   },
-  subtitle: { marginTop: 3, color: "#D8F3EF", fontSize: 14, fontWeight: "600" },
+  subtitle: { marginTop: 3, color: COLORS.onPrimary, fontSize: 14, fontWeight: "600" },
   periodSection: { paddingTop: 18, backgroundColor: COLORS.background },
   periodLabel: {
     paddingHorizontal: 22,
@@ -638,7 +645,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primary,
   },
   periodChipText: { color: COLORS.secondary, fontSize: 12, fontWeight: "700" },
-  periodChipTextSelected: { color: "#FFFFFF" },
+  periodChipTextSelected: { color: COLORS.onPrimary },
   marksList: { flexGrow: 1, paddingHorizontal: 22, paddingBottom: 22 },
   rowSeparator: { height: 10 },
   markRow: {
@@ -725,7 +732,7 @@ const styles = StyleSheet.create({
   },
   saveButtonText: {
     marginLeft: 8,
-    color: "#FFFFFF",
+    color: COLORS.onPrimary,
     fontSize: 14,
     fontWeight: "800",
   },
@@ -748,7 +755,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     alignSelf: "center",
     borderRadius: 2,
-    backgroundColor: "#CBD5E1",
+    backgroundColor: COLORS.border,
   },
   sheetHeader: {
     minHeight: 58,
@@ -828,7 +835,7 @@ const styles = StyleSheet.create({
     borderRadius: 26,
     alignItems: "center",
     backgroundColor: COLORS.surface,
-    shadowColor: "#172033",
+    shadowColor: COLORS.text,
     shadowOffset: { width: 0, height: 12 },
     shadowOpacity: 0.2,
     shadowRadius: 24,
@@ -890,5 +897,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: COLORS.primary,
   },
-  resultButtonText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
-});
+  resultButtonText: { color: COLORS.onPrimary, fontSize: 15, fontWeight: "800" },
+  });
+}

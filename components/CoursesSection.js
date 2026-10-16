@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { useProfile } from "../context/ProfileContext";
 
 function CourseCard({ course }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   return (
     <View style={styles.courseCard}>
       <Text style={styles.courseName}>{course.name}</Text>
@@ -34,6 +37,8 @@ function CourseCard({ course }) {
 }
 
 export default function CoursesSection({ courses = [], accentColor = "#F4B08F", onSeeMore }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const previewCourses = courses.slice(0, 5);
   return (
     <View style={styles.section}>
@@ -68,12 +73,13 @@ export default function CoursesSection({ courses = [], accentColor = "#F4B08F", 
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(colors) {
+  return StyleSheet.create({
   section: { paddingTop: 24 },
-  heading: { color: "#FFFFFF", fontSize: 22, fontWeight: "800" },
+  heading: { color: colors.text, fontSize: 22, fontWeight: "800" },
   notice: { marginTop: 8, fontSize: 13, lineHeight: 19 },
   previewList: { maxHeight: 550, marginTop: 3 },
-  seeMoreButton: { minHeight: 50, marginTop: 18, borderRadius: 14, alignItems: "center", justifyContent: "center", backgroundColor: "#29313D" },
+  seeMoreButton: { minHeight: 50, marginTop: 18, borderRadius: 14, alignItems: "center", justifyContent: "center", backgroundColor: colors.primary },
   seeMoreText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
   pressed: { opacity: 0.7 },
   courseCard: {
@@ -81,21 +87,21 @@ const styles = StyleSheet.create({
     padding: 18,
     borderRadius: 17,
     borderWidth: 1,
-    borderColor: "#252D39",
-    backgroundColor: "#151A22",
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
   },
   courseName: {
-    color: "#FFFFFF",
+    color: colors.text,
     fontSize: 17,
     fontWeight: "800",
     lineHeight: 23,
   },
-  faculty: { marginTop: 6, color: "#9CA6B5", fontSize: 13, lineHeight: 19 },
-  divider: { height: 1, marginVertical: 15, backgroundColor: "#29313D" },
+  faculty: { marginTop: 6, color: colors.secondaryText, fontSize: 13, lineHeight: 19 },
+  divider: { height: 1, marginVertical: 15, backgroundColor: colors.border },
   metaRow: { flexDirection: "row", gap: 14 },
   metaItem: { flex: 1 },
   metaLabel: {
-    color: "#818C9B",
+    color: colors.mutedText,
     fontSize: 11,
     fontWeight: "700",
     textTransform: "uppercase",
@@ -103,7 +109,7 @@ const styles = StyleSheet.create({
   },
   metaValue: {
     marginTop: 5,
-    color: "#FFFFFF",
+    color: colors.text,
     fontSize: 13,
     lineHeight: 19,
     fontWeight: "600",
@@ -114,8 +120,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 7,
     borderRadius: 999,
-    backgroundColor: "#222936",
+    backgroundColor: colors.primarySoft,
   },
-  subjectText: { color: "#D7DCE4", fontSize: 12, fontWeight: "600" },
-  emptyText: { paddingVertical: 30, color: "#9CA6B5", textAlign: "center" },
-});
+  subjectText: { color: colors.primary, fontSize: 12, fontWeight: "600" },
+  emptyText: { paddingVertical: 30, color: colors.secondaryText, textAlign: "center" },
+  });
+}

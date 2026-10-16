@@ -5,11 +5,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import UniversityCard from "../components/Varsity-Card";
 import { useBookmarks } from "../context/BookmarksContext";
+import { useProfile } from "../context/ProfileContext";
 import { universities } from "../data/universities";
 import { courseExamples } from "../data/courseExamples";
 import { fetchBursaries } from "../data/funding";
 
 function SavedCourseCard({ course, onPress, onRemove }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   return (
     <Pressable
       onPress={onPress}
@@ -18,7 +21,7 @@ function SavedCourseCard({ course, onPress, onRemove }) {
       style={({ pressed }) => [styles.courseCard, pressed && styles.cardPressed]}
     >
       <View style={styles.courseIcon}>
-        <Ionicons name="book-outline" size={23} color="#117C72" />
+        <Ionicons name="book-outline" size={23} color={colors.primary} />
       </View>
       <View style={styles.courseDetails}>
         <Text style={styles.courseUniversity}>{course.universityShortName}</Text>
@@ -42,6 +45,8 @@ function SavedCourseCard({ course, onPress, onRemove }) {
 }
 
 export default function Bookmarks({ navigation }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const {
     bookmarkedCourseIds,
     bookmarkedIds,
@@ -129,7 +134,7 @@ export default function Bookmarks({ navigation }) {
         ListEmptyComponent={totalBookmarks === 0 ? (
           <View style={styles.emptyState}>
             <View style={styles.emptyIcon}>
-              <Ionicons name="bookmark-outline" size={38} color="#117C72" />
+              <Ionicons name="bookmark-outline" size={38} color={colors.primary} />
             </View>
             <Text style={styles.emptyTitle}>No saved items yet</Text>
             <Text style={styles.emptyText}>
@@ -153,10 +158,12 @@ export default function Bookmarks({ navigation }) {
 }
 
 function SavedFundingCard({ funding, onPress, onRemove }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   return (
     <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={`Open ${funding.name} details`} style={({ pressed }) => [styles.courseCard, pressed && styles.cardPressed]}>
       <View style={styles.courseIcon}>
-        <Ionicons name="wallet-outline" size={23} color="#117C72" />
+        <Ionicons name="wallet-outline" size={23} color={colors.primary} />
       </View>
       <View style={styles.courseDetails}>
         <Text style={styles.courseUniversity}>BURSARY</Text>
@@ -164,33 +171,34 @@ function SavedFundingCard({ funding, onPress, onRemove }) {
         <Text style={styles.courseMeta}>{funding.provider} · Closes {funding.closes}</Text>
       </View>
       <Pressable onPress={(event) => { event.stopPropagation?.(); onRemove(); }} accessibilityRole="button" accessibilityLabel={`Remove ${funding.name} from bookmarks`} hitSlop={8} style={styles.removeCourseButton}>
-        <Ionicons name="bookmark" size={22} color="#117C72" />
+        <Ionicons name="bookmark" size={22} color={colors.primary} />
       </Pressable>
     </Pressable>
   );
 }
 
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#F6F8FC" },
+function makeStyles(colors) {
+  return StyleSheet.create({
+  container: { flex: 1, backgroundColor: colors.background },
   listContent: { paddingHorizontal: 20, paddingTop: 18, paddingBottom: 32 },
   emptyListContent: { flexGrow: 1 },
   separator: { height: 20 },
   resultCount: {
     marginBottom: 16,
-    color: "#7B8798",
+    color: colors.mutedText,
     fontSize: 13,
     fontWeight: "600",
   },
   savedCoursesSection: { marginBottom: 20 },
-  sectionTitle: { marginBottom: 10, color: "#172033", fontSize: 18, fontWeight: "800" },
-  universitySectionTitle: { marginBottom: 12, color: "#172033", fontSize: 18, fontWeight: "800" },
-  courseCard: { minHeight: 104, marginBottom: 10, padding: 14, borderRadius: 17, borderWidth: 1, borderColor: "#DDE4ED", flexDirection: "row", alignItems: "center", backgroundColor: "#FFFFFF" },
+  sectionTitle: { marginBottom: 10, color: colors.text, fontSize: 18, fontWeight: "800" },
+  universitySectionTitle: { marginBottom: 12, color: colors.text, fontSize: 18, fontWeight: "800" },
+  courseCard: { minHeight: 104, marginBottom: 10, padding: 14, borderRadius: 17, borderWidth: 1, borderColor: colors.border, flexDirection: "row", alignItems: "center", backgroundColor: colors.surface },
   cardPressed: { opacity: 0.74 },
-  courseIcon: { width: 46, height: 46, borderRadius: 14, alignItems: "center", justifyContent: "center", backgroundColor: "#E7F3F1" },
+  courseIcon: { width: 46, height: 46, borderRadius: 14, alignItems: "center", justifyContent: "center", backgroundColor: colors.primarySoft },
   courseDetails: { flex: 1, minWidth: 0, marginHorizontal: 11 },
-  courseUniversity: { color: "#7B8798", fontSize: 10, fontWeight: "800" },
-  courseName: { marginTop: 3, color: "#172033", fontSize: 14, lineHeight: 19, fontWeight: "800" },
-  courseMeta: { marginTop: 5, color: "#117C72", fontSize: 10, fontWeight: "700" },
+  courseUniversity: { color: colors.mutedText, fontSize: 10, fontWeight: "800" },
+  courseName: { marginTop: 3, color: colors.text, fontSize: 14, lineHeight: 19, fontWeight: "800" },
+  courseMeta: { marginTop: 5, color: colors.primary, fontSize: 10, fontWeight: "700" },
   removeCourseButton: { width: 40, height: 40, alignItems: "center", justifyContent: "center" },
   emptyState: {
     flex: 1,
@@ -204,11 +212,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 38,
-    backgroundColor: "#E5F3F1",
+    backgroundColor: colors.primarySoft,
   },
   emptyTitle: {
     marginTop: 18,
-    color: "#172033",
+    color: colors.text,
     fontSize: 20,
     fontWeight: "800",
     textAlign: "center",
@@ -216,9 +224,10 @@ const styles = StyleSheet.create({
   emptyText: {
     maxWidth: 320,
     marginTop: 8,
-    color: "#7B8798",
+    color: colors.secondaryText,
     fontSize: 14,
     lineHeight: 21,
     textAlign: "center",
   },
-});
+  });
+}

@@ -13,11 +13,11 @@ const Tab = createBottomTabNavigator();
 export default function BottomTabNavigator() {
   return (
     <Tab.Navigator
-      initialRouteName="Home"
+      initialRouteName="HomeTab"
       screenOptions={{ headerShown: false, tabBarHideOnKeyboard: true }}
       tabBar={(props) => <NavBar {...props} />}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="HomeTab" component={HomeScreen} options={{ title: "Home" }} />
       <Tab.Screen name="Funding" component={FundingScreen} />
       <Tab.Screen
         name="Universities"

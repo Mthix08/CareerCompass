@@ -493,41 +493,43 @@ export default function ProfileScreen({ navigation }) {
           />
         </View>
 
-        <View style={styles.themeCard}>
-          <View style={styles.themeHeadingRow}>
-            <Ionicons name="sunny-outline" size={21} color={colors.text} />
-            <Text style={styles.themeTitle}>Theme Mode</Text>
-            <Text style={styles.currentTheme}>{themePreference} Mode</Text>
-          </View>
-          <View style={styles.themeOptions}>
-            {THEMES.map((theme) => {
-              const selected = themePreference === theme;
-              return (
-                <Pressable
-                  key={theme}
-                  onPress={() => setThemePreference(theme)}
-                  accessibilityRole="radio"
-                  accessibilityLabel={`${theme} theme`}
-                  accessibilityState={{ checked: selected }}
-                  style={({ pressed }) => [
-                    styles.themeOption,
-                    selected && styles.themeOptionSelected,
-                    pressed && styles.pressed,
-                  ]}
-                >
-                  <Text
-                    style={[
-                      styles.themeOptionText,
-                      selected && styles.themeOptionTextSelected,
+        {isAuthenticated && (
+          <View style={styles.themeCard}>
+            <View style={styles.themeHeadingRow}>
+              <Ionicons name="sunny-outline" size={21} color={colors.text} />
+              <Text style={styles.themeTitle}>Theme Mode</Text>
+              <Text style={styles.currentTheme}>{themePreference} Mode</Text>
+            </View>
+            <View style={styles.themeOptions}>
+              {THEMES.map((theme) => {
+                const selected = themePreference === theme;
+                return (
+                  <Pressable
+                    key={theme}
+                    onPress={() => setThemePreference(theme)}
+                    accessibilityRole="radio"
+                    accessibilityLabel={`${theme} theme`}
+                    accessibilityState={{ checked: selected }}
+                    style={({ pressed }) => [
+                      styles.themeOption,
+                      selected && styles.themeOptionSelected,
+                      pressed && styles.pressed,
                     ]}
                   >
-                    {theme}
-                  </Text>
-                </Pressable>
-              );
-            })}
+                    <Text
+                      style={[
+                        styles.themeOptionText,
+                        selected && styles.themeOptionTextSelected,
+                      ]}
+                    >
+                      {theme}
+                    </Text>
+                  </Pressable>
+                );
+              })}
+            </View>
           </View>
-        </View>
+        )}
 
         <Pressable
           onPress={handleSignOut}

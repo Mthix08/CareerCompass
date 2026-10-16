@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   Image,
   View,
@@ -17,8 +17,11 @@ import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { auth, db } from "./firebaseConfig";
 import { signInWithGoogle } from "./googleAuth";
+import { useProfile } from "../context/ProfileContext";
 
 export default function SignUpScreen({ navigation }) {
+  const { publicColors: colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -177,7 +180,7 @@ export default function SignUpScreen({ navigation }) {
       style={styles.keyboardContainer}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
-      <StatusBar barStyle="dark-content" backgroundColor="#FAF9F6" />
+      <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <ScrollView
         contentContainerStyle={styles.scrollContainer}
         keyboardShouldPersistTaps="handled"
@@ -207,13 +210,13 @@ export default function SignUpScreen({ navigation }) {
             <Ionicons
               name="person-outline"
               size={20}
-              color="#777"
+              color={colors.mutedText}
               style={styles.inputIcon}
             />
             <TextInput
               style={styles.input}
               placeholder="Enter your full name"
-              placeholderTextColor="#A3A3A3"
+              placeholderTextColor={colors.mutedText}
               value={name}
               onChangeText={(value) => updateField("name", value, setName)}
               autoCapitalize="words"
@@ -228,13 +231,13 @@ export default function SignUpScreen({ navigation }) {
             <Ionicons
               name="mail-outline"
               size={20}
-              color="#777"
+              color={colors.mutedText}
               style={styles.inputIcon}
             />
             <TextInput
               style={styles.input}
               placeholder="Enter your email"
-              placeholderTextColor="#A3A3A3"
+              placeholderTextColor={colors.mutedText}
               value={email}
               onChangeText={(value) => updateField("email", value, setEmail)}
               keyboardType="email-address"
@@ -254,13 +257,13 @@ export default function SignUpScreen({ navigation }) {
             <Ionicons
               name="lock-closed-outline"
               size={20}
-              color="#777"
+              color={colors.mutedText}
               style={styles.inputIcon}
             />
             <TextInput
               style={styles.input}
               placeholder="Create a password"
-              placeholderTextColor="#A3A3A3"
+              placeholderTextColor={colors.mutedText}
               value={password}
               onChangeText={(value) =>
                 updateField("password", value, setPassword)
@@ -293,13 +296,13 @@ export default function SignUpScreen({ navigation }) {
             <Ionicons
               name="shield-checkmark-outline"
               size={20}
-              color="#777"
+              color={colors.mutedText}
               style={styles.inputIcon}
             />
             <TextInput
               style={styles.input}
               placeholder="Re-enter your password"
-              placeholderTextColor="#A3A3A3"
+              placeholderTextColor={colors.mutedText}
               value={confirmPassword}
               onChangeText={(value) =>
                 updateField("confirmPassword", value, setConfirmPassword)
@@ -361,10 +364,11 @@ export default function SignUpScreen({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(colors) {
+  return StyleSheet.create({
   keyboardContainer: {
     flex: 1,
-    backgroundColor: "#FAF9F6",
+    backgroundColor: colors.background,
   },
   scrollContainer: {
     flexGrow: 1,
@@ -388,12 +392,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: "700",
-    color: "#18201F",
+    color: colors.text,
     marginBottom: 6,
   },
   subtitle: {
     fontSize: 15.5,
-    color: "#858585",
+    color: colors.secondaryText,
     lineHeight: 22,
   },
   formContainer: {
@@ -402,7 +406,7 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 15,
     fontWeight: "600",
-    color: "#242B2A",
+    color: colors.text,
     marginBottom: 10,
   },
   fieldLabel: {
@@ -411,15 +415,15 @@ const styles = StyleSheet.create({
   inputContainer: {
     height: 66,
     borderWidth: 1,
-    borderColor: "#DEDCD7",
+    borderColor: colors.border,
     borderRadius: 15,
-    backgroundColor: "#F7F6F2",
+    backgroundColor: colors.input,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 16,
   },
   inputError: {
-    borderColor: "#D64545",
+    borderColor: colors.danger,
   },
   inputIcon: {
     marginRight: 10,
@@ -428,23 +432,23 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     fontSize: 16,
-    color: "#252B2A",
+    color: colors.text,
   },
   showText: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#17796F",
+    color: colors.primary,
   },
   errorText: {
     marginTop: 7,
-    color: "#D64545",
+    color: colors.danger,
     fontSize: 13,
     lineHeight: 18,
   },
   signUpButton: {
     height: 65,
     borderRadius: 16,
-    backgroundColor: "#107D72",
+    backgroundColor: colors.primary,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 28,
@@ -455,7 +459,7 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
   },
   signUpButtonText: {
-    color: "#FFFFFF",
+    color: colors.onPrimary,
     fontSize: 17,
     fontWeight: "700",
   },
@@ -467,8 +471,8 @@ const styles = StyleSheet.create({
     height: 67,
     borderRadius: 16,
     borderWidth: 1.3,
-    borderColor: "#DEDCD7",
-    backgroundColor: "#FFFFFF",
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -479,7 +483,7 @@ const styles = StyleSheet.create({
   googleButtonText: {
     fontSize: 17,
     fontWeight: "700",
-    color: "#242B2A",
+    color: colors.text,
   },
 
   bottomTextContainer: {
@@ -491,11 +495,12 @@ const styles = StyleSheet.create({
   },
   bottomText: {
     fontSize: 14,
-    color: "#858585",
+    color: colors.secondaryText,
   },
   loginText: {
     fontSize: 14,
     fontWeight: "700",
-    color: "#C39A45",
+    color: colors.accent,
   },
-});
+  });
+}

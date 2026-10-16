@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import {
   View,
   Text,
@@ -9,6 +9,7 @@ import {
 } from "react-native";
 
 import { useTranslation } from "react-i18next";
+import { useProfile } from "../context/ProfileContext";
 
 const languages = [
   { code: "en", name: "English" },
@@ -26,6 +27,8 @@ const languages = [
 
 export default function LanguageSelector() {
   const { t, i18n } = useTranslation();
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
 
   const [visible, setVisible] = useState(false);
 
@@ -93,20 +96,21 @@ export default function LanguageSelector() {
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(colors) {
+  return StyleSheet.create({
   languageButton: {
     paddingVertical: 8,
     paddingHorizontal: 12,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: colors.surface,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: "#E5ECEF",
+    borderColor: colors.border,
   },
 
   buttonText: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#117C72",
+    color: colors.primary,
   },
 
   overlay: {
@@ -117,7 +121,7 @@ const styles = StyleSheet.create({
   },
 
   modal: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: colors.surface,
     width: "85%",
     maxHeight: "75%",
     padding: 20,
@@ -125,6 +129,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
+    color: colors.text,
     fontSize: 20,
     fontWeight: "bold",
     marginBottom: 15,
@@ -139,10 +144,11 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     paddingHorizontal: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#E5ECEF",
+    borderBottomColor: colors.border,
   },
 
   optionText: {
+    color: colors.text,
     fontSize: 16,
   },
 
@@ -153,8 +159,9 @@ const styles = StyleSheet.create({
   },
 
   cancelText: {
-    color: "#117C72",
+    color: colors.primary,
     fontWeight: "700",
     fontSize: 16,
   },
-});
+  });
+}

@@ -1,4 +1,6 @@
+import React, { useMemo } from "react";
 import { NavigationContainer } from "@react-navigation/native";
+import { DarkTheme, DefaultTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import LoginScreen from "./screens/LoginScreen";
@@ -23,13 +25,37 @@ import AssistantScreen from "./screens/AssistantScreen";
 import ProspectusScreen from "./screens/ProspectusScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import { ProfileProvider } from "./context/ProfileContext";
+import { useProfile } from "./context/ProfileContext";
 import { BookmarksProvider } from "./context/BookmarksContext";
 import './translation/i18n';
 const Stack = createNativeStackNavigator();
 
 function AppNavigator() {
+  const { colors, publicColors, resolvedTheme } = useProfile();
+  const publicScreenOptions = useMemo(() => ({
+    headerStyle: { backgroundColor: publicColors.background },
+    headerTintColor: publicColors.text,
+    headerTitleStyle: { color: publicColors.text },
+    contentStyle: { backgroundColor: publicColors.background },
+  }), [publicColors]);
+  const navigationTheme = useMemo(() => {
+    const baseTheme = resolvedTheme === "dark" ? DarkTheme : DefaultTheme;
+    return {
+      ...baseTheme,
+      colors: {
+        ...baseTheme.colors,
+        primary: colors.primary,
+        background: colors.background,
+        card: colors.surface,
+        text: colors.text,
+        border: colors.border,
+        notification: colors.accent,
+      },
+    };
+  }, [colors, resolvedTheme]);
+
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={navigationTheme}>
       <Stack.Navigator initialRouteName="Splash">
         <Stack.Screen
           name="Splash"
@@ -41,8 +67,8 @@ function AppNavigator() {
           component={OnboardingScreen}
           options={{ headerShown: false, gestureEnabled: false }}
         />
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="SignUp" component={SignUpScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} options={publicScreenOptions} />
+        <Stack.Screen name="SignUp" component={SignUpScreen} options={publicScreenOptions} />
         <Stack.Screen
           name="PassRecovery"
           component={PassRecoveryScreen}

@@ -1,20 +1,14 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable, ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useBookmarks } from "../context/BookmarksContext";
-
-const COLORS = {
-  primary: "#117C72",
-  primarySoft: "#E7F3F1",
-  background: "#F6F8FC",
-  surface: "#FFFFFF",
-  text: "#172033",
-  secondary: "#667085",
-  border: "#DDE4ED",
-};
+import { useProfile } from "../context/ProfileContext";
 
 function DetailRow({ icon, label, value }) {
+  const { colors } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   return (
     <View style={styles.detailRow}>
       <View style={styles.detailIcon}>
@@ -29,6 +23,9 @@ function DetailRow({ icon, label, value }) {
 }
 
 export default function CourseDetailsScreen({ navigation, route }) {
+  const { colors, resolvedTheme } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const course = route.params?.course;
   const {
     addCourseBookmark,
@@ -50,11 +47,11 @@ export default function CourseDetailsScreen({ navigation, route }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />
+      <StatusBar barStyle={resolvedTheme === "dark" ? "light-content" : "dark-content"} backgroundColor={COLORS.primary} />
       <View style={styles.header}>
         <View style={styles.headerActions}>
           <Pressable onPress={() => navigation.goBack()} accessibilityRole="button" accessibilityLabel="Go back" hitSlop={8} style={styles.headerButton}>
-            <Ionicons name="arrow-back" size={25} color="#FFFFFF" />
+            <Ionicons name="arrow-back" size={25} color={COLORS.onPrimary} />
           </Pressable>
           <Pressable
             onPress={() =>
@@ -67,7 +64,7 @@ export default function CourseDetailsScreen({ navigation, route }) {
             accessibilityState={{ selected: bookmarked }}
             style={({ pressed }) => [styles.bookmarkButton, pressed && styles.pressed]}
           >
-            <Ionicons name={bookmarked ? "bookmark" : "bookmark-outline"} size={23} color="#FFFFFF" />
+            <Ionicons name={bookmarked ? "bookmark" : "bookmark-outline"} size={23} color={COLORS.onPrimary} />
           </Pressable>
         </View>
         <Text style={styles.headerLabel}>COURSE DETAILS</Text>
@@ -132,16 +129,21 @@ export default function CourseDetailsScreen({ navigation, route }) {
   );
 }
 
-const styles = StyleSheet.create({
+function getThemeColors(colors) {
+  return { ...colors, secondary: colors.secondaryText };
+}
+
+function makeStyles(COLORS) {
+  return StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
   header: { paddingHorizontal: 22, paddingTop: 14, paddingBottom: 24, backgroundColor: COLORS.primary },
   headerActions: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
   headerButton: { width: 42, height: 42, marginLeft: -8, alignItems: "center", justifyContent: "center" },
   bookmarkButton: { width: 44, height: 44, borderRadius: 22, borderWidth: 1, borderColor: "rgba(255,255,255,0.46)", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(255,255,255,0.14)" },
   pressed: { opacity: 0.65 },
-  headerLabel: { marginTop: 18, color: "#BFE6E1", fontSize: 10, fontWeight: "900", letterSpacing: 1.2 },
-  title: { marginTop: 7, color: "#FFFFFF", fontSize: 25, lineHeight: 32, fontWeight: "900" },
-  university: { marginTop: 7, color: "#D8F3EF", fontSize: 14, fontWeight: "700" },
+  headerLabel: { marginTop: 18, color: COLORS.onPrimary, fontSize: 10, fontWeight: "900", letterSpacing: 1.2 },
+  title: { marginTop: 7, color: COLORS.onPrimary, fontSize: 25, lineHeight: 32, fontWeight: "900" },
+  university: { marginTop: 7, color: COLORS.onPrimary, fontSize: 14, fontWeight: "700" },
   content: { padding: 20, paddingBottom: 40 },
   apsCard: { padding: 18, borderRadius: 20, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: COLORS.primarySoft },
   apsLabel: { color: COLORS.primary, fontSize: 14, fontWeight: "900" },
@@ -170,5 +172,6 @@ const styles = StyleSheet.create({
   missingContainer: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: COLORS.background },
   missingTitle: { color: COLORS.text, fontSize: 20, fontWeight: "900" },
   backToCourses: { marginTop: 16, paddingHorizontal: 20, paddingVertical: 12, borderRadius: 22, backgroundColor: COLORS.primary },
-  backToCoursesText: { color: "#FFFFFF", fontWeight: "800" },
-});
+  backToCoursesText: { color: COLORS.onPrimary, fontWeight: "800" },
+  });
+}

@@ -14,18 +14,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
 import { getApsUniversityMatches, getLatestApsRecord } from "../data/apsMatching";
 
-const COLORS = {
-  primary: "#117C72",
-  primarySoft: "#E7F3F1",
-  background: "#F6F8FC",
-  surface: "#FFFFFF",
-  text: "#172033",
-  secondary: "#667085",
-  muted: "#98A2B3",
-  border: "#DDE4ED",
-};
-
 function UniversityMatchCard({ university, onPressUniversity, onPressCourse }) {
+  const { colors } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   return (
     <View style={styles.card}>
       <Pressable
@@ -80,7 +72,9 @@ function UniversityMatchCard({ university, onPressUniversity, onPressCourse }) {
 }
 
 export default function UniversityApsScoresScreen({ navigation }) {
-  const { profile } = useProfile();
+  const { profile, colors, resolvedTheme } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const apsRecord = useMemo(
     () => getLatestApsRecord(profile?.apsRecords),
     [profile?.apsRecords],
@@ -96,7 +90,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />
+      <StatusBar barStyle={resolvedTheme === "dark" ? "light-content" : "dark-content"} backgroundColor={COLORS.primary} />
       <View style={styles.header}>
         <Pressable
           onPress={() => navigation.goBack()}
@@ -105,7 +99,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
           hitSlop={8}
           style={({ pressed }) => [styles.backButton, pressed && styles.pressed]}
         >
-          <Ionicons name="arrow-back" size={25} color="#FFFFFF" />
+          <Ionicons name="arrow-back" size={25} color={COLORS.onPrimary} />
         </Pressable>
         <Text style={styles.headerTitle}>Your APS matches</Text>
         <Text style={styles.headerSubtitle}>
@@ -150,7 +144,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
               accessibilityRole="button"
               style={({ pressed }) => [styles.calculateButton, pressed && styles.cardPressed]}
             >
-              <Ionicons name="calculator-outline" size={18} color="#FFFFFF" />
+              <Ionicons name="calculator-outline" size={18} color={COLORS.onPrimary} />
               <Text style={styles.calculateButtonText}>Open APS calculator</Text>
             </Pressable>
           </View>
@@ -182,7 +176,12 @@ export default function UniversityApsScoresScreen({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
+function getThemeColors(colors) {
+  return { ...colors, secondary: colors.secondaryText, muted: colors.mutedText };
+}
+
+function makeStyles(COLORS) {
+  return StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
   header: {
     paddingHorizontal: 22,
@@ -199,14 +198,14 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     marginTop: 5,
-    color: "#FFFFFF",
+    color: COLORS.onPrimary,
     fontSize: 26,
     lineHeight: 32,
     fontWeight: "900",
   },
   headerSubtitle: {
     marginTop: 4,
-    color: "#D8F3EF",
+    color: COLORS.onPrimary,
     fontSize: 14,
     fontWeight: "600",
   },
@@ -226,7 +225,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.border,
     backgroundColor: COLORS.surface,
-    shadowColor: "#172033",
+    shadowColor: COLORS.text,
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.06,
     shadowRadius: 8,
@@ -242,7 +241,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.border,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#FFFFFF",
+    backgroundColor: COLORS.surface,
   },
   logo: { width: 44, height: 44 },
   universityDetails: { flex: 1, minWidth: 0, marginHorizontal: 13 },
@@ -275,7 +274,8 @@ const styles = StyleSheet.create({
   emptyTitle: { marginTop: 12, color: COLORS.text, fontSize: 17, fontWeight: "900" },
   emptyText: { marginTop: 8, color: COLORS.secondary, fontSize: 13, lineHeight: 19, textAlign: "center" },
   calculateButton: { marginTop: 18, paddingHorizontal: 15, paddingVertical: 11, borderRadius: 10, flexDirection: "row", alignItems: "center", backgroundColor: COLORS.primary },
-  calculateButtonText: { marginLeft: 8, color: "#FFFFFF", fontSize: 13, fontWeight: "800" },
+  calculateButtonText: { marginLeft: 8, color: COLORS.onPrimary, fontSize: 13, fontWeight: "800" },
   disclaimer: { marginTop: 16, color: COLORS.secondary, fontSize: 11, lineHeight: 17 },
   pressed: { opacity: 0.65 },
-});
+  });
+}

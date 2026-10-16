@@ -16,6 +16,11 @@ import { auth, db, storage } from "../screens/firebaseConfig";
 
 const ProfileContext = createContext(null);
 const THEME_STORAGE_KEY = "@careercompass:themePreference";
+const THEME_PREFERENCES = ["Light", "Dark", "System"];
+
+function normalizeThemePreference(value) {
+  return THEME_PREFERENCES.includes(value) ? value : "Light";
+}
 
 const lightColors = {
   background: "#F6F8FC",
@@ -26,6 +31,7 @@ const lightColors = {
   mutedText: "#7C899D",
   border: "#DDE4ED",
   primary: "#117C72",
+  onPrimary: "#FFFFFF",
   primarySoft: "#E8F3F1",
   accent: "#C39A45",
   danger: "#D64545",
@@ -42,6 +48,7 @@ const darkColors = {
   mutedText: "#909CAC",
   border: "#29313D",
   primary: "#25A99C",
+  onPrimary: "#061311",
   primarySoft: "#173934",
   accent: "#D1AD61",
   danger: "#FF6B6B",
@@ -67,6 +74,7 @@ export function ProfileProvider({ children }) {
   const [firebaseUser, setFirebaseUser] = useState(null);
   const [isGuest, setIsGuest] = useState(false);
   const [themePreference, setThemePreferenceState] = useState("Light");
+  const themePreferenceChangedRef = useRef(false);
   const [successMessage, setSuccessMessage] = useState("");
 
   // Load saved theme preference once on mount.
@@ -74,7 +82,9 @@ export function ProfileProvider({ children }) {
     (async () => {
       try {
         const storedTheme = await AsyncStorage.getItem(THEME_STORAGE_KEY);
-        if (storedTheme) setThemePreferenceState(storedTheme);
+        if (!themePreferenceChangedRef.current && storedTheme) {
+          setThemePreferenceState(normalizeThemePreference(storedTheme));
+        }
       } catch (_error) {
         // If storage fails, we just keep the default "Light" theme.
       }
@@ -83,8 +93,10 @@ export function ProfileProvider({ children }) {
 
   // Wrap the setter so every change is also saved to AsyncStorage.
   const setThemePreference = useCallback((nextTheme) => {
-    setThemePreferenceState(nextTheme);
-    AsyncStorage.setItem(THEME_STORAGE_KEY, nextTheme).catch(() => {
+    const normalizedTheme = normalizeThemePreference(nextTheme);
+    themePreferenceChangedRef.current = true;
+    setThemePreferenceState(normalizedTheme);
+    AsyncStorage.setItem(THEME_STORAGE_KEY, normalizedTheme).catch(() => {
       // Non-fatal: theme just won't persist this time.
     });
   }, []);
@@ -144,12 +156,11 @@ export function ProfileProvider({ children }) {
     setSuccessMessage("");
   }, []);
 
-  const resolvedTheme =
-    themePreference === "System" ?
-      systemColorScheme === "dark" ?
-        "dark"
-        : "light"
-      : themePreference.toLowerCase();
+  const resolvedTheme = firebaseUser
+    ? themePreference === "System"
+      ? systemColorScheme === "dark" ? "dark" : "light"
+      : themePreference.toLowerCase()
+    : "light";
   const colors = resolvedTheme === "dark" ? darkColors : lightColors;
 
   const updateProfile = useCallback(
@@ -246,6 +257,7 @@ export function ProfileProvider({ children }) {
       setThemePreference,
       resolvedTheme,
       colors,
+      publicColors: lightColors,
       successMessage,
       clearSuccessMessage,
     }),

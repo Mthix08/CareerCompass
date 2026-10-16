@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable, ScrollView, StyleSheet, Switch, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
-
-const GREEN = "rgba(8, 76, 70, 0.88)";
 
 const PREFERENCE_OPTIONS = [
   {
@@ -31,7 +29,8 @@ const PREFERENCE_OPTIONS = [
 ];
 
 export default function NotificationPreferences({ navigation }) {
-  const { profile, updateProfile } = useProfile();
+  const { profile, updateProfile, colors, resolvedTheme } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [preferences, setPreferences] = useState(() =>
     Object.fromEntries(PREFERENCE_OPTIONS.map(({ id }) => [id, true])),
   );
@@ -55,7 +54,7 @@ export default function NotificationPreferences({ navigation }) {
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top", "left", "right"]}>
-      <StatusBar style="light" />
+      <StatusBar style={resolvedTheme === "dark" ? "light" : "dark"} />
 
       <View style={styles.header}>
         <Pressable
@@ -76,7 +75,7 @@ export default function NotificationPreferences({ navigation }) {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.infoCard}>
-          <Ionicons name="notifications-outline" size={22} color={GREEN} />
+          <Ionicons name="notifications-outline" size={22} color={colors.primary} />
           <Text style={styles.infoText}>
             Stay on top of bursary deadlines and application dates. We only
             send notifications that matter.
@@ -93,7 +92,7 @@ export default function NotificationPreferences({ navigation }) {
               ]}
             >
               <View style={styles.iconWrap}>
-                <Ionicons name="notifications-outline" size={21} color={GREEN} />
+                <Ionicons name="notifications-outline" size={21} color={colors.primary} />
               </View>
               <View style={styles.preferenceCopy}>
                 <Text style={styles.preferenceTitle}>{option.title}</Text>
@@ -103,9 +102,9 @@ export default function NotificationPreferences({ navigation }) {
                 value={preferences[option.id]}
                 onValueChange={() => togglePreference(option.id)}
                 accessibilityLabel={`${option.title} notifications`}
-                trackColor={{ false: "#38414E", true: GREEN }}
-                thumbColor={preferences[option.id] ? "#0B8F98" : "#AAB2BE"}
-                ios_backgroundColor="#38414E"
+                trackColor={{ false: colors.border, true: colors.primary }}
+                thumbColor={preferences[option.id] ? colors.surface : colors.mutedText}
+                ios_backgroundColor={colors.border}
               />
             </View>
           ))}
@@ -115,14 +114,15 @@ export default function NotificationPreferences({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: GREEN },
+function makeStyles(colors) {
+  return StyleSheet.create({
+  safeArea: { flex: 1, backgroundColor: colors.background },
   header: {
     minHeight: 64,
     paddingHorizontal: 16,
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: GREEN,
+    backgroundColor: colors.primary,
   },
   backButton: {
     width: 42,
@@ -133,16 +133,16 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255,0.20)",
   },
   headerTitle: { marginLeft: 12, color: "#FFFFFF", fontSize: 20, fontWeight: "900" },
-  scrollView: { flex: 1, backgroundColor: "#c7c9cc" },
+  scrollView: { flex: 1, backgroundColor: colors.background },
   content: { padding: 20, paddingBottom: 42 },
   infoCard: {
     padding: 17,
     borderRadius: 17,
     borderWidth: 1,
-    borderColor: "#078D3B",
+    borderColor: colors.border,
     flexDirection: "row",
     alignItems: "flex-start",
-    backgroundColor: GREEN,
+    backgroundColor: colors.surface,
   },
   infoText: { flex: 1, marginLeft: 14, color: "#D7DFE8", fontSize: 14, lineHeight: 21 },
   preferencesCard: {
@@ -150,8 +150,8 @@ const styles = StyleSheet.create({
     marginTop: 20,
     borderRadius: 19,
     borderWidth: 1,
-    borderColor: "#078D3B",
-    backgroundColor: GREEN,
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
   },
   preferenceRow: {
     minHeight: 76,
@@ -160,17 +160,18 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
-  rowDivider: { borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: "#313945" },
+  rowDivider: { borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: colors.border },
   iconWrap: {
     width: 40,
     height: 40,
     borderRadius: 12,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#dee4e1",
+    backgroundColor: colors.primarySoft,
   },
   preferenceCopy: { flex: 1, minWidth: 0, marginHorizontal: 14 },
-  preferenceTitle: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
-  preferenceDescription: { marginTop: 4, color: "#ffffff", fontSize: 12, lineHeight: 17 },
+  preferenceTitle: { color: colors.text, fontSize: 15, fontWeight: "800" },
+  preferenceDescription: { marginTop: 4, color: colors.secondaryText, fontSize: 12, lineHeight: 17 },
   pressed: { opacity: 0.65 },
-});
+  });
+}
