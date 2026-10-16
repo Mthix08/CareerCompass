@@ -8,7 +8,8 @@ import React, {
   useState,
 } from "react";
 import { useColorScheme } from "react-native";
-import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
+import { signOut } from "firebase/auth";
+import { doc, getDoc, onSnapshot, serverTimestamp, setDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -73,6 +74,8 @@ export function ProfileProvider({ children }) {
   const [profile, setProfile] = useState(initialProfile);
   const [firebaseUser, setFirebaseUser] = useState(null);
   const [isGuest, setIsGuest] = useState(false);
+  const [accessRestricted, setAccessRestricted] = useState(false);
+  const accessRestrictedRef = useRef(false);
   const [themePreference, setThemePreferenceState] = useState("Light");
   const themePreferenceChangedRef = useRef(false);
   const [successMessage, setSuccessMessage] = useState("");
@@ -102,44 +105,87 @@ export function ProfileProvider({ children }) {
   }, []);
 
   useEffect(() => {
+    let stopUserProfileWatch = null;
+    let authEvent = 0;
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
-      setFirebaseUser(user);
+      const currentAuthEvent = ++authEvent;
+      stopUserProfileWatch?.();
+      stopUserProfileWatch = null;
 
       if (!user) {
+        setFirebaseUser(null);
+        if (!accessRestrictedRef.current) setAccessRestricted(false);
         if (!guestModeRef.current) {
           setProfile(initialProfile);
         }
         return;
       }
 
-      guestModeRef.current = false;
-      setIsGuest(false);
-      const userSnapshot = await getDoc(doc(db, "users", user.uid));
-      const storedProfile = userSnapshot.exists() ? userSnapshot.data() : {};
-      const nameParts = (storedProfile.name || user.displayName || "Student")
-        .trim()
-        .split(/\s+/);
+      try {
+        const userRef = doc(db, "users", user.uid);
+        const userSnapshot = await getDoc(userRef);
+        if (currentAuthEvent !== authEvent) return;
+        const storedProfile = userSnapshot.exists() ? userSnapshot.data() : {};
 
-      setProfile({
-        ...initialProfile,
-        ...storedProfile,
-        email: user.email || storedProfile.email || "",
-        firstName: nameParts[0] || "Student",
-        surname: nameParts.slice(1).join(" "),
-        category: "Student",
-        photoURL: storedProfile.photoURL || user.photoURL || "",
-        authProvider:
-          (
-            user.providerData?.some(
-              ({ providerId }) => providerId === "google.com",
-            )
-          ) ?
-            "Google"
-            : "Email",
-      });
+        if (storedProfile.appRestricted === true) {
+          accessRestrictedRef.current = true;
+          setAccessRestricted(true);
+          setFirebaseUser(null);
+          setIsGuest(false);
+          setProfile(initialProfile);
+          await signOut(auth);
+          return;
+        }
+
+        guestModeRef.current = false;
+        accessRestrictedRef.current = false;
+        setAccessRestricted(false);
+        setIsGuest(false);
+        const nameParts = (storedProfile.name || user.displayName || "Student")
+          .trim()
+          .split(/\s+/);
+
+        setProfile({
+          ...initialProfile,
+          ...storedProfile,
+          email: user.email || storedProfile.email || "",
+          firstName: nameParts[0] || "Student",
+          surname: nameParts.slice(1).join(" "),
+          category: "Student",
+          photoURL: storedProfile.photoURL || user.photoURL || "",
+          authProvider:
+            user.providerData?.some(({ providerId }) => providerId === "google.com")
+              ? "Google"
+              : "Email",
+        });
+        setFirebaseUser(user);
+        stopUserProfileWatch = onSnapshot(userRef, (snapshot) => {
+          if (snapshot.data()?.appRestricted !== true) return;
+          accessRestrictedRef.current = true;
+          setAccessRestricted(true);
+          setFirebaseUser(null);
+          setIsGuest(false);
+          setProfile(initialProfile);
+          signOut(auth).catch((error) => {
+            console.warn("Unable to end a restricted user session.", error);
+          });
+        });
+      } catch (error) {
+        console.warn("Unable to verify account access.", error);
+        if (currentAuthEvent === authEvent) {
+          setFirebaseUser(null);
+          setAccessRestricted(false);
+          setProfile(initialProfile);
+          await signOut(auth).catch(() => {});
+        }
+      }
     });
 
-    return unsubscribe;
+    return () => {
+      authEvent += 1;
+      unsubscribe();
+      stopUserProfileWatch?.();
+    };
   }, []);
 
   const enterGuestMode = useCallback(() => {
@@ -151,6 +197,8 @@ export function ProfileProvider({ children }) {
   const clearSession = useCallback(() => {
     guestModeRef.current = false;
     setIsGuest(false);
+    accessRestrictedRef.current = false;
+    setAccessRestricted(false);
     setFirebaseUser(null);
     setProfile(initialProfile);
     setSuccessMessage("");
@@ -247,6 +295,7 @@ export function ProfileProvider({ children }) {
       profile,
       firebaseUser,
       isGuest: isGuest && !firebaseUser,
+      accessRestricted,
       isAuthenticated: Boolean(firebaseUser),
       enterGuestMode,
       clearSession,
@@ -265,6 +314,7 @@ export function ProfileProvider({ children }) {
       profile,
       firebaseUser,
       isGuest,
+      accessRestricted,
       enterGuestMode,
       clearSession,
       updateProfile,

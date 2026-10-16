@@ -13,9 +13,10 @@ import {
   Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { doc, getDoc } from "firebase/firestore";
 import { useProfile } from "../context/ProfileContext";
-import { auth } from "./firebaseConfig";
+import { auth, db } from "./firebaseConfig";
 import { signInWithGoogle } from "./googleAuth";
 
 const LOGIN_FAILURE_LIMIT = 3;
@@ -29,8 +30,13 @@ function isCredentialFailure(error) {
   ].includes(error.code);
 }
 
+async function isAccountRestricted(user) {
+  const snapshot = await getDoc(doc(db, "users", user.uid));
+  return snapshot.data()?.appRestricted === true;
+}
+
 export default function LoginScreen({ navigation }) {
-  const { enterGuestMode, publicColors: colors } = useProfile();
+  const { enterGuestMode, publicColors: colors, accessRestricted } = useProfile();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -70,7 +76,12 @@ export default function LoginScreen({ navigation }) {
 
     try {
       setIsGoogleLoading(true);
-      await signInWithGoogle();
+      const credential = await signInWithGoogle();
+      if (await isAccountRestricted(credential.user)) {
+        await signOut(auth);
+        setErrors({ email: "", password: "This account is restricted. Contact support." });
+        return;
+      }
       navigation.reset({ index: 0, routes: [{ name: "Home" }] });
     } catch (error) {
       if (error.code !== "auth/popup-closed-by-user") {
@@ -99,7 +110,12 @@ export default function LoginScreen({ navigation }) {
 
     try {
       setIsLoading(true);
-      await signInWithEmailAndPassword(auth, email.trim(), password);
+      const credential = await signInWithEmailAndPassword(auth, email.trim(), password);
+      if (await isAccountRestricted(credential.user)) {
+        await signOut(auth);
+        setErrors({ email: "", password: "This account is restricted. Contact support." });
+        return;
+      }
       setFailedAttempts(0);
       navigation.reset({ index: 0, routes: [{ name: "Home" }] });
     } catch (error) {
@@ -154,6 +170,12 @@ export default function LoginScreen({ navigation }) {
             Log in to keep planning your future.
           </Text>
         </View>
+
+        {accessRestricted && (
+          <Text style={styles.restrictedNotice} accessibilityRole="alert">
+            This account has been restricted. Contact support for assistance.
+          </Text>
+        )}
 
         <View style={styles.formContainer}>
           {}
@@ -367,6 +389,7 @@ function makeStyles(colors) {
   },
   inputError: { borderColor: colors.danger },
   errorText: { marginTop: 7, color: colors.danger, fontSize: 13, lineHeight: 18 },
+  restrictedNotice: { marginBottom: 16, padding: 12, borderRadius: 10, backgroundColor: colors.dangerSoft, color: colors.danger, fontSize: 13, lineHeight: 19 },
 
   inputIcon: {
     marginRight: 10,

@@ -88,9 +88,9 @@ async function dashboard() {
 async function users() {
   const s = await getDocs(query(collection(db, "users"), limit(300)));
   s.docs.forEach(d => (rows[d.id] = d.data()));
-  main(`<div class="bar"><h2 class="t" style="margin:0">Users (${s.size})</h2></div><table><tr><th>Name</th><th>Email</th><th>Phone</th><th>Applications</th><th></th></tr>${
-    s.docs.map(d => { const u = d.data(); return `<tr><td>${esc(u.name)}</td><td>${esc(u.email)}</td><td>${esc(u.phone)}</td><td>${u.applicationCount ?? 0}</td>
-    <td class="a"><button class="btn s g" data-act="apps" data-id="${d.id}">Applications</button><button class="btn s g" data-act="euser" data-id="${d.id}">Edit</button><button class="btn s d" data-act="duser" data-id="${d.id}">Delete</button></td></tr>`; }).join("")}</table>`);
+  main(`<div class="bar"><h2 class="t" style="margin:0">Users (${s.size})</h2></div><table><tr><th>Name</th><th>Email</th><th>Phone</th><th>Applications</th><th>Access</th><th></th></tr>${
+    s.docs.map(d => { const u = d.data(); const restricted = u.appRestricted === true; return `<tr><td>${esc(u.name)}</td><td>${esc(u.email)}</td><td>${esc(u.phone)}</td><td>${u.applicationCount ?? 0}</td><td>${restricted ? "Restricted" : "Active"}</td>
+    <td class="a"><button class="btn s g" data-act="apps" data-id="${d.id}">Applications</button><button class="btn s g" data-act="euser" data-id="${d.id}">Edit</button><button class="btn s ${restricted ? "g" : "d"}" data-act="ruser" data-id="${d.id}" data-restricted="${restricted}">${restricted ? "Restore" : "Restrict"}</button></td></tr>`; }).join("")}</table>`);
 }
 
 async function content(c) {
@@ -131,13 +131,17 @@ document.addEventListener("click", async e => {
       const s = await getDocs(collection(db, "users", id, "applications"));
       dlg(`<h3>Applications (${s.size})</h3>${s.size ? `<table><tr><th>University</th><th>Course</th><th>Status</th><th>Date</th></tr>${s.docs.map(d => { const a = d.data();
         return `<tr><td>${esc(a.university)}</td><td>${esc(a.course)}</td><td>${esc(a.status?.label)}</td><td>${esc(a.dateApplied)}</td></tr>`; }).join("")}</table>` : "<p>No applications yet.</p>"}<br><button class="btn g" data-close>Close</button>`);
-    } else if (act === "duser") {
+    } else if (act === "ruser") {
       const u = rows[id];
-      if (!confirm(`Delete ${u.name || u.email}'s data (profile, applications, password hint)?\nTheir login in Firebase Authentication is NOT removed.`)) return;
-      const apps = await getDocs(collection(db, "users", id, "applications"));
-      await Promise.all(apps.docs.map(d => deleteDoc(d.ref)));
-      if (u.email) await deleteDoc(doc(db, "passwordHints", encodeURIComponent(u.email.toLowerCase()))).catch(() => {});
-      await deleteDoc(doc(db, "users", id)); reload();
+      const restricted = u.appRestricted === true;
+      const nextRestricted = !restricted;
+      const action = nextRestricted ? "Restrict access for" : "Restore access for";
+      if (!confirm(`${action} ${u.name || u.email}? Their account data will be kept.`)) return;
+      await setDoc(doc(db, "users", id), {
+        appRestricted: nextRestricted,
+        appRestrictedAt: nextRestricted ? Timestamp.now() : null,
+      }, { merge: true });
+      reload();
     }
   } catch (err) { alert(err.message); }
 });

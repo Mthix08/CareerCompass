@@ -1,6 +1,6 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { DarkTheme, DefaultTheme } from "@react-navigation/native";
+import { DarkTheme, DefaultTheme, useNavigationContainerRef } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import LoginScreen from "./screens/LoginScreen";
@@ -31,7 +31,8 @@ import './translation/i18n';
 const Stack = createNativeStackNavigator();
 
 function AppNavigator() {
-  const { colors, publicColors, resolvedTheme } = useProfile();
+  const { colors, publicColors, resolvedTheme, accessRestricted } = useProfile();
+  const navigationRef = useNavigationContainerRef();
   const publicScreenOptions = useMemo(() => ({
     headerStyle: { backgroundColor: publicColors.background },
     headerTintColor: publicColors.text,
@@ -54,8 +55,13 @@ function AppNavigator() {
     };
   }, [colors, resolvedTheme]);
 
+  useEffect(() => {
+    if (!accessRestricted || !navigationRef.isReady()) return;
+    navigationRef.resetRoot({ index: 0, routes: [{ name: "Login" }] });
+  }, [accessRestricted, navigationRef]);
+
   return (
-    <NavigationContainer theme={navigationTheme}>
+    <NavigationContainer ref={navigationRef} theme={navigationTheme}>
       <Stack.Navigator initialRouteName="Splash">
         <Stack.Screen
           name="Splash"

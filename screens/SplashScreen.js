@@ -1,8 +1,10 @@
 import React, { useEffect, useMemo, useRef } from "react";
 import { Animated, Image, StatusBar, StyleSheet, Text, View } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { signOut } from "firebase/auth";
+import { doc, getDoc } from "firebase/firestore";
 
-import { auth } from "./firebaseConfig";
+import { auth, db } from "./firebaseConfig";
 import { useProfile } from "../context/ProfileContext";
 
 // Must match the key used in OnboardingScreen.js
@@ -22,7 +24,14 @@ async function getStartRoute() {
         });
       }),
     ]);
-    if (user) return "Home";
+    if (user) {
+      const userSnapshot = await getDoc(doc(db, "users", user.uid));
+      if (userSnapshot.data()?.appRestricted === true) {
+        await signOut(auth);
+        return seenOnboarding ? "Login" : "Onboarding";
+      }
+      return "Home";
+    }
     return seenOnboarding ? "Login" : "Onboarding";
   } catch (_error) {
     return "Onboarding";
