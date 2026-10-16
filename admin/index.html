@@ -79,7 +79,7 @@ function go(v) {
 
 async function dashboard() {
   main(`<h2 class="t">Dashboard</h2><div class="cards" id="cards"></div>`);
-  for (const n of ["users","admins",...CONTENT]) {
+  for (const n of ["users","passwordHints","admins",...CONTENT]) {
     const c = (await getCountFromServer(collection(db, n)).catch(() => null))?.data().count ?? "-";
     $("#cards").insertAdjacentHTML("beforeend", `<div class="card"><b>${c}</b><span>${n}</span></div>`);
   }
@@ -133,9 +133,10 @@ document.addEventListener("click", async e => {
         return `<tr><td>${esc(a.university)}</td><td>${esc(a.course)}</td><td>${esc(a.status?.label)}</td><td>${esc(a.dateApplied)}</td></tr>`; }).join("")}</table>` : "<p>No applications yet.</p>"}<br><button class="btn g" data-close>Close</button>`);
     } else if (act === "duser") {
       const u = rows[id];
-      if (!confirm(`Delete ${u.name || u.email}'s data (profile, applications)?\nTheir login in Firebase Authentication is NOT removed.`)) return;
+      if (!confirm(`Delete ${u.name || u.email}'s data (profile, applications, password hint)?\nTheir login in Firebase Authentication is NOT removed.`)) return;
       const apps = await getDocs(collection(db, "users", id, "applications"));
       await Promise.all(apps.docs.map(d => deleteDoc(d.ref)));
+      if (u.email) await deleteDoc(doc(db, "passwordHints", encodeURIComponent(u.email.toLowerCase()))).catch(() => {});
       await deleteDoc(doc(db, "users", id)); reload();
     }
   } catch (err) { alert(err.message); }
