@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
@@ -16,7 +16,22 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
+import { loadCollection } from "../data/firestoreContent";
 import { getApsUniversityMatches } from "../data/apsMatching";
+
+const COLORS = {
+  primary: "#117C72",
+  primaryDark: "#0B665E",
+  primarySoft: "#E7F3F1",
+  background: "#F6F8FC",
+  surface: "#FFFFFF",
+  text: "#172033",
+  secondary: "#667085",
+  muted: "#98A2B3",
+  border: "#DDE4ED",
+  input: "#F8FAFC",
+  danger: "#D64545",
+};
 
 const PERIODS = [
   "Grade 11 Final",
@@ -26,86 +41,8 @@ const PERIODS = [
   "Grade 12 Term 4",
 ];
 
-const LANGUAGE_NAMES = [
-  "Afrikaans",
-  "English",
-  "IsiNdebele",
-  "IsiXhosa",
-  "IsiZulu",
-  "Sepedi",
-  "Sesotho",
-  "Setswana",
-  "Siswati",
-  "Tshivenda",
-  "Setswana",
-  "XiTsonga",
-];
-
-const SUBJECT_GROUPS = [
-  {
-    title: "Core subjects",
-    subjects: [
-      "Life Orientation",
-      "Mathematical Literacy",
-      "Mathematics",
-      "Technical Mathematics",
-    ],
-  },
-  {
-    title: "Languages",
-    subjects: [...new Set(LANGUAGE_NAMES)].flatMap((language) => [
-      `${language} Home Language`,
-      `${language} First Additional Language`,
-      `${language} Second Additional Language`,
-    ]),
-  },
-  {
-    title: "Sciences and technology",
-    subjects: [
-      "Agricultural Sciences",
-      "Computer Applications Technology",
-      "Information Technology",
-      "Life Sciences",
-      "Physical Sciences",
-      "Technical Sciences",
-    ],
-  },
-  {
-    title: "Business and social sciences",
-    subjects: [
-      "Accounting",
-      "Business Studies",
-      "Economics",
-      "Geography",
-      "History",
-      "Religion Studies",
-    ],
-  },
-  {
-    title: "Arts and services",
-    subjects: [
-      "Consumer Studies",
-      "Dance Studies",
-      "Design",
-      "Dramatic Arts",
-      "Hospitality Studies",
-      "Music",
-      "Tourism",
-      "Visual Arts",
-    ],
-  },
-  {
-    title: "Technical and agricultural",
-    subjects: [
-      "Agricultural Management Practices",
-      "Agricultural Technology",
-      "Civil Technology",
-      "Electrical Technology",
-      "Engineering Graphics and Design",
-      "Mechanical Technology",
-    ],
-  },
-];
+// REMOVED: the hardcoded LANGUAGE_NAMES and SUBJECT_GROUPS lists.
+// The subject groups now come from the Firestore "subjects" collection (one document per group).
 
 function getAchievementLevel(mark) {
   if (mark === "" || Number.isNaN(Number(mark))) return null;
@@ -119,22 +56,19 @@ function getAchievementLevel(mark) {
   return 1;
 }
 
-function SubjectPicker({ visible, selectedSubjects, onSelect, onClose }) {
-  const { colors } = useProfile();
-  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
-  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
+function SubjectPicker({ visible, groups, selectedSubjects, onSelect, onClose }) {
   const [query, setQuery] = useState("");
   const filteredGroups = useMemo(() => {
     const search = query.trim().toLowerCase();
-    return SUBJECT_GROUPS.map((group) => ({
+    return groups.map((group) => ({
       ...group,
-      subjects: group.subjects.filter(
+      subjects: (group.subjects || []).filter(
         (subject) =>
           !selectedSubjects.includes(subject) &&
           (!search || subject.toLowerCase().includes(search)),
       ),
     })).filter((group) => group.subjects.length > 0);
-  }, [query, selectedSubjects]);
+  }, [groups, query, selectedSubjects]);
 
   const closePicker = () => {
     setQuery("");
@@ -218,9 +152,6 @@ function SubjectPicker({ visible, selectedSubjects, onSelect, onClose }) {
 }
 
 function MarkRow({ item, onMarkChange, onRemove }) {
-  const { colors } = useProfile();
-  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
-  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const level = getAchievementLevel(item.mark);
 
   const handleChange = (value) => {
@@ -269,9 +200,6 @@ function MarkRow({ item, onMarkChange, onRemove }) {
 }
 
 function ApsResultModal({ result, onClose, onViewMatches }) {
-  const { colors } = useProfile();
-  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
-  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   return (
     <Modal
       visible={Boolean(result)}
@@ -343,19 +271,29 @@ const getSavedPeriodsFromProfile = (apsRecords = {}) => {
 };
 
 export default function ApsCalculatorScreen({ navigation }) {
-  const { profile, saveApsRecord, colors, resolvedTheme } = useProfile();
-  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
-  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
+  const { profile, saveApsRecord } = useProfile();
   const [selectedPeriod, setSelectedPeriod] = useState(PERIODS[0]);
   const [marksByPeriod, setMarksByPeriod] = useState({});
   const [editedPeriods, setEditedPeriods] = useState([]);
   const [pickerVisible, setPickerVisible] = useState(false);
   const [apsResult, setApsResult] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
+  // NEW: subject groups come from the Firestore "subjects" collection (cached for offline)
+  const [subjectGroups, setSubjectGroups] = useState([]);
   const currentMarks =
     marksByPeriod[selectedPeriod] ??
     profile.apsRecords?.[selectedPeriod]?.marks ??
     [];
+
+  useEffect(() => {
+    let active = true;
+    loadCollection("subjects", { sortBy: "order" }).then((items) => {
+      if (active) setSubjectGroups(items);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const markPeriodEdited = () => {
     setEditedPeriods((current) =>
@@ -447,11 +385,16 @@ export default function ApsCalculatorScreen({ navigation }) {
       setEditedPeriods((current) =>
         current.filter((period) => period !== selectedPeriod),
       );
-      setApsResult(result);
-    setApsResult({
-  ...result,
-  matchedUniversities: getApsUniversityMatches(totalAps).length,
-});
+      // CHANGED: the popup needs the number of matching universities (it showed "undefined" before)
+      setApsResult({
+        ...result,
+        matchedUniversities: getApsUniversityMatches(totalAps).length,
+      });
+    } catch (error) {
+      Alert.alert(
+        "Could not save APS",
+        error.message || "Check your connection and try again.",
+      );
     } finally {
       setIsSaving(false);
     }
@@ -463,7 +406,7 @@ export default function ApsCalculatorScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle={resolvedTheme === "dark" ? "light-content" : "dark-content"} backgroundColor={COLORS.primary} />
+      <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />
       <View style={styles.header}>
         <Pressable
           onPress={() => navigation.goBack()}
@@ -472,7 +415,7 @@ export default function ApsCalculatorScreen({ navigation }) {
           hitSlop={8}
           style={({ pressed }) => pressed && styles.pressed}
         >
-          <Ionicons name="arrow-back" size={25} color={COLORS.onPrimary} />
+          <Ionicons name="arrow-back" size={25} color="#FFFFFF" />
         </Pressable>
         <Text style={styles.title}>My Marks</Text>
         <Text style={styles.subtitle}>
@@ -556,7 +499,7 @@ export default function ApsCalculatorScreen({ navigation }) {
           <Ionicons
             name={isSaved ? "checkmark-circle-outline" : "save-outline"}
             size={20}
-            color={COLORS.onPrimary}
+            color="#FFFFFF"
           />
           <Text style={styles.saveButtonText}>
             {isSaving ? "Saving" : isSaved ? "Update" : "Save"} {selectedPeriod} marks
@@ -566,6 +509,7 @@ export default function ApsCalculatorScreen({ navigation }) {
 
       <SubjectPicker
         visible={pickerVisible}
+        groups={subjectGroups}
         selectedSubjects={currentMarks.map(({ subject }) => subject)}
         onSelect={addSubject}
         onClose={() => setPickerVisible(false)}
@@ -590,17 +534,7 @@ export default function ApsCalculatorScreen({ navigation }) {
   );
 }
 
-function getThemeColors(colors) {
-  return {
-    ...colors,
-    primaryDark: colors.primary,
-    secondary: colors.secondaryText,
-    muted: colors.mutedText,
-  };
-}
-
-function makeStyles(COLORS) {
-  return StyleSheet.create({
+const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
   header: {
     paddingHorizontal: 22,
@@ -610,12 +544,12 @@ function makeStyles(COLORS) {
   },
   title: {
     marginTop: 10,
-    color: COLORS.onPrimary,
+    color: "#FFFFFF",
     fontSize: 28,
     lineHeight: 34,
     fontWeight: "900",
   },
-  subtitle: { marginTop: 3, color: COLORS.onPrimary, fontSize: 14, fontWeight: "600" },
+  subtitle: { marginTop: 3, color: "#D8F3EF", fontSize: 14, fontWeight: "600" },
   periodSection: { paddingTop: 18, backgroundColor: COLORS.background },
   periodLabel: {
     paddingHorizontal: 22,
@@ -645,7 +579,7 @@ function makeStyles(COLORS) {
     backgroundColor: COLORS.primary,
   },
   periodChipText: { color: COLORS.secondary, fontSize: 12, fontWeight: "700" },
-  periodChipTextSelected: { color: COLORS.onPrimary },
+  periodChipTextSelected: { color: "#FFFFFF" },
   marksList: { flexGrow: 1, paddingHorizontal: 22, paddingBottom: 22 },
   rowSeparator: { height: 10 },
   markRow: {
@@ -732,7 +666,7 @@ function makeStyles(COLORS) {
   },
   saveButtonText: {
     marginLeft: 8,
-    color: COLORS.onPrimary,
+    color: "#FFFFFF",
     fontSize: 14,
     fontWeight: "800",
   },
@@ -755,7 +689,7 @@ function makeStyles(COLORS) {
     marginTop: 10,
     alignSelf: "center",
     borderRadius: 2,
-    backgroundColor: COLORS.border,
+    backgroundColor: "#CBD5E1",
   },
   sheetHeader: {
     minHeight: 58,
@@ -835,7 +769,7 @@ function makeStyles(COLORS) {
     borderRadius: 26,
     alignItems: "center",
     backgroundColor: COLORS.surface,
-    shadowColor: COLORS.text,
+    shadowColor: "#172033",
     shadowOffset: { width: 0, height: 12 },
     shadowOpacity: 0.2,
     shadowRadius: 24,
@@ -897,6 +831,5 @@ function makeStyles(COLORS) {
     justifyContent: "center",
     backgroundColor: COLORS.primary,
   },
-  resultButtonText: { color: COLORS.onPrimary, fontSize: 15, fontWeight: "800" },
-  });
-}
+  resultButtonText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
+});
