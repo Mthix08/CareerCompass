@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   ActivityIndicator,
-  Alert,
-  Linking,
   Pressable,
   StyleSheet,
   Text,
@@ -12,51 +10,154 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { WebView } from "react-native-webview";
 
-import { getUniversityTheme } from "../data/universityTheme";
+import { useProfile } from "../context/ProfileContext";
+import { getProspectus } from "../services/prospectusService";
 
 export default function ProspectusScreen({ navigation, route }) {
-  const university = route.params?.university;
-  const url = route.params?.url;
-  const theme = getUniversityTheme(university);
-  const [hasError, setHasError] = useState(false);
+  const universityId = route.params?.universityId;
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
+  const [prospectus, setProspectus] = useState(null);
+  const [isLoadingDetails, setIsLoadingDetails] = useState(true);
+  const [detailsError, setDetailsError] = useState(false);
+  const [retryRequest, setRetryRequest] = useState(0);
+  const [isLoadingPdf, setIsLoadingPdf] = useState(true);
+  const [viewerError, setViewerError] = useState(false);
+  const [viewerAttempt, setViewerAttempt] = useState(0);
 
-  const openInBrowser = async () => {
-    try {
-      await Linking.openURL(url);
-    } catch {
-      Alert.alert("Could not open link", "Please try again in a moment.");
-    }
+  useEffect(() => {
+    let isCurrent = true;
+
+    const loadProspectus = async () => {
+      setIsLoadingDetails(true);
+      setDetailsError(false);
+      setProspectus(null);
+      setViewerError(false);
+      setIsLoadingPdf(true);
+
+      if (!universityId) {
+        setIsLoadingDetails(false);
+        return;
+      }
+
+      try {
+        const result = await getProspectus(universityId);
+        if (isCurrent) setProspectus(result);
+      } catch (error) {
+        console.error("Unable to load prospectus information.", error);
+        if (isCurrent) setDetailsError(true);
+      } finally {
+        if (isCurrent) setIsLoadingDetails(false);
+      }
+    };
+
+    loadProspectus();
+    return () => {
+      isCurrent = false;
+    };
+  }, [universityId, retryRequest]);
+
+  const pdfUrl = prospectus?.pdfUrl;
+  const hasValidPdfUrl = typeof pdfUrl === "string" && /^https?:\/\//i.test(pdfUrl);
+  const viewerUrl = hasValidPdfUrl
+    ? `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(pdfUrl)}`
+    : null;
+  const title = prospectus?.universityName || universityId?.toUpperCase() || "University";
+  const metadata = [prospectus?.prospectusType, prospectus?.year]
+    .filter(Boolean)
+    .join(" · ");
+
+  const retryDetails = () => setRetryRequest((attempt) => attempt + 1);
+  const retryViewer = () => {
+    setViewerError(false);
+    setIsLoadingPdf(true);
+    setViewerAttempt((attempt) => attempt + 1);
   };
 
-  if (!university || !url || !/^https?:\/\//i.test(url)) {
-    return (
-      <SafeAreaView style={styles.safeArea}>
-        <View style={styles.header}>
-          <Pressable
-            onPress={() => navigation.goBack()}
-            accessibilityRole="button"
-            accessibilityLabel="Go back"
-            hitSlop={8}
-            style={({ pressed }) => [styles.iconButton, pressed && styles.pressed]}
-          >
-            <Ionicons name="arrow-back" size={24} color="#FFFFFF" />
-          </Pressable>
-          <Text style={styles.headerTitle}>Prospectus</Text>
-          <View style={styles.iconButton} />
-        </View>
-        <View style={styles.messageContainer}>
-          <Ionicons name="document-text-outline" size={54} color="#687384" />
-          <Text style={styles.messageTitle}>Prospectus unavailable</Text>
-          <Text style={styles.messageText}>
-            This university does not have a valid prospectus link yet.
-          </Text>
-        </View>
-      </SafeAreaView>
+  const renderMessage = (icon, heading, message, onRetry, retryLabel = "Try again") => (
+    <View style={styles.messageContainer}>
+      <Ionicons name={icon} size={48} color={colors.mutedText} />
+      <Text style={styles.messageTitle}>{heading}</Text>
+      <Text style={styles.messageText}>{message}</Text>
+      {onRetry ? (
+        <Pressable
+          onPress={onRetry}
+          accessibilityRole="button"
+          style={({ pressed }) => [styles.actionButton, pressed && styles.pressed]}
+        >
+          <Text style={styles.actionButtonText}>{retryLabel}</Text>
+        </Pressable>
+      ) : null}
+    </View>
+  );
+
+  let content;
+  if (isLoadingDetails) {
+    content = (
+      <View style={styles.messageContainer}>
+        <ActivityIndicator size="large" color={colors.primary} />
+        <Text style={styles.messageTitle}>Loading prospectus</Text>
+        <Text style={styles.messageText}>Retrieving the university’s prospectus information…</Text>
+      </View>
+    );
+  } else if (detailsError) {
+    content = renderMessage(
+      "cloud-offline-outline",
+      "Could not load prospectus",
+      "Check your connection and try again.",
+      retryDetails,
+    );
+  } else if (!universityId || !prospectus || !hasValidPdfUrl) {
+    content = renderMessage(
+      "document-text-outline",
+      "Prospectus unavailable",
+      "A prospectus is not currently available for this university.",
+      !universityId ? null : retryDetails,
+    );
+  } else if (viewerError) {
+    content = renderMessage(
+      "cloud-offline-outline",
+      "Could not display this prospectus",
+      "The document viewer could not load the PDF. Check your connection and try again.",
+      retryViewer,
+    );
+  } else {
+    content = (
+      <View style={styles.viewerContainer}>
+        {isLoadingPdf ? (
+          <View style={styles.pdfLoading}>
+            <ActivityIndicator size="large" color={colors.primary} />
+            <Text style={styles.loadingText}>Opening prospectus…</Text>
+          </View>
+        ) : null}
+        <WebView
+          key={viewerAttempt}
+          source={{ uri: viewerUrl }}
+          style={styles.webView}
+          javaScriptEnabled
+          domStorageEnabled
+          setSupportMultipleWindows={false}
+          onLoadStart={() => setIsLoadingPdf(true)}
+          onLoadEnd={() => setIsLoadingPdf(false)}
+          onError={(event) => {
+            console.error("Prospectus viewer failed to load.", event.nativeEvent?.description);
+            setIsLoadingPdf(false);
+            setViewerError(true);
+          }}
+          onHttpError={({ nativeEvent }) => {
+            if (nativeEvent.statusCode >= 400) {
+              console.error("Prospectus viewer returned an HTTP error.", nativeEvent.statusCode);
+              setIsLoadingPdf(false);
+              setViewerError(true);
+            }
+          }}
+        />
+      </View>
     );
   }
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={styles.safeArea} edges={["top", "left", "right"]}>
       <View style={styles.header}>
         <Pressable
           onPress={() => navigation.goBack()}
@@ -65,131 +166,63 @@ export default function ProspectusScreen({ navigation, route }) {
           hitSlop={8}
           style={({ pressed }) => [styles.iconButton, pressed && styles.pressed]}
         >
-          <Ionicons name="arrow-back" size={24} color="#FFFFFF" />
+          <Ionicons name="arrow-back" size={23} color={colors.text} />
         </Pressable>
         <View style={styles.titleWrap}>
-          <Text style={styles.headerTitle} numberOfLines={1}>
-            {university.shortName} Prospectus
-          </Text>
-          <Text style={styles.headerSubtitle} numberOfLines={1}>
-            Viewing inside CareerCompass
-          </Text>
+          <Text style={styles.headerTitle} numberOfLines={1}>{title} Prospectus</Text>
+          {metadata ? <Text style={styles.headerSubtitle} numberOfLines={1}>{metadata}</Text> : null}
         </View>
-        <Pressable
-          onPress={openInBrowser}
-          accessibilityRole="button"
-          accessibilityLabel="Open prospectus in browser"
-          hitSlop={8}
-          style={({ pressed }) => [styles.iconButton, pressed && styles.pressed]}
-        >
-          <Ionicons name="open-outline" size={22} color="#FFFFFF" />
-        </Pressable>
+        <View style={styles.iconButton} />
       </View>
-
-      {hasError ? (
-        <View style={styles.messageContainer}>
-          <Ionicons name="cloud-offline-outline" size={54} color="#687384" />
-          <Text style={styles.messageTitle}>Could not display this prospectus</Text>
-          <Text style={styles.messageText}>
-            The university may not allow its page to be embedded. You can still open it in your browser.
-          </Text>
-          <Pressable
-            onPress={openInBrowser}
-            accessibilityRole="button"
-            style={({ pressed }) => [
-              styles.fallbackButton,
-              { backgroundColor: theme.accent },
-              pressed && styles.pressed,
-            ]}
-          >
-            <Text style={styles.fallbackButtonText}>Open in browser</Text>
-            <Ionicons name="open-outline" size={19} color="#FFFFFF" />
-          </Pressable>
-        </View>
-      ) : (
-        <WebView
-          source={{ uri: url }}
-          style={styles.webView}
-          startInLoadingState
-          javaScriptEnabled
-          domStorageEnabled
-          setSupportMultipleWindows={false}
-          onError={() => setHasError(true)}
-          onHttpError={({ nativeEvent }) => {
-            if (nativeEvent.statusCode >= 400) setHasError(true);
-          }}
-          renderLoading={() => (
-            <View style={styles.loadingContainer}>
-              <ActivityIndicator size="large" color={theme.accent} />
-              <Text style={styles.loadingText}>Loading prospectus…</Text>
-            </View>
-          )}
-        />
-      )}
+      {content}
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#05080D" },
+const makeStyles = (colors) => StyleSheet.create({
+  safeArea: { flex: 1, backgroundColor: colors.background },
   header: {
     minHeight: 68,
     paddingHorizontal: 12,
     flexDirection: "row",
     alignItems: "center",
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: "#2A313D",
-    backgroundColor: "#0D121A",
+    borderBottomColor: colors.border,
+    backgroundColor: colors.surface,
   },
-  iconButton: {
-    width: 46,
-    height: 46,
-    borderRadius: 14,
-    alignItems: "center",
-    justifyContent: "center",
-  },
+  iconButton: { width: 46, height: 46, alignItems: "center", justifyContent: "center" },
   titleWrap: { flex: 1, paddingHorizontal: 8, alignItems: "center" },
-  headerTitle: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
-  headerSubtitle: { marginTop: 3, color: "#909AAA", fontSize: 11 },
-  webView: { flex: 1, backgroundColor: "#FFFFFF" },
-  loadingContainer: {
+  headerTitle: { color: colors.text, fontSize: 16, fontWeight: "800" },
+  headerSubtitle: { marginTop: 3, color: colors.secondaryText, fontSize: 12, textTransform: "capitalize" },
+  viewerContainer: { flex: 1, backgroundColor: colors.background },
+  webView: { flex: 1, backgroundColor: colors.background },
+  pdfLoading: {
     ...StyleSheet.absoluteFillObject,
+    zIndex: 1,
     alignItems: "center",
     justifyContent: "center",
     gap: 12,
-    backgroundColor: "#05080D",
+    backgroundColor: colors.background,
   },
-  loadingText: { color: "#B8C0CC", fontSize: 14, fontWeight: "600" },
+  loadingText: { color: colors.secondaryText, fontSize: 14, fontWeight: "600" },
   messageContainer: {
     flex: 1,
     paddingHorizontal: 28,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: colors.background,
   },
-  messageTitle: {
-    marginTop: 18,
-    color: "#FFFFFF",
-    fontSize: 20,
-    fontWeight: "800",
-    textAlign: "center",
-  },
-  messageText: {
-    marginTop: 10,
-    color: "#9DA6B4",
-    fontSize: 14,
-    lineHeight: 21,
-    textAlign: "center",
-  },
-  fallbackButton: {
-    minHeight: 52,
-    marginTop: 24,
+  messageTitle: { marginTop: 18, color: colors.text, fontSize: 20, fontWeight: "800", textAlign: "center" },
+  messageText: { marginTop: 10, color: colors.secondaryText, fontSize: 14, lineHeight: 21, textAlign: "center" },
+  actionButton: {
+    minHeight: 48,
+    marginTop: 22,
     paddingHorizontal: 22,
-    borderRadius: 14,
-    flexDirection: "row",
+    borderRadius: 13,
     alignItems: "center",
     justifyContent: "center",
-    gap: 8,
+    backgroundColor: colors.primary,
   },
-  fallbackButtonText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
-  pressed: { opacity: 0.7 },
+  actionButtonText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
+  pressed: { opacity: 0.72 },
 });

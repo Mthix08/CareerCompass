@@ -51,16 +51,7 @@ export default function UniversityDetailsScreen({ navigation, route }) {
   };
 
   const openProspectus = () => {
-    const url = university.prospectusUrl;
-    if (!url || !/^https?:\/\//i.test(url)) {
-      Alert.alert(
-        "Prospectus unavailable",
-        "This university does not have a valid prospectus website yet.",
-      );
-      return;
-    }
-
-    navigation.navigate("Prospectus", { university, url });
+    navigation.navigate("Prospectus", { universityId: university.id });
   };
 
   if (!university) {
