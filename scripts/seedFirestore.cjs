@@ -286,13 +286,78 @@ const subjects = [
   },
 ];
 
+// ---------------------------------------------------------------- colleges
+// Two EXAMPLE colleges so the structure works. Replace them with real data from the admin site
+// (delete the examples there once you have real ones). Fields match what the university screens already read.
+const colleges = [
+  {
+    id: "example-private-college",
+    order: 1,
+    isPlaceholder: true,
+    name: "Example Private College",
+    shortName: "EPC",
+    type: "Private Higher Education",
+    province: "Gauteng",
+    description: "Example private college showing how a college profile is laid out. Replace this with the real description.",
+    campuses: ["Example Campus, Johannesburg"],
+    virtualCampusUrl: "",
+    contactEmail: "admissions@example.org",
+    contactPhone: "000 000 0000",
+    website: "https://example.org",
+    logoUrl: "",
+    imageUrl: "",
+    applicationFee: 0,
+    applicationFeeLabel: "Free to apply",
+    applicationStatus: "Open",
+    openingDate: "1 August 2026",
+    closingDate: "30 November 2026",
+    applicationInstructions: "Example instructions. Replace with the real steps to apply.",
+    applicationUrl: "https://example.org/apply",
+  },
+  {
+    id: "example-tvet-college",
+    order: 2,
+    isPlaceholder: true,
+    name: "Example TVET College",
+    shortName: "ETC",
+    type: "Public TVET College",
+    province: "Gauteng",
+    description: "Example public TVET college showing how a college profile is laid out. Replace this with the real description.",
+    campuses: ["Example Campus, Pretoria"],
+    virtualCampusUrl: "",
+    contactEmail: "info@example.org",
+    contactPhone: "000 000 0000",
+    website: "https://example.org",
+    logoUrl: "",
+    imageUrl: "",
+    applicationFee: 100,
+    applicationFeeLabel: "",
+    applicationStatus: "Open",
+    openingDate: "1 September 2026",
+    closingDate: "31 January 2027",
+    applicationInstructions: "Example instructions. Replace with the real steps to apply.",
+    applicationUrl: "https://example.org/apply",
+  },
+];
+
+// ---------------------------------------------------------------- applicationDeadlines
+// Moved here from data/homeMockData.js (MOCK_APPLICATION_DEADLINES).
+// These are EXAMPLE dates, not official guidance. Edit them on the admin site.
+const applicationDeadlines = [
+  { id: "uj-example-deadline", universityId: "uj", closingDate: "31 October", daysRemaining: 38, isExample: true },
+  { id: "wits-example-deadline", universityId: "wits", closingDate: "30 September", daysRemaining: 10, isExample: true },
+];
+
 // ---------------------------------------------------------------- runner
 async function seedCollection(name, items) {
-  const batch = db.batch();
-  items.forEach(({ id, ...data }) => {
-    batch.set(db.collection(name).doc(id), data); // same id = overwritten, so re-running is safe
-  });
-  await batch.commit();
+  // Firestore allows at most 500 writes per batch, so big collections (courses) are written in chunks.
+  for (let start = 0; start < items.length; start += 400) {
+    const batch = db.batch();
+    items.slice(start, start + 400).forEach(({ id, ...data }) => {
+      batch.set(db.collection(name).doc(id), data); // same id = overwritten, so re-running is safe
+    });
+    await batch.commit();
+  }
   console.log(`Seeded "${name}": ${items.length} documents`);
 }
 
@@ -301,6 +366,8 @@ async function main() {
   await seedCollection("notifications", notifications);
   await seedCollection("bursaries", bursaries);
   await seedCollection("subjects", subjects);
+  await seedCollection("colleges", colleges);
+  await seedCollection("applicationDeadlines", applicationDeadlines);
   // universities, courses and applicationDeadlines get added here next.
   console.log("Done.");
 }

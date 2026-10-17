@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import {
   FlatList,
   ImageBackground,
@@ -22,7 +22,7 @@ import {
   ViewAllUniversitiesCard,
 } from "../components/HomeComponents";
 import { useProfile } from "../context/ProfileContext";
-import { MOCK_APPLICATION_DEADLINES } from "../data/homeMockData";
+import { loadCollection } from "../data/firestoreContent";
 import { universities } from "../data/universities";
 import { getApsUniversityMatches, getLatestApsRecord } from "../data/apsMatching";
 
@@ -56,15 +56,26 @@ export default function HomeScreen({ navigation }) {
     304,
   );
 
+  const [deadlines, setDeadlines] = useState([]);
+  useEffect(() => {
+    let active = true;
+    loadCollection("applicationDeadlines", { sortBy: "daysRemaining" }).then((items) => {
+      if (active) setDeadlines(items);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
+
   const deadlineItems = useMemo(
     () =>
-      MOCK_APPLICATION_DEADLINES.map((deadline) => ({
+      deadlines.map((deadline) => ({
         ...deadline,
         university: universities.find(
           (university) => university.id === deadline.universityId,
         ),
       })).filter((deadline) => deadline.university),
-    [],
+    [deadlines],
   );
 
   const openApsCalculator = useCallback(

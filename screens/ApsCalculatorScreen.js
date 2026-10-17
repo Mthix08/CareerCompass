@@ -621,8 +621,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: COLORS.input,
   },
-  markInput: {
+   markInput: {
     flex: 1,
+    minWidth: 0,
     minHeight: 40,
     padding: 0,
     color: COLORS.text,
@@ -630,7 +631,7 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     textAlign: "center",
   },
-  percent: { color: COLORS.muted, fontSize: 12 },
+  percent: { flexShrink: 0, color: COLORS.muted, fontSize: 12 },
   addSubjectButton: {
     minHeight: 50,
     marginTop: 14,

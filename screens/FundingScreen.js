@@ -5,7 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
 import { useBookmarks } from "../context/BookmarksContext";
-import { NSFAS, fetchBursaries, getFundingCountdown } from "../data/funding";
+import { fetchBursaries, getFundingCountdown } from "../data/funding";
 
 const NSFAS_IMAGE = require("../assets/nsfas.jpg");
 export default function FundingScreen({ navigation }) {
@@ -92,8 +92,7 @@ export default function FundingScreen({ navigation }) {
             <Text style={styles.loadingText}>Fetching the latest funding opportunities…</Text>
           </View>
         ) : filteredOptions.map((option) => {
-          const { days, isClosed } = getFundingCountdown(now, option);
-          const isFeatured = option.id === NSFAS.id;
+          const isFeatured = option.id === "nsfas";
           const bookmarked = isFundingBookmarked(option.id);
           const openDetails = () => navigation.navigate("FundingDetails", { fundingId: option.id });
           const toggleBookmark = () => {

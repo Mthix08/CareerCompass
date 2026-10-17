@@ -28,6 +28,7 @@ import { ProfileProvider } from "./context/ProfileContext";
 import { useProfile } from "./context/ProfileContext";
 import { BookmarksProvider } from "./context/BookmarksContext";
 import './translation/i18n';
+import CollegeDetailsScreen from "./screens/CollegeDetailsScreen";
 const Stack = createNativeStackNavigator();
 
 function AppNavigator() {
@@ -96,6 +97,11 @@ function AppNavigator() {
           options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
+          name="CollegeDetails"
+          component={CollegeDetailsScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
           name="Prospectus"
           component={ProspectusScreen}
           options={{ headerShown: false, animation: "slide_from_right" }}
@@ -110,6 +116,7 @@ function AppNavigator() {
           component={ApsCalculatorScreen}
           options={{ headerShown: false }}
         />
+        
         <Stack.Screen
           name="UniversityApsScores"
           component={UniversityApsScoresScreen}

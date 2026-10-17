@@ -1,7 +1,8 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   FlatList,
+  Image,
   Pressable,
   StyleSheet,
   Text,
@@ -13,24 +14,78 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import UniversityCard from "../components/Varsity-Card";
 import { useBookmarks } from "../context/BookmarksContext";
-import { useProfile } from "../context/ProfileContext";
+import { loadCollection } from "../data/firestoreContent";
 import { universities } from "../data/universities";
 
+// NEW: card for a college (from the Firestore "colleges" collection)
+function CollegeCard({ college, onPress }) {
+  const fee =
+    college.applicationFee === 0
+      ? college.applicationFeeLabel || "Free to apply"
+      : Number.isFinite(college.applicationFee)
+        ? `Application fee R${college.applicationFee}`
+        : "Check official site";
+
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={`Open ${college.name} details`}
+      style={({ pressed }) => [styles.collegeCard, pressed && styles.buttonPressed]}
+    >
+      {college.imageUrl ? (
+        <Image source={{ uri: college.imageUrl }} style={styles.collegeImage} resizeMode="cover" />
+      ) : (
+        <View style={styles.collegePlaceholder}>
+          <Ionicons name="school-outline" size={44} color="#117C72" />
+          <Text style={styles.placeholderText}>Campus image coming soon</Text>
+        </View>
+      )}
+      <View style={styles.collegeBody}>
+        <Text style={styles.collegeName} numberOfLines={2}>{college.name}</Text>
+        <View style={styles.collegeLocation}>
+          <Ionicons name="location-outline" size={15} color="#7B8798" />
+          <Text style={styles.collegeProvince}>{college.province}</Text>
+        </View>
+        <View style={styles.tagRow}>
+          <View style={styles.tag}><Text style={styles.tagText}>{college.type}</Text></View>
+          <View style={[styles.tag, styles.feeTag]}><Text style={[styles.tagText, styles.feeTagText]}>{fee}</Text></View>
+          {college.isPlaceholder && (
+            <View style={styles.tag}><Text style={styles.tagText}>EXAMPLE</Text></View>
+          )}
+        </View>
+      </View>
+    </Pressable>
+  );
+}
+
 export default function UniversitiesScreen({ navigation }) {
-  const { colors, resolvedTheme } = useProfile();
-  const styles = useMemo(() => makeStyles(colors), [colors]);
   const { addBookmark, isBookmarked, removeBookmark } = useBookmarks();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProvince, setSelectedProvince] = useState(null);
   const [freeToApplyOnly, setFreeToApplyOnly] = useState(false);
   const [filtersVisible, setFiltersVisible] = useState(false);
+  // NEW: Universities | Colleges toggle, colleges come from Firestore (cached for offline)
+  const [mode, setMode] = useState("Universities");
+  const [colleges, setColleges] = useState([]);
+  const showingColleges = mode === "Colleges";
+
+  useEffect(() => {
+    let active = true;
+    loadCollection("colleges", { sortBy: "order" }).then((items) => {
+      if (active) setColleges(items);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const provinces = useMemo(
     () =>
-      [...new Set(universities.map(({ province }) => province))].sort((a, b) =>
+      [...new Set([...universities, ...colleges].map(({ province }) => province).filter(Boolean))].sort((a, b) =>
         a.localeCompare(b),
       ),
-    [],
+    [colleges],
   );
 
   const filteredUniversities = useMemo(() => {
@@ -52,6 +107,25 @@ export default function UniversitiesScreen({ navigation }) {
       .sort((a, b) => a.name.localeCompare(b.name));
   }, [freeToApplyOnly, searchQuery, selectedProvince]);
 
+  const filteredColleges = useMemo(() => {
+    const normalizedQuery = searchQuery.trim().toLocaleLowerCase();
+
+    return colleges.filter((college) => {
+      const matchesSearch =
+        !normalizedQuery ||
+        (college.name || "").toLocaleLowerCase().includes(normalizedQuery) ||
+        (college.shortName || "").toLocaleLowerCase().includes(normalizedQuery);
+      const matchesProvince = !selectedProvince || college.province === selectedProvince;
+      const matchesApplicationFee = !freeToApplyOnly || college.applicationFee === 0;
+      return matchesSearch && matchesProvince && matchesApplicationFee;
+    });
+  }, [colleges, freeToApplyOnly, searchQuery, selectedProvince]);
+
+  const listData = showingColleges ? filteredColleges : filteredUniversities;
+  const noun = showingColleges
+    ? listData.length === 1 ? "college" : "colleges"
+    : listData.length === 1 ? "university" : "universities";
+
   const hasActiveFilters = Boolean(selectedProvince || freeToApplyOnly);
 
   const clearFilters = () => {
@@ -70,18 +144,20 @@ export default function UniversitiesScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar style={resolvedTheme === "dark" ? "light" : "dark"} />
+      <StatusBar style="light" />
       <FlatList
-        data={filteredUniversities}
-        keyExtractor={(university) => university.id}
+        data={listData}
+        keyExtractor={(item) => item.id}
         ItemSeparatorComponent={() => <View style={styles.separator} />}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.listContent}
         keyboardShouldPersistTaps="handled"
         ListEmptyComponent={
           <View style={styles.emptyState}>
-            <Ionicons name="search-outline" size={34} color={colors.primary} />
-            <Text style={styles.emptyTitle}>No universities found</Text>
+            <Ionicons name="search-outline" size={34} color="#117C72" />
+            <Text style={styles.emptyTitle}>
+              {showingColleges ? "No colleges found" : "No universities found"}
+            </Text>
             <Text style={styles.emptyText}>
               Try another search or clear your filters.
             </Text>
@@ -90,24 +166,42 @@ export default function UniversitiesScreen({ navigation }) {
         ListHeaderComponent={
           <View style={styles.header}>
             <Text style={styles.eyebrow}>EXPLORE YOUR OPTIONS</Text>
-            <Text style={styles.title}>Universities</Text>
+            <Text style={styles.title}>{showingColleges ? "Colleges" : "Universities"}</Text>
             <Text style={styles.subtitle}>
-              Compare all {universities.length} public universities, their
-              courses and application information.
+              {showingColleges
+                ? "Explore private higher education institutions and public TVET colleges."
+                : `Compare all ${universities.length} public universities, their courses and application information.`}
             </Text>
+
+            <View style={styles.segment}>
+              {["Universities", "Colleges"].map((option) => {
+                const active = mode === option;
+                return (
+                  <Pressable
+                    key={option}
+                    onPress={() => setMode(option)}
+                    accessibilityRole="button"
+                    accessibilityState={{ selected: active }}
+                    style={[styles.segmentItem, active && styles.segmentItemActive]}
+                  >
+                    <Text style={[styles.segmentText, active && styles.segmentTextActive]}>{option}</Text>
+                  </Pressable>
+                );
+              })}
+            </View>
 
             <View style={styles.searchRow}>
               <View style={styles.searchBox}>
-                <Ionicons name="search-outline" size={20} color={colors.mutedText} />
+                <Ionicons name="search-outline" size={20} color="#7B8798" />
                 <TextInput
                   value={searchQuery}
                   onChangeText={setSearchQuery}
-                  placeholder="Search universities"
-                  placeholderTextColor={colors.mutedText}
+                  placeholder={showingColleges ? "Search colleges" : "Search universities"}
+                  placeholderTextColor="#9CA6B5"
                   autoCapitalize="none"
                   autoCorrect={false}
                   returnKeyType="search"
-                  accessibilityLabel="Search universities"
+                  accessibilityLabel={showingColleges ? "Search colleges" : "Search universities"}
                   style={styles.searchInput}
                 />
                 {searchQuery.length > 0 && (
@@ -117,7 +211,7 @@ export default function UniversitiesScreen({ navigation }) {
                     accessibilityLabel="Clear search"
                     hitSlop={8}
                   >
-                    <Ionicons name="close-circle" size={20} color={colors.mutedText} />
+                    <Ionicons name="close-circle" size={20} color="#9CA6B5" />
                   </Pressable>
                 )}
               </View>
@@ -125,7 +219,7 @@ export default function UniversitiesScreen({ navigation }) {
               <Pressable
                 onPress={() => setFiltersVisible((visible) => !visible)}
                 accessibilityRole="button"
-                accessibilityLabel="Show university filters"
+                accessibilityLabel="Show filters"
                 accessibilityState={{ expanded: filtersVisible }}
                 style={({ pressed }) => [
                   styles.filterButton,
@@ -136,7 +230,7 @@ export default function UniversitiesScreen({ navigation }) {
                 <Ionicons
                   name="options-outline"
                   size={22}
-                  color={hasActiveFilters ? "#FFFFFF" : colors.primary}
+                  color={hasActiveFilters ? "#FFFFFF" : "#117C72"}
                 />
                 {hasActiveFilters && <View style={styles.filterIndicator} />}
               </Pressable>
@@ -186,7 +280,7 @@ export default function UniversitiesScreen({ navigation }) {
                   <Ionicons
                     name={freeToApplyOnly ? "checkbox" : "square-outline"}
                     size={24}
-                    color={colors.primary}
+                    color="#117C72"
                   />
                   <Text style={styles.freeFilterText}>Free to apply only</Text>
                 </Pressable>
@@ -194,33 +288,36 @@ export default function UniversitiesScreen({ navigation }) {
             )}
 
             <Text style={styles.resultCount}>
-              {filteredUniversities.length}{" "}
-              {filteredUniversities.length === 1
-                ? "university"
-                : "universities"}
+              {listData.length} {noun}
             </Text>
           </View>
         }
-        renderItem={({ item }) => (
-          <UniversityCard
-            university={item}
-            bookmarked={isBookmarked(item.id)}
-            onBookmarkPress={() => handleBookmarkPress(item.id)}
-            onPress={() =>
-              navigation.navigate("UniversityDetails", { university: item })
-            }
-          />
-        )}
+        renderItem={({ item }) =>
+          showingColleges ? (
+            <CollegeCard
+              college={item}
+              onPress={() => navigation.navigate("CollegeDetails", { college: item })}
+            />
+          ) : (
+            <UniversityCard
+              university={item}
+              bookmarked={isBookmarked(item.id)}
+              onBookmarkPress={() => handleBookmarkPress(item.id)}
+              onPress={() =>
+                navigation.navigate("UniversityDetails", { university: item })
+              }
+            />
+          )
+        }
       />
     </SafeAreaView>
   );
 }
 
-function makeStyles(colors) {
-  return StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: "#F6F8FC",
   },
   listContent: {
     paddingHorizontal: 20,
@@ -232,28 +329,45 @@ function makeStyles(colors) {
   },
   separator: { height: 20 },
   eyebrow: {
-    color: colors.primary,
+    color: "#117C72",
     fontSize: 11,
     fontWeight: "800",
     letterSpacing: 1.5,
   },
   title: {
     marginTop: 7,
-    color: colors.text,
+    color: "#117C72",
     fontSize: 31,
     fontWeight: "900",
   },
   subtitle: {
     maxWidth: 420,
     marginTop: 8,
-    color: colors.secondaryText,
+    color: "#9CA6B5",
     fontSize: 15,
     lineHeight: 22,
   },
+  segment: {
+    marginTop: 18,
+    padding: 4,
+    borderRadius: 16,
+    flexDirection: "row",
+    backgroundColor: "#E8EDF3",
+  },
+  segmentItem: {
+    flex: 1,
+    minHeight: 42,
+    borderRadius: 12,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  segmentItemActive: { backgroundColor: "#FFFFFF" },
+  segmentText: { color: "#667085", fontSize: 14, fontWeight: "700" },
+  segmentTextActive: { color: "#117C72", fontWeight: "900" },
   searchRow: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 22,
+    marginTop: 18,
     gap: 10,
   },
   searchBox: {
@@ -264,14 +378,14 @@ function makeStyles(colors) {
     paddingHorizontal: 15,
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
+    borderColor: "#DDE3EC",
+    backgroundColor: "#FFFFFF",
   },
   searchInput: {
     flex: 1,
     height: "100%",
     marginHorizontal: 10,
-    color: colors.text,
+    color: "#172033",
     fontSize: 15,
   },
   filterButton: {
@@ -281,10 +395,10 @@ function makeStyles(colors) {
     justifyContent: "center",
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
+    borderColor: "#B7D7D3",
+    backgroundColor: "#FFFFFF",
   },
-  filterButtonActive: { backgroundColor: colors.primary, borderColor: colors.primary },
+  filterButtonActive: { backgroundColor: "#117C72", borderColor: "#117C72" },
   filterIndicator: {
     position: "absolute",
     top: 9,
@@ -292,7 +406,7 @@ function makeStyles(colors) {
     width: 7,
     height: 7,
     borderRadius: 4,
-    backgroundColor: colors.accent,
+    backgroundColor: "#58E58F",
   },
   buttonPressed: { opacity: 0.72 },
   filterPanel: {
@@ -300,16 +414,16 @@ function makeStyles(colors) {
     padding: 16,
     borderRadius: 18,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
+    borderColor: "#DDE3EC",
+    backgroundColor: "#FFFFFF",
   },
   filterHeadingRow: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
   },
-  filterHeading: { color: colors.text, fontSize: 14, fontWeight: "800" },
-  clearFilters: { color: colors.primary, fontSize: 13, fontWeight: "700" },
+  filterHeading: { color: "#172033", fontSize: 14, fontWeight: "800" },
+  clearFilters: { color: "#117C72", fontSize: 13, fontWeight: "700" },
   chipContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
@@ -321,22 +435,22 @@ function makeStyles(colors) {
     paddingVertical: 8,
     borderRadius: 999,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.background,
+    borderColor: "#DDE3EC",
+    backgroundColor: "#F6F8FC",
   },
-  chipSelected: { borderColor: colors.primary, backgroundColor: colors.primarySoft },
-  chipText: { color: colors.secondaryText, fontSize: 12, fontWeight: "600" },
-  chipTextSelected: { color: colors.primary, fontWeight: "800" },
+  chipSelected: { borderColor: "#117C72", backgroundColor: "#E5F3F1" },
+  chipText: { color: "#667085", fontSize: 12, fontWeight: "600" },
+  chipTextSelected: { color: "#117C72", fontWeight: "800" },
   freeFilterRow: { flexDirection: "row", alignItems: "center", marginTop: 17 },
   freeFilterText: {
     marginLeft: 9,
-    color: colors.text,
+    color: "#172033",
     fontSize: 14,
     fontWeight: "700",
   },
   resultCount: {
     marginTop: 14,
-    color: colors.mutedText,
+    color: "#7B8798",
     fontSize: 13,
     fontWeight: "600",
   },
@@ -347,15 +461,44 @@ function makeStyles(colors) {
   },
   emptyTitle: {
     marginTop: 12,
-    color: colors.text,
+    color: "#172033",
     fontSize: 18,
     fontWeight: "800",
   },
   emptyText: {
     marginTop: 6,
-    color: colors.secondaryText,
+    color: "#7B8798",
     fontSize: 14,
     textAlign: "center",
   },
-  });
-}
+  collegeCard: {
+    overflow: "hidden",
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: "#DDE3EC",
+    backgroundColor: "#FFFFFF",
+    elevation: 3,
+    shadowColor: "#172033",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.08,
+    shadowRadius: 10,
+  },
+  collegeImage: { width: "100%", height: 170 },
+  collegePlaceholder: {
+    height: 150,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    backgroundColor: "#E7F3F1",
+  },
+  placeholderText: { color: "#117C72", fontSize: 13, fontWeight: "600" },
+  collegeBody: { padding: 16 },
+  collegeName: { color: "#172033", fontSize: 18, lineHeight: 24, fontWeight: "800" },
+  collegeLocation: { marginTop: 6, flexDirection: "row", alignItems: "center", gap: 4 },
+  collegeProvince: { color: "#7B8798", fontSize: 13 },
+  tagRow: { marginTop: 12, flexDirection: "row", flexWrap: "wrap", gap: 7 },
+  tag: { paddingHorizontal: 10, paddingVertical: 6, borderRadius: 999, backgroundColor: "#F2F6FA" },
+  tagText: { color: "#526078", fontSize: 11, fontWeight: "800" },
+  feeTag: { backgroundColor: "#E7F3F1" },
+  feeTagText: { color: "#117C72" },
+});
