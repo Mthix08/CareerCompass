@@ -1,4 +1,6 @@
+import React, { useEffect, useMemo } from "react";
 import { NavigationContainer } from "@react-navigation/native";
+import { DarkTheme, DefaultTheme, useNavigationContainerRef } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import LoginScreen from "./screens/LoginScreen";
@@ -24,13 +26,44 @@ import ApplicationHelpScreen from "./screens/ApplicationHelpScreen";
 import ProspectusScreen from "./screens/ProspectusScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import { ProfileProvider } from "./context/ProfileContext";
+import { useProfile } from "./context/ProfileContext";
 import { BookmarksProvider } from "./context/BookmarksContext";
-
+import './translation/i18n';
+import CollegeDetailsScreen from "./screens/CollegeDetailsScreen";
 const Stack = createNativeStackNavigator();
 
 function AppNavigator() {
+  const { colors, publicColors, resolvedTheme, accessRestricted } = useProfile();
+  const navigationRef = useNavigationContainerRef();
+  const publicScreenOptions = useMemo(() => ({
+    headerStyle: { backgroundColor: publicColors.background },
+    headerTintColor: publicColors.text,
+    headerTitleStyle: { color: publicColors.text },
+    contentStyle: { backgroundColor: publicColors.background },
+  }), [publicColors]);
+  const navigationTheme = useMemo(() => {
+    const baseTheme = resolvedTheme === "dark" ? DarkTheme : DefaultTheme;
+    return {
+      ...baseTheme,
+      colors: {
+        ...baseTheme.colors,
+        primary: colors.primary,
+        background: colors.background,
+        card: colors.surface,
+        text: colors.text,
+        border: colors.border,
+        notification: colors.accent,
+      },
+    };
+  }, [colors, resolvedTheme]);
+
+  useEffect(() => {
+    if (!accessRestricted || !navigationRef.isReady()) return;
+    navigationRef.resetRoot({ index: 0, routes: [{ name: "Login" }] });
+  }, [accessRestricted, navigationRef]);
+
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef} theme={navigationTheme}>
       <Stack.Navigator initialRouteName="Splash">
         <Stack.Screen
           name="Splash"
@@ -42,8 +75,8 @@ function AppNavigator() {
           component={OnboardingScreen}
           options={{ headerShown: false, gestureEnabled: false }}
         />
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="SignUp" component={SignUpScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} options={publicScreenOptions} />
+        <Stack.Screen name="SignUp" component={SignUpScreen} options={publicScreenOptions} />
         <Stack.Screen
           name="PassRecovery"
           component={PassRecoveryScreen}
@@ -65,6 +98,11 @@ function AppNavigator() {
           options={{ headerShown: false, animation: "slide_from_right" }}
         />
         <Stack.Screen
+          name="CollegeDetails"
+          component={CollegeDetailsScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
           name="Prospectus"
           component={ProspectusScreen}
           options={{ headerShown: false, animation: "slide_from_right" }}
@@ -79,6 +117,7 @@ function AppNavigator() {
           component={ApsCalculatorScreen}
           options={{ headerShown: false }}
         />
+        
         <Stack.Screen
           name="UniversityApsScores"
           component={UniversityApsScoresScreen}

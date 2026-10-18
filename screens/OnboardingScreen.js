@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import {
   Dimensions,
   FlatList,
@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useProfile } from "../context/ProfileContext";
 
 const { width: screenWidth } = Dimensions.get("window");
 
@@ -54,6 +55,8 @@ const slides = [
 ];
 
 export default function OnboardingScreen({ navigation }) {
+  const { publicColors: colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const listRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const isLastSlide = activeIndex === slides.length - 1;
@@ -75,12 +78,12 @@ export default function OnboardingScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <StatusBar barStyle="dark-content" backgroundColor="#FAF9F6" />
+      <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={styles.container}>
         <View style={styles.topBar}>
           <View style={styles.brand}>
             <View style={styles.brandMark}>
-              <Ionicons name="navigate" size={15} color="#FFFFFF" />
+              <Ionicons name="navigate" size={15} color={colors.onPrimary} />
             </View>
             <Text style={styles.brandName}>CareerCompass</Text>
           </View>
@@ -182,7 +185,7 @@ export default function OnboardingScreen({ navigation }) {
             <Ionicons
               name={isLastSlide ? "arrow-forward" : "arrow-forward"}
               size={19}
-              color="#FFFFFF"
+              color={colors.onPrimary}
             />
           </TouchableOpacity>
           <Text style={styles.footerNote}>Your future, one step at a time.</Text>
@@ -192,8 +195,9 @@ export default function OnboardingScreen({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#FAF9F6" },
+function makeStyles(colors) {
+  return StyleSheet.create({
+  safeArea: { flex: 1, backgroundColor: colors.background },
   container: { flex: 1 },
   topBar: {
     height: 62,
@@ -207,13 +211,13 @@ const styles = StyleSheet.create({
     height: 29,
     width: 29,
     borderRadius: 10,
-    backgroundColor: "#11796F",
+    backgroundColor: colors.primary,
     alignItems: "center",
     justifyContent: "center",
     transform: [{ rotate: "-8deg" }],
   },
-  brandName: { color: "#26312F", fontSize: 14, fontWeight: "700", letterSpacing: 0.1 },
-  skipText: { color: "#777F7D", fontSize: 15, fontWeight: "600", padding: 6 },
+  brandName: { color: colors.text, fontSize: 14, fontWeight: "700", letterSpacing: 0.1 },
+  skipText: { color: colors.secondaryText, fontSize: 15, fontWeight: "600", padding: 6 },
   skipPlaceholder: { width: 44 },
   slide: { width: screenWidth, flex: 1, paddingHorizontal: 26 },
   artworkArea: { flex: 1.18, minHeight: 250, maxHeight: 390, alignItems: "center", justifyContent: "center" },
@@ -233,10 +237,10 @@ const styles = StyleSheet.create({
     maxHeight: 290,
     minHeight: 220,
     borderRadius: 28,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: colors.surface,
     padding: 20,
     justifyContent: "space-between",
-    shadowColor: "#183C36",
+    shadowColor: colors.text,
     shadowOffset: { width: 0, height: 15 },
     shadowOpacity: 0.11,
     shadowRadius: 25,
@@ -244,26 +248,27 @@ const styles = StyleSheet.create({
   },
   artTopRow: { flexDirection: "row", alignItems: "center", gap: 7 },
   artDot: { height: 9, width: 9, borderRadius: 5, backgroundColor: "#E3B45E" },
-  artLine: { height: 6, width: 55, borderRadius: 4, backgroundColor: "#E9EEEB", flex: 1 },
+  artLine: { height: 6, width: 55, borderRadius: 4, backgroundColor: colors.border, flex: 1 },
   artIconWrap: { width: 116, height: 116, borderRadius: 34, alignSelf: "center", alignItems: "center", justifyContent: "center" },
   artBottomRow: { flexDirection: "row", gap: 8, justifyContent: "center" },
-  artPill: { height: 8, width: 68, borderRadius: 5, backgroundColor: "#D8E8E3" },
-  artPillShort: { height: 8, width: 38, borderRadius: 5, backgroundColor: "#EEF1EF" },
-  artCardShadow: { position: "absolute", bottom: -10, left: 25, right: 25, height: 16, borderRadius: 20, backgroundColor: "#DFE7E2", zIndex: -1 },
-  floatingBadge: { position: "absolute", width: 52, height: 52, borderRadius: 18, backgroundColor: "#FFFFFF", alignItems: "center", justifyContent: "center", shadowColor: "#183C36", shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.12, shadowRadius: 10, elevation: 4 },
+  artPill: { height: 8, width: 68, borderRadius: 5, backgroundColor: colors.primarySoft },
+  artPillShort: { height: 8, width: 38, borderRadius: 5, backgroundColor: colors.elevatedSurface },
+  artCardShadow: { position: "absolute", bottom: -10, left: 25, right: 25, height: 16, borderRadius: 20, backgroundColor: colors.border, zIndex: -1 },
+  floatingBadge: { position: "absolute", width: 52, height: 52, borderRadius: 18, backgroundColor: colors.surface, alignItems: "center", justifyContent: "center", shadowColor: colors.text, shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.12, shadowRadius: 10, elevation: 4 },
   badgeOne: { top: "21%", right: "13%" },
   badgeTwo: { bottom: "18%", left: "12%" },
   artDecorationOne: { position: "absolute", height: 13, width: 13, borderRadius: 5, borderWidth: 3, borderColor: "#E0B35F", top: "24%", left: "16%", transform: [{ rotate: "20deg" }] },
   artDecorationTwo: { position: "absolute", height: 9, width: 9, borderRadius: 5, backgroundColor: "#72B9A9", bottom: "24%", right: "17%" },
   copyArea: { flex: 0.82, minHeight: 190, alignItems: "center", paddingTop: 12 },
-  eyebrow: { color: "#11796F", fontSize: 10, fontWeight: "800", letterSpacing: 1.8, textAlign: "center", marginBottom: 13 },
-  title: { color: "#202B29", fontSize: 38, fontWeight: "800", letterSpacing: -1.2, lineHeight: 43, textAlign: "center" },
-  description: { color: "#737E7B", fontSize: 15, lineHeight: 23, textAlign: "center", marginTop: 13, maxWidth: 330, paddingHorizontal: 8 },
+  eyebrow: { color: colors.primary, fontSize: 10, fontWeight: "800", letterSpacing: 1.8, textAlign: "center", marginBottom: 13 },
+  title: { color: colors.text, fontSize: 38, fontWeight: "800", lineHeight: 43, textAlign: "center" },
+  description: { color: colors.secondaryText, fontSize: 15, lineHeight: 23, textAlign: "center", marginTop: 13, maxWidth: 330, paddingHorizontal: 8 },
   footer: { paddingHorizontal: 27, paddingTop: 7, paddingBottom: 18, alignItems: "center" },
   pagination: { height: 29, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8, marginBottom: 13 },
-  dot: { width: 7, height: 7, borderRadius: 4, backgroundColor: "#D7DEDA" },
-  activeDot: { width: 23, backgroundColor: "#11796F" },
-  primaryButton: { height: 58, width: "100%", borderRadius: 17, backgroundColor: "#11796F", flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 12, shadowColor: "#11796F", shadowOffset: { width: 0, height: 6 }, shadowOpacity: 0.2, shadowRadius: 11, elevation: 4 },
-  primaryButtonText: { color: "#FFFFFF", fontSize: 16, fontWeight: "700" },
-  footerNote: { color: "#9BA39F", fontSize: 11, marginTop: 13, letterSpacing: 0.2 },
-});
+  dot: { width: 7, height: 7, borderRadius: 4, backgroundColor: colors.border },
+  activeDot: { width: 23, backgroundColor: colors.primary },
+  primaryButton: { height: 58, width: "100%", borderRadius: 17, backgroundColor: colors.primary, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 12, shadowColor: colors.primary, shadowOffset: { width: 0, height: 6 }, shadowOpacity: 0.2, shadowRadius: 11, elevation: 4 },
+  primaryButtonText: { color: colors.onPrimary, fontSize: 16, fontWeight: "700" },
+  footerNote: { color: colors.mutedText, fontSize: 11, marginTop: 13 },
+  });
+}

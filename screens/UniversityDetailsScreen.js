@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
@@ -19,8 +19,11 @@ import UniversityTabs from "../components/UniversityTabs";
 import { useBookmarks } from "../context/BookmarksContext";
 import { getUniversityTheme } from "../data/universityTheme";
 import { courseExamples } from "../data/courseExamples";
+import { useProfile } from "../context/ProfileContext";
 
 export default function UniversityDetailsScreen({ navigation, route }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const university = route.params?.university;
   const [activeTab, setActiveTab] = useState("About");
   const { addBookmark, isBookmarked, removeBookmark } = useBookmarks();
@@ -166,7 +169,7 @@ export default function UniversityDetailsScreen({ navigation, route }) {
               pressed && styles.pressed,
             ]}
           >
-            <Ionicons name="arrow-back" size={24} color="#FFFFFF" />
+            <Ionicons name="arrow-back" size={24} color={colors.text} />
           </Pressable>
           <Pressable
             onPress={handleBookmarkPress}
@@ -183,7 +186,7 @@ export default function UniversityDetailsScreen({ navigation, route }) {
             <Ionicons
               name={bookmarked ? "bookmark" : "bookmark-outline"}
               size={24}
-              color={bookmarked ? universityTheme.accent : "#FFFFFF"}
+              color={bookmarked ? universityTheme.accent : colors.primary}
             />
           </Pressable>
         </View>
@@ -210,7 +213,7 @@ export default function UniversityDetailsScreen({ navigation, route }) {
           <Text style={styles.name}>{university.name}</Text>
           <View style={styles.badgeRow}>
             <View style={[styles.badge, styles.provinceBadge]}>
-              <Ionicons name="location-outline" size={15} color="#D7DCE4" />
+              <Ionicons name="location-outline" size={15} color={colors.mutedText} />
               <Text style={styles.badgeText}>{university.province}</Text>
             </View>
             <View
@@ -283,15 +286,16 @@ export default function UniversityDetailsScreen({ navigation, route }) {
   );
 }
 
-const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#05080D" },
+function makeStyles(colors) {
+  return StyleSheet.create({
+  safeArea: { flex: 1, backgroundColor: colors.background },
   scrollView: { flex: 1 },
   scrollContent: { paddingBottom: 46 },
   hero: {
     width: "100%",
     aspectRatio: 1.35,
     maxHeight: 330,
-    backgroundColor: "#301B14",
+    backgroundColor: colors.surface,
   },
   coverImage: { width: "100%", height: "100%" },
   coverPlaceholder: {
@@ -300,7 +304,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 9,
-    backgroundColor: "#301B14",
+    backgroundColor: colors.elevatedSurface,
   },
   placeholderText: { fontSize: 14, fontWeight: "600" },
   heroShade: {
@@ -327,16 +331,16 @@ const styles = StyleSheet.create({
     marginTop: -38,
     borderRadius: 21,
     borderWidth: 4,
-    borderColor: "#05080D",
+    borderColor: colors.background,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#FFFFFF",
+    backgroundColor: colors.surface,
   },
   logo: { width: 62, height: 62 },
   logoText: { fontSize: 24, fontWeight: "900" },
   name: {
     marginTop: 16,
-    color: "#FFFFFF",
+    color: colors.text,
     fontSize: 27,
     lineHeight: 34,
     fontWeight: "900",
@@ -350,8 +354,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 5,
   },
-  provinceBadge: { backgroundColor: "#202733" },
-  badgeText: { color: "#D7DCE4", fontSize: 12, fontWeight: "700" },
+  provinceBadge: { backgroundColor: colors.primarySoft },
+  badgeText: { color: colors.primary, fontSize: 12, fontWeight: "700" },
   typeBadgeText: { fontSize: 12, fontWeight: "800" },
   tabsWrap: { marginTop: 26 },
   prospectusButton: {
@@ -368,14 +372,14 @@ const styles = StyleSheet.create({
     padding: 17,
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: "#293241",
-    backgroundColor: "#101722",
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
   },
   feeTitleRow: { flexDirection: "row", alignItems: "center", gap: 9 },
-  feeTitle: { color: "#FFFFFF", fontSize: 17, fontWeight: "800" },
-  feeYear: { marginTop: 10, color: "#D3DBE7", fontSize: 12, fontWeight: "700" },
-  feeBody: { marginTop: 9, color: "#B3BDCB", fontSize: 13, lineHeight: 20 },
-  feeDisclaimer: { marginTop: 12, color: "#8792A2", fontSize: 12, lineHeight: 18 },
+  feeTitle: { color: colors.text, fontSize: 17, fontWeight: "800" },
+  feeYear: { marginTop: 10, color: colors.secondaryText, fontSize: 12, fontWeight: "700" },
+  feeBody: { marginTop: 9, color: colors.secondaryText, fontSize: 13, lineHeight: 20 },
+  feeDisclaimer: { marginTop: 12, color: colors.mutedText, fontSize: 12, lineHeight: 18 },
   feeSourceButton: {
     alignSelf: "flex-start",
     minHeight: 38,
@@ -392,7 +396,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  missingTitle: { color: "#FFFFFF", fontSize: 22, fontWeight: "800" },
+  missingTitle: { color: colors.text, fontSize: 22, fontWeight: "800" },
   missingButton: {
     minHeight: 50,
     marginTop: 20,
@@ -403,4 +407,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#F26522",
   },
   missingButtonText: { color: "#FFFFFF", fontWeight: "800" },
-});
+  });
+}

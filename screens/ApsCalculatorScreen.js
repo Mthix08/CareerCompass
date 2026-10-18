@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
@@ -16,6 +16,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
+import { loadCollection } from "../data/firestoreContent";
 import { getApsUniversityMatches } from "../data/apsMatching";
 
 const COLORS = {
@@ -40,86 +41,8 @@ const PERIODS = [
   "Grade 12 Term 4",
 ];
 
-const LANGUAGE_NAMES = [
-  "Afrikaans",
-  "English",
-  "IsiNdebele",
-  "IsiXhosa",
-  "IsiZulu",
-  "Sepedi",
-  "Sesotho",
-  "Setswana",
-  "Siswati",
-  "Tshivenda",
-  "Setswana",
-  "XiTsonga",
-];
-
-const SUBJECT_GROUPS = [
-  {
-    title: "Core subjects",
-    subjects: [
-      "Life Orientation",
-      "Mathematical Literacy",
-      "Mathematics",
-      "Technical Mathematics",
-    ],
-  },
-  {
-    title: "Languages",
-    subjects: [...new Set(LANGUAGE_NAMES)].flatMap((language) => [
-      `${language} Home Language`,
-      `${language} First Additional Language`,
-      `${language} Second Additional Language`,
-    ]),
-  },
-  {
-    title: "Sciences and technology",
-    subjects: [
-      "Agricultural Sciences",
-      "Computer Applications Technology",
-      "Information Technology",
-      "Life Sciences",
-      "Physical Sciences",
-      "Technical Sciences",
-    ],
-  },
-  {
-    title: "Business and social sciences",
-    subjects: [
-      "Accounting",
-      "Business Studies",
-      "Economics",
-      "Geography",
-      "History",
-      "Religion Studies",
-    ],
-  },
-  {
-    title: "Arts and services",
-    subjects: [
-      "Consumer Studies",
-      "Dance Studies",
-      "Design",
-      "Dramatic Arts",
-      "Hospitality Studies",
-      "Music",
-      "Tourism",
-      "Visual Arts",
-    ],
-  },
-  {
-    title: "Technical and agricultural",
-    subjects: [
-      "Agricultural Management Practices",
-      "Agricultural Technology",
-      "Civil Technology",
-      "Electrical Technology",
-      "Engineering Graphics and Design",
-      "Mechanical Technology",
-    ],
-  },
-];
+// REMOVED: the hardcoded LANGUAGE_NAMES and SUBJECT_GROUPS lists.
+// The subject groups now come from the Firestore "subjects" collection (one document per group).
 
 function getAchievementLevel(mark) {
   if (mark === "" || Number.isNaN(Number(mark))) return null;
@@ -133,19 +56,19 @@ function getAchievementLevel(mark) {
   return 1;
 }
 
-function SubjectPicker({ visible, selectedSubjects, onSelect, onClose }) {
+function SubjectPicker({ visible, groups, selectedSubjects, onSelect, onClose }) {
   const [query, setQuery] = useState("");
   const filteredGroups = useMemo(() => {
     const search = query.trim().toLowerCase();
-    return SUBJECT_GROUPS.map((group) => ({
+    return groups.map((group) => ({
       ...group,
-      subjects: group.subjects.filter(
+      subjects: (group.subjects || []).filter(
         (subject) =>
           !selectedSubjects.includes(subject) &&
           (!search || subject.toLowerCase().includes(search)),
       ),
     })).filter((group) => group.subjects.length > 0);
-  }, [query, selectedSubjects]);
+  }, [groups, query, selectedSubjects]);
 
   const closePicker = () => {
     setQuery("");
@@ -355,10 +278,22 @@ export default function ApsCalculatorScreen({ navigation }) {
   const [pickerVisible, setPickerVisible] = useState(false);
   const [apsResult, setApsResult] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
+  // NEW: subject groups come from the Firestore "subjects" collection (cached for offline)
+  const [subjectGroups, setSubjectGroups] = useState([]);
   const currentMarks =
     marksByPeriod[selectedPeriod] ??
     profile.apsRecords?.[selectedPeriod]?.marks ??
     [];
+
+  useEffect(() => {
+    let active = true;
+    loadCollection("subjects", { sortBy: "order" }).then((items) => {
+      if (active) setSubjectGroups(items);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const markPeriodEdited = () => {
     setEditedPeriods((current) =>
@@ -450,11 +385,16 @@ export default function ApsCalculatorScreen({ navigation }) {
       setEditedPeriods((current) =>
         current.filter((period) => period !== selectedPeriod),
       );
-      setApsResult(result);
-    setApsResult({
-  ...result,
-  matchedUniversities: getApsUniversityMatches(totalAps).length,
-});
+      // CHANGED: the popup needs the number of matching universities (it showed "undefined" before)
+      setApsResult({
+        ...result,
+        matchedUniversities: getApsUniversityMatches(totalAps).length,
+      });
+    } catch (error) {
+      Alert.alert(
+        "Could not save APS",
+        error.message || "Check your connection and try again.",
+      );
     } finally {
       setIsSaving(false);
     }
@@ -569,6 +509,7 @@ export default function ApsCalculatorScreen({ navigation }) {
 
       <SubjectPicker
         visible={pickerVisible}
+        groups={subjectGroups}
         selectedSubjects={currentMarks.map(({ subject }) => subject)}
         onSelect={addSubject}
         onClose={() => setPickerVisible(false)}
@@ -680,8 +621,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: COLORS.input,
   },
-  markInput: {
+   markInput: {
     flex: 1,
+    minWidth: 0,
     minHeight: 40,
     padding: 0,
     color: COLORS.text,
@@ -689,7 +631,7 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     textAlign: "center",
   },
-  percent: { color: COLORS.muted, fontSize: 12 },
+  percent: { flexShrink: 0, color: COLORS.muted, fontSize: 12 },
   addSubjectButton: {
     minHeight: 50,
     marginTop: 14,

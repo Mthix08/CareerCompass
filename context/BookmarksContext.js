@@ -1,8 +1,10 @@
 import React, {
+  useCallback,
   createContext,
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -22,10 +24,26 @@ export function BookmarksProvider({ children }) {
   const [bookmarkedCourseIds, setBookmarkedCourseIds] = useState([]);
   const [bookmarkedFundingIds, setBookmarkedFundingIds] = useState([]);
   const [bookmarkedFunding, setBookmarkedFunding] = useState([]);
+  const bookmarkedFundingIdsRef = useRef(bookmarkedFundingIds);
+  bookmarkedFundingIdsRef.current = bookmarkedFundingIds;
   const [loadedScope, setLoadedScope] = useState(null);
   const [cloudReadyUid, setCloudReadyUid] = useState(null);
   const userId = firebaseUser?.uid ?? null;
   const storageScope = userId ?? "guest";
+
+  const updateFundingBookmarkDetails = useCallback((items) => {
+    if (!Array.isArray(items) || items.length === 0) return;
+    setBookmarkedFunding((current) => {
+      const savedIds = new Set(bookmarkedFundingIdsRef.current);
+      if (savedIds.size === 0) return current;
+      const byId = new Map(current.map((item) => [String(item.id), item]));
+      items.forEach((item) => {
+        const id = String(item.id);
+        if (savedIds.has(id)) byId.set(id, { ...byId.get(id), ...item, id });
+      });
+      return [...byId.values()].filter((item) => savedIds.has(String(item.id)));
+    });
+  }, []);
 
   // Load this account's local cache before merging in its cloud copy.
   useEffect(() => {
@@ -187,21 +205,10 @@ export function BookmarksProvider({ children }) {
           setBookmarkedFundingIds((current) => current.filter((itemId) => itemId !== id));
           setBookmarkedFunding((current) => current.filter((item) => String(item.id) !== id));
         })(),
-      updateFundingBookmarkDetails: (items) => {
-        if (!Array.isArray(items) || items.length === 0) return;
-        setBookmarkedFunding((current) => {
-          const savedIds = new Set(bookmarkedFundingIds);
-          const byId = new Map(current.map((item) => [String(item.id), item]));
-          items.forEach((item) => {
-            const id = String(item.id);
-            if (savedIds.has(id)) byId.set(id, { ...byId.get(id), ...item, id });
-          });
-          return [...byId.values()].filter((item) => savedIds.has(String(item.id)));
-        });
-      },
+      updateFundingBookmarkDetails,
       bookmarkedFunding,
     }),
-    [bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds, bookmarkedFunding, isGuest],
+    [bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds, bookmarkedFunding, isGuest, updateFundingBookmarkDetails],
   );
 
   return (

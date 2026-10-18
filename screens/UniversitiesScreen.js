@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   FlatList,
@@ -12,7 +12,9 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import UniversityCard from "../components/Varsity-Card";
+import CollegeCard from "../components/CollegeCard";
 import { useBookmarks } from "../context/BookmarksContext";
+import { loadCollection } from "../data/firestoreContent";
 import { universities } from "../data/universities";
 
 export default function UniversitiesScreen({ navigation }) {
@@ -21,13 +23,27 @@ export default function UniversitiesScreen({ navigation }) {
   const [selectedProvince, setSelectedProvince] = useState(null);
   const [freeToApplyOnly, setFreeToApplyOnly] = useState(false);
   const [filtersVisible, setFiltersVisible] = useState(false);
+  // Universities | Colleges toggle, colleges come from Firestore (cached for offline)
+  const [mode, setMode] = useState("Universities");
+  const [colleges, setColleges] = useState([]);
+  const showingColleges = mode === "Colleges";
+
+  useEffect(() => {
+    let active = true;
+    loadCollection("colleges", { sortBy: "order" }).then((items) => {
+      if (active) setColleges(items);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const provinces = useMemo(
     () =>
-      [...new Set(universities.map(({ province }) => province))].sort((a, b) =>
+      [...new Set([...universities, ...colleges].map(({ province }) => province).filter(Boolean))].sort((a, b) =>
         a.localeCompare(b),
       ),
-    [],
+    [colleges],
   );
 
   const filteredUniversities = useMemo(() => {
@@ -49,6 +65,25 @@ export default function UniversitiesScreen({ navigation }) {
       .sort((a, b) => a.name.localeCompare(b.name));
   }, [freeToApplyOnly, searchQuery, selectedProvince]);
 
+  const filteredColleges = useMemo(() => {
+    const normalizedQuery = searchQuery.trim().toLocaleLowerCase();
+
+    return colleges.filter((college) => {
+      const matchesSearch =
+        !normalizedQuery ||
+        (college.name || "").toLocaleLowerCase().includes(normalizedQuery) ||
+        (college.shortName || "").toLocaleLowerCase().includes(normalizedQuery);
+      const matchesProvince = !selectedProvince || college.province === selectedProvince;
+      const matchesApplicationFee = !freeToApplyOnly || college.applicationFee === 0;
+      return matchesSearch && matchesProvince && matchesApplicationFee;
+    });
+  }, [colleges, freeToApplyOnly, searchQuery, selectedProvince]);
+
+  const listData = showingColleges ? filteredColleges : filteredUniversities;
+  const noun = showingColleges
+    ? listData.length === 1 ? "college" : "colleges"
+    : listData.length === 1 ? "university" : "universities";
+
   const hasActiveFilters = Boolean(selectedProvince || freeToApplyOnly);
 
   const clearFilters = () => {
@@ -69,8 +104,8 @@ export default function UniversitiesScreen({ navigation }) {
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
       <FlatList
-        data={filteredUniversities}
-        keyExtractor={(university) => university.id}
+        data={listData}
+        keyExtractor={(item) => item.id}
         ItemSeparatorComponent={() => <View style={styles.separator} />}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.listContent}
@@ -78,7 +113,9 @@ export default function UniversitiesScreen({ navigation }) {
         ListEmptyComponent={
           <View style={styles.emptyState}>
             <Ionicons name="search-outline" size={34} color="#117C72" />
-            <Text style={styles.emptyTitle}>No universities found</Text>
+            <Text style={styles.emptyTitle}>
+              {showingColleges ? "No colleges found" : "No universities found"}
+            </Text>
             <Text style={styles.emptyText}>
               Try another search or clear your filters.
             </Text>
@@ -87,11 +124,29 @@ export default function UniversitiesScreen({ navigation }) {
         ListHeaderComponent={
           <View style={styles.header}>
             <Text style={styles.eyebrow}>EXPLORE YOUR OPTIONS</Text>
-            <Text style={styles.title}>Universities</Text>
+            <Text style={styles.title}>{showingColleges ? "Colleges" : "Universities"}</Text>
             <Text style={styles.subtitle}>
-              Compare all {universities.length} public universities, their
-              courses and application information.
+              {showingColleges
+                ? "Explore private higher education institutions and public TVET colleges."
+                : `Compare all ${universities.length} public universities, their courses and application information.`}
             </Text>
+
+            <View style={styles.segment}>
+              {["Universities", "Colleges"].map((option) => {
+                const active = mode === option;
+                return (
+                  <Pressable
+                    key={option}
+                    onPress={() => setMode(option)}
+                    accessibilityRole="button"
+                    accessibilityState={{ selected: active }}
+                    style={[styles.segmentItem, active && styles.segmentItemActive]}
+                  >
+                    <Text style={[styles.segmentText, active && styles.segmentTextActive]}>{option}</Text>
+                  </Pressable>
+                );
+              })}
+            </View>
 
             <View style={styles.searchRow}>
               <View style={styles.searchBox}>
@@ -99,12 +154,12 @@ export default function UniversitiesScreen({ navigation }) {
                 <TextInput
                   value={searchQuery}
                   onChangeText={setSearchQuery}
-                  placeholder="Search universities"
+                  placeholder={showingColleges ? "Search colleges" : "Search universities"}
                   placeholderTextColor="#9CA6B5"
                   autoCapitalize="none"
                   autoCorrect={false}
                   returnKeyType="search"
-                  accessibilityLabel="Search universities"
+                  accessibilityLabel={showingColleges ? "Search colleges" : "Search universities"}
                   style={styles.searchInput}
                 />
                 {searchQuery.length > 0 && (
@@ -122,7 +177,7 @@ export default function UniversitiesScreen({ navigation }) {
               <Pressable
                 onPress={() => setFiltersVisible((visible) => !visible)}
                 accessibilityRole="button"
-                accessibilityLabel="Show university filters"
+                accessibilityLabel="Show filters"
                 accessibilityState={{ expanded: filtersVisible }}
                 style={({ pressed }) => [
                   styles.filterButton,
@@ -191,23 +246,27 @@ export default function UniversitiesScreen({ navigation }) {
             )}
 
             <Text style={styles.resultCount}>
-              {filteredUniversities.length}{" "}
-              {filteredUniversities.length === 1
-                ? "university"
-                : "universities"}
+              {listData.length} {noun}
             </Text>
           </View>
         }
-        renderItem={({ item }) => (
-          <UniversityCard
-            university={item}
-            bookmarked={isBookmarked(item.id)}
-            onBookmarkPress={() => handleBookmarkPress(item.id)}
-            onPress={() =>
-              navigation.navigate("UniversityDetails", { university: item })
-            }
-          />
-        )}
+        renderItem={({ item }) =>
+          showingColleges ? (
+            <CollegeCard
+              college={item}
+              onPress={() => navigation.navigate("CollegeDetails", { college: item })}
+            />
+          ) : (
+            <UniversityCard
+              university={item}
+              bookmarked={isBookmarked(item.id)}
+              onBookmarkPress={() => handleBookmarkPress(item.id)}
+              onPress={() =>
+                navigation.navigate("UniversityDetails", { university: item })
+              }
+            />
+          )
+        }
       />
     </SafeAreaView>
   );
@@ -246,10 +305,27 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 22,
   },
+  segment: {
+    marginTop: 18,
+    padding: 4,
+    borderRadius: 16,
+    flexDirection: "row",
+    backgroundColor: "#E8EDF3",
+  },
+  segmentItem: {
+    flex: 1,
+    minHeight: 42,
+    borderRadius: 12,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  segmentItemActive: { backgroundColor: "#FFFFFF" },
+  segmentText: { color: "#667085", fontSize: 14, fontWeight: "700" },
+  segmentTextActive: { color: "#117C72", fontWeight: "900" },
   searchRow: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 22,
+    marginTop: 18,
     gap: 10,
   },
   searchBox: {
