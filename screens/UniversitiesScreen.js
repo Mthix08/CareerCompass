@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   FlatList,
-  Image,
   Pressable,
   StyleSheet,
   Text,
@@ -13,51 +12,10 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import UniversityCard from "../components/Varsity-Card";
+import CollegeCard from "../components/CollegeCard";
 import { useBookmarks } from "../context/BookmarksContext";
 import { loadCollection } from "../data/firestoreContent";
 import { universities } from "../data/universities";
-
-// NEW: card for a college (from the Firestore "colleges" collection)
-function CollegeCard({ college, onPress }) {
-  const fee =
-    college.applicationFee === 0
-      ? college.applicationFeeLabel || "Free to apply"
-      : Number.isFinite(college.applicationFee)
-        ? `Application fee R${college.applicationFee}`
-        : "Check official site";
-
-  return (
-    <Pressable
-      onPress={onPress}
-      accessibilityRole="button"
-      accessibilityLabel={`Open ${college.name} details`}
-      style={({ pressed }) => [styles.collegeCard, pressed && styles.buttonPressed]}
-    >
-      {college.imageUrl ? (
-        <Image source={{ uri: college.imageUrl }} style={styles.collegeImage} resizeMode="cover" />
-      ) : (
-        <View style={styles.collegePlaceholder}>
-          <Ionicons name="school-outline" size={44} color="#117C72" />
-          <Text style={styles.placeholderText}>Campus image coming soon</Text>
-        </View>
-      )}
-      <View style={styles.collegeBody}>
-        <Text style={styles.collegeName} numberOfLines={2}>{college.name}</Text>
-        <View style={styles.collegeLocation}>
-          <Ionicons name="location-outline" size={15} color="#7B8798" />
-          <Text style={styles.collegeProvince}>{college.province}</Text>
-        </View>
-        <View style={styles.tagRow}>
-          <View style={styles.tag}><Text style={styles.tagText}>{college.type}</Text></View>
-          <View style={[styles.tag, styles.feeTag]}><Text style={[styles.tagText, styles.feeTagText]}>{fee}</Text></View>
-          {college.isPlaceholder && (
-            <View style={styles.tag}><Text style={styles.tagText}>EXAMPLE</Text></View>
-          )}
-        </View>
-      </View>
-    </Pressable>
-  );
-}
 
 export default function UniversitiesScreen({ navigation }) {
   const { addBookmark, isBookmarked, removeBookmark } = useBookmarks();
@@ -65,7 +23,7 @@ export default function UniversitiesScreen({ navigation }) {
   const [selectedProvince, setSelectedProvince] = useState(null);
   const [freeToApplyOnly, setFreeToApplyOnly] = useState(false);
   const [filtersVisible, setFiltersVisible] = useState(false);
-  // NEW: Universities | Colleges toggle, colleges come from Firestore (cached for offline)
+  // Universities | Colleges toggle, colleges come from Firestore (cached for offline)
   const [mode, setMode] = useState("Universities");
   const [colleges, setColleges] = useState([]);
   const showingColleges = mode === "Colleges";
@@ -471,34 +429,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: "center",
   },
-  collegeCard: {
-    overflow: "hidden",
-    borderRadius: 22,
-    borderWidth: 1,
-    borderColor: "#DDE3EC",
-    backgroundColor: "#FFFFFF",
-    elevation: 3,
-    shadowColor: "#172033",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.08,
-    shadowRadius: 10,
-  },
-  collegeImage: { width: "100%", height: 170 },
-  collegePlaceholder: {
-    height: 150,
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 8,
-    backgroundColor: "#E7F3F1",
-  },
-  placeholderText: { color: "#117C72", fontSize: 13, fontWeight: "600" },
-  collegeBody: { padding: 16 },
-  collegeName: { color: "#172033", fontSize: 18, lineHeight: 24, fontWeight: "800" },
-  collegeLocation: { marginTop: 6, flexDirection: "row", alignItems: "center", gap: 4 },
-  collegeProvince: { color: "#7B8798", fontSize: 13 },
-  tagRow: { marginTop: 12, flexDirection: "row", flexWrap: "wrap", gap: 7 },
-  tag: { paddingHorizontal: 10, paddingVertical: 6, borderRadius: 999, backgroundColor: "#F2F6FA" },
-  tagText: { color: "#526078", fontSize: 11, fontWeight: "800" },
-  feeTag: { backgroundColor: "#E7F3F1" },
-  feeTagText: { color: "#117C72" },
 });
