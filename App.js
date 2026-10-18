@@ -20,6 +20,7 @@ import LanguageScreen from "./screens/LanguageScreen";
 import FaqsScreen from "./screens/FaqsScreen";
 import CourseDetailsScreen from "./screens/CourseDetailsScreen";
 import AssistantScreen from "./screens/AssistantScreen";
+import ApplicationHelpScreen from "./screens/ApplicationHelpScreen";
 import ProspectusScreen from "./screens/ProspectusScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import { ProfileProvider } from "./context/ProfileContext";
@@ -126,6 +127,11 @@ function AppNavigator() {
         <Stack.Screen
           name="Assistant"
           component={AssistantScreen}
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="ApplicationHelp"
+          component={ApplicationHelpScreen}
           options={{ headerShown: false, animation: "slide_from_right" }}
         />
       </Stack.Navigator>

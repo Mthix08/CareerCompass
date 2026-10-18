@@ -25,7 +25,7 @@ const TAB_ICONS = {
 };
 
 export default function NavBar({ state, descriptors, navigation, insets }) {
-  const { colors } = useProfile();
+  const { colors, isAuthenticated } = useProfile();
   const { bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds } = useBookmarks();
   const bookmarkCounts = {
     Funding: bookmarkedFundingIds.length,
@@ -57,6 +57,8 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
   };
 
   const openAssistant = () => navigation.getParent()?.navigate("Assistant");
+  const openApplicationHelp = () =>
+    navigation.getParent()?.navigate("ApplicationHelp");
 
   return (
     <View
@@ -76,6 +78,22 @@ export default function NavBar({ state, descriptors, navigation, insets }) {
       >
         <Ionicons name="sparkles-outline" size={23} color="#FFFFFF" />
       </Pressable>
+      {isAuthenticated && (
+        <Pressable
+          onPress={openApplicationHelp}
+          accessibilityRole="button"
+          accessibilityLabel="Needs help with application?"
+          style={({ pressed }) => [
+            styles.helpButton,
+            pressed && styles.tabPressed,
+          ]}
+        >
+          <Ionicons name="help-circle-outline" size={18} color={ACTIVE_COLOR} />
+          <Text numberOfLines={1} style={styles.helpButtonText}>
+            Needs help with application?
+          </Text>
+        </Pressable>
+      )}
       <View style={[styles.card, { width: barWidth }]}>
         {state.routes.map((route, index) => {
           const options = descriptors[route.key].options;
@@ -154,6 +172,34 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.22,
     shadowRadius: 6,
+  },
+  helpButton: {
+    position: "absolute",
+    left: 16,
+    right: 86,
+    top: -18,
+    zIndex: 2,
+    minHeight: 40,
+    paddingHorizontal: 11,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 6,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: "#DCEAE7",
+    backgroundColor: "#FFFFFF",
+    elevation: 5,
+    shadowColor: "#102D36",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.14,
+    shadowRadius: 5,
+  },
+  helpButtonText: {
+    flexShrink: 1,
+    color: ACTIVE_COLOR,
+    fontSize: 11,
+    fontWeight: "700",
   },
   card: {
     height: BAR_HEIGHT,
