@@ -1,66 +1,54 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { FlatList, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { loadCollection } from "../data/firestoreContent";
 import { universities } from "../data/universities";
+import { useProfile } from "../context/ProfileContext";
 
-const GREEN = "rgba(8, 76, 70, 0.88)";
 const FILTERS = ["All", "Bursaries", "Universities", "New Content", "Announcements"];
 
-const MOCK_NOTIFICATIONS = [
-  {
-    id: "wits-closing-30-days",
-    category: "Universities",
-    eyebrow: "UNIVERSITY APPLICATION",
-    title: "Wits applications close in 30 days",
-    description: "Complete your application and upload the required documents before the deadline.",
-    time: "Today",
-    icon: "business",
-    universityId: "wits",
-  },
-  {
-    id: "nsfas-reminder",
-    category: "Bursaries",
-    eyebrow: "BURSARY",
-    title: "Remember to check your NSFAS application",
-    description: "Review your application status and make sure all supporting documents are submitted.",
-    time: "2d ago",
-    icon: "wallet",
-    routeName: "FundingDetails",
-    fundingId: "nsfas",
-  },
-  {
-    id: "new-university-guides",
-    category: "New Content",
-    eyebrow: "NEW CONTENT",
-    title: "University profiles have been updated",
-    description: "Explore campus information, representative courses and application guidance.",
-    time: "4d ago",
-    icon: "sparkles",
-    routeName: "Home",
-    screen: "Universities",
-  },
-  {
-    id: "preferences-tip",
-    category: "Announcements",
-    eyebrow: "ANNOUNCEMENT",
-    title: "Choose the alerts you want to receive",
-    description: "You can update your notification preferences at any time.",
-    time: "1w ago",
-    icon: "notifications",
-    routeName: "NotificationPreferences",
-  },
-];
+// NEW: turns the Firestore createdAt timestamp into "Today", "2d ago", "1w ago"
+function formatTimeAgo(createdAt) {
+  const date = createdAt?.toDate
+    ? createdAt.toDate()
+    : typeof createdAt?.seconds === "number"
+      ? new Date(createdAt.seconds * 1000)
+      : null;
+  if (!date) return "";
+  const days = Math.floor((Date.now() - date.getTime()) / (24 * 60 * 60 * 1000));
+  if (days < 1) return "Today";
+  if (days < 7) return `${days}d ago`;
+  return `${Math.floor(days / 7)}w ago`;
+}
 
 export default function Notifications({ navigation }) {
+  const { colors, resolvedTheme } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [activeFilter, setActiveFilter] = useState("All");
+  // CHANGED: notifications now come from the Firestore "notifications" collection
+  // (with an AsyncStorage copy for offline) instead of a hardcoded array.
+  const [notifications, setNotifications] = useState([]);
+
+  useEffect(() => {
+    let active = true;
+    loadCollection("notifications", { sortBy: "createdAt", descending: true }).then(
+      (items) => {
+        if (active) setNotifications(items);
+      },
+    );
+    return () => {
+      active = false;
+    };
+  }, []);
+
   const filteredNotifications = useMemo(
     () => activeFilter === "All"
-      ? MOCK_NOTIFICATIONS
-      : MOCK_NOTIFICATIONS.filter(({ category }) => category === activeFilter),
-    [activeFilter],
+      ? notifications
+      : notifications.filter(({ category }) => category === activeFilter),
+    [activeFilter, notifications],
   );
 
   const openNotification = (notification) => {
@@ -86,13 +74,13 @@ export default function Notifications({ navigation }) {
     <View style={styles.notificationCard}>
       <View style={styles.notificationTopRow}>
         <View style={styles.notificationIcon}>
-          <Ionicons name={item.icon} size={21} color={GREEN} />
+          <Ionicons name={item.icon} size={21} color={colors.primary} />
         </View>
         <View style={styles.titleWrap}>
           <Text style={styles.eyebrow}>{item.eyebrow}</Text>
           <Text style={styles.notificationTitle}>{item.title}</Text>
         </View>
-        <Text style={styles.time}>{item.time}</Text>
+        <Text style={styles.time}>{formatTimeAgo(item.createdAt)}</Text>
       </View>
       <Text style={styles.description}>{item.description}</Text>
       <Pressable
@@ -102,14 +90,14 @@ export default function Notifications({ navigation }) {
         style={({ pressed }) => [styles.detailsButton, pressed && styles.pressed]}
       >
         <Text style={styles.detailsButtonText}>View details</Text>
-        <Ionicons name="arrow-forward" size={16} color={GREEN} />
+        <Ionicons name="arrow-forward" size={16} color={colors.primary} />
       </Pressable>
     </View>
   );
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top", "left", "right"]}>
-      <StatusBar style="light" />
+      <StatusBar style={resolvedTheme === "dark" ? "light" : "dark"} />
       <View style={styles.header}>
         <Pressable
           onPress={() => navigation.goBack()}
@@ -164,7 +152,7 @@ export default function Notifications({ navigation }) {
         }
         ListEmptyComponent={
           <View style={styles.emptyState}>
-            <Ionicons name="notifications-off-outline" size={34} color="#6F7B8D" />
+            <Ionicons name="notifications-off-outline" size={34} color={colors.mutedText} />
             <Text style={styles.emptyTitle}>No notifications here</Text>
           </View>
         }
@@ -173,14 +161,15 @@ export default function Notifications({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: GREEN },
+function makeStyles(colors) {
+  return StyleSheet.create({
+  safeArea: { flex: 1, backgroundColor: colors.background },
   header: {
     minHeight: 70,
     paddingHorizontal: 16,
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: GREEN,
+    backgroundColor: colors.primary,
   },
   backButton: {
     width: 42,
@@ -193,7 +182,7 @@ const styles = StyleSheet.create({
   headerCopy: { flex: 1, minWidth: 0, marginLeft: 12 },
   headerTitle: { color: "#FFFFFF", fontSize: 20, fontWeight: "900" },
   headerSubtitle: { marginTop: 2, color: "rgba(255,255,255,0.90)", fontSize: 12 },
-  list: { flex: 1, backgroundColor: "#b7bbbe" },
+  list: { flex: 1, backgroundColor: colors.background },
   listContent: { paddingHorizontal: 15, paddingBottom: 38 },
   filters: { paddingTop: 10, paddingBottom: 12, gap: 8 },
   filterChip: {
@@ -201,20 +190,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderRadius: 18,
     borderWidth: 1,
-    borderColor: "#078D3B",
+    borderColor: colors.border,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: GREEN,
+    backgroundColor: colors.surface,
   },
-  filterChipSelected: { borderColor: GREEN, backgroundColor: GREEN },
-  filterText: { color: "#FFFFFF", fontSize: 13, fontWeight: "800" },
+  filterChipSelected: { borderColor: colors.primary, backgroundColor: colors.primary },
+  filterText: { color: colors.text, fontSize: 13, fontWeight: "800" },
   filterTextSelected: { color: "#FFFFFF" },
   notificationCard: {
     padding: 15,
     borderRadius: 18,
     borderWidth: 1,
-    borderColor: "#078D3B",
-    backgroundColor: GREEN,
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
   },
   notificationTopRow: { flexDirection: "row", alignItems: "flex-start" },
   notificationIcon: {
@@ -223,13 +212,13 @@ const styles = StyleSheet.create({
     borderRadius: 11,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#ffffff",
+    backgroundColor: colors.primarySoft,
   },
   titleWrap: { flex: 1, minWidth: 0, marginHorizontal: 11 },
-  eyebrow: { color: "#f3f6fa", fontSize: 9, fontWeight: "800", letterSpacing: 0.7 },
-  notificationTitle: { marginTop: 4, color: "#FFFFFF", fontSize: 15, lineHeight: 20, fontWeight: "900" },
-  time: { color: "#f6f7f8", fontSize: 10 },
-  description: { marginTop: 13, color: "#ffffff", fontSize: 13, lineHeight: 20 },
+  eyebrow: { color: colors.mutedText, fontSize: 9, fontWeight: "800", letterSpacing: 0.7 },
+  notificationTitle: { marginTop: 4, color: colors.text, fontSize: 15, lineHeight: 20, fontWeight: "900" },
+  time: { color: colors.mutedText, fontSize: 10 },
+  description: { marginTop: 13, color: colors.secondaryText, fontSize: 13, lineHeight: 20 },
   detailsButton: {
     alignSelf: "flex-end",
     minHeight: 36,
@@ -237,15 +226,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     borderRadius: 9,
     borderWidth: 1,
-    borderColor: "#078D3B",
+    borderColor: colors.border,
     flexDirection: "row",
     alignItems: "center",
     gap: 6,
-    backgroundColor: "#f5f8f7",
+    backgroundColor: colors.primarySoft,
   },
-  detailsButtonText: { color: GREEN, fontSize: 12, fontWeight: "800" },
+  detailsButtonText: { color: colors.primary, fontSize: 12, fontWeight: "800" },
   separator: { height: 11 },
   emptyState: { paddingVertical: 70, alignItems: "center" },
-  emptyTitle: { marginTop: 12, color: "#96A1B0", fontSize: 15, fontWeight: "700" },
+  emptyTitle: { marginTop: 12, color: colors.secondaryText, fontSize: 15, fontWeight: "700" },
   pressed: { opacity: 0.68 },
-});
+  });
+}

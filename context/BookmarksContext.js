@@ -1,6 +1,6 @@
 import React, {
-  createContext,
   useCallback,
+  createContext,
   useContext,
   useEffect,
   useMemo,
@@ -24,10 +24,26 @@ export function BookmarksProvider({ children }) {
   const [bookmarkedCourseIds, setBookmarkedCourseIds] = useState([]);
   const [bookmarkedFundingIds, setBookmarkedFundingIds] = useState([]);
   const [bookmarkedFunding, setBookmarkedFunding] = useState([]);
+  const bookmarkedFundingIdsRef = useRef(bookmarkedFundingIds);
+  bookmarkedFundingIdsRef.current = bookmarkedFundingIds;
   const [loadedScope, setLoadedScope] = useState(null);
   const [cloudReadyUid, setCloudReadyUid] = useState(null);
   const userId = firebaseUser?.uid ?? null;
   const storageScope = userId ?? "guest";
+
+  const updateFundingBookmarkDetails = useCallback((items) => {
+    if (!Array.isArray(items) || items.length === 0) return;
+    setBookmarkedFunding((current) => {
+      const savedIds = new Set(bookmarkedFundingIdsRef.current);
+      if (savedIds.size === 0) return current;
+      const byId = new Map(current.map((item) => [String(item.id), item]));
+      items.forEach((item) => {
+        const id = String(item.id);
+        if (savedIds.has(id)) byId.set(id, { ...byId.get(id), ...item, id });
+      });
+      return [...byId.values()].filter((item) => savedIds.has(String(item.id)));
+    });
+  }, []);
 
   // Load this account's local cache before merging in its cloud copy.
   useEffect(() => {
@@ -126,6 +142,7 @@ export function BookmarksProvider({ children }) {
     });
   }, [bookmarkedFunding, loadedScope, storageScope]);
 
+  // Pushes all three bookmark lists to the user's Firestore document.
   useEffect(() => {
     if (!userId || cloudReadyUid !== userId || loadedScope !== storageScope) return;
     setDoc(
@@ -137,49 +154,9 @@ export function BookmarksProvider({ children }) {
     });
   }, [bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds, cloudReadyUid, loadedScope, storageScope, userId]);
 
-  useEffect(() => {
-    let active = true;
-    const loadBookmarks = async () => {
-      if (!firebaseUser) {
-        setBookmarkedIds([]);
-        setBookmarkedCourseIds([]);
-        return;
-      }
-
-      const snapshot = await getDoc(doc(db, "users", firebaseUser.uid));
-      if (!active) return;
-      const data = snapshot.exists() ? snapshot.data() : {};
-      setBookmarkedIds(Array.isArray(data.bookmarkedIds) ? data.bookmarkedIds : []);
-      setBookmarkedCourseIds(
-        Array.isArray(data.bookmarkedCourseIds) ? data.bookmarkedCourseIds : [],
-      );
-    };
-
-    loadBookmarks().catch(() => {
-      if (active) {
-        setBookmarkedIds([]);
-        setBookmarkedCourseIds([]);
-      }
-    });
-    return () => {
-      active = false;
-    };
-  }, [firebaseUser]);
-
-  const persistBookmarks = useCallback(
-    async (nextBookmarks, nextCourseBookmarks) => {
-      if (!firebaseUser) return;
-      await setDoc(
-        doc(db, "users", firebaseUser.uid),
-        {
-          bookmarkedIds: nextBookmarks,
-          bookmarkedCourseIds: nextCourseBookmarks,
-        },
-        { merge: true },
-      );
-    },
-    [firebaseUser],
-  );
+  // REMOVED: the second "loadBookmarks" effect and "persistBookmarks".
+  // They read/wrote a different Firestore field ("bookmarkedIds"), emptied the lists
+  // for guests, and fought with the sync above. The effects above already do the job.
 
   const value = useMemo(
     () => ({
@@ -189,24 +166,18 @@ export function BookmarksProvider({ children }) {
         setBookmarkedIds((current) => {
           if (current.includes(universityId)) return current;
           if (isGuest && current.length >= 3) return current;
-          const next = [...current, universityId];
-          persistBookmarks(next, bookmarkedCourseIds).catch(() => {});
-          return next;
+          return [...current, universityId];
         }),
       removeBookmark: (universityId) =>
-        setBookmarkedIds((current) => {
-          const next = current.filter((id) => id !== universityId);
-          persistBookmarks(next, bookmarkedCourseIds).catch(() => {});
-          return next;
-        }),
+        setBookmarkedIds((current) =>
+          current.filter((id) => id !== universityId),
+        ),
       bookmarkedCourseIds,
       isCourseBookmarked: (courseId) => bookmarkedCourseIds.includes(courseId),
       addCourseBookmark: (courseId) =>
         setBookmarkedCourseIds((current) => {
           if (current.includes(courseId)) return current;
-          const next = [...current, courseId];
-          persistBookmarks(bookmarkedIds, next).catch(() => {});
-          return next;
+          return [...current, courseId];
         }),
       removeCourseBookmark: (courseId) =>
         setBookmarkedCourseIds((current) =>
@@ -234,21 +205,10 @@ export function BookmarksProvider({ children }) {
           setBookmarkedFundingIds((current) => current.filter((itemId) => itemId !== id));
           setBookmarkedFunding((current) => current.filter((item) => String(item.id) !== id));
         })(),
-      updateFundingBookmarkDetails: (items) => {
-        if (!Array.isArray(items) || items.length === 0) return;
-        setBookmarkedFunding((current) => {
-          const savedIds = new Set(bookmarkedFundingIds);
-          const byId = new Map(current.map((item) => [String(item.id), item]));
-          items.forEach((item) => {
-            const id = String(item.id);
-            if (savedIds.has(id)) byId.set(id, { ...byId.get(id), ...item, id });
-          });
-          return [...byId.values()].filter((item) => savedIds.has(String(item.id)));
-        });
-      },
+      updateFundingBookmarkDetails,
       bookmarkedFunding,
     }),
-    [bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds, bookmarkedFunding, isGuest],
+    [bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds, bookmarkedFunding, isGuest, updateFundingBookmarkDetails],
   );
 
   return (

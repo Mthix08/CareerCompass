@@ -17,24 +17,15 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { courseExamples } from "../data/courseExamples";
 import { universities } from "../data/universities";
-
-const COLORS = {
-  primary: "#117C72",
-  primaryDark: "#0B665E",
-  primarySoft: "#E7F3F1",
-  background: "#F6F8FC",
-  surface: "#FFFFFF",
-  text: "#172033",
-  secondary: "#667085",
-  muted: "#98A2B3",
-  border: "#DDE4ED",
-  input: "#F8FAFC",
-};
+import { useProfile } from "../context/ProfileContext";
 
 const QUALIFICATION_TYPES = ["Bachelor's Degree", "Diploma", "Higher Certificate"];
 const EMPTY_FILTERS = { minimumAps: "", maximumAps: "", type: null, universityId: null };
 
 function CourseCard({ course, onPress }) {
+  const { colors } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   return (
     <Pressable
       onPress={onPress}
@@ -61,6 +52,9 @@ function CourseCard({ course, onPress }) {
 }
 
 function FilterSheet({ visible, filters, onApply, onClose }) {
+  const { colors } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const [draft, setDraft] = useState(filters);
 
   useEffect(() => {
@@ -173,6 +167,9 @@ function FilterSheet({ visible, filters, onApply, onClose }) {
 }
 
 export default function CoursesScreen({ navigation, route }) {
+  const { colors, resolvedTheme } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const [query, setQuery] = useState("");
   const [filters, setFilters] = useState(EMPTY_FILTERS);
   const [filterVisible, setFilterVisible] = useState(false);
@@ -199,7 +196,7 @@ export default function CoursesScreen({ navigation, route }) {
         || (filters.type === "Diploma" && /diploma/i.test(course.qualificationType))
         || course.qualificationType === filters.type;
       const matchesUniversity = !filters.universityId || course.universityId === filters.universityId;
-      const universityScore = apsByUniversity[course.universityId]?.score;
+      const universityScore = apsByUniversity[course.universityId]?.score ?? route.params?.apsScore;
       const matchesAps = !matchedOnly || (
         typeof universityScore === "number"
         && typeof course.minimumAps === "number"
@@ -207,13 +204,13 @@ export default function CoursesScreen({ navigation, route }) {
       );
       return matchesSearch && matchesMinimum && matchesMaximum && matchesType && matchesUniversity && matchesAps;
     });
-  }, [filters, matchedOnly, query, route.params?.apsByUniversity]);
+   }, [filters, matchedOnly, query, route.params?.apsByUniversity, route.params?.apsScore]);
 
   const activeFilterCount = [filters.minimumAps, filters.maximumAps, filters.type, filters.universityId].filter(Boolean).length;
 
   return (
     <SafeAreaView style={styles.container} edges={["top", "left", "right"]}>
-      <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />
+      <StatusBar barStyle={resolvedTheme === "dark" ? "light-content" : "dark-content"} backgroundColor={COLORS.primary} />
       <View style={styles.header}>
         <Text style={styles.title}>{matchedOnly ? "Matching Courses" : "Courses"}</Text>
         <Text style={styles.subtitle}>{matchedOnly ? `Based on your saved APS ${route.params?.apsScore ?? ""}` : "See which courses may fit your study goals"}</Text>
@@ -272,23 +269,32 @@ export default function CoursesScreen({ navigation, route }) {
   );
 }
 
-const styles = StyleSheet.create({
+function getThemeColors(colors) {
+  return {
+    ...colors,
+    secondary: colors.secondaryText,
+    muted: colors.mutedText,
+  };
+}
+
+function makeStyles(COLORS) {
+  return StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
   header: { paddingHorizontal: 22, paddingTop: 20, paddingBottom: 20, backgroundColor: COLORS.primary },
-  title: { color: "#FFFFFF", fontSize: 29, fontWeight: "900" },
-  subtitle: { marginTop: 5, color: "#D8F3EF", fontSize: 14, fontWeight: "600" },
+  title: { color: COLORS.onPrimary, fontSize: 29, fontWeight: "900" },
+  subtitle: { marginTop: 5, color: COLORS.onPrimary, fontSize: 14, fontWeight: "600" },
   countBadge: { alignSelf: "flex-start", marginTop: 15, paddingHorizontal: 12, paddingVertical: 7, borderRadius: 999, backgroundColor: "rgba(255,255,255,0.17)" },
-  countBadgeText: { color: "#FFFFFF", fontSize: 12, fontWeight: "800" },
+  countBadgeText: { color: COLORS.onPrimary, fontSize: 12, fontWeight: "800" },
   matchedResetButton: { alignSelf: "flex-start", marginTop: 8, paddingVertical: 5 },
-  matchedResetText: { color: "#FFFFFF", fontSize: 12, fontWeight: "800", textDecorationLine: "underline" },
+  matchedResetText: { color: COLORS.onPrimary, fontSize: 12, fontWeight: "800", textDecorationLine: "underline" },
   searchRow: { padding: 18, paddingBottom: 12, flexDirection: "row", gap: 10 },
   searchShell: { flex: 1, minHeight: 52, paddingHorizontal: 14, borderRadius: 15, borderWidth: 1, borderColor: COLORS.border, flexDirection: "row", alignItems: "center", backgroundColor: COLORS.surface },
   searchInput: { flex: 1, minHeight: 50, marginLeft: 9, color: COLORS.text, fontSize: 14 },
   filterButton: { minHeight: 52, paddingHorizontal: 13, borderRadius: 15, borderWidth: 1, borderColor: COLORS.border, flexDirection: "row", alignItems: "center", backgroundColor: COLORS.surface },
   filterButtonActive: { borderColor: COLORS.primary, backgroundColor: COLORS.primary },
   filterButtonText: { marginLeft: 6, color: COLORS.primary, fontSize: 13, fontWeight: "800" },
-  filterButtonTextActive: { color: "#FFFFFF" },
-  filterCount: { minWidth: 18, height: 18, marginLeft: 5, paddingHorizontal: 4, borderRadius: 9, alignItems: "center", justifyContent: "center", backgroundColor: "#FFFFFF" },
+  filterButtonTextActive: { color: COLORS.onPrimary },
+  filterCount: { minWidth: 18, height: 18, marginLeft: 5, paddingHorizontal: 4, borderRadius: 9, alignItems: "center", justifyContent: "center", backgroundColor: COLORS.surface },
   filterCountText: { color: COLORS.primary, fontSize: 10, fontWeight: "900" },
   listContent: { paddingHorizontal: 18, paddingBottom: 110 },
   resultText: { marginBottom: 10, color: COLORS.secondary, fontSize: 12, fontWeight: "700" },
@@ -310,7 +316,7 @@ const styles = StyleSheet.create({
   modalRoot: { flex: 1, justifyContent: "flex-end" },
   backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(15,23,42,0.48)" },
   sheet: { height: "88%", overflow: "hidden", borderTopLeftRadius: 28, borderTopRightRadius: 28, backgroundColor: COLORS.surface },
-  sheetHandle: { width: 42, height: 4, marginTop: 10, alignSelf: "center", borderRadius: 2, backgroundColor: "#CBD5E1" },
+  sheetHandle: { width: 42, height: 4, marginTop: 10, alignSelf: "center", borderRadius: 2, backgroundColor: COLORS.border },
   sheetHeader: { minHeight: 58, paddingHorizontal: 22, borderBottomWidth: 1, borderBottomColor: COLORS.border, flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
   sheetTitle: { color: COLORS.text, fontSize: 19, fontWeight: "900" },
   filterContent: { padding: 22, paddingBottom: 28 },
@@ -333,5 +339,6 @@ const styles = StyleSheet.create({
   clearButton: { flex: 0.65, minHeight: 52, borderRadius: 26, borderWidth: 1, borderColor: COLORS.primary, alignItems: "center", justifyContent: "center" },
   clearButtonText: { color: COLORS.primary, fontSize: 14, fontWeight: "800" },
   resultsButton: { flex: 1.35, minHeight: 52, borderRadius: 26, alignItems: "center", justifyContent: "center", backgroundColor: COLORS.primary },
-  resultsButtonText: { color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
-});
+  resultsButtonText: { color: COLORS.onPrimary, fontSize: 14, fontWeight: "800" },
+  });
+}

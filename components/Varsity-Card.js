@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Image,
@@ -8,6 +8,7 @@ import {
   View,
 } from "react-native";
 import { getUniversityTheme } from "../data/universityTheme";
+import { useProfile } from "../context/ProfileContext";
 
 export default function UniversityCard({
   university,
@@ -15,6 +16,8 @@ export default function UniversityCard({
   bookmarked = false,
   onBookmarkPress,
 }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const isFree = university.applicationFee === 0;
   const universityTheme = getUniversityTheme(university);
   const feeValue = isFree
@@ -75,7 +78,7 @@ export default function UniversityCard({
             {university.name}
           </Text>
           <View style={styles.locationRow}>
-            <Ionicons name="location-outline" size={16} color="#9CA6B5" />
+            <Ionicons name="location-outline" size={16} color={colors.mutedText} />
             <Text style={styles.province}>{university.province}</Text>
           </View>
           <View style={styles.feeRow}>
@@ -108,7 +111,7 @@ export default function UniversityCard({
           <Ionicons
             name={bookmarked ? "bookmark" : "bookmark-outline"}
             size={24}
-            color={bookmarked ? universityTheme.accent : "#FFFFFF"}
+            color={bookmarked ? universityTheme.accent : colors.primary}
           />
         </Pressable>
       </View>
@@ -116,17 +119,18 @@ export default function UniversityCard({
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(colors) {
+  return StyleSheet.create({
   card: {
     width: "100%",
     height: 384,
     overflow: "hidden",
     borderRadius: 22,
-    backgroundColor: "#0D1117",
+    backgroundColor: colors.surface,
     borderWidth: 1,
-    borderColor: "#202733",
+    borderColor: colors.border,
     elevation: 8,
-    shadowColor: "#000000",
+    shadowColor: colors.text,
     shadowOffset: { width: 0, height: 7 },
     shadowOpacity: 0.32,
     shadowRadius: 12,
@@ -155,27 +159,28 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#FFFFFF",
+    backgroundColor: colors.surface,
     borderWidth: 1.5,
   },
   logo: { width: 48, height: 48 },
   logoText: { fontSize: 20, fontWeight: "900" },
   details: { flex: 1, minWidth: 0, marginHorizontal: 14 },
-  name: { minHeight: 48, color: "#FFFFFF", fontSize: 19, fontWeight: "800", lineHeight: 24 },
+  name: { minHeight: 48, color: colors.text, fontSize: 19, fontWeight: "800", lineHeight: 24 },
   locationRow: { flexDirection: "row", alignItems: "center", marginTop: 7 },
-  province: { marginLeft: 4, color: "#9CA6B5", fontSize: 14 },
+  province: { marginLeft: 4, color: colors.mutedText, fontSize: 14 },
   feeRow: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", marginTop: 12, gap: 7 },
-  feeLabel: { color: "#9CA6B5", fontSize: 12 },
-  feeValue: { flexShrink: 1, color: "#FFFFFF", fontSize: 13, fontWeight: "700" },
+  feeLabel: { color: colors.secondaryText, fontSize: 12 },
+  feeValue: { flexShrink: 1, color: colors.text, fontSize: 13, fontWeight: "700" },
   freeBadge: { borderRadius: 999, paddingHorizontal: 9, paddingVertical: 5, backgroundColor: "rgba(0, 200, 83, 0.16)" },
-  freeBadgeText: { color: "#58E58F", fontSize: 11, fontWeight: "800" },
+  freeBadgeText: { color: colors.primary, fontSize: 11, fontWeight: "800" },
   bookmarkButton: {
     width: 44,
     height: 44,
     borderRadius: 14,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#151A22",
+    backgroundColor: colors.elevatedSurface,
   },
   iconPressed: { opacity: 0.65 },
-});
+  });
+}

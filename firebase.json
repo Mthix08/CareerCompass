@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "site": "careercompass-admin",
+    "public": "admin",
+    "ignore": ["firebase.json", "**/.*"]
+  }
+}
