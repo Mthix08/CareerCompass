@@ -12,6 +12,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useScreenLifecycle } from "../utils/lifecycleLogger";
 
 import {
   APSScoreRow,
@@ -30,6 +31,7 @@ const NSFAS_IMAGE = require("../assets/nsfas.jpg");
 const HORIZONTAL_GAP = 14;
 
 export default function HomeScreen({ navigation }) {
+  useScreenLifecycle("Home");
   const { profile, colors, resolvedTheme } = useProfile();
   const { width: screenWidth } = useWindowDimensions();
   const headerAccent = resolvedTheme === "dark" ? "#0D6F67" : colors.primary;

@@ -289,7 +289,7 @@ const subjects = [
 // ---------------------------------------------------------------- colleges
 // Two EXAMPLE colleges so the structure works. Replace them with real data from the admin site
 // (delete the examples there once you have real ones). Fields match what the university screens already read.
-const colleges = [
+const exampleColleges = [
   {
     id: "example-private-college",
     order: 1,
@@ -313,6 +313,15 @@ const colleges = [
     closingDate: "30 November 2026",
     applicationInstructions: "Example instructions. Replace with the real steps to apply.",
     applicationUrl: "https://example.org/apply",
+    // EXAMPLE figures only. Replace with the real costs from the college's official fee page.
+    costs: {
+      year: 2026,
+      registrationFee: 5000,
+      tuitionPerYear: 25000,
+      accommodationPerYear: 30000,
+      nsfasFunding: "Not covered (example)",
+      sourceUrl: "https://example.org/fees",
+    },
   },
   {
     id: "example-tvet-college",
@@ -337,8 +346,38 @@ const colleges = [
     closingDate: "31 January 2027",
     applicationInstructions: "Example instructions. Replace with the real steps to apply.",
     applicationUrl: "https://example.org/apply",
+    // EXAMPLE figures only. Replace with the real costs from the college's official fee page.
+    costs: {
+      year: 2026,
+      registrationFee: 1000,
+      tuitionPerYear: 12000,
+      accommodationPerYear: 20000,
+      nsfasFunding: "NSFAS may fund eligible students (example)",
+      sourceUrl: "https://example.org/fees",
+    },
   },
 ];
+
+// Real colleges come from data/colleges.json (the file the app was built with).
+// If that file is missing or empty, the two example colleges above are used instead.
+let colleges = exampleColleges;
+let usingRealColleges = false;
+try {
+  const file = require("../data/colleges.json");
+  const list = Array.isArray(file) ? file : file.colleges || [];
+  const slug = (text) => String(text).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  if (list.length) {
+    colleges = list.map((college, index) => ({
+      ...college,
+      id: college.id ? String(college.id) : slug(college.name || `college-${index + 1}`),
+      type: college.type ?? "Public TVET College",
+      order: college.order ?? index + 1,
+    }));
+    usingRealColleges = true;
+  }
+} catch (error) {
+  console.warn("data/colleges.json was not found or could not be read. Using the example colleges.");
+}
 
 // ---------------------------------------------------------------- applicationDeadlines
 // Moved here from data/homeMockData.js (MOCK_APPLICATION_DEADLINES).
@@ -367,6 +406,11 @@ async function main() {
   await seedCollection("bursaries", bursaries);
   await seedCollection("subjects", subjects);
   await seedCollection("colleges", colleges);
+  if (usingRealColleges) {
+    // remove the two example documents created earlier
+    await Promise.all(exampleColleges.map(({ id }) => db.collection("colleges").doc(id).delete()));
+    console.log("Removed the example colleges.");
+  }
   await seedCollection("applicationDeadlines", applicationDeadlines);
   // universities, courses and applicationDeadlines get added here next.
   console.log("Done.");
@@ -376,3 +420,4 @@ main().catch((error) => {
   console.error("Seeding failed:", error);
   process.exit(1);
 });
+``

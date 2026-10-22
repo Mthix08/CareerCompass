@@ -30,6 +30,7 @@ import { useProfile } from "./context/ProfileContext";
 import { BookmarksProvider } from "./context/BookmarksContext";
 import './translation/i18n';
 import CollegeDetailsScreen from "./screens/CollegeDetailsScreen";
+import { useAppLifecycleLogger } from "./utils/lifecycleLogger";
 const Stack = createNativeStackNavigator();
 
 function AppNavigator() {
@@ -179,6 +180,7 @@ function AppNavigator() {
 }
 
 export default function App() {
+  useAppLifecycleLogger();
   return (
     <ProfileProvider>
       <BookmarksProvider>
