@@ -19,19 +19,12 @@ import { useProfile } from "../context/ProfileContext";
 import { loadCollection } from "../data/firestoreContent";
 import { getApsUniversityMatches } from "../data/apsMatching";
 
-const COLORS = {
-  primary: "#117C72",
-  primaryDark: "#0B665E",
-  primarySoft: "#E7F3F1",
-  background: "#F6F8FC",
-  surface: "#FFFFFF",
-  text: "#172033",
-  secondary: "#667085",
-  muted: "#98A2B3",
-  border: "#DDE4ED",
-  input: "#F8FAFC",
-  danger: "#D64545",
-};
+const getThemeColors = (colors, resolvedTheme) => ({
+  ...colors,
+  primaryDark: resolvedTheme === "dark" ? "#46C8BB" : "#0B665E",
+  secondary: colors.secondaryText,
+  muted: colors.mutedText,
+});
 
 const PERIODS = [
   "Grade 11 Final",
@@ -57,6 +50,9 @@ function getAchievementLevel(mark) {
 }
 
 function SubjectPicker({ visible, groups, selectedSubjects, onSelect, onClose }) {
+  const { colors, resolvedTheme } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors, resolvedTheme), [colors, resolvedTheme]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const [query, setQuery] = useState("");
   const filteredGroups = useMemo(() => {
     const search = query.trim().toLowerCase();
@@ -152,6 +148,9 @@ function SubjectPicker({ visible, groups, selectedSubjects, onSelect, onClose })
 }
 
 function MarkRow({ item, onMarkChange, onRemove }) {
+  const { colors, resolvedTheme } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors, resolvedTheme), [colors, resolvedTheme]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const level = getAchievementLevel(item.mark);
 
   const handleChange = (value) => {
@@ -200,6 +199,9 @@ function MarkRow({ item, onMarkChange, onRemove }) {
 }
 
 function ApsResultModal({ result, onClose, onViewMatches }) {
+  const { colors, resolvedTheme } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors, resolvedTheme), [colors, resolvedTheme]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   return (
     <Modal
       visible={Boolean(result)}
@@ -225,6 +227,13 @@ function ApsResultModal({ result, onClose, onViewMatches }) {
           <Text style={styles.resultDescription}>
             {result?.matchedUniversities} {result?.matchedUniversities === 1 ? "university" : "universities"} have courses that meet your calculated APS.
           </Text>
+          {result?.collegeCount > 0 && (
+            <Text style={styles.resultDescription}>
+              {result.collegesUseAps
+                ? `${result.matchedColleges} ${result.matchedColleges === 1 ? "college meets" : "colleges meet"} your calculated APS.`
+                : `${result.collegeCount} public TVET colleges also offer programmes. TVET colleges usually admit based on your grade and subject results rather than an APS, so check each college's entry requirements.`}
+            </Text>
+          )}
           <View style={styles.resultNotice}>
             <Ionicons
               name="information-circle-outline"
@@ -271,7 +280,9 @@ const getSavedPeriodsFromProfile = (apsRecords = {}) => {
 };
 
 export default function ApsCalculatorScreen({ navigation }) {
-  const { profile, saveApsRecord } = useProfile();
+  const { profile, saveApsRecord, colors, resolvedTheme } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors, resolvedTheme), [colors, resolvedTheme]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const [selectedPeriod, setSelectedPeriod] = useState(PERIODS[0]);
   const [marksByPeriod, setMarksByPeriod] = useState({});
   const [editedPeriods, setEditedPeriods] = useState([]);
@@ -280,6 +291,8 @@ export default function ApsCalculatorScreen({ navigation }) {
   const [isSaving, setIsSaving] = useState(false);
   // NEW: subject groups come from the Firestore "subjects" collection (cached for offline)
   const [subjectGroups, setSubjectGroups] = useState([]);
+  // NEW: colleges (Firestore) so the result popup can mention them too
+  const [colleges, setColleges] = useState([]);
   const currentMarks =
     marksByPeriod[selectedPeriod] ??
     profile.apsRecords?.[selectedPeriod]?.marks ??
@@ -289,6 +302,16 @@ export default function ApsCalculatorScreen({ navigation }) {
     let active = true;
     loadCollection("subjects", { sortBy: "order" }).then((items) => {
       if (active) setSubjectGroups(items);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    let active = true;
+    loadCollection("colleges").then((items) => {
+      if (active) setColleges(items);
     });
     return () => {
       active = false;
@@ -386,9 +409,13 @@ export default function ApsCalculatorScreen({ navigation }) {
         current.filter((period) => period !== selectedPeriod),
       );
       // CHANGED: the popup needs the number of matching universities (it showed "undefined" before)
+      const collegesWithAps = colleges.filter((college) => typeof college.minimumAps === "number");
       setApsResult({
         ...result,
         matchedUniversities: getApsUniversityMatches(totalAps).length,
+        collegeCount: colleges.length,
+        collegesUseAps: collegesWithAps.length > 0,
+        matchedColleges: collegesWithAps.filter((college) => college.minimumAps <= totalAps).length,
       });
     } catch (error) {
       Alert.alert(
@@ -406,7 +433,7 @@ export default function ApsCalculatorScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />
+      <StatusBar barStyle={resolvedTheme === "dark" ? "light-content" : "dark-content"} backgroundColor={COLORS.primary} />
       <View style={styles.header}>
         <Pressable
           onPress={() => navigation.goBack()}
@@ -415,7 +442,7 @@ export default function ApsCalculatorScreen({ navigation }) {
           hitSlop={8}
           style={({ pressed }) => pressed && styles.pressed}
         >
-          <Ionicons name="arrow-back" size={25} color="#FFFFFF" />
+          <Ionicons name="arrow-back" size={25} color={COLORS.onPrimary} />
         </Pressable>
         <Text style={styles.title}>My Marks</Text>
         <Text style={styles.subtitle}>
@@ -499,7 +526,7 @@ export default function ApsCalculatorScreen({ navigation }) {
           <Ionicons
             name={isSaved ? "checkmark-circle-outline" : "save-outline"}
             size={20}
-            color="#FFFFFF"
+            color={COLORS.onPrimary}
           />
           <Text style={styles.saveButtonText}>
             {isSaving ? "Saving" : isSaved ? "Update" : "Save"} {selectedPeriod} marks
@@ -534,7 +561,8 @@ export default function ApsCalculatorScreen({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(COLORS) {
+ return StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
   header: {
     paddingHorizontal: 22,
@@ -544,7 +572,7 @@ const styles = StyleSheet.create({
   },
   title: {
     marginTop: 10,
-    color: "#FFFFFF",
+    color: COLORS.onPrimary,
     fontSize: 28,
     lineHeight: 34,
     fontWeight: "900",
@@ -579,7 +607,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primary,
   },
   periodChipText: { color: COLORS.secondary, fontSize: 12, fontWeight: "700" },
-  periodChipTextSelected: { color: "#FFFFFF" },
+  periodChipTextSelected: { color: COLORS.onPrimary },
   marksList: { flexGrow: 1, paddingHorizontal: 22, paddingBottom: 22 },
   rowSeparator: { height: 10 },
   markRow: {
@@ -621,7 +649,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: COLORS.input,
   },
-   markInput: {
+  markInput: {
     flex: 1,
     minWidth: 0,
     minHeight: 40,
@@ -667,7 +695,7 @@ const styles = StyleSheet.create({
   },
   saveButtonText: {
     marginLeft: 8,
-    color: "#FFFFFF",
+    color: COLORS.onPrimary,
     fontSize: 14,
     fontWeight: "800",
   },
@@ -832,5 +860,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: COLORS.primary,
   },
-  resultButtonText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
-});
+  resultButtonText: { color: COLORS.onPrimary, fontSize: 15, fontWeight: "800" },
+ });
+}

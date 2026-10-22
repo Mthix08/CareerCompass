@@ -14,10 +14,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import UniversityCard from "../components/Varsity-Card";
 import CollegeCard from "../components/CollegeCard";
 import { useBookmarks } from "../context/BookmarksContext";
+import { useProfile } from "../context/ProfileContext";
 import { loadCollection } from "../data/firestoreContent";
 import { universities } from "../data/universities";
 
 export default function UniversitiesScreen({ navigation }) {
+  const { colors, resolvedTheme } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const { addBookmark, isBookmarked, removeBookmark } = useBookmarks();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProvince, setSelectedProvince] = useState(null);
@@ -102,7 +105,7 @@ export default function UniversitiesScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar style="light" />
+      <StatusBar style={resolvedTheme === "dark" ? "light" : "dark"} />
       <FlatList
         data={listData}
         keyExtractor={(item) => item.id}
@@ -112,7 +115,7 @@ export default function UniversitiesScreen({ navigation }) {
         keyboardShouldPersistTaps="handled"
         ListEmptyComponent={
           <View style={styles.emptyState}>
-            <Ionicons name="search-outline" size={34} color="#117C72" />
+            <Ionicons name="search-outline" size={34} color={colors.primary} />
             <Text style={styles.emptyTitle}>
               {showingColleges ? "No colleges found" : "No universities found"}
             </Text>
@@ -150,12 +153,12 @@ export default function UniversitiesScreen({ navigation }) {
 
             <View style={styles.searchRow}>
               <View style={styles.searchBox}>
-                <Ionicons name="search-outline" size={20} color="#7B8798" />
+                <Ionicons name="search-outline" size={20} color={colors.mutedText} />
                 <TextInput
                   value={searchQuery}
                   onChangeText={setSearchQuery}
                   placeholder={showingColleges ? "Search colleges" : "Search universities"}
-                  placeholderTextColor="#9CA6B5"
+                  placeholderTextColor={colors.mutedText}
                   autoCapitalize="none"
                   autoCorrect={false}
                   returnKeyType="search"
@@ -169,7 +172,7 @@ export default function UniversitiesScreen({ navigation }) {
                     accessibilityLabel="Clear search"
                     hitSlop={8}
                   >
-                    <Ionicons name="close-circle" size={20} color="#9CA6B5" />
+                    <Ionicons name="close-circle" size={20} color={colors.mutedText} />
                   </Pressable>
                 )}
               </View>
@@ -188,7 +191,7 @@ export default function UniversitiesScreen({ navigation }) {
                 <Ionicons
                   name="options-outline"
                   size={22}
-                  color={hasActiveFilters ? "#FFFFFF" : "#117C72"}
+                  color={hasActiveFilters ? colors.onPrimary : colors.primary}
                 />
                 {hasActiveFilters && <View style={styles.filterIndicator} />}
               </Pressable>
@@ -238,7 +241,7 @@ export default function UniversitiesScreen({ navigation }) {
                   <Ionicons
                     name={freeToApplyOnly ? "checkbox" : "square-outline"}
                     size={24}
-                    color="#117C72"
+                    color={colors.primary}
                   />
                   <Text style={styles.freeFilterText}>Free to apply only</Text>
                 </Pressable>
@@ -272,10 +275,11 @@ export default function UniversitiesScreen({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(colors) {
+return StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F6F8FC",
+    backgroundColor: colors.background,
   },
   listContent: {
     paddingHorizontal: 20,
@@ -287,21 +291,21 @@ const styles = StyleSheet.create({
   },
   separator: { height: 20 },
   eyebrow: {
-    color: "#117C72",
+    color: colors.primary,
     fontSize: 11,
     fontWeight: "800",
     letterSpacing: 1.5,
   },
   title: {
     marginTop: 7,
-    color: "#117C72",
+    color: colors.text,
     fontSize: 31,
     fontWeight: "900",
   },
   subtitle: {
     maxWidth: 420,
     marginTop: 8,
-    color: "#9CA6B5",
+    color: colors.secondaryText,
     fontSize: 15,
     lineHeight: 22,
   },
@@ -310,7 +314,7 @@ const styles = StyleSheet.create({
     padding: 4,
     borderRadius: 16,
     flexDirection: "row",
-    backgroundColor: "#E8EDF3",
+    backgroundColor: colors.input,
   },
   segmentItem: {
     flex: 1,
@@ -319,9 +323,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  segmentItemActive: { backgroundColor: "#FFFFFF" },
-  segmentText: { color: "#667085", fontSize: 14, fontWeight: "700" },
-  segmentTextActive: { color: "#117C72", fontWeight: "900" },
+  segmentItemActive: { backgroundColor: colors.surface },
+  segmentText: { color: colors.secondaryText, fontSize: 14, fontWeight: "700" },
+  segmentTextActive: { color: colors.primary, fontWeight: "900" },
   searchRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -336,14 +340,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: "#DDE3EC",
-    backgroundColor: "#FFFFFF",
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
   },
   searchInput: {
     flex: 1,
     height: "100%",
     marginHorizontal: 10,
-    color: "#172033",
+    color: colors.text,
     fontSize: 15,
   },
   filterButton: {
@@ -353,10 +357,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: "#B7D7D3",
-    backgroundColor: "#FFFFFF",
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
   },
-  filterButtonActive: { backgroundColor: "#117C72", borderColor: "#117C72" },
+  filterButtonActive: { backgroundColor: colors.primary, borderColor: colors.primary },
   filterIndicator: {
     position: "absolute",
     top: 9,
@@ -364,7 +368,7 @@ const styles = StyleSheet.create({
     width: 7,
     height: 7,
     borderRadius: 4,
-    backgroundColor: "#58E58F",
+    backgroundColor: colors.primary,
   },
   buttonPressed: { opacity: 0.72 },
   filterPanel: {
@@ -372,16 +376,16 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 18,
     borderWidth: 1,
-    borderColor: "#DDE3EC",
-    backgroundColor: "#FFFFFF",
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
   },
   filterHeadingRow: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
   },
-  filterHeading: { color: "#172033", fontSize: 14, fontWeight: "800" },
-  clearFilters: { color: "#117C72", fontSize: 13, fontWeight: "700" },
+  filterHeading: { color: colors.text, fontSize: 14, fontWeight: "800" },
+  clearFilters: { color: colors.primary, fontSize: 13, fontWeight: "700" },
   chipContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
@@ -393,22 +397,22 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     borderRadius: 999,
     borderWidth: 1,
-    borderColor: "#DDE3EC",
-    backgroundColor: "#F6F8FC",
+    borderColor: colors.border,
+    backgroundColor: colors.background,
   },
-  chipSelected: { borderColor: "#117C72", backgroundColor: "#E5F3F1" },
-  chipText: { color: "#667085", fontSize: 12, fontWeight: "600" },
-  chipTextSelected: { color: "#117C72", fontWeight: "800" },
+  chipSelected: { borderColor: colors.primary, backgroundColor: colors.primarySoft },
+  chipText: { color: colors.secondaryText, fontSize: 12, fontWeight: "600" },
+  chipTextSelected: { color: colors.primary, fontWeight: "800" },
   freeFilterRow: { flexDirection: "row", alignItems: "center", marginTop: 17 },
   freeFilterText: {
     marginLeft: 9,
-    color: "#172033",
+    color: colors.text,
     fontSize: 14,
     fontWeight: "700",
   },
   resultCount: {
     marginTop: 14,
-    color: "#7B8798",
+    color: colors.mutedText,
     fontSize: 13,
     fontWeight: "600",
   },
@@ -419,14 +423,15 @@ const styles = StyleSheet.create({
   },
   emptyTitle: {
     marginTop: 12,
-    color: "#172033",
+    color: colors.text,
     fontSize: 18,
     fontWeight: "800",
   },
   emptyText: {
     marginTop: 6,
-    color: "#7B8798",
+    color: colors.mutedText,
     fontSize: 14,
     textAlign: "center",
   },
 });
+}

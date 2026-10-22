@@ -18,6 +18,9 @@ import { auth, db, storage } from "../screens/firebaseConfig";
 const ProfileContext = createContext(null);
 const THEME_STORAGE_KEY = "@careercompass:themePreference";
 const THEME_PREFERENCES = ["Light", "Dark", "System"];
+// NEW: offline copy of the signed-in profile, and APS marks saved by guests
+const PROFILE_CACHE_KEY = "@careercompass:profileCache:";
+const GUEST_APS_KEY = "@careercompass:apsRecords:guest";
 
 function normalizeThemePreference(value) {
   return THEME_PREFERENCES.includes(value) ? value : "Light";
@@ -79,6 +82,8 @@ export function ProfileProvider({ children }) {
   const [themePreference, setThemePreferenceState] = useState("Light");
   const themePreferenceChangedRef = useRef(false);
   const [successMessage, setSuccessMessage] = useState("");
+  // NEW: uid whose profile is really loaded, so the "Guest" defaults are never cached
+  const [profileLoadedUid, setProfileLoadedUid] = useState(null);
 
   // Load saved theme preference once on mount.
   useEffect(() => {
@@ -114,6 +119,7 @@ export function ProfileProvider({ children }) {
 
       if (!user) {
         setFirebaseUser(null);
+        setProfileLoadedUid(null);
         if (!accessRestrictedRef.current) setAccessRestricted(false);
         if (!guestModeRef.current) {
           setProfile(initialProfile);
@@ -123,9 +129,30 @@ export function ProfileProvider({ children }) {
 
       try {
         const userRef = doc(db, "users", user.uid);
-        const userSnapshot = await getDoc(userRef);
+
+        // CHANGED: reading the profile can fail when the phone is offline.
+        // Before, ANY failure signed the user out, which is why reopening the app without
+        // internet sent you back to Login (and destroyed the saved session).
+        // Now we fall back to the profile saved on this phone and stay signed in.
+        let storedProfile = {};
+        let hasData = false;
+        try {
+          const userSnapshot = await getDoc(userRef);
+          storedProfile = userSnapshot.exists() ? userSnapshot.data() : {};
+          hasData = true;
+        } catch (readError) {
+          console.warn("Unable to reach Firestore. Using the profile saved on this phone.", readError);
+          try {
+            const cached = await AsyncStorage.getItem(`${PROFILE_CACHE_KEY}${user.uid}`);
+            if (cached) {
+              storedProfile = JSON.parse(cached);
+              hasData = true;
+            }
+          } catch (_cacheError) {
+            // nothing saved yet: continue with the basic details from the login itself
+          }
+        }
         if (currentAuthEvent !== authEvent) return;
-        const storedProfile = userSnapshot.exists() ? userSnapshot.data() : {};
 
         if (storedProfile.appRestricted === true) {
           accessRestrictedRef.current = true;
@@ -133,6 +160,7 @@ export function ProfileProvider({ children }) {
           setFirebaseUser(null);
           setIsGuest(false);
           setProfile(initialProfile);
+          setProfileLoadedUid(null);
           await signOut(auth);
           return;
         }
@@ -159,23 +187,31 @@ export function ProfileProvider({ children }) {
               : "Email",
         });
         setFirebaseUser(user);
-        stopUserProfileWatch = onSnapshot(userRef, (snapshot) => {
-          if (snapshot.data()?.appRestricted !== true) return;
-          accessRestrictedRef.current = true;
-          setAccessRestricted(true);
-          setFirebaseUser(null);
-          setIsGuest(false);
-          setProfile(initialProfile);
-          signOut(auth).catch((error) => {
-            console.warn("Unable to end a restricted user session.", error);
-          });
-        });
+        setProfileLoadedUid(hasData ? user.uid : null);
+        stopUserProfileWatch = onSnapshot(
+          userRef,
+          (snapshot) => {
+            if (snapshot.data()?.appRestricted !== true) return;
+            accessRestrictedRef.current = true;
+            setAccessRestricted(true);
+            setFirebaseUser(null);
+            setIsGuest(false);
+            setProfile(initialProfile);
+            setProfileLoadedUid(null);
+            signOut(auth).catch((error) => {
+              console.warn("Unable to end a restricted user session.", error);
+            });
+          },
+          // NEW: offline errors here must not crash or sign the user out
+          (error) => console.warn("Unable to watch the user profile.", error),
+        );
       } catch (error) {
         console.warn("Unable to verify account access.", error);
         if (currentAuthEvent === authEvent) {
           setFirebaseUser(null);
           setAccessRestricted(false);
           setProfile(initialProfile);
+          setProfileLoadedUid(null);
           await signOut(auth).catch(() => {});
         }
       }
@@ -188,11 +224,43 @@ export function ProfileProvider({ children }) {
     };
   }, []);
 
+  // NEW: keep an offline copy of the signed-in profile in AsyncStorage.
+  useEffect(() => {
+    if (!firebaseUser || profileLoadedUid !== firebaseUser.uid) return;
+    const cached = {
+      ...profile,
+      name: `${profile.firstName} ${profile.surname}`.trim(),
+    };
+    delete cached.photoAsset;
+    delete cached.createdAt;
+    if (cached.apsRecords) {
+      cached.apsRecords = Object.fromEntries(
+        Object.entries(cached.apsRecords).map(([period, record]) => {
+          const clean = { ...(record || {}) };
+          delete clean.updatedAt; // Firestore timestamp, not JSON friendly
+          return [period, clean];
+        }),
+      );
+    }
+    AsyncStorage.setItem(
+      `${PROFILE_CACHE_KEY}${firebaseUser.uid}`,
+      JSON.stringify(cached),
+    ).catch(() => {});
+  }, [profile, firebaseUser, profileLoadedUid]);
+
   const enterGuestMode = useCallback(() => {
     guestModeRef.current = true;
     setIsGuest(true);
     setFirebaseUser(null);
     setProfile(initialProfile);
+    // NEW: bring back any APS marks this phone saved as a guest
+    AsyncStorage.getItem(GUEST_APS_KEY)
+      .then((stored) => {
+        if (stored && guestModeRef.current) {
+          setProfile((current) => ({ ...current, apsRecords: JSON.parse(stored) }));
+        }
+      })
+      .catch(() => {});
   }, []);
   const clearSession = useCallback(() => {
     guestModeRef.current = false;
@@ -200,6 +268,7 @@ export function ProfileProvider({ children }) {
     accessRestrictedRef.current = false;
     setAccessRestricted(false);
     setFirebaseUser(null);
+    setProfileLoadedUid(null);
     setProfile(initialProfile);
     setSuccessMessage("");
   }, []);
@@ -265,7 +334,15 @@ export function ProfileProvider({ children }) {
   const saveApsRecord = useCallback(
     async (period, record) => {
       if (!firebaseUser) {
-        throw new Error("Sign in to save your APS marks to your account.");
+        // NEW: guests save their marks on the phone. Anyone who is neither a guest nor
+        // signed in still gets the original error.
+        if (!guestModeRef.current) {
+          throw new Error("Sign in to save your APS marks to your account.");
+        }
+        const nextRecords = { ...(profile.apsRecords || {}), [period]: record };
+        await AsyncStorage.setItem(GUEST_APS_KEY, JSON.stringify(nextRecords));
+        setProfile((current) => ({ ...current, apsRecords: nextRecords }));
+        return;
       }
 
       await setDoc(
@@ -286,7 +363,7 @@ export function ProfileProvider({ children }) {
         },
       }));
     },
-    [firebaseUser],
+    [firebaseUser, profile.apsRecords],
   );
   const clearSuccessMessage = useCallback(() => setSuccessMessage(""), []);
 

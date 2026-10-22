@@ -155,7 +155,7 @@ export default function CollegeDetailsScreen({ navigation, route }) {
         style={({ pressed }) => [styles.button, pressed && styles.pressed]}
       >
         <Text style={styles.buttonText}>Apply on college website</Text>
-        <Ionicons name="open-outline" size={19} color="#FFFFFF" />
+        <Ionicons name="open-outline" size={19} color={colors.onPrimary} />
       </Pressable>
     </View>
   );
@@ -272,7 +272,7 @@ function makeStyles(c) {
       borderColor: c.primary,
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: "#FFFFFF",
+      backgroundColor: c.surface,
     },
     logo: { width: 60, height: 60 },
     logoText: { color: c.primary, fontSize: 22, fontWeight: "900" },
@@ -296,7 +296,7 @@ function makeStyles(c) {
     tab: { flex: 1, minHeight: 46, borderRadius: 12, alignItems: "center", justifyContent: "center" },
     tabSelected: { backgroundColor: c.primary },
     tabText: { color: c.secondaryText, fontSize: 14, fontWeight: "700" },
-    tabTextSelected: { color: "#FFFFFF" },
+    tabTextSelected: { color: c.onPrimary },
     card: { marginTop: 16, padding: 18, borderRadius: 18, borderWidth: 1, borderColor: c.border, backgroundColor: c.surface },
     cardTitle: { color: c.text, fontSize: 18, fontWeight: "900" },
     sub: { marginTop: 5, marginBottom: 6, color: c.secondaryText, fontSize: 12, lineHeight: 18 },
@@ -326,7 +326,7 @@ function makeStyles(c) {
       gap: 8,
       backgroundColor: c.primary,
     },
-    buttonText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
+    buttonText: { color: c.onPrimary, fontSize: 15, fontWeight: "800" },
     disclaimer: { marginTop: 20, color: c.mutedText, fontSize: 12, lineHeight: 18, textAlign: "center" },
     missing: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: c.background },
     missingTitle: { color: c.text, fontSize: 20, fontWeight: "900" },

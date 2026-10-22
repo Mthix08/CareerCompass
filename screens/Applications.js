@@ -1,14 +1,16 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   collection,
+  deleteDoc,
   doc,
   getDocs,
   onSnapshot,
   setDoc,
 } from "firebase/firestore";
 import {
+  Alert,
   FlatList,
   KeyboardAvoidingView,
   Modal,
@@ -28,6 +30,8 @@ import { useProfile } from "../context/ProfileContext";
 import { db } from "./firebaseConfig";
 
 const APPLICATIONS_STORAGE_KEY = "@careercompass:applications:";
+// NEW: changes made while offline wait here until they reach Firestore
+const APPLICATIONS_PENDING_KEY = "@careercompass:applicationsPending:";
 
 const STATUSES = [
   { label: "Applied", color: "#3478F6" },
@@ -46,7 +50,7 @@ const initialForm = {
   notes: "",
 };
 
-function ApplicationForm({ visible, application, onClose, onSubmit }) {
+function ApplicationForm({ visible, application, onClose, onSubmit, onDelete }) {
   const { colors } = useProfile();
   const COLORS = useMemo(() => getThemeColors(colors), [colors]);
   const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
@@ -99,6 +103,25 @@ function ApplicationForm({ visible, application, onClose, onSubmit }) {
       notes: form.notes.trim(),
     });
     closeForm();
+  };
+
+  // NEW: delete (the D in CRUD), with a confirmation
+  const confirmDelete = () => {
+    Alert.alert(
+      "Delete application?",
+      `Remove your application to ${application.university}? This cannot be undone.`,
+      [
+        { text: "Cancel", style: "cancel" },
+        {
+          text: "Delete",
+          style: "destructive",
+          onPress: () => {
+            onDelete(application.id);
+            closeForm();
+          },
+        },
+      ],
+    );
   };
 
   return (
@@ -266,6 +289,18 @@ function ApplicationForm({ visible, application, onClose, onSubmit }) {
                 {application ? "Save Changes" : "Track Application"}
               </Text>
             </Pressable>
+
+            {!!application && (
+              <Pressable
+                onPress={confirmDelete}
+                accessibilityRole="button"
+                accessibilityLabel="Delete application"
+                style={({ pressed }) => [styles.deleteButton, pressed && styles.pressed]}
+              >
+                <Ionicons name="trash-outline" size={18} color={COLORS.danger} />
+                <Text style={styles.deleteButtonText}>Delete application</Text>
+              </Pressable>
+            )}
           </ScrollView>
         </View>
       </KeyboardAvoidingView>
@@ -322,10 +357,41 @@ export default function Applications({ navigation }) {
   const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const userId = firebaseUser?.uid ?? null;
   const storageScope = userId ?? "guest";
+  // NEW: changes that have not reached Firestore yet (added/edited/deleted while offline)
+  const pendingRef = useRef({ upserts: {}, deletes: [] });
+
+  const savePending = () =>
+    AsyncStorage.setItem(
+      `${APPLICATIONS_PENDING_KEY}${storageScope}`,
+      JSON.stringify(pendingRef.current),
+    ).catch((error) => console.warn("Unable to save pending changes locally.", error));
 
   useEffect(() => {
     let isActive = true;
     let unsubscribe;
+
+    // Sends anything saved while offline to Firestore. Nothing is awaited on purpose:
+    // when the phone is offline the write simply waits until it is online again.
+    const flushPending = () => {
+      if (!userId) return;
+      const { upserts, deletes } = pendingRef.current;
+      Object.values(upserts).forEach((application) => {
+        setDoc(doc(db, "users", userId, "applications", application.id), application)
+          .then(() => {
+            delete pendingRef.current.upserts[application.id];
+            savePending();
+          })
+          .catch((error) => console.warn("Unable to sync application to Firestore.", error));
+      });
+      deletes.forEach((id) => {
+        deleteDoc(doc(db, "users", userId, "applications", id))
+          .then(() => {
+            pendingRef.current.deletes = pendingRef.current.deletes.filter((item) => item !== id);
+            savePending();
+          })
+          .catch((error) => console.warn("Unable to delete application in Firestore.", error));
+      });
+    };
 
     const loadApplications = async () => {
       let cachedApplications = [];
@@ -339,10 +405,19 @@ export default function Applications({ navigation }) {
         console.warn("Unable to load applications from local storage.", error);
       }
 
-      if (!isActive) return;
-      if (storageScope !== loadedScope) {
-        setLoadedScope(storageScope);
+      try {
+        const storedPending = await AsyncStorage.getItem(
+          `${APPLICATIONS_PENDING_KEY}${storageScope}`,
+        );
+        pendingRef.current = storedPending
+          ? JSON.parse(storedPending)
+          : { upserts: {}, deletes: [] };
+      } catch (error) {
+        pendingRef.current = { upserts: {}, deletes: [] };
       }
+
+      if (!isActive) return;
+      setLoadedScope(storageScope);
       if (!userId) return;
 
       const applicationsRef = collection(db, "users", userId, "applications");
@@ -356,20 +431,33 @@ export default function Applications({ navigation }) {
             ),
           );
         }
-        unsubscribe = onSnapshot(
-          applicationsRef,
-          (nextSnapshot) => {
-            if (!isActive) return;
-            const cloudApplications = nextSnapshot.docs.map((application) => application.data());
-            if (cloudApplications.length || cachedApplications.length === 0) {
-              setApplications(cloudApplications);
-            }
-          },
-          (error) => console.warn("Unable to sync applications from Firestore.", error),
-        );
       } catch (error) {
         console.warn("Unable to load applications from Firestore.", error);
       }
+      if (!isActive) return;
+
+      // CHANGED: the live listener is attached even if the first read failed (offline),
+      // so the list syncs by itself as soon as the phone is back online.
+      unsubscribe = onSnapshot(
+        applicationsRef,
+        (nextSnapshot) => {
+          if (!isActive) return;
+          const merged = new Map(
+            nextSnapshot.docs.map((application) => [application.id, application.data()]),
+          );
+          // changes made offline win over the older cloud copy
+          pendingRef.current.deletes.forEach((id) => merged.delete(id));
+          Object.values(pendingRef.current.upserts).forEach((application) =>
+            merged.set(application.id, application),
+          );
+          const nextApplications = [...merged.values()];
+          if (nextApplications.length || cachedApplications.length === 0) {
+            setApplications(nextApplications);
+          }
+        },
+        (error) => console.warn("Unable to sync applications from Firestore.", error),
+      );
+      flushPending();
     };
 
     loadApplications();
@@ -378,7 +466,8 @@ export default function Applications({ navigation }) {
       isActive = false;
       unsubscribe?.();
     };
-  }, [storageScope, userId, loadedScope]);
+    // loadedScope is no longer a dependency: it made this whole effect run twice on every open
+  }, [storageScope, userId]);
 
   useEffect(() => {
     if (loadedScope !== storageScope) return;
@@ -414,10 +503,35 @@ export default function Applications({ navigation }) {
         : [application, ...current],
     );
     if (userId) {
+      // remembered as "pending" until Firestore confirms it, so an offline save is never lost
+      pendingRef.current.upserts[application.id] = application;
+      pendingRef.current.deletes = pendingRef.current.deletes.filter((id) => id !== application.id);
+      savePending();
       setDoc(
         doc(db, "users", userId, "applications", application.id),
         application,
-      ).catch((error) => console.warn("Unable to sync application to Firestore.", error));
+      )
+        .then(() => {
+          delete pendingRef.current.upserts[application.id];
+          savePending();
+        })
+        .catch((error) => console.warn("Unable to sync application to Firestore.", error));
+    }
+  };
+
+  // NEW: delete an application (local list + Firestore, also safe offline)
+  const deleteApplication = (id) => {
+    setApplications((current) => current.filter((item) => item.id !== id));
+    if (userId) {
+      delete pendingRef.current.upserts[id];
+      if (!pendingRef.current.deletes.includes(id)) pendingRef.current.deletes.push(id);
+      savePending();
+      deleteDoc(doc(db, "users", userId, "applications", id))
+        .then(() => {
+          pendingRef.current.deletes = pendingRef.current.deletes.filter((item) => item !== id);
+          savePending();
+        })
+        .catch((error) => console.warn("Unable to delete application in Firestore.", error));
     }
   };
 
@@ -491,6 +605,7 @@ export default function Applications({ navigation }) {
           setEditingApplication(null);
         }}
         onSubmit={saveApplication}
+        onDelete={deleteApplication}
       />
     </SafeAreaView>
   );
@@ -648,5 +763,7 @@ function makeStyles(COLORS) {
   notesInput: { minHeight: 88, marginLeft: 0, paddingTop: 14 },
   submitButton: { minHeight: 56, marginTop: 24, borderRadius: 28, alignItems: "center", justifyContent: "center", backgroundColor: COLORS.primary },
   submitButtonText: { color: COLORS.onPrimary, fontSize: 15, fontWeight: "800" },
+  deleteButton: { minHeight: 52, marginTop: 14, borderRadius: 26, borderWidth: 1, borderColor: COLORS.danger, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: COLORS.dangerSoft },
+  deleteButtonText: { marginLeft: 7, color: COLORS.danger, fontSize: 14, fontWeight: "800" },
   });
 }
