@@ -9,33 +9,54 @@ import { useProfile } from "../context/ProfileContext";
 
 // Must match the key used in OnboardingScreen.js
 const ONBOARDING_SEEN_KEY = "@careercompass:hasSeenOnboarding";
+// Must match the key used in ProfileContext.js
+const PROFILE_CACHE_KEY = "@careercompass:profileCache:";
 
-// NEW: works out where to go once the splash animation finishes.
-// Signed in -> Home, onboarding already seen -> Login, otherwise -> Onboarding.
+const withTimeout = (promise, ms) =>
+  Promise.race([
+    promise,
+    new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms)),
+  ]);
+
+// Works out where to go once the splash animation finishes.
+// Signed in -> Home (even offline), onboarding already seen -> Login, otherwise -> Onboarding.
 async function getStartRoute() {
+  let seenOnboarding = null;
   try {
-    const [seenOnboarding, user] = await Promise.all([
-      AsyncStorage.getItem(ONBOARDING_SEEN_KEY),
-      new Promise((resolve) => {
-        let unsubscribe = null;
-        unsubscribe = auth.onAuthStateChanged((currentUser) => {
-          unsubscribe?.();
-          resolve(currentUser);
-        });
-      }),
-    ]);
-    if (user) {
-      const userSnapshot = await getDoc(doc(db, "users", user.uid));
-      if (userSnapshot.data()?.appRestricted === true) {
-        await signOut(auth);
-        return seenOnboarding ? "Login" : "Onboarding";
-      }
-      return "Home";
-    }
-    return seenOnboarding ? "Login" : "Onboarding";
-  } catch (_error) {
-    return "Onboarding";
+    seenOnboarding = await AsyncStorage.getItem(ONBOARDING_SEEN_KEY);
+  } catch (_error) {}
+  const loggedOutRoute = seenOnboarding ? "Login" : "Onboarding";
+
+  let user = null;
+  try {
+    user = await new Promise((resolve) => {
+      let unsubscribe = null;
+      unsubscribe = auth.onAuthStateChanged((currentUser) => {
+        unsubscribe?.();
+        resolve(currentUser);
+      });
+    });
+  } catch (_error) {}
+
+  if (!user) return loggedOutRoute;
+
+  // Signed in. Check the "restricted" flag online if we can, otherwise use the copy on this phone.
+  let restricted = false;
+  try {
+    const snapshot = await withTimeout(getDoc(doc(db, "users", user.uid)), 4000);
+    restricted = snapshot.data()?.appRestricted === true;
+  } catch (_offline) {
+    try {
+      const cached = await AsyncStorage.getItem(`${PROFILE_CACHE_KEY}${user.uid}`);
+      restricted = cached ? JSON.parse(cached).appRestricted === true : false;
+    } catch (_cacheError) {}
   }
+
+  if (restricted) {
+    await signOut(auth).catch(() => {});
+    return loggedOutRoute;
+  }
+  return "Home";
 }
 
 export default function SplashScreen({ navigation }) {
