@@ -18,6 +18,14 @@ import { doc, getDoc } from "firebase/firestore";
 import { useProfile } from "../context/ProfileContext";
 import { auth, db } from "./firebaseConfig";
 import { signInWithGoogle } from "./googleAuth";
+import { getCareerAssessment } from "../services/careerAssessmentService";
+
+async function getLandingRoute(user) {
+  try {
+    const assessment = await getCareerAssessment(user.uid);
+    return assessment.status === "not_started" ? "CareerAssessmentWelcome" : "Home";
+  } catch (_error) { return "Home"; }
+}
 
 const LOGIN_FAILURE_LIMIT = 3;
 const LOGIN_COOLDOWN_SECONDS = 30;
@@ -82,7 +90,7 @@ export default function LoginScreen({ navigation }) {
         setErrors({ email: "", password: "This account is restricted. Contact support." });
         return;
       }
-      navigation.reset({ index: 0, routes: [{ name: "Home" }] });
+      navigation.reset({ index: 0, routes: [{ name: await getLandingRoute(credential.user) }] });
     } catch (error) {
       if (error.code !== "auth/popup-closed-by-user") {
         Alert.alert(
@@ -117,7 +125,7 @@ export default function LoginScreen({ navigation }) {
         return;
       }
       setFailedAttempts(0);
-      navigation.reset({ index: 0, routes: [{ name: "Home" }] });
+      navigation.reset({ index: 0, routes: [{ name: await getLandingRoute(credential.user) }] });
     } catch (error) {
       if (isCredentialFailure(error)) {
         const nextFailedAttempts = failedAttempts + 1;

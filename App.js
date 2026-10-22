@@ -29,6 +29,9 @@ import { useProfile } from "./context/ProfileContext";
 import { BookmarksProvider } from "./context/BookmarksContext";
 import './translation/i18n';
 import CollegeDetailsScreen from "./screens/CollegeDetailsScreen";
+import CareerAssessmentWelcomeScreen from "./screens/CareerAssessmentWelcomeScreen";
+import CareerAssessmentScreen from "./screens/CareerAssessmentScreen";
+import CareerAssessmentResultsScreen from "./screens/CareerAssessmentResultsScreen";
 import { useAppLifecycleLogger } from "./utils/lifecycleLogger";
 const Stack = createNativeStackNavigator();
 
@@ -75,6 +78,9 @@ function AppNavigator() {
           component={OnboardingScreen}
           options={{ headerShown: false, gestureEnabled: false }}
         />
+        <Stack.Screen name="CareerAssessmentWelcome" component={CareerAssessmentWelcomeScreen} options={{ headerShown: false, gestureEnabled: false }} />
+        <Stack.Screen name="CareerAssessment" component={CareerAssessmentScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="CareerAssessmentResults" component={CareerAssessmentResultsScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Login" component={LoginScreen} options={publicScreenOptions} />
         <Stack.Screen name="SignUp" component={SignUpScreen} options={publicScreenOptions} />
         <Stack.Screen

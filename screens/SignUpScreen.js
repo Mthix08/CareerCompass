@@ -18,6 +18,7 @@ import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { auth, db } from "./firebaseConfig";
 import { signInWithGoogle } from "./googleAuth";
 import { useProfile } from "../context/ProfileContext";
+import { getCareerAssessment } from "../services/careerAssessmentService";
 
 export default function SignUpScreen({ navigation }) {
   const { publicColors: colors } = useProfile();
@@ -52,7 +53,9 @@ export default function SignUpScreen({ navigation }) {
         { merge: true },
       );
 
-      navigation?.reset({ index: 0, routes: [{ name: "Home" }] });
+      let assessmentStatus = "not_started";
+      try { assessmentStatus = (await getCareerAssessment(credential.user.uid)).status; } catch (_error) { /* The assessment welcome can retry loading its data. */ }
+      navigation?.reset({ index: 0, routes: [{ name: assessmentStatus === "not_started" ? "CareerAssessmentWelcome" : "Home" }] });
     } catch (error) {
       if (error.code !== "auth/popup-closed-by-user") {
         Alert.alert(
