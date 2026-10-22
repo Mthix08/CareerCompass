@@ -1,5 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
-import { ImageBackground, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { ImageBackground, Pressable, ScrollView, StyleSheet, TextInput, View } from "react-native";
+import Text from '../components/TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";

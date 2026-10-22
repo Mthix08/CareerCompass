@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Image,
   View,
-  Text,
   TextInput,
   StyleSheet,
   TouchableOpacity,
@@ -11,6 +10,8 @@ import {
   Platform,
   StatusBar,
 } from "react-native";
+import LanguageButton from "../components/LanguageButton";
+import Text from '../components/TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useProfile } from "../context/ProfileContext";
@@ -63,6 +64,9 @@ export default function LoginScreen({ navigation }) {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
       <StatusBar barStyle="dark-content" backgroundColor="#FAF9F6" />
+       
+      
+
 
       <ScrollView
         contentContainerStyle={styles.scrollContainer}

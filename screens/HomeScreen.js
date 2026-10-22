@@ -1,14 +1,15 @@
 import React, { useCallback, useMemo } from "react";
+
 import {
   FlatList,
   ImageBackground,
   Pressable,
   ScrollView,
   StyleSheet,
-  Text,
   useWindowDimensions,
   View,
 } from "react-native";
+import Text from '../components/TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";

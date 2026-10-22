@@ -7,9 +7,9 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   View,
 } from "react-native";
+import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { signOut } from "firebase/auth";
 
