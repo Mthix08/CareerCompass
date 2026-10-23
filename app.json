@@ -19,7 +19,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.mthix08.careercompass.dev",
+      "package": "com.anonymous.CareerCompass",
       "permissions": []
     },
     "web": {
@@ -58,7 +58,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "245e508f-1c37-4ae1-9538-c9c39e663b31"
+        "projectId": "5753b26b-4cf7-47a4-bf4e-b07ea1b5ff14"
       }
     }
   }
