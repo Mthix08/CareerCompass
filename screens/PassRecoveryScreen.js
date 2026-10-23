@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   ActivityIndicator,
   Image,
@@ -16,11 +16,14 @@ import { Ionicons } from "@expo/vector-icons";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { auth } from "./firebaseConfig";
+import { useProfile } from "../context/ProfileContext";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const RESET_COOLDOWN_STEPS_SECONDS = [30, 60, 120, 240, 300];
 
 export default function PassRecoveryScreen({ navigation }) {
+  const { publicColors: colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -93,7 +96,7 @@ export default function PassRecoveryScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <StatusBar barStyle="dark-content" backgroundColor="#F6F8FC" />
+      <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <KeyboardAvoidingView
         style={styles.keyboardAvoidingView}
         behavior={Platform.OS === "ios" ? "padding" : "height"}
@@ -111,7 +114,7 @@ export default function PassRecoveryScreen({ navigation }) {
               hitSlop={8}
               style={({ pressed }) => [styles.backButton, pressed && styles.pressed]}
             >
-              <Ionicons name="arrow-back" size={23} color="#172033" />
+              <Ionicons name="arrow-back" size={23} color={colors.text} />
             </Pressable>
             <Image
               source={require("../assets/CC_Logo.png")}
@@ -128,7 +131,7 @@ export default function PassRecoveryScreen({ navigation }) {
               {sent ? (
                 <View style={styles.successContent}>
                   <View style={styles.successIcon}>
-                    <Ionicons name="mail" size={34} color="#FFFFFF" />
+                    <Ionicons name="mail" size={34} color={colors.onPrimary} />
                   </View>
                   <Text style={styles.cardTitle}>Check your email</Text>
                   <Text style={styles.cardIntro}>
@@ -166,13 +169,13 @@ export default function PassRecoveryScreen({ navigation }) {
                   </Text>
                   <Text style={styles.inputLabel}>Email address</Text>
                   <View style={[styles.inputShell, error && styles.inputShellError]}>
-                    <Ionicons name="mail-outline" size={20} color="#8D98A8" />
+                    <Ionicons name="mail-outline" size={20} color={colors.mutedText} />
                     <TextInput
                       value={email}
                       onChangeText={handleEmailChange}
                       onSubmitEditing={handleSubmit}
                       placeholder="your.email@example.com"
-                      placeholderTextColor="#6F7988"
+                      placeholderTextColor={colors.mutedText}
                       keyboardType="email-address"
                       autoCapitalize="none"
                       autoCorrect={false}
@@ -184,7 +187,7 @@ export default function PassRecoveryScreen({ navigation }) {
                   </View>
                   {!!error && (
                     <View style={styles.errorRow} accessibilityRole="alert">
-                      <Ionicons name="alert-circle-outline" size={16} color="#FF7A7A" />
+                      <Ionicons name="alert-circle-outline" size={16} color={colors.danger} />
                       <Text style={styles.errorText}>{error}</Text>
                     </View>
                   )}
@@ -196,7 +199,7 @@ export default function PassRecoveryScreen({ navigation }) {
                     style={({ pressed }) => [styles.primaryButton, (loading || cooldownSeconds > 0) && styles.buttonDisabled, pressed && !loading && styles.pressed]}
                   >
                     {loading ? (
-                      <ActivityIndicator color="#FFFFFF" />
+                      <ActivityIndicator color={colors.onPrimary} />
                     ) : (
                       <Text style={styles.primaryButtonText}>
                         {cooldownSeconds > 0 ? `Send reset link (${cooldownSeconds}s)` : "Send reset link"}
@@ -222,8 +225,9 @@ export default function PassRecoveryScreen({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#F6F8FC" },
+function makeStyles(colors) {
+  return StyleSheet.create({
+  safeArea: { flex: 1, backgroundColor: colors.background },
   keyboardAvoidingView: { flex: 1 },
   scrollContent: { flexGrow: 1, paddingBottom: 46 },
   screenContent: {
@@ -239,14 +243,14 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#FFFFFF",
+    backgroundColor: colors.surface,
     borderWidth: 1,
-    borderColor: "#E1E5EA",
+    borderColor: colors.border,
   },
   logo: { width: 92, height: 72, alignSelf: "center", marginTop: 2 },
   title: {
     marginTop: 4,
-    color: "#172033",
+    color: colors.text,
     fontSize: 30,
     fontWeight: "800",
     textAlign: "center",
@@ -254,7 +258,7 @@ const styles = StyleSheet.create({
   subtitle: {
     marginTop: 8,
     paddingHorizontal: 12,
-    color: "#68758A",
+    color: colors.secondaryText,
     fontSize: 14,
     lineHeight: 21,
     textAlign: "center",
@@ -265,18 +269,18 @@ const styles = StyleSheet.create({
     padding: 22,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: "#202936",
-    backgroundColor: "#0D1117",
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
     elevation: 8,
-    shadowColor: "#07101B",
+    shadowColor: colors.text,
     shadowOffset: { width: 0, height: 8 },
     shadowOpacity: 0.18,
     shadowRadius: 14,
   },
-  cardTitle: { color: "#FFFFFF", fontSize: 21, fontWeight: "800", textAlign: "center" },
+  cardTitle: { color: colors.text, fontSize: 21, fontWeight: "800", textAlign: "center" },
   cardIntro: {
     marginTop: 9,
-    color: "#9CA6B5",
+    color: colors.secondaryText,
     fontSize: 14,
     lineHeight: 21,
     textAlign: "center",
@@ -284,7 +288,7 @@ const styles = StyleSheet.create({
   inputLabel: {
     marginTop: 22,
     marginBottom: 9,
-    color: "#E7EBF0",
+    color: colors.text,
     fontSize: 14,
     fontWeight: "700",
   },
@@ -293,15 +297,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderRadius: 15,
     borderWidth: 1,
-    borderColor: "#303946",
+    borderColor: colors.border,
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#151A22",
+    backgroundColor: colors.input,
   },
-  inputShellError: { borderColor: "#E45D5D" },
-  textInput: { flex: 1, minHeight: 56, marginLeft: 10, color: "#FFFFFF", fontSize: 15 },
+  inputShellError: { borderColor: colors.danger },
+  textInput: { flex: 1, minHeight: 56, marginLeft: 10, color: colors.text, fontSize: 15 },
   errorRow: { marginTop: 8, flexDirection: "row", alignItems: "flex-start" },
-  errorText: { flex: 1, marginLeft: 6, color: "#FF8B8B", fontSize: 12, lineHeight: 18 },
+  errorText: { flex: 1, marginLeft: 6, color: colors.danger, fontSize: 12, lineHeight: 18 },
   primaryButton: {
     minHeight: 58,
     marginTop: 25,
@@ -309,13 +313,13 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#117C72",
+    backgroundColor: colors.primary,
   },
   buttonDisabled: { opacity: 0.65 },
-  primaryButtonText: { color: "#FFFFFF", fontSize: 16, fontWeight: "800", textAlign: "center" },
+  primaryButtonText: { color: colors.onPrimary, fontSize: 16, fontWeight: "800", textAlign: "center" },
   centeredLink: { alignItems: "center", marginTop: 13 },
   textLinkButton: { minHeight: 44, justifyContent: "center", alignItems: "center" },
-  textLink: { color: "#65DDB4", fontSize: 14, fontWeight: "700", textDecorationLine: "underline" },
+  textLink: { color: colors.primary, fontSize: 14, fontWeight: "700", textDecorationLine: "underline" },
   secondaryButton: {
     minHeight: 50,
     width: "100%",
@@ -323,14 +327,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     borderRadius: 15,
     borderWidth: 1,
-    borderColor: "#3B4655",
+    borderColor: colors.border,
     alignItems: "center",
     justifyContent: "center",
   },
-  secondaryButtonText: { color: "#FFFFFF", fontSize: 15, fontWeight: "700" },
+  secondaryButtonText: { color: colors.text, fontSize: 15, fontWeight: "700" },
   cooldownMessage: {
     marginTop: 13,
-    color: "#AEB7C4",
+    color: colors.secondaryText,
     fontSize: 13,
     lineHeight: 19,
     textAlign: "center",
@@ -343,7 +347,8 @@ const styles = StyleSheet.create({
     borderRadius: 34,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#00A878",
+    backgroundColor: colors.primary,
   },
   pressed: { opacity: 0.68 },
-});
+  });
+}

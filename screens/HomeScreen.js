@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import {
   FlatList,
   ImageBackground,
@@ -12,6 +12,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useScreenLifecycle } from "../utils/lifecycleLogger";
 
 import {
   APSScoreRow,
@@ -22,7 +23,7 @@ import {
   ViewAllUniversitiesCard,
 } from "../components/HomeComponents";
 import { useProfile } from "../context/ProfileContext";
-import { MOCK_APPLICATION_DEADLINES } from "../data/homeMockData";
+import { loadCollection } from "../data/firestoreContent";
 import { universities } from "../data/universities";
 import { getApsUniversityMatches, getLatestApsRecord } from "../data/apsMatching";
 
@@ -30,6 +31,7 @@ const NSFAS_IMAGE = require("../assets/nsfas.jpg");
 const HORIZONTAL_GAP = 14;
 
 export default function HomeScreen({ navigation }) {
+  useScreenLifecycle("Home");
   const { profile, colors, resolvedTheme } = useProfile();
   const { width: screenWidth } = useWindowDimensions();
   const headerAccent = resolvedTheme === "dark" ? "#0D6F67" : colors.primary;
@@ -56,15 +58,26 @@ export default function HomeScreen({ navigation }) {
     304,
   );
 
+  const [deadlines, setDeadlines] = useState([]);
+  useEffect(() => {
+    let active = true;
+    loadCollection("applicationDeadlines", { sortBy: "daysRemaining" }).then((items) => {
+      if (active) setDeadlines(items);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
+
   const deadlineItems = useMemo(
     () =>
-      MOCK_APPLICATION_DEADLINES.map((deadline) => ({
+      deadlines.map((deadline) => ({
         ...deadline,
         university: universities.find(
           (university) => university.id === deadline.universityId,
         ),
       })).filter((deadline) => deadline.university),
-    [],
+    [deadlines],
   );
 
   const openApsCalculator = useCallback(
@@ -217,7 +230,7 @@ export default function HomeScreen({ navigation }) {
                   <Ionicons
                     name="wallet-outline"
                     size={14}
-                    color="#FFFFFF"
+                    color={colors.onPrimary}
                   />
                   <Text style={styles.fundingLabelText}>STUDENT FUNDING</Text>
                 </View>
@@ -233,7 +246,7 @@ export default function HomeScreen({ navigation }) {
                   <Ionicons
                     name="arrow-forward"
                     size={18}
-                    color="#FFFFFF"
+                    color={colors.onPrimary}
                   />
                 </View>
               </View>
@@ -397,7 +410,7 @@ const createStyles = (colors, resolvedTheme, headerAccent) =>
       backgroundColor: headerAccent,
     },
     welcomeTitle: {
-      color: "#FFFFFF",
+      color: colors.onPrimary,
       fontSize: 29,
       lineHeight: 36,
       fontWeight: "900",
@@ -418,7 +431,7 @@ const createStyles = (colors, resolvedTheme, headerAccent) =>
       flexDirection: "row",
       alignItems: "center",
       gap: 8,
-      backgroundColor: "#FFFFFF",
+      backgroundColor: colors.surface,
     },
     headerButtonText: {
       color: headerAccent,
@@ -506,7 +519,7 @@ const createStyles = (colors, resolvedTheme, headerAccent) =>
       backgroundColor: "rgba(255,255,255,0.16)",
     },
     fundingLabelText: {
-      color: "#FFFFFF",
+      color: colors.onPrimary,
       fontSize: 10,
       fontWeight: "900",
       letterSpacing: 0.7,
@@ -514,7 +527,7 @@ const createStyles = (colors, resolvedTheme, headerAccent) =>
     fundingTitle: {
       maxWidth: 390,
       marginTop: 17,
-      color: "#FFFFFF",
+      color: colors.onPrimary,
       fontSize: 23,
       lineHeight: 29,
       fontWeight: "900",
@@ -532,7 +545,7 @@ const createStyles = (colors, resolvedTheme, headerAccent) =>
       alignItems: "center",
       gap: 7,
     },
-    fundingAction: { color: "#FFFFFF", fontSize: 14, fontWeight: "900" },
+    fundingAction: { color: colors.onPrimary, fontSize: 14, fontWeight: "900" },
     section: { marginTop: 28 },
     sectionWithPadding: { marginTop: 28, paddingHorizontal: 18 },
     paddedHeader: { paddingHorizontal: 18 },
@@ -589,7 +602,7 @@ const createStyles = (colors, resolvedTheme, headerAccent) =>
       backgroundColor: colors.primary,
     },
     apsBadgeText: {
-      color: "#FFFFFF",
+      color: colors.onPrimary,
       fontSize: 10,
       fontWeight: "900",
       letterSpacing: 0.5,
@@ -618,7 +631,7 @@ const createStyles = (colors, resolvedTheme, headerAccent) =>
       backgroundColor: colors.primary,
     },
     reminderButtonText: {
-      color: "#FFFFFF",
+      color: colors.onPrimary,
       fontSize: 13,
       fontWeight: "900",
     },

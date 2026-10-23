@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { loadCollection } from "../data/firestoreContent";
+import { useProfile } from "../context/ProfileContext";
 
 export default function FaqsScreen() {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   // CHANGED: the questions now come from the Firestore "faqs" collection
   // (with an AsyncStorage copy for offline) instead of a hardcoded array.
   const [faqs, setFaqs] = useState([]);
@@ -58,7 +61,7 @@ export default function FaqsScreen() {
                   <Ionicons
                     name="chevron-down"
                     size={20}
-                    color="#A9B7C9"
+                    color={colors.mutedText}
                     style={[styles.chevron, expanded && styles.chevronExpanded]}
                   />
                 </Pressable>
@@ -76,16 +79,17 @@ export default function FaqsScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#07111F" },
+function makeStyles(colors) {
+  return StyleSheet.create({
+  safeArea: { flex: 1, backgroundColor: colors.background },
   container: { padding: 20, paddingBottom: 36 },
-  heading: { color: "#F5F7FA", fontSize: 24, fontWeight: "800" },
-  intro: { color: "#A9B7C9", fontSize: 14, lineHeight: 21, marginTop: 8, marginBottom: 20 },
-  status: { color: "#A9B7C9", fontSize: 14, lineHeight: 21, textAlign: "center", marginTop: 12 },
+  heading: { color: colors.text, fontSize: 24, fontWeight: "800" },
+  intro: { color: colors.secondaryText, fontSize: 14, lineHeight: 21, marginTop: 8, marginBottom: 20 },
+  status: { color: colors.secondaryText, fontSize: 14, lineHeight: 21, textAlign: "center", marginTop: 12 },
   list: { gap: 10 },
   faqItem: {
-    backgroundColor: "#101D2D",
-    borderColor: "#223247",
+    backgroundColor: colors.surface,
+    borderColor: colors.border,
     borderWidth: 1,
     borderRadius: 14,
     overflow: "hidden",
@@ -99,9 +103,10 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     gap: 12,
   },
-  question: { flex: 1, color: "#F5F7FA", fontSize: 15, lineHeight: 21, fontWeight: "700" },
+  question: { flex: 1, color: colors.text, fontSize: 15, lineHeight: 21, fontWeight: "700" },
   chevron: { transform: [{ rotate: "0deg" }] },
   chevronExpanded: { transform: [{ rotate: "180deg" }] },
   answerContainer: { paddingHorizontal: 16, paddingBottom: 16 },
-  answer: { color: "#B6C2D0", fontSize: 14, lineHeight: 21 },
-});
+  answer: { color: colors.secondaryText, fontSize: 14, lineHeight: 21 },
+  });
+}

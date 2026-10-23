@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   Alert,
   Linking,
@@ -9,8 +9,11 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { getUniversityTheme } from "../data/universityTheme";
+import { useProfile } from "../context/ProfileContext";
 
 function InfoRow({ icon, children, accentColor }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   return (
     <View style={styles.infoRow}>
       <Ionicons name={icon} size={19} color={accentColor} />
@@ -20,6 +23,8 @@ function InfoRow({ icon, children, accentColor }) {
 }
 
 export default function AboutSection({ university, onApsPress }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const universityTheme = getUniversityTheme(university);
   const openVirtualCampus = async () => {
     const url = university.virtualCampusUrl;
@@ -96,7 +101,7 @@ export default function AboutSection({ university, onApsPress }) {
               ]}
             >
               <Text style={styles.virtualButtonText}>View Virtual</Text>
-              <Ionicons name="open-outline" size={19} color="#FFFFFF" />
+              <Ionicons name="open-outline" size={19} color={colors.primary} />
             </Pressable>
           )}
         </View>
@@ -134,14 +139,15 @@ export default function AboutSection({ university, onApsPress }) {
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(colors) {
+  return StyleSheet.create({
   section: { paddingTop: 24 },
-  heading: { color: "#FFFFFF", fontSize: 22, fontWeight: "800" },
-  body: { marginTop: 12, color: "#B9C1CD", fontSize: 15, lineHeight: 24 },
+  heading: { color: colors.text, fontSize: 22, fontWeight: "800" },
+  body: { marginTop: 12, color: colors.secondaryText, fontSize: 15, lineHeight: 24 },
   block: { marginTop: 25 },
   subheading: {
     marginBottom: 11,
-    color: "#FFFFFF",
+    color: colors.text,
     fontSize: 17,
     fontWeight: "700",
   },
@@ -149,7 +155,7 @@ const styles = StyleSheet.create({
   infoText: {
     flex: 1,
     marginLeft: 10,
-    color: "#B9C1CD",
+    color: colors.secondaryText,
     fontSize: 14,
     lineHeight: 21,
   },
@@ -180,10 +186,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
-    backgroundColor: "#202733",
+    backgroundColor: colors.elevatedSurface,
     borderWidth: 1,
-    borderColor: "#F26522",
+    borderColor: colors.border,
   },
-  virtualButtonText: { color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
+  virtualButtonText: { color: colors.text, fontSize: 14, fontWeight: "800" },
   pressed: { opacity: 0.75 },
-});
+  });
+}

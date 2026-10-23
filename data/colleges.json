@@ -1,0 +1,60 @@
+[
+  { "name": "Buffalo City TVET College", "province": "Eastern Cape", "phone": "043 704 9201", "website": "http://www.bccollege.co.za" },
+  { "name": "Eastcape Midlands TVET College", "province": "Eastern Cape", "phone": "086 038 8879", "website": "http://www.emcol.co.za" },
+  { "name": "Ikhala TVET College", "province": "Eastern Cape", "phone": "047 873 8843", "website": "http://www.ikhalacollege.co.za" },
+  { "name": "Ingwe TVET College", "province": "Eastern Cape", "phone": "039 255 0346", "website": "http://www.ingwecollege.co.za" },
+  { "name": "King Hintsa TVET College", "province": "Eastern Cape", "phone": "047 401 6400", "website": "http://www.kinghintsacollege.edu.za" },
+  { "name": "King Sabata Dalindyebo TVET College", "province": "Eastern Cape", "phone": "047 505 1001", "website": "" },
+  { "name": "Lovedale TVET College", "province": "Eastern Cape", "phone": "043 642 1331", "website": "http://www.lovedalecollege.co.za" },
+  { "name": "Port Elizabeth TVET College", "province": "Eastern Cape", "phone": "041 585 7771", "website": "http://www.pecollege.edu.za" },
+
+  { "name": "Flavius Mareka TVET College", "province": "Free State", "phone": "016 976 0815", "website": "http://www.flaviusmareka.net" },
+  { "name": "Goldfields TVET College", "province": "Free State", "phone": "057 392 1027", "website": "http://www.goldfieldsfet.edu.za" },
+  { "name": "Maluti TVET College", "province": "Free State", "phone": "058 713 3048", "website": "http://www.malutifet.org.za" },
+  { "name": "Motheo TVET College", "province": "Free State", "phone": "051 406 9300", "website": "http://www.motheofet.co.za" },
+
+  { "name": "Central Johannesburg TVET College", "province": "Gauteng", "phone": "011 484 1388", "website": "http://www.cjc.co.za" },
+  { "name": "Ekurhuleni East TVET College", "province": "Gauteng", "phone": "011 736 4400", "website": "http://www.eec.edu.za" },
+  { "name": "Ekurhuleni West TVET College", "province": "Gauteng", "phone": "011 323 1600", "website": "http://www.ewc.edu.za" },
+  { "name": "Sedibeng TVET College", "province": "Gauteng", "phone": "016 422 6645", "website": "http://www.sedcol.co.za" },
+  { "name": "South West Gauteng TVET College", "province": "Gauteng", "phone": "011 984 1260", "website": "http://www.swgc.co.za" },
+  { "name": "Tshwane North TVET College", "province": "Gauteng", "phone": "012 401 1950", "website": "http://www.tnc4fet.co.za" },
+  { "name": "Tshwane South TVET College", "province": "Gauteng", "phone": "012 401 5000", "website": "http://www.tsc.edu.za" },
+  { "name": "Western TVET College", "province": "Gauteng", "phone": "011 693 3608", "website": "http://www.westcol.co.za" },
+
+  { "name": "Coastal TVET College", "province": "KwaZulu-Natal", "phone": "031 905 7000", "website": "" },
+  { "name": "Elangeni TVET College", "province": "KwaZulu-Natal", "phone": "031 716 6700", "website": "http://www.efet.co.za" },
+  { "name": "Esayidi TVET College", "province": "KwaZulu-Natal", "phone": "039 684 0110", "website": "http://www.esayidifet.co.za" },
+  { "name": "Majuba TVET College", "province": "KwaZulu-Natal", "phone": "034 326 4888", "website": "http://www.majuba.edu.za" },
+  { "name": "Mnambithi TVET College", "province": "KwaZulu-Natal", "phone": "036 368 3800", "website": "" },
+  { "name": "Mthashana TVET College", "province": "KwaZulu-Natal", "phone": "034 980 1010", "website": "http://www.mthashanafet.co.za" },
+  { "name": "Thekwini TVET College", "province": "KwaZulu-Natal", "phone": "031 250 8400", "website": "http://www.thekwinicollege.co.za" },
+  { "name": "Umfolozi TVET College", "province": "KwaZulu-Natal", "phone": "035 902 9503", "website": "http://www.umfolozicollege.co.za" },
+  { "name": "Umgungundlovu TVET College", "province": "KwaZulu-Natal", "phone": "033 341 2102", "website": "http://www.ufetc.edu.za" },
+
+  { "name": "Capricorn TVET College", "province": "Limpopo", "phone": "015 291 3118", "website": "http://www.capricorncollege.edu.za" },
+  { "name": "Lephalale TVET College", "province": "Limpopo", "phone": "014 763 2252", "website": "http://www.lephalalefetcollege.co.za" },
+  { "name": "Letaba TVET College", "province": "Limpopo", "phone": "015 307 5440", "website": "http://www.letabafet.co.za" },
+  { "name": "Mopani South East TVET College", "province": "Limpopo", "phone": "015 781 5721", "website": "http://www.mopanicollege.edu.za" },
+  { "name": "Sekhukhune TVET College", "province": "Limpopo", "phone": "013 269 0278", "website": "http://www.sekfetcol.co.za" },
+  { "name": "Vhembe TVET College", "province": "Limpopo", "phone": "015 963 3156", "website": "http://www.vhembefet.co.za" },
+  { "name": "Waterberg TVET College", "province": "Limpopo", "phone": "015 491 8581", "website": "http://www.waterbergcollege.co.za" },
+
+  { "name": "Ehlanzeni TVET College", "province": "Mpumalanga", "phone": "013 752 7105", "website": "http://www.ehlanzenicollege.co.za" },
+  { "name": "Gert Sibande TVET College", "province": "Mpumalanga", "phone": "017 712 9040", "website": "http://www.gscollege.co.za" },
+  { "name": "Nkangala TVET College", "province": "Mpumalanga", "phone": "013 690 1430", "website": "http://www.nkangalafet.edu.za" },
+
+  { "name": "Northern Cape Rural TVET College", "province": "Northern Cape", "phone": "054 331 3836", "website": "http://www.ncrfet.edu.za" },
+  { "name": "Northern Cape Urban TVET College", "province": "Northern Cape", "phone": "053 839 2000", "website": "http://www.ncufetcollege.edu.za" },
+
+  { "name": "Orbit TVET College", "province": "North West", "phone": "014 592 7014", "website": "http://www.orbitcollege.co.za" },
+  { "name": "Taletso TVET College", "province": "North West", "phone": "018 384 2346", "website": "http://www.taletsofetcollege.co.za" },
+  { "name": "Vuselela TVET College", "province": "North West", "phone": "018 406 7800", "website": "http://www.vuselelacollege.co.za" },
+
+  { "name": "Boland TVET College", "province": "Western Cape", "phone": "021 886 7111", "website": "http://www.bolandcollege.com" },
+  { "name": "College of Cape Town for TVET", "province": "Western Cape", "phone": "021 404 6700", "website": "http://www.cct.edu.za" },
+  { "name": "False Bay TVET College", "province": "Western Cape", "phone": "021 003 0600", "website": "http://www.falsebaycollege.co.za" },
+  { "name": "Northlink TVET College", "province": "Western Cape", "phone": "021 970 9000", "website": "http://www.northlink.co.za" },
+  { "name": "South Cape TVET College", "province": "Western Cape", "phone": "044 884 0359", "website": "http://www.sccollege.co.za" },
+  { "name": "West Coast TVET College", "province": "Western Cape", "phone": "022 482 1143", "website": "http://www.westcoastcollege.co.za" }
+]

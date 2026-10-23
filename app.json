@@ -8,14 +8,19 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "Allow CareerCompass to convert your voice questions to text.",
+        "NSMicrophoneUsageDescription": "Allow CareerCompass to use the microphone for voice questions."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.CareerCompass"
+      "package": "com.anonymous.CareerCompass",
+      "permissions": []
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -50,6 +55,11 @@
         }
       ],
       "expo-status-bar"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "5753b26b-4cf7-47a4-bf4e-b07ea1b5ff14"
+      }
+    }
   }
 }
