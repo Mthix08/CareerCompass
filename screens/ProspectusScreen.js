@@ -6,9 +6,10 @@ import {
   Linking,
   Pressable,
   StyleSheet,
-  Text,
+  
   View,
 } from "react-native";
+import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { WebView } from "react-native-webview";
 

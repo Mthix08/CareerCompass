@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef } from "react";
-import { Animated, Image, StatusBar, StyleSheet, Text, View } from "react-native";
+import { Animated, Image, StatusBar, StyleSheet,  View } from "react-native";
+import Text from '../components/TranslatedText';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { signOut } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";

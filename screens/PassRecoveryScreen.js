@@ -8,10 +8,11 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
+  
   TextInput,
   View,
 } from "react-native";
+import Text from '../components/TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { SafeAreaView } from "react-native-safe-area-context";

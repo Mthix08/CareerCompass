@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   Image,
   View,
-  Text,
   TextInput,
   StyleSheet,
   TouchableOpacity,
@@ -12,6 +11,8 @@ import {
   StatusBar,
   Alert,
 } from "react-native";
+
+import Text from '../components/TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";

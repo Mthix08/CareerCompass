@@ -4,9 +4,10 @@ import {
   Image,
   Pressable,
   StyleSheet,
-  Text,
+  
   View,
 } from "react-native";
+import Text from './TranslatedText';
 import { getUniversityTheme } from "../data/universityTheme";
 import { useProfile } from "../context/ProfileContext";
 
