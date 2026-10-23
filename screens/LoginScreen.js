@@ -19,6 +19,19 @@ import { doc, getDoc } from "firebase/firestore";
 import { useProfile } from "../context/ProfileContext";
 import { auth, db } from "./firebaseConfig";
 import { signInWithGoogle } from "./googleAuth";
+import { getCareerAssessmentStatus } from "../services/careerAssessmentService";
+
+async function getLandingRoute(user) {
+  try {
+    const status = await getCareerAssessmentStatus(user.uid);
+    return status === "not_started" ? "CareerAssessmentWelcome" : "Home";
+  } catch (error) {
+    // A failed read must never be treated as a new assessment. Keep access to
+    // the app and let the user open their assessment from Profile if needed.
+    console.warn("Could not load assessment status after sign-in; opening Home.", error);
+    return "Home";
+  }
+}
 
 const LOGIN_FAILURE_LIMIT = 3;
 const LOGIN_COOLDOWN_SECONDS = 30;
@@ -83,7 +96,7 @@ export default function LoginScreen({ navigation }) {
         setErrors({ email: "", password: "This account is restricted. Contact support." });
         return;
       }
-      navigation.reset({ index: 0, routes: [{ name: "Home" }] });
+      navigation.reset({ index: 0, routes: [{ name: await getLandingRoute(credential.user) }] });
     } catch (error) {
       if (error.code !== "auth/popup-closed-by-user") {
         Alert.alert(
@@ -118,7 +131,7 @@ export default function LoginScreen({ navigation }) {
         return;
       }
       setFailedAttempts(0);
-      navigation.reset({ index: 0, routes: [{ name: "Home" }] });
+      navigation.reset({ index: 0, routes: [{ name: await getLandingRoute(credential.user) }] });
     } catch (error) {
       if (isCredentialFailure(error)) {
         const nextFailedAttempts = failedAttempts + 1;

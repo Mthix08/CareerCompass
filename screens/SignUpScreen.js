@@ -18,6 +18,7 @@ import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { auth, db } from "./firebaseConfig";
 import { signInWithGoogle } from "./googleAuth";
 import { useProfile } from "../context/ProfileContext";
+import { getCareerAssessmentStatus } from "../services/careerAssessmentService";
 
 export default function SignUpScreen({ navigation }) {
   const { publicColors: colors } = useProfile();
@@ -52,7 +53,15 @@ export default function SignUpScreen({ navigation }) {
         { merge: true },
       );
 
-      navigation?.reset({ index: 0, routes: [{ name: "Home" }] });
+      let route = "Home";
+      try {
+        const status = await getCareerAssessmentStatus(credential.user.uid);
+        if (status === "not_started") route = "CareerAssessmentWelcome";
+      } catch (error) {
+        // An unavailable status read is not proof this is a first-time user.
+        console.warn("Could not load assessment status after sign-up; opening Home.", error);
+      }
+      navigation?.reset({ index: 0, routes: [{ name: route }] });
     } catch (error) {
       if (error.code !== "auth/popup-closed-by-user") {
         Alert.alert(

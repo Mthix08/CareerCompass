@@ -28,6 +28,7 @@ import { useProfile } from "../context/ProfileContext";
 import { getLatestApsRecord } from "../data/apsMatching";
 import { auth, db } from "./firebaseConfig";
 import { signInWithGoogle } from "./googleAuth";
+import { getCareerAssessment } from "../services/careerAssessmentService";
 
 const THEMES = ["Light", "Dark", "System"];
 
@@ -110,6 +111,26 @@ export default function ProfileScreen({ navigation }) {
   const [deletePassword, setDeletePassword] = React.useState("");
   const [reauthVisible, setReauthVisible] = React.useState(false);
   const [isDeleting, setIsDeleting] = React.useState(false);
+  const [assessmentLoading, setAssessmentLoading] = React.useState(false);
+
+  const openCareerAssessment = async () => {
+    if (!isAuthenticated || assessmentLoading) return;
+    setAssessmentLoading(true);
+    try {
+      const assessment = await getCareerAssessment(auth.currentUser.uid);
+      if (assessment.syncWarning) {
+        Alert.alert(
+          "Assessment saved on this device",
+          "Firestore is unavailable right now. This device’s saved progress is shown, but it may not be available on another device until it syncs.",
+        );
+      }
+      if (assessment.status === "completed") navigation.navigate("CareerAssessmentResults");
+      else if (assessment.status === "in_progress") navigation.navigate("CareerAssessment", { initialAnswers: assessment.draftAnswers || assessment.answers || {} });
+      else navigation.navigate("CareerAssessmentWelcome");
+    } catch (_error) {
+      Alert.alert("Assessment unavailable", "We could not load your assessment. Check your connection and try again.");
+    } finally { setAssessmentLoading(false); }
+  };
 
   useEffect(() => {
     if (!successMessage) return undefined;
@@ -423,6 +444,13 @@ export default function ProfileScreen({ navigation }) {
 
         <Text style={styles.groupTitle}>Quick Links</Text>
         <View style={styles.quickLinksCard}>
+          <QuickLink
+            icon="compass-outline"
+            label="Career Assessment"
+            badge={assessmentLoading ? "Loading" : undefined}
+            onPress={() => accountOnly(openCareerAssessment)}
+            styles={styles}
+          />
           <QuickLink
             icon="bookmark-outline"
             label={

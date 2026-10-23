@@ -29,6 +29,9 @@ import CourseDetailsScreen from "./screens/CourseDetailsScreen";
 import AssistantScreen from "./screens/AssistantScreen";
 import ProspectusScreen from "./screens/ProspectusScreen";
 import CollegeDetailsScreen from "./screens/CollegeDetailsScreen";
+import CareerAssessmentWelcomeScreen from "./screens/CareerAssessmentWelcomeScreen";
+import CareerAssessmentScreen from "./screens/CareerAssessmentScreen";
+import CareerAssessmentResultsScreen from "./screens/CareerAssessmentResultsScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import LanguageButton from "./components/LanguageButton";
 import { ProfileProvider } from "./context/ProfileContext";
@@ -102,6 +105,21 @@ function AppNavigator() {
             name="Onboarding"
             component={OnboardingScreen}
             options={{ headerShown: false, gestureEnabled: false }}
+          />
+          <Stack.Screen
+            name="CareerAssessmentWelcome"
+            component={CareerAssessmentWelcomeScreen}
+            options={{ headerShown: false, gestureEnabled: false }}
+          />
+          <Stack.Screen
+            name="CareerAssessment"
+            component={CareerAssessmentScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="CareerAssessmentResults"
+            component={CareerAssessmentResultsScreen}
+            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="Login"
