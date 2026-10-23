@@ -11,11 +11,16 @@ export default function CareerAssessmentResultsScreen({ navigation }) {
   const [loading, setLoading] = useState(true);
   const [answers, setAnswers] = useState({});
   const [error, setError] = useState("");
+  const [syncWarning, setSyncWarning] = useState("");
 
   useEffect(() => {
     let active = true;
     getCareerAssessment(firebaseUser.uid)
-      .then((assessment) => { if (active) setAnswers(assessment.answers || {}); })
+      .then((assessment) => {
+        if (!active) return;
+        setAnswers(assessment.answers || {});
+        if (assessment.syncWarning) setSyncWarning("Showing this device’s saved assessment. It could not sync with Firestore yet.");
+      })
       .catch(() => { if (active) setError("We could not load your saved answer summary."); })
       .finally(() => { if (active) setLoading(false); });
     return () => { active = false; };
@@ -50,6 +55,7 @@ export default function CareerAssessmentResultsScreen({ navigation }) {
         <Ionicons name="bulb-outline" size={22} color={colors.primary} />
         <Text style={styles.noteText}>We’ll use this information to help shape qualification suggestions for you. Personalised suggestions will be available in a future update.</Text>
       </View>
+      {!!syncWarning && <Text style={styles.syncWarning} accessibilityRole="alert">{syncWarning}</Text>}
 
       <Text style={styles.sectionTitle}>Your answers</Text>
       {loading ? <ActivityIndicator style={styles.loader} color={colors.primary} /> : error ? <Text style={styles.error} accessibilityRole="alert">{error}</Text> : summary.length ? summary.map((item) => (
@@ -87,6 +93,7 @@ function makeStyles(c) { return StyleSheet.create({
   answerText: { flex: 1, color: c.secondaryText, fontSize: 13, lineHeight: 19 },
   empty: { marginTop: 8, color: c.secondaryText, fontSize: 14 },
   error: { marginTop: 10, color: c.danger, fontSize: 13, lineHeight: 19 },
+  syncWarning: { marginTop: 11, color: c.danger, fontSize: 12, lineHeight: 18 },
   actions: { paddingHorizontal: 22, paddingTop: 9, paddingBottom: 12, backgroundColor: c.background },
   primary: { minHeight: 52, backgroundColor: c.primary, borderRadius: 15, alignItems: "center", justifyContent: "center" },
   primaryText: { color: "#fff", fontWeight: "900", fontSize: 15 },

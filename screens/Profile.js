@@ -118,6 +118,12 @@ export default function ProfileScreen({ navigation }) {
     setAssessmentLoading(true);
     try {
       const assessment = await getCareerAssessment(auth.currentUser.uid);
+      if (assessment.syncWarning) {
+        Alert.alert(
+          "Assessment saved on this device",
+          "Firestore is unavailable right now. This device’s saved progress is shown, but it may not be available on another device until it syncs.",
+        );
+      }
       if (assessment.status === "completed") navigation.navigate("CareerAssessmentResults");
       else if (assessment.status === "in_progress") navigation.navigate("CareerAssessment", { initialAnswers: assessment.draftAnswers || assessment.answers || {} });
       else navigation.navigate("CareerAssessmentWelcome");

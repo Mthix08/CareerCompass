@@ -15,7 +15,7 @@ export default function CareerAssessmentWelcomeScreen({ navigation }) {
       setLoading(true); setError("");
       const answers = await beginCareerAssessment(firebaseUser.uid);
       navigation.replace("CareerAssessment", { initialAnswers: answers });
-    } catch (_error) { setError("We could not save your assessment yet. Check your connection and try again."); }
+    } catch (_error) { setError("We could not sync your assessment to your account. Any device copy was kept. Check your connection or Firestore permissions and try again."); }
     finally { setLoading(false); }
   };
   const maybeLater = async () => {
