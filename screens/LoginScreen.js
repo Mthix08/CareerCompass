@@ -19,8 +19,19 @@ import { doc, getDoc } from "firebase/firestore";
 import { useProfile } from "../context/ProfileContext";
 import { auth, db } from "./firebaseConfig";
 import { signInWithGoogle } from "./googleAuth";
-// Testing mode: every explicit sign-in starts at the general assessment.
-async function getLandingRoute(_user) { return "CareerAssessmentWelcome"; }
+import { getCareerAssessmentStatus } from "../services/careerAssessmentService";
+
+async function getLandingRoute(user) {
+  try {
+    const status = await getCareerAssessmentStatus(user.uid);
+    return status === "not_started" ? "CareerAssessmentWelcome" : "Home";
+  } catch (error) {
+    // A failed read must never be treated as a new assessment. Keep access to
+    // the app and let the user open their assessment from Profile if needed.
+    console.warn("Could not load assessment status after sign-in; opening Home.", error);
+    return "Home";
+  }
+}
 
 const LOGIN_FAILURE_LIMIT = 3;
 const LOGIN_COOLDOWN_SECONDS = 30;
