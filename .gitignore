@@ -42,5 +42,7 @@ yarn-error.*
 # generated native folders
 /ios
 /android
-.env
 serviceAccountKey.json
+
+# Personal Android development configuration
+/google-services.json

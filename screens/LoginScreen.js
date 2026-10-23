@@ -19,14 +19,8 @@ import { doc, getDoc } from "firebase/firestore";
 import { useProfile } from "../context/ProfileContext";
 import { auth, db } from "./firebaseConfig";
 import { signInWithGoogle } from "./googleAuth";
-import { getCareerAssessment } from "../services/careerAssessmentService";
-
-async function getLandingRoute(user) {
-  try {
-    const assessment = await getCareerAssessment(user.uid);
-    return assessment.status === "not_started" ? "CareerAssessmentWelcome" : "Home";
-  } catch (_error) { return "Home"; }
-}
+// Testing mode: every explicit sign-in starts at the general assessment.
+async function getLandingRoute(_user) { return "CareerAssessmentWelcome"; }
 
 const LOGIN_FAILURE_LIMIT = 3;
 const LOGIN_COOLDOWN_SECONDS = 30;

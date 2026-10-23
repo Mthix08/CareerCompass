@@ -6,7 +6,6 @@ import { signOut } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 
 import { auth, db } from "./firebaseConfig";
-import { getCareerAssessment } from "../services/careerAssessmentService";
 import { useProfile } from "../context/ProfileContext";
 
 // Must match the key used in OnboardingScreen.js
@@ -32,12 +31,7 @@ async function getStartRoute() {
         await signOut(auth);
         return seenOnboarding ? "Login" : "Onboarding";
       }
-      try {
-        const assessment = await getCareerAssessment(user.uid);
-        return assessment.status === "not_started" ? "CareerAssessmentWelcome" : "Home";
-      } catch (_assessmentError) {
-        return "Home";
-      }
+      return "Home";
     }
     return seenOnboarding ? "Login" : "Onboarding";
   } catch (_error) {

@@ -1,55 +1,70 @@
-import { doc, getDoc, serverTimestamp, setDoc, writeBatch } from "firebase/firestore";
-import { db } from "../screens/firebaseConfig";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ASSESSMENT_VERSION } from "../data/careerAssessmentQuestions";
+const localKey = (uid) => `@careercompass:careerAssessment:${uid}`;
+const emptyAssessment = { status: "not_started", answers: {}, draftAnswers: {} };
 
-const assessmentRef = (uid) => doc(db, "careerAssessments", uid);
-const userRef = (uid) => doc(db, "users", uid);
+async function readLocal(uid) {
+  try {
+    const value = await AsyncStorage.getItem(localKey(uid));
+    return value ? { ...emptyAssessment, ...JSON.parse(value) } : null;
+  } catch (_error) { return null; }
+}
+
+async function writeLocal(uid, value) {
+  await AsyncStorage.setItem(localKey(uid), JSON.stringify(value));
+}
+
+
+export async function getCareerAssessmentStatus(uid) {
+  const local = await readLocal(uid);
+  if (local?.status) return local.status;
+  return "not_started";
+}
 
 export async function getCareerAssessment(uid) {
-  const [assessment, user] = await Promise.all([getDoc(assessmentRef(uid)), getDoc(userRef(uid))]);
-  return { ...(assessment.exists() ? assessment.data() : {}), status: user.data()?.careerAssessmentStatus || "not_started" };
+  const local = await readLocal(uid);
+  return local || emptyAssessment;
 }
 
 export async function beginCareerAssessment(uid) {
   const current = await getCareerAssessment(uid);
   const hasDraft = current.draftAnswers && Object.keys(current.draftAnswers).length > 0;
   const answers = hasDraft ? current.draftAnswers : (current.status === "completed" ? current.answers || {} : current.draftAnswers || {});
-  const batch = writeBatch(db);
-  batch.set(assessmentRef(uid), {
+  const next = {
+    ...current,
     draftAnswers: answers,
     assessmentVersion: ASSESSMENT_VERSION,
-    startedAt: current.startedAt || serverTimestamp(),
-    updatedAt: serverTimestamp(),
+    startedAt: current.startedAt || new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
     isRetake: current.status === "completed" || Boolean(current.isRetake),
-  }, { merge: true });
-  batch.set(userRef(uid), { careerAssessmentStatus: "in_progress" }, { merge: true });
-  await batch.commit();
+    status: "in_progress",
+  };
+  await writeLocal(uid, next);
   return answers;
 }
 
 export async function saveCareerAssessmentDraft(uid, answers) {
-  const batch = writeBatch(db);
-  batch.set(assessmentRef(uid), { draftAnswers: answers, assessmentVersion: ASSESSMENT_VERSION, updatedAt: serverTimestamp() }, { merge: true });
-  batch.set(userRef(uid), { careerAssessmentStatus: "in_progress" }, { merge: true });
-  await batch.commit();
+  const current = await getCareerAssessment(uid);
+  const next = { ...current, draftAnswers: answers, assessmentVersion: ASSESSMENT_VERSION, updatedAt: new Date().toISOString(), status: "in_progress" };
+  await writeLocal(uid, next);
 }
 
-export async function skipCareerAssessment(uid) {
-  const batch = writeBatch(db);
-  batch.set(assessmentRef(uid), { updatedAt: serverTimestamp() }, { merge: true });
-  batch.set(userRef(uid), { careerAssessmentStatus: "skipped" }, { merge: true });
-  await batch.commit();
+export async function skipCareerAssessment(uid, draftAnswers) {
+  const current = await getCareerAssessment(uid);
+  const next = { ...current, ...(draftAnswers ? { draftAnswers } : {}), updatedAt: new Date().toISOString(), status: "skipped" };
+  await writeLocal(uid, next);
 }
 
 export async function completeCareerAssessment(uid, answers) {
-  const batch = writeBatch(db);
-  batch.set(assessmentRef(uid), {
+  const current = await getCareerAssessment(uid);
+  const next = {
+    ...current,
     answers,
     draftAnswers: {},
     assessmentVersion: ASSESSMENT_VERSION,
-    updatedAt: serverTimestamp(),
-    completedAt: serverTimestamp(),
-  }, { merge: true });
-  batch.set(userRef(uid), { careerAssessmentStatus: "completed" }, { merge: true });
-  await batch.commit();
+    updatedAt: new Date().toISOString(),
+    completedAt: new Date().toISOString(),
+    status: "completed",
+  };
+  await writeLocal(uid, next);
 }
