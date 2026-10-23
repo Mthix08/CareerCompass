@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   Image,
   View,
@@ -16,8 +16,12 @@ import { Ionicons } from "@expo/vector-icons";
 import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { auth, db } from "./firebaseConfig";
+import { signInWithGoogle } from "./googleAuth";
+import { useProfile } from "../context/ProfileContext";
 
 export default function SignUpScreen({ navigation }) {
+  const { publicColors: colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,6 +31,41 @@ export default function SignUpScreen({ navigation }) {
   const [errors, setErrors] = useState({});
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+
+  const handleGoogleSignUp = async () => {
+    if (isLoading || isGoogleLoading) return;
+
+    try {
+      setIsGoogleLoading(true);
+      const credential = await signInWithGoogle();
+      const googleName = credential.user.displayName?.trim() || "Student";
+
+      await setDoc(
+        doc(db, "users", credential.user.uid),
+        {
+          name: googleName,
+          email: credential.user.email,
+          photoURL: credential.user.photoURL || "",
+          createdAt: serverTimestamp(),
+        },
+        { merge: true },
+      );
+
+      navigation?.reset({ index: 0, routes: [{ name: "Home" }] });
+    } catch (error) {
+      if (error.code !== "auth/popup-closed-by-user") {
+        Alert.alert(
+          "Google sign-up unavailable",
+          error.code === "auth/google-client-id-missing"
+            ? "Add the Google OAuth client ID before using Google sign-in on mobile."
+            : "We could not create your account with Google. Please try again.",
+        );
+      }
+    } finally {
+      setIsGoogleLoading(false);
+    }
+  };
 
   const validateForm = () => {
     const nextErrors = {};
@@ -64,6 +103,7 @@ export default function SignUpScreen({ navigation }) {
     setHasSubmitted(true);
     if (!validateForm() || isLoading) return;
 
+    let accountCreated = false;
     try {
       setIsLoading(true);
       const credential = await createUserWithEmailAndPassword(
@@ -71,13 +111,17 @@ export default function SignUpScreen({ navigation }) {
         email.trim().toLowerCase(),
         password,
       );
+      accountCreated = true;
 
+      const normalizedEmail = credential.user.email?.trim().toLowerCase();
+      if (!normalizedEmail) {
+        throw new Error("The new account does not have an email address.");
+      }
       await setDoc(doc(db, "users", credential.user.uid), {
         name: name.trim(),
-        email: credential.user.email,
+        email: normalizedEmail,
         createdAt: serverTimestamp(),
       });
-
       await signOut(auth);
       navigation?.navigate("Login");
     } catch (error) {
@@ -86,6 +130,11 @@ export default function SignUpScreen({ navigation }) {
         error.code === "auth/credential-already-in-use";
       const message = emailAlreadyExists
         ? "An account with this email already exists. Log in instead or use a different email address."
+        : error.code === "permission-denied" ||
+            error.code === "firestore/permission-denied"
+          ? accountCreated
+            ? "Your account was created, but Firestore rules blocked saving your profile. Check your Firebase permissions and try again."
+            : "Firestore rules prevented this request. Check your Firebase permissions and try again."
         : error.code === "auth/invalid-email"
           ? "Enter a valid email address."
           : error.code === "auth/weak-password"
@@ -99,6 +148,12 @@ export default function SignUpScreen({ navigation }) {
           ...currentErrors,
           email: message,
         }));
+      }
+
+      if (accountCreated && auth.currentUser) {
+        await signOut(auth).catch((signOutError) => {
+          console.warn("Unable to sign out after incomplete sign-up.", signOutError);
+        });
       }
 
       Alert.alert("Sign-up failed", message);
@@ -125,7 +180,7 @@ export default function SignUpScreen({ navigation }) {
       style={styles.keyboardContainer}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
-      <StatusBar barStyle="dark-content" backgroundColor="#FAF9F6" />
+      <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <ScrollView
         contentContainerStyle={styles.scrollContainer}
         keyboardShouldPersistTaps="handled"
@@ -155,13 +210,13 @@ export default function SignUpScreen({ navigation }) {
             <Ionicons
               name="person-outline"
               size={20}
-              color="#777"
+              color={colors.mutedText}
               style={styles.inputIcon}
             />
             <TextInput
               style={styles.input}
               placeholder="Enter your full name"
-              placeholderTextColor="#A3A3A3"
+              placeholderTextColor={colors.mutedText}
               value={name}
               onChangeText={(value) => updateField("name", value, setName)}
               autoCapitalize="words"
@@ -176,13 +231,13 @@ export default function SignUpScreen({ navigation }) {
             <Ionicons
               name="mail-outline"
               size={20}
-              color="#777"
+              color={colors.mutedText}
               style={styles.inputIcon}
             />
             <TextInput
               style={styles.input}
               placeholder="Enter your email"
-              placeholderTextColor="#A3A3A3"
+              placeholderTextColor={colors.mutedText}
               value={email}
               onChangeText={(value) => updateField("email", value, setEmail)}
               keyboardType="email-address"
@@ -202,13 +257,13 @@ export default function SignUpScreen({ navigation }) {
             <Ionicons
               name="lock-closed-outline"
               size={20}
-              color="#777"
+              color={colors.mutedText}
               style={styles.inputIcon}
             />
             <TextInput
               style={styles.input}
               placeholder="Create a password"
-              placeholderTextColor="#A3A3A3"
+              placeholderTextColor={colors.mutedText}
               value={password}
               onChangeText={(value) =>
                 updateField("password", value, setPassword)
@@ -241,13 +296,13 @@ export default function SignUpScreen({ navigation }) {
             <Ionicons
               name="shield-checkmark-outline"
               size={20}
-              color="#777"
+              color={colors.mutedText}
               style={styles.inputIcon}
             />
             <TextInput
               style={styles.input}
               placeholder="Re-enter your password"
-              placeholderTextColor="#A3A3A3"
+              placeholderTextColor={colors.mutedText}
               value={confirmPassword}
               onChangeText={(value) =>
                 updateField("confirmPassword", value, setConfirmPassword)
@@ -269,13 +324,28 @@ export default function SignUpScreen({ navigation }) {
           )}
 
           <TouchableOpacity
-            style={[styles.signUpButton, isLoading && styles.buttonDisabled]}
+            style={[
+              styles.signUpButton,
+              (isLoading || isGoogleLoading) && styles.buttonDisabled,
+            ]}
             activeOpacity={0.8}
             onPress={handleSignUp}
-            disabled={isLoading}
+            disabled={isLoading || isGoogleLoading}
           >
             <Text style={styles.signUpButtonText}>
               {isLoading ? "Creating account..." : "Create account"}
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.googleButton, isGoogleLoading && styles.buttonDisabled]}
+            activeOpacity={0.8}
+            onPress={handleGoogleSignUp}
+            disabled={isLoading || isGoogleLoading}
+          >
+            <Ionicons name="logo-google" size={19} color="#4285F4" />
+            <Text style={styles.googleButtonText}>
+              {isGoogleLoading ? "Connecting..." : "Continue with Google"}
             </Text>
           </TouchableOpacity>
 
@@ -294,10 +364,11 @@ export default function SignUpScreen({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(colors) {
+  return StyleSheet.create({
   keyboardContainer: {
     flex: 1,
-    backgroundColor: "#FAF9F6",
+    backgroundColor: colors.background,
   },
   scrollContainer: {
     flexGrow: 1,
@@ -321,12 +392,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: "700",
-    color: "#18201F",
+    color: colors.text,
     marginBottom: 6,
   },
   subtitle: {
     fontSize: 15.5,
-    color: "#858585",
+    color: colors.secondaryText,
     lineHeight: 22,
   },
   formContainer: {
@@ -335,7 +406,7 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 15,
     fontWeight: "600",
-    color: "#242B2A",
+    color: colors.text,
     marginBottom: 10,
   },
   fieldLabel: {
@@ -344,15 +415,15 @@ const styles = StyleSheet.create({
   inputContainer: {
     height: 66,
     borderWidth: 1,
-    borderColor: "#DEDCD7",
+    borderColor: colors.border,
     borderRadius: 15,
-    backgroundColor: "#F7F6F2",
+    backgroundColor: colors.input,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 16,
   },
   inputError: {
-    borderColor: "#D64545",
+    borderColor: colors.danger,
   },
   inputIcon: {
     marginRight: 10,
@@ -361,23 +432,23 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     fontSize: 16,
-    color: "#252B2A",
+    color: colors.text,
   },
   showText: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#17796F",
+    color: colors.primary,
   },
   errorText: {
     marginTop: 7,
-    color: "#D64545",
+    color: colors.danger,
     fontSize: 13,
     lineHeight: 18,
   },
   signUpButton: {
     height: 65,
     borderRadius: 16,
-    backgroundColor: "#107D72",
+    backgroundColor: colors.primary,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 28,
@@ -388,12 +459,31 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
   },
   signUpButtonText: {
-    color: "#FFFFFF",
+    color: colors.onPrimary,
     fontSize: 17,
     fontWeight: "700",
   },
   buttonDisabled: {
     opacity: 0.65,
+  },
+
+  googleButton: {
+    height: 67,
+    borderRadius: 16,
+    borderWidth: 1.3,
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 10,
+    marginTop: 12,
+  },
+
+  googleButtonText: {
+    fontSize: 17,
+    fontWeight: "700",
+    color: colors.text,
   },
 
   bottomTextContainer: {
@@ -405,11 +495,12 @@ const styles = StyleSheet.create({
   },
   bottomText: {
     fontSize: 14,
-    color: "#858585",
+    color: colors.secondaryText,
   },
   loginText: {
     fontSize: 14,
     fontWeight: "700",
-    color: "#C39A45",
+    color: colors.accent,
   },
-});
+  });
+}

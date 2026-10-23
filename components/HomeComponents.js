@@ -1,5 +1,6 @@
 import React, { memo, useMemo } from "react";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet,  View } from "react-native";
+import Text from './TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { getUniversityTheme } from "../data/universityTheme";
 
@@ -116,7 +117,7 @@ const createStyles = (colors) => StyleSheet.create({
   sectionTitleRow: { flex: 1, minWidth: 0, flexDirection: "row", alignItems: "center", gap: 8 },
   sectionTitle: { flexShrink: 1, color: colors.text, fontSize: 19, lineHeight: 25, fontWeight: "900" },
   sectionAction: { color: colors.primary, fontSize: 13, fontWeight: "800" },
-  deadlineCard: { minHeight: 174, padding: 16, borderRadius: 20, borderWidth: 1, borderColor: colors.border, justifyContent: "space-between", backgroundColor: colors.surface, shadowColor: "#071B19", shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.1, shadowRadius: 10, elevation: 3 },
+  deadlineCard: { minHeight: 174, padding: 16, borderRadius: 20, borderWidth: 1, borderColor: colors.border, justifyContent: "space-between", backgroundColor: colors.surface, shadowColor: colors.text, shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.1, shadowRadius: 10, elevation: 3 },
   deadlineTopRow: { flexDirection: "row", alignItems: "flex-start" },
   deadlineTextWrap: { flex: 1, minWidth: 0, marginLeft: 12 },
   deadlineName: { color: colors.text, fontSize: 15, lineHeight: 21, fontWeight: "800" },
@@ -126,9 +127,9 @@ const createStyles = (colors) => StyleSheet.create({
   exampleBadgeText: { color: colors.mutedText, fontSize: 9, fontWeight: "900", letterSpacing: 0.5 },
   daysBadge: { paddingHorizontal: 10, paddingVertical: 6, borderRadius: 999, backgroundColor: colors.primarySoft },
   daysBadgeText: { color: colors.primary, fontSize: 11, fontWeight: "800" },
-  logoWrapSmall: { width: 46, height: 46, borderRadius: 13, alignItems: "center", justifyContent: "center", backgroundColor: "#FFFFFF", borderWidth: 1, borderColor: colors.border },
+  logoWrapSmall: { width: 46, height: 46, borderRadius: 13, alignItems: "center", justifyContent: "center", backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },
   logoSmall: { width: 38, height: 38 },
-  logoWrapMedium: { width: 52, height: 52, borderRadius: 14, alignItems: "center", justifyContent: "center", backgroundColor: "#FFFFFF", borderWidth: 1, borderColor: colors.border },
+  logoWrapMedium: { width: 52, height: 52, borderRadius: 14, alignItems: "center", justifyContent: "center", backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },
   logoMedium: { width: 44, height: 44 },
   apsRow: { minHeight: 82, marginTop: 10, padding: 13, borderRadius: 18, borderWidth: 1, borderColor: colors.border, flexDirection: "row", alignItems: "center", backgroundColor: colors.surface },
   apsNameWrap: { flex: 1, minWidth: 0, marginHorizontal: 12 },
@@ -137,7 +138,7 @@ const createStyles = (colors) => StyleSheet.create({
   apsValueWrap: { minWidth: 48, alignItems: "flex-end" },
   apsValue: { color: colors.primary, fontSize: 25, lineHeight: 28, fontWeight: "900" },
   apsLabel: { marginTop: 1, color: colors.primary, fontSize: 10, fontWeight: "900" },
-  universityCard: { height: 310, overflow: "hidden", borderRadius: 22, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface, shadowColor: "#071B19", shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.12, shadowRadius: 10, elevation: 4 },
+  universityCard: { height: 310, overflow: "hidden", borderRadius: 22, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface, shadowColor: colors.text, shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.12, shadowRadius: 10, elevation: 4 },
   universityImage: { width: "100%", height: 146 },
   universityBrandBar: { width: "100%", height: 4 },
   universityBody: { flex: 1, padding: 15 },

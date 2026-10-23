@@ -1,9 +1,14 @@
-import React from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import React, { useMemo } from "react";
+import { Pressable, StyleSheet,  View } from "react-native";
+import Text from './TranslatedText';
+import { useProfile } from "../context/ProfileContext";
 
 const TABS = ["About", "Courses", "Apply"];
 
 export default function UniversityTabs({ activeTab, onTabChange, accentColor = "#F26522" }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
+
   return (
     <View style={styles.container} accessibilityRole="tablist">
       {TABS.map((tab) => {
@@ -31,13 +36,14 @@ export default function UniversityTabs({ activeTab, onTabChange, accentColor = "
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(colors) {
+  return StyleSheet.create({
   container: {
     flexDirection: "row",
     gap: 6,
     padding: 5,
     borderRadius: 16,
-    backgroundColor: "#151A22",
+    backgroundColor: colors.elevatedSurface,
   },
   tab: {
     flex: 1,
@@ -48,6 +54,7 @@ const styles = StyleSheet.create({
   },
   selectedTab: {},
   pressedTab: { opacity: 0.75 },
-  label: { color: "#9CA6B5", fontSize: 14, fontWeight: "700" },
+  label: { color: colors.mutedText, fontSize: 14, fontWeight: "700" },
   selectedLabel: { color: "#FFFFFF" },
-});
+  });
+}

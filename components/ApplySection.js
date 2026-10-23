@@ -1,9 +1,13 @@
-import React from "react";
-import { Alert, Linking, Pressable, StyleSheet, Text, View } from "react-native";
+import React, { useMemo } from "react";
+import { Alert, Linking, Pressable, StyleSheet,  View } from "react-native";
+import Text from './TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { getUniversityTheme } from "../data/universityTheme";
+import { useProfile } from "../context/ProfileContext";
 
 function DetailRow({ label, value, accent = false }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   return (
     <View style={styles.detailRow}>
       <Text style={styles.detailLabel}>{label}</Text>
@@ -13,6 +17,8 @@ function DetailRow({ label, value, accent = false }) {
 }
 
 export default function ApplySection({ university }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const universityTheme = getUniversityTheme(university);
   const applicationFee =
     university.applicationFee === 0
@@ -98,18 +104,20 @@ export default function ApplySection({ university }) {
   );
 }
 
-const styles = StyleSheet.create({
+function makeStyles(colors) {
+  return StyleSheet.create({
   section: { paddingTop: 24 },
-  heading: { color: "#FFFFFF", fontSize: 22, fontWeight: "800" },
+  heading: { color: colors.text, fontSize: 22, fontWeight: "800" },
   notice: { marginTop: 9, fontSize: 13, lineHeight: 19 },
-  detailsCard: { marginTop: 19, paddingHorizontal: 17, borderRadius: 17, borderWidth: 1, borderColor: "#252D39", backgroundColor: "#151A22" },
-  detailRow: { minHeight: 61, paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: "#343C48", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 14 },
-  detailLabel: { flex: 0.42, color: "#9CA6B5", fontSize: 13 },
-  detailValue: { flex: 0.58, color: "#FFFFFF", fontSize: 13, lineHeight: 19, fontWeight: "700", textAlign: "right" },
-  accentValue: { color: "#58E58F" },
-  subheading: { marginTop: 25, color: "#FFFFFF", fontSize: 17, fontWeight: "700" },
-  instructions: { marginTop: 9, color: "#B9C1CD", fontSize: 14, lineHeight: 22 },
+  detailsCard: { marginTop: 19, paddingHorizontal: 17, borderRadius: 17, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
+  detailRow: { minHeight: 61, paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: colors.border, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 14 },
+  detailLabel: { flex: 0.42, color: colors.mutedText, fontSize: 13 },
+  detailValue: { flex: 0.58, color: colors.text, fontSize: 13, lineHeight: 19, fontWeight: "700", textAlign: "right" },
+  accentValue: { color: colors.primary },
+  subheading: { marginTop: 25, color: colors.text, fontSize: 17, fontWeight: "700" },
+  instructions: { marginTop: 9, color: colors.secondaryText, fontSize: 14, lineHeight: 22 },
   button: { minHeight: 56, marginTop: 25, paddingHorizontal: 18, borderRadius: 15, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 9, backgroundColor: "#F26522" },
   buttonText: { flexShrink: 1, color: "#FFFFFF", fontSize: 15, fontWeight: "800", textAlign: "center" },
   pressed: { opacity: 0.75 },
-});
+  });
+}

@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Platform, StatusBar, View } from "react-native";
 import {
+  DarkTheme,
+  DefaultTheme,
   NavigationContainer,
   createNavigationContainerRef,
 } from "@react-navigation/native";
@@ -10,6 +12,7 @@ import LoginScreen from "./screens/LoginScreen";
 import SignUpScreen from "./screens/SignUpScreen";
 import PassRecoveryScreen from "./screens/PassRecoveryScreen";
 import SplashScreen from "./screens/SplashScreen";
+import OnboardingScreen from "./screens/OnboardingScreen";
 import UniversityDetailsScreen from "./screens/UniversityDetailsScreen";
 import EditProfileScreen from "./screens/EditProfileScreen";
 import ApsCalculatorScreen from "./screens/ApsCalculatorScreen";
@@ -23,12 +26,16 @@ import NotificationPreferences from "./screens/NotificationPreferences";
 import LanguageScreen from "./screens/LanguageScreen";
 import FaqsScreen from "./screens/FaqsScreen";
 import CourseDetailsScreen from "./screens/CourseDetailsScreen";
+import AssistantScreen from "./screens/AssistantScreen";
 import ProspectusScreen from "./screens/ProspectusScreen";
+import CollegeDetailsScreen from "./screens/CollegeDetailsScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import LanguageButton from "./components/LanguageButton";
 import { ProfileProvider } from "./context/ProfileContext";
+import { useProfile } from "./context/ProfileContext";
 import { BookmarksProvider } from "./context/BookmarksContext";
 import { LanguageProvider } from "./context/LanguageContext";
+import { useAppLifecycleLogger } from "./utils/lifecycleLogger";
 
 const Stack = createNativeStackNavigator();
 const navigationRef = createNavigationContainerRef();
@@ -40,14 +47,44 @@ const BUTTON_TOP =
   Platform.OS === "android" ? (StatusBar.currentHeight || 24) + 8 : 54;
 
 function AppNavigator() {
+  const { colors, publicColors, resolvedTheme, accessRestricted } = useProfile();
   const [currentRoute, setCurrentRoute] = useState("Splash");
 
   const showButton = !HIDE_BUTTON_ON.includes(currentRoute);
 
+  const publicScreenOptions = useMemo(() => ({
+    headerStyle: { backgroundColor: publicColors.background },
+    headerTintColor: publicColors.text,
+    headerTitleStyle: { color: publicColors.text },
+    contentStyle: { backgroundColor: publicColors.background },
+  }), [publicColors]);
+
+  const navigationTheme = useMemo(() => {
+    const baseTheme = resolvedTheme === "dark" ? DarkTheme : DefaultTheme;
+    return {
+      ...baseTheme,
+      colors: {
+        ...baseTheme.colors,
+        primary: colors.primary,
+        background: colors.background,
+        card: colors.surface,
+        text: colors.text,
+        border: colors.border,
+        notification: colors.accent,
+      },
+    };
+  }, [colors, resolvedTheme]);
+
+  useEffect(() => {
+    if (!accessRestricted || !navigationRef.isReady()) return;
+    navigationRef.resetRoot({ index: 0, routes: [{ name: "Login" }] });
+  }, [accessRestricted]);
+
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: colors.background }}>
       <NavigationContainer
         ref={navigationRef}
+        theme={navigationTheme}
         onReady={() =>
           setCurrentRoute(navigationRef.getCurrentRoute()?.name ?? "Splash")
         }
@@ -61,8 +98,21 @@ function AppNavigator() {
             component={SplashScreen}
             options={{ headerShown: false }}
           />
-          <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="SignUp" component={SignUpScreen} />
+          <Stack.Screen
+            name="Onboarding"
+            component={OnboardingScreen}
+            options={{ headerShown: false, gestureEnabled: false }}
+          />
+          <Stack.Screen
+            name="Login"
+            component={LoginScreen}
+            options={publicScreenOptions}
+          />
+          <Stack.Screen
+            name="SignUp"
+            component={SignUpScreen}
+            options={publicScreenOptions}
+          />
           <Stack.Screen
             name="PassRecovery"
             component={PassRecoveryScreen}
@@ -81,6 +131,11 @@ function AppNavigator() {
           <Stack.Screen
             name="CourseDetails"
             component={CourseDetailsScreen}
+            options={{ headerShown: false, animation: "slide_from_right" }}
+          />
+          <Stack.Screen
+            name="CollegeDetails"
+            component={CollegeDetailsScreen}
             options={{ headerShown: false, animation: "slide_from_right" }}
           />
           <Stack.Screen
@@ -143,6 +198,11 @@ function AppNavigator() {
             component={FaqsScreen}
             options={{ title: "FAQs" }}
           />
+          {/* <Stack.Screen
+            name="Assistant"
+            component={AssistantScreen}
+            options={{ headerShown: false, animation: "slide_from_right" }}
+          /> */}
         </Stack.Navigator>
       </NavigationContainer>
 
@@ -163,6 +223,7 @@ function AppNavigator() {
 }
 
 export default function App() {
+  useAppLifecycleLogger();
   return (
     <LanguageProvider>
       <ProfileProvider>

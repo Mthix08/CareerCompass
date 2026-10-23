@@ -1,21 +1,22 @@
 import React, { useMemo, useState, useEffect } from "react";
-import { ImageBackground, Pressable, ScrollView, StyleSheet, TextInput, View } from "react-native";
+import { ActivityIndicator, ImageBackground, Pressable, ScrollView, StyleSheet, TextInput, View } from "react-native";
 import Text from '../components/TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
-import { NSFAS, SAMPLE_BURSARY, fetchBursaries, getFundingCountdown } from "../data/funding";
+import { useBookmarks } from "../context/BookmarksContext";
+import { fetchBursaries, getFundingCountdown } from "../data/funding";
 
 const NSFAS_IMAGE = require("../assets/nsfas.jpg");
-const FALLBACK_FUNDING_OPTIONS = [NSFAS, SAMPLE_BURSARY];
-
 export default function FundingScreen({ navigation }) {
   const { colors, resolvedTheme } = useProfile();
+  const { isFundingBookmarked, saveFundingBookmark, removeFundingBookmark, updateFundingBookmarkDetails } = useBookmarks();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [now, setNow] = useState(() => new Date());
   const [searchQuery, setSearchQuery] = useState("");
-  const [fundingOptions, setFundingOptions] = useState(FALLBACK_FUNDING_OPTIONS);
+  const [fundingOptions, setFundingOptions] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => setNow(new Date()), 60000);
@@ -24,15 +25,24 @@ export default function FundingScreen({ navigation }) {
 
   useEffect(() => {
     let mounted = true;
-    fetchBursaries().then((items) => {
-      if (mounted) {
-        setFundingOptions(items);
-      }
-    });
+    fetchBursaries()
+      .then((items) => {
+        if (mounted) {
+          setFundingOptions(items);
+          updateFundingBookmarkDetails(items);
+        }
+      })
+      .catch((error) => {
+        console.warn("Unable to load funding opportunities.", error);
+        if (mounted) setFundingOptions([]);
+      })
+      .finally(() => {
+        if (mounted) setIsLoading(false);
+      });
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [updateFundingBookmarkDetails]);
 
   const filteredOptions = useMemo(() => {
     const query = searchQuery.trim().toLocaleLowerCase();
@@ -53,9 +63,9 @@ export default function FundingScreen({ navigation }) {
         </Pressable>
         <Text style={styles.eyebrow}>STUDENT FUNDING</Text>
         <Text style={styles.title}>Funding</Text>
-        <Text style={styles.intro}>Explore support for your studies. Start with South Africa's national student funding scheme.</Text>
+        <Text style={styles.intro}>Explore support for your studies. Start with South Africa&apos;s national student funding scheme.</Text>
 
-        <View style={styles.searchBox}>
+        {!isLoading && <View style={styles.searchBox}>
           <Ionicons name="search-outline" size={21} color={colors.mutedText} />
           <TextInput
             value={searchQuery}
@@ -73,28 +83,38 @@ export default function FundingScreen({ navigation }) {
               <Ionicons name="close-circle" size={21} color={colors.mutedText} />
             </Pressable>
           )}
-        </View>
+        </View>}
 
         <Text style={styles.sectionTitle}>Funding opportunities</Text>
-        {filteredOptions.map((option) => {
-          const { days, isClosed } = getFundingCountdown(now, option);
-          const isFeatured = option.id === NSFAS.id;
+        {isLoading ? (
+          <View style={styles.loadingState} accessibilityRole="progressbar" accessibilityLabel="Loading bursaries">
+            <ActivityIndicator size="large" color={colors.primary} />
+            <Text style={styles.loadingTitle}>Loading bursaries</Text>
+            <Text style={styles.loadingText}>Fetching the latest funding opportunities…</Text>
+          </View>
+        ) : filteredOptions.map((option) => {
+          const isFeatured = option.id === "nsfas";
+          const bookmarked = isFundingBookmarked(option.id);
+          const openDetails = () => navigation.navigate("FundingDetails", { fundingId: option.id });
+          const toggleBookmark = () => {
+            bookmarked ? removeFundingBookmark(option.id) : saveFundingBookmark(option);
+          };
 
-          return (
-            <Pressable
-              key={option.id}
-              onPress={() => navigation.navigate("FundingDetails", { fundingId: option.id })}
-              accessibilityRole="button"
-              accessibilityLabel={`View ${option.name} funding details`}
-              style={({ pressed }) => [isFeatured ? styles.featureCard : styles.listCard, pressed && styles.pressed]}
-            >
-              {isFeatured ? (
-                <ImageBackground source={NSFAS_IMAGE} resizeMode="cover" imageStyle={styles.image} style={styles.imageBackground}>
-                  <View style={styles.shade} />
-                  <View style={styles.cardContent}>
+          return isFeatured ? (
+            <View key={option.id} style={styles.featureCard}>
+              <ImageBackground source={NSFAS_IMAGE} resizeMode="cover" imageStyle={styles.image} style={styles.imageBackground}>
+                <View style={styles.shade} />
+                <Pressable
+                  onPress={openDetails}
+                  accessibilityRole="button"
+                  accessibilityLabel={`View ${option.name} funding details`}
+                  style={({ pressed }) => [styles.cardContent, pressed && styles.pressed]}
+                >
                     <View style={styles.topRow}>
                       <View style={styles.featureBadge}><Text style={styles.featureBadgeText}>FEATURED FUNDING</Text></View>
-                      <Ionicons name="arrow-forward-circle" size={30} color="#FFFFFF" />
+                      <View style={styles.featureActions}>
+                        <Ionicons name="arrow-forward-circle" size={30} color="#FFFFFF" />
+                      </View>
                     </View>
                     <Text style={styles.cardTitle}>{option.name}</Text>
                     <Text style={styles.cardSubtitle}>{option.fullName}</Text>
@@ -103,10 +123,27 @@ export default function FundingScreen({ navigation }) {
                       <Ionicons name="calendar-outline" size={17} color="#FFFFFF" />
                       <Text style={styles.dateText}>{isClosed ? "Applications closed" : `${days} day${days === 1 ? "" : "s"} until closing`} · Closes {option.closes}</Text>
                     </View>
-                  </View>
-                </ImageBackground>
-              ) : (
-                <View style={styles.listCardContent}>
+                </Pressable>
+                <Pressable
+                  onPress={toggleBookmark}
+                  accessibilityRole="button"
+                  accessibilityLabel={`${bookmarked ? "Remove" : "Add"} ${option.name} ${bookmarked ? "from" : "to"} bookmarks`}
+                  hitSlop={8}
+                  style={({ pressed }) => [styles.featureBookmark, styles.featureBookmarkOverlay, pressed && styles.pressed]}
+                >
+                  <Ionicons name={bookmarked ? "bookmark" : "bookmark-outline"} size={20} color="#FFFFFF" />
+                </Pressable>
+              </ImageBackground>
+            </View>
+          ) : (
+            <View key={option.id} style={styles.listCard}>
+              <View style={styles.listCardContent}>
+                <Pressable
+                  onPress={openDetails}
+                  accessibilityRole="button"
+                  accessibilityLabel={`View ${option.name} funding details`}
+                  style={({ pressed }) => [styles.listMainContent, pressed && styles.pressed]}
+                >
                   <View style={styles.listIcon}><Ionicons name="wallet-outline" size={24} color={colors.primary} /></View>
                   <View style={styles.listCopy}>
                     <View style={styles.listTitleRow}>
@@ -117,19 +154,22 @@ export default function FundingScreen({ navigation }) {
                     <Text style={styles.listMeta}>{option.provider} · closes {option.closes}</Text>
                   </View>
                   <Ionicons name="chevron-forward" size={20} color={colors.mutedText} />
-                </View>
-              )}
-            </Pressable>
+                </Pressable>
+                <Pressable onPress={toggleBookmark} accessibilityRole="button" accessibilityLabel={`${bookmarked ? "Remove" : "Add"} ${option.name} ${bookmarked ? "from" : "to"} bookmarks`} hitSlop={8} style={styles.listBookmark}>
+                  <Ionicons name={bookmarked ? "bookmark" : "bookmark-outline"} size={20} color={colors.primary} />
+                </Pressable>
+              </View>
+            </View>
           );
         })}
-        {filteredOptions.length === 0 && (
+        {!isLoading && filteredOptions.length === 0 && (
           <View style={styles.emptyState}>
             <Ionicons name="search-outline" size={32} color={colors.primary} />
             <Text style={styles.emptyTitle}>No bursaries found</Text>
             <Text style={styles.emptyText}>Try another name or clear your search.</Text>
           </View>
         )}
-        {!searchQuery.trim() && <View style={styles.comingSoon}>
+        {!isLoading && !searchQuery.trim() && <View style={styles.comingSoon}>
           <Ionicons name="add-circle-outline" size={24} color={colors.primary} />
           <View style={styles.comingSoonText}>
             <Text style={styles.comingSoonTitle}>Live bursary directory</Text>
@@ -153,9 +193,13 @@ function makeStyles(c) {
     searchBox: { flexDirection: "row", alignItems: "center", gap: 10, backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 14, paddingHorizontal: 15, height: 54, marginBottom: 28 },
     searchInput: { flex: 1, color: c.text, fontSize: 15, height: "100%" },
     sectionTitle: { color: c.text, fontSize: 20, fontWeight: "700", marginBottom: 14 },
+    loadingState: { minHeight: 190, alignItems: "center", justifyContent: "center", backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 18, padding: 24 },
+    loadingTitle: { color: c.text, fontSize: 16, fontWeight: "700", marginTop: 14 },
+    loadingText: { color: c.secondaryText, fontSize: 13, textAlign: "center", marginTop: 5 },
     featureCard: { borderRadius: 22, overflow: "hidden", elevation: 4, backgroundColor: c.primary },
     listCard: { backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 18, marginTop: 14 },
     listCardContent: { flexDirection: "row", alignItems: "center", gap: 12, padding: 17 },
+    listMainContent: { flex: 1, flexDirection: "row", alignItems: "center", gap: 12 },
     listIcon: { width: 46, height: 46, borderRadius: 13, backgroundColor: c.primarySoft, alignItems: "center", justifyContent: "center" },
     listCopy: { flex: 1 },
     listTitleRow: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 8 },
@@ -170,6 +214,10 @@ function makeStyles(c) {
     shade: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0, 42, 42, 0.76)" },
     cardContent: { padding: 22 },
     topRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 30 },
+    featureActions: { flexDirection: "row", alignItems: "center", gap: 10 },
+    featureBookmark: { width: 38, height: 38, borderRadius: 13, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(255,255,255,0.18)" },
+    featureBookmarkOverlay: { position: "absolute", top: 22, right: 68 },
+    listBookmark: { width: 38, height: 38, borderRadius: 12, alignItems: "center", justifyContent: "center", backgroundColor: c.primarySoft },
     featureBadge: { backgroundColor: "rgba(255,255,255,0.2)", paddingHorizontal: 11, paddingVertical: 7, borderRadius: 50 },
     featureBadgeText: { color: "#FFFFFF", fontSize: 11, fontWeight: "800", letterSpacing: 0.8 },
     cardTitle: { color: "#FFFFFF", fontSize: 36, fontWeight: "800" },

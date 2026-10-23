@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   ActivityIndicator,
@@ -6,15 +6,19 @@ import {
   Linking,
   Pressable,
   StyleSheet,
-  Text,
+  
   View,
 } from "react-native";
+import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { WebView } from "react-native-webview";
 
 import { getUniversityTheme } from "../data/universityTheme";
+import { useProfile } from "../context/ProfileContext";
 
 export default function ProspectusScreen({ navigation, route }) {
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const university = route.params?.university;
   const url = route.params?.url;
   const theme = getUniversityTheme(university);
@@ -39,13 +43,13 @@ export default function ProspectusScreen({ navigation, route }) {
             hitSlop={8}
             style={({ pressed }) => [styles.iconButton, pressed && styles.pressed]}
           >
-            <Ionicons name="arrow-back" size={24} color="#FFFFFF" />
+            <Ionicons name="arrow-back" size={24} color={colors.text} />
           </Pressable>
           <Text style={styles.headerTitle}>Prospectus</Text>
           <View style={styles.iconButton} />
         </View>
         <View style={styles.messageContainer}>
-          <Ionicons name="document-text-outline" size={54} color="#687384" />
+          <Ionicons name="document-text-outline" size={54} color={colors.mutedText} />
           <Text style={styles.messageTitle}>Prospectus unavailable</Text>
           <Text style={styles.messageText}>
             This university does not have a valid prospectus link yet.
@@ -65,7 +69,7 @@ export default function ProspectusScreen({ navigation, route }) {
           hitSlop={8}
           style={({ pressed }) => [styles.iconButton, pressed && styles.pressed]}
         >
-          <Ionicons name="arrow-back" size={24} color="#FFFFFF" />
+          <Ionicons name="arrow-back" size={24} color={colors.text} />
         </Pressable>
         <View style={styles.titleWrap}>
           <Text style={styles.headerTitle} numberOfLines={1}>
@@ -82,13 +86,13 @@ export default function ProspectusScreen({ navigation, route }) {
           hitSlop={8}
           style={({ pressed }) => [styles.iconButton, pressed && styles.pressed]}
         >
-          <Ionicons name="open-outline" size={22} color="#FFFFFF" />
+          <Ionicons name="open-outline" size={22} color={colors.text} />
         </Pressable>
       </View>
 
       {hasError ? (
         <View style={styles.messageContainer}>
-          <Ionicons name="cloud-offline-outline" size={54} color="#687384" />
+          <Ionicons name="cloud-offline-outline" size={54} color={colors.mutedText} />
           <Text style={styles.messageTitle}>Could not display this prospectus</Text>
           <Text style={styles.messageText}>
             The university may not allow its page to be embedded. You can still open it in your browser.
@@ -130,16 +134,17 @@ export default function ProspectusScreen({ navigation, route }) {
   );
 }
 
-const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#05080D" },
+function makeStyles(colors) {
+  return StyleSheet.create({
+  safeArea: { flex: 1, backgroundColor: colors.background },
   header: {
     minHeight: 68,
     paddingHorizontal: 12,
     flexDirection: "row",
     alignItems: "center",
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: "#2A313D",
-    backgroundColor: "#0D121A",
+    borderBottomColor: colors.border,
+    backgroundColor: colors.surface,
   },
   iconButton: {
     width: 46,
@@ -149,15 +154,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   titleWrap: { flex: 1, paddingHorizontal: 8, alignItems: "center" },
-  headerTitle: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
-  headerSubtitle: { marginTop: 3, color: "#909AAA", fontSize: 11 },
-  webView: { flex: 1, backgroundColor: "#FFFFFF" },
+  headerTitle: { color: colors.text, fontSize: 16, fontWeight: "800" },
+  headerSubtitle: { marginTop: 3, color: colors.mutedText, fontSize: 11 },
+  webView: { flex: 1, backgroundColor: colors.background },
   loadingContainer: {
     ...StyleSheet.absoluteFillObject,
     alignItems: "center",
     justifyContent: "center",
     gap: 12,
-    backgroundColor: "#05080D",
+    backgroundColor: colors.background,
   },
   loadingText: { color: "#B8C0CC", fontSize: 14, fontWeight: "600" },
   messageContainer: {
@@ -168,14 +173,14 @@ const styles = StyleSheet.create({
   },
   messageTitle: {
     marginTop: 18,
-    color: "#FFFFFF",
+    color: colors.text,
     fontSize: 20,
     fontWeight: "800",
     textAlign: "center",
   },
   messageText: {
     marginTop: 10,
-    color: "#9DA6B4",
+    color: colors.secondaryText,
     fontSize: 14,
     lineHeight: 21,
     textAlign: "center",
@@ -192,4 +197,5 @@ const styles = StyleSheet.create({
   },
   fallbackButtonText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
   pressed: { opacity: 0.7 },
-});
+  });
+}

@@ -1,14 +1,16 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   collection,
+  deleteDoc,
   doc,
   getDocs,
   onSnapshot,
   setDoc,
 } from "firebase/firestore";
 import {
+  Alert,
   FlatList,
   KeyboardAvoidingView,
   Modal,
@@ -28,20 +30,8 @@ import { useProfile } from "../context/ProfileContext";
 import { db } from "./firebaseConfig";
 
 const APPLICATIONS_STORAGE_KEY = "@careercompass:applications:";
-
-const COLORS = {
-  primary: "#117C72",
-  primaryDark: "#0B665E",
-  primarySoft: "#E7F3F1",
-  background: "#F6F8FC",
-  surface: "#FFFFFF",
-  text: "#172033",
-  secondary: "#667085",
-  muted: "#98A2B3",
-  border: "#DDE4ED",
-  input: "#F8FAFC",
-  danger: "#D64545",
-};
+// NEW: changes made while offline wait here until they reach Firestore
+const APPLICATIONS_PENDING_KEY = "@careercompass:applicationsPending:";
 
 const STATUSES = [
   { label: "Applied", color: "#3478F6" },
@@ -60,8 +50,13 @@ const initialForm = {
   notes: "",
 };
 
-function ApplicationForm({ visible, onClose, onSubmit }) {
-  const [form, setForm] = useState(initialForm);
+function ApplicationForm({ visible, application, onClose, onSubmit, onDelete }) {
+  const { colors } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
+  const [form, setForm] = useState(() =>
+    application ? { ...initialForm, ...application } : initialForm,
+  );
   const [errors, setErrors] = useState({});
   const [universityMenuVisible, setUniversityMenuVisible] = useState(false);
   const [statusMenuVisible, setStatusMenuVisible] = useState(false);
@@ -100,7 +95,7 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
     if (Object.keys(nextErrors).length > 0) return;
 
     onSubmit({
-      id: `${Date.now()}`,
+      id: application?.id || `${Date.now()}`,
       university: form.university.trim(),
       course: form.course.trim(),
       dateApplied: form.dateApplied.trim(),
@@ -108,6 +103,25 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
       notes: form.notes.trim(),
     });
     closeForm();
+  };
+
+  // NEW: delete (the D in CRUD), with a confirmation
+  const confirmDelete = () => {
+    Alert.alert(
+      "Delete application?",
+      `Remove your application to ${application.university}? This cannot be undone.`,
+      [
+        { text: "Cancel", style: "cancel" },
+        {
+          text: "Delete",
+          style: "destructive",
+          onPress: () => {
+            onDelete(application.id);
+            closeForm();
+          },
+        },
+      ],
+    );
   };
 
   return (
@@ -130,7 +144,9 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
         <View style={styles.sheet}>
           <View style={styles.sheetHandle} />
           <View style={styles.sheetHeader}>
-            <Text style={styles.sheetTitle}>Track Application</Text>
+          <Text style={styles.sheetTitle}>
+            {application ? "Edit Application" : "Track Application"}
+          </Text>
             <Pressable
               onPress={closeForm}
               accessibilityRole="button"
@@ -269,8 +285,22 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
               accessibilityRole="button"
               style={({ pressed }) => [styles.submitButton, pressed && styles.pressed]}
             >
-              <Text style={styles.submitButtonText}>Track Application</Text>
+              <Text style={styles.submitButtonText}>
+                {application ? "Save Changes" : "Track Application"}
+              </Text>
             </Pressable>
+
+            {!!application && (
+              <Pressable
+                onPress={confirmDelete}
+                accessibilityRole="button"
+                accessibilityLabel="Delete application"
+                style={({ pressed }) => [styles.deleteButton, pressed && styles.pressed]}
+              >
+                <Ionicons name="trash-outline" size={18} color={COLORS.danger} />
+                <Text style={styles.deleteButtonText}>Delete application</Text>
+              </Pressable>
+            )}
           </ScrollView>
         </View>
       </KeyboardAvoidingView>
@@ -278,9 +308,17 @@ function ApplicationForm({ visible, onClose, onSubmit }) {
   );
 }
 
-function ApplicationCard({ application }) {
+function ApplicationCard({ application, onPress }) {
+  const { colors } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   return (
-    <View style={styles.card}>
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={`${application.university}, ${application.course}, status ${application.status.label}. Edit application`}
+      style={({ pressed }) => [styles.card, pressed && styles.pressed]}
+    >
       <View style={styles.cardTopRow}>
         <View style={styles.cardIcon}>
           <Ionicons name="school-outline" size={22} color={COLORS.primary} />
@@ -304,24 +342,58 @@ function ApplicationCard({ application }) {
         )}
       </View>
       {!!application.notes && <Text style={styles.cardNotes}>{application.notes}</Text>}
-    </View>
+    </Pressable>
   );
 }
 
 export default function Applications({ navigation }) {
   const [applications, setApplications] = useState([]);
   const [formVisible, setFormVisible] = useState(false);
+  const [editingApplication, setEditingApplication] = useState(null);
+  const [formSession, setFormSession] = useState(0);
   const [loadedScope, setLoadedScope] = useState(null);
-  const { firebaseUser } = useProfile();
+  const { firebaseUser, setApplicationCount, colors, resolvedTheme } = useProfile();
+  const COLORS = useMemo(() => getThemeColors(colors), [colors]);
+  const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const userId = firebaseUser?.uid ?? null;
   const storageScope = userId ?? "guest";
+  // NEW: changes that have not reached Firestore yet (added/edited/deleted while offline)
+  const pendingRef = useRef({ upserts: {}, deletes: [] });
+
+  const savePending = () =>
+    AsyncStorage.setItem(
+      `${APPLICATIONS_PENDING_KEY}${storageScope}`,
+      JSON.stringify(pendingRef.current),
+    ).catch((error) => console.warn("Unable to save pending changes locally.", error));
 
   useEffect(() => {
     let isActive = true;
     let unsubscribe;
-    setLoadedScope(null);
 
-    (async () => {
+    // Sends anything saved while offline to Firestore. Nothing is awaited on purpose:
+    // when the phone is offline the write simply waits until it is online again.
+    const flushPending = () => {
+      if (!userId) return;
+      const { upserts, deletes } = pendingRef.current;
+      Object.values(upserts).forEach((application) => {
+        setDoc(doc(db, "users", userId, "applications", application.id), application)
+          .then(() => {
+            delete pendingRef.current.upserts[application.id];
+            savePending();
+          })
+          .catch((error) => console.warn("Unable to sync application to Firestore.", error));
+      });
+      deletes.forEach((id) => {
+        deleteDoc(doc(db, "users", userId, "applications", id))
+          .then(() => {
+            pendingRef.current.deletes = pendingRef.current.deletes.filter((item) => item !== id);
+            savePending();
+          })
+          .catch((error) => console.warn("Unable to delete application in Firestore.", error));
+      });
+    };
+
+    const loadApplications = async () => {
       let cachedApplications = [];
       try {
         const storedApplications = await AsyncStorage.getItem(
@@ -331,6 +403,17 @@ export default function Applications({ navigation }) {
         if (isActive) setApplications(cachedApplications);
       } catch (error) {
         console.warn("Unable to load applications from local storage.", error);
+      }
+
+      try {
+        const storedPending = await AsyncStorage.getItem(
+          `${APPLICATIONS_PENDING_KEY}${storageScope}`,
+        );
+        pendingRef.current = storedPending
+          ? JSON.parse(storedPending)
+          : { upserts: {}, deletes: [] };
+      } catch (error) {
+        pendingRef.current = { upserts: {}, deletes: [] };
       }
 
       if (!isActive) return;
@@ -348,26 +431,42 @@ export default function Applications({ navigation }) {
             ),
           );
         }
-        unsubscribe = onSnapshot(
-          applicationsRef,
-          (nextSnapshot) => {
-            if (!isActive) return;
-            const cloudApplications = nextSnapshot.docs.map((application) => application.data());
-            if (cloudApplications.length || cachedApplications.length === 0) {
-              setApplications(cloudApplications);
-            }
-          },
-          (error) => console.warn("Unable to sync applications from Firestore.", error),
-        );
       } catch (error) {
         console.warn("Unable to load applications from Firestore.", error);
       }
-    })();
+      if (!isActive) return;
+
+      // CHANGED: the live listener is attached even if the first read failed (offline),
+      // so the list syncs by itself as soon as the phone is back online.
+      unsubscribe = onSnapshot(
+        applicationsRef,
+        (nextSnapshot) => {
+          if (!isActive) return;
+          const merged = new Map(
+            nextSnapshot.docs.map((application) => [application.id, application.data()]),
+          );
+          // changes made offline win over the older cloud copy
+          pendingRef.current.deletes.forEach((id) => merged.delete(id));
+          Object.values(pendingRef.current.upserts).forEach((application) =>
+            merged.set(application.id, application),
+          );
+          const nextApplications = [...merged.values()];
+          if (nextApplications.length || cachedApplications.length === 0) {
+            setApplications(nextApplications);
+          }
+        },
+        (error) => console.warn("Unable to sync applications from Firestore.", error),
+      );
+      flushPending();
+    };
+
+    loadApplications();
 
     return () => {
       isActive = false;
       unsubscribe?.();
     };
+    // loadedScope is no longer a dependency: it made this whole effect run twice on every open
   }, [storageScope, userId]);
 
   useEffect(() => {
@@ -378,19 +477,67 @@ export default function Applications({ navigation }) {
     ).catch((error) => console.warn("Unable to save applications locally.", error));
   }, [applications, loadedScope, storageScope]);
 
+  useEffect(() => {
+    if (loadedScope !== storageScope) return;
+    setApplicationCount(applications.length).catch((error) =>
+      console.warn("Unable to save application count to Firestore.", error),
+    );
+  }, [applications.length, loadedScope, setApplicationCount, storageScope]);
+
+  const openNewApplication = () => {
+    setEditingApplication(null);
+    setFormVisible(true);
+    setFormSession((current) => current + 1);
+  };
+
+  const openApplicationForEdit = (application) => {
+    setEditingApplication(application);
+    setFormVisible(true);
+    setFormSession((current) => current + 1);
+  };
+
   const saveApplication = (application) => {
-    setApplications((current) => [application, ...current]);
+    setApplications((current) =>
+      editingApplication
+        ? current.map((item) => item.id === application.id ? application : item)
+        : [application, ...current],
+    );
     if (userId) {
+      // remembered as "pending" until Firestore confirms it, so an offline save is never lost
+      pendingRef.current.upserts[application.id] = application;
+      pendingRef.current.deletes = pendingRef.current.deletes.filter((id) => id !== application.id);
+      savePending();
       setDoc(
         doc(db, "users", userId, "applications", application.id),
         application,
-      ).catch((error) => console.warn("Unable to sync application to Firestore.", error));
+      )
+        .then(() => {
+          delete pendingRef.current.upserts[application.id];
+          savePending();
+        })
+        .catch((error) => console.warn("Unable to sync application to Firestore.", error));
+    }
+  };
+
+  // NEW: delete an application (local list + Firestore, also safe offline)
+  const deleteApplication = (id) => {
+    setApplications((current) => current.filter((item) => item.id !== id));
+    if (userId) {
+      delete pendingRef.current.upserts[id];
+      if (!pendingRef.current.deletes.includes(id)) pendingRef.current.deletes.push(id);
+      savePending();
+      deleteDoc(doc(db, "users", userId, "applications", id))
+        .then(() => {
+          pendingRef.current.deletes = pendingRef.current.deletes.filter((item) => item !== id);
+          savePending();
+        })
+        .catch((error) => console.warn("Unable to delete application in Firestore.", error));
     }
   };
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />
+      <StatusBar barStyle={resolvedTheme === "dark" ? "light-content" : "dark-content"} backgroundColor={COLORS.primary} />
       <View style={styles.header}>
         <Pressable
           onPress={() => navigation.goBack()}
@@ -398,16 +545,16 @@ export default function Applications({ navigation }) {
           accessibilityLabel="Go back"
           style={({ pressed }) => [styles.headerIconButton, pressed && styles.pressed]}
         >
-          <Ionicons name="chevron-back" size={25} color="#FFFFFF" />
+          <Ionicons name="chevron-back" size={25} color={COLORS.onPrimary} />
         </Pressable>
         <Text style={styles.headerTitle}>My Applications</Text>
         <Pressable
-          onPress={() => setFormVisible(true)}
+          onPress={openNewApplication}
           accessibilityRole="button"
           accessibilityLabel="Add application"
           style={({ pressed }) => [styles.addButton, pressed && styles.pressed]}
         >
-          <Ionicons name="add" size={20} color="#FFFFFF" />
+          <Ionicons name="add" size={20} color={COLORS.onPrimary} />
           <Text style={styles.addButtonText}>Add</Text>
         </Pressable>
       </View>
@@ -415,7 +562,12 @@ export default function Applications({ navigation }) {
       <FlatList
         data={applications}
         keyExtractor={({ id }) => id}
-        renderItem={({ item }) => <ApplicationCard application={item} />}
+        renderItem={({ item }) => (
+          <ApplicationCard
+            application={item}
+            onPress={() => openApplicationForEdit(item)}
+          />
+        )}
         ItemSeparatorComponent={() => <View style={styles.cardSeparator} />}
         contentContainerStyle={[
           styles.listContent,
@@ -433,11 +585,11 @@ export default function Applications({ navigation }) {
               submitted, and whether you’ve received an offer.
             </Text>
             <Pressable
-              onPress={() => setFormVisible(true)}
+              onPress={openNewApplication}
               accessibilityRole="button"
               style={({ pressed }) => [styles.emptyButton, pressed && styles.pressed]}
             >
-              <Ionicons name="add" size={21} color="#FFFFFF" />
+              <Ionicons name="add" size={21} color={COLORS.onPrimary} />
               <Text style={styles.emptyButtonText}>Track your first application</Text>
             </Pressable>
           </View>
@@ -445,15 +597,31 @@ export default function Applications({ navigation }) {
       />
 
       <ApplicationForm
+        key={formSession}
         visible={formVisible}
-        onClose={() => setFormVisible(false)}
+        application={editingApplication}
+        onClose={() => {
+          setFormVisible(false);
+          setEditingApplication(null);
+        }}
         onSubmit={saveApplication}
+        onDelete={deleteApplication}
       />
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
+function getThemeColors(colors) {
+  return {
+    ...colors,
+    primaryDark: colors.primary,
+    secondary: colors.secondaryText,
+    muted: colors.mutedText,
+  };
+}
+
+function makeStyles(COLORS) {
+  return StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
   header: {
     minHeight: 66,
@@ -470,7 +638,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "rgba(255,255,255,0.16)",
   },
-  headerTitle: { flex: 1, marginLeft: 12, color: "#FFFFFF", fontSize: 19, fontWeight: "800" },
+  headerTitle: { flex: 1, marginLeft: 12, color: COLORS.onPrimary, fontSize: 19, fontWeight: "800" },
   addButton: {
     minHeight: 42,
     paddingHorizontal: 14,
@@ -481,7 +649,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "rgba(255,255,255,0.12)",
   },
-  addButtonText: { marginLeft: 4, color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
+  addButtonText: { marginLeft: 4, color: COLORS.onPrimary, fontSize: 14, fontWeight: "800" },
   listContent: { padding: 20, paddingBottom: 38 },
   emptyListContent: { flexGrow: 1 },
   emptyState: { flex: 1, alignItems: "center", justifyContent: "center", paddingBottom: 64 },
@@ -512,7 +680,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: COLORS.primary,
   },
-  emptyButtonText: { marginLeft: 7, color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
+  emptyButtonText: { marginLeft: 7, color: COLORS.onPrimary, fontSize: 14, fontWeight: "800" },
   cardSeparator: { height: 14 },
   card: {
     padding: 18,
@@ -520,7 +688,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.border,
     backgroundColor: COLORS.surface,
-    shadowColor: "#172033",
+    shadowColor: COLORS.text,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.07,
     shadowRadius: 10,
@@ -555,7 +723,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 28,
     backgroundColor: COLORS.surface,
   },
-  sheetHandle: { width: 42, height: 4, marginTop: 10, alignSelf: "center", borderRadius: 2, backgroundColor: "#CBD5E1" },
+  sheetHandle: { width: 42, height: 4, marginTop: 10, alignSelf: "center", borderRadius: 2, backgroundColor: COLORS.border },
   sheetHeader: {
     minHeight: 58,
     paddingHorizontal: 22,
@@ -594,5 +762,8 @@ const styles = StyleSheet.create({
   notesShell: { minHeight: 92, alignItems: "flex-start" },
   notesInput: { minHeight: 88, marginLeft: 0, paddingTop: 14 },
   submitButton: { minHeight: 56, marginTop: 24, borderRadius: 28, alignItems: "center", justifyContent: "center", backgroundColor: COLORS.primary },
-  submitButtonText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
-});
+  submitButtonText: { color: COLORS.onPrimary, fontSize: 15, fontWeight: "800" },
+  deleteButton: { minHeight: 52, marginTop: 14, borderRadius: 26, borderWidth: 1, borderColor: COLORS.danger, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: COLORS.dangerSoft },
+  deleteButtonText: { marginLeft: 7, color: COLORS.danger, fontSize: 14, fontWeight: "800" },
+  });
+}

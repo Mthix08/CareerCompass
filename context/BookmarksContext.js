@@ -1,4 +1,5 @@
 import React, {
+  useCallback,
   createContext,
   useContext,
   useEffect,
@@ -14,15 +15,35 @@ import { db } from "../screens/firebaseConfig";
 const BookmarksContext = createContext(null);
 const UNIVERSITY_BOOKMARKS_KEY = "@careercompass:bookmarkedIds:";
 const COURSE_BOOKMARKS_KEY = "@careercompass:bookmarkedCourseIds:";
+const FUNDING_BOOKMARKS_KEY = "@careercompass:bookmarkedFundingIds:";
+const FUNDING_BOOKMARK_DATA_KEY = "@careercompass:bookmarkedFundingData:";
 
 export function BookmarksProvider({ children }) {
   const { isGuest, firebaseUser } = useProfile();
   const [bookmarkedIds, setBookmarkedIds] = useState([]);
   const [bookmarkedCourseIds, setBookmarkedCourseIds] = useState([]);
+  const [bookmarkedFundingIds, setBookmarkedFundingIds] = useState([]);
+  const [bookmarkedFunding, setBookmarkedFunding] = useState([]);
+  const bookmarkedFundingIdsRef = useRef(bookmarkedFundingIds);
+  bookmarkedFundingIdsRef.current = bookmarkedFundingIds;
   const [loadedScope, setLoadedScope] = useState(null);
   const [cloudReadyUid, setCloudReadyUid] = useState(null);
   const userId = firebaseUser?.uid ?? null;
   const storageScope = userId ?? "guest";
+
+  const updateFundingBookmarkDetails = useCallback((items) => {
+    if (!Array.isArray(items) || items.length === 0) return;
+    setBookmarkedFunding((current) => {
+      const savedIds = new Set(bookmarkedFundingIdsRef.current);
+      if (savedIds.size === 0) return current;
+      const byId = new Map(current.map((item) => [String(item.id), item]));
+      items.forEach((item) => {
+        const id = String(item.id);
+        if (savedIds.has(id)) byId.set(id, { ...byId.get(id), ...item, id });
+      });
+      return [...byId.values()].filter((item) => savedIds.has(String(item.id)));
+    });
+  }, []);
 
   // Load this account's local cache before merging in its cloud copy.
   useEffect(() => {
@@ -33,17 +54,23 @@ export function BookmarksProvider({ children }) {
     (async () => {
       try {
         try {
-          const [storedUniversityIds, storedCourseIds] = await Promise.all([
+          const [storedUniversityIds, storedCourseIds, storedFundingIds, storedFundingData] = await Promise.all([
             AsyncStorage.getItem(`${UNIVERSITY_BOOKMARKS_KEY}${storageScope}`),
             AsyncStorage.getItem(`${COURSE_BOOKMARKS_KEY}${storageScope}`),
+            AsyncStorage.getItem(`${FUNDING_BOOKMARKS_KEY}${storageScope}`),
+            AsyncStorage.getItem(`${FUNDING_BOOKMARK_DATA_KEY}${storageScope}`),
           ]);
           if (!isActive) return;
           setBookmarkedIds(storedUniversityIds ? JSON.parse(storedUniversityIds) : []);
           setBookmarkedCourseIds(storedCourseIds ? JSON.parse(storedCourseIds) : []);
+          setBookmarkedFundingIds(storedFundingIds ? JSON.parse(storedFundingIds) : []);
+          setBookmarkedFunding(storedFundingData ? JSON.parse(storedFundingData) : []);
         } catch (error) {
           if (isActive) {
             setBookmarkedIds([]);
             setBookmarkedCourseIds([]);
+            setBookmarkedFundingIds([]);
+            setBookmarkedFunding([]);
           }
         }
 
@@ -56,6 +83,9 @@ export function BookmarksProvider({ children }) {
             }
             if (isActive && Array.isArray(userData.bookmarkedCourseIds)) {
               setBookmarkedCourseIds(userData.bookmarkedCourseIds);
+            }
+            if (isActive && Array.isArray(userData.bookmarkedFundingIds)) {
+              setBookmarkedFundingIds(userData.bookmarkedFundingIds);
             }
           } catch (error) {
             console.warn("Unable to load bookmarks from Firestore.", error);
@@ -93,15 +123,40 @@ export function BookmarksProvider({ children }) {
   }, [bookmarkedCourseIds, loadedScope, storageScope]);
 
   useEffect(() => {
+    if (loadedScope !== storageScope) return;
+    AsyncStorage.setItem(
+      `${FUNDING_BOOKMARKS_KEY}${storageScope}`,
+      JSON.stringify(bookmarkedFundingIds),
+    ).catch(() => {
+      console.warn("Unable to save bursary bookmarks locally.");
+    });
+  }, [bookmarkedFundingIds, loadedScope, storageScope]);
+
+  useEffect(() => {
+    if (loadedScope !== storageScope) return;
+    AsyncStorage.setItem(
+      `${FUNDING_BOOKMARK_DATA_KEY}${storageScope}`,
+      JSON.stringify(bookmarkedFunding),
+    ).catch(() => {
+      console.warn("Unable to cache bursary bookmark details locally.");
+    });
+  }, [bookmarkedFunding, loadedScope, storageScope]);
+
+  // Pushes all three bookmark lists to the user's Firestore document.
+  useEffect(() => {
     if (!userId || cloudReadyUid !== userId || loadedScope !== storageScope) return;
     setDoc(
       doc(db, "users", userId),
-      { bookmarkedUniversityIds: bookmarkedIds, bookmarkedCourseIds },
+      { bookmarkedUniversityIds: bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds },
       { merge: true },
     ).catch((error) => {
       console.warn("Unable to sync bookmarks to Firestore.", error);
     });
-  }, [bookmarkedIds, bookmarkedCourseIds, cloudReadyUid, loadedScope, storageScope, userId]);
+  }, [bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds, cloudReadyUid, loadedScope, storageScope, userId]);
+
+  // REMOVED: the second "loadBookmarks" effect and "persistBookmarks".
+  // They read/wrote a different Firestore field ("bookmarkedIds"), emptied the lists
+  // for guests, and fought with the sync above. The effects above already do the job.
 
   const value = useMemo(
     () => ({
@@ -120,15 +175,40 @@ export function BookmarksProvider({ children }) {
       bookmarkedCourseIds,
       isCourseBookmarked: (courseId) => bookmarkedCourseIds.includes(courseId),
       addCourseBookmark: (courseId) =>
-        setBookmarkedCourseIds((current) =>
-          current.includes(courseId) ? current : [...current, courseId],
-        ),
+        setBookmarkedCourseIds((current) => {
+          if (current.includes(courseId)) return current;
+          return [...current, courseId];
+        }),
       removeCourseBookmark: (courseId) =>
         setBookmarkedCourseIds((current) =>
           current.filter((id) => id !== courseId),
         ),
+      bookmarkedFundingIds,
+      isFundingBookmarked: (fundingId) => bookmarkedFundingIds.includes(String(fundingId)),
+      addFundingBookmark: (fundingId) =>
+        setBookmarkedFundingIds((current) => {
+          const id = String(fundingId);
+          return current.includes(id) ? current : [...current, id];
+        }),
+      saveFundingBookmark: (funding) => {
+        if (!funding?.id) return;
+        const id = String(funding.id);
+        setBookmarkedFundingIds((current) => current.includes(id) ? current : [...current, id]);
+        setBookmarkedFunding((current) => {
+          const next = current.filter((item) => String(item.id) !== id);
+          return [...next, { ...funding, id }];
+        });
+      },
+      removeFundingBookmark: (fundingId) =>
+        (() => {
+          const id = String(fundingId);
+          setBookmarkedFundingIds((current) => current.filter((itemId) => itemId !== id));
+          setBookmarkedFunding((current) => current.filter((item) => String(item.id) !== id));
+        })(),
+      updateFundingBookmarkDetails,
+      bookmarkedFunding,
     }),
-    [bookmarkedIds, bookmarkedCourseIds, isGuest],
+    [bookmarkedIds, bookmarkedCourseIds, bookmarkedFundingIds, bookmarkedFunding, isGuest, updateFundingBookmarkDetails],
   );
 
   return (

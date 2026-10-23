@@ -21,7 +21,7 @@ export default function LanguageButton({ onPress, style }) {
     >
       <Ionicons name="globe-outline" size={16} color={ACTIVE_COLOR} />
 
-      <Text style={styles.label}>language</Text>
+    <Text style={styles.label}>NEW BUTTON</Text>
 
       <View style={styles.codeBadge}>
         <Text style={styles.codeText}>{lang}</Text>

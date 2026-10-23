@@ -40,12 +40,10 @@ export default function TranslatedText({
 
     translateText(original, lang)
       .then((result) => {
-        if (active) {
-          setTranslation({ original, lang, text: result });
-        }
+        if (active) setTranslation({ original, lang, text: result });
       })
       .catch(() => {
-        // The translation service reports each failed request once.
+        // Keep showing the original text if translation fails
       });
 
     return () => {

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import LanguageDropdown from '../components/LanguageDropdown';
 import { useLanguage } from '../context/LanguageContext';
+import { useProfile } from '../context/ProfileContext';
 import { translateTexts } from '../services/translate';
 
 const ENGLISH_TEXT = [
@@ -13,6 +14,8 @@ const ENGLISH_TEXT = [
 
 export default function LanguageScreen() {
   const { lang, changeLanguage } = useLanguage();
+  const { colors } = useProfile();
+  const styles = useMemo(() => makeStyles(colors), [colors]);
   const [text, setText] = useState(ENGLISH_TEXT);
 
   useEffect(() => {
@@ -51,16 +54,23 @@ export default function LanguageScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { padding: 20, backgroundColor: '#F8FAFC', flexGrow: 1 },
-  title: { fontSize: 24, fontWeight: '700', color: '#1A2B4A' },
-  subtitle: { fontSize: 14, color: '#64748B', marginTop: 6, marginBottom: 20 },
-  sample: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 14,
-    padding: 16,
-    marginTop: 10,
-  },
-  sampleTitle: { fontSize: 18, fontWeight: '700', color: '#1A2B4A' },
-  sampleBody: { fontSize: 14, color: '#64748B', marginTop: 6 },
-});
+function makeStyles(colors) {
+  return StyleSheet.create({
+    container: { padding: 20, backgroundColor: colors.background, flexGrow: 1 },
+    title: { fontSize: 24, fontWeight: '700', color: colors.text },
+    subtitle: {
+      fontSize: 14,
+      color: colors.secondaryText,
+      marginTop: 6,
+      marginBottom: 20,
+    },
+    sample: {
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      padding: 16,
+      marginTop: 10,
+    },
+    sampleTitle: { fontSize: 18, fontWeight: '700', color: colors.text },
+    sampleBody: { fontSize: 14, color: colors.secondaryText, marginTop: 6 },
+  });
+}

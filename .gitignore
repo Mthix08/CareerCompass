@@ -33,6 +33,7 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
 
 # typescript
@@ -42,3 +43,4 @@ yarn-error.*
 /ios
 /android
 .env
+serviceAccountKey.json
