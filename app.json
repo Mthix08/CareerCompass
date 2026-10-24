@@ -20,6 +20,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.anonymous.CareerCompass",
+      "googleServicesFile": "./google-services.json",
       "permissions": []
     },
     "web": {

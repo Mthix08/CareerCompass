@@ -41,35 +41,6 @@
           ]
         }
       }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:57484306899:android:fa13b12ddf6e2f25f4a726",
-        "android_client_info": {
-          "package_name": "com.mthix08.careercompass.dev"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "57484306899-c2j6esmm9fb2mj48e0tj5uv0qk7n5asc.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB8YTJvCl5bK7WBGbFNLUYF5L1hG_DcLUU"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "57484306899-c2j6esmm9fb2mj48e0tj5uv0qk7n5asc.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
     }
   ],
   "configuration_version": "1"
