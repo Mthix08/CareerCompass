@@ -7,9 +7,10 @@ import {
   Pressable,
   ScrollView,
   StyleSheet,
-  Text,
+  
   View,
 } from "react-native";
+import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
 import { getCollegeImage, getCollegeLogo } from "../data/collegeImages";
