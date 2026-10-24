@@ -19,7 +19,7 @@ export const universities = [
   university({
     id: "uj", name: "University of Johannesburg", shortName: "UJ", province: "Gauteng", type: "Comprehensive university",
     registrationFeeInfo: { year: 2026, summary: "Minimum upfront payment: R5,950 for non-residence students; R9,850 for students with a confirmed residence place. International students pay 40% of fees upfront.", details: "Year modules: 60% of annual fees (including first payment) by 15 April; balance by 15 August. First-semester modules: full semester fees by 15 April; second-semester modules: by 15 August. Early settlement discounts: 5% by 28 February, 3% by 31 March, or 2% by 30 April; apply with proof of payment and account statement.", sourceUrl: "https://www.uj.ac.za/wp-content/uploads/2022/01/uj-2026-fee-booklet-13032026.pdf" },
-    prospectusUrl: "https://www.uj.ac.za/wp-content/uploads/2026/06/uj_undergrad_prospectus2027.pdf",
+    prospectusUrl: "https://www.uj.ac.za/wp-content/uploads/2026/07/uj_undergrad_prospectus2027_online_25jun2026.pdf",
     applicationFee: 0, applicationFeeLabel: "Free to apply", image: require("../assets/UjCampus.jpg"), logo: require("../assets/UJLogoo.png"),
     theme: { accent: "#F26522", accentLight: "#F4B08F", accentSoft: "rgba(242,101,34,0.17)", placeholderBackground: "#301B14" },
     description: "UJ is a comprehensive public university in Johannesburg, offering career-focused and research-led programmes across business, engineering, health sciences, humanities, education, law, art and science.",
