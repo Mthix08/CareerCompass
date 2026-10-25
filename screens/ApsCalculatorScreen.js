@@ -3,6 +3,7 @@ import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
   FlatList,
+  Image,
   KeyboardAvoidingView,
   Modal,
   Platform,
@@ -18,6 +19,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
 import { loadCollection } from "../data/firestoreContent";
 import { getApsUniversityMatches } from "../data/apsMatching";
+import { universities } from "../data/universities";
+import { calculateUniversityScores } from "../services/apsScoring";
 
 const getThemeColors = (colors, resolvedTheme) => ({
   ...colors,
@@ -213,54 +216,123 @@ function ApsResultModal({ result, onClose, onViewMatches }) {
       <View style={styles.resultModalRoot}>
         <Pressable style={styles.backdrop} onPress={onClose} />
         <View style={styles.resultCard}>
-          <View style={styles.resultIcon}>
-            <Ionicons name="school-outline" size={32} color={COLORS.primary} />
-          </View>
-          <Text style={styles.resultEyebrow}>GENERAL APS RESULT</Text>
-          <Text style={styles.resultValue}>{result?.totalAps}</Text>
-          <Text style={styles.resultUnit}>Total APS</Text>
-          <Text style={styles.resultDescription}>
-            Calculated from {result?.subjectCount} eligible{" "}
-            {result?.subjectCount === 1 ? "subject" : "subjects"} in{" "}
-            {result?.period}. Life Orientation is not included.
-          </Text>
-          <Text style={styles.resultDescription}>
-            {result?.matchedUniversities} {result?.matchedUniversities === 1 ? "university" : "universities"} have courses that meet your calculated APS.
-          </Text>
-          {result?.collegeCount > 0 && (
-            <Text style={styles.resultDescription}>
-              {result.collegesUseAps
-                ? `${result.matchedColleges} ${result.matchedColleges === 1 ? "college meets" : "colleges meet"} your calculated APS.`
-                : `${result.collegeCount} public TVET colleges also offer programmes. TVET colleges usually admit based on your grade and subject results rather than an APS, so check each college's entry requirements.`}
-            </Text>
-          )}
-          <View style={styles.resultNotice}>
-            <Ionicons
-              name="information-circle-outline"
-              size={19}
-              color={COLORS.primary}
-            />
-            <Text style={styles.resultNoticeText}>
-              Each institution uses its own scoring method. Estimates are labelled; meeting an APS minimum does not guarantee admission.
-            </Text>
-          </View>
-          <Pressable
-            onPress={onViewMatches}
-            accessibilityRole="button"
-            style={({ pressed }) => [styles.resultButton, pressed && styles.pressed]}
-          >
-            <Text style={styles.resultButtonText}>View matching courses</Text>
-          </Pressable>
           <Pressable
             onPress={onClose}
             accessibilityRole="button"
-            style={({ pressed }) => [
-              styles.resultButton,
-              pressed && styles.pressed,
-            ]}
+            accessibilityLabel="Close APS results"
+            hitSlop={10}
+            style={({ pressed }) => [styles.resultCloseButton, pressed && styles.pressed]}
           >
-            <Text style={styles.resultButtonText}>Done</Text>
+            <Ionicons name="close" size={22} color={COLORS.secondary} />
           </Pressable>
+          <FlatList
+            data={result?.universityScores || []}
+            keyExtractor={(item) => item.id}
+            style={styles.universityResultsList}
+            contentContainerStyle={styles.universityResultsContent}
+            showsVerticalScrollIndicator
+            ListHeaderComponent={(
+              <View>
+                <View style={styles.genericApsCard}>
+                  <View style={styles.resultIcon}>
+                    <Ionicons name="school-outline" size={30} color={COLORS.primary} />
+                  </View>
+                  <Text style={styles.resultEyebrow}>GENERIC APS SCORE</Text>
+                  <Text style={styles.resultValue}>{result?.totalAps}</Text>
+                  <Text style={styles.resultUnit}>Overall APS estimate</Text>
+                </View>
+                <Text style={styles.resultEyebrow}>INSTITUTION SCORES</Text>
+                <Text style={styles.resultDescription}>
+                  Institution scores are separate from the generic APS above. They use {result?.subjectCount} entered eligible{" "}
+                  {result?.subjectCount === 1 ? "subject" : "subjects"} from {result?.period}. The generic APS above excludes Life Orientation; institution rules may treat it differently.
+                </Text>
+                <Text style={styles.resultDescription}>
+                  Based on your generic APS, {result?.matchedUniversities} {result?.matchedUniversities === 1 ? "university has" : "universities have"} courses at or below the listed minimum. This is a broad score comparison, not an eligibility result.
+                </Text>
+                {result?.collegeCount > 0 && (
+                  <Text style={styles.resultDescription}>
+                    {result.collegesUseAps
+                      ? `${result.matchedColleges} ${result.matchedColleges === 1 ? "college meets" : "colleges meet"} the generic APS comparison.`
+                      : `${result.collegeCount} public TVET colleges are listed. Check each college's subject and grade requirements.`}
+                  </Text>
+                )}
+                <View style={styles.resultNotice}>
+                  <Ionicons name="information-circle-outline" size={19} color={COLORS.primary} />
+                  <Text style={styles.resultNoticeText}>
+                    Scores are guidance estimates. Admissions requirements can change, methods may differ by qualification, and a score does not guarantee admission. Verified methods are labelled; unsupported methods show Needs verification.
+                  </Text>
+                </View>
+              </View>
+            )}
+            renderItem={({ item }) => (
+              <View style={styles.universityResultRow}>
+                <View style={styles.universityLogoWrap}>
+                  {item.logo ? (
+                    <Image
+                      source={item.logo}
+                      resizeMode="contain"
+                      accessibilityLabel={`${item.shortName} logo`}
+                      style={styles.universityLogo}
+                    />
+                  ) : (
+                    <Ionicons name="school-outline" size={23} color={COLORS.primary} />
+                  )}
+                </View>
+                <View style={styles.universityResultNameWrap}>
+                  <Text style={styles.universityResultName}>{item.name}</Text>
+                  <Text style={styles.universityResultCaption} numberOfLines={item.id === "stellenbosch" ? 1 : undefined}>
+                    {item.methodLabel}
+                  </Text>
+                  <Text style={[
+                    styles.universityResultStatus,
+                    item.status === "verified"
+                      ? (item.score == null ? styles.inputStatus : styles.verifiedStatus)
+                      : styles.unverifiedStatus,
+                  ]}>
+                    {item.status === "verified"
+                      ? (item.score == null ? "More marks needed" : `Verified · ${item.admissionsYear}`)
+                      : (item.score == null
+                        ? "Needs verification"
+                        : `Needs verification · ${item.admissionsYear}`)}
+                  </Text>
+                  {item.note && item.id !== "stellenbosch" ? (
+                    <Text style={styles.universityResultNote}>{item.note}</Text>
+                  ) : null}
+                </View>
+                <View style={styles.universityScoreWrap}>
+                  <Text style={[
+                    styles.universityResultScore,
+                    item.score == null && styles.unavailableScore,
+                  ]}>
+                    {item.score == null ? "—" : item.id === "stellenbosch" ? Number(item.score).toFixed(2) : item.score}
+                  </Text>
+                  {item.score != null && item.maximumScore != null ? (
+                    <Text style={styles.universityResultScoreDetails}>
+                      /{item.maximumScore}{item.maximumBonusScore ? ` +${item.maximumBonusScore}` : ""}
+                    </Text>
+                  ) : null}
+                </View>
+              </View>
+            )}
+            ListFooterComponent={(
+              <View>
+                <Pressable
+                  onPress={onViewMatches}
+                  accessibilityRole="button"
+                  style={({ pressed }) => [styles.resultButton, pressed && styles.pressed]}
+                >
+                  <Text style={styles.resultButtonText}>View matching courses</Text>
+                </Pressable>
+                <Pressable
+                  onPress={onClose}
+                  accessibilityRole="button"
+                  style={({ pressed }) => [styles.resultDoneButton, pressed && styles.pressed]}
+                >
+                  <Text style={styles.resultDoneButtonText}>Done</Text>
+                </Pressable>
+              </View>
+            )}
+          />
         </View>
       </View>
     </Modal>
@@ -279,6 +351,37 @@ const getSavedPeriodsFromProfile = (apsRecords = {}) => {
   return PERIODS.filter((period) => Array.isArray(records[period]?.marks));
 };
 
+function calculateGenericAps(marks, period) {
+  const eligibleMarks = marks.filter(
+    ({ subject }) => subject.toLowerCase() !== "life orientation",
+  );
+  return {
+    totalAps: eligibleMarks.reduce(
+      (total, { mark }) => total + getAchievementLevel(mark),
+      0,
+    ),
+    subjectCount: eligibleMarks.length,
+    period,
+    marks,
+  };
+}
+
+function createApsDisplayResult(result, colleges) {
+  const collegesWithAps = colleges.filter(
+    (college) => typeof college.minimumAps === "number",
+  );
+  return {
+    ...result,
+    universityScores: calculateUniversityScores(universities, result.marks),
+    matchedUniversities: getApsUniversityMatches(result.totalAps).length,
+    collegeCount: colleges.length,
+    collegesUseAps: collegesWithAps.length > 0,
+    matchedColleges: collegesWithAps.filter(
+      (college) => college.minimumAps <= result.totalAps,
+    ).length,
+  };
+}
+
 export default function ApsCalculatorScreen({ navigation }) {
   const { profile, saveApsRecord, colors, resolvedTheme } = useProfile();
   const COLORS = useMemo(() => getThemeColors(colors, resolvedTheme), [colors, resolvedTheme]);
@@ -291,7 +394,6 @@ export default function ApsCalculatorScreen({ navigation }) {
   const [isSaving, setIsSaving] = useState(false);
   // NEW: subject groups come from the Firestore "subjects" collection (cached for offline)
   const [subjectGroups, setSubjectGroups] = useState([]);
-  // NEW: colleges (Firestore) so the result popup can mention them too
   const [colleges, setColleges] = useState([]);
   const currentMarks =
     marksByPeriod[selectedPeriod] ??
@@ -361,6 +463,10 @@ export default function ApsCalculatorScreen({ navigation }) {
     markPeriodEdited();
   };
 
+  const isSaved =
+    !editedPeriods.includes(selectedPeriod) &&
+    Array.isArray(profile.apsRecords?.[selectedPeriod]?.marks);
+
   const saveMarks = async () => {
     if (isSaving) return;
     if (currentMarks.length === 0) {
@@ -387,16 +493,7 @@ export default function ApsCalculatorScreen({ navigation }) {
       );
       return;
     }
-    const totalAps = eligibleMarks.reduce(
-      (total, { mark }) => total + getAchievementLevel(mark),
-      0,
-    );
-    const result = {
-      totalAps,
-      subjectCount: eligibleMarks.length,
-      period: selectedPeriod,
-      marks: currentMarks,
-    };
+    const result = calculateGenericAps(currentMarks, selectedPeriod);
 
     try {
       setIsSaving(true);
@@ -409,13 +506,8 @@ export default function ApsCalculatorScreen({ navigation }) {
         current.filter((period) => period !== selectedPeriod),
       );
       // CHANGED: the popup needs the number of matching universities (it showed "undefined" before)
-      const collegesWithAps = colleges.filter((college) => typeof college.minimumAps === "number");
       setApsResult({
-        ...result,
-        matchedUniversities: getApsUniversityMatches(totalAps).length,
-        collegeCount: colleges.length,
-        collegesUseAps: collegesWithAps.length > 0,
-        matchedColleges: collegesWithAps.filter((college) => college.minimumAps <= totalAps).length,
+        ...createApsDisplayResult(result, colleges),
       });
     } catch (error) {
       Alert.alert(
@@ -427,9 +519,29 @@ export default function ApsCalculatorScreen({ navigation }) {
     }
   };
 
-  const isSaved =
-    !editedPeriods.includes(selectedPeriod) &&
-    Array.isArray(profile.apsRecords?.[selectedPeriod]?.marks);
+  const viewAps = () => {
+    if (currentMarks.length === 0) {
+      Alert.alert("No marks to view", "Add subjects and marks before viewing your APS.");
+      return;
+    }
+    if (currentMarks.some(({ mark }) => mark === "")) {
+      Alert.alert("Marks required", "Enter a percentage for every added subject before viewing your APS.");
+      return;
+    }
+    const eligibleMarks = currentMarks.filter(
+      ({ subject }) => subject.toLowerCase() !== "life orientation",
+    );
+    if (eligibleMarks.length === 0) {
+      Alert.alert("Add an APS subject", "Life Orientation is not included in the generic APS. Add at least one other subject.");
+      return;
+    }
+
+    const savedRecord = profile.apsRecords?.[selectedPeriod];
+    const result = isSaved && Number.isFinite(savedRecord?.totalAps)
+      ? { ...savedRecord, period: selectedPeriod }
+      : calculateGenericAps(currentMarks, selectedPeriod);
+    setApsResult(createApsDisplayResult(result, colleges));
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -531,6 +643,15 @@ export default function ApsCalculatorScreen({ navigation }) {
           <Text style={styles.saveButtonText}>
             {isSaving ? "Saving" : isSaved ? "Update" : "Save"} {selectedPeriod} marks
           </Text>
+        </Pressable>
+        <Pressable
+          onPress={viewAps}
+          accessibilityRole="button"
+          accessibilityLabel={`View ${selectedPeriod} APS`}
+          style={({ pressed }) => [styles.viewApsButton, pressed && styles.pressed]}
+        >
+          <Ionicons name="eye-outline" size={19} color={COLORS.primary} />
+          <Text style={styles.viewApsButtonText}>View APS</Text>
         </Pressable>
       </View>
 
@@ -699,6 +820,18 @@ function makeStyles(COLORS) {
     fontSize: 14,
     fontWeight: "800",
   },
+  viewApsButton: {
+    minHeight: 48,
+    marginTop: 9,
+    borderRadius: 24,
+    borderWidth: 1.5,
+    borderColor: COLORS.primary,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: COLORS.surface,
+  },
+  viewApsButtonText: { marginLeft: 7, color: COLORS.primary, fontSize: 14, fontWeight: "800" },
   pressed: { opacity: 0.68 },
   modalRoot: { flex: 1, justifyContent: "flex-end" },
   backdrop: {
@@ -790,13 +923,17 @@ function makeStyles(COLORS) {
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 22,
+    paddingVertical: 28,
   },
   resultCard: {
     width: "100%",
     maxWidth: 390,
-    padding: 24,
+    height: "92%",
+    maxHeight: "92%",
+    padding: 20,
     borderRadius: 26,
     alignItems: "center",
+    flexDirection: "column",
     backgroundColor: COLORS.surface,
     shadowColor: "#172033",
     shadowOffset: { width: 0, height: 12 },
@@ -804,10 +941,22 @@ function makeStyles(COLORS) {
     shadowRadius: 24,
     elevation: 12,
   },
+  resultCloseButton: {
+    width: 34,
+    height: 34,
+    position: "absolute",
+    top: 10,
+    right: 10,
+    zIndex: 1,
+    borderRadius: 17,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: COLORS.background,
+  },
   resultIcon: {
-    width: 66,
-    height: 66,
-    borderRadius: 33,
+    width: 54,
+    height: 54,
+    borderRadius: 27,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: COLORS.primarySoft,
@@ -827,8 +976,15 @@ function makeStyles(COLORS) {
     fontWeight: "900",
   },
   resultUnit: { color: COLORS.secondary, fontSize: 16, fontWeight: "800" },
+  genericApsCard: {
+    width: "100%",
+    padding: 15,
+    borderRadius: 18,
+    alignItems: "center",
+    backgroundColor: COLORS.background,
+  },
   resultDescription: {
-    marginTop: 13,
+    marginTop: 10,
     color: COLORS.secondary,
     fontSize: 13,
     lineHeight: 20,
@@ -836,7 +992,7 @@ function makeStyles(COLORS) {
   },
   resultNotice: {
     width: "100%",
-    marginTop: 18,
+    marginTop: 12,
     padding: 13,
     borderRadius: 14,
     flexDirection: "row",
@@ -851,6 +1007,48 @@ function makeStyles(COLORS) {
     lineHeight: 18,
     fontWeight: "600",
   },
+  universityResultsList: {
+    width: "100%",
+    flex: 1,
+    minHeight: 0,
+    marginTop: 14,
+  },
+  universityResultsContent: { gap: 7, paddingBottom: 2 },
+  universityResultRow: {
+    minHeight: 58,
+    paddingHorizontal: 13,
+    paddingVertical: 8,
+    borderRadius: 13,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: COLORS.background,
+  },
+  universityLogoWrap: {
+    width: 42,
+    height: 42,
+    marginRight: 11,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: COLORS.surface,
+  },
+  universityLogo: { width: 30, height: 30 },
+  universityResultNameWrap: { flex: 1, minWidth: 0, marginRight: 12 },
+  universityResultName: { color: COLORS.text, fontSize: 13, lineHeight: 18, fontWeight: "800" },
+  universityResultCaption: { marginTop: 2, color: COLORS.muted, fontSize: 10, fontWeight: "600" },
+  universityResultStatus: { marginTop: 3, fontSize: 9, fontWeight: "800" },
+  verifiedStatus: { color: COLORS.primary },
+  inputStatus: { color: COLORS.secondary },
+  unverifiedStatus: { color: COLORS.danger },
+  universityResultNote: { marginTop: 2, color: COLORS.muted, fontSize: 9, lineHeight: 12 },
+  universityScoreWrap: { minWidth: 38, alignItems: "flex-end", justifyContent: "center" },
+  universityResultScore: { color: COLORS.primary, fontSize: 23, fontWeight: "900", textAlign: "right" },
+  universityResultScoreDetails: { color: COLORS.muted, fontSize: 9, fontWeight: "700", textAlign: "right" },
+  unavailableScore: { color: COLORS.muted, fontSize: 18 },
   resultButton: {
     width: "100%",
     minHeight: 52,
@@ -861,5 +1059,7 @@ function makeStyles(COLORS) {
     backgroundColor: COLORS.primary,
   },
   resultButtonText: { color: COLORS.onPrimary, fontSize: 15, fontWeight: "800" },
+  resultDoneButton: { width: "100%", minHeight: 46, marginTop: 10, alignItems: "center", justifyContent: "center" },
+  resultDoneButtonText: { color: COLORS.primary, fontSize: 14, fontWeight: "800" },
  });
 }
