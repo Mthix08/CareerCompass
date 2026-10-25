@@ -216,11 +216,11 @@ function AppNavigator() {
             component={FaqsScreen}
             options={{ title: "FAQs" }}
           />
-          {/* <Stack.Screen
+          <Stack.Screen
             name="Assistant"
             component={AssistantScreen}
             options={{ headerShown: false, animation: "slide_from_right" }}
-          /> */}
+          />
         </Stack.Navigator>
       </NavigationContainer>
 
