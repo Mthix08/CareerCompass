@@ -35,6 +35,10 @@ export default function UniversityApsScoresScreen({ navigation }) {
     (total, university) => total + university.qualifyingCourses.length,
     0,
   );
+  const verificationCourseCount = matchingUniversities.reduce(
+    (total, university) => total + university.verificationCourses.length,
+    0,
+  );
 
   return (
     <SafeAreaView style={styles.container}>
@@ -103,15 +107,15 @@ export default function UniversityApsScoresScreen({ navigation }) {
             university={item}
             score={item.score}
             maximumScore={item.maximumScore}
-            caption={`${item.qualifyingCourses.length} course${item.qualifyingCourses.length === 1 ? "" : "s"} at or below this score${item.status === "needs_verification" ? " · Needs verification" : ""}`}
+          caption={`${item.qualifyingCourses.length} matches${item.verificationCourses.length ? ` · ${item.verificationCourses.length} need Maths verification` : ""}${item.status === "needs_verification" ? " · APS method needs verification" : ""}`}
             colors={colors}
           />
         )}
         ListFooterComponent={
-          apsRecord && matchingCourseCount > 0 ? (
+          apsRecord && matchingUniversities.length > 0 ? (
             <View>
               <Text style={styles.disclaimer}>
-                Matches compare institution-specific score estimates with listed course minimums. Some rules still need verification; subject requirements, selection and current prospectus rules also apply. This is not an admission decision or offer.
+                Matches compare institution-specific score estimates and clear Maths subject rules with listed course requirements. {verificationCourseCount > 0 ? `${verificationCourseCount} APS-matched courses have Maths requirements that need verification. ` : ""}Other subject requirements, selection and current prospectus rules also apply. This is not an admission decision or offer.
               </Text>
               <Pressable
                 onPress={() => navigation.navigate("Home", {
@@ -119,6 +123,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
                   params: {
                     matchedOnly: true,
                     apsByUniversity,
+                    apsMarks: apsRecord?.marks,
                     filterRequestId: Date.now(),
                   },
                 })}

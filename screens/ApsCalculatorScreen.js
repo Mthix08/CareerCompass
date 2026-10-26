@@ -247,7 +247,7 @@ function ApsResultModal({ result, onClose, onViewMatches }) {
                   {result?.subjectCount === 1 ? "subject" : "subjects"} from {result?.period}. The generic APS above excludes Life Orientation; institution rules may treat it differently.
                 </Text>
                 <Text style={styles.resultDescription}>
-                  Institution-specific scores match listed course minimums at {result?.matchedUniversities} {result?.matchedUniversities === 1 ? "university" : "universities"}. This is a broad comparison, not an eligibility result.
+                  Institution-specific scores and clear Maths requirements match listed courses at {result?.matchedUniversities} {result?.matchedUniversities === 1 ? "university" : "universities"}. Courses with unclear subject data need verification. This is not an eligibility result.
                 </Text>
                 {result?.collegeCount > 0 && (
                   <Text style={styles.resultDescription}>
@@ -673,6 +673,7 @@ export default function ApsCalculatorScreen({ navigation }) {
             params: {
               matchedOnly: true,
               apsByUniversity: apsResult?.apsByUniversity,
+              apsMarks: apsResult?.marks,
               filterRequestId: Date.now(),
             },
           });
