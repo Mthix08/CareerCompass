@@ -5,6 +5,10 @@ import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
+import { getLatestApsRecord } from "../data/apsMatching";
+import { universities } from "../data/universities";
+import { calculateUniversityScores } from "../services/apsScoring";
+import { getInstitutionCourseMatchStatus } from "../data/apsMatching";
 
 function DetailRow({ icon, label, value }) {
   const { colors } = useProfile();
@@ -24,7 +28,7 @@ function DetailRow({ icon, label, value }) {
 }
 
 export default function CourseDetailsScreen({ navigation, route }) {
-  const { colors, resolvedTheme } = useProfile();
+  const { colors, resolvedTheme, profile } = useProfile();
   const COLORS = useMemo(() => getThemeColors(colors), [colors]);
   const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const course = route.params?.course;
@@ -34,6 +38,24 @@ export default function CourseDetailsScreen({ navigation, route }) {
     removeCourseBookmark,
   } = useBookmarks();
   const bookmarked = course ? isCourseBookmarked(course.id) : false;
+  const courseMathStatus = useMemo(
+    () => course ? getInstitutionCourseMatchStatus(course, getLatestApsRecord(profile?.apsRecords)?.marks) : null,
+    [course, profile?.apsRecords],
+  );
+  const qualification = useMemo(() => {
+    if (!course) return { status: "unavailable", score: null };
+    const record = getLatestApsRecord(profile?.apsRecords);
+    if (!record?.marks?.length || !Number.isFinite(course.minimumAps)) {
+      return { status: "unavailable", score: null };
+    }
+    const university = universities.find(({ id }) => id === course.universityId);
+    const score = calculateUniversityScores(university ? [university] : [], record.marks)[0];
+    if (!Number.isFinite(score?.score)) return { status: "unavailable", score: null };
+    return {
+      status: score.score >= course.minimumAps ? "may_qualify" : "not_qualified",
+      score: score.score,
+    };
+  }, [course, profile?.apsRecords]);
 
   if (!course) {
     return (
@@ -73,6 +95,32 @@ export default function CourseDetailsScreen({ navigation, route }) {
         <Text style={styles.university}>{course.universityName}</Text>
       </View>
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+        <View style={[
+          styles.qualificationCard,
+          qualification.status === "may_qualify" && styles.qualificationCardPositive,
+          qualification.status === "not_qualified" && styles.qualificationCardNegative,
+        ]}>
+          <View style={styles.qualificationHeading}>
+            <Ionicons
+              name={qualification.status === "may_qualify" ? "checkmark-circle" : qualification.status === "not_qualified" ? "close-circle" : "information-circle"}
+              size={22}
+              color={qualification.status === "not_qualified" ? COLORS.danger : COLORS.primary}
+            />
+            <Text style={styles.qualificationTitle}>
+              {qualification.status === "may_qualify" ? "May Qualify" : qualification.status === "not_qualified" ? "Not Qualified" : "Qualification not determined"}
+            </Text>
+          </View>
+          <Text style={styles.qualificationText}>
+            {qualification.status === "may_qualify"
+              ? `Your ${course.universityShortName} APS score of ${qualification.score} meets the listed minimum. Check the official prospectus for the required Mathematics type, subject levels and other admission conditions.`
+              : qualification.status === "not_qualified"
+                ? `Your ${course.universityShortName} APS score of ${qualification.score} is below the listed minimum of ${course.minimumAps}. Admission rules may include other routes; confirm with the latest official prospectus.`
+                : "Save valid marks in My Marks to compare your score using this university's APS scorer. This is an estimate; confirm all requirements in the official prospectus."}
+          </Text>
+          {qualification.status === "may_qualify" && courseMathStatus?.status === "needs_verification" && (
+            <Text style={styles.qualificationText}>Maths subject requirement: needs verification. Check the official prospectus.</Text>
+          )}
+        </View>
         <View style={styles.apsCard}>
           <View>
             <Text style={styles.apsLabel}>{course.minimumAps == null ? "Admission points" : "Minimum APS"}</Text>
@@ -147,6 +195,12 @@ function makeStyles(COLORS) {
   university: { marginTop: 7, color: COLORS.onPrimary, fontSize: 14, fontWeight: "700" },
   content: { padding: 20, paddingBottom: 40 },
   apsCard: { padding: 18, borderRadius: 20, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: COLORS.primarySoft },
+  qualificationCard: { marginBottom: 16, padding: 16, borderRadius: 18, borderWidth: 1, borderColor: COLORS.border, backgroundColor: COLORS.surface },
+  qualificationCardPositive: { borderColor: COLORS.primary, backgroundColor: COLORS.primarySoft },
+  qualificationCardNegative: { borderColor: COLORS.danger, backgroundColor: COLORS.dangerSoft },
+  qualificationHeading: { flexDirection: "row", alignItems: "center", gap: 8 },
+  qualificationTitle: { color: COLORS.text, fontSize: 16, fontWeight: "900" },
+  qualificationText: { marginTop: 8, color: COLORS.secondary, fontSize: 12, lineHeight: 18 },
   apsLabel: { color: COLORS.primary, fontSize: 14, fontWeight: "900" },
   apsHint: { maxWidth: 230, marginTop: 4, color: COLORS.secondary, fontSize: 11, lineHeight: 16 },
   apsValueWrap: { alignItems: "flex-end" },

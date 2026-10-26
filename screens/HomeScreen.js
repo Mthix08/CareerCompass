@@ -278,7 +278,7 @@ export default function HomeScreen({ navigation }) {
               </Text>
               <Text style={styles.matchedText}>
                 {apsRecord
-                  ? `${matchedCourseCount} courses meet listed minimums using institution-specific scores for ${apsRecord.period}.`
+                  ? `${matchedCourseCount} courses match listed minimums and clear subject rules for ${apsRecord.period}${apsMatches.reduce((total, university) => total + university.verificationCourses.length, 0) ? ` · ${apsMatches.reduce((total, university) => total + university.verificationCourses.length, 0)} need subject verification` : ""}.`
                   : "Save your marks to compare institution-specific scores with course minimums."}
               </Text>
             </View>
@@ -383,7 +383,7 @@ export default function HomeScreen({ navigation }) {
                 university={university}
                 score={university.score}
                 maximumScore={university.maximumScore}
-                caption={`${university.qualifyingCourses.length} course${university.qualifyingCourses.length === 1 ? "" : "s"} at or below this score${university.status === "needs_verification" ? " · Needs verification" : ""}`}
+                caption={`${university.qualifyingCourses.length} matches${university.verificationCourses.length ? ` · ${university.verificationCourses.length} need Maths verification` : ""}${university.status === "needs_verification" ? " · APS method needs verification" : ""}`}
                 colors={colors}
               />
             ))}

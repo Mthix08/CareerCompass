@@ -5,7 +5,7 @@
     "scheme": "careercompass",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/CC_Logo.png",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
@@ -16,22 +16,21 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/CC.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.CareerCompass",
-      "googleServicesFile": "./google-services.json",
+      "package": "com.mthix08.careercompass.dev",
       "permissions": []
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/CC.png"
     },
     "plugins": [
       "expo-font",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/splash-icon.png",
+          "image": "./assets/CC.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
@@ -55,11 +54,13 @@
           "microphonePermission": false
         }
       ],
-      "expo-status-bar"
+      "expo-status-bar",
+      "@config-plugins/react-native-pdf",
+      "@config-plugins/react-native-blob-util"
     ],
     "extra": {
       "eas": {
-        "projectId": "5753b26b-4cf7-47a4-bf4e-b07ea1b5ff14"
+        "projectId": "245e508f-1c37-4ae1-9538-c9c39e663b31"
       }
     }
   }
