@@ -1,5 +1,7 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
+  AccessibilityInfo,
+  AppState,
   FlatList,
   ImageBackground,
   Pressable,
@@ -12,6 +14,7 @@ import Text from '../components/TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useIsFocused } from "@react-navigation/native";
 import { useScreenLifecycle } from "../utils/lifecycleLogger";
 
 import {
@@ -20,18 +23,19 @@ import {
   HomeUniversityCard,
   QuickActionCard,
   SectionHeader,
-  ViewAllUniversitiesCard,
 } from "../components/HomeComponents";
 import { useProfile } from "../context/ProfileContext";
-import { loadCollection } from "../data/firestoreContent";
 import { universities } from "../data/universities";
-import { getApsUniversityMatches, getLatestApsRecord } from "../data/apsMatching";
+import { getInstitutionApsMatches, getLatestApsRecord } from "../data/apsMatching";
 
 const NSFAS_IMAGE = require("../assets/nsfas.jpg");
 const HORIZONTAL_GAP = 14;
+const UNIVERSITY_CAROUSEL_SPEED = 35;
+const CAROUSEL_RESUME_DELAY = 1800;
 
 export default function HomeScreen({ navigation }) {
   useScreenLifecycle("Home");
+  const isFocused = useIsFocused();
   const { profile, colors, resolvedTheme } = useProfile();
   const { width: screenWidth } = useWindowDimensions();
   const headerAccent = resolvedTheme === "dark" ? "#0D6F67" : colors.primary;
@@ -45,8 +49,8 @@ export default function HomeScreen({ navigation }) {
     [profile?.apsRecords],
   );
   const apsMatches = useMemo(
-    () => getApsUniversityMatches(apsRecord?.totalAps),
-    [apsRecord?.totalAps],
+    () => getInstitutionApsMatches(apsRecord?.marks),
+    [apsRecord?.marks],
   );
   const matchedCourseCount = apsMatches.reduce(
     (total, university) => total + university.qualifyingCourses.length,
@@ -57,28 +61,110 @@ export default function HomeScreen({ navigation }) {
     Math.max(screenWidth * 0.73, 258),
     304,
   );
+  const universityListRef = useRef(null);
+  const carouselOffset = useRef(0);
+  const carouselLoopWidth = useRef(0);
+  const carouselFrame = useRef(null);
+  const previousFrameTime = useRef(null);
+  const resumeTimer = useRef(null);
+  const appIsActive = useRef(AppState.currentState === "active");
+  const [reduceMotion, setReduceMotion] = useState(false);
+  const [carouselReady, setCarouselReady] = useState(false);
 
-  const [deadlines, setDeadlines] = useState([]);
   useEffect(() => {
-    let active = true;
-    loadCollection("applicationDeadlines", { sortBy: "daysRemaining" }).then((items) => {
-      if (active) setDeadlines(items);
-    });
+    let mounted = true;
+    AccessibilityInfo.isReduceMotionEnabled().then((enabled) => {
+      if (mounted) setReduceMotion(enabled);
+    }).catch(() => {});
+    const subscription = AccessibilityInfo.addEventListener("reduceMotionChanged", setReduceMotion);
     return () => {
-      active = false;
+      mounted = false;
+      subscription.remove();
     };
   }, []);
 
-  const deadlineItems = useMemo(
-    () =>
-      deadlines.map((deadline) => ({
-        ...deadline,
-        university: universities.find(
-          (university) => university.id === deadline.universityId,
-        ),
-      })).filter((deadline) => deadline.university),
-    [deadlines],
-  );
+  const stopUniversityCarousel = useCallback(() => {
+    clearTimeout(resumeTimer.current);
+    if (carouselFrame.current != null) cancelAnimationFrame(carouselFrame.current);
+    carouselFrame.current = null;
+    previousFrameTime.current = null;
+  }, []);
+
+  const startUniversityCarousel = useCallback(() => {
+    stopUniversityCarousel();
+    if (reduceMotion || !isFocused || !appIsActive.current || !carouselReady || carouselLoopWidth.current <= 0) return;
+    if (carouselOffset.current >= carouselLoopWidth.current) {
+      carouselOffset.current %= carouselLoopWidth.current;
+      universityListRef.current?.scrollToOffset({ offset: carouselOffset.current, animated: false });
+    }
+    const advance = (timestamp) => {
+      if (previousFrameTime.current == null) previousFrameTime.current = timestamp;
+      const elapsed = Math.min(timestamp - previousFrameTime.current, 50);
+      previousFrameTime.current = timestamp;
+      carouselOffset.current += (UNIVERSITY_CAROUSEL_SPEED * elapsed) / 1000;
+      if (carouselOffset.current >= carouselLoopWidth.current) {
+        carouselOffset.current -= carouselLoopWidth.current;
+      }
+      universityListRef.current?.scrollToOffset({ offset: carouselOffset.current, animated: false });
+      carouselFrame.current = requestAnimationFrame(advance);
+    };
+    carouselFrame.current = requestAnimationFrame(advance);
+  }, [carouselReady, isFocused, reduceMotion, stopUniversityCarousel]);
+
+  useEffect(() => {
+    startUniversityCarousel();
+    return stopUniversityCarousel;
+  }, [startUniversityCarousel, stopUniversityCarousel]);
+
+  const pauseUniversityCarousel = useCallback(() => {
+    stopUniversityCarousel();
+    clearTimeout(resumeTimer.current);
+    resumeTimer.current = setTimeout(startUniversityCarousel, CAROUSEL_RESUME_DELAY);
+  }, [startUniversityCarousel, stopUniversityCarousel]);
+
+  useEffect(() => {
+    const subscription = AppState.addEventListener("change", (state) => {
+      appIsActive.current = state === "active";
+      if (state === "active") startUniversityCarousel();
+      else stopUniversityCarousel();
+    });
+    return () => subscription.remove();
+  }, [startUniversityCarousel, stopUniversityCarousel]);
+
+  const deadlineItems = useMemo(() => {
+    const today = new Date();
+    const todayUtc = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+    const dayMs = 24 * 60 * 60 * 1000;
+    return universities.flatMap((university) => {
+      const matches = [...(university.closingDate || "").matchAll(/(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})/gi)];
+      if (!matches.length) return [];
+      const datedDeadlines = matches.map((match) => {
+        const monthIndex = new Date(`${match[2]} 1, 2000`).getMonth();
+        return {
+          label: `${match[1]} ${match[2]} ${match[3]}`,
+          dateUtc: Date.UTC(Number(match[3]), monthIndex, Number(match[1])),
+        };
+      });
+      const deadline = datedDeadlines
+        .filter(({ dateUtc }) => dateUtc >= todayUtc - 30 * dayMs)
+        .sort((a, b) => b.dateUtc - a.dateUtc)[0];
+      if (!deadline) return [];
+      const closeUtc = deadline.dateUtc;
+      const dayDelta = Math.round((closeUtc - todayUtc) / dayMs);
+      if (dayDelta > 30 || dayDelta < -30 || !university.applicationStatus?.startsWith(dayDelta >= 0 ? "Open" : "Closed")) return [];
+      return [{
+        id: university.id,
+        university,
+        closingDate: deadline.label,
+        daysRemaining: Math.max(dayDelta, 0),
+        daysClosed: Math.max(-dayDelta, 0),
+        isOpen: dayDelta >= 0,
+      }];
+    }).sort((a, b) => {
+      if (a.isOpen !== b.isOpen) return a.isOpen ? -1 : 1;
+      return a.isOpen ? a.daysRemaining - b.daysRemaining : a.daysClosed - b.daysClosed;
+    });
+  }, []);
 
   const openApsCalculator = useCallback(
     () => navigation.navigate("ApsCalculator"),
@@ -192,8 +278,8 @@ export default function HomeScreen({ navigation }) {
               </Text>
               <Text style={styles.matchedText}>
                 {apsRecord
-                  ? `${matchedCourseCount} courses meet the listed APS minimum for ${apsRecord.period}.`
-                  : "Save your marks to see courses that meet their listed APS minimum."}
+                  ? `${matchedCourseCount} courses meet listed minimums using institution-specific scores for ${apsRecord.period}.`
+                  : "Save your marks to compare institution-specific scores with course minimums."}
               </Text>
             </View>
             <Pressable
@@ -273,6 +359,7 @@ export default function HomeScreen({ navigation }) {
                   width={sliderCardWidth}
                 />
               )}
+              ListEmptyComponent={<Text style={styles.helperText}>No university deadlines within the next 30 days or past 30 days.</Text>}
               ItemSeparatorComponent={() => (
                 <View style={styles.horizontalGap} />
               )}
@@ -287,15 +374,16 @@ export default function HomeScreen({ navigation }) {
             <SectionHeader title="Universities with APS matches" colors={colors} />
             <Text style={styles.helperText}>
               {apsRecord
-                ? `Using your ${apsRecord.period} result. Meeting an APS minimum does not guarantee admission.`
+                ? `Using institution-specific scores recalculated from your ${apsRecord.period} marks. Estimates do not guarantee admission.`
                 : "Save your marks to compare your APS with course requirements."}
             </Text>
             {apsMatches.slice(0, 5).map((university) => (
               <APSScoreRow
                 key={university.id}
                 university={university}
-                score={apsRecord.totalAps}
-                caption={`${university.qualifyingCourses.length} course${university.qualifyingCourses.length === 1 ? "" : "s"} meet APS minimum`}
+                score={university.score}
+                maximumScore={university.maximumScore}
+                caption={`${university.qualifyingCourses.length} course${university.qualifyingCourses.length === 1 ? "" : "s"} at or below this score${university.status === "needs_verification" ? " · Needs verification" : ""}`}
                 colors={colors}
               />
             ))}
@@ -327,9 +415,25 @@ export default function HomeScreen({ navigation }) {
               />
             </View>
             <FlatList
+              ref={universityListRef}
               horizontal
-              data={universities}
-              keyExtractor={(item) => item.id}
+              data={[...universities, ...universities]}
+              keyExtractor={(item, index) => `${item.id}-${index}`}
+              onLayout={(event) => {
+                const loopWidth = universityCardWidth * universities.length + HORIZONTAL_GAP * universities.length;
+                carouselLoopWidth.current = loopWidth;
+                setCarouselReady(event.nativeEvent.layout.width > 0 && loopWidth > 0);
+              }}
+              onScrollBeginDrag={pauseUniversityCarousel}
+              onMomentumScrollBegin={pauseUniversityCarousel}
+              onScroll={(event) => {
+                if (carouselFrame.current == null) carouselOffset.current = event.nativeEvent.contentOffset.x;
+              }}
+              scrollEventThrottle={32}
+              onContentSizeChange={() => {
+                universityListRef.current?.scrollToOffset({ offset: 0, animated: false });
+                carouselOffset.current = 0;
+              }}
               renderItem={({ item }) => (
                 <HomeUniversityCard
                   university={item}
@@ -338,19 +442,11 @@ export default function HomeScreen({ navigation }) {
                   width={universityCardWidth}
                 />
               )}
-              ListFooterComponent={
-                <View style={styles.viewAllFooter}>
-                  <ViewAllUniversitiesCard
-                    onPress={openUniversities}
-                    colors={colors}
-                    width={Math.min(universityCardWidth * 0.72, 210)}
-                  />
-                </View>
-              }
               ItemSeparatorComponent={() => (
                 <View style={styles.horizontalGap} />
               )}
               showsHorizontalScrollIndicator={false}
+              scrollEnabled
               contentContainerStyle={styles.sliderContent}
               decelerationRate="fast"
             />
