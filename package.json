@@ -33,7 +33,7 @@
     "react-i18next": "^17.0.15",
     "react-native": "0.86.3",
     "react-native-blob-util": "0.25.1",
-    "react-native-pdf": "7.0.5",
+    "react-native-pdf": "^7.0.5",
     "react-native-safe-area-context": "~5.7.0",
     "react-native-screens": "~4.26.0",
     "react-native-svg": "15.15.4",
@@ -45,6 +45,7 @@
     "dotenv": "^18.0.7",
     "eslint": "^9.0.0",
     "eslint-config-expo": "~57.0.2",
+    "expo-native-safe-imports": "^1.0.9",
     "firebase-admin": "^14.5.0"
   }
 }

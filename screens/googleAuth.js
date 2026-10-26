@@ -37,7 +37,10 @@ export async function signInWithGoogle() {
 
   const response = await GoogleSignin.signIn();
 
-  console.log("Google response:", response);
+  console.log(
+  "Google response:",
+  JSON.stringify(response, null, 2)
+);
 
   if (response.type !== "success" || !response.data.idToken) {
     const error = new Error("Google sign-in was cancelled.");

@@ -23,20 +23,31 @@ export const SectionHeader = memo(function SectionHeader({ title, icon, actionLa
 
 export const DeadlineCard = memo(function DeadlineCard({ item, university, colors, width }) {
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const statusText = item.closed
+    ? "Closed"
+    : item.daysRemaining === null
+      ? "Check dates"
+      : item.daysRemaining === 0
+        ? "Closes today"
+        : `${item.daysRemaining} day${item.daysRemaining === 1 ? "" : "s"} left`;
   return (
-    <View style={[styles.deadlineCard, { width }]} accessibilityLabel={`${university.name}, example closing date ${item.closingDate}, mock timeline ${item.daysRemaining} days`}>
+    <View style={[styles.deadlineCard, { width }]} accessibilityLabel={`${university.name}, closing date ${item.closingDate}, ${statusText}`}>
       <View style={styles.deadlineTopRow}>
         <View style={styles.logoWrapSmall}>
           <Image source={university.logo} style={styles.logoSmall} resizeMode="contain" accessibilityLabel={`${university.shortName} logo`} />
         </View>
         <View style={styles.deadlineTextWrap}>
           <Text style={styles.deadlineName} numberOfLines={2}>{university.name}</Text>
-          <Text style={styles.deadlineDate} numberOfLines={2}>Closes {item.closingDate}</Text>
+          <Text style={styles.deadlineDate} numberOfLines={2}>{item.closed ? "Closed" : "Closes"} {item.closingDate}</Text>
         </View>
       </View>
       <View style={styles.deadlineFooter}>
-        <View style={styles.exampleBadge}><Text style={styles.exampleBadgeText}>EXAMPLE DATA</Text></View>
-        <View style={styles.daysBadge}><Text style={styles.daysBadgeText}>{item.daysRemaining} days · mock</Text></View>
+        {!!item.isExample && (
+          <View style={styles.exampleBadge}><Text style={styles.exampleBadgeText}>EXAMPLE DATA</Text></View>
+        )}
+        <View style={[styles.daysBadge, item.closed && { backgroundColor: colors.dangerSoft }]}>
+          <Text style={[styles.daysBadgeText, item.closed && { color: colors.danger }]}>{statusText}</Text>
+        </View>
       </View>
     </View>
   );

@@ -69,16 +69,23 @@ export default function HomeScreen({ navigation }) {
     };
   }, []);
 
-  const deadlineItems = useMemo(
-    () =>
-      deadlines.map((deadline) => ({
-        ...deadline,
-        university: universities.find(
-          (university) => university.id === deadline.universityId,
-        ),
-      })).filter((deadline) => deadline.university),
-    [deadlines],
-  );
+  const deadlineItems = useMemo(() => {
+    const now = new Date();
+    return deadlines
+      .map((deadline) => {
+        const closesAt = deadline.closesAt ? new Date(deadline.closesAt) : null;
+        const valid = closesAt && !Number.isNaN(closesAt.getTime());
+        const difference = valid ? closesAt.getTime() - now.getTime() : null;
+        return {
+          ...deadline,
+          closed: valid ? difference < 0 : false,
+          daysRemaining: valid ? Math.max(0, Math.ceil(difference / 86400000)) : null,
+          university: universities.find((university) => university.id === deadline.universityId),
+        };
+      })
+      .filter((deadline) => deadline.university)
+      .sort((a, b) => Number(a.closed) - Number(b.closed) || (a.daysRemaining ?? 9999) - (b.daysRemaining ?? 9999));
+  }, [deadlines]);
 
   const openApsCalculator = useCallback(
     () => navigation.navigate("ApsCalculator"),
