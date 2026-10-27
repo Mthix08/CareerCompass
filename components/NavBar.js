@@ -221,7 +221,7 @@ function makeStyles(colors) {
   assistantButton: {
     position: "absolute",
     right: 24,
-    top: -28,
+    top: -40,
     zIndex: 2,
     width: 54,
     height: 54,

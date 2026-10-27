@@ -17,6 +17,7 @@ import CollegeCard from "../components/CollegeCard";
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
 import { loadCollection } from "../data/firestoreContent";
+import { bundledColleges } from "../data/collegeDirectory";
 import { universities } from "../data/universities";
 
 export default function UniversitiesScreen({ navigation }) {
@@ -29,13 +30,13 @@ export default function UniversitiesScreen({ navigation }) {
   const [filtersVisible, setFiltersVisible] = useState(false);
   // Universities | Colleges toggle, colleges come from Firestore (cached for offline)
   const [mode, setMode] = useState("Universities");
-  const [colleges, setColleges] = useState([]);
+  const [colleges, setColleges] = useState(bundledColleges);
   const showingColleges = mode === "Colleges";
 
   useEffect(() => {
     let active = true;
     loadCollection("colleges", { sortBy: "order" }).then((items) => {
-      if (active) setColleges(items);
+      if (active && items.length > 0) setColleges(items);
     });
     return () => {
       active = false;

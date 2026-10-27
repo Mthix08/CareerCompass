@@ -1,12 +1,21 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 export const FUNDING_API_URL = "https://ithubahub.co.za/api/bursaries";
+const FUNDING_CACHE_KEY = "@careercompass:fundingDirectory:v1";
 
 export const NSFAS = {
   id: "nsfas",
   name: "NSFAS",
   fullName: "National Student Financial Aid Scheme",
+  provider: "National Student Financial Aid Scheme",
   cycle: "2027 academic year",
   opens: "18 September 2026",
   closes: "31 October 2026",
+  description: "Government financial aid for eligible South African students at public universities and TVET colleges.",
+  requirements: "Eligibility depends on citizenship, household income, study programme, and the current NSFAS rules. Check the official NSFAS site before applying.",
+  value: "Tuition, registration, and eligible allowances under the current funding rules.",
+  fieldOfStudy: "Approved qualifications at public universities and TVET colleges",
+  province: "National",
   // End of 31 October in South African Standard Time (UTC+02:00).
   closesAt: "2026-10-31T23:59:59+02:00",
   applyUrl: "https://my.nsfas.org.za/",
@@ -69,17 +78,51 @@ export function normalizeFundingOption(item) {
 }
 
 export async function fetchBursaries() {
+  const controller = typeof AbortController === "function" ? new AbortController() : null;
+  let timeoutId;
   try {
-    const response = await fetch(FUNDING_API_URL, { headers: { Accept: "application/json" } });
+    const response = await Promise.race([
+      fetch(FUNDING_API_URL, {
+        headers: { Accept: "application/json" },
+        ...(controller ? { signal: controller.signal } : {}),
+      }),
+      new Promise((_, reject) => {
+        timeoutId = setTimeout(() => {
+          controller?.abort();
+          reject(new Error("Funding API request timed out."));
+        }, 10000);
+      }),
+    ]);
     if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
 
     const payload = await response.json();
     const items = Array.isArray(payload) ? payload : Array.isArray(payload.data) ? payload.data : [];
     const normalized = items.map(normalizeFundingOption).filter(Boolean);
-    return normalized.length ? normalized : [NSFAS, SAMPLE_BURSARY];
+    const otherFunding = normalized.filter((item) =>
+      item.id.toLowerCase() !== "nsfas" && item.name.toLowerCase() !== "nsfas",
+    );
+    const result = [NSFAS, ...(otherFunding.length ? otherFunding : [SAMPLE_BURSARY])];
+    await AsyncStorage.setItem(FUNDING_CACHE_KEY, JSON.stringify(result));
+    return result;
   } catch (error) {
+    try {
+      const cached = await AsyncStorage.getItem(FUNDING_CACHE_KEY);
+      if (cached) {
+        const items = JSON.parse(cached);
+        if (Array.isArray(items)) {
+          const others = items.filter((item) =>
+            item?.id?.toLowerCase?.() !== "nsfas" && item?.name?.toLowerCase?.() !== "nsfas",
+          );
+          return [NSFAS, ...others];
+        }
+      }
+    } catch (_cacheError) {
+      // Fall back to the built-in NSFAS and example cards when cache is unavailable.
+    }
     console.warn("Unable to load bursaries from API. Using fallback funding options.", error);
     return [NSFAS, SAMPLE_BURSARY];
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 

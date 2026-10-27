@@ -23,27 +23,35 @@ export const SectionHeader = memo(function SectionHeader({ title, icon, actionLa
 
 export const DeadlineCard = memo(function DeadlineCard({ item, university, colors, width }) {
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const statusColor = item.isOpen ? "#16803C" : "#C62828";
-  const dayCount = item.isOpen
-    ? `${item.daysRemaining} ${item.daysRemaining === 1 ? "day" : "days"} left`
-    : `Closed ${item.daysClosed} ${item.daysClosed === 1 ? "day" : "days"} ago`;
+  const statusText = item.isOpen ? "Open" : item.closed ? "Closed" : "Check dates";
+  const statusColor = item.closed ? colors.danger : item.isOpen ? "#16803C" : colors.primary;
+  const timingText = item.isOpen
+    ? item.daysRemaining === 0
+      ? "Closes today"
+      : `${item.daysRemaining} ${item.daysRemaining === 1 ? "day" : "days"} left`
+    : item.closed
+      ? `Closed ${item.daysClosed} ${item.daysClosed === 1 ? "day" : "days"} ago`
+      : "Check dates";
   return (
-    <View style={[styles.deadlineCard, { width }]} accessibilityLabel={`${university.name}, ${item.isOpen ? "open" : "closed"}, ${dayCount}, closes ${item.closingDate}`}>
+    <View style={[styles.deadlineCard, { width }]} accessibilityLabel={`${university.name}, ${statusText.toLowerCase()}, ${timingText}, closing date ${item.closingDate}`}>
       <View style={styles.deadlineTopRow}>
         <View style={styles.logoWrapSmall}>
           <Image source={university.logo} style={styles.logoSmall} resizeMode="contain" accessibilityLabel={`${university.shortName} logo`} />
         </View>
         <View style={styles.deadlineTextWrap}>
           <Text style={styles.deadlineName} numberOfLines={2}>{university.name}</Text>
-          <Text style={styles.deadlineDate} numberOfLines={2}>Closes {item.closingDate}</Text>
+          <Text style={styles.deadlineDate} numberOfLines={2}>{item.closed ? "Closed" : "Closes"} {item.closingDate}</Text>
         </View>
       </View>
       <View style={styles.deadlineFooter}>
-        <View style={[styles.statusBadge, { backgroundColor: item.isOpen ? "#E7F5EA" : "#FCE8E8" }]}>
-          <Text style={[styles.statusBadgeText, { color: statusColor }]}>{item.isOpen ? "Open" : "Closed"}</Text>
+        <View style={[styles.statusBadge, { backgroundColor: item.closed ? colors.dangerSoft : item.isOpen ? "#E7F5EA" : colors.primarySoft }]}>
+          <Text style={[styles.statusBadgeText, { color: statusColor }]}>{statusText}</Text>
         </View>
-        <View style={[styles.daysBadge, { backgroundColor: item.isOpen ? "#E7F5EA" : "#FCE8E8" }]}>
-          <Text style={[styles.daysBadgeText, { color: statusColor }]}>{dayCount}</Text>
+        {!!item.isExample && (
+          <View style={styles.exampleBadge}><Text style={styles.exampleBadgeText}>EXAMPLE DATA</Text></View>
+        )}
+        <View style={[styles.daysBadge, item.closed && { backgroundColor: colors.dangerSoft }]}>
+          <Text style={[styles.daysBadgeText, item.closed && { color: colors.danger }]}>{timingText}</Text>
         </View>
       </View>
     </View>

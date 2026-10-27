@@ -25,6 +25,7 @@ import {
   SectionHeader,
 } from "../components/HomeComponents";
 import { useProfile } from "../context/ProfileContext";
+import { loadCollection } from "../data/firestoreContent";
 import { universities } from "../data/universities";
 import { getInstitutionApsMatches, getLatestApsRecord } from "../data/apsMatching";
 
@@ -83,6 +84,22 @@ export default function HomeScreen({ navigation }) {
     };
   }, []);
 
+  const [deadlines, setDeadlines] = useState([]);
+  const [deadlineNow, setDeadlineNow] = useState(null);
+
+  useEffect(() => {
+    let active = true;
+    loadCollection("applicationDeadlines", { sortBy: "closesAt" }).then((items) => {
+      if (active) {
+        setDeadlines(items);
+        setDeadlineNow(Date.now());
+      }
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
+
   const stopUniversityCarousel = useCallback(() => {
     clearTimeout(resumeTimer.current);
     if (carouselFrame.current != null) cancelAnimationFrame(carouselFrame.current);
@@ -132,39 +149,37 @@ export default function HomeScreen({ navigation }) {
   }, [startUniversityCarousel, stopUniversityCarousel]);
 
   const deadlineItems = useMemo(() => {
-    const today = new Date();
-    const todayUtc = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
-    const dayMs = 24 * 60 * 60 * 1000;
-    return universities.flatMap((university) => {
-      const matches = [...(university.closingDate || "").matchAll(/(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})/gi)];
-      if (!matches.length) return [];
-      const datedDeadlines = matches.map((match) => {
-        const monthIndex = new Date(`${match[2]} 1, 2000`).getMonth();
+    if (deadlineNow === null) return [];
+    return deadlines
+      .map((deadline) => {
+        const closesAt = deadline.closesAt ? new Date(deadline.closesAt) : null;
+        const validDate = closesAt && !Number.isNaN(closesAt.getTime());
+        const difference = validDate ? closesAt.getTime() - deadlineNow : null;
+        const closed = validDate && difference < 0;
+        const daysRemaining = validDate && !closed ? Math.max(0, Math.ceil(difference / 86400000)) : null;
+        const daysClosed = closed ? Math.ceil(Math.abs(difference) / 86400000) : 0;
         return {
-          label: `${match[1]} ${match[2]} ${match[3]}`,
-          dateUtc: Date.UTC(Number(match[3]), monthIndex, Number(match[1])),
+          ...deadline,
+          closingDate: deadline.closingDate || "Date not confirmed",
+          closed,
+          isOpen: validDate && !closed,
+          daysRemaining,
+          daysClosed,
+          university: universities.find((university) => university.id === deadline.universityId),
         };
+      })
+      .filter((deadline) => deadline.university && (
+        deadline.closed
+          ? deadline.daysClosed <= 30
+          : deadline.daysRemaining === null || deadline.daysRemaining <= 30
+      ))
+      .sort((first, second) => {
+        if (first.isOpen !== second.isOpen) return first.isOpen ? -1 : 1;
+        if (first.isOpen) return first.daysRemaining - second.daysRemaining;
+        if (first.closed !== second.closed) return first.closed ? 1 : -1;
+        return first.daysClosed - second.daysClosed;
       });
-      const deadline = datedDeadlines
-        .filter(({ dateUtc }) => dateUtc >= todayUtc - 30 * dayMs)
-        .sort((a, b) => b.dateUtc - a.dateUtc)[0];
-      if (!deadline) return [];
-      const closeUtc = deadline.dateUtc;
-      const dayDelta = Math.round((closeUtc - todayUtc) / dayMs);
-      if (dayDelta > 30 || dayDelta < -30 || !university.applicationStatus?.startsWith(dayDelta >= 0 ? "Open" : "Closed")) return [];
-      return [{
-        id: university.id,
-        university,
-        closingDate: deadline.label,
-        daysRemaining: Math.max(dayDelta, 0),
-        daysClosed: Math.max(-dayDelta, 0),
-        isOpen: dayDelta >= 0,
-      }];
-    }).sort((a, b) => {
-      if (a.isOpen !== b.isOpen) return a.isOpen ? -1 : 1;
-      return a.isOpen ? a.daysRemaining - b.daysRemaining : a.daysClosed - b.daysClosed;
-    });
-  }, []);
+  }, [deadlineNow, deadlines]);
 
   const openApsCalculator = useCallback(
     () => navigation.navigate("ApsCalculator"),

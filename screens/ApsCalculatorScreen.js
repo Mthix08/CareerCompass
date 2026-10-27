@@ -384,7 +384,7 @@ function createApsDisplayResult(result, colleges) {
 }
 
 export default function ApsCalculatorScreen({ navigation }) {
-  const { profile, saveApsRecord, colors, resolvedTheme } = useProfile();
+  const { profile, saveApsRecord, colors, resolvedTheme, isGuest, clearSession } = useProfile();
   const COLORS = useMemo(() => getThemeColors(colors, resolvedTheme), [colors, resolvedTheme]);
   const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const [selectedPeriod, setSelectedPeriod] = useState(PERIODS[0]);
@@ -402,6 +402,7 @@ export default function ApsCalculatorScreen({ navigation }) {
     [];
 
   useEffect(() => {
+    if (isGuest) return undefined;
     let active = true;
     loadCollection("subjects", { sortBy: "order" }).then((items) => {
       if (active) setSubjectGroups(items);
@@ -409,9 +410,10 @@ export default function ApsCalculatorScreen({ navigation }) {
     return () => {
       active = false;
     };
-  }, []);
+  }, [isGuest]);
 
   useEffect(() => {
+    if (isGuest) return undefined;
     let active = true;
     loadCollection("colleges").then((items) => {
       if (active) setColleges(items);
@@ -419,7 +421,7 @@ export default function ApsCalculatorScreen({ navigation }) {
     return () => {
       active = false;
     };
-  }, []);
+  }, [isGuest]);
 
   const markPeriodEdited = () => {
     setEditedPeriods((current) =>
@@ -543,6 +545,35 @@ export default function ApsCalculatorScreen({ navigation }) {
       : calculateGenericAps(currentMarks, selectedPeriod);
     setApsResult(createApsDisplayResult(result, colleges));
   };
+
+  if (isGuest) {
+    const openAccount = (routeName) => {
+      clearSession();
+      navigation.reset({ index: 0, routes: [{ name: routeName }] });
+    };
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.guestGate}>
+          <View style={styles.guestGateIcon}>
+            <Ionicons name="lock-closed-outline" size={28} color={COLORS.primary} />
+          </View>
+          <Text style={styles.guestGateTitle}>Sign in to use the APS calculator</Text>
+          <Text style={styles.guestGateText}>
+            Create a free student account to enter your marks, calculate APS, and keep your results safe.
+          </Text>
+          <Pressable onPress={() => openAccount("Login")} accessibilityRole="button" style={styles.guestGateButton}>
+            <Text style={styles.guestGateButtonText}>Sign in</Text>
+          </Pressable>
+          <Pressable onPress={() => openAccount("SignUp")} accessibilityRole="button" style={styles.guestGateSecondaryButton}>
+            <Text style={styles.guestGateSecondaryText}>Create an account</Text>
+          </Pressable>
+          <Pressable onPress={() => navigation.goBack()} accessibilityRole="button" style={styles.guestGateBack}>
+            <Text style={styles.guestGateBackText}>Back to exploring</Text>
+          </Pressable>
+        </View>
+      </SafeAreaView>
+    );
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -686,6 +717,16 @@ export default function ApsCalculatorScreen({ navigation }) {
 function makeStyles(COLORS) {
  return StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
+  guestGate: { flex: 1, justifyContent: "center", padding: 26 },
+  guestGateIcon: { width: 60, height: 60, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: COLORS.primarySoft },
+  guestGateTitle: { color: COLORS.text, fontSize: 25, lineHeight: 31, fontWeight: "900", marginTop: 20 },
+  guestGateText: { color: COLORS.secondary, fontSize: 15, lineHeight: 23, marginTop: 9 },
+  guestGateButton: { minHeight: 52, borderRadius: 15, marginTop: 24, alignItems: "center", justifyContent: "center", backgroundColor: COLORS.primary },
+  guestGateButtonText: { color: COLORS.onPrimary, fontSize: 15, fontWeight: "800" },
+  guestGateSecondaryButton: { minHeight: 52, borderRadius: 15, marginTop: 10, alignItems: "center", justifyContent: "center", borderWidth: 1, borderColor: COLORS.primary },
+  guestGateSecondaryText: { color: COLORS.primary, fontSize: 15, fontWeight: "800" },
+  guestGateBack: { alignSelf: "center", padding: 14, marginTop: 10 },
+  guestGateBackText: { color: COLORS.secondary, fontSize: 14, fontWeight: "700" },
   header: {
     paddingHorizontal: 22,
     paddingTop: 12,

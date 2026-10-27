@@ -30,14 +30,12 @@ async function getStartRoute() {
 
   let user = null;
   try {
-    user = await new Promise((resolve) => {
-      let unsubscribe = null;
-      unsubscribe = auth.onAuthStateChanged((currentUser) => {
-        unsubscribe?.();
-        resolve(currentUser);
-      });
-    });
-  } catch (_error) {}
+    await withTimeout(auth.authStateReady(), 5000);
+    user = auth.currentUser;
+  } catch (_error) {
+    // Use Firebase's restored local session if startup readiness takes longer offline.
+    user = auth.currentUser;
+  }
 
   if (!user) return loggedOutRoute;
 
