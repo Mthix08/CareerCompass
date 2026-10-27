@@ -7,7 +7,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { useColorScheme } from "react-native";
+import { Alert, AppState, StyleSheet, View, useColorScheme } from "react-native";
 import { signOut } from "firebase/auth";
 import { doc, getDoc, onSnapshot, serverTimestamp, setDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
@@ -18,9 +18,12 @@ import { auth, db, storage } from "../screens/firebaseConfig";
 const ProfileContext = createContext(null);
 const THEME_STORAGE_KEY = "@careercompass:themePreference";
 const THEME_PREFERENCES = ["Light", "Dark", "System"];
+const INACTIVITY_TIMEOUT_MS = 60 * 1000;
+const SESSION_EXPIRY_NOTICE_MS = 3 * 1000;
 // NEW: offline copy of the signed-in profile, and APS marks saved by guests
 const PROFILE_CACHE_KEY = "@careercompass:profileCache:";
 const GUEST_APS_KEY = "@careercompass:apsRecords:guest";
+const styles = StyleSheet.create({ root: { flex: 1 } });
 
 function normalizeThemePreference(value) {
   return THEME_PREFERENCES.includes(value) ? value : "Light";
@@ -78,12 +81,17 @@ export function ProfileProvider({ children }) {
   const [firebaseUser, setFirebaseUser] = useState(null);
   const [isGuest, setIsGuest] = useState(false);
   const [accessRestricted, setAccessRestricted] = useState(false);
+  const [sessionExpired, setSessionExpired] = useState(false);
   const accessRestrictedRef = useRef(false);
   const [themePreference, setThemePreferenceState] = useState("Light");
   const themePreferenceChangedRef = useRef(false);
   const [successMessage, setSuccessMessage] = useState("");
   // NEW: uid whose profile is really loaded, so the "Guest" defaults are never cached
   const [profileLoadedUid, setProfileLoadedUid] = useState(null);
+  const inactivityTimeoutRef = useRef(null);
+  const sessionExpiryNoticeTimeoutRef = useRef(null);
+  const lastActivityAtRef = useRef(null);
+  const inactivityAlertPendingRef = useRef(false);
 
   // Load saved theme preference once on mount.
   useEffect(() => {
@@ -108,6 +116,100 @@ export function ProfileProvider({ children }) {
       // Non-fatal: theme just won't persist this time.
     });
   }, []);
+
+  const completeInactivityLogout = useCallback(async (uid) => {
+    if (auth.currentUser?.uid !== uid) {
+      inactivityAlertPendingRef.current = false;
+      return;
+    }
+    clearTimeout(sessionExpiryNoticeTimeoutRef.current);
+    sessionExpiryNoticeTimeoutRef.current = null;
+    try {
+      await signOut(auth);
+      inactivityAlertPendingRef.current = false;
+      setSessionExpired(true);
+    } catch (error) {
+      inactivityAlertPendingRef.current = false;
+      console.warn("Unable to sign out after inactivity.", error);
+      Alert.alert(
+        "Sign-out failed",
+        "We could not end your session. Please try again.",
+      );
+    }
+  }, []);
+
+  const logoutForInactivity = useCallback(() => {
+    if (
+      !firebaseUser ||
+      auth.currentUser?.uid !== firebaseUser.uid ||
+      inactivityAlertPendingRef.current
+    ) {
+      return;
+    }
+    clearTimeout(inactivityTimeoutRef.current);
+    inactivityTimeoutRef.current = null;
+    inactivityAlertPendingRef.current = true;
+    Alert.alert(
+      "Session expired",
+      "Your session has expired due to one minute of inactivity. You will be returned to the login screen.",
+      [
+        {
+          text: "Log in",
+          onPress: () => completeInactivityLogout(firebaseUser.uid),
+        },
+      ],
+      { cancelable: false },
+    );
+    sessionExpiryNoticeTimeoutRef.current = setTimeout(
+      () => completeInactivityLogout(firebaseUser.uid),
+      SESSION_EXPIRY_NOTICE_MS,
+    );
+  }, [firebaseUser, completeInactivityLogout]);
+
+  const scheduleInactivityLogout = useCallback(
+    (delay) => {
+      clearTimeout(inactivityTimeoutRef.current);
+      inactivityTimeoutRef.current = setTimeout(logoutForInactivity, delay);
+    },
+    [logoutForInactivity],
+  );
+
+  const recordUserActivity = useCallback(() => {
+    if (!firebaseUser || inactivityAlertPendingRef.current) return;
+    lastActivityAtRef.current = Date.now();
+    scheduleInactivityLogout(INACTIVITY_TIMEOUT_MS);
+  }, [firebaseUser, scheduleInactivityLogout]);
+
+  useEffect(() => {
+    if (!firebaseUser) {
+      clearTimeout(inactivityTimeoutRef.current);
+      inactivityTimeoutRef.current = null;
+      clearTimeout(sessionExpiryNoticeTimeoutRef.current);
+      sessionExpiryNoticeTimeoutRef.current = null;
+      inactivityAlertPendingRef.current = false;
+      lastActivityAtRef.current = null;
+      return undefined;
+    }
+
+    recordUserActivity();
+    return () => {
+      clearTimeout(inactivityTimeoutRef.current);
+      inactivityTimeoutRef.current = null;
+    };
+  }, [firebaseUser, recordUserActivity]);
+
+  useEffect(() => {
+    const subscription = AppState.addEventListener("change", (nextState) => {
+      if (nextState !== "active" || !firebaseUser) return;
+      const elapsed = Date.now() - (lastActivityAtRef.current || Date.now());
+      if (elapsed >= INACTIVITY_TIMEOUT_MS) {
+        logoutForInactivity();
+      } else {
+        scheduleInactivityLogout(INACTIVITY_TIMEOUT_MS - elapsed);
+      }
+    });
+    return () => subscription.remove();
+  }, [firebaseUser, logoutForInactivity, scheduleInactivityLogout]);
 
   useEffect(() => {
     let stopUserProfileWatch = null;
@@ -366,6 +468,7 @@ export function ProfileProvider({ children }) {
     [firebaseUser, profile.apsRecords],
   );
   const clearSuccessMessage = useCallback(() => setSuccessMessage(""), []);
+  const clearSessionExpired = useCallback(() => setSessionExpired(false), []);
 
   const value = useMemo(
     () => ({
@@ -373,6 +476,8 @@ export function ProfileProvider({ children }) {
       firebaseUser,
       isGuest: isGuest && !firebaseUser,
       accessRestricted,
+      sessionExpired,
+      clearSessionExpired,
       isAuthenticated: Boolean(firebaseUser),
       enterGuestMode,
       clearSession,
@@ -392,6 +497,8 @@ export function ProfileProvider({ children }) {
       firebaseUser,
       isGuest,
       accessRestricted,
+      sessionExpired,
+      clearSessionExpired,
       enterGuestMode,
       clearSession,
       updateProfile,
@@ -407,7 +514,15 @@ export function ProfileProvider({ children }) {
   );
 
   return (
-    <ProfileContext.Provider value={value}>{children}</ProfileContext.Provider>
+    <ProfileContext.Provider value={value}>
+      <View
+        style={styles.root}
+        onTouchStartCapture={recordUserActivity}
+        onTouchMoveCapture={recordUserActivity}
+      >
+        {children}
+      </View>
+    </ProfileContext.Provider>
   );
 }
 

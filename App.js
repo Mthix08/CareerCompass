@@ -34,7 +34,14 @@ import { useAppLifecycleLogger } from "./utils/lifecycleLogger";
 const Stack = createNativeStackNavigator();
 
 function AppNavigator() {
-  const { colors, publicColors, resolvedTheme, accessRestricted } = useProfile();
+  const {
+    colors,
+    publicColors,
+    resolvedTheme,
+    accessRestricted,
+    sessionExpired,
+    clearSessionExpired,
+  } = useProfile();
   const navigationRef = useNavigationContainerRef();
   const publicScreenOptions = useMemo(() => ({
     headerStyle: { backgroundColor: publicColors.background },
@@ -62,6 +69,12 @@ function AppNavigator() {
     if (!accessRestricted || !navigationRef.isReady()) return;
     navigationRef.resetRoot({ index: 0, routes: [{ name: "Login" }] });
   }, [accessRestricted, navigationRef]);
+
+  useEffect(() => {
+    if (!sessionExpired || !navigationRef.isReady()) return;
+    navigationRef.resetRoot({ index: 0, routes: [{ name: "Login" }] });
+    clearSessionExpired();
+  }, [sessionExpired, clearSessionExpired, navigationRef]);
 
   return (
     <NavigationContainer ref={navigationRef} theme={navigationTheme}>
