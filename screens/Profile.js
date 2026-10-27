@@ -142,6 +142,14 @@ export default function ProfileScreen({ navigation }) {
     accountOnly(() => navigation.navigate("EditProfile"));
   };
 
+  const handleGuestSignIn = () => {
+    clearSession();
+    navigation.getParent()?.reset({
+      index: 0,
+      routes: [{ name: "Login" }],
+    });
+  };
+
   const handleSignOut = () => {
     Alert.alert(
       isGuest ? "Leave guest mode?" : "Sign out?",
@@ -475,7 +483,7 @@ export default function ProfileScreen({ navigation }) {
             icon="calculator-outline"
             label="APS Calculator"
             badge={apsBadge}
-            onPress={() => navigation.navigate("ApsCalculator")}
+            onPress={() => accountOnly(() => navigation.navigate("ApsCalculator"))}
             styles={styles}
           />
           <QuickLink
@@ -559,18 +567,36 @@ export default function ProfileScreen({ navigation }) {
           </View>
         )}
 
-        <Pressable
-          onPress={handleSignOut}
-          accessibilityRole="button"
-          accessibilityLabel="Sign Out"
-          style={({ pressed }) => [
-            styles.signOutButton,
-            pressed && styles.pressed,
-          ]}
-        >
-          <Ionicons name="log-out-outline" size={20} color={colors.text} />
-          <Text style={styles.signOutText}>Sign Out</Text>
-        </Pressable>
+        {isGuest ? (
+          <View style={styles.guestSignInCard}>
+            <Text style={styles.guestSignInTitle}>Unlock your study tools</Text>
+            <Text style={styles.guestSignInBody}>
+              Sign in or create a free account to calculate and save your APS, track applications, and keep your progress.
+            </Text>
+            <Pressable
+              onPress={handleGuestSignIn}
+              accessibilityRole="button"
+              accessibilityLabel="Sign in or create an account"
+              style={({ pressed }) => [styles.primaryButton, pressed && styles.pressed]}
+            >
+              <Ionicons name="log-in-outline" size={20} color="#FFFFFF" />
+              <Text style={styles.primaryButtonText}>Sign in / Create account</Text>
+            </Pressable>
+          </View>
+        ) : (
+          <Pressable
+            onPress={handleSignOut}
+            accessibilityRole="button"
+            accessibilityLabel="Sign Out"
+            style={({ pressed }) => [
+              styles.signOutButton,
+              pressed && styles.pressed,
+            ]}
+          >
+            <Ionicons name="log-out-outline" size={20} color={colors.text} />
+            <Text style={styles.signOutText}>Sign Out</Text>
+          </Pressable>
+        )}
 
         {!isGuest && (
           <>
@@ -998,6 +1024,16 @@ function createStyles(colors) {
       backgroundColor: colors.surface,
     },
     signOutText: { color: colors.text, fontSize: 15, fontWeight: "800" },
+    guestSignInCard: {
+      marginTop: 20,
+      padding: 18,
+      borderRadius: 18,
+      borderWidth: 1,
+      borderColor: colors.border,
+      backgroundColor: colors.surface,
+    },
+    guestSignInTitle: { color: colors.text, fontSize: 17, fontWeight: "800" },
+    guestSignInBody: { color: colors.secondaryText, fontSize: 13, lineHeight: 19, marginTop: 6 },
     deleteButton: {
       minHeight: 50,
       alignSelf: "center",

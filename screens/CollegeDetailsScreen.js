@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
@@ -15,18 +15,16 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
 import { getCollegeImage, getCollegeLogo } from "../data/collegeImages";
 
-const TABS = ["About", "Costs", "Apply"];
-
-const formatMoney = (value) =>
-  typeof value === "number" ? `R${value.toLocaleString("en-ZA")}` : value || "Not supplied";
-
-function Row({ label, value, styles }) {
-  return (
-    <View style={styles.row}>
-      <Text style={styles.rowLabel}>{label}</Text>
-      <Text style={styles.rowValue}>{value}</Text>
-    </View>
-  );
+function toDisplayStrings(value) {
+  const items = Array.isArray(value) ? value : typeof value === "string" ? [value] : [];
+  return items
+    .map((item) => {
+      if (typeof item === "string") return item.trim();
+      if (!item || typeof item !== "object") return "";
+      const name = item.name || item.campusName || item.title || item.address || "";
+      return name && item.location ? `${name} · ${item.location}` : name;
+    })
+    .filter(Boolean);
 }
 
 function InfoLine({ icon, text, onPress, styles, colors }) {
@@ -47,7 +45,6 @@ function InfoLine({ icon, text, onPress, styles, colors }) {
 export default function CollegeDetailsScreen({ navigation, route }) {
   const { colors } = useProfile();
   const styles = useMemo(() => makeStyles(colors), [colors]);
-  const [activeTab, setActiveTab] = useState("About");
   const college = route.params?.college;
 
   if (!college) {
@@ -63,17 +60,13 @@ export default function CollegeDetailsScreen({ navigation, route }) {
 
   const photo = getCollegeImage(college);
   const logo = getCollegeLogo(college);
-  const costs = college.costs || {};
   const phone = college.contactPhone || college.phone;
   const email = college.contactEmail || college.email;
-  const applyUrl = college.applicationUrl || college.applyUrl;
-  const opens = college.openingDate || college.opens;
-  const closes = college.closingDate || college.closes;
-
-  const applicationFee =
-    college.applicationFee === 0
-      ? college.applicationFeeLabel || "Free to apply"
-      : formatMoney(college.applicationFee);
+  const overview = college.description || college.overview || college.about;
+  const campuses = toDisplayStrings(college.campuses);
+  const programmes = college.programmes || college.programs || college.qualifications || college.courses;
+  const programmeList = toDisplayStrings(programmes);
+  const studyAreas = toDisplayStrings(college.studyAreas || college.fieldsOfStudy);
 
   const openLink = async (url, title) => {
     if (!url || !/^https?:\/\//i.test(url)) {
@@ -87,78 +80,10 @@ export default function CollegeDetailsScreen({ navigation, route }) {
     }
   };
 
-  const renderAbout = () => (
-    <>
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>About {college.shortName || "this college"}</Text>
-        <Text style={styles.body}>{college.description || "No description available yet."}</Text>
-      </View>
-
-      {Array.isArray(college.campuses) && college.campuses.length > 0 && (
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>Campuses</Text>
-          {college.campuses.map((campus) => (
-            <InfoLine key={campus} icon="location-outline" text={campus} styles={styles} colors={colors} />
-          ))}
-        </View>
-      )}
-
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>Contact</Text>
-        <InfoLine icon="call-outline" text={phone} styles={styles} colors={colors} />
-        <InfoLine icon="mail-outline" text={email} styles={styles} colors={colors} />
-        <InfoLine
-          icon="globe-outline"
-          text={college.website}
-          onPress={() => openLink(college.website, "Website")}
-          styles={styles}
-          colors={colors}
-        />
-        {!phone && !email && !college.website && (
-          <Text style={styles.body}>Contact details have not been added yet.</Text>
-        )}
-      </View>
-    </>
-  );
-
-  const renderCosts = () => (
-    <View style={styles.card}>
-      <Text style={styles.cardTitle}>Costs and details</Text>
-      <Text style={styles.sub}>
-        {costs.year ? `Figures for ${costs.year}. ` : ""}Fees change, so always confirm the latest amounts.
-      </Text>
-      <Row label="Application fee" value={applicationFee} styles={styles} />
-      <Row label="Registration fee" value={formatMoney(costs.registrationFee)} styles={styles} />
-      <Row label="Tuition per year" value={formatMoney(costs.tuitionPerYear)} styles={styles} />
-      <Row label="Accommodation per year" value={formatMoney(costs.accommodationPerYear)} styles={styles} />
-      <Row label="NSFAS funding" value={costs.nsfasFunding || "Check with the college"} styles={styles} />
-      {!!costs.sourceUrl && (
-        <Pressable onPress={() => openLink(costs.sourceUrl, "Fee information")} accessibilityRole="link" style={styles.linkRow}>
-          <Text style={styles.link}>Check official fee information</Text>
-          <Ionicons name="open-outline" size={16} color={colors.primary} />
-        </Pressable>
-      )}
-    </View>
-  );
-
-  const renderApply = () => (
-    <View style={styles.card}>
-      <Text style={styles.cardTitle}>Applications</Text>
-      <Row label="Status" value={college.applicationStatus || "Not supplied"} styles={styles} />
-      <Row label="Opens" value={opens || "Not supplied"} styles={styles} />
-      <Row label="Closes" value={closes || "Not supplied"} styles={styles} />
-      <Text style={styles.body}>
-        {college.applicationInstructions || "Check the official college website for how to apply."}
-      </Text>
-      <Pressable
-        onPress={() => openLink(applyUrl || college.website, "Application link unavailable")}
-        accessibilityRole="link"
-        style={({ pressed }) => [styles.button, pressed && styles.pressed]}
-      >
-        <Text style={styles.buttonText}>Apply on college website</Text>
-        <Ionicons name="open-outline" size={19} color={colors.onPrimary} />
-      </Pressable>
-    </View>
+  const aboutText = overview || (
+    college.province
+      ? `${college.name} is a public TVET college in ${college.province}. This directory entry currently includes basic contact information; check the official college website for its current programmes, campuses, fees, and application dates.`
+      : "This directory entry currently includes basic contact information. Check the official college website for current programmes, campuses, fees, and application dates."
   );
 
   return (
@@ -212,29 +137,65 @@ export default function CollegeDetailsScreen({ navigation, route }) {
             )}
           </View>
 
-          <View style={styles.tabs} accessibilityRole="tablist">
-            {TABS.map((tab) => {
-              const selected = activeTab === tab;
-              return (
-                <Pressable
-                  key={tab}
-                  onPress={() => setActiveTab(tab)}
-                  accessibilityRole="tab"
-                  accessibilityState={{ selected }}
-                  style={[styles.tab, selected && styles.tabSelected]}
-                >
-                  <Text style={[styles.tabText, selected && styles.tabTextSelected]}>{tab}</Text>
-                </Pressable>
-              );
-            })}
+          <View style={styles.card}>
+            <Text style={styles.cardTitle}>About {college.shortName || "this college"}</Text>
+            <Text style={styles.body}>{aboutText}</Text>
           </View>
 
-          {activeTab === "About" && renderAbout()}
-          {activeTab === "Costs" && renderCosts()}
-          {activeTab === "Apply" && renderApply()}
+          {programmeList.length > 0 && (
+            <View style={styles.card}>
+              <Text style={styles.cardTitle}>Programmes and qualifications</Text>
+              {programmeList.map((programme) => (
+                <InfoLine key={programme} icon="school-outline" text={programme} styles={styles} colors={colors} />
+              ))}
+            </View>
+          )}
+
+          {studyAreas.length > 0 && (
+            <View style={styles.card}>
+              <Text style={styles.cardTitle}>Study areas</Text>
+              {studyAreas.map((area) => (
+                <InfoLine key={area} icon="book-outline" text={area} styles={styles} colors={colors} />
+              ))}
+            </View>
+          )}
+
+          {campuses.length > 0 && (
+            <View style={styles.card}>
+              <Text style={styles.cardTitle}>Campuses</Text>
+              {campuses.map((campus) => (
+                <InfoLine
+                  key={campus}
+                  icon="location-outline"
+                  text={campus}
+                  styles={styles}
+                  colors={colors}
+                />
+              ))}
+            </View>
+          )}
+
+          <View style={styles.card}>
+            <Text style={styles.cardTitle}>Contact and official information</Text>
+            <InfoLine icon="call-outline" text={phone} styles={styles} colors={colors} />
+            <InfoLine icon="mail-outline" text={email} styles={styles} colors={colors} />
+            <InfoLine
+              icon="globe-outline"
+              text={college.website}
+              onPress={() => openLink(college.website, "Website")}
+              styles={styles}
+              colors={colors}
+            />
+            {!phone && !email && !college.website && (
+              <Text style={styles.body}>Contact details have not been added yet.</Text>
+            )}
+            {!!college.lastVerified && (
+              <Text style={styles.sourceNote}>Information last checked {college.lastVerified}.</Text>
+            )}
+          </View>
 
           <Text style={styles.disclaimer}>
-            Confirm fees, dates and requirements on the college's official website before applying.
+            Confirm fees, dates and requirements on the college&apos;s official website before applying.
           </Text>
         </View>
       </ScrollView>
@@ -284,52 +245,17 @@ function makeStyles(c) {
     badgeGreenText: { color: c.primary, fontSize: 12, fontWeight: "800" },
     badgeGrey: { backgroundColor: c.input },
     badgeGreyText: { color: c.secondaryText, fontSize: 12, fontWeight: "800" },
-    tabs: {
-      marginTop: 26,
-      flexDirection: "row",
-      gap: 6,
-      padding: 5,
-      borderRadius: 16,
-      borderWidth: 1,
-      borderColor: c.border,
-      backgroundColor: c.input,
-    },
-    tab: { flex: 1, minHeight: 46, borderRadius: 12, alignItems: "center", justifyContent: "center" },
-    tabSelected: { backgroundColor: c.primary },
-    tabText: { color: c.secondaryText, fontSize: 14, fontWeight: "700" },
-    tabTextSelected: { color: c.onPrimary },
     card: { marginTop: 16, padding: 18, borderRadius: 18, borderWidth: 1, borderColor: c.border, backgroundColor: c.surface },
     cardTitle: { color: c.text, fontSize: 18, fontWeight: "900" },
-    sub: { marginTop: 5, marginBottom: 6, color: c.secondaryText, fontSize: 12, lineHeight: 18 },
     body: { marginTop: 9, color: c.secondaryText, fontSize: 13, lineHeight: 21 },
-    row: {
-      paddingVertical: 11,
-      borderBottomWidth: StyleSheet.hairlineWidth,
-      borderBottomColor: c.border,
-      flexDirection: "row",
-      justifyContent: "space-between",
-      gap: 12,
-    },
-    rowLabel: { flex: 0.5, color: c.secondaryText, fontSize: 13 },
-    rowValue: { flex: 0.5, color: c.text, fontSize: 13, fontWeight: "800", textAlign: "right" },
     info: { marginTop: 12, flexDirection: "row", alignItems: "flex-start", gap: 9 },
     infoText: { flex: 1, color: c.secondaryText, fontSize: 13, lineHeight: 19 },
-    linkRow: { marginTop: 14, flexDirection: "row", alignItems: "center", gap: 6 },
     link: { color: c.primary, fontSize: 13, fontWeight: "800" },
-    button: {
-      minHeight: 52,
-      marginTop: 16,
-      paddingHorizontal: 18,
-      borderRadius: 14,
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: 8,
-      backgroundColor: c.primary,
-    },
-    buttonText: { color: c.onPrimary, fontSize: 15, fontWeight: "800" },
+    sourceNote: { marginTop: 12, color: c.mutedText, fontSize: 11, lineHeight: 16 },
     disclaimer: { marginTop: 20, color: c.mutedText, fontSize: 12, lineHeight: 18, textAlign: "center" },
     missing: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: c.background },
     missingTitle: { color: c.text, fontSize: 20, fontWeight: "900" },
+    button: { minHeight: 52, marginTop: 16, paddingHorizontal: 18, borderRadius: 14, alignItems: "center", justifyContent: "center", backgroundColor: c.primary },
+    buttonText: { color: c.onPrimary, fontSize: 15, fontWeight: "800" },
   });
 }

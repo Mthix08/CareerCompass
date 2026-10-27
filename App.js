@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { Platform, StatusBar, View } from "react-native";
+import React, { useEffect, useMemo } from "react";
+import { View } from "react-native";
 import {
   DarkTheme,
   DefaultTheme,
@@ -33,7 +33,6 @@ import CareerAssessmentWelcomeScreen from "./screens/CareerAssessmentWelcomeScre
 import CareerAssessmentScreen from "./screens/CareerAssessmentScreen";
 import CareerAssessmentResultsScreen from "./screens/CareerAssessmentResultsScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
-import LanguageButton from "./components/LanguageButton";
 import { ProfileProvider } from "./context/ProfileContext";
 import { useProfile } from "./context/ProfileContext";
 import { BookmarksProvider } from "./context/BookmarksContext";
@@ -43,18 +42,8 @@ import { useAppLifecycleLogger } from "./utils/lifecycleLogger";
 const Stack = createNativeStackNavigator();
 const navigationRef = createNavigationContainerRef();
 
-// Screens where the language button should not appear
-const HIDE_BUTTON_ON = ["Splash", "Language"];
-
-const BUTTON_TOP =
-  Platform.OS === "android" ? (StatusBar.currentHeight || 24) + 8 : 54;
-
 function AppNavigator() {
   const { colors, publicColors, resolvedTheme, accessRestricted } = useProfile();
-  const [currentRoute, setCurrentRoute] = useState("Splash");
-
-  const showButton = !HIDE_BUTTON_ON.includes(currentRoute);
-
   const publicScreenOptions = useMemo(() => ({
     headerStyle: { backgroundColor: publicColors.background },
     headerTintColor: publicColors.text,
@@ -88,12 +77,6 @@ function AppNavigator() {
       <NavigationContainer
         ref={navigationRef}
         theme={navigationTheme}
-        onReady={() =>
-          setCurrentRoute(navigationRef.getCurrentRoute()?.name ?? "Splash")
-        }
-        onStateChange={() =>
-          setCurrentRoute(navigationRef.getCurrentRoute()?.name ?? "Splash")
-        }
       >
         <Stack.Navigator initialRouteName="Splash">
           <Stack.Screen
@@ -224,18 +207,6 @@ function AppNavigator() {
         </Stack.Navigator>
       </NavigationContainer>
 
-      {/* LANGUAGE BUTTON - floats on top of every screen */}
-      {showButton && (
-        <LanguageButton
-          onPress={() => navigationRef.navigate("Language")}
-          style={{
-            position: "absolute",
-            top: BUTTON_TOP,
-            right: 16,
-            zIndex: 100,
-          }}
-        />
-      )}
     </View>
   );
 }
