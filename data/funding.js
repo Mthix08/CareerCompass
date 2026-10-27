@@ -78,8 +78,21 @@ export function normalizeFundingOption(item) {
 }
 
 export async function fetchBursaries() {
+  const controller = typeof AbortController === "function" ? new AbortController() : null;
+  let timeoutId;
   try {
-    const response = await fetch(FUNDING_API_URL, { headers: { Accept: "application/json" } });
+    const response = await Promise.race([
+      fetch(FUNDING_API_URL, {
+        headers: { Accept: "application/json" },
+        ...(controller ? { signal: controller.signal } : {}),
+      }),
+      new Promise((_, reject) => {
+        timeoutId = setTimeout(() => {
+          controller?.abort();
+          reject(new Error("Funding API request timed out."));
+        }, 10000);
+      }),
+    ]);
     if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
 
     const payload = await response.json();
@@ -108,6 +121,8 @@ export async function fetchBursaries() {
     }
     console.warn("Unable to load bursaries from API. Using fallback funding options.", error);
     return [NSFAS, SAMPLE_BURSARY];
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 

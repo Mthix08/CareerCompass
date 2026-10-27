@@ -7,6 +7,20 @@ import {
 
 import { auth } from "./firebaseConfig";
 
+export function getGoogleAuthErrorMessage(error) {
+  if (error?.code === "auth/google-client-id-missing") {
+    return "Add the Google web OAuth client ID before using Google sign-in on mobile.";
+  }
+
+  const code = String(error?.code || "").toUpperCase();
+  const message = String(error?.message || "").toUpperCase();
+  if (code === "10" || code === "DEVELOPER_ERROR" || message.includes("DEVELOPER_ERROR")) {
+    return "Google rejected this Android build's OAuth configuration (error 10). Add this EAS Android signing key's SHA-1 fingerprint to the Android app in Firebase, download the updated google-services.json, then build a new APK.";
+  }
+
+  return "We could not sign in with Google. Please try again.";
+}
+
 export async function signInWithGoogle() {
   if (Platform.OS === "web") {
     return signInWithPopup(auth, new GoogleAuthProvider());
@@ -33,14 +47,7 @@ export async function signInWithGoogle() {
     });
   }
 
-  console.log("About to sign in with Google");
-
   const response = await GoogleSignin.signIn();
-
-  console.log(
-  "Google response:",
-  JSON.stringify(response, null, 2)
-);
 
   if (response.type !== "success" || !response.data.idToken) {
     const error = new Error("Google sign-in was cancelled.");

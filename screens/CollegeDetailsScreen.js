@@ -67,6 +67,13 @@ export default function CollegeDetailsScreen({ navigation, route }) {
   const programmes = college.programmes || college.programs || college.qualifications || college.courses;
   const programmeList = toDisplayStrings(programmes);
   const studyAreas = toDisplayStrings(college.studyAreas || college.fieldsOfStudy);
+  const accreditation = college.accreditation || {};
+  const qualityBodies = toDisplayStrings(accreditation.qualityBodies || college.qualityBodies);
+  const setaPartners = toDisplayStrings(accreditation.setaPartners || college.setaPartners);
+  const application = college.application || {};
+  const applicationPeriods = Array.isArray(application.periods) ? application.periods : [];
+  const applyUrl = application.applyUrl || college.applyUrl || college.applicationUrl;
+  const applicationFee = application.fee ?? college.applicationFee;
 
   const openLink = async (url, title) => {
     if (!url || !/^https?:\/\//i.test(url)) {
@@ -82,8 +89,8 @@ export default function CollegeDetailsScreen({ navigation, route }) {
 
   const aboutText = overview || (
     college.province
-      ? `${college.name} is a public TVET college in ${college.province}. This directory entry currently includes basic contact information; check the official college website for its current programmes, campuses, fees, and application dates.`
-      : "This directory entry currently includes basic contact information. Check the official college website for current programmes, campuses, fees, and application dates."
+      ? `${college.name} is a public TVET college in ${college.province}. Check the official college website for its current programmes, campuses, fees, and application dates.`
+      : "Check the official college website for current programmes, campuses, fees, and application dates."
   );
 
   return (
@@ -160,6 +167,17 @@ export default function CollegeDetailsScreen({ navigation, route }) {
             </View>
           )}
 
+          {(accreditation.registrationBody || accreditation.registrationNumber || qualityBodies.length > 0 || setaPartners.length > 0) && (
+            <View style={styles.card}>
+              <Text style={styles.cardTitle}>Registration and accreditation</Text>
+              {!!accreditation.registrationBody && <InfoLine icon="shield-checkmark-outline" text={`Registered with ${accreditation.registrationBody}`} styles={styles} colors={colors} />}
+              {!!accreditation.registrationNumber && <InfoLine icon="document-text-outline" text={`Registration number: ${accreditation.registrationNumber}`} styles={styles} colors={colors} />}
+              {qualityBodies.map((body) => <InfoLine key={`quality-${body}`} icon="checkmark-circle-outline" text={body} styles={styles} colors={colors} />)}
+              {setaPartners.map((seta) => <InfoLine key={`seta-${seta}`} icon="briefcase-outline" text={seta} styles={styles} colors={colors} />)}
+              {!!accreditation.verificationUrl && <InfoLine icon="open-outline" text="Verify registration / accreditation" onPress={() => openLink(accreditation.verificationUrl, "Accreditation") } styles={styles} colors={colors} />}
+            </View>
+          )}
+
           {campuses.length > 0 && (
             <View style={styles.card}>
               <Text style={styles.cardTitle}>Campuses</Text>
@@ -174,6 +192,30 @@ export default function CollegeDetailsScreen({ navigation, route }) {
               ))}
             </View>
           )}
+
+          <View style={styles.card}>
+            <Text style={styles.cardTitle}>Applications</Text>
+            {!!applicationFee && <InfoLine icon="cash-outline" text={`Application fee: R${applicationFee}`} styles={styles} colors={colors} />}
+            {applicationFee === 0 && <InfoLine icon="checkmark-circle-outline" text="No application fee" styles={styles} colors={colors} />}
+            {!!application.feeNote && <Text style={styles.body}>{application.feeNote}</Text>}
+            {applicationPeriods.length > 0 ? applicationPeriods.map((period, index) => (
+              <View key={`${period.name || "period"}-${index}`} style={styles.period}>
+                <Text style={styles.periodTitle}>{period.name || `Application period ${index + 1}`}</Text>
+                <Text style={styles.body}>Opens: {period.opens || "Check official site"}</Text>
+                <Text style={styles.body}>Closes: {period.closes || "Check official site"}</Text>
+                {!!period.status && <Text style={styles.periodStatus}>{period.status}</Text>}
+                {!!period.sourceUrl && <InfoLine icon="open-outline" text="Check this application period" onPress={() => openLink(period.sourceUrl, "Application dates")} styles={styles} colors={colors} />}
+              </View>
+            )) : <Text style={styles.body}>Application dates can change each year. Check the official college site for the current intake.</Text>}
+            <Pressable
+              onPress={() => openLink(applyUrl || college.website, "Apply online")}
+              accessibilityRole="link"
+              style={({ pressed }) => [styles.applyButton, pressed && styles.pressed]}
+            >
+              <Ionicons name="open-outline" size={18} color={colors.onPrimary} />
+              <Text style={styles.applyButtonText}>Apply online on official site</Text>
+            </Pressable>
+          </View>
 
           <View style={styles.card}>
             <Text style={styles.cardTitle}>Contact and official information</Text>
@@ -252,6 +294,11 @@ function makeStyles(c) {
     infoText: { flex: 1, color: c.secondaryText, fontSize: 13, lineHeight: 19 },
     link: { color: c.primary, fontSize: 13, fontWeight: "800" },
     sourceNote: { marginTop: 12, color: c.mutedText, fontSize: 11, lineHeight: 16 },
+    period: { marginTop: 14, paddingTop: 12, borderTopWidth: 1, borderTopColor: c.border },
+    periodTitle: { color: c.text, fontSize: 14, fontWeight: "800" },
+    periodStatus: { marginTop: 8, color: c.primary, fontSize: 12, fontWeight: "800" },
+    applyButton: { minHeight: 50, marginTop: 16, paddingHorizontal: 16, borderRadius: 14, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8, backgroundColor: c.primary },
+    applyButtonText: { color: c.onPrimary, fontSize: 14, fontWeight: "800" },
     disclaimer: { marginTop: 20, color: c.mutedText, fontSize: 12, lineHeight: 18, textAlign: "center" },
     missing: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: c.background },
     missingTitle: { color: c.text, fontSize: 20, fontWeight: "900" },
