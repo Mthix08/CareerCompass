@@ -19,7 +19,7 @@ export default function CareerAssessmentResultsScreen({ navigation }) {
     getCareerAssessment(firebaseUser.uid)
       .then((assessment) => {
         if (!active) return;
-        setAnswers(assessment.answers || {});
+        setAnswers(assessment.status === "completed" ? assessment.answers || {} : {});
         if (assessment.syncWarning) setSyncWarning("Showing this device’s saved assessment. It could not sync with Firestore yet.");
       })
       .catch(() => { if (active) setError("We could not load your saved answer summary."); })
@@ -64,7 +64,8 @@ export default function CareerAssessmentResultsScreen({ navigation }) {
         </View>
         <Pressable
           style={styles.suggestionsButton}
-          onPress={() => navigation.navigate("CourseSuggestions", { category: suggestionCategory })}
+          onPress={() => navigation.navigate("CourseSuggestions", { category: suggestionCategory, answers })}
+          disabled={loading}
           accessibilityRole="button"
         >
           <Text style={styles.suggestionsButtonText}>Explore My Course Suggestions</Text>

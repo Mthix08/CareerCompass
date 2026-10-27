@@ -5,7 +5,7 @@ import Text from "../components/TranslatedText";
 import { courseExamples } from "../data/courseExamples";
 import {
   COURSE_SUGGESTION_CATEGORIES,
-  getSuggestedCourses,
+  getRecommendedCourses,
 } from "../data/courseSuggestions";
 import { useProfile } from "../context/ProfileContext";
 
@@ -29,7 +29,10 @@ export default function CourseSuggestionsScreen({ navigation, route }) {
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const category = route.params?.category || COURSE_SUGGESTION_CATEGORIES.balanced;
   const copy = CATEGORY_COPY[category] || CATEGORY_COPY[COURSE_SUGGESTION_CATEGORIES.balanced];
-  const courses = useMemo(() => getSuggestedCourses(category, courseExamples), [category]);
+  const recommendations = useMemo(
+    () => getRecommendedCourses(route.params?.answers, category, courseExamples, 10),
+    [category, route.params?.answers],
+  );
 
   const openCourse = (course) => navigation.navigate("CourseDetails", { course });
 
@@ -45,12 +48,20 @@ export default function CourseSuggestionsScreen({ navigation, route }) {
         <Text style={styles.title}>{copy.title}</Text>
         <Text style={styles.description}>{copy.description}</Text>
 
+        <View style={styles.announcement}>
+          <View style={styles.announcementHeading}>
+            <Ionicons name="sparkles-outline" size={20} color={colors.primary} />
+            <Text style={styles.announcementTitle}>More Course Suggestions Are Coming!</Text>
+          </View>
+          <Text style={styles.announcementText}>We're working on bringing you even more qualifications that match your interests, strengths, and career goals. Keep an eye on CareerCompass. More course suggestions are on the way!</Text>
+        </View>
+
         <View style={styles.notice}>
           <Ionicons name="information-circle-outline" size={20} color={colors.primary} />
           <Text style={styles.noticeText}>Suggestions are for exploration only and do not guarantee admission. Check the current official prospectus for admission requirements.</Text>
         </View>
 
-        {courses.length ? courses.map((course) => (
+        {recommendations.length ? recommendations.map(({ course }) => (
           <Pressable key={course.id} onPress={() => openCourse(course)} accessibilityRole="button" accessibilityLabel={`View ${course.name} at ${course.universityName}`} style={({ pressed }) => [styles.card, pressed && styles.pressed]}>
             <Text style={styles.university}>{course.universityName}</Text>
             <Text style={styles.courseName}>{course.name}</Text>
@@ -81,6 +92,10 @@ function makeStyles(c) {
     eyebrow: { color: c.primary, fontSize: 10, fontWeight: "900", letterSpacing: 1.2 },
     title: { marginTop: 7, color: c.text, fontSize: 25, lineHeight: 32, fontWeight: "900" },
     description: { marginTop: 7, color: c.secondaryText, fontSize: 14, lineHeight: 21 },
+    announcement: { marginTop: 16, padding: 15, borderRadius: 15, borderWidth: 1, borderColor: c.border, backgroundColor: c.primarySoft },
+    announcementHeading: { flexDirection: "row", alignItems: "center", gap: 8 },
+    announcementTitle: { flex: 1, color: c.text, fontSize: 15, lineHeight: 21, fontWeight: "900" },
+    announcementText: { marginTop: 8, color: c.text, fontSize: 12, lineHeight: 18 },
     notice: { marginTop: 16, padding: 13, borderRadius: 14, backgroundColor: c.primarySoft, flexDirection: "row", alignItems: "flex-start", gap: 9 },
     noticeText: { flex: 1, color: c.text, fontSize: 12, lineHeight: 18 },
     card: { marginTop: 13, padding: 16, borderRadius: 17, borderWidth: 1, borderColor: c.border, backgroundColor: c.surface },
