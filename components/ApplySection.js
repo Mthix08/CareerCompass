@@ -1,16 +1,17 @@
 import React, { useMemo } from "react";
-import { Alert, Linking, Pressable, StyleSheet, Text, View } from "react-native";
+import { Alert, Linking, Pressable, StyleSheet,  View } from "react-native";
+import Text from './TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { getUniversityTheme } from "../data/universityTheme";
 import { useProfile } from "../context/ProfileContext";
 
-function DetailRow({ label, value, accent = false }) {
+function DetailRow({ label, value, accent = false, valueColor }) {
   const { colors } = useProfile();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   return (
     <View style={styles.detailRow}>
       <Text style={styles.detailLabel}>{label}</Text>
-      <Text style={[styles.detailValue, accent && styles.accentValue]}>{value}</Text>
+      <Text style={[styles.detailValue, accent && styles.accentValue, valueColor && { color: valueColor }]}>{value}</Text>
     </View>
   );
 }
@@ -71,14 +72,18 @@ export default function ApplySection({ university }) {
 
   return (
     <View style={styles.section}>
-      <Text style={styles.heading}>Application information</Text>
+      <Text style={styles.heading}>Application information · {university.applicationYear || 2027} intake</Text>
       <Text style={[styles.notice, { color: universityTheme.accentLight }]}>
         Dates and requirements can change. Confirm all information on the official
         university website.
       </Text>
 
       <View style={styles.detailsCard}>
-        <DetailRow label="Status" value={university.applicationStatus || "Not supplied"} />
+        <DetailRow
+          label="Status"
+          value={university.applicationStatus || "Closed"}
+          valueColor={university.applicationStatus?.startsWith("Open") ? "#16803C" : "#C62828"}
+        />
         <DetailRow label="Application fee" value={applicationFee} accent={university.applicationFee === 0} />
         <DetailRow label="Opening date" value={university.openingDate || "Not supplied"} />
         <DetailRow label="Closing date" value={university.closingDate || "Not supplied"} />

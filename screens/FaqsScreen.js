@@ -1,8 +1,9 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import Text from "../components/TranslatedText";
 import { loadCollection } from "../data/firestoreContent";
 import { useProfile } from "../context/ProfileContext";
 

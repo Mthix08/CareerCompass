@@ -13,6 +13,7 @@ export async function signInWithGoogle() {
   }
 
   const webClientId = process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID;
+
   if (!webClientId) {
     const error = new Error("Google OAuth client ID is missing.");
     error.code = "auth/google-client-id-missing";
@@ -20,22 +21,33 @@ export async function signInWithGoogle() {
   }
 
   const { GoogleSignin } = require("@react-native-google-signin/google-signin");
+
   GoogleSignin.configure({
     webClientId,
     iosClientId: process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID,
   });
 
   if (Platform.OS === "android") {
-    await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+    await GoogleSignin.hasPlayServices({
+      showPlayServicesUpdateDialog: true,
+    });
   }
 
+  console.log("About to sign in with Google");
+
   const response = await GoogleSignin.signIn();
+
+  console.log("Google response:", response);
+
   if (response.type !== "success" || !response.data.idToken) {
     const error = new Error("Google sign-in was cancelled.");
     error.code = "auth/popup-closed-by-user";
     throw error;
   }
 
-  const credential = GoogleAuthProvider.credential(response.data.idToken);
+  const credential = GoogleAuthProvider.credential(
+    response.data.idToken
+  );
+
   return signInWithCredential(auth, credential);
 }

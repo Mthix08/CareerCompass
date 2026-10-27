@@ -1,17 +1,17 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Pressable,
   StyleSheet,
-  Text,
   useWindowDimensions,
   View,
 } from "react-native";
+import Text from "./TranslatedText";
 
-import { useTranslation } from "react-i18next";
 import { useProfile } from "../context/ProfileContext";
 import { useBookmarks } from "../context/BookmarksContext";
-import LanguageSelector from "./LanguageSelector";
+import { useLanguage } from "../context/LanguageContext";
+import { translateTexts } from "../services/translate";
 
 const BAR_MARGIN = 16;
 const BAR_MAX_WIDTH = 520;
@@ -25,14 +25,17 @@ const TAB_ICONS = {
   Profile: "person-outline",
 };
 
-// Translation key for each navigation tab
-const TAB_TRANSLATIONS = {
-  HomeTab: "home",
-  Funding: "funding",
-  Universities: "universities",
-  Courses: "courses",
-  Profile: "profile",
+// English label for each navigation tab
+const ENGLISH_LABELS = {
+  HomeTab: "Home",
+  Funding: "Funding",
+  Universities: "Universities",
+  Courses: "Courses",
+  Profile: "Profile",
 };
+
+const TAB_NAMES = Object.keys(ENGLISH_LABELS);
+const TAB_TEXTS = Object.values(ENGLISH_LABELS);
 
 export default function NavBar({
   state,
@@ -40,8 +43,27 @@ export default function NavBar({
   navigation,
   insets,
 }) {
-  // Translation
-  const { t } = useTranslation();
+  const { lang } = useLanguage();
+  const [translated, setTranslated] = useState(TAB_TEXTS);
+
+  // Translate the tab labels whenever the language changes
+  useEffect(() => {
+    let active = true;
+
+    translateTexts(TAB_TEXTS, lang)
+      .then((labels) => {
+        if (active) {
+          setTranslated(labels);
+        }
+      })
+      .catch(() => {
+        // The translation service reports each failed request once.
+      });
+
+    return () => {
+      active = false;
+    };
+  }, [lang]);
 
   const { colors } = useProfile();
   const styles = useMemo(() => makeStyles(colors), [colors]);
@@ -59,8 +81,6 @@ export default function NavBar({
     screenWidth - BAR_MARGIN * 2,
     BAR_MAX_WIDTH
   );
-
-  const activeRoute = state.routes[state.index];
 
   const screenBackground = colors.background;
 
@@ -108,10 +128,6 @@ export default function NavBar({
       >
         <Ionicons name="sparkles-outline" size={23} color="#FFFFFF" />
       </Pressable>
-      {/* LANGUAGE TRANSLATOR */}
-      <View style={styles.languageContainer}>
-        <LanguageSelector />
-      </View>
 
       {/* BOTTOM NAVIGATION */}
       <View style={[styles.card, { width: barWidth }]}>
@@ -124,14 +140,12 @@ export default function NavBar({
             options.title ||
             route.name;
 
-          // Find translation key
-          const translationKey =
-            TAB_TRANSLATIONS[route.name];
-
-          // Translate if key exists
-          const label = translationKey
-            ? t(translationKey)
-            : originalLabel;
+          // Use the translated label if this tab has one
+          const tabIndex = TAB_NAMES.indexOf(route.name);
+          const label =
+            tabIndex !== -1
+              ? translated[tabIndex]
+              : originalLabel;
 
           const isFocused = state.index === index;
 
@@ -224,13 +238,6 @@ function makeStyles(colors) {
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.22,
     shadowRadius: 6,
-  },
-
-  languageContainer: {
-    width: "100%",
-    alignItems: "flex-end",
-    paddingRight: 20,
-    marginBottom: 5,
   },
 
   card: {

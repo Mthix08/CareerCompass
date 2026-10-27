@@ -9,14 +9,15 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   TextInput,
   View,
 } from "react-native";
+import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { courseExamples } from "../data/courseExamples";
 import { universities } from "../data/universities";
+import { getInstitutionCourseMatchStatus } from "../data/apsMatching";
 import { useProfile } from "../context/ProfileContext";
 
 const QUALIFICATION_TYPES = ["Bachelor's Degree", "Diploma", "Higher Certificate"];
@@ -45,6 +46,7 @@ function CourseCard({ course, onPress }) {
           </View>
           <Text style={styles.typeText}>{course.qualificationType}</Text>
         </View>
+        {course.mathMatchNote && <Text style={styles.mathMatchNote}>{course.mathMatchNote}</Text>}
       </View>
       <Ionicons name="chevron-forward" size={20} color={COLORS.muted} />
     </Pressable>
@@ -202,9 +204,11 @@ export default function CoursesScreen({ navigation, route }) {
         && typeof course.minimumAps === "number"
         && universityScore >= course.minimumAps
       );
-      return matchesSearch && matchesMinimum && matchesMaximum && matchesType && matchesUniversity && matchesAps;
+      const mathsStatus = matchedOnly ? getInstitutionCourseMatchStatus(course, route.params?.apsMarks) : null;
+      const matchesSubjects = !matchedOnly || mathsStatus?.status === "matched" || mathsStatus?.status === "needs_verification";
+      return matchesSearch && matchesMinimum && matchesMaximum && matchesType && matchesUniversity && matchesAps && matchesSubjects;
     });
-   }, [filters, matchedOnly, query, route.params?.apsByUniversity, route.params?.apsScore]);
+   }, [filters, matchedOnly, query, route.params?.apsByUniversity, route.params?.apsMarks, route.params?.apsScore]);
 
   const activeFilterCount = [filters.minimumAps, filters.maximumAps, filters.type, filters.universityId].filter(Boolean).length;
 
@@ -260,7 +264,12 @@ export default function CoursesScreen({ navigation, route }) {
         ListHeaderComponent={<Text style={styles.resultText}>{filteredCourses.length} {filteredCourses.length === 1 ? "course" : "courses"}</Text>}
         ListEmptyComponent={<View style={styles.emptyState}><Ionicons name="search-outline" size={34} color={COLORS.primary} /><Text style={styles.emptyTitle}>No courses found</Text><Text style={styles.emptyText}>Try changing your search or filters.</Text></View>}
         renderItem={({ item }) => (
-          <CourseCard course={item} onPress={() => navigation.getParent()?.navigate("CourseDetails", { course: item })} />
+          <CourseCard
+            course={matchedOnly
+              ? { ...item, ...getInstitutionCourseMatchStatus(item, route.params?.apsMarks) }
+              : item}
+            onPress={() => navigation.getParent()?.navigate("CourseDetails", { course: item })}
+          />
         )}
       />
 
@@ -309,6 +318,7 @@ function makeStyles(COLORS) {
   apsBadge: { paddingHorizontal: 9, paddingVertical: 5, borderRadius: 999, backgroundColor: COLORS.primarySoft },
   apsBadgeText: { color: COLORS.primary, fontSize: 10, fontWeight: "900" },
   typeText: { color: COLORS.muted, fontSize: 10, fontWeight: "700" },
+  mathMatchNote: { marginTop: 6, color: COLORS.danger, fontSize: 11, lineHeight: 15, fontWeight: "700" },
   emptyState: { alignItems: "center", paddingVertical: 50 },
   emptyTitle: { marginTop: 10, color: COLORS.text, fontSize: 18, fontWeight: "800" },
   emptyText: { marginTop: 5, color: COLORS.secondary, fontSize: 13 },

@@ -43,3 +43,6 @@ yarn-error.*
 /ios
 /android
 serviceAccountKey.json
+
+# Personal Android development configuration
+/google-services.json
