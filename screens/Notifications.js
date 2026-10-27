@@ -6,6 +6,7 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { loadCollection } from "../data/firestoreContent";
+import { loadCourseSuggestionNotifications } from "../services/courseSuggestionNotifications";
 import { universities } from "../data/universities";
 import { useProfile } from "../context/ProfileContext";
 
@@ -26,24 +27,30 @@ function formatTimeAgo(createdAt) {
 }
 
 export default function Notifications({ navigation }) {
-  const { colors, resolvedTheme } = useProfile();
+  const { colors, resolvedTheme, firebaseUser } = useProfile();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [activeFilter, setActiveFilter] = useState("All");
-  // CHANGED: notifications now come from the Firestore "notifications" collection
-  // (with an AsyncStorage copy for offline) instead of a hardcoded array.
+  // Shared admin announcements and private assessment notifications are separate feeds.
   const [notifications, setNotifications] = useState([]);
 
   useEffect(() => {
     let active = true;
-    loadCollection("notifications", { sortBy: "createdAt", descending: true }).then(
-      (items) => {
-        if (active) setNotifications(items);
-      },
-    );
+    Promise.all([
+      loadCollection("notifications", { sortBy: "createdAt", descending: true }),
+      loadCourseSuggestionNotifications(firebaseUser?.uid).catch(() => []),
+    ]).then(([sharedItems, personalItems]) => {
+      if (!active) return;
+      const byId = new Map([...sharedItems, ...personalItems].map((item) => [item.id, item]));
+      setNotifications([...byId.values()].sort((first, second) => {
+        const firstTime = first.createdAt?.toMillis?.() ?? (first.createdAt?.seconds || 0) * 1000;
+        const secondTime = second.createdAt?.toMillis?.() ?? (second.createdAt?.seconds || 0) * 1000;
+        return secondTime - firstTime;
+      }));
+    });
     return () => {
       active = false;
     };
-  }, []);
+  }, [firebaseUser?.uid]);
 
   const filteredNotifications = useMemo(
     () => activeFilter === "All"
@@ -53,6 +60,14 @@ export default function Notifications({ navigation }) {
   );
 
   const openNotification = (notification) => {
+    if (notification.routeName === "CourseSuggestions") {
+      navigation.navigate("CourseSuggestions", {
+        category: notification.suggestionCategory,
+        answers: notification.assessmentAnswers,
+      });
+      return;
+    }
+
     if (notification.universityId) {
       const selectedUniversity = universities.find(
         ({ id }) => id === notification.universityId,

@@ -33,9 +33,44 @@ service cloud.firestore {
         && request.auth.uid == uid
         && !isRestricted(uid));
       match /{subcollection}/{docId} {
-        allow read, write: if isAdmin() || (request.auth != null
+        allow read, write: if subcollection != 'notifications'
+          && (isAdmin() || (request.auth != null
+          && request.auth.uid == uid
+          && !isRestricted(uid)));
+      }
+      match /notifications/{notificationId} {
+        allow read: if isAdmin() || (request.auth != null
           && request.auth.uid == uid
           && !isRestricted(uid));
+        allow create: if isAdmin() || (request.auth != null
+          && request.auth.uid == uid
+          && !isRestricted(uid)
+          && request.resource.data.keys().hasOnly([
+            'category', 'eyebrow', 'title', 'description', 'icon', 'routeName',
+            'suggestionCategory', 'assessmentAnswers', 'createdAt'
+          ])
+          && request.resource.data.keys().hasAll([
+            'category', 'eyebrow', 'title', 'description', 'icon', 'routeName',
+            'suggestionCategory', 'assessmentAnswers', 'createdAt'
+          ])
+          && request.resource.data.category == 'Announcements'
+          && request.resource.data.eyebrow == 'COURSE SUGGESTIONS'
+          && request.resource.data.title == 'Your course suggestions are ready'
+          && request.resource.data.description is string
+          && request.resource.data.icon == 'school'
+          && request.resource.data.routeName == 'CourseSuggestions'
+          && request.resource.data.suggestionCategory in [
+            'mathematics_friendly', 'less_mathematics', 'balanced'
+          ]
+          && request.resource.data.assessmentAnswers is map
+          && request.resource.data.assessmentAnswers.keys().hasOnly([
+            'interests_fields', 'interests_activity', 'interests_learning',
+            'strengths', 'problem_approach', 'task_preference', 'mathematics',
+            'school_subjects', 'learning_approach', 'environment', 'work_with',
+            'career_values', 'career_clarity', 'qualification_type', 'excluded_fields'
+          ])
+          && request.resource.data.createdAt is timestamp);
+        allow update, delete: if isAdmin();
       }
     }
 
