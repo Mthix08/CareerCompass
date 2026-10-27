@@ -3,6 +3,7 @@ import { ActivityIndicator, Pressable, SafeAreaView, ScrollView, StatusBar, Styl
 import { Ionicons } from "@expo/vector-icons";
 import { useProfile } from "../context/ProfileContext";
 import { CAREER_ASSESSMENT_QUESTIONS } from "../data/careerAssessmentQuestions";
+import { getCourseSuggestionCategory } from "../data/courseSuggestions";
 import { beginCareerAssessment, getCareerAssessment } from "../services/careerAssessmentService";
 
 export default function CareerAssessmentResultsScreen({ navigation }) {
@@ -32,6 +33,7 @@ export default function CareerAssessmentResultsScreen({ navigation }) {
     const labels = question.options.filter((option) => selectedIds.includes(option.id)).map((option) => option.label);
     return labels.length ? { id: question.id, question: question.text, labels } : null;
   }).filter(Boolean);
+  const suggestionCategory = getCourseSuggestionCategory(answers.mathematics);
 
   const retake = async () => {
     try {
@@ -53,7 +55,21 @@ export default function CareerAssessmentResultsScreen({ navigation }) {
 
       <View style={styles.note}>
         <Ionicons name="bulb-outline" size={22} color={colors.primary} />
-        <Text style={styles.noteText}>We’ll use this information to help shape qualification suggestions for you. Personalised suggestions will be available in a future update.</Text>
+        <Text style={styles.noteText}>Your answers can help you explore qualifications that may suit your interests and preferences.</Text>
+      </View>
+      <View style={styles.suggestionsCard}>
+        <View style={styles.suggestionsCopy}>
+          <Text style={styles.suggestionsTitle}>Your next step: Explore courses</Text>
+          <Text style={styles.suggestionsDescription}>Discover qualifications that may match your interests and your preferences for Mathematics.</Text>
+        </View>
+        <Pressable
+          style={styles.suggestionsButton}
+          onPress={() => navigation.navigate("CourseSuggestions", { category: suggestionCategory })}
+          accessibilityRole="button"
+        >
+          <Text style={styles.suggestionsButtonText}>Explore My Course Suggestions</Text>
+          <Ionicons name="arrow-forward" size={17} color="#fff" />
+        </Pressable>
       </View>
       {!!syncWarning && <Text style={styles.syncWarning} accessibilityRole="alert">{syncWarning}</Text>}
 
@@ -84,6 +100,12 @@ function makeStyles(c) { return StyleSheet.create({
   description: { marginTop: 7, color: c.secondaryText, fontSize: 14, lineHeight: 21, textAlign: "center" },
   note: { marginTop: 19, padding: 15, borderRadius: 16, borderWidth: 1, borderColor: c.border, backgroundColor: c.primarySoft, flexDirection: "row", alignItems: "flex-start", gap: 11 },
   noteText: { flex: 1, color: c.text, fontSize: 13, lineHeight: 19, fontWeight: "600" },
+  suggestionsCard: { marginTop: 14, padding: 16, borderRadius: 17, borderWidth: 1, borderColor: c.border, backgroundColor: c.surface },
+  suggestionsCopy: { gap: 6 },
+  suggestionsTitle: { color: c.text, fontSize: 17, lineHeight: 23, fontWeight: "900" },
+  suggestionsDescription: { color: c.secondaryText, fontSize: 13, lineHeight: 19 },
+  suggestionsButton: { minHeight: 48, marginTop: 13, paddingHorizontal: 13, borderRadius: 13, backgroundColor: c.primary, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8 },
+  suggestionsButtonText: { color: "#fff", fontSize: 13, fontWeight: "900" },
   sectionTitle: { marginTop: 24, marginBottom: 10, color: c.text, fontSize: 19, fontWeight: "900" },
   loader: { marginTop: 25 },
   answerCard: { marginBottom: 10, padding: 15, borderRadius: 15, borderWidth: 1, borderColor: c.border, backgroundColor: c.surface },
