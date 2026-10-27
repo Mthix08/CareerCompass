@@ -93,6 +93,7 @@ export default function FundingScreen({ navigation }) {
             <Text style={styles.loadingText}>Fetching the latest funding opportunities…</Text>
           </View>
         ) : filteredOptions.map((option) => {
+          const { days, isClosed } = getFundingCountdown(now, option);
           const isFeatured = option.id === "nsfas";
           const bookmarked = isFundingBookmarked(option.id);
           const openDetails = () => navigation.navigate("FundingDetails", { fundingId: option.id });

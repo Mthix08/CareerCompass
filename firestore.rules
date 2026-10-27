@@ -1,0 +1,69 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    function isRestricted(uid) {
+      return exists(/databases/$(database)/documents/users/$(uid))
+        && get(/databases/$(database)/documents/users/$(uid)).data.get('appRestricted', false) == true;
+    }
+
+    match /admins/{uid} {
+      allow read: if request.auth != null
+        && (request.auth.uid == uid || isAdmin());
+      allow write: if false;
+    }
+
+    match /users/{uid} {
+      // The user must be able to read their own status so the app can detect
+      // restrictions and sign them out. Only admins may change that status.
+      allow read: if request.auth != null
+        && (request.auth.uid == uid || isAdmin());
+      allow create: if isAdmin() || (request.auth != null
+        && request.auth.uid == uid
+        && request.resource.data.get('appRestricted', false) == false);
+      allow update: if isAdmin() || (request.auth != null
+        && request.auth.uid == uid
+        && !isRestricted(uid)
+        && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['appRestricted']));
+      allow delete: if isAdmin() || (request.auth != null
+        && request.auth.uid == uid
+        && !isRestricted(uid));
+      match /{subcollection}/{docId} {
+        allow read, write: if isAdmin() || (request.auth != null
+          && request.auth.uid == uid
+          && !isRestricted(uid));
+      }
+    }
+
+    match /{contentCollection}/{docId} {
+      allow read: if contentCollection in [
+        'universities', 'colleges', 'courses', 'bursaries', 'faqs',
+        'subjects', 'notifications', 'applicationDeadlines'
+      ];
+      allow write: if isAdmin() && contentCollection in [
+        'universities', 'colleges', 'courses', 'bursaries', 'faqs',
+        'subjects', 'notifications', 'applicationDeadlines'
+      ];
+    }
+
+    match /passwordHints/{emailId} {
+      allow get: if request.auth != null
+        && (resource.data.uid == request.auth.uid || isAdmin());
+      allow list: if isAdmin();
+      allow create: if request.auth != null
+        && request.resource.data.uid == request.auth.uid;
+      allow update, delete: if request.auth != null
+        && (resource.data.uid == request.auth.uid || isAdmin());
+    }
+
+    match /careerAssessments/{uid} {
+      allow read, write: if isAdmin() || (request.auth != null
+        && request.auth.uid == uid
+        && !isRestricted(uid));
+    }
+  }
+}

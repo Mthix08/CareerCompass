@@ -18,7 +18,7 @@ import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { useProfile } from "../context/ProfileContext";
 import { auth, db } from "./firebaseConfig";
-import { signInWithGoogle } from "./googleAuth";
+import { getGoogleAuthErrorMessage, signInWithGoogle } from "./googleAuth";
 import { getCareerAssessmentStatus } from "../services/careerAssessmentService";
 
 async function getLandingRoute(user) {
@@ -99,12 +99,9 @@ export default function LoginScreen({ navigation }) {
       navigation.reset({ index: 0, routes: [{ name: await getLandingRoute(credential.user) }] });
     } catch (error) {
       if (error.code !== "auth/popup-closed-by-user") {
-                console.log("GOOGLE ERROR", error.code, error.message);
         Alert.alert(
           "Google sign-in unavailable",
-          error.code === "auth/google-client-id-missing"
-            ? "Add the Google OAuth client ID before using Google sign-in on mobile."
-            : `DEBUG: ${error.code || "no code"} | ${error.message}`,
+          getGoogleAuthErrorMessage(error),
         );
       }
     } finally {

@@ -380,12 +380,55 @@ try {
 }
 
 // ---------------------------------------------------------------- applicationDeadlines
-// Moved here from data/homeMockData.js (MOCK_APPLICATION_DEADLINES).
-// These are EXAMPLE dates, not official guidance. Edit them on the admin site.
-const applicationDeadlines = [
-  { id: "uj-example-deadline", universityId: "uj", closingDate: "31 October", daysRemaining: 38, isExample: true },
-  { id: "wits-example-deadline", universityId: "wits", closingDate: "30 September", daysRemaining: 10, isExample: true },
+// REAL 2027-intake closing dates (replaces the two example deadlines from data/homeMockData.js).
+// The app compares closesAt with today's date, so "Closed" / "12 days left" updates by itself.
+// verified: true  = the same date appears in both sources below
+// verified: false = found in one source only (or the sources disagree): confirm on the university's own site
+const GOCAREERS = "https://gocareers.co.za/guides/university-applications-2027";
+const VARSITYWISE = "https://www.varsitywise.com/posts/south-african-university-application-dates-for-202";
+const endOfDay = (date) => `${date}T23:59:59+02:00`; // South African time
+
+const deadlineRows = [
+  // universityId, closingDate (shown), closesAt, verified, note
+  ["uj", "31 October 2026 (12:00)", "2026-10-31T12:00:00+02:00", true, "Closes at midday. No late applications."],
+  ["wits", "30 September 2026", endOfDay("2026-09-30"), true, "Health sciences and architecture closed 30 June 2026."],
+  ["uct", "28 September 2026", endOfDay("2026-09-28"), false, "Teaching and nursing closed 28 July. Sources differ (28 or 30 September): confirm with UCT."],
+  ["stellenbosch", "31 July 2026", endOfDay("2026-07-31"), false, null],
+  ["nwu", "31 August 2026", endOfDay("2026-08-31"), true, "Selection courses closed 30 June 2026."],
+  ["ukzn", "30 November 2026", endOfDay("2026-11-30"), false, null],
+  ["ufs", "30 September 2026", endOfDay("2026-09-30"), true, "Health sciences closed 31 May 2026."],
+  ["up", "30 June 2026", endOfDay("2026-06-30"), true, "Veterinary science closed 31 May 2026."],
+  ["dut", "30 November 2026", endOfDay("2026-11-30"), false, null],
+  ["mut", "30 November 2026", endOfDay("2026-11-30"), false, null],
+  ["unizulu", "30 November 2026", endOfDay("2026-11-30"), false, null],
+  ["cput", "30 September 2026", endOfDay("2026-09-30"), true, "Health sciences closed 30 June 2026."],
+  ["uwc", "30 September 2026", endOfDay("2026-09-30"), true, "Dentistry closed 31 August 2026."],
+  ["vut", "30 September 2026", endOfDay("2026-09-30"), false, null],
+  ["ufh", "30 October 2026", endOfDay("2026-10-30"), false, null],
+  ["tut", "30 September 2026", endOfDay("2026-09-30"), false, null],
+  ["ump", "30 November 2026", endOfDay("2026-11-30"), false, null],
+  ["spu", "31 October 2026", endOfDay("2026-10-31"), false, null],
+  ["univen", "26 September 2026", endOfDay("2026-09-26"), false, null],
+  ["ul", "30 September 2026", endOfDay("2026-09-30"), false, "MBChB closed 31 July 2026."],
+  ["wsu", "30 October 2026", endOfDay("2026-10-30"), false, "Sources differ by a day (30 or 31 October): confirm with WSU."],
+  ["smu", "31 July 2026", endOfDay("2026-07-31"), false, null],
+  ["rhodes", "30 September 2026", endOfDay("2026-09-30"), false, null],
+  ["nmu", "30 September 2026", endOfDay("2026-09-30"), true, "Early applications closed in August. Medicine, pharmacy and radiography closed 30 June 2026."],
+  ["cut", "30 September 2026", endOfDay("2026-09-30"), true, null],
+  // UNISA: the two sources give completely different dates, so no closing date is stored
+  ["unisa", "Confirm on the UNISA website", null, false, "Sources disagree (15 November 2026 or 1 January 2027)."],
 ];
+
+const applicationDeadlines = deadlineRows.map(([universityId, closingDate, closesAt, verified, note]) => ({
+  id: `${universityId}-2027`,
+  universityId,
+  intake: 2027,
+  closingDate,
+  closesAt,
+  verified,
+  note,
+  sourceUrl: verified ? GOCAREERS : VARSITYWISE,
+}));
 
 // ---------------------------------------------------------------- runner
 async function seedCollection(name, items) {
@@ -412,6 +455,13 @@ async function main() {
     console.log("Removed the example colleges.");
   }
   await seedCollection("applicationDeadlines", applicationDeadlines);
+  // remove the two example deadlines created earlier
+  await Promise.all(
+    ["uj-example-deadline", "wits-example-deadline"].map((id) =>
+      db.collection("applicationDeadlines").doc(id).delete(),
+    ),
+  );
+  console.log("Removed the example deadlines.");
   // universities, courses and applicationDeadlines get added here next.
   console.log("Done.");
 }
@@ -420,4 +470,3 @@ main().catch((error) => {
   console.error("Seeding failed:", error);
   process.exit(1);
 });
-``

@@ -18,9 +18,8 @@ import { auth, db, storage } from "../screens/firebaseConfig";
 const ProfileContext = createContext(null);
 const THEME_STORAGE_KEY = "@careercompass:themePreference";
 const THEME_PREFERENCES = ["Light", "Dark", "System"];
-// NEW: offline copy of the signed-in profile, and APS marks saved by guests
+// Offline copy of the signed-in profile.
 const PROFILE_CACHE_KEY = "@careercompass:profileCache:";
-const GUEST_APS_KEY = "@careercompass:apsRecords:guest";
 
 function normalizeThemePreference(value) {
   return THEME_PREFERENCES.includes(value) ? value : "Light";
@@ -208,11 +207,30 @@ export function ProfileProvider({ children }) {
       } catch (error) {
         console.warn("Unable to verify account access.", error);
         if (currentAuthEvent === authEvent) {
-          setFirebaseUser(null);
+          let cachedProfile = {};
+          try {
+            const cached = await AsyncStorage.getItem(`${PROFILE_CACHE_KEY}${user.uid}`);
+            if (cached) cachedProfile = JSON.parse(cached);
+          } catch (_cacheError) {
+            // Keep the Firebase session even if the optional profile cache is unavailable.
+          }
+          if (currentAuthEvent !== authEvent) return;
+          const cachedName = typeof cachedProfile.name === "string" ? cachedProfile.name : "Student";
+          const nameParts = cachedName.trim().split(/\s+/);
+          guestModeRef.current = false;
           setAccessRestricted(false);
-          setProfile(initialProfile);
-          setProfileLoadedUid(null);
-          await signOut(auth).catch(() => {});
+          setIsGuest(false);
+          setProfile({
+            ...initialProfile,
+            ...cachedProfile,
+            email: user.email || cachedProfile.email || "",
+            firstName: nameParts[0] || "Student",
+            surname: nameParts.slice(1).join(" "),
+            category: "Student",
+            photoURL: cachedProfile.photoURL || user.photoURL || "",
+          });
+          setFirebaseUser(user);
+          setProfileLoadedUid(Object.keys(cachedProfile).length ? user.uid : null);
         }
       }
     });
@@ -253,14 +271,6 @@ export function ProfileProvider({ children }) {
     setIsGuest(true);
     setFirebaseUser(null);
     setProfile(initialProfile);
-    // NEW: bring back any APS marks this phone saved as a guest
-    AsyncStorage.getItem(GUEST_APS_KEY)
-      .then((stored) => {
-        if (stored && guestModeRef.current) {
-          setProfile((current) => ({ ...current, apsRecords: JSON.parse(stored) }));
-        }
-      })
-      .catch(() => {});
   }, []);
   const clearSession = useCallback(() => {
     guestModeRef.current = false;
@@ -334,15 +344,7 @@ export function ProfileProvider({ children }) {
   const saveApsRecord = useCallback(
     async (period, record) => {
       if (!firebaseUser) {
-        // NEW: guests save their marks on the phone. Anyone who is neither a guest nor
-        // signed in still gets the original error.
-        if (!guestModeRef.current) {
-          throw new Error("Sign in to save your APS marks to your account.");
-        }
-        const nextRecords = { ...(profile.apsRecords || {}), [period]: record };
-        await AsyncStorage.setItem(GUEST_APS_KEY, JSON.stringify(nextRecords));
-        setProfile((current) => ({ ...current, apsRecords: nextRecords }));
-        return;
+        throw new Error("Sign in to calculate and save your APS marks.");
       }
 
       await setDoc(

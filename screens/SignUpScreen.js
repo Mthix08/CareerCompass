@@ -16,7 +16,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { auth, db } from "./firebaseConfig";
-import { signInWithGoogle } from "./googleAuth";
+import { getGoogleAuthErrorMessage, signInWithGoogle } from "./googleAuth";
 import { useProfile } from "../context/ProfileContext";
 import { getCareerAssessmentStatus } from "../services/careerAssessmentService";
 
@@ -66,9 +66,7 @@ export default function SignUpScreen({ navigation }) {
       if (error.code !== "auth/popup-closed-by-user") {
         Alert.alert(
           "Google sign-up unavailable",
-          error.code === "auth/google-client-id-missing"
-            ? "Add the Google OAuth client ID before using Google sign-in on mobile."
-            : "We could not create your account with Google. Please try again.",
+          getGoogleAuthErrorMessage(error),
         );
       }
     } finally {
