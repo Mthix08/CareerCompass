@@ -98,7 +98,8 @@ export default function FundingScreen({ navigation }) {
           const bookmarked = isFundingBookmarked(option.id);
           const openDetails = () => navigation.navigate("FundingDetails", { fundingId: option.id });
           const toggleBookmark = () => {
-            bookmarked ? removeFundingBookmark(option.id) : saveFundingBookmark(option);
+            if (bookmarked) removeFundingBookmark(option.id);
+            else saveFundingBookmark(option);
           };
 
           return isFeatured ? (
@@ -149,7 +150,6 @@ export default function FundingScreen({ navigation }) {
                   <View style={styles.listCopy}>
                     <View style={styles.listTitleRow}>
                       <Text style={styles.listTitle}>{option.name}</Text>
-                      {option.isPlaceholder && <View style={styles.exampleBadge}><Text style={styles.exampleBadgeText}>EXAMPLE</Text></View>}
                     </View>
                     <Text style={styles.listDescription}>{option.description}</Text>
                     <Text style={styles.listMeta}>{option.provider} · closes {option.closes}</Text>
@@ -206,8 +206,6 @@ function makeStyles(c) {
     listTitleRow: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 8 },
     listTitle: { color: c.text, fontSize: 16, fontWeight: "700" },
     listMeta: { color: c.mutedText, fontSize: 12, marginTop: 6 },
-    exampleBadge: { backgroundColor: c.primarySoft, borderRadius: 20, paddingHorizontal: 8, paddingVertical: 4 },
-    exampleBadgeText: { color: c.primary, fontSize: 9, fontWeight: "800", letterSpacing: 0.7 },
     listDescription: { color: c.secondaryText, fontSize: 13, lineHeight: 18, marginTop: 4 },
     pressed: { opacity: 0.88 },
     imageBackground: { minHeight: 290, justifyContent: "flex-end" },

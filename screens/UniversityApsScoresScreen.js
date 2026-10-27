@@ -31,10 +31,6 @@ export default function UniversityApsScoresScreen({ navigation }) {
     () => getInstitutionApsResults(apsRecord?.marks),
     [apsRecord?.marks],
   );
-  const matchingCourseCount = matchingUniversities.reduce(
-    (total, university) => total + university.qualifyingCourses.length,
-    0,
-  );
   const verificationCourseCount = matchingUniversities.reduce(
     (total, university) => total + university.verificationCourses.length,
     0,
@@ -115,7 +111,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
           apsRecord && matchingUniversities.length > 0 ? (
             <View>
               <Text style={styles.disclaimer}>
-                Matches compare institution-specific score estimates and clear Maths subject rules with listed course requirements. {verificationCourseCount > 0 ? `${verificationCourseCount} APS-matched courses have Maths requirements that need verification. ` : ""}Other subject requirements, selection and current prospectus rules also apply. This is not an admission decision or offer.
+                These results compare institution-specific APS estimates and the listed Maths rule only. {verificationCourseCount > 0 ? `${verificationCourseCount} courses have Maths requirements that need verification. ` : ""}Review every other subject requirement, selection rule and current prospectus on the course page. This is not an admission decision or offer.
               </Text>
               <Pressable
                 onPress={() => navigation.navigate("Home", {

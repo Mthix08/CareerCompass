@@ -289,11 +289,11 @@ export default function HomeScreen({ navigation }) {
             </View>
             <View style={styles.matchedCopy}>
               <Text style={styles.matchedTitle}>
-                {apsMatches.length} universities with APS matches
+                {apsMatches.length} universities with listed APS matches
               </Text>
               <Text style={styles.matchedText}>
                 {apsRecord
-                  ? `${matchedCourseCount} courses match listed minimums and clear subject rules for ${apsRecord.period}${apsMatches.reduce((total, university) => total + university.verificationCourses.length, 0) ? ` · ${apsMatches.reduce((total, university) => total + university.verificationCourses.length, 0)} need subject verification` : ""}.`
+                  ? `${matchedCourseCount} courses meet listed APS minimums and pass the Maths check for ${apsRecord.period}. Review other subject requirements on each course page.${apsMatches.reduce((total, university) => total + university.verificationCourses.length, 0) ? ` ${apsMatches.reduce((total, university) => total + university.verificationCourses.length, 0)} need Maths verification.` : ""}`
                   : "Save your marks to compare institution-specific scores with course minimums."}
               </Text>
             </View>

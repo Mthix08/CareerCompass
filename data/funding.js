@@ -23,29 +23,19 @@ export const NSFAS = {
   policyUrl: "https://www.nsfas.org.za/content/downloads/Annexure%20A_NSFAS%202026%20Bursary%20Guidelines.pdf",
 };
 
-// Example content demonstrating how additional bursaries should be structured.
-// Replace this object with verified provider information before production use.
-export const SAMPLE_BURSARY = {
-  id: "future-leaders-bursary",
-  name: "Future Leaders Bursary",
-  fullName: "Future Leaders Student Bursary",
-  provider: "Example Education Foundation",
-  cycle: "Example 2027 intake",
-  opens: "1 August 2026",
-  closes: "30 November 2026",
-  description: "An example bursary showing how future funding opportunities can be presented.",
-  isPlaceholder: true,
-};
-
 export function parseFundingDeadline(deadline) {
   if (!deadline || typeof deadline !== "string") return null;
   const match = deadline.match(/(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/);
   if (!match) return null;
 
   const [, day, monthName, year] = match;
-  const monthIndex = new Date(`${monthName} 1, ${year}`).getMonth();
+  const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+  const monthIndex = months.indexOf(monthName.toLowerCase());
+  if (monthIndex < 0) return null;
+
   const parsedDate = new Date(Date.UTC(Number(year), monthIndex, Number(day), 23, 59, 59));
-  return Number.isNaN(parsedDate.getTime()) ? null : parsedDate;
+  if (parsedDate.getUTCMonth() !== monthIndex || parsedDate.getUTCDate() !== Number(day)) return null;
+  return parsedDate;
 }
 
 export function normalizeFundingOption(item) {
@@ -73,7 +63,6 @@ export function normalizeFundingOption(item) {
     fieldOfStudy: item.field_of_study || item.fieldOfStudy || "All fields",
     province: item.province || "National",
     featured: Boolean(item.featured && String(item.featured).toLowerCase() === "true"),
-    isPlaceholder: false,
   };
 }
 
@@ -97,12 +86,19 @@ export async function fetchBursaries() {
 
     const payload = await response.json();
     const items = Array.isArray(payload) ? payload : Array.isArray(payload.data) ? payload.data : [];
-    const normalized = items.map(normalizeFundingOption).filter(Boolean);
-    const otherFunding = normalized.filter((item) =>
-      item.id.toLowerCase() !== "nsfas" && item.name.toLowerCase() !== "nsfas",
-    );
-    const result = [NSFAS, ...(otherFunding.length ? otherFunding : [SAMPLE_BURSARY])];
-    await AsyncStorage.setItem(FUNDING_CACHE_KEY, JSON.stringify(result));
+    const normalized = items
+      .filter((item) => item && !item.isPlaceholder && !item.is_placeholder)
+      .map(normalizeFundingOption)
+      .filter(Boolean);
+    const otherFunding = [...new Map(normalized
+      .filter((item) => item.id.toLowerCase() !== "nsfas" && item.name.toLowerCase() !== "nsfas")
+      .map((item) => [item.id, item])).values()];
+    const result = [NSFAS, ...otherFunding];
+    try {
+      await AsyncStorage.setItem(FUNDING_CACHE_KEY, JSON.stringify(result));
+    } catch (cacheError) {
+      console.warn("Unable to cache funding opportunities; showing the latest response for this session.", cacheError);
+    }
     return result;
   } catch (error) {
     try {
@@ -110,17 +106,19 @@ export async function fetchBursaries() {
       if (cached) {
         const items = JSON.parse(cached);
         if (Array.isArray(items)) {
-          const others = items.filter((item) =>
-            item?.id?.toLowerCase?.() !== "nsfas" && item?.name?.toLowerCase?.() !== "nsfas",
-          );
+          const others = [...new Map(items
+            .filter((item) => item && !item.isPlaceholder
+              && item?.id?.toLowerCase?.() !== "nsfas"
+              && item?.name?.toLowerCase?.() !== "nsfas")
+            .map((item) => [String(item.id), item])).values()];
           return [NSFAS, ...others];
         }
       }
     } catch (_cacheError) {
-      // Fall back to the built-in NSFAS and example cards when cache is unavailable.
+      // Fall back to the built-in NSFAS record when the cache is unavailable.
     }
     console.warn("Unable to load bursaries from API. Using fallback funding options.", error);
-    return [NSFAS, SAMPLE_BURSARY];
+    return [NSFAS];
   } finally {
     clearTimeout(timeoutId);
   }

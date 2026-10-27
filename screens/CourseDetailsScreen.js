@@ -5,10 +5,10 @@ import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
-import { getLatestApsRecord } from "../data/apsMatching";
+import { getInstitutionCourseMatchStatus, getLatestApsRecord } from "../data/apsMatching";
 import { universities } from "../data/universities";
 import { calculateUniversityScores } from "../services/apsScoring";
-import { getInstitutionCourseMatchStatus } from "../data/apsMatching";
+import { getCourseRequirementChecks } from "../services/qualificationRequirements";
 
 function DetailRow({ icon, label, value }) {
   const { colors } = useProfile();
@@ -40,6 +40,10 @@ export default function CourseDetailsScreen({ navigation, route }) {
   const bookmarked = course ? isCourseBookmarked(course.id) : false;
   const courseMathStatus = useMemo(
     () => course ? getInstitutionCourseMatchStatus(course, getLatestApsRecord(profile?.apsRecords)?.marks) : null,
+    [course, profile?.apsRecords],
+  );
+  const subjectChecks = useMemo(
+    () => course ? getCourseRequirementChecks(course, getLatestApsRecord(profile?.apsRecords)?.marks || []) : [],
     [course, profile?.apsRecords],
   );
   const qualification = useMemo(() => {
@@ -153,6 +157,43 @@ export default function CourseDetailsScreen({ navigation, route }) {
             ))}
           </View>
         </View>
+        {!!subjectChecks.length && (
+          <View style={styles.sectionCard}>
+            <Text style={styles.sectionTitle}>Compare your saved marks</Text>
+            <Text style={styles.checklistIntro}>
+              This compares marks with subject minimums listed for this course. Alternative subject combinations and selection rules may need a manual check.
+            </Text>
+            {subjectChecks.map((check) => {
+              const statusColor = check.status === "met" || check.status === "recorded"
+                ? COLORS.primary
+                : check.status === "below"
+                  ? COLORS.danger
+                  : COLORS.accent;
+              const statusLabel = check.status === "met"
+                ? "Minimum met"
+                : check.status === "recorded"
+                  ? "Mark recorded"
+                  : check.status === "below"
+                    ? "Below listed minimum"
+                    : check.status === "missing"
+                      ? "Add this subject"
+                      : "Check prospectus";
+              return (
+                <View key={check.key} style={styles.requirementRow}>
+                  <View style={styles.requirementCopy}>
+                    <Text style={styles.requirementName}>{check.label}</Text>
+                    <Text style={styles.requirementDetail}>{check.current}</Text>
+                    <Text style={styles.requirementDetail}>{check.minimum}</Text>
+                  </View>
+                  <Text style={[styles.requirementStatus, { color: statusColor }]}>{statusLabel}</Text>
+                </View>
+              );
+            })}
+            <Text style={styles.checklistFootnote}>
+              This is planning guidance, not an admission decision. Confirm every requirement in the current official prospectus.
+            </Text>
+          </View>
+        )}
         {course.careerOpportunities.length > 0 && (
           <View style={styles.sectionCard}>
             <Text style={styles.sectionTitle}>Career opportunities</Text>
@@ -169,7 +210,7 @@ export default function CourseDetailsScreen({ navigation, route }) {
         <View style={styles.notice}>
           <Ionicons name="information-circle-outline" size={20} color={COLORS.primary} />
           <Text style={styles.noticeText}>
-            From {course.universityShortName}'s {course.prospectusYear ? `${course.prospectusYear} ` : ""}programme information
+            From {course.universityShortName}&apos;s {course.prospectusYear ? `${course.prospectusYear} ` : ""}programme information
             {course.prospectusPage ? `, page ${course.prospectusPage}` : ""}. {course.verificationNote}
           </Text>
         </View>
@@ -218,6 +259,13 @@ function makeStyles(COLORS) {
   subjectWrap: { marginTop: 13, flexDirection: "row", flexWrap: "wrap", gap: 8 },
   subjectBadge: { paddingHorizontal: 11, paddingVertical: 8, borderRadius: 999, backgroundColor: COLORS.primarySoft },
   subjectText: { color: COLORS.primary, fontSize: 12, fontWeight: "700" },
+  checklistIntro: { marginTop: 7, color: COLORS.secondary, fontSize: 12, lineHeight: 18 },
+  requirementRow: { marginTop: 12, padding: 12, borderRadius: 14, backgroundColor: COLORS.background, flexDirection: "row", alignItems: "center", gap: 10 },
+  requirementCopy: { flex: 1 },
+  requirementName: { color: COLORS.text, fontSize: 13, fontWeight: "800" },
+  requirementDetail: { marginTop: 3, color: COLORS.secondary, fontSize: 11, lineHeight: 16 },
+  requirementStatus: { maxWidth: 105, fontSize: 11, lineHeight: 16, fontWeight: "800", textAlign: "right" },
+  checklistFootnote: { marginTop: 11, color: COLORS.secondary, fontSize: 11, lineHeight: 17 },
   careerList: { marginTop: 12, gap: 10 },
   careerRow: { flexDirection: "row", alignItems: "flex-start" },
   careerBullet: { width: 7, height: 7, marginTop: 6, borderRadius: 4, backgroundColor: COLORS.primary },
