@@ -32,6 +32,7 @@ import CollegeDetailsScreen from "./screens/CollegeDetailsScreen";
 import CareerAssessmentWelcomeScreen from "./screens/CareerAssessmentWelcomeScreen";
 import CareerAssessmentScreen from "./screens/CareerAssessmentScreen";
 import CareerAssessmentResultsScreen from "./screens/CareerAssessmentResultsScreen";
+import CourseSuggestionsScreen from "./screens/CourseSuggestionsScreen";
 import BottomTabNavigator from "./navigation/BottomTabNavigator";
 import LanguageButton from "./components/LanguageButton";
 import { ProfileProvider } from "./context/ProfileContext";
@@ -120,6 +121,11 @@ function AppNavigator() {
             name="CareerAssessmentResults"
             component={CareerAssessmentResultsScreen}
             options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="CourseSuggestions"
+            component={CourseSuggestionsScreen}
+            options={{ headerShown: false, animation: "slide_from_right" }}
           />
           <Stack.Screen
             name="Login"
