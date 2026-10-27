@@ -47,11 +47,11 @@ service cloud.firestore {
           && !isRestricted(uid)
           && request.resource.data.keys().hasOnly([
             'category', 'eyebrow', 'title', 'description', 'icon', 'routeName',
-            'suggestionCategory', 'assessmentAnswers', 'createdAt'
+            'suggestionCategory', 'assessmentAnswers', 'isRead', 'readAt', 'createdAt'
           ])
           && request.resource.data.keys().hasAll([
             'category', 'eyebrow', 'title', 'description', 'icon', 'routeName',
-            'suggestionCategory', 'assessmentAnswers', 'createdAt'
+            'suggestionCategory', 'assessmentAnswers', 'isRead', 'readAt', 'createdAt'
           ])
           && request.resource.data.category == 'Announcements'
           && request.resource.data.eyebrow == 'COURSE SUGGESTIONS'
@@ -69,8 +69,16 @@ service cloud.firestore {
             'school_subjects', 'learning_approach', 'environment', 'work_with',
             'career_values', 'career_clarity', 'qualification_type', 'excluded_fields'
           ])
+          && request.resource.data.isRead == false
+          && request.resource.data.readAt == null
           && request.resource.data.createdAt is timestamp);
-        allow update, delete: if isAdmin();
+        allow update: if isAdmin() || (request.auth != null
+          && request.auth.uid == uid
+          && !isRestricted(uid)
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['isRead', 'readAt'])
+          && request.resource.data.isRead == true
+          && request.resource.data.readAt is timestamp);
+        allow delete: if isAdmin();
       }
     }
 
