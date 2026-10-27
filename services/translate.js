@@ -1,4 +1,3 @@
-const DEEPL_API_URL = 'https://api-free.deepl.com/v2/translate';
 const MAX_TEXTS_PER_REQUEST = 50;
 const BATCH_DELAY_MS = 25;
 const DEFAULT_RATE_LIMIT_MS = 30_000;
@@ -12,7 +11,15 @@ const SUPPORTED_LANGUAGES = new Set([
   'PT-PT',
   'JA',
   'ZH',
+  'AF',
+  'ZU',
+  'XH',
+  'ST',
+  'TN',
+  'TS',
 ]);
+
+const TRANSLATION_API_URL = process.env.EXPO_PUBLIC_TRANSLATION_API_URL;
 
 const translationsByLanguage = new Map();
 const pendingByLanguage = new Map();
@@ -59,66 +66,25 @@ function reportTranslationError(error, lang) {
   );
 }
 
-function getRetryDelay(response) {
-  const retryAfter = response.headers?.get('Retry-After');
-  if (retryAfter) {
-    const seconds = Number(retryAfter);
-    if (Number.isFinite(seconds) && seconds > 0) {
-      return seconds * 1000;
-    }
-
-    const retryAt = Date.parse(retryAfter);
-    if (!Number.isNaN(retryAt) && retryAt > Date.now()) {
-      return retryAt - Date.now();
-    }
-  }
-
-  return response.status === 456
-    ? DEFAULT_QUOTA_LIMIT_MS
-    : DEFAULT_RATE_LIMIT_MS;
-}
-
 async function requestTranslations(texts, lang) {
-  const apiKey = process.env.EXPO_PUBLIC_DEEPL_API_KEY;
-  if (!apiKey) {
-    throw new Error('EXPO_PUBLIC_DEEPL_API_KEY is not configured.');
+  if (!TRANSLATION_API_URL) {
+    throw new Error('EXPO_PUBLIC_TRANSLATION_API_URL is not configured.');
   }
 
-  const response = await fetch(DEEPL_API_URL, {
+  const response = await fetch(`${TRANSLATION_API_URL.replace(/\/+$/, '')}/translate`, {
     method: 'POST',
-    headers: {
-      Authorization: `DeepL-Auth-Key ${apiKey}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      text: texts,
-      target_lang: lang,
-    }),
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ texts, lang }),
   });
-
+  const result = await response.json().catch(() => ({}));
   if (!response.ok) {
-    const details = await response.text();
-    const statusMessage =
-      response.status === 429
-        ? 'DeepL rate limit reached'
-        : response.status === 456
-          ? 'DeepL character quota exceeded'
-          : `DeepL translation failed (${response.status})`;
-    const error = new Error(
-      `${statusMessage}${details ? `: ${details}` : ''}`,
-    );
-
-    if (response.status === 429 || response.status === 456) {
-      pausedUntilByLanguage.set(
-        lang,
-        Date.now() + getRetryDelay(response),
-      );
+    const error = new Error(result.error || `Translation service failed (${response.status}).`);
+    if (response.status === 429) {
+      error.code = result.code === 'quota' ? 'translation/quota-exceeded' : 'translation/rate-limited';
     }
-
     throw error;
   }
 
-  const result = await response.json();
   if (
     !Array.isArray(result.translations) ||
     result.translations.length !== texts.length ||
@@ -178,6 +144,12 @@ async function processQueue(lang) {
           }
         });
       } catch (error) {
+        if (error.code === 'translation/rate-limited' || error.code === 'translation/quota-exceeded') {
+          pausedUntilByLanguage.set(
+            lang,
+            Date.now() + (error.code === 'translation/quota-exceeded' ? DEFAULT_QUOTA_LIMIT_MS : DEFAULT_RATE_LIMIT_MS),
+          );
+        }
         reportTranslationError(error, lang);
         rejectQueuedTranslations(lang, texts, error);
       }

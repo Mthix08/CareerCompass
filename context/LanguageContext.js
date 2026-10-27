@@ -2,7 +2,10 @@ import React, { createContext, useCallback, useContext, useEffect, useState } fr
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const LANGUAGE_STORAGE_KEY = '@careercompass:language';
-const SUPPORTED_LANGUAGES = new Set(['EN', 'ES', 'FR', 'DE', 'IT', 'PT-PT', 'JA', 'ZH']);
+const SUPPORTED_LANGUAGES = new Set([
+  'EN', 'ES', 'FR', 'DE', 'IT', 'PT-PT', 'JA', 'ZH',
+  'AF', 'ZU', 'XH', 'ST', 'TN', 'TS',
+]);
 
 const LanguageContext = createContext({
   lang: 'EN',

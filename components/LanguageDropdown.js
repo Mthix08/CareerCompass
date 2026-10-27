@@ -17,17 +17,16 @@ export const LANGUAGES = [
   { code: 'JA', name: 'Japanese', flag: '🇯🇵', supported: true },
   { code: 'ZH', name: 'Chinese (Simplified)', flag: '🇨🇳', supported: true },
 
-  // South African languages are listed here but need a
-  // translation provider that supports them.
-  { code: 'AF', name: 'Afrikaans', flag: '🇿🇦', supported: false },
-  { code: 'ZU', name: 'isiZulu (Zulu)', flag: '🇿🇦', supported: false },
-  { code: 'XH', name: 'isiXhosa (Xhosa)', flag: '🇿🇦', supported: false },
-  { code: 'ST', name: 'Sesotho (Southern Sotho)', flag: '🇿🇦', supported: false },
-  { code: 'TN', name: 'Setswana (Tswana)', flag: '🇿🇦', supported: false },
+  // These South African languages have target-language support in DeepL API.
+  { code: 'AF', name: 'Afrikaans', flag: '🇿🇦', supported: true },
+  { code: 'ZU', name: 'isiZulu (Zulu)', flag: '🇿🇦', supported: true },
+  { code: 'XH', name: 'isiXhosa (Xhosa)', flag: '🇿🇦', supported: true },
+  { code: 'ST', name: 'Sesotho (Southern Sotho)', flag: '🇿🇦', supported: true },
+  { code: 'TN', name: 'Setswana (Tswana)', flag: '🇿🇦', supported: true },
+  { code: 'TS', name: 'XiTsonga (Tsonga)', flag: '🇿🇦', supported: true },
   { code: 'NSO', name: 'Sepedi (Northern Sotho)', flag: '🇿🇦', supported: false },
   { code: 'SS', name: 'siSwati (Swazi)', flag: '🇿🇦', supported: false },
   { code: 'VE', name: 'Tshivenda (Venda)', flag: '🇿🇦', supported: false },
-  { code: 'TS', name: 'itsonga (Tsonga)', flag: '🇿🇦', supported: false },
   { code: 'NR', name: 'isiNdebele (Southern Ndebele)', flag: '🇿🇦', supported: false },
 ];
 
@@ -130,8 +129,8 @@ export default function LanguageDropdown({
           </ScrollView>
 
           <Text style={styles.menuFooter}>
-            South African languages are listed, but are not yet enabled
-            by the current translation service.
+            Afrikaans, isiZulu, isiXhosa, Sesotho, Setswana, and Xitsonga are available.
+            Other South African languages are marked Soon because DeepL does not yet support them.
           </Text>
         </View>
       )}
