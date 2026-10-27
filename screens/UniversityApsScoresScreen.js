@@ -13,7 +13,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { APSScoreRow } from "../components/HomeComponents";
 import { useProfile } from "../context/ProfileContext";
-import { getApsUniversityMatches, getLatestApsRecord } from "../data/apsMatching";
+import { getInstitutionApsMatches, getInstitutionApsResults, getLatestApsRecord } from "../data/apsMatching";
 
 export default function UniversityApsScoresScreen({ navigation }) {
   const { profile, colors, resolvedTheme } = useProfile();
@@ -24,11 +24,19 @@ export default function UniversityApsScoresScreen({ navigation }) {
     [profile?.apsRecords],
   );
   const matchingUniversities = useMemo(
-    () => getApsUniversityMatches(apsRecord?.totalAps),
-    [apsRecord?.totalAps],
+    () => getInstitutionApsMatches(apsRecord?.marks),
+    [apsRecord?.marks],
+  );
+  const apsByUniversity = useMemo(
+    () => getInstitutionApsResults(apsRecord?.marks),
+    [apsRecord?.marks],
   );
   const matchingCourseCount = matchingUniversities.reduce(
     (total, university) => total + university.qualifyingCourses.length,
+    0,
+  );
+  const verificationCourseCount = matchingUniversities.reduce(
+    (total, university) => total + university.verificationCourses.length,
     0,
   );
 
@@ -48,7 +56,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
         <Text style={styles.headerTitle}>Your APS matches</Text>
         <Text style={styles.headerSubtitle}>
           {apsRecord
-            ? `${apsRecord.totalAps} general APS estimate · ${apsRecord.period}`
+            ? `Institution-specific score estimates · ${apsRecord.period}`
             : "Save your marks to see course matches"}
         </Text>
       </View>
@@ -67,7 +75,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
                   : "Universities with APS matches"}
               </Text>
               <Text style={styles.listSubtitle}>
-                The full list shown on Home, based on your generic APS estimate
+                Matches use institution-specific scores recalculated from your saved marks.
               </Text>
             </View>
           </View>
@@ -80,7 +88,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
             </Text>
             <Text style={styles.emptyText}>
               {apsRecord
-                ? "No listed course has a numeric APS minimum at or below this score. Check each prospectus for current requirements."
+                ? "No listed course minimum is met by the calculated institution-specific scores. Check each prospectus for current requirements."
                 : "Save subject marks in the APS calculator to compare your score with course requirements."}
             </Text>
             <Pressable
@@ -97,27 +105,25 @@ export default function UniversityApsScoresScreen({ navigation }) {
         renderItem={({ item }) => (
           <APSScoreRow
             university={item}
-            score={apsRecord?.totalAps}
-            caption={`${item.qualifyingCourses.length} course${item.qualifyingCourses.length === 1 ? "" : "s"} meet APS minimum`}
+            score={item.score}
+            maximumScore={item.maximumScore}
+          caption={`${item.qualifyingCourses.length} matches${item.verificationCourses.length ? ` · ${item.verificationCourses.length} need Maths verification` : ""}${item.status === "needs_verification" ? " · APS method needs verification" : ""}`}
             colors={colors}
           />
         )}
         ListFooterComponent={
-          apsRecord && matchingCourseCount > 0 ? (
+          apsRecord && matchingUniversities.length > 0 ? (
             <View>
               <Text style={styles.disclaimer}>
-                These matches compare your general APS estimate with the listed
-                minimum. Universities may calculate points differently. Subject
-                requirements, selection and current prospectus rules also apply;
-                this is not an admission decision or offer.
+                Matches compare institution-specific score estimates and clear Maths subject rules with listed course requirements. {verificationCourseCount > 0 ? `${verificationCourseCount} APS-matched courses have Maths requirements that need verification. ` : ""}Other subject requirements, selection and current prospectus rules also apply. This is not an admission decision or offer.
               </Text>
               <Pressable
                 onPress={() => navigation.navigate("Home", {
                   screen: "Courses",
                   params: {
                     matchedOnly: true,
-                    apsScore: apsRecord.totalAps,
-                    apsByUniversity: {},
+                    apsByUniversity,
+                    apsMarks: apsRecord?.marks,
                     filterRequestId: Date.now(),
                   },
                 })}

@@ -8,10 +8,11 @@ const course = (id, name, faculty, subjects, duration = "3 years") => ({
 });
 
 const university = (details) => ({
-  applicationStatus: `Check the official ${details.shortName} application page`,
-  openingDate: "Confirm for your intended intake",
-  closingDate: "Programme-specific dates may apply",
-  applicationInstructions: `Use the official ${details.shortName} application page, check your programme requirements, prepare the requested documents, and submit before the applicable closing date.`,
+  applicationYear: 2027,
+  applicationStatus: details.applicationStatus || "Closed",
+  openingDate: details.openingDate || "Check official site",
+  closingDate: details.closingDate || "Check official site",
+  applicationInstructions: details.applicationInstructions || `For 2027 entry, check ${details.shortName}'s official application page for programme availability and any qualification-specific dates before applying.`,
   prospectusUrl: "PASTE_OFFICIAL_PROSPECTUS_URL_HERE",
   ...details,
 });
@@ -19,6 +20,9 @@ const university = (details) => ({
 export const universities = [
   university({
     id: "uj", name: "University of Johannesburg", shortName: "UJ", province: "Gauteng", type: "Comprehensive university",
+    applicationStatus: "Open",
+    openingDate: "1 April 2026",
+    closingDate: "31 October 2026 at 12:00 (undergraduate)",
     registrationFeeInfo: { year: 2026, summary: "Minimum upfront payment: R5,950 for non-residence students; R9,850 for students with a confirmed residence place. International students pay 40% of fees upfront.", details: "Year modules: 60% of annual fees (including first payment) by 15 April; balance by 15 August. First-semester modules: full semester fees by 15 April; second-semester modules: by 15 August. Early settlement discounts: 5% by 28 February, 3% by 31 March, or 2% by 30 April; apply with proof of payment and account statement.", sourceUrl: "https://www.uj.ac.za/wp-content/uploads/2022/01/uj-2026-fee-booklet-13032026.pdf" },
     prospectusUrl: "https://www.uj.ac.za/wp-content/uploads/2026/07/uj_undergrad_prospectus2027_online_25jun2026.pdf",
     applicationFee: 0, applicationFeeLabel: "Free to apply", image: require("../assets/UjCampus.jpg"), logo: require("../assets/UJLogoo.png"),
@@ -30,6 +34,9 @@ export const universities = [
   }),
   university({
     id: "wits", name: "University of the Witwatersrand", shortName: "Wits", province: "Gauteng", type: "Research university",
+    applicationStatus: "Closed",
+    openingDate: "Applications open for 2027; exact date not confirmed",
+    closingDate: "30 September 2026 (most); selected programmes closed 30 June",
     registrationFeeInfo: { year: 2026, summary: "Local self-funded students: R9,340 initial payment before registration. International students generally pay 75% of annual tuition before registration.", details: "The first payment is part of total fees, which must be settled by 30 June. A 5% settlement discount may apply if full fees are paid before registration and there is no historical debt.", sourceUrl: "https://www.wits.ac.za/registration/returning-undergraduate-students/" },
     prospectusUrl: "https://www.wits.ac.za/undergraduate/apply-to-wits/",
     applicationFee: 100, image: require("../assets/witsCampus.jpg"), logo: require("../assets/witsLogo.jpg"),
@@ -41,6 +48,9 @@ export const universities = [
   }),
   university({
     id: "uct", name: "University of Cape Town", shortName: "UCT", province: "Western Cape", type: "Research university",
+    applicationStatus: "Closed",
+    openingDate: "1 April 2026",
+    closingDate: "31 July 2026 (undergraduate)",
     registrationFeeInfo: { year: 2026, summary: "Local students: initial tuition payment R34,500. Add R44,500 for catered residence or R29,500 for self-catering residence, if applicable.", details: "This is an initial payment, not the full cost. Final payment is due 31 July 2026. Late payments may incur a 5% surcharge. International fees differ.", sourceUrl: "https://uct.ac.za/sites/default/files/media/documents/uct_ac_za/49/2025-fees-payment-dates.pdf" },
     prospectusUrl: "https://uct.ac.za/sites/default/files/media/documents/2027-uct-undergraduate-prospectus-1-april-2026.pdf",
     applicationFee: 100, image: require("../assets/uctCampus.jpg"), logo: require("../assets/uctLogo.png"),
@@ -52,6 +62,9 @@ export const universities = [
   }),
   university({
     id: "stellenbosch", name: "Stellenbosch University", shortName: "SU", province: "Western Cape", type: "Research university",
+    applicationStatus: "Closed",
+    openingDate: "1 April 2026",
+    closingDate: "31 July 2026 (undergraduate)",
     registrationFeeInfo: { year: 2025, summary: "Stellenbosch University does not charge a separate registration fee; the first installment is part of annual study fees.", details: "The latest official general fee schedule located lists 8 installments: 20% each by 28 February, 31 March, 30 April and 31 May, then 5% each by 30 June, 31 July, 31 August and 30 September. Confirm the current-year schedule with Student Fees.", sourceUrl: "https://www.sun.ac.za/english/Documents/Yearbooks/Current/2025-Student-Fees.pdf" },
     prospectusUrl: "https://files.su.ac.za/public/undergraduate-maties/documents/2026-01/su-admissions-booklet-2027.pdf",
     applicationFee: 100 , applicationFeeLabel: "Confirm current fee", image: require("../assets/stellenboschCampus.jpg"), logo: require("../assets/stellenboschLogo.jpg"),
@@ -62,6 +75,9 @@ export const universities = [
   }),
   university({
     id: "nwu", name: "North-West University", shortName: "NWU", province: "North West", type: "Comprehensive university",
+    applicationStatus: "Closed",
+    openingDate: "1 June 2026",
+    closingDate: "31 August 2026 (general); selection courses closed 30 June",
     registrationFeeInfo: { year: 2026, summary: "Minimum first payment: R12,855 for non-residence or distance students; R24,175 for residence students. International students pay full study costs upfront.", details: "The minimum includes a R2,525 registration fee and first tuition payment; residence students also include R11,320 residence payment. NSFAS-funded students are exempt.", sourceUrl: "https://services.nwu.ac.za/student-accounts-and-bursaries/payable-fees" },
     prospectusUrl: "https://studies.nwu.ac.za/sites/studies.nwu.ac.za/files/files/undergrad/2027-Grade-12-prospectus.pdf",
     applicationFee: 150, image: require("../assets/nwuCampus.png"), logo: require("../assets/nwuLogo.png"),
@@ -72,6 +88,9 @@ export const universities = [
   }),
   university({
     id: "ukzn", name: "University of KwaZulu-Natal", shortName: "UKZN", province: "KwaZulu-Natal", type: "Research university",
+    applicationStatus: "Closed",
+    openingDate: "1 March 2026",
+    closingDate: "30 September 2026 (most); Medicine closed 30 June",
     registrationFeeInfo: { year: 2026, summary: "Minimum initial payment: R7,300 for local tuition-only students or R14,100 for tuition plus residence. International students pay 100% of tuition and residence upfront.", details: "For annual registration, 60% of outstanding fees (or 100% for one-semester registration) was due 30 April; all fees were due 31 August. UKZN announced 2027 self-funded local minimums of R8,650 tuition and R8,400 residence.", sourceUrl: "https://registration.ukzn.ac.za/payments-required-from-students-for-historic-debt-and-annual-fees/" },
     prospectusUrl: "https://applications.ukzn.ac.za/wp-content/uploads/2026/05/2027-Undergrad.pdf",
     applicationFee: 250, applicationFeeLabel: "Verify with CAO", image: require("../assets/ukznCampus.jpg"), logo: require("../assets/ukznLogo.png"),
@@ -82,6 +101,9 @@ export const universities = [
   }),
   university({
     id: "ufs", name: "University of the Free State", shortName: "UFS", province: "Free State", type: "Research university",
+    applicationStatus: "Closed",
+    openingDate: "1 April 2026",
+    closingDate: "30 September 2026 (most); selected programmes closed 31 May or 31 July",
     registrationFeeInfo: { year: 2026, summary: "Initial payment depends on programme, modules, residence and funding; get a personalised fee quote. Pay at least five working days before registration.", details: "For South African students, first-semester fees were due 31 March and annual fees by 31 August. International students' second-semester fees were due 30 June.", sourceUrl: "https://www.ufs.ac.za/register/" },
     prospectusUrl: "https://www.ufs.ac.za/docs/librariesprovider44/prospectus/ug-prospectus-2027.pdf",
     applicationFee: 0, applicationFeeLabel: "Free to apply", image: require("../assets/ufsCampus.jpg"), logo: require("../assets/ufsLogo.png"),
@@ -92,6 +114,9 @@ export const universities = [
   }),
   university({
     id: "up", name: "University of Pretoria", shortName: "UP", province: "Gauteng", type: "Research university",
+    applicationStatus: "Closed",
+    openingDate: "1 April 2026",
+    closingDate: "30 June 2026 (most); Veterinary Science closed 31 May",
     registrationFeeInfo: { year: 2026, summary: "Initial tuition payment: R11,000 for undergraduate students or R13,500 for postgraduate students. Non-SADC international undergraduates: R40,000 before registration.", details: "50% of the account was due by 30 April and 100% by 31 July. A 2.5% discount applies if the account is paid in full by 30 April. A R5,700 residence acceptance levy may apply.", sourceUrl: "https://www.up.ac.za/student-fees/when-pay-what-2026" },
     prospectusUrl: "https://drupalwebprod-files.up.ac.za/Public/2026-01/UP_UG%20Prospectus%202027_NSC-IEB_DevV5_web_0.pdf?VersionId=mFTqP2HthIDn48ISjWf4b4g6CtdE6beU",
     applicationFee: 100, applicationFeeLabel: "Confirm current fee", image: require("../assets/upCampus.jpg"), logo: require("../assets/upLogo.jpg"),
@@ -102,6 +127,9 @@ export const universities = [
   }),
   university({
     id: "dut", name: "Durban University of Technology", shortName: "DUT", province: "KwaZulu-Natal", type: "University of technology",
+    applicationStatus: "Closed",
+    openingDate: "1 March 2026 (CAO cycle)",
+    closingDate: "30 September 2026 (standard; programme dates vary)",
     registrationFeeInfo: { year: 2026, summary: "Minimum first installment: R5,260 annual or R3,229 semester for tuition only; R11,242 annual or R6,896 semester with residence.", details: "The annual amount applies when registering for both semesters. Pay at least five working days before registration. Full payment may qualify for a 5% discount.", sourceUrl: "https://www.dut.ac.za/wp-content/uploads/2025/12/Registration-Guide_First-Time-Updated-17-Dec-2025.pdf" },
     prospectusUrl: "https://www.dut.ac.za/wp-content/uploads/2026/06/Study-Opportunities-2027.pdf",
     applicationFee: 250, applicationFeeLabel: "Apply through CAO", image: require("../assets/dutCampus.jpg"), logo: require("../assets/dutLogo.jpg"),
@@ -112,6 +140,9 @@ export const universities = [
   }),
   university({
     id: "mut", name: "Mangosuthu University of Technology", shortName: "MUT", province: "KwaZulu-Natal", type: "University of technology",
+    applicationStatus: "Closed — late applications may be accepted (CAO fees apply)",
+    openingDate: "1 March 2026 (CAO cycle)",
+    closingDate: "30 September 2026 (standard; late submissions incur a fee)",
     registrationFeeInfo: { year: 2026, summary: "Minimum upfront payment for self-funded students: R4,000 annual tuition-only or R2,275 semester tuition-only. With internal residence: R18,025 annual or R8,890 semester.", details: "External or new internal residence: R28,950 annual or R14,045 semester. NSFAS-funded students are excluded. These are minimums, not full fees.", sourceUrl: "https://www.mut.ac.za/student-fees/" },
     prospectusUrl: "https://www.mut.ac.za/prospective-students/apply/",
     applicationFee: 250, applicationFeeLabel: "Apply through CAO", image: require("../assets/mutCampus.png"), logo: require("../assets/mutLogo.png"),
@@ -122,6 +153,9 @@ export const universities = [
   }),
   university({
     id: "unizulu", name: "University of Zululand", shortName: "UNIZULU", province: "KwaZulu-Natal", type: "Comprehensive university",
+    applicationStatus: "Closed",
+    openingDate: "Not confirmed for 2027",
+    closingDate: "Not confirmed for 2027",
     prospectusUrl: "https://www.unizulu.ac.za/wp-content/uploads/2025/02/2026-Brochure-for-undergraduate.pdf",
     applicationFee: 250, applicationFeeLabel: "Apply through CAO", image: require("../assets/unizuluCampus.jpg"), logo: require("../assets/unizuluLogo.jpg"),
     theme: { accent: "#007A78", accentLight: "#7FD1CF", accentSoft: "rgba(0,122,120,0.22)", placeholderBackground: "#082F2E" },
@@ -132,6 +166,9 @@ export const universities = [
   }),
   university({
     id: "cput", name: "Cape Peninsula University of Technology", shortName: "CPUT", province: "Western Cape", type: "University of technology",
+    applicationStatus: "Closed",
+    openingDate: "11 May 2026",
+    closingDate: "30 September 2026 (most); selected programmes closed 30 June or 31 July",
     registrationFeeInfo: { year: 2026, summary: "Local students are encouraged to pay R3,500 upfront toward tuition and R1,500 toward residence if applicable. International students: R3,500 upfront plus 50% of tuition and a R1,500 once-off first-time administration levy.", details: "The local upfront amounts contribute toward annual fees. International students pay the remaining balance by May; other international levies and medical cover may apply.", sourceUrl: "https://www.cput.ac.za/component/content/article/faq-registration-related-queries?Itemid=0&catid=314" },
     prospectusUrl: "https://www.cput.ac.za/study-at-cput/undergraduate/apply/step-1",
     applicationFee: 0, applicationFeeLabel: "Free to apply", image: require("../assets/cputCampus.jpg"), logo: require("../assets/cputLogo.png"),
@@ -142,6 +179,9 @@ export const universities = [
   }),
   university({
     id: "uwc", name: "University of the Western Cape", shortName: "UWC", province: "Western Cape", type: "Research university",
+    applicationStatus: "Closed",
+    openingDate: "1 April 2026",
+    closingDate: "30 September 2026 (general); Dentistry and Oral Health closed 31 August",
     registrationFeeInfo: { year: 2026, summary: "Self-funded South African students: R4,290 upfront without residence, or R4,840 with residence. This includes the R1,810 registration fee.", details: "50% of the outstanding fee account was due by 30 April and 100% by 31 July. Early settlement discounts: 5% by 28 February, 3% by 31 March, or 2% by 30 April. International students pay tuition and residence upfront.", sourceUrl: "https://www.uwc.ac.za/admission-and-financial-aid/student-credit-management-and-student-accounts" },
     prospectusUrl: "https://www.uwc.ac.za/files/files/SEMU-8-Panel-Print-Admissions-2027.pdf",
     applicationFee: 0, applicationFeeLabel: "Free to apply", image: require("../assets/uwcCampus.jpg"), logo: require("../assets/uwcLogo.jpg"),
@@ -152,6 +192,9 @@ export const universities = [
   }),
   university({
     id: "vut", name: "Vaal University of Technology", shortName: "VUT", province: "Gauteng", type: "University of technology",
+    applicationStatus: "Open",
+    openingDate: "21 May 2026",
+    closingDate: "30 October 2026 (national); international closed 30 September",
     registrationFeeInfo: { year: 2026, summary: "National registration payment: R2,500 for tuition, plus R2,500 for residence if applicable. International students pay 100% of annual tuition and residence fees.", details: "Confirmed NSFAS-funded and sponsored students may be exempt. Allow at least 48 hours for payments from other banks to clear.", sourceUrl: "https://vut.ac.za/st/registration/" },
     prospectusUrl: "https://vut.ac.za/wp-content/uploads/2026/03/2027-Undergraduate-Minimum-Admission-Requirements.pdf",
     applicationFee: 110, applicationFeeLabel: "Confirm current fee", image: require("../assets/vutCampus.jpg"), logo: require("../assets/vutLogo.jpg"),
@@ -162,6 +205,9 @@ export const universities = [
   }),
   university({
     id: "ufh", name: "University of Fort Hare", shortName: "UFH", province: "Eastern Cape", type: "Traditional university",
+    applicationStatus: "Open",
+    openingDate: "Not confirmed on current official page",
+    closingDate: "31 October 2026",
     registrationFeeInfo: { year: 2026, summary: "An initial registration payment is required; the amount depends on student status and programme. Confirm the exact minimum with UFH before budgeting.", details: "Outstanding fees may need to be settled or covered by an approved payment arrangement before registration.", sourceUrl: "https://www.ufh.ac.za/registration-information-2026" },
     prospectusUrl: "https://www.ufh.ac.za/wp-content/uploads/2026/06/Study-Guide-2027.pdf",
     applicationFee: 120, applicationFeeLabel: "Confirm current fee", image: require("../assets/ufhCampus.jpg"), logo: require("../assets/ufhLogo.png"),
@@ -172,6 +218,9 @@ export const universities = [
   }),
   university({
     id: "tut", name: "Tshwane University of Technology", shortName: "TUT", province: "Gauteng", type: "University of technology",
+    applicationStatus: "Closed — late applications available for selected programmes",
+    openingDate: "Not confirmed on current official page",
+    closingDate: "Varies by programme; most closed 30 September; selected programmes may remain open",
     registrationFeeInfo: { year: 2026, summary: "TUT states a minimum registration fee of R1,500 before registration. An annual international levy of R1,820 is additional for non-South African citizens, including SADC students.", details: "Outstanding fees must be paid before registration for the following semester or year. The international levy increases annually.", sourceUrl: "https://www.tut.ac.za/international-office/fees/" },
     prospectusUrl: "https://www.tut.ac.za/study-at-tut/",
     applicationFee: 240, applicationFeeLabel: "Confirm current fee", image: require("../assets/tutCampus.png"), logo: require("../assets/tutLogo.png"),
@@ -182,6 +231,9 @@ export const universities = [
   }),
   university({
     id: "ump", name: "University of Mpumalanga", shortName: "UMP", province: "Mpumalanga", type: "Comprehensive university",
+    applicationStatus: "Open",
+    openingDate: "1 June 2026",
+    closingDate: "30 November 2026 (undergraduate)",
     registrationFeeInfo: { year: 2026, summary: "UMP requires a minimum initial payment before registration, but the amount depends on the programme and current fee assessment. Request an official quote.", details: "International students must pay 50% of tuition before registration. Confirm the amount and deadline with UMP Student Finance.", sourceUrl: "https://www.ump.ac.za/Study-with-us/Registration.aspx" },
     prospectusUrl: "https://www.ump.ac.za/Study-with-us/Application-Process/Online-Applications",
     applicationFee: 200, image: require("../assets/umpCampus.jpg"), logo: require("../assets/umpLogo.png"),
@@ -192,6 +244,9 @@ export const universities = [
   }),
   university({
     id: "spu", name: "Sol Plaatje University", shortName: "SPU", province: "Northern Cape", type: "Comprehensive university",
+    applicationStatus: "Open",
+    openingDate: "Not confirmed on current official page",
+    closingDate: "31 October 2026",
     registrationFeeInfo: { year: 2026, summary: "Registration and initial payment amounts vary by qualification and residence choice; request a personalized fee quote from SPU Student Finance.", details: "Check the official fee schedule and any bursary or payment-plan conditions before making a savings target." },
     prospectusUrl: "https://www.spu.ac.za/wp-content/uploads/2025/04/2026-Undergraduate-Prospectus.pdf",
     applicationFee: 0, applicationFeeLabel: "Free to apply", image: require("../assets/spuCampus.jpg"), logo: require("../assets/spuLogo.jpg"),
@@ -202,6 +257,9 @@ export const universities = [
   }),
   university({
     id: "univen", name: "University of Venda", shortName: "UNIVEN", province: "Limpopo", type: "Comprehensive university",
+    applicationStatus: "Closed",
+    openingDate: "Not confirmed for 2027",
+    closingDate: "30 September 2026",
     registrationFeeInfo: { year: 2026, summary: "Standard academic registration fee: R5,000 for self-funded students or where sponsor confirmation has not arrived. Residence deposit: R4,900, separate from the academic fee.", details: "NSFAS-funded students are exempt from the academic registration fee; the residence deposit may still be required until accommodation funding is confirmed.", sourceUrl: "https://www.univen.ac.za/student-affairs/study-fees/" },
     prospectusUrl: "https://www.univen.ac.za/wp-content/uploads/2026/03/2027-Univen-Undergraduate-Prospectus.pdf",
     applicationFee: 0, applicationFeeLabel: "Confirm current fee", image: require("../assets/univenCampus.jpg"), logo: require("../assets/univenLogo.png"),
@@ -212,6 +270,9 @@ export const universities = [
   }),
   university({
     id: "ul", name: "University of Limpopo", shortName: "UL", province: "Limpopo", type: "Traditional university",
+    applicationStatus: "Closed",
+    openingDate: "1 April 2026",
+    closingDate: "30 September 2026 (most); MBChB and international closed 30 July",
     registrationFeeInfo: { year: 2026, summary: "Self-funded students: R3,000 tuition-only registration payment or R5,000 for tuition plus on-campus accommodation.", details: "Payment should reflect two days before registration. Self-funded students are advised to send proof of payment four working days before registration.", sourceUrl: "https://www.ul.ac.za/wp-content/uploads/2026/01/2026-Student-Financial-Clearance-and-debt-settlement-guidelines-1.pdf" },
     prospectusUrl: "https://www.ul.ac.za/wp-content/uploads/2025/03/Undergraduate-Prospectus-2027.pdf",
     applicationFee: 200, image: require("../assets/ulCampus.jpg"), logo: require("../assets/ulLogo.jpg"),
@@ -222,6 +283,9 @@ export const universities = [
   }),
   university({
     id: "wsu", name: "Walter Sisulu University", shortName: "WSU", province: "Eastern Cape", type: "Comprehensive university",
+    applicationStatus: "Open",
+    openingDate: "1 June 2026",
+    closingDate: "31 October 2026 (general); international closed 30 September",
     registrationFeeInfo: { year: 2026, summary: "Self-funded students: R5,000 tuition minimum initial payment. University-owned residence requires a R17,500 deposit; leased residence requires the full payable amount.", details: "NSFAS and bursary-funded students may have no upfront tuition minimum if funding is confirmed. Residence charges are additional.", sourceUrl: "https://www.wsu.ac.za/images/2026/finance2026/MIP%20Schedule%202026_Final%20-%20signed.pdf" },
     prospectusUrl: "https://wsu.ac.za/media/attachments/2026/05/27/2027-information-brochure-admission-requirements.pdf",
     applicationFee: 0, applicationFeeLabel: "Free to apply", image: require("../assets/wsuCampus.png"), logo: require("../assets/wsuLogo.jpg"),
@@ -232,6 +296,9 @@ export const universities = [
   }),
   university({
     id: "smu", name: "Sefako Makgatho Health Sciences University", shortName: "SMU", province: "Gauteng", type: "Health sciences university",
+    applicationStatus: "Closed",
+    openingDate: "1 April 2026",
+    closingDate: "31 July 2026 (undergraduate); postgraduate closed 31 August",
     registrationFeeInfo: { year: 2026, summary: "Self-funded students must pay a minimum initial fee of R4,500 before registration. Funded students must provide proof of funding.", details: "This is a minimum upfront payment; total fees vary by programme.", sourceUrl: "https://www.smu.ac.za/students/apply/registrations/registration-guidelines/" },
     prospectusUrl: "https://www.smu.ac.za/3d-flip-book/smu-prospectus-2026_2027/#smu-prospectus-2026_2027/1/",
     applicationFee: 300, applicationFeeLabel: "Confirm current fee", image: require("../assets/smuCampus.jpg"), logo: require("../assets/smuLogo.jpg"),
@@ -242,6 +309,9 @@ export const universities = [
   }),
   university({
     id: "rhodes", name: "Rhodes University", shortName: "RU", province: "Eastern Cape", type: "Research university",
+    applicationStatus: "Closed",
+    openingDate: "1 April 2026",
+    closingDate: "30 September 2026 (undergraduate)",
     registrationFeeInfo: { year: 2026, summary: "Initial payment: R7,277 for tuition only, or R32,545 for tuition plus residence (R7,277 tuition + R25,268 residence).", details: "Initial payment was due 16 January for returning students and 23 January for first-time students. Further payments were due 31 March, 30 June, 30 September and 30 November. A 5% discount could be claimed for full payment by the relevant January deadline. NSFAS-funded students were exempt.", sourceUrl: "https://www.ru.ac.za/media/rhodesuniversity/content/registrar/rhodesuniversitytermdates2023/diary2026/Rhodes_Calendar_2026_web_file.pdf" },
     prospectusUrl: "https://www.ru.ac.za/media/rhodesuniversity/content/registrar/documents/information/studentrecruitment/RU_READY_Undergraduate_Prospectus_2026_DIGITAL_A5_Landscape_24pp_18Mar2026.pdf",
     applicationFee: 100, image: require("../assets/rhodesCampus.png"), logo: require("../assets/rhodesLogo.png"),
@@ -252,6 +322,9 @@ export const universities = [
   }),
   university({
     id: "nmu", name: "Nelson Mandela University", shortName: "Mandela Uni", province: "Eastern Cape", type: "Comprehensive university",
+    applicationStatus: "Closed",
+    openingDate: "13 April 2026",
+    closingDate: "30 September 2026 (late); selected programmes closed 30 June",
     registrationFeeInfo: { year: 2026, summary: "Before registration: R10,700 for full-time degree/diploma students, R7,500 for full-time diploma/certificate students, or R6,300 for part-time students. Medical first-year students: R23,000.", details: "Residence students also need an R8,600 residence down payment. Amounts are credited to the student account; international students pay all fees in full before registration.", sourceUrl: "https://www.mandela.ac.za/www-new/media/Store/documents/Registration/2026-Online-registration-guidelines.pdf" },
     prospectusUrl: "https://www.mandela.ac.za/www-new/media/Store/documents/StudyAtMandela/QuickGuides/Apply/2026-MandelaUni-Undergraduate-Guide.pdf",
     applicationFee: 0, applicationFeeLabel: "Free to apply", image: require("../assets/nmuCampus.jpg"), logo: require("../assets/nmuLogo.jpg"),
@@ -262,6 +335,9 @@ export const universities = [
   }),
   university({
     id: "cut", name: "Central University of Technology", shortName: "CUT", province: "Free State", type: "University of technology",
+    applicationStatus: "Closed",
+    openingDate: "April 2026 (exact day not stated)",
+    closingDate: "30 September 2026 (undergraduate and most other programmes)",
     registrationFeeInfo: { year: 2026, summary: "CUT requires a Minimum Initial Payment (MIP) to activate registration. The amount varies by programme and residence status; NSFAS and some bursary holders may be exempt.", details: "Use the official 2026 Financial Guideline or request a fee quote for your programme before deciding how much to save.", sourceUrl: "https://www.cut.ac.za/announcements/289" },
     prospectusUrl: "https://www.cut.ac.za/programmes-offered",
     applicationFee: 0, applicationFeeLabel: "Free to apply", image: require("../assets/cutCampus.jpg"), logo: require("../assets/cutLogo.jpg"),
@@ -272,6 +348,9 @@ export const universities = [
   }),
   university({
     id: "unisa", name: "University of South Africa", shortName: "UNISA", province: "National / Distance", type: "Open distance-learning university",
+    applicationStatus: "Closed",
+    openingDate: "17 August 2026",
+    closingDate: "9 October 2026 (undergraduate, Honours and postgraduate diplomas)",
     registrationFeeInfo: { year: 2026, summary: "UNISA has no single flat deposit: the minimum is calculated per module. Many 15-credit modules require roughly R1,365–R1,470 upfront; 12-credit modules about R705–R755.", details: "Further installments depend on module type and semester. Check the 2026 table or fee quotation for your exact course selection; the minimum must be paid by the registration closing date.", sourceUrl: "https://www.unisa.ac.za/sites/corporate/default/Register-to-study-through-Unisa/Undergraduate-%26-honours-qualifications/Calculate-your-study-fees/Prescribed-student-fees%3A-undergraduate-studies" },
     prospectusUrl: "https://www.unisa.ac.za/sites/corporate/default/Programmes-offered/",
     applicationFee: 160, applicationFeeLabel: "Confirm current fee", image: require("../assets/unisaCampus.jpg"), logo: require("../assets/unisaLogo.png"),

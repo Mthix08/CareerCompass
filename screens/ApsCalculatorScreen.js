@@ -18,7 +18,7 @@ import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
 import { loadCollection } from "../data/firestoreContent";
-import { getApsUniversityMatches } from "../data/apsMatching";
+import { getInstitutionApsMatches, getInstitutionApsResults } from "../data/apsMatching";
 import { universities } from "../data/universities";
 import { calculateUniversityScores } from "../services/apsScoring";
 
@@ -247,7 +247,7 @@ function ApsResultModal({ result, onClose, onViewMatches }) {
                   {result?.subjectCount === 1 ? "subject" : "subjects"} from {result?.period}. The generic APS above excludes Life Orientation; institution rules may treat it differently.
                 </Text>
                 <Text style={styles.resultDescription}>
-                  Based on your generic APS, {result?.matchedUniversities} {result?.matchedUniversities === 1 ? "university has" : "universities have"} courses at or below the listed minimum. This is a broad score comparison, not an eligibility result.
+                  Institution-specific scores and clear Maths requirements match listed courses at {result?.matchedUniversities} {result?.matchedUniversities === 1 ? "university" : "universities"}. Courses with unclear subject data need verification. This is not an eligibility result.
                 </Text>
                 {result?.collegeCount > 0 && (
                   <Text style={styles.resultDescription}>
@@ -373,7 +373,8 @@ function createApsDisplayResult(result, colleges) {
   return {
     ...result,
     universityScores: calculateUniversityScores(universities, result.marks),
-    matchedUniversities: getApsUniversityMatches(result.totalAps).length,
+    apsByUniversity: getInstitutionApsResults(result.marks),
+    matchedUniversities: getInstitutionApsMatches(result.marks).length,
     collegeCount: colleges.length,
     collegesUseAps: collegesWithAps.length > 0,
     matchedColleges: collegesWithAps.filter(
@@ -702,8 +703,8 @@ export default function ApsCalculatorScreen({ navigation }) {
             screen: "Courses",
             params: {
               matchedOnly: true,
-              apsScore: apsResult?.totalAps,
               apsByUniversity: apsResult?.apsByUniversity,
+              apsMarks: apsResult?.marks,
               filterRequestId: Date.now(),
             },
           });
