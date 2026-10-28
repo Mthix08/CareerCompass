@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useRef } from "react";
+import React, { useCallback, useEffect, useMemo, useRef } from "react";
+import { useFocusEffect } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
@@ -29,6 +30,7 @@ import { getLatestApsRecord } from "../data/apsMatching";
 import { auth, db } from "./firebaseConfig";
 import { signInWithGoogle } from "./googleAuth";
 import { getCareerAssessment } from "../services/careerAssessmentService";
+import { getUnreadNotificationCount } from "../services/courseSuggestionNotifications";
 
 const THEMES = ["Light", "Dark", "System"];
 
@@ -93,6 +95,7 @@ export default function ProfileScreen({ navigation }) {
   const { bookmarkedCourseIds, bookmarkedIds, bookmarkedFundingIds } = useBookmarks();
   const {
     profile,
+    firebaseUser,
     isGuest,
     isAuthenticated,
     themePreference,
@@ -112,6 +115,19 @@ export default function ProfileScreen({ navigation }) {
   const [reauthVisible, setReauthVisible] = React.useState(false);
   const [isDeleting, setIsDeleting] = React.useState(false);
   const [assessmentLoading, setAssessmentLoading] = React.useState(false);
+  const [unreadNotificationCount, setUnreadNotificationCount] = React.useState(0);
+
+  useFocusEffect(useCallback(() => {
+    let active = true;
+    if (!firebaseUser?.uid) {
+      setUnreadNotificationCount(0);
+      return () => { active = false; };
+    }
+    getUnreadNotificationCount(firebaseUser.uid)
+      .then((count) => { if (active) setUnreadNotificationCount(count); })
+      .catch(() => { if (active) setUnreadNotificationCount(0); });
+    return () => { active = false; };
+  }, [firebaseUser?.uid]));
 
   const openCareerAssessment = async () => {
     if (!isAuthenticated || assessmentLoading) return;
@@ -509,6 +525,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="notifications-outline"
             label="Notifications"
+            badge={unreadNotificationCount ? `${unreadNotificationCount} unread` : undefined}
             onPress={() =>
               accountOnly(() => navigation.navigate("Notifications"))
             }

@@ -4,6 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useProfile } from "../context/ProfileContext";
 import { CAREER_ASSESSMENT_QUESTIONS, hasAnswered, sanitizeCareerAssessmentAnswers } from "../data/careerAssessmentQuestions";
 import { beginCareerAssessment, completeCareerAssessment, saveCareerAssessmentDraft, skipCareerAssessment } from "../services/careerAssessmentService";
+import { createCourseSuggestionNotification } from "../services/courseSuggestionNotifications";
 
 export default function CareerAssessmentScreen({ navigation, route }) {
   const { firebaseUser, colors, resolvedTheme } = useProfile();
@@ -61,6 +62,11 @@ export default function CareerAssessmentScreen({ navigation, route }) {
       await saveCareerAssessmentDraft(firebaseUser.uid, answers);
       if (isLast) {
         await completeCareerAssessment(firebaseUser.uid, answers);
+        try {
+          await createCourseSuggestionNotification(firebaseUser.uid, answers);
+        } catch (notificationError) {
+          console.warn("Assessment completed, but the course suggestion notification could not be saved.", notificationError);
+        }
         navigation.replace("CareerAssessmentResults");
       } else setIndex((current) => current + 1);
     } catch (_error) { setError(isLast ? "We could not submit your answers. Your responses are saved as a draft; please retry." : "We could not save your progress. Check your connection and try again."); }

@@ -1,11 +1,17 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { FlatList, Pressable, ScrollView, StyleSheet,  View } from "react-native";
+import { Alert, FlatList, Pressable, ScrollView, StyleSheet, View } from "react-native";
 import Text from '../components/TranslatedText';
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { loadCollection } from "../data/firestoreContent";
+import {
+  loadCourseSuggestionNotifications,
+  loadNotificationReadStates,
+  markNotificationRead,
+  markNotificationsRead,
+} from "../services/courseSuggestionNotifications";
 import { universities } from "../data/universities";
 import { useProfile } from "../context/ProfileContext";
 
@@ -26,24 +32,37 @@ function formatTimeAgo(createdAt) {
 }
 
 export default function Notifications({ navigation }) {
-  const { colors, resolvedTheme } = useProfile();
+  const { colors, resolvedTheme, firebaseUser } = useProfile();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const [activeFilter, setActiveFilter] = useState("All");
-  // CHANGED: notifications now come from the Firestore "notifications" collection
-  // (with an AsyncStorage copy for offline) instead of a hardcoded array.
+  const [markingAll, setMarkingAll] = useState(false);
+  // Shared admin announcements and private assessment notifications are separate feeds.
   const [notifications, setNotifications] = useState([]);
 
   useEffect(() => {
     let active = true;
-    loadCollection("notifications", { sortBy: "createdAt", descending: true }).then(
-      (items) => {
-        if (active) setNotifications(items);
-      },
-    );
+    Promise.all([
+      loadCollection("notifications", { sortBy: "createdAt", descending: true }),
+      loadCourseSuggestionNotifications(firebaseUser?.uid).catch(() => []),
+      loadNotificationReadStates(firebaseUser?.uid).catch(() => new Set()),
+    ]).then(([sharedItems, personalItems, readStates]) => {
+      if (!active) return;
+      const taggedShared = sharedItems.map((item) => ({
+        ...item,
+        source: "shared",
+        isRead: readStates.has(`shared_${item.id}`),
+      }));
+      const byId = new Map([...taggedShared, ...personalItems].map((item) => [`${item.source}:${item.id}`, item]));
+      setNotifications([...byId.values()].sort((first, second) => {
+        const firstTime = first.createdAt?.toMillis?.() ?? (first.createdAt?.seconds || 0) * 1000;
+        const secondTime = second.createdAt?.toMillis?.() ?? (second.createdAt?.seconds || 0) * 1000;
+        return secondTime - firstTime;
+      }));
+    });
     return () => {
       active = false;
     };
-  }, []);
+  }, [firebaseUser?.uid]);
 
   const filteredNotifications = useMemo(
     () => activeFilter === "All"
@@ -52,7 +71,43 @@ export default function Notifications({ navigation }) {
     [activeFilter, notifications],
   );
 
+  const unreadCount = notifications.filter((notification) => !notification.isRead).length;
+
+  const updateReadLocally = (predicate) => {
+    setNotifications((current) => current.map((notification) =>
+      predicate(notification) ? { ...notification, isRead: true } : notification,
+    ));
+  };
+
+  const markAllAsRead = async () => {
+    if (!firebaseUser?.uid || unreadCount === 0 || markingAll) return;
+    setMarkingAll(true);
+    try {
+      await markNotificationsRead(firebaseUser.uid, notifications);
+      updateReadLocally(() => true);
+    } catch (_error) {
+      Alert.alert("Could not update notifications", "Please check your connection and try again.");
+    } finally {
+      setMarkingAll(false);
+    }
+  };
+
   const openNotification = (notification) => {
+    if (!notification.isRead) {
+      updateReadLocally((item) => item.source === notification.source && item.id === notification.id);
+      if (firebaseUser?.uid) {
+        markNotificationRead(firebaseUser.uid, notification).catch(() => {});
+      }
+    }
+
+    if (notification.routeName === "CourseSuggestions") {
+      navigation.navigate("CourseSuggestions", {
+        category: notification.suggestionCategory,
+        answers: notification.assessmentAnswers,
+      });
+      return;
+    }
+
     if (notification.universityId) {
       const selectedUniversity = universities.find(
         ({ id }) => id === notification.universityId,
@@ -72,7 +127,7 @@ export default function Notifications({ navigation }) {
   };
 
   const renderNotification = ({ item }) => (
-    <View style={styles.notificationCard}>
+    <View style={[styles.notificationCard, !item.isRead && styles.notificationCardUnread]}>
       <View style={styles.notificationTopRow}>
         <View style={styles.notificationIcon}>
           <Ionicons name={item.icon} size={21} color={colors.primary} />
@@ -84,6 +139,7 @@ export default function Notifications({ navigation }) {
         <Text style={styles.time}>{formatTimeAgo(item.createdAt)}</Text>
       </View>
       <Text style={styles.description}>{item.description}</Text>
+      {!item.isRead && <Text style={styles.unreadLabel}>NEW</Text>}
       <Pressable
         onPress={() => openNotification(item)}
         accessibilityRole="button"
@@ -111,7 +167,7 @@ export default function Notifications({ navigation }) {
         </Pressable>
         <View style={styles.headerCopy}>
           <Text style={styles.headerTitle}>Notifications</Text>
-          <Text style={styles.headerSubtitle}>Your recent notifications</Text>
+          <Text style={styles.headerSubtitle}>{unreadCount ? `${unreadCount} unread` : "You’re all caught up"}</Text>
         </View>
       </View>
 
@@ -124,32 +180,44 @@ export default function Notifications({ navigation }) {
         style={styles.list}
         contentContainerStyle={styles.listContent}
         ListHeaderComponent={
-          <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={styles.filters}
-          >
-            {FILTERS.map((filter) => {
-              const selected = filter === activeFilter;
-              return (
-                <Pressable
-                  key={filter}
-                  onPress={() => setActiveFilter(filter)}
-                  accessibilityRole="button"
-                  accessibilityState={{ selected }}
-                  style={({ pressed }) => [
-                    styles.filterChip,
-                    selected && styles.filterChipSelected,
-                    pressed && styles.pressed,
-                  ]}
-                >
-                  <Text style={[styles.filterText, selected && styles.filterTextSelected]}>
-                    {filter}
-                  </Text>
-                </Pressable>
-              );
-            })}
-          </ScrollView>
+          <View>
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={styles.filters}
+            >
+              {FILTERS.map((filter) => {
+                const selected = filter === activeFilter;
+                return (
+                  <Pressable
+                    key={filter}
+                    onPress={() => setActiveFilter(filter)}
+                    accessibilityRole="button"
+                    accessibilityState={{ selected }}
+                    style={({ pressed }) => [
+                      styles.filterChip,
+                      selected && styles.filterChipSelected,
+                      pressed && styles.pressed,
+                    ]}
+                  >
+                    <Text style={[styles.filterText, selected && styles.filterTextSelected]}>
+                      {filter}
+                    </Text>
+                  </Pressable>
+                );
+              })}
+            </ScrollView>
+            <Pressable
+              onPress={markAllAsRead}
+              disabled={markingAll || unreadCount === 0 || !firebaseUser?.uid}
+              accessibilityRole="button"
+              accessibilityLabel="Mark all notifications as read"
+              style={({ pressed }) => [styles.markAllButton, (markingAll || unreadCount === 0 || !firebaseUser?.uid) && styles.markAllDisabled, pressed && styles.pressed]}
+            >
+              <Ionicons name="checkmark-done-outline" size={17} color={colors.primary} />
+              <Text style={styles.markAllText}>{markingAll ? "Marking as read…" : "Mark all as read"}</Text>
+            </Pressable>
+          </View>
         }
         ListEmptyComponent={
           <View style={styles.emptyState}>
@@ -206,6 +274,7 @@ function makeStyles(colors) {
     borderColor: colors.border,
     backgroundColor: colors.surface,
   },
+  notificationCardUnread: { borderColor: colors.primary, backgroundColor: colors.primarySoft },
   notificationTopRow: { flexDirection: "row", alignItems: "flex-start" },
   notificationIcon: {
     width: 40,
@@ -220,6 +289,7 @@ function makeStyles(colors) {
   notificationTitle: { marginTop: 4, color: colors.text, fontSize: 15, lineHeight: 20, fontWeight: "900" },
   time: { color: colors.mutedText, fontSize: 10 },
   description: { marginTop: 13, color: colors.secondaryText, fontSize: 13, lineHeight: 20 },
+  unreadLabel: { alignSelf: "flex-start", marginTop: 9, paddingHorizontal: 8, paddingVertical: 4, overflow: "hidden", borderRadius: 999, color: colors.primary, backgroundColor: colors.background, fontSize: 9, fontWeight: "900", letterSpacing: 0.5 },
   detailsButton: {
     alignSelf: "flex-end",
     minHeight: 36,
@@ -234,6 +304,9 @@ function makeStyles(colors) {
     backgroundColor: colors.primarySoft,
   },
   detailsButtonText: { color: colors.primary, fontSize: 12, fontWeight: "800" },
+  markAllButton: { alignSelf: "flex-end", minHeight: 38, marginHorizontal: 15, marginBottom: 10, paddingHorizontal: 10, borderRadius: 10, flexDirection: "row", alignItems: "center", gap: 6, backgroundColor: colors.primarySoft },
+  markAllText: { color: colors.primary, fontSize: 12, fontWeight: "800" },
+  markAllDisabled: { opacity: 0.45 },
   separator: { height: 11 },
   emptyState: { paddingVertical: 70, alignItems: "center" },
   emptyTitle: { marginTop: 12, color: colors.secondaryText, fontSize: 15, fontWeight: "700" },
