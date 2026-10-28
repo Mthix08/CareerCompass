@@ -49,6 +49,8 @@ export function normalizeFundingOption(item) {
     item.logoUrl,
     item.provider_logo_url,
     item.providerLogoUrl,
+    item.logo_image_url,
+    item.logoImageUrl,
     item.image_url,
     item.imageUrl,
     item.image,

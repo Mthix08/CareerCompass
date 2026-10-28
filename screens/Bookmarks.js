@@ -5,6 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import UniversityCard from "../components/Varsity-Card";
+import FundingLogo from "../components/FundingLogo";
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
 import { universities } from "../data/universities";
@@ -163,9 +164,7 @@ function SavedFundingCard({ funding, onPress, onRemove }) {
   const styles = useMemo(() => makeStyles(colors), [colors]);
   return (
     <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={`Open ${funding.name} details`} style={({ pressed }) => [styles.courseCard, pressed && styles.cardPressed]}>
-      <View style={styles.courseIcon}>
-        <Ionicons name="wallet-outline" size={23} color={colors.primary} />
-      </View>
+      <FundingLogo option={funding} colors={colors} />
       <View style={styles.courseDetails}>
         <Text style={styles.courseUniversity}>BURSARY</Text>
         <Text style={styles.courseName} numberOfLines={2}>{funding.name}</Text>
