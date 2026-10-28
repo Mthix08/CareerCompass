@@ -3,6 +3,7 @@ import { Image, Pressable, StyleSheet,  View } from "react-native";
 import Text from './TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { getUniversityTheme } from "../data/universityTheme";
+import FundingLogo from "./FundingLogo";
 
 export const SectionHeader = memo(function SectionHeader({ title, icon, actionLabel, onActionPress, colors }) {
   const styles = useMemo(() => createStyles(colors), [colors]);
@@ -23,6 +24,7 @@ export const SectionHeader = memo(function SectionHeader({ title, icon, actionLa
 
 export const DeadlineCard = memo(function DeadlineCard({ item, university, colors, width }) {
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const urgent = item.isOpen && item.daysRemaining <= 5;
   const statusText = item.isOpen ? "Open" : item.closed ? "Closed" : "Check dates";
   const statusColor = item.closed ? colors.danger : item.isOpen ? "#16803C" : colors.primary;
   const timingText = item.isOpen
@@ -33,7 +35,7 @@ export const DeadlineCard = memo(function DeadlineCard({ item, university, color
       ? `Closed ${item.daysClosed} ${item.daysClosed === 1 ? "day" : "days"} ago`
       : "Check dates";
   return (
-    <View style={[styles.deadlineCard, { width }]} accessibilityLabel={`${university.name}, ${statusText.toLowerCase()}, ${timingText}, closing date ${item.closingDate}`}>
+    <View style={[styles.deadlineCard, { width }, urgent && { borderColor: colors.danger, borderWidth: 2 }]} accessibilityLabel={`${university.name}, ${statusText.toLowerCase()}, ${timingText}, closing date ${item.closingDate}`}>
       <View style={styles.deadlineTopRow}>
         <View style={styles.logoWrapSmall}>
           <Image source={university.logo} style={styles.logoSmall} resizeMode="contain" accessibilityLabel={`${university.shortName} logo`} />
@@ -50,11 +52,46 @@ export const DeadlineCard = memo(function DeadlineCard({ item, university, color
         {!!item.isExample && (
           <View style={styles.exampleBadge}><Text style={styles.exampleBadgeText}>EXAMPLE DATA</Text></View>
         )}
-        <View style={[styles.daysBadge, item.closed && { backgroundColor: colors.dangerSoft }]}>
-          <Text style={[styles.daysBadgeText, item.closed && { color: colors.danger }]}>{timingText}</Text>
+        <View style={[styles.daysBadge, (item.closed || urgent) && { backgroundColor: colors.dangerSoft }]}>
+          <Text style={[styles.daysBadgeText, (item.closed || urgent) && { color: colors.danger }]}>{timingText}</Text>
         </View>
       </View>
     </View>
+  );
+});
+
+export const FundingDeadlineCard = memo(function FundingDeadlineCard({ item, colors, width, onPress }) {
+  const styles = useMemo(() => createStyles(colors), [colors]);
+  const urgent = item.daysRemaining <= 5;
+  const timingText = item.daysRemaining === 0
+    ? "Closes today"
+    : `${item.daysRemaining} ${item.daysRemaining === 1 ? "day" : "days"} left`;
+
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={`${item.funding.name} bursary deadline, ${timingText}, closes ${item.funding.closes}`}
+      style={({ pressed }) => [
+        styles.fundingDeadlineCard,
+        { width },
+        urgent && { borderColor: colors.danger, borderWidth: 2 },
+        pressed && styles.pressed,
+      ]}
+    >
+      <View style={styles.fundingDeadlineTopRow}>
+        <FundingLogo option={item.funding} colors={colors} size={44} featured={item.funding.id === "nsfas"} />
+        <View style={styles.fundingDeadlineCopy}>
+          <Text style={styles.fundingDeadlineEyebrow}>FUNDING DEADLINE</Text>
+          <Text style={styles.fundingDeadlineName} numberOfLines={2}>{item.funding.name}</Text>
+          <Text style={styles.fundingDeadlineDate} numberOfLines={1}>Closes {item.funding.closes}</Text>
+        </View>
+      </View>
+      <View style={[styles.fundingDaysBadge, urgent && { backgroundColor: colors.dangerSoft }]}>
+        <Ionicons name="time-outline" size={14} color={urgent ? colors.danger : colors.primary} />
+        <Text style={[styles.fundingDaysBadgeText, urgent && { color: colors.danger }]}>{timingText}</Text>
+      </View>
+    </Pressable>
   );
 });
 
@@ -143,6 +180,14 @@ const createStyles = (colors) => StyleSheet.create({
   statusBadgeText: { fontSize: 11, fontWeight: "900" },
   daysBadge: { paddingHorizontal: 10, paddingVertical: 6, borderRadius: 999, backgroundColor: colors.primarySoft },
   daysBadgeText: { color: colors.primary, fontSize: 11, fontWeight: "800" },
+  fundingDeadlineCard: { minHeight: 174, padding: 16, borderRadius: 20, borderWidth: 1, borderColor: colors.border, justifyContent: "space-between", backgroundColor: colors.surface, shadowColor: colors.text, shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.1, shadowRadius: 10, elevation: 3 },
+  fundingDeadlineTopRow: { flexDirection: "row", alignItems: "center", gap: 12 },
+  fundingDeadlineCopy: { flex: 1, minWidth: 0 },
+  fundingDeadlineEyebrow: { color: colors.primary, fontSize: 9, fontWeight: "900", letterSpacing: 0.8 },
+  fundingDeadlineName: { marginTop: 5, color: colors.text, fontSize: 15, lineHeight: 20, fontWeight: "800" },
+  fundingDeadlineDate: { marginTop: 5, color: colors.secondaryText, fontSize: 12 },
+  fundingDaysBadge: { alignSelf: "flex-start", flexDirection: "row", alignItems: "center", gap: 5, paddingHorizontal: 10, paddingVertical: 6, borderRadius: 999, backgroundColor: colors.primarySoft },
+  fundingDaysBadgeText: { color: colors.primary, fontSize: 11, fontWeight: "800" },
   logoWrapSmall: { width: 46, height: 46, borderRadius: 13, alignItems: "center", justifyContent: "center", backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },
   logoSmall: { width: 38, height: 38 },
   logoWrapMedium: { width: 52, height: 52, borderRadius: 14, alignItems: "center", justifyContent: "center", backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },

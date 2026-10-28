@@ -21,6 +21,7 @@ import {
   APSScoreRow,
   DeadlineCard,
   HomeUniversityCard,
+  FundingDeadlineCard,
   QuickActionCard,
   SectionHeader,
 } from "../components/HomeComponents";
@@ -29,6 +30,7 @@ import { loadCollection } from "../data/firestoreContent";
 import { universities } from "../data/universities";
 import { getInstitutionApsMatches, getLatestApsRecord } from "../data/apsMatching";
 import { syncDeadlineReminders } from "../services/deadlineNotifications";
+import { fetchBursaries, parseFundingDeadline } from "../data/funding";
 
 const NSFAS_IMAGE = require("../assets/nsfas.jpg");
 const HORIZONTAL_GAP = 14;
@@ -86,14 +88,19 @@ export default function HomeScreen({ navigation }) {
   }, []);
 
   const [deadlines, setDeadlines] = useState([]);
+  const [fundingOptions, setFundingOptions] = useState([]);
   const [deadlineNow, setDeadlineNow] = useState(null);
 
   useEffect(() => {
     if (!isFocused) return undefined;
     let active = true;
-    loadCollection("applicationDeadlines", { sortBy: "closesAt" }).then((items) => {
+    Promise.all([
+      loadCollection("applicationDeadlines", { sortBy: "closesAt" }),
+      fetchBursaries(),
+    ]).then(([items, funding]) => {
       if (active) {
         setDeadlines(items);
+        setFundingOptions(funding);
         setDeadlineNow(Date.now());
         syncDeadlineReminders(items, profile.notificationPreferences?.applications !== false)
           .catch((error) => console.warn("Unable to refresh application deadline reminders.", error));
@@ -154,7 +161,7 @@ export default function HomeScreen({ navigation }) {
 
   const deadlineItems = useMemo(() => {
     if (deadlineNow === null) return [];
-    return deadlines
+    const universityItems = deadlines
       .map((deadline) => {
         const closesAt = deadline.closesAt ? new Date(deadline.closesAt) : null;
         const validDate = closesAt && !Number.isNaN(closesAt.getTime());
@@ -164,6 +171,7 @@ export default function HomeScreen({ navigation }) {
         const daysClosed = closed ? Math.ceil(Math.abs(difference) / 86400000) : 0;
         return {
           ...deadline,
+          type: "university",
           closingDate: deadline.closingDate || "Date not confirmed",
           closed,
           isOpen: validDate && !closed,
@@ -183,7 +191,30 @@ export default function HomeScreen({ navigation }) {
         if (first.closed !== second.closed) return first.closed ? 1 : -1;
         return first.daysClosed - second.daysClosed;
       });
-  }, [deadlineNow, deadlines]);
+    const fundingItems = fundingOptions
+      .map((funding) => {
+        const closesAt = funding.closesAt ? new Date(funding.closesAt) : parseFundingDeadline(funding.closes);
+        if (!closesAt || Number.isNaN(closesAt.getTime())) return null;
+        const difference = closesAt.getTime() - deadlineNow;
+        if (difference < 0) return null;
+        const daysRemaining = Math.ceil(difference / 86400000);
+        if (daysRemaining > 30) return null;
+        return {
+          id: `funding-${funding.id}`,
+          type: "funding",
+          funding,
+          isOpen: true,
+          closed: false,
+          daysRemaining,
+          closesAt,
+        };
+      })
+      .filter(Boolean);
+    return [...universityItems, ...fundingItems].sort((first, second) => {
+      if (first.isOpen !== second.isOpen) return first.isOpen ? -1 : 1;
+      return (first.daysRemaining ?? Infinity) - (second.daysRemaining ?? Infinity);
+    });
+  }, [deadlineNow, deadlines, fundingOptions]);
 
   const openApsCalculator = useCallback(
     () => navigation.navigate("ApsCalculator"),
@@ -361,7 +392,7 @@ export default function HomeScreen({ navigation }) {
           <View style={styles.section}>
             <View style={styles.paddedHeader}>
               <SectionHeader
-                title="Upcoming Application Deadlines"
+                title="Upcoming University & Funding Deadlines"
                 icon="calendar-outline"
                 colors={colors}
               />
@@ -371,14 +402,23 @@ export default function HomeScreen({ navigation }) {
               data={deadlineItems}
               keyExtractor={(item) => item.id}
               renderItem={({ item }) => (
-                <DeadlineCard
-                  item={item}
-                  university={item.university}
-                  colors={colors}
-                  width={sliderCardWidth}
-                />
+                item.type === "funding" ? (
+                  <FundingDeadlineCard
+                    item={item}
+                    colors={colors}
+                    width={sliderCardWidth}
+                    onPress={() => navigation.getParent()?.navigate("FundingDetails", { fundingId: item.funding.id })}
+                  />
+                ) : (
+                  <DeadlineCard
+                    item={item}
+                    university={item.university}
+                    colors={colors}
+                    width={sliderCardWidth}
+                  />
+                )
               )}
-              ListEmptyComponent={<Text style={styles.helperText}>No university deadlines within the next 30 days or past 30 days.</Text>}
+              ListEmptyComponent={<Text style={styles.helperText}>No university or funding deadlines within the next 30 days.</Text>}
               ItemSeparatorComponent={() => (
                 <View style={styles.horizontalGap} />
               )}
