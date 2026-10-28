@@ -41,6 +41,9 @@ const OUT_OF_SCOPE =
 const APP_OVERVIEW_ANSWER =
   "CareerCompass is a career and study-planning app for South African learners. It helps you calculate your APS, explore universities, colleges and courses, connect study options to careers, take a career assessment, find funding information, and track applications. Always confirm current admission and funding requirements with the official institution or funder.";
 
+const APS_ANSWER =
+  "For a quick generic APS estimate, convert each subject percentage into points: 80–100% = 7, 70–79% = 6, 60–69% = 5, 50–59% = 4, 40–49% = 3, 30–39% = 2, and below 30% = 1. Add the points for your six best subjects and leave out Life Orientation for the generic score. CareerCompass can calculate this for you in the APS Calculator. Universities may use different subject and Life Orientation rules, so check the requirements for your chosen course.";
+
 export function getCareerCompassAppOverviewAnswer(question) {
   const normalizedQuestion = normalize(question);
   const asksWhatTheAppIs =
@@ -120,6 +123,7 @@ export function getLocalCareerCompassAnswer(question) {
   if (overviewAnswer) return overviewAnswer;
 
   const normalizedQuestion = normalize(question);
+  if (/\baps\b|admission points?/i.test(normalizedQuestion)) return APS_ANSWER;
   const match = responses.find(({ words }) =>
     words.some((word) => normalizedQuestion.includes(normalize(word))),
   );

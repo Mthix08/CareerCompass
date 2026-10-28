@@ -33,25 +33,33 @@ async function getAssistantAnswer(question) {
     process.env.EXPO_PUBLIC_TRANSLATION_API_URL ||
     "https://careercompass-translation.careercompass-za.workers.dev";
   const endpoint = `${configuredUrl.replace(/\/+$/, "").replace(/\/(translate|assistant)$/, "")}/assistant`;
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 20_000);
-
-  try {
-    const response = await fetch(endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question }),
-      signal: controller.signal,
-    });
-    if (!response.ok) throw new Error("Assistant request failed");
-    const data = await response.json();
-    if (typeof data.answer !== "string" || !data.answer.trim()) {
-      throw new Error("Assistant returned no answer");
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 30_000);
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question }),
+        signal: controller.signal,
+      });
+      if (!response.ok) {
+        if (attempt === 0 && [502, 503, 504].includes(response.status)) {
+          await new Promise((resolve) => setTimeout(resolve, 800));
+          continue;
+        }
+        throw new Error("Assistant request failed");
+      }
+      const data = await response.json();
+      if (typeof data.answer !== "string" || !data.answer.trim()) {
+        throw new Error("Assistant returned no answer");
+      }
+      return data.answer.trim();
+    } finally {
+      clearTimeout(timeout);
     }
-    return data.answer.trim();
-  } finally {
-    clearTimeout(timeout);
   }
+  throw new Error("Assistant request failed");
 }
 
 export default function AssistantScreen({ navigation }) {
