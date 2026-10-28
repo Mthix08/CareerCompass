@@ -6,7 +6,22 @@ const MAX_BODY_BYTES = 64 * 1024;
 const MAX_TEXTS = 50;
 const MAX_TOTAL_CHARS = 20_000;
 const MAX_ASSISTANT_QUESTION_CHARS = 500;
-const ASSISTANT_CONTEXT = `You are the CareerCompass Assistant. Answer only questions about CareerCompass and education/career guidance supported by the facts below. If a question is unrelated, say you can only help with CareerCompass and education guidance. Do not invent course requirements, APS rules, fees, deadlines, or bursary eligibility; tell the learner to confirm those with the institution or funder.\n\nCareerCompass helps South African learners explore universities, colleges, courses, careers, and funding opportunities. It includes an APS tool, institution/course directories, funding information, profile/settings, and an application tracker. Information in the app may be incomplete or change; advise checking official university, college, and funder sources for current requirements and dates.`;
+const APP_OVERVIEW_ANSWER =
+  "CareerCompass is a career and study-planning app for South African learners. It helps you calculate your APS, explore universities, colleges and courses, connect study options to careers, take a career assessment, find funding information, and track applications. Always confirm current admission and funding requirements with the official institution or funder.";
+const ASSISTANT_CONTEXT = `You are the CareerCompass Assistant, a concise and friendly guide for South African learners. Answer the user's actual question directly before adding helpful context. For questions asking what CareerCompass or this app is about, describe it as a career and study-planning app that helps South African learners calculate APS, explore universities, colleges and courses, connect study options to careers, take a career assessment, find funding information, and track applications. Do not answer an app overview question with a generic definition of an app or unrelated information. Stay within CareerCompass and education/career guidance. If a question is unrelated, briefly say you can help with CareerCompass and education guidance. Do not invent course requirements, APS rules, fees, deadlines, or bursary eligibility; advise the learner to confirm current information with the institution or funder. The app's information may be incomplete or change.`;
+
+function getAppOverviewAnswer(question) {
+  const normalizedQuestion = question.toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+  const matches =
+    /\bwhat(?: is|s) (this|the) app(?:(?: is)? (about|for))?\b/.test(normalizedQuestion) ||
+    /\bwhat does (this|the) app do\b/.test(normalizedQuestion) ||
+    /\btell me about (careercompass|this app|the app)\b/.test(normalizedQuestion) ||
+    /\bwhat(?: is|s) careercompass(?:(?: is)? about)?\b/.test(normalizedQuestion) ||
+    /\bwhat does careercompass do\b/.test(normalizedQuestion) ||
+    /\bdescribe (careercompass|this app|the app)\b/.test(normalizedQuestion);
+
+  return matches ? APP_OVERVIEW_ANSWER : null;
+}
 
 function json(body, status = 200) {
   return new Response(JSON.stringify(body), {
@@ -56,6 +71,8 @@ export default {
       if (!question || question.length > MAX_ASSISTANT_QUESTION_CHARS) {
         return json({ error: "Enter a question of 1 to 500 characters." }, 400);
       }
+      const overviewAnswer = getAppOverviewAnswer(question);
+      if (overviewAnswer) return json({ answer: overviewAnswer });
       if (!env.GEMINI_API_KEY) {
         return json({ error: "The assistant service is not configured." }, 503);
       }
@@ -95,6 +112,7 @@ export default {
         return json({ error: "The assistant provider returned an invalid response." }, 502);
       }
       const answer = result.candidates?.[0]?.content?.parts
+        ?.filter((part) => part.thought !== true)
         ?.map((part) => part.text)
         .filter((text) => typeof text === "string")
         .join("\n")
