@@ -4,10 +4,11 @@ import {
   FlatList,
   Pressable,
   StyleSheet,
-  Text,
+  
   TextInput,
   View,
 } from "react-native";
+import Text from '../components/TranslatedText';
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -16,9 +17,10 @@ import CollegeCard from "../components/CollegeCard";
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
 import { loadCollection } from "../data/firestoreContent";
+import { bundledColleges } from "../data/collegeDirectory";
 import { universities } from "../data/universities";
 
-export default function UniversitiesScreen({ navigation }) {
+export default function UniversitiesScreen({ navigation, route }) {
   const { colors, resolvedTheme } = useProfile();
   const styles = useMemo(() => makeStyles(colors), [colors]);
   const { addBookmark, isBookmarked, removeBookmark } = useBookmarks();
@@ -27,14 +29,20 @@ export default function UniversitiesScreen({ navigation }) {
   const [freeToApplyOnly, setFreeToApplyOnly] = useState(false);
   const [filtersVisible, setFiltersVisible] = useState(false);
   // Universities | Colleges toggle, colleges come from Firestore (cached for offline)
-  const [mode, setMode] = useState("Universities");
-  const [colleges, setColleges] = useState([]);
+  const [mode, setMode] = useState(route.params?.mode === "Colleges" ? "Colleges" : "Universities");
+  const [colleges, setColleges] = useState(bundledColleges);
   const showingColleges = mode === "Colleges";
+
+  useEffect(() => {
+    if (route.params?.mode === "Colleges" || route.params?.mode === "Universities") {
+      setMode(route.params.mode);
+    }
+  }, [route.params?.mode]);
 
   useEffect(() => {
     let active = true;
     loadCollection("colleges", { sortBy: "order" }).then((items) => {
-      if (active) setColleges(items);
+      if (active && items.length > 0) setColleges(items);
     });
     return () => {
       active = false;

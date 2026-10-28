@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import {
   FlatList,
@@ -9,18 +9,36 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   TextInput,
   View,
 } from "react-native";
+import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { courseExamples } from "../data/courseExamples";
 import { universities } from "../data/universities";
+import { getInstitutionCourseMatchStatus } from "../data/apsMatching";
 import { useProfile } from "../context/ProfileContext";
 
 const QUALIFICATION_TYPES = ["Bachelor's Degree", "Diploma", "Higher Certificate"];
 const EMPTY_FILTERS = { minimumAps: "", maximumAps: "", type: null, universityId: null };
+
+function getRouteRequestKey(route) {
+  return JSON.stringify([
+    route.params?.universityId || null,
+    Boolean(route.params?.matchedOnly),
+    route.params?.filterRequestId ?? null,
+  ]);
+}
+
+function createRouteViewState(route, routeKey = getRouteRequestKey(route)) {
+  return {
+    routeKey,
+    query: "",
+    filters: { ...EMPTY_FILTERS, universityId: route.params?.universityId || null },
+    matchedOnly: Boolean(route.params?.matchedOnly),
+  };
+}
 
 function CourseCard({ course, onPress }) {
   const { colors } = useProfile();
@@ -45,6 +63,7 @@ function CourseCard({ course, onPress }) {
           </View>
           <Text style={styles.typeText}>{course.qualificationType}</Text>
         </View>
+        {course.mathMatchNote && <Text style={styles.mathMatchNote}>{course.mathMatchNote}</Text>}
       </View>
       <Ionicons name="chevron-forward" size={20} color={COLORS.muted} />
     </Pressable>
@@ -57,12 +76,7 @@ function FilterSheet({ visible, filters, onApply, onClose }) {
   const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const [draft, setDraft] = useState(filters);
 
-  useEffect(() => {
-    if (visible) setDraft(filters);
-  }, [visible, filters]);
-
   const close = () => {
-    setDraft(filters);
     onClose();
   };
 
@@ -170,19 +184,32 @@ export default function CoursesScreen({ navigation, route }) {
   const { colors, resolvedTheme } = useProfile();
   const COLORS = useMemo(() => getThemeColors(colors), [colors]);
   const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
-  const [query, setQuery] = useState("");
-  const [filters, setFilters] = useState(EMPTY_FILTERS);
+  const routeRequestKey = getRouteRequestKey(route);
+  const [courseViewState, setCourseViewState] = useState(() => createRouteViewState(route));
+  const activeCourseViewState = courseViewState.routeKey === routeRequestKey
+    ? courseViewState
+    : createRouteViewState(route, routeRequestKey);
+  const { query: activeQuery, filters, matchedOnly } = activeCourseViewState;
   const [filterVisible, setFilterVisible] = useState(false);
-  const [matchedOnly, setMatchedOnly] = useState(false);
+  const [filterSession, setFilterSession] = useState(0);
 
-  useEffect(() => {
-    setQuery("");
-    setFilters({ ...EMPTY_FILTERS, universityId: route.params?.universityId || null });
-    setMatchedOnly(Boolean(route.params?.matchedOnly));
-  }, [route.params?.universityId, route.params?.matchedOnly, route.params?.filterRequestId]);
+  const updateCourseViewState = (updates) => {
+    setCourseViewState((current) => ({
+      ...(current.routeKey === routeRequestKey ? current : createRouteViewState(route, routeRequestKey)),
+      ...updates,
+      routeKey: routeRequestKey,
+    }));
+  };
+  const setQuery = (nextQuery) => updateCourseViewState({ query: nextQuery });
+  const setFilters = (nextFilters) => updateCourseViewState({ filters: nextFilters });
+  const setMatchedOnly = (nextMatchedOnly) => updateCourseViewState({ matchedOnly: nextMatchedOnly });
+  const openFilters = () => {
+    setFilterSession((current) => current + 1);
+    setFilterVisible(true);
+  };
 
   const filteredCourses = useMemo(() => {
-    const search = query.trim().toLowerCase();
+    const search = activeQuery.trim().toLowerCase();
     const minimum = filters.minimumAps === "" ? null : Number(filters.minimumAps);
     const maximum = filters.maximumAps === "" ? null : Number(filters.maximumAps);
     const apsByUniversity = route.params?.apsByUniversity || {};
@@ -202,9 +229,11 @@ export default function CoursesScreen({ navigation, route }) {
         && typeof course.minimumAps === "number"
         && universityScore >= course.minimumAps
       );
-      return matchesSearch && matchesMinimum && matchesMaximum && matchesType && matchesUniversity && matchesAps;
+      const mathsStatus = matchedOnly ? getInstitutionCourseMatchStatus(course, route.params?.apsMarks) : null;
+      const matchesSubjects = !matchedOnly || mathsStatus?.status === "matched" || mathsStatus?.status === "needs_verification";
+      return matchesSearch && matchesMinimum && matchesMaximum && matchesType && matchesUniversity && matchesAps && matchesSubjects;
     });
-   }, [filters, matchedOnly, query, route.params?.apsByUniversity, route.params?.apsScore]);
+   }, [activeQuery, filters, matchedOnly, route.params?.apsByUniversity, route.params?.apsMarks, route.params?.apsScore]);
 
   const activeFilterCount = [filters.minimumAps, filters.maximumAps, filters.type, filters.universityId].filter(Boolean).length;
 
@@ -213,7 +242,7 @@ export default function CoursesScreen({ navigation, route }) {
       <StatusBar barStyle={resolvedTheme === "dark" ? "light-content" : "dark-content"} backgroundColor={COLORS.primary} />
       <View style={styles.header}>
         <Text style={styles.title}>{matchedOnly ? "Matching Courses" : "Courses"}</Text>
-        <Text style={styles.subtitle}>{matchedOnly ? `Based on your saved APS ${route.params?.apsScore ?? ""}` : "See which courses may fit your study goals"}</Text>
+        <Text style={styles.subtitle}>{matchedOnly ? `Based on your saved APS ${route.params?.apsScore ?? ""} and the listed Maths check` : "See which courses may fit your study goals"}</Text>
         <View style={styles.countBadge}>
           <Text style={styles.countBadgeText}>{matchedOnly ? filteredCourses.length : courseExamples.length} courses</Text>
         </View>
@@ -236,7 +265,7 @@ export default function CoursesScreen({ navigation, route }) {
         <View style={styles.searchShell}>
           <Ionicons name="search-outline" size={20} color={COLORS.muted} />
           <TextInput
-            value={query}
+            value={activeQuery}
             onChangeText={setQuery}
             placeholder="Search courses..."
             placeholderTextColor={COLORS.muted}
@@ -244,7 +273,7 @@ export default function CoursesScreen({ navigation, route }) {
             style={styles.searchInput}
           />
         </View>
-        <Pressable onPress={() => setFilterVisible(true)} style={({ pressed }) => [styles.filterButton, activeFilterCount > 0 && styles.filterButtonActive, pressed && styles.pressed]}>
+        <Pressable onPress={openFilters} style={({ pressed }) => [styles.filterButton, activeFilterCount > 0 && styles.filterButtonActive, pressed && styles.pressed]}>
           <Ionicons name="options-outline" size={20} color={activeFilterCount > 0 ? "#FFFFFF" : COLORS.primary} />
           <Text style={[styles.filterButtonText, activeFilterCount > 0 && styles.filterButtonTextActive]}>Filter</Text>
           {activeFilterCount > 0 && <View style={styles.filterCount}><Text style={styles.filterCountText}>{activeFilterCount}</Text></View>}
@@ -260,11 +289,16 @@ export default function CoursesScreen({ navigation, route }) {
         ListHeaderComponent={<Text style={styles.resultText}>{filteredCourses.length} {filteredCourses.length === 1 ? "course" : "courses"}</Text>}
         ListEmptyComponent={<View style={styles.emptyState}><Ionicons name="search-outline" size={34} color={COLORS.primary} /><Text style={styles.emptyTitle}>No courses found</Text><Text style={styles.emptyText}>Try changing your search or filters.</Text></View>}
         renderItem={({ item }) => (
-          <CourseCard course={item} onPress={() => navigation.getParent()?.navigate("CourseDetails", { course: item })} />
+          <CourseCard
+            course={matchedOnly
+              ? { ...item, ...getInstitutionCourseMatchStatus(item, route.params?.apsMarks) }
+              : item}
+            onPress={() => navigation.getParent()?.navigate("CourseDetails", { course: item })}
+          />
         )}
       />
 
-      <FilterSheet visible={filterVisible} filters={filters} onApply={setFilters} onClose={() => setFilterVisible(false)} />
+      <FilterSheet key={filterSession} visible={filterVisible} filters={filters} onApply={setFilters} onClose={() => setFilterVisible(false)} />
     </SafeAreaView>
   );
 }
@@ -309,6 +343,7 @@ function makeStyles(COLORS) {
   apsBadge: { paddingHorizontal: 9, paddingVertical: 5, borderRadius: 999, backgroundColor: COLORS.primarySoft },
   apsBadgeText: { color: COLORS.primary, fontSize: 10, fontWeight: "900" },
   typeText: { color: COLORS.muted, fontSize: 10, fontWeight: "700" },
+  mathMatchNote: { marginTop: 6, color: COLORS.danger, fontSize: 11, lineHeight: 15, fontWeight: "700" },
   emptyState: { alignItems: "center", paddingVertical: 50 },
   emptyTitle: { marginTop: 10, color: COLORS.text, fontSize: 18, fontWeight: "800" },
   emptyText: { marginTop: 5, color: COLORS.secondary, fontSize: 13 },

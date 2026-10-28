@@ -1,31 +1,26 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 export const FUNDING_API_URL = "https://ithubahub.co.za/api/bursaries";
+const FUNDING_CACHE_KEY = "@careercompass:fundingDirectory:v1";
 
 export const NSFAS = {
   id: "nsfas",
   name: "NSFAS",
   fullName: "National Student Financial Aid Scheme",
+  provider: "National Student Financial Aid Scheme",
   cycle: "2027 academic year",
   opens: "18 September 2026",
   closes: "31 October 2026",
+  description: "Government financial aid for eligible South African students at public universities and TVET colleges.",
+  requirements: "Eligibility depends on citizenship, household income, study programme, and the current NSFAS rules. Check the official NSFAS site before applying.",
+  value: "Tuition, registration, and eligible allowances under the current funding rules.",
+  fieldOfStudy: "Approved qualifications at public universities and TVET colleges",
+  province: "National",
   // End of 31 October in South African Standard Time (UTC+02:00).
   closesAt: "2026-10-31T23:59:59+02:00",
   applyUrl: "https://my.nsfas.org.za/",
   infoUrl: "https://www.nsfas.org.za/content/how-to-apply.html",
   policyUrl: "https://www.nsfas.org.za/content/downloads/Annexure%20A_NSFAS%202026%20Bursary%20Guidelines.pdf",
-};
-
-// Example content demonstrating how additional bursaries should be structured.
-// Replace this object with verified provider information before production use.
-export const SAMPLE_BURSARY = {
-  id: "future-leaders-bursary",
-  name: "Future Leaders Bursary",
-  fullName: "Future Leaders Student Bursary",
-  provider: "Example Education Foundation",
-  cycle: "Example 2027 intake",
-  opens: "1 August 2026",
-  closes: "30 November 2026",
-  description: "An example bursary showing how future funding opportunities can be presented.",
-  isPlaceholder: true,
 };
 
 export function parseFundingDeadline(deadline) {
@@ -34,9 +29,13 @@ export function parseFundingDeadline(deadline) {
   if (!match) return null;
 
   const [, day, monthName, year] = match;
-  const monthIndex = new Date(`${monthName} 1, ${year}`).getMonth();
+  const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+  const monthIndex = months.indexOf(monthName.toLowerCase());
+  if (monthIndex < 0) return null;
+
   const parsedDate = new Date(Date.UTC(Number(year), monthIndex, Number(day), 23, 59, 59));
-  return Number.isNaN(parsedDate.getTime()) ? null : parsedDate;
+  if (parsedDate.getUTCMonth() !== monthIndex || parsedDate.getUTCDate() !== Number(day)) return null;
+  return parsedDate;
 }
 
 export function normalizeFundingOption(item) {
@@ -45,6 +44,19 @@ export function normalizeFundingOption(item) {
   const id = String(item.id ?? item.slug ?? item.name ?? "bursary");
   const closes = item.deadline || item.closes || item.deadline_date || "TBA";
   const closesAt = parseFundingDeadline(closes)?.toISOString() ?? null;
+  const logoCandidate = [
+    item.logo_url,
+    item.logoUrl,
+    item.provider_logo_url,
+    item.providerLogoUrl,
+    item.logo_image_url,
+    item.logoImageUrl,
+    item.image_url,
+    item.imageUrl,
+    item.image,
+    item.logo,
+  ].map((value) => typeof value === "string" ? value : value?.url || value?.src)
+    .find((value) => typeof value === "string" && /^https:\/\/\S+$/i.test(value.trim()));
 
   return {
     id,
@@ -64,22 +76,65 @@ export function normalizeFundingOption(item) {
     fieldOfStudy: item.field_of_study || item.fieldOfStudy || "All fields",
     province: item.province || "National",
     featured: Boolean(item.featured && String(item.featured).toLowerCase() === "true"),
-    isPlaceholder: false,
+    logoUrl: logoCandidate?.trim() || null,
   };
 }
 
 export async function fetchBursaries() {
+  const controller = typeof AbortController === "function" ? new AbortController() : null;
+  let timeoutId;
   try {
-    const response = await fetch(FUNDING_API_URL, { headers: { Accept: "application/json" } });
+    const response = await Promise.race([
+      fetch(FUNDING_API_URL, {
+        headers: { Accept: "application/json" },
+        ...(controller ? { signal: controller.signal } : {}),
+      }),
+      new Promise((_, reject) => {
+        timeoutId = setTimeout(() => {
+          controller?.abort();
+          reject(new Error("Funding API request timed out."));
+        }, 10000);
+      }),
+    ]);
     if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
 
     const payload = await response.json();
     const items = Array.isArray(payload) ? payload : Array.isArray(payload.data) ? payload.data : [];
-    const normalized = items.map(normalizeFundingOption).filter(Boolean);
-    return normalized.length ? normalized : [NSFAS, SAMPLE_BURSARY];
+    const normalized = items
+      .filter((item) => item && !item.isPlaceholder && !item.is_placeholder)
+      .map(normalizeFundingOption)
+      .filter(Boolean);
+    const otherFunding = [...new Map(normalized
+      .filter((item) => item.id.toLowerCase() !== "nsfas" && item.name.toLowerCase() !== "nsfas")
+      .map((item) => [item.id, item])).values()];
+    const result = [NSFAS, ...otherFunding];
+    try {
+      await AsyncStorage.setItem(FUNDING_CACHE_KEY, JSON.stringify(result));
+    } catch (cacheError) {
+      console.warn("Unable to cache funding opportunities; showing the latest response for this session.", cacheError);
+    }
+    return result;
   } catch (error) {
+    try {
+      const cached = await AsyncStorage.getItem(FUNDING_CACHE_KEY);
+      if (cached) {
+        const items = JSON.parse(cached);
+        if (Array.isArray(items)) {
+          const others = [...new Map(items
+            .filter((item) => item && !item.isPlaceholder
+              && item?.id?.toLowerCase?.() !== "nsfas"
+              && item?.name?.toLowerCase?.() !== "nsfas")
+            .map((item) => [String(item.id), item])).values()];
+          return [NSFAS, ...others];
+        }
+      }
+    } catch (_cacheError) {
+      // Fall back to the built-in NSFAS record when the cache is unavailable.
+    }
     console.warn("Unable to load bursaries from API. Using fallback funding options.", error);
-    return [NSFAS, SAMPLE_BURSARY];
+    return [NSFAS];
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 

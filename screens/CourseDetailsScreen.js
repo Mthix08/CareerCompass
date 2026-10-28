@@ -1,9 +1,14 @@
 import React, { useMemo } from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { Pressable, ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, StatusBar, StyleSheet, View } from "react-native";
+import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useBookmarks } from "../context/BookmarksContext";
 import { useProfile } from "../context/ProfileContext";
+import { getInstitutionCourseMatchStatus, getLatestApsRecord } from "../data/apsMatching";
+import { universities } from "../data/universities";
+import { calculateUniversityScores } from "../services/apsScoring";
+import { getCourseRequirementChecks } from "../services/qualificationRequirements";
 
 function DetailRow({ icon, label, value }) {
   const { colors } = useProfile();
@@ -23,7 +28,7 @@ function DetailRow({ icon, label, value }) {
 }
 
 export default function CourseDetailsScreen({ navigation, route }) {
-  const { colors, resolvedTheme } = useProfile();
+  const { colors, resolvedTheme, profile } = useProfile();
   const COLORS = useMemo(() => getThemeColors(colors), [colors]);
   const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
   const course = route.params?.course;
@@ -33,6 +38,28 @@ export default function CourseDetailsScreen({ navigation, route }) {
     removeCourseBookmark,
   } = useBookmarks();
   const bookmarked = course ? isCourseBookmarked(course.id) : false;
+  const courseMathStatus = useMemo(
+    () => course ? getInstitutionCourseMatchStatus(course, getLatestApsRecord(profile?.apsRecords)?.marks) : null,
+    [course, profile?.apsRecords],
+  );
+  const subjectChecks = useMemo(
+    () => course ? getCourseRequirementChecks(course, getLatestApsRecord(profile?.apsRecords)?.marks || []) : [],
+    [course, profile?.apsRecords],
+  );
+  const qualification = useMemo(() => {
+    if (!course) return { status: "unavailable", score: null };
+    const record = getLatestApsRecord(profile?.apsRecords);
+    if (!record?.marks?.length || !Number.isFinite(course.minimumAps)) {
+      return { status: "unavailable", score: null };
+    }
+    const university = universities.find(({ id }) => id === course.universityId);
+    const score = calculateUniversityScores(university ? [university] : [], record.marks)[0];
+    if (!Number.isFinite(score?.score)) return { status: "unavailable", score: null };
+    return {
+      status: score.score >= course.minimumAps ? "may_qualify" : "not_qualified",
+      score: score.score,
+    };
+  }, [course, profile?.apsRecords]);
 
   if (!course) {
     return (
@@ -72,6 +99,32 @@ export default function CourseDetailsScreen({ navigation, route }) {
         <Text style={styles.university}>{course.universityName}</Text>
       </View>
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+        <View style={[
+          styles.qualificationCard,
+          qualification.status === "may_qualify" && styles.qualificationCardPositive,
+          qualification.status === "not_qualified" && styles.qualificationCardNegative,
+        ]}>
+          <View style={styles.qualificationHeading}>
+            <Ionicons
+              name={qualification.status === "may_qualify" ? "checkmark-circle" : qualification.status === "not_qualified" ? "close-circle" : "information-circle"}
+              size={22}
+              color={qualification.status === "not_qualified" ? COLORS.danger : COLORS.primary}
+            />
+            <Text style={styles.qualificationTitle}>
+              {qualification.status === "may_qualify" ? "May Qualify" : qualification.status === "not_qualified" ? "Not Qualified" : "Qualification not determined"}
+            </Text>
+          </View>
+          <Text style={styles.qualificationText}>
+            {qualification.status === "may_qualify"
+              ? `Your ${course.universityShortName} APS score of ${qualification.score} meets the listed minimum. Check the official prospectus for the required Mathematics type, subject levels and other admission conditions.`
+              : qualification.status === "not_qualified"
+                ? `Your ${course.universityShortName} APS score of ${qualification.score} is below the listed minimum of ${course.minimumAps}. Admission rules may include other routes; confirm with the latest official prospectus.`
+                : "Save valid marks in My Marks to compare your score using this university's APS scorer. This is an estimate; confirm all requirements in the official prospectus."}
+          </Text>
+          {qualification.status === "may_qualify" && courseMathStatus?.status === "needs_verification" && (
+            <Text style={styles.qualificationText}>Maths subject requirement: needs verification. Check the official prospectus.</Text>
+          )}
+        </View>
         <View style={styles.apsCard}>
           <View>
             <Text style={styles.apsLabel}>{course.minimumAps == null ? "Admission points" : "Minimum APS"}</Text>
@@ -104,6 +157,43 @@ export default function CourseDetailsScreen({ navigation, route }) {
             ))}
           </View>
         </View>
+        {!!subjectChecks.length && (
+          <View style={styles.sectionCard}>
+            <Text style={styles.sectionTitle}>Compare your saved marks</Text>
+            <Text style={styles.checklistIntro}>
+              This compares marks with subject minimums listed for this course. Alternative subject combinations and selection rules may need a manual check.
+            </Text>
+            {subjectChecks.map((check) => {
+              const statusColor = check.status === "met" || check.status === "recorded"
+                ? COLORS.primary
+                : check.status === "below"
+                  ? COLORS.danger
+                  : COLORS.accent;
+              const statusLabel = check.status === "met"
+                ? "Minimum met"
+                : check.status === "recorded"
+                  ? "Mark recorded"
+                  : check.status === "below"
+                    ? "Below listed minimum"
+                    : check.status === "missing"
+                      ? "Add this subject"
+                      : "Check prospectus";
+              return (
+                <View key={check.key} style={styles.requirementRow}>
+                  <View style={styles.requirementCopy}>
+                    <Text style={styles.requirementName}>{check.label}</Text>
+                    <Text style={styles.requirementDetail}>{check.current}</Text>
+                    <Text style={styles.requirementDetail}>{check.minimum}</Text>
+                  </View>
+                  <Text style={[styles.requirementStatus, { color: statusColor }]}>{statusLabel}</Text>
+                </View>
+              );
+            })}
+            <Text style={styles.checklistFootnote}>
+              This is planning guidance, not an admission decision. Confirm every requirement in the current official prospectus.
+            </Text>
+          </View>
+        )}
         {course.careerOpportunities.length > 0 && (
           <View style={styles.sectionCard}>
             <Text style={styles.sectionTitle}>Career opportunities</Text>
@@ -120,7 +210,7 @@ export default function CourseDetailsScreen({ navigation, route }) {
         <View style={styles.notice}>
           <Ionicons name="information-circle-outline" size={20} color={COLORS.primary} />
           <Text style={styles.noticeText}>
-            From {course.universityShortName}'s {course.prospectusYear ? `${course.prospectusYear} ` : ""}programme information
+            From {course.universityShortName}&apos;s {course.prospectusYear ? `${course.prospectusYear} ` : ""}programme information
             {course.prospectusPage ? `, page ${course.prospectusPage}` : ""}. {course.verificationNote}
           </Text>
         </View>
@@ -146,6 +236,12 @@ function makeStyles(COLORS) {
   university: { marginTop: 7, color: COLORS.onPrimary, fontSize: 14, fontWeight: "700" },
   content: { padding: 20, paddingBottom: 40 },
   apsCard: { padding: 18, borderRadius: 20, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: COLORS.primarySoft },
+  qualificationCard: { marginBottom: 16, padding: 16, borderRadius: 18, borderWidth: 1, borderColor: COLORS.border, backgroundColor: COLORS.surface },
+  qualificationCardPositive: { borderColor: COLORS.primary, backgroundColor: COLORS.primarySoft },
+  qualificationCardNegative: { borderColor: COLORS.danger, backgroundColor: COLORS.dangerSoft },
+  qualificationHeading: { flexDirection: "row", alignItems: "center", gap: 8 },
+  qualificationTitle: { color: COLORS.text, fontSize: 16, fontWeight: "900" },
+  qualificationText: { marginTop: 8, color: COLORS.secondary, fontSize: 12, lineHeight: 18 },
   apsLabel: { color: COLORS.primary, fontSize: 14, fontWeight: "900" },
   apsHint: { maxWidth: 230, marginTop: 4, color: COLORS.secondary, fontSize: 11, lineHeight: 16 },
   apsValueWrap: { alignItems: "flex-end" },
@@ -163,6 +259,13 @@ function makeStyles(COLORS) {
   subjectWrap: { marginTop: 13, flexDirection: "row", flexWrap: "wrap", gap: 8 },
   subjectBadge: { paddingHorizontal: 11, paddingVertical: 8, borderRadius: 999, backgroundColor: COLORS.primarySoft },
   subjectText: { color: COLORS.primary, fontSize: 12, fontWeight: "700" },
+  checklistIntro: { marginTop: 7, color: COLORS.secondary, fontSize: 12, lineHeight: 18 },
+  requirementRow: { marginTop: 12, padding: 12, borderRadius: 14, backgroundColor: COLORS.background, flexDirection: "row", alignItems: "center", gap: 10 },
+  requirementCopy: { flex: 1 },
+  requirementName: { color: COLORS.text, fontSize: 13, fontWeight: "800" },
+  requirementDetail: { marginTop: 3, color: COLORS.secondary, fontSize: 11, lineHeight: 16 },
+  requirementStatus: { maxWidth: 105, fontSize: 11, lineHeight: 16, fontWeight: "800", textAlign: "right" },
+  checklistFootnote: { marginTop: 11, color: COLORS.secondary, fontSize: 11, lineHeight: 17 },
   careerList: { marginTop: 12, gap: 10 },
   careerRow: { flexDirection: "row", alignItems: "flex-start" },
   careerBullet: { width: 7, height: 7, marginTop: 6, borderRadius: 4, backgroundColor: COLORS.primary },

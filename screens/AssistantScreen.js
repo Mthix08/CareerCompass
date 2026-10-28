@@ -19,7 +19,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import {
-  careerCompassKnowledge,
+  getCareerCompassAppOverviewAnswer,
   getLocalCareerCompassAnswer,
 } from "../data/careerCompassKnowledge";
 import { useProfile } from "../context/ProfileContext";
@@ -28,33 +28,30 @@ const WELCOME_MESSAGE =
   "Hi, I’m your CareerCompass Assistant. Ask me about universities, courses, careers, funding, or using the app.";
 
 async function getAssistantAnswer(question) {
-  const apiKey = process.env.EXPO_PUBLIC_GEMINI_API_KEY;
-  if (!apiKey) return getLocalCareerCompassAnswer(question);
+  const configuredUrl =
+    process.env.EXPO_PUBLIC_ASSISTANT_API_URL ||
+    process.env.EXPO_PUBLIC_TRANSLATION_API_URL ||
+    "https://careercompass-translation.careercompass-za.workers.dev";
+  const endpoint = `${configuredUrl.replace(/\/+$/, "").replace(/\/(translate|assistant)$/, "")}/assistant`;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 20_000);
 
-  const response = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`,
-    {
+  try {
+    const response = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        systemInstruction: {
-          parts: [
-            {
-              text: `${careerCompassKnowledge}\n\nYou are the CareerCompass Assistant. Only answer from this information. If a question is unrelated, say: "I'm the CareerCompass Assistant. I can only help you with questions about CareerCompass and its features." If information is unavailable, say it is not currently available in CareerCompass.`,
-            },
-          ],
-        },
-        contents: [{ role: "user", parts: [{ text: question }] }],
-      }),
-    },
-  );
-
-  if (!response.ok) throw new Error("Assistant request failed");
-  const data = await response.json();
-  return (
-    data.candidates?.[0]?.content?.parts?.[0]?.text ||
-    getLocalCareerCompassAnswer(question)
-  );
+      body: JSON.stringify({ question }),
+      signal: controller.signal,
+    });
+    if (!response.ok) throw new Error("Assistant request failed");
+    const data = await response.json();
+    if (typeof data.answer !== "string" || !data.answer.trim()) {
+      throw new Error("Assistant returned no answer");
+    }
+    return data.answer.trim();
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 export default function AssistantScreen({ navigation }) {
@@ -143,7 +140,9 @@ export default function AssistantScreen({ navigation }) {
     setIsLoading(true);
 
     try {
-      const answer = await getAssistantAnswer(trimmedQuestion);
+      const answer =
+        getCareerCompassAppOverviewAnswer(trimmedQuestion) ||
+        await getAssistantAnswer(trimmedQuestion);
       setMessages((current) => [
         ...current,
         { id: `${Date.now()}-assistant`, role: "assistant", text: answer },
@@ -154,7 +153,7 @@ export default function AssistantScreen({ navigation }) {
         {
           id: `${Date.now()}-fallback`,
           role: "assistant",
-          text: getLocalCareerCompassAnswer(trimmedQuestion),
+          text: `The online assistant is unavailable right now. Here is an offline suggestion:\n\n${getLocalCareerCompassAnswer(trimmedQuestion)}`,
         },
       ]);
     } finally {
@@ -203,7 +202,7 @@ export default function AssistantScreen({ navigation }) {
     <SafeAreaView style={styles.safeArea} edges={["top", "left", "right"]}>
       <KeyboardAvoidingView
         style={styles.container}
-        behavior={Platform.OS === "ios" ? "padding" : undefined}
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
         keyboardVerticalOffset={Platform.OS === "ios" ? 8 : 0}
       >
         <View style={styles.header}>
@@ -232,6 +231,8 @@ export default function AssistantScreen({ navigation }) {
           data={messages}
           keyExtractor={(item) => item.id}
           contentContainerStyle={styles.messageList}
+          keyboardShouldPersistTaps="handled"
+          keyboardDismissMode={Platform.OS === "ios" ? "interactive" : "on-drag"}
           showsVerticalScrollIndicator={false}
           onContentSizeChange={() =>
             listRef.current?.scrollToEnd({ animated: true })
@@ -334,7 +335,7 @@ export default function AssistantScreen({ navigation }) {
           <Text style={styles.voiceError}>{voiceError}</Text>
         : null}
         <Text style={styles.disclaimer}>
-          Answers are limited to information available in CareerCompass.
+          Online questions are processed by Google Gemini. Avoid sharing passwords, ID numbers, or banking details. Answers are limited to CareerCompass information.
         </Text>
       </KeyboardAvoidingView>
     </SafeAreaView>

@@ -43,3 +43,9 @@ yarn-error.*
 /ios
 /android
 serviceAccountKey.json
+
+# Firebase local CLI state
+.firebase/
+
+# Personal Android development configuration
+/google-services.json

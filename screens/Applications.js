@@ -19,10 +19,10 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   TextInput,
   View,
 } from "react-native";
+import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { universities } from "../data/universities";
@@ -548,6 +548,15 @@ export default function Applications({ navigation }) {
           <Ionicons name="chevron-back" size={25} color={COLORS.onPrimary} />
         </Pressable>
         <Text style={styles.headerTitle}>My Applications</Text>
+        <Pressable
+          onPress={() => navigation.navigate("ApplicationGuide")}
+          accessibilityRole="button"
+          accessibilityLabel="Open application preparation guide"
+          style={({ pressed }) => [styles.addButton, pressed && styles.pressed]}
+        >
+          <Ionicons name="list-outline" size={19} color={COLORS.onPrimary} />
+          <Text style={styles.addButtonText}>Guide</Text>
+        </Pressable>
         <Pressable
           onPress={openNewApplication}
           accessibilityRole="button"

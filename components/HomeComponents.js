@@ -1,5 +1,6 @@
 import React, { memo, useMemo } from "react";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet,  View } from "react-native";
+import Text from './TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { getUniversityTheme } from "../data/universityTheme";
 
@@ -22,26 +23,42 @@ export const SectionHeader = memo(function SectionHeader({ title, icon, actionLa
 
 export const DeadlineCard = memo(function DeadlineCard({ item, university, colors, width }) {
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const statusText = item.isOpen ? "Open" : item.closed ? "Closed" : "Check dates";
+  const statusColor = item.closed ? colors.danger : item.isOpen ? "#16803C" : colors.primary;
+  const timingText = item.isOpen
+    ? item.daysRemaining === 0
+      ? "Closes today"
+      : `${item.daysRemaining} ${item.daysRemaining === 1 ? "day" : "days"} left`
+    : item.closed
+      ? `Closed ${item.daysClosed} ${item.daysClosed === 1 ? "day" : "days"} ago`
+      : "Check dates";
   return (
-    <View style={[styles.deadlineCard, { width }]} accessibilityLabel={`${university.name}, example closing date ${item.closingDate}, mock timeline ${item.daysRemaining} days`}>
+    <View style={[styles.deadlineCard, { width }]} accessibilityLabel={`${university.name}, ${statusText.toLowerCase()}, ${timingText}, closing date ${item.closingDate}`}>
       <View style={styles.deadlineTopRow}>
         <View style={styles.logoWrapSmall}>
           <Image source={university.logo} style={styles.logoSmall} resizeMode="contain" accessibilityLabel={`${university.shortName} logo`} />
         </View>
         <View style={styles.deadlineTextWrap}>
           <Text style={styles.deadlineName} numberOfLines={2}>{university.name}</Text>
-          <Text style={styles.deadlineDate} numberOfLines={2}>Closes {item.closingDate}</Text>
+          <Text style={styles.deadlineDate} numberOfLines={2}>{item.closed ? "Closed" : "Closes"} {item.closingDate}</Text>
         </View>
       </View>
       <View style={styles.deadlineFooter}>
-        <View style={styles.exampleBadge}><Text style={styles.exampleBadgeText}>EXAMPLE DATA</Text></View>
-        <View style={styles.daysBadge}><Text style={styles.daysBadgeText}>{item.daysRemaining} days · mock</Text></View>
+        <View style={[styles.statusBadge, { backgroundColor: item.closed ? colors.dangerSoft : item.isOpen ? "#E7F5EA" : colors.primarySoft }]}>
+          <Text style={[styles.statusBadgeText, { color: statusColor }]}>{statusText}</Text>
+        </View>
+        {!!item.isExample && (
+          <View style={styles.exampleBadge}><Text style={styles.exampleBadgeText}>EXAMPLE DATA</Text></View>
+        )}
+        <View style={[styles.daysBadge, item.closed && { backgroundColor: colors.dangerSoft }]}>
+          <Text style={[styles.daysBadgeText, item.closed && { color: colors.danger }]}>{timingText}</Text>
+        </View>
       </View>
     </View>
   );
 });
 
-export const APSScoreRow = memo(function APSScoreRow({ university, score, caption, colors }) {
+export const APSScoreRow = memo(function APSScoreRow({ university, score, maximumScore, caption, colors }) {
   const styles = useMemo(() => createStyles(colors), [colors]);
   return (
     <View style={styles.apsRow} accessibilityLabel={`${university.name}, current APS score ${score}`}>
@@ -52,7 +69,7 @@ export const APSScoreRow = memo(function APSScoreRow({ university, score, captio
         <Text style={styles.apsName} numberOfLines={2}>{university.name}</Text>
         <Text style={styles.apsDefault}>{caption || "Not calculated yet"}</Text>
       </View>
-      <View style={styles.apsValueWrap}><Text style={styles.apsValue}>{score ?? "—"}</Text><Text style={styles.apsLabel}>APS</Text></View>
+      <View style={styles.apsValueWrap}><Text style={styles.apsValue}>{score ?? "—"}</Text><Text style={styles.apsLabel}>{Number.isFinite(score) && Number.isFinite(maximumScore) ? `/ ${maximumScore}` : "APS"}</Text></View>
     </View>
   );
 });
@@ -79,7 +96,7 @@ export const HomeUniversityCard = memo(function HomeUniversityCard({ university,
         </View>
         <View style={styles.tagRow}>
           <View style={styles.neutralTag}><Text style={styles.neutralTagText} numberOfLines={1}>{university.type}</Text></View>
-          <View style={[styles.applicationTag, { backgroundColor: universityTheme.accentSoft }]}><Text style={[styles.applicationTagText, { color: universityTheme.accent }]} numberOfLines={1}>{applicationTag}</Text></View>
+          <View style={[styles.applicationTag, { backgroundColor: universityTheme.accentSoft }]}><Text style={[styles.applicationTagText, { color: universityTheme.accent }]} numberOfLines={2}>{applicationTag}</Text></View>
         </View>
       </View>
     </Pressable>
@@ -122,8 +139,8 @@ const createStyles = (colors) => StyleSheet.create({
   deadlineName: { color: colors.text, fontSize: 15, lineHeight: 21, fontWeight: "800" },
   deadlineDate: { marginTop: 6, color: colors.secondaryText, fontSize: 12, lineHeight: 18 },
   deadlineFooter: { marginTop: 16, flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: 7 },
-  exampleBadge: { paddingHorizontal: 9, paddingVertical: 6, borderRadius: 999, backgroundColor: colors.elevatedSurface },
-  exampleBadgeText: { color: colors.mutedText, fontSize: 9, fontWeight: "900", letterSpacing: 0.5 },
+  statusBadge: { paddingHorizontal: 10, paddingVertical: 6, borderRadius: 999 },
+  statusBadgeText: { fontSize: 11, fontWeight: "900" },
   daysBadge: { paddingHorizontal: 10, paddingVertical: 6, borderRadius: 999, backgroundColor: colors.primarySoft },
   daysBadgeText: { color: colors.primary, fontSize: 11, fontWeight: "800" },
   logoWrapSmall: { width: 46, height: 46, borderRadius: 13, alignItems: "center", justifyContent: "center", backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },
@@ -150,7 +167,7 @@ const createStyles = (colors) => StyleSheet.create({
   neutralTag: { maxWidth: "100%", flexShrink: 1, paddingHorizontal: 9, paddingVertical: 6, borderRadius: 999, backgroundColor: colors.elevatedSurface },
   neutralTagText: { flexShrink: 1, color: colors.secondaryText, fontSize: 10, fontWeight: "800" },
   applicationTag: { flexShrink: 1, paddingHorizontal: 9, paddingVertical: 6, borderRadius: 999, backgroundColor: colors.primarySoft },
-  applicationTagText: { flexShrink: 1, color: colors.primary, fontSize: 10, fontWeight: "800" },
+  applicationTagText: { flexShrink: 1, color: colors.primary, fontSize: 10, lineHeight: 14, fontWeight: "800" },
   viewAllCard: { height: 310, padding: 20, borderRadius: 22, borderWidth: 1.5, borderStyle: "dashed", borderColor: colors.primary, alignItems: "center", justifyContent: "center", backgroundColor: colors.primarySoft },
   viewAllIcon: { width: 62, height: 62, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: colors.surface },
   viewAllTitle: { marginTop: 18, color: colors.text, fontSize: 16, lineHeight: 21, fontWeight: "900", textAlign: "center" },

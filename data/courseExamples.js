@@ -88,6 +88,7 @@ export const courseExamples = courseSources.flatMap(([universityId, data]) =>
       minimumAps: course.aps?.minimum ?? null,
       apsDisplay: course.aps?.display || "Confirm with the university",
       apsAlternatives: course.aps?.alternatives || [],
+      subjectRequirements: course.subject_requirements || null,
       faculty: course.faculty || "Not supplied",
       campus: Array.isArray(course.campus)
         ? course.campus.join(", ") || course.campus_note || "Confirm with the university"

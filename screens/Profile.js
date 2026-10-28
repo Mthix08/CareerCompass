@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useRef } from "react";
+import React, { useCallback, useEffect, useMemo, useRef } from "react";
+import { useFocusEffect } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import {
   Alert,
@@ -10,10 +11,10 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   TextInput,
   View,
 } from "react-native";
+import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
   deleteUser,
@@ -24,10 +25,12 @@ import {
 import { deleteDoc, doc } from "firebase/firestore";
 
 import { useBookmarks } from "../context/BookmarksContext";
-import { useProfile } from "../context/ProfileContext";
+import { clearCachedProfile, useProfile } from "../context/ProfileContext";
 import { getLatestApsRecord } from "../data/apsMatching";
 import { auth, db } from "./firebaseConfig";
-import { signInWithGoogle } from "./googleAuth";
+import { signInWithGoogle, signOutFromGoogle } from "./googleAuth";
+import { getCareerAssessment } from "../services/careerAssessmentService";
+import { getUnreadNotificationCount } from "../services/courseSuggestionNotifications";
 
 const THEMES = ["Light", "Dark", "System"];
 
@@ -92,6 +95,7 @@ export default function ProfileScreen({ navigation }) {
   const { bookmarkedCourseIds, bookmarkedIds, bookmarkedFundingIds } = useBookmarks();
   const {
     profile,
+    firebaseUser,
     isGuest,
     isAuthenticated,
     themePreference,
@@ -110,6 +114,39 @@ export default function ProfileScreen({ navigation }) {
   const [deletePassword, setDeletePassword] = React.useState("");
   const [reauthVisible, setReauthVisible] = React.useState(false);
   const [isDeleting, setIsDeleting] = React.useState(false);
+  const [assessmentLoading, setAssessmentLoading] = React.useState(false);
+  const [unreadNotificationCount, setUnreadNotificationCount] = React.useState(0);
+
+  useFocusEffect(useCallback(() => {
+    let active = true;
+    if (!firebaseUser?.uid) {
+      setUnreadNotificationCount(0);
+      return () => { active = false; };
+    }
+    getUnreadNotificationCount(firebaseUser.uid)
+      .then((count) => { if (active) setUnreadNotificationCount(count); })
+      .catch(() => { if (active) setUnreadNotificationCount(0); });
+    return () => { active = false; };
+  }, [firebaseUser?.uid]));
+
+  const openCareerAssessment = async () => {
+    if (!isAuthenticated || assessmentLoading) return;
+    setAssessmentLoading(true);
+    try {
+      const assessment = await getCareerAssessment(auth.currentUser.uid);
+      if (assessment.syncWarning) {
+        Alert.alert(
+          "Assessment saved on this device",
+          "Firestore is unavailable right now. This device’s saved progress is shown, but it may not be available on another device until it syncs.",
+        );
+      }
+      if (assessment.status === "completed") navigation.navigate("CareerAssessmentResults");
+      else if (assessment.status === "in_progress") navigation.navigate("CareerAssessment", { initialAnswers: assessment.draftAnswers || assessment.answers || {} });
+      else navigation.navigate("CareerAssessmentWelcome");
+    } catch (_error) {
+      Alert.alert("Assessment unavailable", "We could not load your assessment. Check your connection and try again.");
+    } finally { setAssessmentLoading(false); }
+  };
 
   useEffect(() => {
     if (!successMessage) return undefined;
@@ -119,6 +156,14 @@ export default function ProfileScreen({ navigation }) {
 
   const handleAvatarPress = () => {
     accountOnly(() => navigation.navigate("EditProfile"));
+  };
+
+  const handleGuestSignIn = () => {
+    clearSession();
+    navigation.getParent()?.getParent()?.reset({
+      index: 0,
+      routes: [{ name: "Login" }],
+    });
   };
 
   const handleSignOut = () => {
@@ -131,19 +176,29 @@ export default function ProfileScreen({ navigation }) {
           text: "Sign Out",
           style: "destructive",
           onPress: async () => {
-            try {
-              if (isAuthenticated) await signOut(auth);
-              clearSession();
-              navigation.getParent()?.reset({
-                index: 0,
-                routes: [{ name: "Login" }],
-              });
-            } catch (error) {
-              Alert.alert(
-                "Sign out failed",
-                "We could not sign you out. Check your connection and try again.",
-              );
+            if (isAuthenticated) {
+              try {
+                await signOut(auth);
+              } catch (error) {
+                Alert.alert(
+                  "Sign out failed",
+                  "We could not sign you out. Check your connection and try again.",
+                );
+                return;
+              }
             }
+
+            try {
+              await signOutFromGoogle();
+            } catch (error) {
+              console.warn("Unable to clear the native Google session.", error);
+            }
+
+            clearSession();
+            navigation.getParent()?.getParent()?.reset({
+              index: 0,
+              routes: [{ name: "Login" }],
+            });
           },
         },
       ],
@@ -164,6 +219,10 @@ export default function ProfileScreen({ navigation }) {
       setIsDeleting(true);
       await deleteDoc(doc(db, "users", user.uid));
       await deleteUser(user);
+      await clearCachedProfile(user.uid).catch(() => {});
+      await signOutFromGoogle().catch((error) => {
+        console.warn("Unable to clear the native Google session after deletion.", error);
+      });
       clearSession();
       navigation.getParent()?.getParent()?.reset({
         index: 0,
@@ -424,6 +483,13 @@ export default function ProfileScreen({ navigation }) {
         <Text style={styles.groupTitle}>Quick Links</Text>
         <View style={styles.quickLinksCard}>
           <QuickLink
+            icon="compass-outline"
+            label="Career Assessment"
+            badge={assessmentLoading ? "Loading" : undefined}
+            onPress={() => accountOnly(openCareerAssessment)}
+            styles={styles}
+          />
+          <QuickLink
             icon="bookmark-outline"
             label={
               isGuest ?
@@ -447,7 +513,7 @@ export default function ProfileScreen({ navigation }) {
             icon="calculator-outline"
             label="APS Calculator"
             badge={apsBadge}
-            onPress={() => navigation.navigate("ApsCalculator")}
+            onPress={() => accountOnly(() => navigation.navigate("ApsCalculator"))}
             styles={styles}
           />
           <QuickLink
@@ -473,6 +539,7 @@ export default function ProfileScreen({ navigation }) {
           <QuickLink
             icon="notifications-outline"
             label="Notifications"
+            badge={unreadNotificationCount ? `${unreadNotificationCount} unread` : undefined}
             onPress={() =>
               accountOnly(() => navigation.navigate("Notifications"))
             }
@@ -531,18 +598,36 @@ export default function ProfileScreen({ navigation }) {
           </View>
         )}
 
-        <Pressable
-          onPress={handleSignOut}
-          accessibilityRole="button"
-          accessibilityLabel="Sign Out"
-          style={({ pressed }) => [
-            styles.signOutButton,
-            pressed && styles.pressed,
-          ]}
-        >
-          <Ionicons name="log-out-outline" size={20} color={colors.text} />
-          <Text style={styles.signOutText}>Sign Out</Text>
-        </Pressable>
+        {isGuest ? (
+          <View style={styles.guestSignInCard}>
+            <Text style={styles.guestSignInTitle}>Unlock your study tools</Text>
+            <Text style={styles.guestSignInBody}>
+              Sign in or create a free account to calculate and save your APS, track applications, and keep your progress.
+            </Text>
+            <Pressable
+              onPress={handleGuestSignIn}
+              accessibilityRole="button"
+              accessibilityLabel="Sign in or create an account"
+              style={({ pressed }) => [styles.primaryButton, pressed && styles.pressed]}
+            >
+              <Ionicons name="log-in-outline" size={20} color="#FFFFFF" />
+              <Text style={styles.primaryButtonText}>Sign in / Create account</Text>
+            </Pressable>
+          </View>
+        ) : (
+          <Pressable
+            onPress={handleSignOut}
+            accessibilityRole="button"
+            accessibilityLabel="Sign Out"
+            style={({ pressed }) => [
+              styles.signOutButton,
+              pressed && styles.pressed,
+            ]}
+          >
+            <Ionicons name="log-out-outline" size={20} color={colors.text} />
+            <Text style={styles.signOutText}>Sign Out</Text>
+          </Pressable>
+        )}
 
         {!isGuest && (
           <>
@@ -970,6 +1055,16 @@ function createStyles(colors) {
       backgroundColor: colors.surface,
     },
     signOutText: { color: colors.text, fontSize: 15, fontWeight: "800" },
+    guestSignInCard: {
+      marginTop: 20,
+      padding: 18,
+      borderRadius: 18,
+      borderWidth: 1,
+      borderColor: colors.border,
+      backgroundColor: colors.surface,
+    },
+    guestSignInTitle: { color: colors.text, fontSize: 17, fontWeight: "800" },
+    guestSignInBody: { color: colors.secondaryText, fontSize: 13, lineHeight: 19, marginTop: 6 },
     deleteButton: {
       minHeight: 50,
       alignSelf: "center",

@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet,  View } from "react-native";
+import Text from './TranslatedText';
 import { useProfile } from "../context/ProfileContext";
 
 const TABS = ["About", "Courses", "Apply"];
