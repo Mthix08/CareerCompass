@@ -3,14 +3,12 @@ import { Image, StyleSheet, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import Text from "./TranslatedText";
 
-const NSFAS_LOGO = require("../assets/nsfas.jpg");
-
-function FundingLogoImage({ source, label, size, fallback }) {
+function FundingLogoImage({ logoUrl, label, size, fallback }) {
   const [failed, setFailed] = useState(false);
   if (failed) return fallback;
   return (
     <Image
-      source={source}
+      source={{ uri: logoUrl }}
       resizeMode="contain"
       onError={() => setFailed(true)}
       style={{ width: size * 0.76, height: size * 0.76 }}
@@ -31,7 +29,6 @@ function getInitials(name = "") {
 
 export default function FundingLogo({ option, colors, size = 46, featured = false }) {
   const logoUrl = option?.logoUrl;
-  const logoSource = logoUrl ? { uri: logoUrl } : option?.id === "nsfas" ? NSFAS_LOGO : null;
   const initials = getInitials(option?.name);
   const fallback = initials ? (
     <Text style={[styles.initials, { color: colors.primary, fontSize: Math.max(13, size * 0.3) }]}>{initials}</Text>
@@ -53,10 +50,10 @@ export default function FundingLogo({ option, colors, size = 46, featured = fals
       ]}
       accessibilityLabel={`${option?.name || "Funding provider"} logo`}
     >
-      {logoSource ? (
+      {logoUrl ? (
         <FundingLogoImage
-          key={logoUrl || `asset-${option?.id}`}
-          source={logoSource}
+          key={`${option?.id}-${logoUrl}`}
+          logoUrl={logoUrl}
           label={`${option?.name || "Funding provider"} logo`}
           size={size}
           fallback={fallback}

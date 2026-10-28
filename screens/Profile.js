@@ -160,7 +160,7 @@ export default function ProfileScreen({ navigation }) {
 
   const handleGuestSignIn = () => {
     clearSession();
-    navigation.getParent()?.reset({
+    navigation.getParent()?.getParent()?.reset({
       index: 0,
       routes: [{ name: "Login" }],
     });
@@ -195,7 +195,7 @@ export default function ProfileScreen({ navigation }) {
             }
 
             clearSession();
-            navigation.getParent()?.reset({
+            navigation.getParent()?.getParent()?.reset({
               index: 0,
               routes: [{ name: "Login" }],
             });
@@ -224,7 +224,7 @@ export default function ProfileScreen({ navigation }) {
         console.warn("Unable to clear the native Google session after deletion.", error);
       });
       clearSession();
-      navigation.getParent()?.reset({
+      navigation.getParent()?.getParent()?.reset({
         index: 0,
         routes: [{ name: "Login" }],
       });
