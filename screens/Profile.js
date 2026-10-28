@@ -25,10 +25,10 @@ import {
 import { deleteDoc, doc } from "firebase/firestore";
 
 import { useBookmarks } from "../context/BookmarksContext";
-import { useProfile } from "../context/ProfileContext";
+import { clearCachedProfile, useProfile } from "../context/ProfileContext";
 import { getLatestApsRecord } from "../data/apsMatching";
 import { auth, db } from "./firebaseConfig";
-import { signInWithGoogle } from "./googleAuth";
+import { signInWithGoogle, signOutFromGoogle } from "./googleAuth";
 import { getCareerAssessment } from "../services/careerAssessmentService";
 import { getUnreadNotificationCount } from "../services/courseSuggestionNotifications";
 
@@ -176,19 +176,29 @@ export default function ProfileScreen({ navigation }) {
           text: "Sign Out",
           style: "destructive",
           onPress: async () => {
-            try {
-              if (isAuthenticated) await signOut(auth);
-              clearSession();
-              navigation.getParent()?.reset({
-                index: 0,
-                routes: [{ name: "Login" }],
-              });
-            } catch (error) {
-              Alert.alert(
-                "Sign out failed",
-                "We could not sign you out. Check your connection and try again.",
-              );
+            if (isAuthenticated) {
+              try {
+                await signOut(auth);
+              } catch (error) {
+                Alert.alert(
+                  "Sign out failed",
+                  "We could not sign you out. Check your connection and try again.",
+                );
+                return;
+              }
             }
+
+            try {
+              await signOutFromGoogle();
+            } catch (error) {
+              console.warn("Unable to clear the native Google session.", error);
+            }
+
+            clearSession();
+            navigation.getParent()?.reset({
+              index: 0,
+              routes: [{ name: "Login" }],
+            });
           },
         },
       ],
@@ -209,8 +219,12 @@ export default function ProfileScreen({ navigation }) {
       setIsDeleting(true);
       await deleteDoc(doc(db, "users", user.uid));
       await deleteUser(user);
+      await clearCachedProfile(user.uid).catch(() => {});
+      await signOutFromGoogle().catch((error) => {
+        console.warn("Unable to clear the native Google session after deletion.", error);
+      });
       clearSession();
-      navigation.getParent()?.getParent()?.reset({
+      navigation.getParent()?.reset({
         index: 0,
         routes: [{ name: "Login" }],
       });

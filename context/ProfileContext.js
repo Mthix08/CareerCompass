@@ -21,6 +21,11 @@ const THEME_PREFERENCES = ["Light", "Dark", "System"];
 // Offline copy of the signed-in profile.
 const PROFILE_CACHE_KEY = "@careercompass:profileCache:";
 
+export function clearCachedProfile(uid) {
+  if (!uid) return Promise.resolve();
+  return AsyncStorage.removeItem(`${PROFILE_CACHE_KEY}${uid}`);
+}
+
 function normalizeThemePreference(value) {
   return THEME_PREFERENCES.includes(value) ? value : "Light";
 }
@@ -171,13 +176,21 @@ export function ProfileProvider({ children }) {
         const nameParts = (storedProfile.name || user.displayName || "Student")
           .trim()
           .split(/\s+/);
+        const savedFirstName =
+          typeof storedProfile.firstName === "string"
+            ? storedProfile.firstName.trim()
+            : "";
+        const savedSurname =
+          typeof storedProfile.surname === "string"
+            ? storedProfile.surname.trim()
+            : nameParts.slice(1).join(" ");
 
         setProfile({
           ...initialProfile,
           ...storedProfile,
           email: user.email || storedProfile.email || "",
-          firstName: nameParts[0] || "Student",
-          surname: nameParts.slice(1).join(" "),
+          firstName: savedFirstName || nameParts[0] || "Student",
+          surname: savedSurname,
           category: "Student",
           photoURL: storedProfile.photoURL || user.photoURL || "",
           authProvider:
@@ -217,6 +230,14 @@ export function ProfileProvider({ children }) {
           if (currentAuthEvent !== authEvent) return;
           const cachedName = typeof cachedProfile.name === "string" ? cachedProfile.name : "Student";
           const nameParts = cachedName.trim().split(/\s+/);
+          const savedFirstName =
+            typeof cachedProfile.firstName === "string"
+              ? cachedProfile.firstName.trim()
+              : "";
+          const savedSurname =
+            typeof cachedProfile.surname === "string"
+              ? cachedProfile.surname.trim()
+              : nameParts.slice(1).join(" ");
           guestModeRef.current = false;
           setAccessRestricted(false);
           setIsGuest(false);
@@ -224,8 +245,8 @@ export function ProfileProvider({ children }) {
             ...initialProfile,
             ...cachedProfile,
             email: user.email || cachedProfile.email || "",
-            firstName: nameParts[0] || "Student",
-            surname: nameParts.slice(1).join(" "),
+            firstName: savedFirstName || nameParts[0] || "Student",
+            surname: savedSurname,
             category: "Student",
             photoURL: cachedProfile.photoURL || user.photoURL || "",
           });
@@ -307,6 +328,8 @@ export function ProfileProvider({ children }) {
         await setDoc(
           doc(db, "users", firebaseUser.uid),
           {
+            firstName: nextProfile.firstName.trim(),
+            surname: nextProfile.surname.trim(),
             name: `${nextProfile.firstName} ${nextProfile.surname}`.trim(),
             email: nextProfile.email,
             phone: nextProfile.phone,

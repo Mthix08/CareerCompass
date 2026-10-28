@@ -96,7 +96,7 @@ export const HomeUniversityCard = memo(function HomeUniversityCard({ university,
         </View>
         <View style={styles.tagRow}>
           <View style={styles.neutralTag}><Text style={styles.neutralTagText} numberOfLines={1}>{university.type}</Text></View>
-          <View style={[styles.applicationTag, { backgroundColor: universityTheme.accentSoft }]}><Text style={[styles.applicationTagText, { color: universityTheme.accent }]} numberOfLines={1}>{applicationTag}</Text></View>
+          <View style={[styles.applicationTag, { backgroundColor: universityTheme.accentSoft }]}><Text style={[styles.applicationTagText, { color: universityTheme.accent }]} numberOfLines={2}>{applicationTag}</Text></View>
         </View>
       </View>
     </Pressable>
@@ -167,7 +167,7 @@ const createStyles = (colors) => StyleSheet.create({
   neutralTag: { maxWidth: "100%", flexShrink: 1, paddingHorizontal: 9, paddingVertical: 6, borderRadius: 999, backgroundColor: colors.elevatedSurface },
   neutralTagText: { flexShrink: 1, color: colors.secondaryText, fontSize: 10, fontWeight: "800" },
   applicationTag: { flexShrink: 1, paddingHorizontal: 9, paddingVertical: 6, borderRadius: 999, backgroundColor: colors.primarySoft },
-  applicationTagText: { flexShrink: 1, color: colors.primary, fontSize: 10, fontWeight: "800" },
+  applicationTagText: { flexShrink: 1, color: colors.primary, fontSize: 10, lineHeight: 14, fontWeight: "800" },
   viewAllCard: { height: 310, padding: 20, borderRadius: 22, borderWidth: 1.5, borderStyle: "dashed", borderColor: colors.primary, alignItems: "center", justifyContent: "center", backgroundColor: colors.primarySoft },
   viewAllIcon: { width: 62, height: 62, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: colors.surface },
   viewAllTitle: { marginTop: 18, color: colors.text, fontSize: 16, lineHeight: 21, fontWeight: "900", textAlign: "center" },

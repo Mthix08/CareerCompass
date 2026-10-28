@@ -29,6 +29,7 @@
     },
     "plugins": [
       "@react-native-google-signin/google-signin",
+      "expo-notifications",
       "expo-font",
       [
         "expo-splash-screen",

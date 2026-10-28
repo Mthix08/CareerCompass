@@ -44,6 +44,17 @@ export function normalizeFundingOption(item) {
   const id = String(item.id ?? item.slug ?? item.name ?? "bursary");
   const closes = item.deadline || item.closes || item.deadline_date || "TBA";
   const closesAt = parseFundingDeadline(closes)?.toISOString() ?? null;
+  const logoCandidate = [
+    item.logo_url,
+    item.logoUrl,
+    item.provider_logo_url,
+    item.providerLogoUrl,
+    item.image_url,
+    item.imageUrl,
+    item.image,
+    item.logo,
+  ].map((value) => typeof value === "string" ? value : value?.url || value?.src)
+    .find((value) => typeof value === "string" && /^https:\/\/\S+$/i.test(value.trim()));
 
   return {
     id,
@@ -63,6 +74,7 @@ export function normalizeFundingOption(item) {
     fieldOfStudy: item.field_of_study || item.fieldOfStudy || "All fields",
     province: item.province || "National",
     featured: Boolean(item.featured && String(item.featured).toLowerCase() === "true"),
+    logoUrl: logoCandidate?.trim() || null,
   };
 }
 

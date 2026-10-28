@@ -549,6 +549,15 @@ export default function Applications({ navigation }) {
         </Pressable>
         <Text style={styles.headerTitle}>My Applications</Text>
         <Pressable
+          onPress={() => navigation.navigate("ApplicationGuide")}
+          accessibilityRole="button"
+          accessibilityLabel="Open application preparation guide"
+          style={({ pressed }) => [styles.addButton, pressed && styles.pressed]}
+        >
+          <Ionicons name="list-outline" size={19} color={COLORS.onPrimary} />
+          <Text style={styles.addButtonText}>Guide</Text>
+        </Pressable>
+        <Pressable
           onPress={openNewApplication}
           accessibilityRole="button"
           accessibilityLabel="Add application"

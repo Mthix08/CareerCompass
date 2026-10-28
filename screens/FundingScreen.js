@@ -1,14 +1,14 @@
 import React, { useMemo, useState, useEffect } from "react";
-import { ActivityIndicator, ImageBackground, Pressable, ScrollView, StyleSheet, TextInput, View } from "react-native";
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, TextInput, View } from "react-native";
 import Text from '../components/TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
+import FundingLogo from "../components/FundingLogo";
 import { useProfile } from "../context/ProfileContext";
 import { useBookmarks } from "../context/BookmarksContext";
 import { fetchBursaries, getFundingCountdown } from "../data/funding";
 
-const NSFAS_IMAGE = require("../assets/nsfas.jpg");
 export default function FundingScreen({ navigation }) {
   const { colors, resolvedTheme } = useProfile();
   const { isFundingBookmarked, saveFundingBookmark, removeFundingBookmark, updateFundingBookmarkDetails } = useBookmarks();
@@ -102,43 +102,8 @@ export default function FundingScreen({ navigation }) {
             else saveFundingBookmark(option);
           };
 
-          return isFeatured ? (
-            <View key={option.id} style={styles.featureCard}>
-              <ImageBackground source={NSFAS_IMAGE} resizeMode="cover" imageStyle={styles.image} style={styles.imageBackground}>
-                <View style={styles.shade} />
-                <Pressable
-                  onPress={openDetails}
-                  accessibilityRole="button"
-                  accessibilityLabel={`View ${option.name} funding details`}
-                  style={({ pressed }) => [styles.cardContent, pressed && styles.pressed]}
-                >
-                    <View style={styles.topRow}>
-                      <View style={styles.featureBadge}><Text style={styles.featureBadgeText}>FEATURED FUNDING</Text></View>
-                      <View style={styles.featureActions}>
-                        <Ionicons name="arrow-forward-circle" size={30} color="#FFFFFF" />
-                      </View>
-                    </View>
-                    <Text style={styles.cardTitle}>{option.name}</Text>
-                    <Text style={styles.cardSubtitle}>{option.fullName}</Text>
-                    <Text style={styles.cardDescription}>{option.description}</Text>
-                    <View style={styles.dateRow}>
-                      <Ionicons name="calendar-outline" size={17} color="#FFFFFF" />
-                      <Text style={styles.dateText}>{isClosed ? "Applications closed" : `${days} day${days === 1 ? "" : "s"} until closing`} · Closes {option.closes}</Text>
-                    </View>
-                </Pressable>
-                <Pressable
-                  onPress={toggleBookmark}
-                  accessibilityRole="button"
-                  accessibilityLabel={`${bookmarked ? "Remove" : "Add"} ${option.name} ${bookmarked ? "from" : "to"} bookmarks`}
-                  hitSlop={8}
-                  style={({ pressed }) => [styles.featureBookmark, styles.featureBookmarkOverlay, pressed && styles.pressed]}
-                >
-                  <Ionicons name={bookmarked ? "bookmark" : "bookmark-outline"} size={20} color="#FFFFFF" />
-                </Pressable>
-              </ImageBackground>
-            </View>
-          ) : (
-            <View key={option.id} style={styles.listCard}>
+          return (
+            <View key={option.id} style={[styles.listCard, isFeatured && styles.featuredListCard]}>
               <View style={styles.listCardContent}>
                 <Pressable
                   onPress={openDetails}
@@ -146,17 +111,20 @@ export default function FundingScreen({ navigation }) {
                   accessibilityLabel={`View ${option.name} funding details`}
                   style={({ pressed }) => [styles.listMainContent, pressed && styles.pressed]}
                 >
-                  <View style={styles.listIcon}><Ionicons name="wallet-outline" size={24} color={colors.primary} /></View>
+                  <FundingLogo option={option} colors={colors} featured={isFeatured} />
                   <View style={styles.listCopy}>
                     <View style={styles.listTitleRow}>
                       <Text style={styles.listTitle}>{option.name}</Text>
+                      {isFeatured && <View style={styles.featureBadge}><Text style={styles.featureBadgeText}>FEATURED</Text></View>}
                     </View>
-                    <Text style={styles.listDescription}>{option.description}</Text>
-                    <Text style={styles.listMeta}>{option.provider} · closes {option.closes}</Text>
+                    <Text style={styles.listDescription}>{isFeatured ? option.fullName : option.description}</Text>
+                    <Text style={styles.listMeta}>{isFeatured
+                      ? `${isClosed ? "Applications closed" : `${days} day${days === 1 ? "" : "s"} until closing`} · closes ${option.closes}`
+                      : `${option.provider} · closes ${option.closes}`}</Text>
                   </View>
                   <Ionicons name="chevron-forward" size={20} color={colors.mutedText} />
                 </Pressable>
-                <Pressable onPress={toggleBookmark} accessibilityRole="button" accessibilityLabel={`${bookmarked ? "Remove" : "Add"} ${option.name} ${bookmarked ? "from" : "to"} bookmarks`} hitSlop={8} style={styles.listBookmark}>
+                <Pressable onPress={toggleBookmark} accessibilityRole="button" accessibilityLabel={`${bookmarked ? "Remove" : "Add"} ${option.name} ${bookmarked ? "from" : "to"} bookmarks`} hitSlop={8} style={[styles.listBookmark, isFeatured && styles.featureBookmark]}>
                   <Ionicons name={bookmarked ? "bookmark" : "bookmark-outline"} size={20} color={colors.primary} />
                 </Pressable>
               </View>
@@ -197,33 +165,22 @@ function makeStyles(c) {
     loadingState: { minHeight: 190, alignItems: "center", justifyContent: "center", backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 18, padding: 24 },
     loadingTitle: { color: c.text, fontSize: 16, fontWeight: "700", marginTop: 14 },
     loadingText: { color: c.secondaryText, fontSize: 13, textAlign: "center", marginTop: 5 },
-    featureCard: { borderRadius: 22, overflow: "hidden", elevation: 4, backgroundColor: c.primary },
     listCard: { backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 18, marginTop: 14 },
+    featuredListCard: { borderColor: c.primary, borderWidth: 1.5 },
     listCardContent: { flexDirection: "row", alignItems: "center", gap: 12, padding: 17 },
     listMainContent: { flex: 1, flexDirection: "row", alignItems: "center", gap: 12 },
     listIcon: { width: 46, height: 46, borderRadius: 13, backgroundColor: c.primarySoft, alignItems: "center", justifyContent: "center" },
+    featureListIcon: { backgroundColor: c.primarySoft },
     listCopy: { flex: 1 },
     listTitleRow: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 8 },
     listTitle: { color: c.text, fontSize: 16, fontWeight: "700" },
     listMeta: { color: c.mutedText, fontSize: 12, marginTop: 6 },
     listDescription: { color: c.secondaryText, fontSize: 13, lineHeight: 18, marginTop: 4 },
     pressed: { opacity: 0.88 },
-    imageBackground: { minHeight: 290, justifyContent: "flex-end" },
-    image: { borderRadius: 22 },
-    shade: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0, 42, 42, 0.76)" },
-    cardContent: { padding: 22 },
-    topRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 30 },
-    featureActions: { flexDirection: "row", alignItems: "center", gap: 10 },
-    featureBookmark: { width: 38, height: 38, borderRadius: 13, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(255,255,255,0.18)" },
-    featureBookmarkOverlay: { position: "absolute", top: 22, right: 68 },
+    featureBookmark: { backgroundColor: c.primarySoft },
     listBookmark: { width: 38, height: 38, borderRadius: 12, alignItems: "center", justifyContent: "center", backgroundColor: c.primarySoft },
-    featureBadge: { backgroundColor: "rgba(255,255,255,0.2)", paddingHorizontal: 11, paddingVertical: 7, borderRadius: 50 },
-    featureBadgeText: { color: "#FFFFFF", fontSize: 11, fontWeight: "800", letterSpacing: 0.8 },
-    cardTitle: { color: "#FFFFFF", fontSize: 36, fontWeight: "800" },
-    cardSubtitle: { color: "#E3F1EF", fontSize: 15, fontWeight: "600", marginTop: 2 },
-    cardDescription: { color: "#FFFFFF", fontSize: 14, lineHeight: 21, marginTop: 14 },
-    dateRow: { flexDirection: "row", alignItems: "center", gap: 8, marginTop: 20 },
-    dateText: { color: "#FFFFFF", flex: 1, fontSize: 13, fontWeight: "700" },
+    featureBadge: { backgroundColor: c.primarySoft, paddingHorizontal: 8, paddingVertical: 5, borderRadius: 50 },
+    featureBadgeText: { color: c.primary, fontSize: 9, fontWeight: "800", letterSpacing: 0.5 },
     comingSoon: { flexDirection: "row", gap: 13, alignItems: "center", backgroundColor: c.surface, borderColor: c.border, borderWidth: 1, borderRadius: 18, padding: 17, marginTop: 16 },
     comingSoonText: { flex: 1 },
     comingSoonTitle: { color: c.text, fontSize: 15, fontWeight: "700" },

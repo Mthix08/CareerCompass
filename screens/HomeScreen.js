@@ -28,6 +28,7 @@ import { useProfile } from "../context/ProfileContext";
 import { loadCollection } from "../data/firestoreContent";
 import { universities } from "../data/universities";
 import { getInstitutionApsMatches, getLatestApsRecord } from "../data/apsMatching";
+import { syncDeadlineReminders } from "../services/deadlineNotifications";
 
 const NSFAS_IMAGE = require("../assets/nsfas.jpg");
 const HORIZONTAL_GAP = 14;
@@ -59,8 +60,8 @@ export default function HomeScreen({ navigation }) {
   );
   const sliderCardWidth = Math.min(Math.max(screenWidth - 66, 254), 310);
   const universityCardWidth = Math.min(
-    Math.max(screenWidth * 0.73, 258),
-    304,
+    Math.max(screenWidth * 0.8, 280),
+    340,
   );
   const universityListRef = useRef(null);
   const carouselOffset = useRef(0);
@@ -88,17 +89,20 @@ export default function HomeScreen({ navigation }) {
   const [deadlineNow, setDeadlineNow] = useState(null);
 
   useEffect(() => {
+    if (!isFocused) return undefined;
     let active = true;
     loadCollection("applicationDeadlines", { sortBy: "closesAt" }).then((items) => {
       if (active) {
         setDeadlines(items);
         setDeadlineNow(Date.now());
+        syncDeadlineReminders(items, profile.notificationPreferences?.applications !== false)
+          .catch((error) => console.warn("Unable to refresh application deadline reminders.", error));
       }
     });
     return () => {
       active = false;
     };
-  }, []);
+  }, [isFocused, profile.notificationPreferences?.applications]);
 
   const stopUniversityCarousel = useCallback(() => {
     clearTimeout(resumeTimer.current);

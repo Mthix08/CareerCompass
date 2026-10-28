@@ -201,7 +201,7 @@ function MarkRow({ item, onMarkChange, onRemove }) {
   );
 }
 
-function ApsResultModal({ result, onClose, onViewMatches }) {
+function ApsResultModal({ result, onClose, onViewMatches, onViewUniversities, onViewColleges }) {
   const { colors, resolvedTheme } = useProfile();
   const COLORS = useMemo(() => getThemeColors(colors, resolvedTheme), [colors, resolvedTheme]);
   const styles = useMemo(() => makeStyles(COLORS), [COLORS]);
@@ -261,6 +261,10 @@ function ApsResultModal({ result, onClose, onViewMatches }) {
                   <Text style={styles.resultNoticeText}>
                     Scores are guidance estimates. Admissions requirements can change, methods may differ by qualification, and a score does not guarantee admission. Verified methods are labelled; unsupported methods show Needs verification.
                   </Text>
+                </View>
+                <View style={styles.nextStepCard}>
+                  <Text style={styles.nextStepTitle}>What should you do next?</Text>
+                  <Text style={styles.nextStepText}>Compare courses against your subject marks, then check the institution’s official requirements and closing date before applying.</Text>
                 </View>
               </View>
             )}
@@ -322,6 +326,20 @@ function ApsResultModal({ result, onClose, onViewMatches }) {
                   style={({ pressed }) => [styles.resultButton, pressed && styles.pressed]}
                 >
                   <Text style={styles.resultButtonText}>View matching courses</Text>
+                </Pressable>
+                <Pressable
+                  onPress={onViewUniversities}
+                  accessibilityRole="button"
+                  style={({ pressed }) => [styles.resultSecondaryButton, pressed && styles.pressed]}
+                >
+                  <Text style={styles.resultSecondaryButtonText}>View university APS matches</Text>
+                </Pressable>
+                <Pressable
+                  onPress={onViewColleges}
+                  accessibilityRole="button"
+                  style={({ pressed }) => [styles.resultSecondaryButton, pressed && styles.pressed]}
+                >
+                  <Text style={styles.resultSecondaryButtonText}>Explore colleges</Text>
                 </Pressable>
                 <Pressable
                   onPress={onClose}
@@ -709,6 +727,17 @@ export default function ApsCalculatorScreen({ navigation }) {
             },
           });
         }}
+        onViewUniversities={() => {
+          setApsResult(null);
+          navigation.getParent()?.navigate("UniversityApsScores");
+        }}
+        onViewColleges={() => {
+          setApsResult(null);
+          navigation.navigate("Home", {
+            screen: "Universities",
+            params: { mode: "Colleges" },
+          });
+        }}
       />
     </SafeAreaView>
   );
@@ -1049,6 +1078,9 @@ function makeStyles(COLORS) {
     lineHeight: 18,
     fontWeight: "600",
   },
+  nextStepCard: { width: "100%", marginTop: 12, padding: 13, borderRadius: 14, borderWidth: 1, borderColor: COLORS.border, backgroundColor: COLORS.surface },
+  nextStepTitle: { color: COLORS.text, fontSize: 14, fontWeight: "900" },
+  nextStepText: { marginTop: 5, color: COLORS.secondary, fontSize: 12, lineHeight: 18 },
   universityResultsList: {
     width: "100%",
     flex: 1,
@@ -1101,6 +1133,8 @@ function makeStyles(COLORS) {
     backgroundColor: COLORS.primary,
   },
   resultButtonText: { color: COLORS.onPrimary, fontSize: 15, fontWeight: "800" },
+  resultSecondaryButton: { width: "100%", minHeight: 46, marginTop: 8, borderRadius: 14, borderWidth: 1, borderColor: COLORS.border, alignItems: "center", justifyContent: "center", backgroundColor: COLORS.surface },
+  resultSecondaryButtonText: { color: COLORS.primary, fontSize: 14, fontWeight: "800" },
   resultDoneButton: { width: "100%", minHeight: 46, marginTop: 10, alignItems: "center", justifyContent: "center" },
   resultDoneButtonText: { color: COLORS.primary, fontSize: 14, fontWeight: "800" },
  });

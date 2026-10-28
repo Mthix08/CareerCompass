@@ -7,6 +7,16 @@ import {
 
 import { auth } from "./firebaseConfig";
 
+function getNativeGoogleSignin() {
+  if (Platform.OS === "web") return null;
+  return require("@react-native-google-signin/google-signin").GoogleSignin;
+}
+
+export async function signOutFromGoogle() {
+  const GoogleSignin = getNativeGoogleSignin();
+  if (GoogleSignin) await GoogleSignin.signOut();
+}
+
 export function getGoogleAuthErrorMessage(error) {
   if (error?.code === "auth/google-client-id-missing") {
     return "Add the Google web OAuth client ID before using Google sign-in on mobile.";
@@ -34,12 +44,16 @@ export async function signInWithGoogle() {
     throw error;
   }
 
-  const { GoogleSignin } = require("@react-native-google-signin/google-signin");
+  const GoogleSignin = getNativeGoogleSignin();
 
   GoogleSignin.configure({
     webClientId,
     iosClientId: process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID,
   });
+
+  // Firebase sign-out does not clear the native Google session. Clear it before
+  // every explicit login so the user must choose an account again.
+  await GoogleSignin.signOut();
 
   if (Platform.OS === "android") {
     await GoogleSignin.hasPlayServices({

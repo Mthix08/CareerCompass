@@ -19,6 +19,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import {
+  getCareerCompassAppOverviewAnswer,
   getLocalCareerCompassAnswer,
 } from "../data/careerCompassKnowledge";
 import { useProfile } from "../context/ProfileContext";
@@ -139,7 +140,9 @@ export default function AssistantScreen({ navigation }) {
     setIsLoading(true);
 
     try {
-      const answer = await getAssistantAnswer(trimmedQuestion);
+      const answer =
+        getCareerCompassAppOverviewAnswer(trimmedQuestion) ||
+        await getAssistantAnswer(trimmedQuestion);
       setMessages((current) => [
         ...current,
         { id: `${Date.now()}-assistant`, role: "assistant", text: answer },

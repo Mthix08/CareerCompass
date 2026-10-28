@@ -20,6 +20,7 @@ import UniversityApsScoresScreen from "./screens/UniversityApsScoresScreen";
 import FundingScreen from "./screens/FundingScreen";
 import FundingDetailsScreen from "./screens/FundingDetailsScreen";
 import Applications from "./screens/Applications";
+import ApplicationGuideScreen from "./screens/ApplicationGuideScreen";
 import Bookmarks from "./screens/Bookmarks";
 import Notifications from "./screens/Notifications";
 import NotificationPreferences from "./screens/NotificationPreferences";
@@ -179,6 +180,11 @@ function AppNavigator() {
             name="Applications"
             component={Applications}
             options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ApplicationGuide"
+            component={ApplicationGuideScreen}
+            options={{ headerShown: false, animation: "slide_from_right" }}
           />
           <Stack.Screen
             name="Bookmarks"

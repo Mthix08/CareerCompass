@@ -1,10 +1,16 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { Pressable, ScrollView, StyleSheet, Switch,  View } from "react-native";
+import { Alert, Pressable, ScrollView, StyleSheet, Switch, View } from "react-native";
 import Text from '../components/TranslatedText';
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
+import { loadCollection } from "../data/firestoreContent";
+import {
+  getDeadlineNotificationPermission,
+  requestDeadlineNotificationPermission,
+  syncDeadlineReminders,
+} from "../services/deadlineNotifications";
 
 const PREFERENCE_OPTIONS = [
   {
@@ -15,7 +21,7 @@ const PREFERENCE_OPTIONS = [
   {
     id: "applications",
     title: "University Applications",
-    description: "Application opening and closing reminders",
+    description: "Phone reminders five days before confirmed closing dates",
   },
   {
     id: "content",
@@ -35,6 +41,8 @@ export default function NotificationPreferences({ navigation }) {
   const [preferences, setPreferences] = useState(() =>
     Object.fromEntries(PREFERENCE_OPTIONS.map(({ id }) => [id, true])),
   );
+  const [phonePermission, setPhonePermission] = useState(false);
+  const [requestingPermission, setRequestingPermission] = useState(false);
 
   useEffect(() => {
     if (profile?.notificationPreferences) {
@@ -45,10 +53,41 @@ export default function NotificationPreferences({ navigation }) {
     }
   }, [profile?.notificationPreferences]);
 
+  useEffect(() => {
+    getDeadlineNotificationPermission().then(setPhonePermission).catch(() => setPhonePermission(false));
+  }, []);
+
+  const enablePhoneNotifications = async () => {
+    if (requestingPermission) return;
+    setRequestingPermission(true);
+    try {
+      const granted = await requestDeadlineNotificationPermission();
+      setPhonePermission(granted);
+      if (!granted) {
+        Alert.alert("Notifications are off", "Allow notifications in your device settings to receive deadline reminders.");
+        return;
+      }
+      const deadlines = await loadCollection("applicationDeadlines");
+      const count = await syncDeadlineReminders(deadlines, preferences.applications !== false);
+      Alert.alert("Phone reminders enabled", count
+        ? `We’ll remind you five days before ${count} upcoming application deadline${count === 1 ? "" : "s"}.`
+        : "Notifications are enabled. Reminders will be scheduled when upcoming confirmed deadlines are available.");
+    } catch (error) {
+      Alert.alert("Could not enable reminders", error.message || "Please try again from notification settings.");
+    } finally {
+      setRequestingPermission(false);
+    }
+  };
+
   const togglePreference = (id) => {
     setPreferences((current) => {
       const next = { ...current, [id]: !current[id] };
       updateProfile({ ...profile, notificationPreferences: next }).catch(() => {});
+      if (id === "applications" && phonePermission) {
+        loadCollection("applicationDeadlines")
+          .then((deadlines) => syncDeadlineReminders(deadlines, next.applications))
+          .catch((error) => console.warn("Unable to update deadline reminders.", error));
+      }
       return next;
     });
   };
@@ -82,6 +121,19 @@ export default function NotificationPreferences({ navigation }) {
             send notifications that matter.
           </Text>
         </View>
+
+        <Pressable
+          onPress={enablePhoneNotifications}
+          disabled={requestingPermission || phonePermission}
+          accessibilityRole="button"
+          style={({ pressed }) => [styles.phoneButton, (requestingPermission || phonePermission) && styles.phoneButtonDisabled, pressed && styles.pressed]}
+        >
+          <Ionicons name={phonePermission ? "notifications" : "notifications-outline"} size={20} color={phonePermission ? colors.primary : "#FFFFFF"} />
+          <Text style={[styles.phoneButtonText, phonePermission && styles.phoneButtonTextEnabled]}>
+            {requestingPermission ? "Enabling phone reminders…" : phonePermission ? "Phone reminders are enabled" : "Enable phone reminders"}
+          </Text>
+          {!phonePermission && <Ionicons name="arrow-forward" size={17} color="#FFFFFF" />}
+        </Pressable>
 
         <View style={styles.preferencesCard}>
           {PREFERENCE_OPTIONS.map((option, index) => (
@@ -146,6 +198,10 @@ function makeStyles(colors) {
     backgroundColor: colors.surface,
   },
   infoText: { flex: 1, marginLeft: 14, color: "#D7DFE8", fontSize: 14, lineHeight: 21 },
+  phoneButton: { minHeight: 50, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 9, marginTop: 14, paddingHorizontal: 14, borderRadius: 14, backgroundColor: colors.primary },
+  phoneButtonDisabled: { backgroundColor: colors.primarySoft },
+  phoneButtonText: { color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
+  phoneButtonTextEnabled: { color: colors.primary },
   preferencesCard: {
     overflow: "hidden",
     marginTop: 20,

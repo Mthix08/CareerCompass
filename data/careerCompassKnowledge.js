@@ -38,6 +38,22 @@ and make informed educational decisions.
 const OUT_OF_SCOPE =
   "I'm the CareerCompass Assistant. I can only help you with questions about CareerCompass and its features.";
 
+const APP_OVERVIEW_ANSWER =
+  "CareerCompass is a career and study-planning app for South African learners. It helps you calculate your APS, explore universities, colleges and courses, connect study options to careers, take a career assessment, find funding information, and track applications. Always confirm current admission and funding requirements with the official institution or funder.";
+
+export function getCareerCompassAppOverviewAnswer(question) {
+  const normalizedQuestion = normalize(question);
+  const asksWhatTheAppIs =
+    /\bwhat(?: is|s) (this|the) app(?:(?: is)? (about|for))?\b/.test(normalizedQuestion) ||
+    /\bwhat does (this|the) app do\b/.test(normalizedQuestion) ||
+    /\btell me about (careercompass|this app|the app)\b/.test(normalizedQuestion) ||
+    /\bwhat(?: is|s) careercompass(?:(?: is)? about)?\b/.test(normalizedQuestion) ||
+    /\bwhat does careercompass do\b/.test(normalizedQuestion) ||
+    /\bdescribe (careercompass|this app|the app)\b/.test(normalizedQuestion);
+
+  return asksWhatTheAppIs ? APP_OVERVIEW_ANSWER : null;
+}
+
 const responses = [
   {
     words: ["careercompass"],
@@ -100,6 +116,9 @@ const normalize = (value) =>
   value.toLocaleLowerCase().replace(/[^a-z0-9 ]/g, " ");
 
 export function getLocalCareerCompassAnswer(question) {
+  const overviewAnswer = getCareerCompassAppOverviewAnswer(question);
+  if (overviewAnswer) return overviewAnswer;
+
   const normalizedQuestion = normalize(question);
   const match = responses.find(({ words }) =>
     words.some((word) => normalizedQuestion.includes(normalize(word))),

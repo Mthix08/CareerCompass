@@ -4,6 +4,7 @@ import Text from '../components/TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
+import FundingLogo from "../components/FundingLogo";
 import { useProfile } from "../context/ProfileContext";
 import { useBookmarks } from "../context/BookmarksContext";
 import { NSFAS, fetchBursaries, getFundingCountdown } from "../data/funding";
@@ -143,7 +144,7 @@ export default function FundingDetailsScreen({ navigation, route }) {
         </Pressable>
 
         <View style={styles.hero}>
-          <View style={styles.heroIcon}><Ionicons name="wallet-outline" size={28} color="#FFFFFF" /></View>
+          <FundingLogo option={funding} colors={colors} size={56} featured />
           <Text style={styles.heroEyebrow}>LIVE BURSARY</Text>
           <Text style={styles.heroTitle}>{funding.name}</Text>
           <Text style={styles.heroSubtitle}>{funding.provider}</Text>
