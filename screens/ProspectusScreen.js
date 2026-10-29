@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import Text from "../components/TranslatedText";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Pdf from "react-native-pdf";
+import Pdf from "../components/ProspectusPdf";
 import { WebView } from "react-native-webview";
 
 import { getUniversityTheme } from "../data/universityTheme";

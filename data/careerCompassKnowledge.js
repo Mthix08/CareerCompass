@@ -44,6 +44,9 @@ const APP_OVERVIEW_ANSWER =
 const APS_ANSWER =
   "For a quick generic APS estimate, convert each subject percentage into points: 80–100% = 7, 70–79% = 6, 60–69% = 5, 50–59% = 4, 40–49% = 3, 30–39% = 2, and below 30% = 1. Add the points for your six best subjects and leave out Life Orientation for the generic score. CareerCompass can calculate this for you in the APS Calculator. Universities may use different subject and Life Orientation rules, so check the requirements for your chosen course.";
 
+const PROSPECTUS_ANSWER =
+  "To check a prospectus in CareerCompass, open Universities, select a university, then choose View Prospectus on its details page. If the prospectus is unavailable, use the university’s official website and confirm that you are viewing the latest edition.";
+
 export function getCareerCompassAppOverviewAnswer(question) {
   const normalizedQuestion = normalize(question);
   const asksWhatTheAppIs =
@@ -124,6 +127,7 @@ export function getLocalCareerCompassAnswer(question) {
 
   const normalizedQuestion = normalize(question);
   if (/\baps\b|admission points?/i.test(normalizedQuestion)) return APS_ANSWER;
+  if (/\bprospectus(?:es)?\b/i.test(normalizedQuestion)) return PROSPECTUS_ANSWER;
   const match = responses.find(({ words }) =>
     words.some((word) => normalizedQuestion.includes(normalize(word))),
   );
