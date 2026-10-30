@@ -57,6 +57,7 @@ export const universities = [
     theme: { accent: "#0072CE", accentLight: "#83C9F4", accentSoft: "rgba(0,114,206,0.22)", placeholderBackground: "#062B45" },
     description: "UCT is a research-led university offering programmes through commerce, engineering and the built environment, health sciences, humanities, law and science.",
     campuses: ["Upper Campus", "Middle Campus", "Lower Campus", "Health Sciences Campus", "Hiddingh Campus"],
+    virtualCampusUrl: "https://www.youtube.com/watch?v=0IldrY2Gkn0",
     website: "https://www.uct.ac.za/", contactEmail: "admissions@uct.ac.za", contactPhone: "+27 (0)21 650 2128", applicationUrl: "https://uct.ac.za/students/applications-apply-undergraduate-qualifications/application-procedure",
     courses: [course("uct-cs", "BSc in Computer Science", "Faculty of Science", ["English", "Mathematics"]), course("uct-bcom", "Bachelor of Commerce", "Faculty of Commerce", ["English", "Mathematics"])],
   }),
@@ -71,6 +72,7 @@ export const universities = [
     theme: { accent: "#7A1F3D", accentLight: "#D99AAF", accentSoft: "rgba(122,31,61,0.23)", placeholderBackground: "#32101D" },
     description: "Stellenbosch University is a research-intensive institution with programmes in arts, business, education, engineering, law, medicine, science and agriculture.",
     campuses: ["Stellenbosch", "Tygerberg", "Bellville Park", "Worcester", "Saldanha"], website: "https://www.sun.ac.za/", applicationUrl: "https://www.sun.ac.za/english/maties",
+    virtualCampusUrl: "https://blogs.sun.ac.za/open-day/campus-experience/",
     courses: [course("su-data", "BData Science", "Economic and Management Sciences", ["English", "Mathematics"], "4 years"), course("su-eng", "Bachelor of Engineering", "Faculty of Engineering", ["English", "Mathematics", "Physical Sciences"], "4 years")],
   }),
   university({
@@ -84,6 +86,7 @@ export const universities = [
     theme: { accent: "#6A2C91", accentLight: "#C19ADE", accentSoft: "rgba(106,44,145,0.23)", placeholderBackground: "#261033" },
     description: "NWU is a multi-campus university offering teaching and research across economic sciences, education, engineering, health sciences, humanities, law and natural sciences.",
     campuses: ["Mahikeng", "Potchefstroom", "Vanderbijlpark"], website: "https://www.nwu.ac.za/", contactEmail: "studies@nwu.ac.za", contactPhone: "0860 169 698", applicationUrl: "https://studies.nwu.ac.za/studies/apply",
+    virtualCampusUrl: "https://studies.nwu.ac.za/visit",
     courses: [course("nwu-it", "BSc in Information Technology", "Natural and Agricultural Sciences", ["English", "Mathematics"]), course("nwu-bcom", "Bachelor of Commerce", "Economic and Management Sciences", ["English", "Mathematics"])],
   }),
   university({
@@ -97,6 +100,7 @@ export const universities = [
     theme: { accent: "#D71920", accentLight: "#F39A9E", accentSoft: "rgba(215,25,32,0.22)", placeholderBackground: "#330B0D" },
     description: "UKZN offers programmes through colleges of agriculture and engineering, health sciences, humanities, and law and management studies.",
     campuses: ["Edgewood", "Howard College", "Pietermaritzburg", "Westville", "Nelson R. Mandela School of Medicine"], website: "https://www.ukzn.ac.za/", contactEmail: "enquiries@ukzn.ac.za", applicationUrl: "https://applications.ukzn.ac.za/applications/ukzn-applications/",
+    virtualCampusUrl: "https://virtualtours.ukzn.ac.za/",
     courses: [course("ukzn-cs", "BSc in Computer Science and IT", "Agriculture, Engineering and Science", ["English", "Mathematics"]), course("ukzn-llb", "Bachelor of Laws", "Law and Management Studies", ["English"], "4 years")],
   }),
   university({
@@ -110,6 +114,7 @@ export const universities = [
     theme: { accent: "#D71920", accentLight: "#F39A9E", accentSoft: "rgba(215,25,32,0.20)", placeholderBackground: "#111D38" },
     description: "UFS offers study across economic and management sciences, education, health sciences, humanities, law, natural and agricultural sciences, and theology.",
     campuses: ["Bloemfontein Campus", "Qwaqwa Campus", "South Campus"], website: "https://www.ufs.ac.za/", applicationUrl: "https://www.ufs.ac.za/prospective",
+    virtualCampusUrl: "https://www.ufs.ac.za/visitors/visitors-centre/general/visitor-attractions",
     courses: [course("ufs-it", "BSc in Information Technology", "Natural and Agricultural Sciences", ["English", "Mathematics"]), course("ufs-bcom", "Bachelor of Commerce", "Economic and Management Sciences", ["English", "Mathematics"])],
   }),
   university({
@@ -123,6 +128,7 @@ export const universities = [
     theme: { accent: "#D22630", accentLight: "#F29AA0", accentSoft: "rgba(210,38,48,0.21)", placeholderBackground: "#351014" },
     description: "UP is a research-intensive university in Tshwane with programmes including engineering, health sciences, law, veterinary science, humanities and business.",
     campuses: ["Hatfield", "Groenkloof", "Prinshof", "Onderstepoort", "Mamelodi"], website: "https://www.up.ac.za/", applicationUrl: "https://www.up.ac.za/online-application",
+    virtualCampusUrl: "https://virtualcampus.up.ac.za/",
     courses: [course("up-it", "BSc in Information and Knowledge Systems", "Engineering, Built Environment and IT", ["English", "Mathematics"]), course("up-bcom", "Bachelor of Commerce", "Economic and Management Sciences", ["English", "Mathematics"])],
   }),
   university({
@@ -331,6 +337,7 @@ export const universities = [
     theme: { accent: "#008D9A", accentLight: "#83D3D8", accentSoft: "rgba(0,141,154,0.21)", placeholderBackground: "#073238" },
     description: "Nelson Mandela University offers academic and career-focused programmes across business, education, engineering, health sciences, humanities, law and science.",
     campuses: ["South Campus", "North Campus", "Second Avenue", "Missionvale", "Bird Street", "Ocean Sciences", "George Campus"], website: "https://www.mandela.ac.za/", contactEmail: "admissions@mandela.ac.za", contactPhone: "+27 (0)41 504 1111", applicationUrl: "https://www.mandela.ac.za/Study-at-Mandela/Application",
+    virtualCampusUrl: "https://www.youtube.com/watch?v=WMSAeP7JKks",
     courses: [course("nmu-cs", "BSc in Computer Science", "Faculty of Science", ["English", "Mathematics"]), course("nmu-eng", "Bachelor of Engineering", "Engineering, Built Environment and Technology", ["English", "Mathematics", "Physical Sciences"], "4 years")],
   }),
   university({
