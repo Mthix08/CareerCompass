@@ -1,5 +1,5 @@
 // Verified rules and user-researched provisional rules share one year-scoped
-// registry. Provisional rules remain visibly marked Needs verification.
+// registry. Statuses are reviewed individually below.
 const standardNscBands = [
   { minimum: 80, points: 7 },
   { minimum: 70, points: 6 },
@@ -15,12 +15,13 @@ const provisionalBestSubjectsRule = ({
   admissionsYear = 2027,
   count = 6,
   methodLabel,
+  status = "needs_verification",
   subjectSelection = {},
   notes = [],
 }) => ({
   universityId,
   admissionsYear,
-  status: "needs_verification",
+  status,
   method: "nsc_levels_best_n",
   methodLabel: methodLabel || `Best ${count} NSC achievement levels (provisional)`,
   subjectSelection: { mode: "best_n", count, ...subjectSelection },
