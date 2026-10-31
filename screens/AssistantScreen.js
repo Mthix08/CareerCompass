@@ -43,14 +43,19 @@ async function getAssistantAnswer(question) {
         body: JSON.stringify({ question }),
         signal: controller.signal,
       });
+      let data;
+      try {
+        data = await response.json();
+      } catch {
+        data = null;
+      }
       if (!response.ok) {
         if (attempt === 0 && [502, 503, 504].includes(response.status)) {
           await new Promise((resolve) => setTimeout(resolve, 800));
           continue;
         }
-        throw new Error("Assistant request failed");
+        throw new Error(data?.error || `Assistant request failed (${response.status})`);
       }
-      const data = await response.json();
       if (typeof data.answer !== "string" || !data.answer.trim()) {
         throw new Error("Assistant returned no answer");
       }
@@ -107,10 +112,28 @@ export default function AssistantScreen({ navigation }) {
 
   const speak = async (text) => {
     setVoiceError("");
-    await Speech.stop().catch(() => {});
     setIsSpeaking(true);
 
     try {
+      const speechCallbacks = {
+        rate: 0.95,
+        onDone: () => setIsSpeaking(false),
+        onStopped: () => setIsSpeaking(false),
+        onError: (error) => {
+          setIsSpeaking(false);
+          setVoiceError(error?.message || "Read aloud could not start. Check your device's speech settings and volume.");
+        },
+      };
+
+      if (Platform.OS === "web") {
+        // Browser speech needs to start in the original click gesture. Waiting
+        // for voice enumeration can hang or lose that gesture in some browsers.
+        Speech.stop().catch(() => {});
+        Speech.speak(text, { ...speechCallbacks, language: "en-US" });
+        return;
+      }
+
+      await Speech.stop().catch(() => {});
       // Voice discovery can fail on some Android TTS providers. The system
       // voice still works, so never let discovery prevent Speech.speak().
       const voices = await Speech.getAvailableVoicesAsync().catch(() => []);
@@ -125,13 +148,7 @@ export default function AssistantScreen({ navigation }) {
       Speech.speak(text, {
         ...(selectedVoice?.identifier ? { voice: selectedVoice.identifier } : {}),
         language: selectedVoice?.language || "en-US",
-        rate: 0.95,
-        onDone: () => setIsSpeaking(false),
-        onStopped: () => setIsSpeaking(false),
-        onError: (error) => {
-          setIsSpeaking(false);
-          setVoiceError(error?.message || "Read aloud could not start. Check your device's speech settings and volume.");
-        },
+        ...speechCallbacks,
       });
     } catch (error) {
       setIsSpeaking(false);
@@ -158,13 +175,20 @@ export default function AssistantScreen({ navigation }) {
         ...current,
         { id: `${Date.now()}-assistant`, role: "assistant", text: answer },
       ]);
-    } catch {
+    } catch (error) {
+      const serverMessage = error?.message || "";
+      const serviceNotConfigured = /not configured/i.test(serverMessage);
+      const detail = serviceNotConfigured
+        ? "The online assistant has not been configured on the server yet. Its administrator needs to add the Gemini key."
+        : serverMessage && serverMessage !== "Assistant request failed"
+          ? `The online assistant could not respond: ${serverMessage}`
+          : "The online assistant could not respond right now.";
       setMessages((current) => [
         ...current,
         {
           id: `${Date.now()}-fallback`,
           role: "assistant",
-          text: `The online assistant is unavailable right now. Here is an offline suggestion:\n\n${getLocalCareerCompassAnswer(trimmedQuestion)}`,
+          text: `${detail} Here is an offline suggestion:\n\n${getLocalCareerCompassAnswer(trimmedQuestion)}`,
         },
       ]);
     } finally {

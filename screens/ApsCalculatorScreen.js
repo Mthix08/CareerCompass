@@ -315,7 +315,7 @@ function ApsResultModal({ result, onClose, onViewMatches, onViewUniversities, on
                   </Text>
                   {item.score != null && item.maximumScore != null ? (
                     <Text style={styles.universityResultScoreDetails}>
-                      {item.id === "nmu" ? `AS / ${display.maximumScore}` : `/${item.maximumScore}`}{item.maximumBonusScore ? ` +${item.maximumBonusScore}` : ""}
+                      {item.id === "nmu" ? `APS estimate / ${display.maximumScore}` : `/${item.maximumScore}`}{item.maximumBonusScore ? ` +${item.maximumBonusScore}` : ""}
                     </Text>
                   ) : null}
                 </View>
