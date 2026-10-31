@@ -73,6 +73,18 @@ const ANSWERS = [
     answer: "Open Profile from the bottom navigation to view your account and learner details. Choose Edit Profile to update supported details or your profile photo. Some account actions require you to be signed in.",
   },
   {
+    pattern: /\b(profile screen|my profile|profile page)\b/,
+    answer: "Profile is the hub for your learner/account details and shortcuts to bookmarks, My Applications, APS Calculator, universities, courses, notification settings, notifications, language, FAQs, and theme controls. Sign in for features that save or sync account data.",
+  },
+  {
+    pattern: /\b(home screen|home page|home tab)\b/,
+    answer: "Home is the dashboard for CareerCompass. Use its quick actions to start career assessment, calculate APS, browse admission matches, and open other planning tools. The bottom navigation takes you to Funding, Universities, Courses, and Profile.",
+  },
+  {
+    pattern: /\b(aps calculator|my aps|my marks|enter marks|add subjects|calculate aps)\b/,
+    answer: APS_ANSWER,
+  },
+  {
     pattern: /\b(theme|dark mode|black theme|light mode|appearance)\b/,
     answer: "Open Profile and find Theme Mode. Choose Light, Dark, or System. Your selection is saved on the device; Dark mode uses the app's dark background and matching surfaces.",
   },
@@ -94,7 +106,91 @@ const ANSWERS = [
   },
   {
     pattern: /\b(help|what can you do|what can i ask|questions|faq|support)\b/,
-    answer: "I can answer common questions about CareerCompass: finding universities and courses, using My Marks and APS estimates, exploring careers, checking funding, tracking applications, using bookmarks and prospectuses, managing your profile, and changing settings. Ask me about one of those features.",
+    answer: "I can guide you through CareerCompass screens including Home, Universities and institution details, Courses and course details, Funding, APS Calculator and score matches, career assessment and suggestions, applications and the checklist, bookmarks, prospectuses, notifications, FAQs, language, profile, sign-in, and settings. I can also explain common tasks on those screens.",
+  },
+  {
+    pattern: /\b(splash|welcome screen|start screen|onboarding|intro slides|getting started)\b/,
+    answer: "The welcome and onboarding screens introduce CareerCompass and help you get started. Follow the slides with Next, or use Skip when available. You can sign in, create an account, or continue as a guest where offered. The career assessment may appear during first setup and can be completed or skipped.",
+  },
+  {
+    pattern: /\b(career assessment welcome|assessment intro|career quiz start|start career assessment)\b/,
+    answer: "The Career Assessment welcome screen explains the short questionnaire. Choose Start to answer questions about your interests and study preferences. Your responses are used to suggest career areas and related courses; they are guidance, not a formal aptitude test.",
+  },
+  {
+    pattern: /\b(career assessment results|assessment result|my result|career quiz result)\b/,
+    answer: "Career Assessment Results summarises the career area suggested by your answers and offers related ideas. Choose a suggested course category to browse matching courses, or return to the assessment to review your choices. Treat suggestions as a starting point for research.",
+  },
+  {
+    pattern: /\b(course suggestions|suggested courses|recommended courses|assessment courses)\b/,
+    answer: "Course Suggestions shows study options related to the category from your Career Assessment. Open a course for its details, check any listed admission score and subject requirements, and verify them in the institution's current prospectus.",
+  },
+  {
+    pattern: /\b(login screen|sign in screen|google sign.?in|guest mode|continue as guest)\b/,
+    answer: "On the Login screen, sign in with your account details or use Google sign-in if it is available for your build. Password Recovery opens the reset flow. Guest access may let you explore some features, while saving or syncing personal data can require an account.",
+  },
+  {
+    pattern: /\b(sign.?up screen|registration form|create.*account|register screen)\b/,
+    answer: "On Sign Up, enter the requested account details, create a password, and submit the form. Use an email address you can access. If Google sign-up is offered, follow its on-screen prompts. Return to Login if you already have an account.",
+  },
+  {
+    pattern: /\b(password recovery|forgot password|reset password|pass recovery)\b/,
+    answer: "On Password Recovery, enter the email linked to your account and submit the request. Follow the reset instructions sent to your inbox, including checking spam if needed. Return to Login after changing your password.",
+  },
+  {
+    pattern: /\b(edit profile|profile editing|update profile|change profile)\b/,
+    answer: "Open Profile and choose Edit Profile. Update the fields the form allows, then save your changes. If a field is locked or saving fails, check that you are signed in and that your connection is available.",
+  },
+  {
+    pattern: /\b(university details|university page|institution details|college details|college page)\b/,
+    answer: "Open an institution card from Universities to view its details, location, available course or admission information, bookmark control, and official links. Some institutions open a dedicated college page. Use the APS action when shown, and confirm entry requirements and dates with the institution itself.",
+  },
+  {
+    pattern: /\b(course details|course page|qualification details)\b/,
+    answer: "Open a course card to see the available description, institution, listed score or subject checks, and any prospectus or official links. Bookmark it if you want to return later. A listed match is only guidance and does not mean you have been admitted.",
+  },
+  {
+    pattern: /\b(funding details|bursary details|scholarship details|funding page)\b/,
+    answer: "Open a funding item to read its summary and follow the funder's official link when available. Check eligibility, required documents, award amounts, and closing dates on the funder's current page. CareerCompass helps you discover options but does not submit the funding application.",
+  },
+  {
+    pattern: /\b(aps matches|score matches|university aps scores|admission score matches|aps results)\b/,
+    answer: "The admission score matches screen compares your saved score with the institution scoring methods available in the app. Review the score scale and any subject-verification note on each card. Some institutions use different methods or maximums, so use the institution's official course requirements as the final check.",
+  },
+  {
+    pattern: /\b(application guide|application checklist|ready to apply|prepare to apply)\b/,
+    answer: "The Application Guide checklist helps you shortlist programmes, check dates and fees, prepare identity and school documents, submit through the official portal, and save your reference. Tap each step as you complete it; progress is saved. Use the tracker to organise applications, but submit on the institution's own site.",
+  },
+  {
+    pattern: /\b(application tracker|my applications|application status|track applications)\b/,
+    answer: "My Applications is a personal tracker. Add an institution and programme, then record the application date, status, and notes; update the entry as you hear back. It does not send an application or retrieve live status from the institution, so check the official portal and email too.",
+  },
+  {
+    pattern: /\b(notification settings|notification preferences|notification permission|push notification)\b/,
+    answer: "Notification Settings lets you review the available reminder preferences and device permission. If reminders do not arrive, enable CareerCompass notifications in your device settings and check the dates recorded in the app. Keep checking official deadlines independently.",
+  },
+  {
+    pattern: /\b(notifications screen|my notifications|notification inbox|alerts screen)\b/,
+    answer: "The Notifications screen lists alerts available to your account. Tap an alert to open its related course, university, funding item, or application area when a destination is provided. A notification is a reminder, so confirm important details at the official source.",
+  },
+  {
+    pattern: /\b(language screen|choose language|change language|translation settings|app language)\b/,
+    answer: "Open Profile, then Language, and select an available language from the dropdown. The screen previews translated sample text. Translation coverage depends on the selected language and service; if text stays in English, that content may not have a translation. Confirm official requirements in the source material.",
+  },
+  {
+    pattern: /\b(faq screen|frequently asked questions|faq page|help questions)\b/,
+    answer: "The FAQs screen displays expandable questions and answers about planning for university. Tap a question to reveal its answer. If the list is empty, its content may not have loaded; try again with an internet connection or ask me about the app's main features here.",
+  },
+  {
+    pattern: /\b(prospectus screen|open prospectus|view prospectus|pdf viewer|prospectus not opening)\b/,
+    answer: "The Prospectus screen opens the institution document when a valid link is available. Use the open-in-browser control if the built-in viewer cannot display it, and check your connection. Prospectus files and links are supplied by institutions; use the latest official edition.",
+  },
+  {
+    pattern: /\b(bookmarks screen|saved items|saved universities|saved courses|saved funding)\b/,
+    answer: "Bookmarks collects the universities, courses, and funding items you saved. Select a saved card to reopen its details. Remove a saved item with its bookmark control. If your saved items are missing, confirm you are using the same account or device profile.",
+  },
+  {
+    pattern: /\b(splash screen|loading screen|app stuck loading|app will not open)\b/,
+    answer: "The Splash screen appears while CareerCompass starts and checks its local setup. If it remains stuck, close and reopen the app, check your connection, and update to the current build. If it happens repeatedly, note the device and exact error for support.",
   },
 ];
 
@@ -118,7 +214,9 @@ export function getCareerCompassAppAnswer(question) {
   const overviewAnswer = getCareerCompassAppOverviewAnswer(normalized);
   if (overviewAnswer) return overviewAnswer;
 
-  const match = ANSWERS.find(({ pattern }) => pattern.test(normalized));
+  // Screen-specific guides are listed after broad feature answers so they win
+  // when a question matches both (for example, "application tracker screen").
+  const match = [...ANSWERS].reverse().find(({ pattern }) => pattern.test(normalized));
   return match?.answer || OUT_OF_SCOPE;
 }
 
