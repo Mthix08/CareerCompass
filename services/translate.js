@@ -19,7 +19,11 @@ const SUPPORTED_LANGUAGES = new Set([
   'TS',
 ]);
 
-const TRANSLATION_API_URL = process.env.EXPO_PUBLIC_TRANSLATION_API_URL;
+// Keep translation available in browser builds even when a local or EAS
+// EXPO_PUBLIC_TRANSLATION_API_URL value has not been configured.
+const TRANSLATION_API_URL =
+  process.env.EXPO_PUBLIC_TRANSLATION_API_URL ||
+  'https://careercompass-translation.careercompass-za.workers.dev';
 
 const translationsByLanguage = new Map();
 const pendingByLanguage = new Map();

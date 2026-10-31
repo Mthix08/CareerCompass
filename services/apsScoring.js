@@ -192,6 +192,9 @@ export function calculateUniversityScores(universities, marks, rules = apsScorin
     if (!rule || !["verified", "needs_verification"].includes(rule.status)) {
       return { ...university, ...unavailableResult(university.id, rule) };
     }
+    if (rule.method === "not_configured") {
+      return { ...university, ...unavailableResult(university.id, rule, rule.notes?.[0]) };
+    }
     if (!validMarks(marks)) {
       return { ...university, ...unavailableResult(university.id, rule, "Enter valid percentage marks for every selected subject.") };
     }

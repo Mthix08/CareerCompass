@@ -17,6 +17,7 @@ import {
 import Text from '../components/TranslatedText';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useProfile } from "../context/ProfileContext";
+import { getApsScoreDisplay } from "../utils/apsScoreDisplay";
 import { loadCollection } from "../data/firestoreContent";
 import { getInstitutionApsMatches, getInstitutionApsResults } from "../data/apsMatching";
 import { universities } from "../data/universities";
@@ -268,7 +269,9 @@ function ApsResultModal({ result, onClose, onViewMatches, onViewUniversities, on
                 </View>
               </View>
             )}
-            renderItem={({ item }) => (
+            renderItem={({ item }) => {
+              const display = getApsScoreDisplay(item.score, item.maximumScore, item.id);
+              return (
               <View style={styles.universityResultRow}>
                 <View style={styles.universityLogoWrap}>
                   {item.logo ? (
@@ -308,16 +311,17 @@ function ApsResultModal({ result, onClose, onViewMatches, onViewUniversities, on
                     styles.universityResultScore,
                     item.score == null && styles.unavailableScore,
                   ]}>
-                    {item.score == null ? "—" : item.id === "stellenbosch" ? Number(item.score).toFixed(2) : item.score}
+                    {item.score == null ? "—" : item.id === "stellenbosch" ? Number(display.score).toFixed(2) : display.score}
                   </Text>
                   {item.score != null && item.maximumScore != null ? (
                     <Text style={styles.universityResultScoreDetails}>
-                      /{item.maximumScore}{item.maximumBonusScore ? ` +${item.maximumBonusScore}` : ""}
+                      {item.id === "nmu" ? `AS / ${display.maximumScore}` : `/${item.maximumScore}`}{item.maximumBonusScore ? ` +${item.maximumBonusScore}` : ""}
                     </Text>
                   ) : null}
                 </View>
               </View>
-            )}
+              );
+            }}
             ListFooterComponent={(
               <View>
                 <Pressable

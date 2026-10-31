@@ -106,11 +106,14 @@ export default function AssistantScreen({ navigation }) {
   );
 
   const speak = async (text) => {
-    Speech.stop();
+    setVoiceError("");
+    await Speech.stop().catch(() => {});
     setIsSpeaking(true);
 
     try {
-      const voices = await Speech.getAvailableVoicesAsync();
+      // Voice discovery can fail on some Android TTS providers. The system
+      // voice still works, so never let discovery prevent Speech.speak().
+      const voices = await Speech.getAvailableVoicesAsync().catch(() => []);
       const preferredVoice = voices.find(
         ({ language }) => language?.toLowerCase() === "en-za",
       );
@@ -118,21 +121,21 @@ export default function AssistantScreen({ navigation }) {
         language?.toLowerCase().startsWith("en"),
       );
 
+      const selectedVoice = preferredVoice || fallbackVoice;
       Speech.speak(text, {
-        ...(preferredVoice || fallbackVoice ?
-          { voice: (preferredVoice || fallbackVoice).identifier }
-        : {}),
-        language:
-          preferredVoice?.language || fallbackVoice?.language || "en-US",
+        ...(selectedVoice?.identifier ? { voice: selectedVoice.identifier } : {}),
+        language: selectedVoice?.language || "en-US",
         rate: 0.95,
         onDone: () => setIsSpeaking(false),
         onStopped: () => setIsSpeaking(false),
-        onError: () => {
+        onError: (error) => {
           setIsSpeaking(false);
+          setVoiceError(error?.message || "Read aloud could not start. Check your device's speech settings and volume.");
         },
       });
-    } catch {
+    } catch (error) {
       setIsSpeaking(false);
+      setVoiceError(error?.message || "Read aloud could not start. Check your device's speech settings and volume.");
     }
   };
 

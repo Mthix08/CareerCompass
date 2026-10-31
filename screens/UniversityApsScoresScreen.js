@@ -49,7 +49,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
         >
           <Ionicons name="arrow-back" size={25} color={COLORS.onPrimary} />
         </Pressable>
-        <Text style={styles.headerTitle}>Your APS matches</Text>
+        <Text style={styles.headerTitle}>Your admission score matches</Text>
         <Text style={styles.headerSubtitle}>
           {apsRecord
             ? `Institution-specific score estimates · ${apsRecord.period}`
@@ -67,11 +67,11 @@ export default function UniversityApsScoresScreen({ navigation }) {
             <View>
               <Text style={styles.listTitle}>
                 {apsRecord
-                  ? `${matchingUniversities.length} universities with APS matches`
-                  : "Universities with APS matches"}
+                  ? `${matchingUniversities.length} universities with admission score matches`
+                  : "Universities with admission score matches"}
               </Text>
               <Text style={styles.listSubtitle}>
-                Matches use institution-specific scores recalculated from your saved marks.
+                Matches use institution-specific scores recalculated from your saved marks. Some universities, including NMU, use a different score from APS.
               </Text>
             </View>
           </View>
@@ -80,7 +80,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
           <View style={styles.emptyState}>
             <Ionicons name="school-outline" size={32} color={COLORS.primary} />
             <Text style={styles.emptyTitle}>
-              {apsRecord ? "No APS matches found" : "Calculate your APS first"}
+              {apsRecord ? "No admission score matches found" : "Calculate your scores first"}
             </Text>
             <Text style={styles.emptyText}>
               {apsRecord
@@ -111,7 +111,7 @@ export default function UniversityApsScoresScreen({ navigation }) {
           apsRecord && matchingUniversities.length > 0 ? (
             <View>
               <Text style={styles.disclaimer}>
-                These results compare institution-specific APS estimates and the listed Maths rule only. {verificationCourseCount > 0 ? `${verificationCourseCount} courses have Maths requirements that need verification. ` : ""}Review every other subject requirement, selection rule and current prospectus on the course page. This is not an admission decision or offer.
+                These results compare institution-specific admission score estimates and the listed Maths rule only. {verificationCourseCount > 0 ? `${verificationCourseCount} courses have Maths requirements that need verification. ` : ""}Review every other subject requirement, selection rule and current prospectus on the course page. This is not an admission decision or offer.
               </Text>
               <Pressable
                 onPress={() => navigation.navigate("Home", {

@@ -163,7 +163,13 @@ export default function HomeScreen({ navigation }) {
     if (deadlineNow === null) return [];
     const universityItems = deadlines
       .map((deadline) => {
-        const closesAt = deadline.closesAt ? new Date(deadline.closesAt) : null;
+        const closingValue = deadline.closesAt;
+        const closesAt = typeof closingValue?.toDate === "function"
+          ? closingValue.toDate()
+          : closingValue && typeof closingValue === "object"
+            && Number.isFinite(closingValue.seconds)
+            ? new Date(closingValue.seconds * 1000 + (closingValue.nanoseconds || 0) / 1_000_000)
+            : closingValue ? new Date(closingValue) : null;
         const validDate = closesAt && !Number.isNaN(closesAt.getTime());
         const difference = validDate ? closesAt.getTime() - deadlineNow : null;
         const closed = validDate && difference < 0;
@@ -430,7 +436,7 @@ export default function HomeScreen({ navigation }) {
           </View>
 
           <View style={styles.sectionWithPadding}>
-            <SectionHeader title="Universities with APS matches" colors={colors} />
+            <SectionHeader title="University admission score matches" colors={colors} />
             <Text style={styles.helperText}>
               {apsRecord
                 ? `Using institution-specific scores recalculated from your ${apsRecord.period} marks. Estimates do not guarantee admission.`
@@ -449,7 +455,7 @@ export default function HomeScreen({ navigation }) {
             <Pressable
               onPress={openAllApsScores}
               accessibilityRole="button"
-              accessibilityLabel="See all university APS scores"
+              accessibilityLabel="See all university admission scores"
               style={({ pressed }) => [
                 styles.outlineButton,
                 pressed && styles.primaryPressed,

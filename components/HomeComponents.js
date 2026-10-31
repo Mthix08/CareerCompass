@@ -4,6 +4,7 @@ import Text from './TranslatedText';
 import { Ionicons } from "@expo/vector-icons";
 import { getUniversityTheme } from "../data/universityTheme";
 import FundingLogo from "./FundingLogo";
+import { getApsScoreDisplay } from "../utils/apsScoreDisplay";
 
 export const SectionHeader = memo(function SectionHeader({ title, icon, actionLabel, onActionPress, colors }) {
   const styles = useMemo(() => createStyles(colors), [colors]);
@@ -97,8 +98,9 @@ export const FundingDeadlineCard = memo(function FundingDeadlineCard({ item, col
 
 export const APSScoreRow = memo(function APSScoreRow({ university, score, maximumScore, caption, colors }) {
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const display = getApsScoreDisplay(score, maximumScore, university.id);
   return (
-    <View style={styles.apsRow} accessibilityLabel={`${university.name}, current APS score ${score}`}>
+    <View style={styles.apsRow} accessibilityLabel={`${university.name}, ${display.accessibilityLabel}`}>
       <View style={styles.logoWrapMedium}>
         <Image source={university.logo} style={styles.logoMedium} resizeMode="contain" accessibilityLabel={`${university.shortName} logo`} />
       </View>
@@ -106,7 +108,10 @@ export const APSScoreRow = memo(function APSScoreRow({ university, score, maximu
         <Text style={styles.apsName} numberOfLines={2}>{university.name}</Text>
         <Text style={styles.apsDefault}>{caption || "Not calculated yet"}</Text>
       </View>
-      <View style={styles.apsValueWrap}><Text style={styles.apsValue}>{score ?? "—"}</Text><Text style={styles.apsLabel}>{Number.isFinite(score) && Number.isFinite(maximumScore) ? `/ ${maximumScore}` : "APS"}</Text></View>
+      <View style={styles.apsValueWrap}>
+        <Text style={styles.apsValue}>{display.score ?? "—"}</Text>
+        <Text style={styles.apsLabel}>{display.scaleLabel}</Text>
+      </View>
     </View>
   );
 });
@@ -196,7 +201,7 @@ const createStyles = (colors) => StyleSheet.create({
   apsNameWrap: { flex: 1, minWidth: 0, marginHorizontal: 12 },
   apsName: { color: colors.text, fontSize: 14, lineHeight: 19, fontWeight: "800" },
   apsDefault: { marginTop: 4, color: colors.mutedText, fontSize: 11 },
-  apsValueWrap: { minWidth: 48, alignItems: "flex-end" },
+  apsValueWrap: { minWidth: 64, alignItems: "flex-end" },
   apsValue: { color: colors.primary, fontSize: 25, lineHeight: 28, fontWeight: "900" },
   apsLabel: { marginTop: 1, color: colors.primary, fontSize: 10, fontWeight: "900" },
   universityCard: { height: 310, overflow: "hidden", borderRadius: 22, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface, shadowColor: colors.text, shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.12, shadowRadius: 10, elevation: 4 },

@@ -15,13 +15,13 @@ const provisionalBestSubjectsRule = ({
   admissionsYear = 2027,
   count = 6,
   methodLabel,
-  status = "needs_verification",
   subjectSelection = {},
   notes = [],
 }) => ({
   universityId,
   admissionsYear,
-  status,
+  // Provisional formulas stay unverified even if a caller passes a stale status.
+  status: "needs_verification",
   method: "nsc_levels_best_n",
   methodLabel: methodLabel || `Best ${count} NSC achievement levels (provisional)`,
   subjectSelection: { mode: "best_n", count, ...subjectSelection },
@@ -57,6 +57,16 @@ export const apsScoringRules = {
     maximumScore: 43,
     sourceUrl: "https://cms.cut.ac.za/Files/Froala/eb2a99cd-f346-42c9-9aae-3598ecd7dfab.pdf",
     notes: ["CUT's 2026 calendar describes the best six subjects and one APS point for Life Orientation."],
+  },
+  cput: {
+    universityId: "cput",
+    admissionsYear: 2027,
+    status: "needs_verification",
+    method: "not_configured",
+    methodLabel: "CPUT APS method needs verification",
+    maximumScore: null,
+    sourceUrl: "https://cput.ac.za/study-at-cput/undergraduate/apply/step-1",
+    notes: ["CPUT requirements are qualification-specific. A general 2027 scoring formula has not been verified, so no estimate is shown."],
   },
   ul: {
     universityId: "ul",

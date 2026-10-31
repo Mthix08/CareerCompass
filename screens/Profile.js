@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef } from "react";
+import React, { useCallback, useEffect, useMemo } from "react";
 import { useFocusEffect } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import {
@@ -33,21 +33,6 @@ import { getCareerAssessment } from "../services/careerAssessmentService";
 import { getUnreadNotificationCount } from "../services/courseSuggestionNotifications";
 
 const THEMES = ["Light", "Dark", "System"];
-
-function IconButton({ icon, label, onPress, styles }) {
-  const { colors } = useProfile();
-  return (
-    <Pressable
-      onPress={onPress}
-      accessibilityRole="button"
-      accessibilityLabel={label}
-      hitSlop={6}
-      style={({ pressed }) => [styles.headerButton, pressed && styles.pressed]}
-    >
-      <Ionicons name={icon} size={22} color={colors.text} />
-    </Pressable>
-  );
-}
 
 function ReadOnlyDetail({ icon, label, value, styles }) {
   const { colors } = useProfile();
@@ -110,7 +95,6 @@ export default function ProfileScreen({ navigation }) {
   const latestApsRecord = getLatestApsRecord(profile?.apsRecords);
   const apsBadge = latestApsRecord ? `Score: ${latestApsRecord.totalAps}` : "Not calculated";
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const scrollRef = useRef(null);
   const [deletePassword, setDeletePassword] = React.useState("");
   const [reauthVisible, setReauthVisible] = React.useState(false);
   const [isDeleting, setIsDeleting] = React.useState(false);
@@ -356,23 +340,10 @@ export default function ProfileScreen({ navigation }) {
       />
 
       <View style={styles.fixedHeader}>
-        <IconButton
-          icon="arrow-back"
-          label="Back to Home"
-          onPress={() => navigation.navigate("Home")}
-          styles={styles}
-        />
         <Text style={styles.headerTitle}>My Profile</Text>
-        <IconButton
-          icon="settings-outline"
-          label="Go to theme settings"
-          onPress={() => scrollRef.current?.scrollToEnd({ animated: true })}
-          styles={styles}
-        />
       </View>
 
       <ScrollView
-        ref={scrollRef}
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
@@ -762,19 +733,9 @@ function createStyles(colors) {
       borderBottomColor: colors.border,
       flexDirection: "row",
       alignItems: "center",
-      justifyContent: "space-between",
+      justifyContent: "center",
       backgroundColor: colors.background,
       zIndex: 2,
-    },
-    headerButton: {
-      width: 46,
-      height: 46,
-      borderRadius: 23,
-      borderWidth: 1,
-      borderColor: colors.border,
-      alignItems: "center",
-      justifyContent: "center",
-      backgroundColor: colors.surface,
     },
     headerTitle: { color: colors.text, fontSize: 19, fontWeight: "800" },
     scrollView: { flex: 1 },
