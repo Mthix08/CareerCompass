@@ -6,7 +6,6 @@ import {
 } from "expo-speech-recognition";
 import { Ionicons } from "@expo/vector-icons";
 import {
-  ActivityIndicator,
   FlatList,
   KeyboardAvoidingView,
   Platform,
@@ -19,53 +18,12 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import {
-  getCareerCompassAppOverviewAnswer,
-  getLocalCareerCompassAnswer,
+  getCareerCompassAppAnswer,
 } from "../data/careerCompassKnowledge";
 import { useProfile } from "../context/ProfileContext";
 
 const WELCOME_MESSAGE =
   "Hi, I’m your CareerCompass Assistant. Ask me about universities, courses, careers, funding, or using the app.";
-
-async function getAssistantAnswer(question) {
-  const configuredUrl =
-    process.env.EXPO_PUBLIC_ASSISTANT_API_URL ||
-    process.env.EXPO_PUBLIC_TRANSLATION_API_URL ||
-    "https://careercompass-translation.careercompass-za.workers.dev";
-  const endpoint = `${configuredUrl.replace(/\/+$/, "").replace(/\/(translate|assistant)$/, "")}/assistant`;
-  for (let attempt = 0; attempt < 2; attempt += 1) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 30_000);
-    try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question }),
-        signal: controller.signal,
-      });
-      let data;
-      try {
-        data = await response.json();
-      } catch {
-        data = null;
-      }
-      if (!response.ok) {
-        if (attempt === 0 && [502, 503, 504].includes(response.status)) {
-          await new Promise((resolve) => setTimeout(resolve, 800));
-          continue;
-        }
-        throw new Error(data?.error || `Assistant request failed (${response.status})`);
-      }
-      if (typeof data.answer !== "string" || !data.answer.trim()) {
-        throw new Error("Assistant returned no answer");
-      }
-      return data.answer.trim();
-    } finally {
-      clearTimeout(timeout);
-    }
-  }
-  throw new Error("Assistant request failed");
-}
 
 export default function AssistantScreen({ navigation }) {
   const { colors } = useProfile();
@@ -73,7 +31,6 @@ export default function AssistantScreen({ navigation }) {
     { id: "welcome", role: "assistant", text: WELCOME_MESSAGE },
   ]);
   const [question, setQuestion] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [voiceError, setVoiceError] = useState("");
@@ -156,44 +113,17 @@ export default function AssistantScreen({ navigation }) {
     }
   };
 
-  const askQuestion = async () => {
+  const askQuestion = () => {
     const trimmedQuestion = question.trim();
-    if (!trimmedQuestion || isLoading) return;
+    if (!trimmedQuestion) return;
 
+    const answer = getCareerCompassAppAnswer(trimmedQuestion);
     setMessages((current) => [
       ...current,
       { id: `${Date.now()}-user`, role: "user", text: trimmedQuestion },
+      { id: `${Date.now()}-assistant`, role: "assistant", text: answer },
     ]);
     setQuestion("");
-    setIsLoading(true);
-
-    try {
-      const answer =
-        getCareerCompassAppOverviewAnswer(trimmedQuestion) ||
-        await getAssistantAnswer(trimmedQuestion);
-      setMessages((current) => [
-        ...current,
-        { id: `${Date.now()}-assistant`, role: "assistant", text: answer },
-      ]);
-    } catch (error) {
-      const serverMessage = error?.message || "";
-      const serviceNotConfigured = /not configured/i.test(serverMessage);
-      const detail = serviceNotConfigured
-        ? "The online assistant has not been configured on the server yet. Its administrator needs to add the Gemini key."
-        : serverMessage && serverMessage !== "Assistant request failed"
-          ? `The online assistant could not respond: ${serverMessage}`
-          : "The online assistant could not respond right now.";
-      setMessages((current) => [
-        ...current,
-        {
-          id: `${Date.now()}-fallback`,
-          role: "assistant",
-          text: `${detail} Here is an offline suggestion:\n\n${getLocalCareerCompassAnswer(trimmedQuestion)}`,
-        },
-      ]);
-    } finally {
-      setIsLoading(false);
-    }
   };
 
   const toggleVoiceInput = async () => {
@@ -257,7 +187,7 @@ export default function AssistantScreen({ navigation }) {
             </Text>
           </View>
           <View style={styles.headerIcon}>
-            <Ionicons name="sparkles-outline" size={21} color="#FFFFFF" />
+          <Ionicons name="sparkles-outline" size={21} color={colors.onPrimary} />
           </View>
         </View>
 
@@ -315,11 +245,6 @@ export default function AssistantScreen({ navigation }) {
               </View>
             </View>
           )}
-          ListFooterComponent={
-            isLoading ?
-              <ActivityIndicator color={colors.primary} style={styles.loader} />
-            : null
-          }
         />
 
         <View style={styles.composer}>
@@ -336,7 +261,6 @@ export default function AssistantScreen({ navigation }) {
           />
           <Pressable
             onPress={toggleVoiceInput}
-            disabled={isLoading}
             style={[
               styles.voiceButton,
               isListening && styles.voiceButtonActive,
@@ -345,32 +269,32 @@ export default function AssistantScreen({ navigation }) {
             accessibilityLabel={
               isListening ? "Stop voice input" : "Start voice input"
             }
-            accessibilityState={{ busy: isListening, disabled: isLoading }}
+            accessibilityState={{ busy: isListening }}
           >
             <Ionicons
               name={isListening ? "mic" : "mic-outline"}
               size={21}
-              color={isListening ? "#FFFFFF" : colors.primary}
+              color={isListening ? colors.onPrimary : colors.primary}
             />
           </Pressable>
           <Pressable
             onPress={askQuestion}
-            disabled={!question.trim() || isLoading}
+            disabled={!question.trim()}
             style={[
               styles.sendButton,
-              (!question.trim() || isLoading) && styles.sendDisabled,
+              !question.trim() && styles.sendDisabled,
             ]}
             accessibilityRole="button"
             accessibilityLabel="Send question"
           >
-            <Ionicons name="arrow-up" size={21} color="#FFFFFF" />
+            <Ionicons name="arrow-up" size={21} color={colors.onPrimary} />
           </Pressable>
         </View>
         {voiceError ?
           <Text style={styles.voiceError}>{voiceError}</Text>
         : null}
         <Text style={styles.disclaimer}>
-          Online questions are processed by Google Gemini. Avoid sharing passwords, ID numbers, or banking details. Answers are limited to CareerCompass information.
+          This demo assistant answers common CareerCompass questions instantly with built-in guidance. For current admission or funding details, confirm with the official institution or funder.
         </Text>
       </KeyboardAvoidingView>
     </SafeAreaView>
@@ -411,7 +335,7 @@ const createStyles = (colors) =>
     },
     userBubble: { backgroundColor: colors.primary, borderBottomRightRadius: 5 },
     messageText: { color: colors.text, fontSize: 15, lineHeight: 22 },
-    userText: { color: "#FFFFFF" },
+    userText: { color: colors.onPrimary },
     speakButton: {
       flexDirection: "row",
       alignItems: "center",
@@ -419,7 +343,6 @@ const createStyles = (colors) =>
       gap: 5,
     },
     speakText: { color: colors.primary, fontSize: 12, fontWeight: "700" },
-    loader: { marginVertical: 10 },
     composer: {
       flexDirection: "row",
       alignItems: "flex-end",
