@@ -142,15 +142,20 @@ export default function ProfileScreen({ navigation }) {
     accountOnly(() => navigation.navigate("EditProfile"));
   };
 
+  const goToLogin = () => navigation.navigate("Login");
+
   const handleGuestSignIn = () => {
     clearSession();
-    navigation.getParent()?.getParent()?.reset({
-      index: 0,
-      routes: [{ name: "Login" }],
-    });
+    goToLogin();
   };
 
   const handleSignOut = () => {
+    if (Platform.OS === "web") {
+      if (typeof window === "undefined" || !window.confirm("Sign out of CareerCompass?")) return;
+      void completeSignOut();
+      return;
+    }
+
     Alert.alert(
       isGuest ? "Leave guest mode?" : "Sign out?",
       "You can return to CareerCompass at any time.",
@@ -159,34 +164,37 @@ export default function ProfileScreen({ navigation }) {
         {
           text: "Sign Out",
           style: "destructive",
-          onPress: async () => {
-            if (isAuthenticated) {
-              try {
-                await signOut(auth);
-              } catch (error) {
-                Alert.alert(
-                  "Sign out failed",
-                  "We could not sign you out. Check your connection and try again.",
-                );
-                return;
-              }
-            }
-
-            try {
-              await signOutFromGoogle();
-            } catch (error) {
-              console.warn("Unable to clear the native Google session.", error);
-            }
-
-            clearSession();
-            navigation.getParent()?.getParent()?.reset({
-              index: 0,
-              routes: [{ name: "Login" }],
-            });
-          },
+          onPress: completeSignOut,
         },
       ],
     );
+  };
+
+  const completeSignOut = async () => {
+    if (isAuthenticated) {
+      try {
+        await signOut(auth);
+      } catch (_error) {
+        if (Platform.OS === "web") {
+          window.alert("We could not sign you out. Check your connection and try again.");
+        } else {
+          Alert.alert(
+            "Sign out failed",
+            "We could not sign you out. Check your connection and try again.",
+          );
+        }
+        return;
+      }
+    }
+
+    try {
+      await signOutFromGoogle();
+    } catch (error) {
+      console.warn("Unable to clear the native Google session.", error);
+    }
+
+    clearSession();
+    goToLogin();
   };
 
   const performAccountDeletion = async () => {
@@ -208,10 +216,7 @@ export default function ProfileScreen({ navigation }) {
         console.warn("Unable to clear the native Google session after deletion.", error);
       });
       clearSession();
-      navigation.getParent()?.getParent()?.reset({
-        index: 0,
-        routes: [{ name: "Login" }],
-      });
+      goToLogin();
     } catch (error) {
       Alert.alert(
         "Account deletion failed",

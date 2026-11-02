@@ -33,11 +33,13 @@ export default function SignUpScreen({ navigation }) {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+  const [googleError, setGoogleError] = useState("");
 
   const handleGoogleSignUp = async () => {
     if (isLoading || isGoogleLoading) return;
 
     try {
+      setGoogleError("");
       setIsGoogleLoading(true);
       const credential = await signInWithGoogle();
       const googleName = credential.user.displayName?.trim() || "Student";
@@ -64,10 +66,11 @@ export default function SignUpScreen({ navigation }) {
       navigation?.reset({ index: 0, routes: [{ name: route }] });
     } catch (error) {
       if (error.code !== "auth/popup-closed-by-user") {
-        Alert.alert(
-          "Google sign-up unavailable",
-          getGoogleAuthErrorMessage(error),
-        );
+        const message = getGoogleAuthErrorMessage(error);
+        setGoogleError(message);
+        if (Platform.OS !== "web") {
+          Alert.alert("Google sign-up unavailable", message);
+        }
       }
     } finally {
       setIsGoogleLoading(false);
@@ -343,7 +346,6 @@ export default function SignUpScreen({ navigation }) {
               {isLoading ? "Creating account..." : "Create account"}
             </Text>
           </TouchableOpacity>
-
           <TouchableOpacity
             style={[styles.googleButton, isGoogleLoading && styles.buttonDisabled]}
             activeOpacity={0.8}
@@ -355,6 +357,7 @@ export default function SignUpScreen({ navigation }) {
               {isGoogleLoading ? "Connecting..." : "Continue with Google"}
             </Text>
           </TouchableOpacity>
+          {!!googleError && <Text style={styles.errorText} accessibilityRole="alert">{googleError}</Text>}
 
           <View style={styles.bottomTextContainer}>
             <Text style={styles.bottomText}>Already have an account? </Text>

@@ -22,6 +22,18 @@ export function getGoogleAuthErrorMessage(error) {
     return "Add the Google web OAuth client ID before using Google sign-in on mobile.";
   }
 
+  if (error?.code === "auth/unauthorized-domain") {
+    return "Add careercompass-students.web.app to Firebase Authentication's authorized domains, then try Google sign-in again.";
+  }
+
+  if (error?.code === "auth/popup-blocked") {
+    return "Your browser blocked the Google sign-in window. Allow pop-ups for this site and try again.";
+  }
+
+  if (error?.code === "auth/operation-not-allowed") {
+    return "Enable Google as a sign-in provider in Firebase Authentication, then try again.";
+  }
+
   const code = String(error?.code || "").toUpperCase();
   const message = String(error?.message || "").toUpperCase();
   if (code === "10" || code === "DEVELOPER_ERROR" || message.includes("DEVELOPER_ERROR")) {

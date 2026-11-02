@@ -5,9 +5,17 @@
   "storage": {
     "rules": "storage.rules"
   },
-  "hosting": {
-    "site": "careercompass-admin",
-    "public": "admin",
-    "ignore": ["firebase.json", "**/.*"]
-  }
+  "hosting": [
+    {
+      "site": "careercompass-admin",
+      "public": "admin",
+      "ignore": ["firebase.json", "**/.*"]
+    },
+    {
+      "target": "students",
+      "public": "dist-web-check",
+      "ignore": ["firebase.json", "**/.*"],
+      "rewrites": [{ "source": "**", "destination": "/index.html" }]
+    }
+  ]
 }
