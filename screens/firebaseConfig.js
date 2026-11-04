@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { initializeAuth } from "firebase/auth";
+import { getAuth, initializeAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { Platform } from "react-native";
@@ -22,7 +22,10 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-const authConfig = persistence ? { persistence } : {};
-export const auth = initializeAuth(app, authConfig);
+// Firebase's browser auth instance uses durable browser persistence by default.
+// Keep AsyncStorage-backed persistence for native installs.
+export const auth = Platform.OS === "web"
+  ? getAuth(app)
+  : initializeAuth(app, { persistence });
 export const db = getFirestore(app);
 export const storage = getStorage(app);

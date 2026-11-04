@@ -57,10 +57,6 @@ export default function FundingScreen({ navigation }) {
     <SafeAreaView style={styles.safeArea} edges={["top", "left", "right"]}>
       <StatusBar style={resolvedTheme === "dark" ? "light" : "dark"} />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-        <Pressable onPress={() => navigation.goBack()} accessibilityRole="button" accessibilityLabel="Go back" style={styles.back}>
-          <Ionicons name="arrow-back" size={22} color={colors.text} />
-          <Text style={styles.backText}>Back</Text>
-        </Pressable>
         <Text style={styles.eyebrow}>STUDENT FUNDING</Text>
         <Text style={styles.title}>Funding</Text>
         <Text style={styles.intro}>Explore support for your studies. Start with South Africa&apos;s national student funding scheme.</Text>
@@ -154,8 +150,6 @@ function makeStyles(c) {
   return StyleSheet.create({
     safeArea: { flex: 1, backgroundColor: c.background },
     content: { padding: 20, paddingBottom: 42 },
-    back: { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", gap: 8, marginBottom: 24 },
-    backText: { color: c.text, fontSize: 16, fontWeight: "600" },
     eyebrow: { color: c.primary, fontSize: 12, fontWeight: "800", letterSpacing: 1.5 },
     title: { color: c.text, fontSize: 34, fontWeight: "800", marginTop: 6 },
     intro: { color: c.secondaryText, fontSize: 15, lineHeight: 23, marginTop: 9, marginBottom: 22 },

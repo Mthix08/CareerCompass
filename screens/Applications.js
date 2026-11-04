@@ -39,6 +39,7 @@ const STATUSES = [
   { label: "Documents submitted", color: "#8B5CF6" },
   { label: "Waitlisted", color: "#F97316" },
   { label: "Offer received", color: "#16A34A" },
+  { label: "Offer accepted", color: "#059669" },
   { label: "Rejected", color: "#D64545" },
 ];
 
@@ -497,11 +498,21 @@ export default function Applications({ navigation }) {
   };
 
   const saveApplication = (application) => {
+    const acceptedOffer =
+      application.status.label === "Offer accepted" &&
+      editingApplication?.status.label !== "Offer accepted";
     setApplications((current) =>
       editingApplication
         ? current.map((item) => item.id === application.id ? application : item)
         : [application, ...current],
     );
+    if (acceptedOffer) {
+      Alert.alert(
+        "Congratulations! 🎉",
+        `You accepted your offer to study ${application.course} at ${application.university}. Best of luck on this exciting next step!`,
+        [{ text: "Thanks!" }],
+      );
+    }
     if (userId) {
       // remembered as "pending" until Firestore confirms it, so an offline save is never lost
       pendingRef.current.upserts[application.id] = application;

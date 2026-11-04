@@ -8,6 +8,7 @@ node_modules/
 .expo-tooling/
 .npm-cache/
 dist/
+dist-web-check/
 web-build/
 expo-env.d.ts
 

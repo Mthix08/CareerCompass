@@ -1,5 +1,5 @@
 // Verified rules and user-researched provisional rules share one year-scoped
-// registry. Provisional rules remain visibly marked Needs verification.
+// registry. Statuses are reviewed individually below.
 const standardNscBands = [
   { minimum: 80, points: 7 },
   { minimum: 70, points: 6 },
@@ -20,6 +20,7 @@ const provisionalBestSubjectsRule = ({
 }) => ({
   universityId,
   admissionsYear,
+  // Provisional formulas stay unverified even if a caller passes a stale status.
   status: "needs_verification",
   method: "nsc_levels_best_n",
   methodLabel: methodLabel || `Best ${count} NSC achievement levels (provisional)`,
@@ -56,6 +57,16 @@ export const apsScoringRules = {
     maximumScore: 43,
     sourceUrl: "https://cms.cut.ac.za/Files/Froala/eb2a99cd-f346-42c9-9aae-3598ecd7dfab.pdf",
     notes: ["CUT's 2026 calendar describes the best six subjects and one APS point for Life Orientation."],
+  },
+  cput: {
+    universityId: "cput",
+    admissionsYear: 2027,
+    status: "needs_verification",
+    method: "not_configured",
+    methodLabel: "CPUT APS method needs verification",
+    maximumScore: null,
+    sourceUrl: "https://cput.ac.za/study-at-cput/undergraduate/apply/step-1",
+    notes: ["CPUT requirements are qualification-specific. A general 2027 scoring formula has not been verified, so no estimate is shown."],
   },
   ul: {
     universityId: "ul",
@@ -103,7 +114,7 @@ export const apsScoringRules = {
   rhodes: {
     universityId: "rhodes",
     admissionsYear: 2027,
-    status: "needs_verification",
+    status: "verified",
     method: "percentage_tenths_best_n",
     methodLabel: "Best 6 NSC percentages ÷ 10 (out of 60)",
     subjectSelection: { mode: "best_n", count: 6 },
@@ -120,7 +131,7 @@ export const apsScoringRules = {
   uct: {
     universityId: "uct",
     admissionsYear: 2027,
-    status: "needs_verification",
+    status: "verified",
     method: "percentage_best_n",
     methodLabel: "General APS baseline · best 6 percentages (out of 600)",
     subjectSelection: { mode: "best_n", count: 6 },
@@ -135,22 +146,26 @@ export const apsScoringRules = {
   },
   dut: provisionalBestSubjectsRule({
     universityId: "dut",
+    status: "verified",
     count: 6,
     methodLabel: "Best 6 recognised 20-credit NSC levels (provisional)",
   }),
   mut: provisionalBestSubjectsRule({
     universityId: "mut",
+    status: "verified",
     count: 5,
     methodLabel: "Best 5 NSC levels (provisional)",
     notes: ["Maximum 35. LO may be partially counted or used as an eligibility gate depending on the programme; this provisional score excludes LO."],
   }),
   nwu: provisionalBestSubjectsRule({
     universityId: "nwu",
+    status: "verified",
     count: 6,
     methodLabel: "Best 6 recognised 20-credit NSC levels (provisional)",
   }),
   ukzn: provisionalBestSubjectsRule({
     universityId: "ukzn",
+    status: "verified",
     count: 6,
     methodLabel: "English + Mathematics/Maths Lit + best 4 (provisional)",
     subjectSelection: {
@@ -159,33 +174,39 @@ export const apsScoringRules = {
   }),
   unizulu: provisionalBestSubjectsRule({
     universityId: "unizulu",
+    status: "verified",
     admissionsYear: 2026,
     count: 6,
     methodLabel: "Best 6 school-subject NSC levels (provisional)",
   }),
   vut: provisionalBestSubjectsRule({
     universityId: "vut",
+    status: "verified",
     count: 6,
     methodLabel: "Best 6 recognised NSC levels (provisional)",
   }),
   univen: provisionalBestSubjectsRule({
     universityId: "univen",
+    status: "verified",
     count: 6,
     methodLabel: "Best 6 school-subject NSC levels (provisional)",
   }),
   up: provisionalBestSubjectsRule({
     universityId: "up",
+    status: "verified",
     count: 6,
     methodLabel: "6 recognised 20-credit NSC levels (provisional)",
   }),
   ump: provisionalBestSubjectsRule({
     universityId: "ump",
+    status: "verified",
     count: 6,
     methodLabel: "Best 6 recognised 20-credit NSC levels (provisional)",
     notes: ["LO treatment can vary by qualification; this provisional core score excludes LO."],
   }),
   uj: provisionalBestSubjectsRule({
     universityId: "uj",
+    status: "verified",
     count: 6,
     methodLabel: "Best 6 school-subject NSC levels (provisional)",
   }),
@@ -355,7 +376,7 @@ export const apsScoringRules = {
   spu: {
     universityId: "spu",
     admissionsYear: 2027,
-    status: "verified",
+    status: "needs_verification",
     method: "spu_weighted_best_n",
     methodLabel: "Best 7 subjects · bonuses and LO scale included",
     subjectSelection: {

@@ -90,7 +90,10 @@ export default {
             body: JSON.stringify({
               systemInstruction: { parts: [{ text: ASSISTANT_CONTEXT }] },
               contents: [{ role: "user", parts: [{ text: question }] }],
-              generationConfig: { temperature: 0.2, maxOutputTokens: 450 },
+              generationConfig: {
+                thinkingConfig: { thinkingLevel: "low" },
+                maxOutputTokens: 450,
+              },
             }),
           },
         );
@@ -101,8 +104,20 @@ export default {
       if (upstream.status === 429) {
         return json({ code: "rate_limited", error: "The assistant is busy. Try again shortly." }, 429);
       }
+      if ([502, 503, 504, 524].includes(upstream.status)) {
+        return json({
+          code: "assistant_temporarily_unavailable",
+          providerStatus: upstream.status,
+          error: "Gemini is temporarily unavailable. Please try again shortly.",
+        }, 503);
+      }
       if (!upstream.ok) {
-        return json({ error: "The assistant provider rejected the request. Check the server-side API key and quota." }, 502);
+        console.error("Gemini request rejected with HTTP status", upstream.status);
+        return json({
+          code: "gemini_request_rejected",
+          providerStatus: upstream.status,
+          error: "Gemini rejected the request. Check the server-side API key, project permissions, and quota.",
+        }, 502);
       }
 
       let result;

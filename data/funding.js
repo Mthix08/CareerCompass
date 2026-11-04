@@ -25,6 +25,15 @@ export const NSFAS = {
 
 export function parseFundingDeadline(deadline) {
   if (!deadline || typeof deadline !== "string") return null;
+  const isoDate = deadline.match(/^(\d{4})-(\d{2})-(\d{2})(?:$|T)/);
+  if (isoDate) {
+    const [, year, month, day] = isoDate;
+    const parsedDate = new Date(Date.UTC(Number(year), Number(month) - 1, Number(day), 23, 59, 59));
+    if (parsedDate.getUTCFullYear() !== Number(year)
+      || parsedDate.getUTCMonth() !== Number(month) - 1
+      || parsedDate.getUTCDate() !== Number(day)) return null;
+    return parsedDate;
+  }
   const match = deadline.match(/(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/);
   if (!match) return null;
 

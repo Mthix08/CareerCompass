@@ -57,6 +57,7 @@ export default function LoginScreen({ navigation }) {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+  const [googleError, setGoogleError] = useState("");
   const [errors, setErrors] = useState({ email: "", password: "" });
   const [failedAttempts, setFailedAttempts] = useState(0);
   const [cooldownSeconds, setCooldownSeconds] = useState(0);
@@ -89,6 +90,7 @@ export default function LoginScreen({ navigation }) {
     if (isLoading || isGoogleLoading) return;
 
     try {
+      setGoogleError("");
       setIsGoogleLoading(true);
       const credential = await signInWithGoogle();
       if (await isAccountRestricted(credential.user)) {
@@ -99,10 +101,11 @@ export default function LoginScreen({ navigation }) {
       navigation.reset({ index: 0, routes: [{ name: await getLandingRoute(credential.user) }] });
     } catch (error) {
       if (error.code !== "auth/popup-closed-by-user") {
-        Alert.alert(
-          "Google sign-in unavailable",
-          getGoogleAuthErrorMessage(error),
-        );
+        const message = getGoogleAuthErrorMessage(error);
+        setGoogleError(message);
+        if (Platform.OS !== "web") {
+          Alert.alert("Google sign-in unavailable", message);
+        }
       }
     } finally {
       setIsGoogleLoading(false);
@@ -260,7 +263,6 @@ export default function LoginScreen({ navigation }) {
           >
             <Text style={styles.forgotText}>Forgot password?</Text>
           </TouchableOpacity>
-
           <TouchableOpacity
             style={[styles.loginButton, (isLoading || cooldownSeconds > 0) && styles.loginButtonDisabled]}
             activeOpacity={0.8}
@@ -301,6 +303,7 @@ export default function LoginScreen({ navigation }) {
               {isGoogleLoading ? "Connecting..." : "Continue with Google"}
             </Text>
           </TouchableOpacity>
+          {!!googleError && <Text style={styles.errorText} accessibilityRole="alert">{googleError}</Text>}
 
           <TouchableOpacity
             style={styles.createButton}
